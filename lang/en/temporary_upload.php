@@ -9,13 +9,10 @@ return [
         'icon' => 'temporary upload',
         'sort' => '96',
     ],
-<<<<<<< HEAD
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
     'fields' => [
     ],
     'actions' => [
     ],
-=======
->>>>>>> 4e14511d (.)
 ];

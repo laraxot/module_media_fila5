@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
     'navigation' => ['label' => 'media convert', 'group' => 'media convert', 'icon' => 'media convert', 'sort' => 20],
     'fields' => [
         'applyFilters' => ['label' => 'applyFilters', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
@@ -36,20 +35,5 @@ return [
         'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
         'view' => ['label' => 'view', 'icon' => 'view', 'tooltip' => 'view'],
         'convert' => ['label' => 'convert', 'icon' => 'convert', 'tooltip' => 'convert'],
-=======
-    'navigation' => [
-        'label' => 'media convert',
-        'group' => 'media convert',
-        'icon' => 'media convert',
-        'sort' => 20,
-    ],
-    'fields' => [
-        'applyFilters' => [
-            'label' => 'applyFilters',
-        ],
-        'toggleColumns' => [
-            'label' => 'toggleColumns',
-        ],
->>>>>>> 4e14511d (.)
     ],
 ];

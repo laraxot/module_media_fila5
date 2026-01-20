@@ -43,16 +43,11 @@ abstract class BaseS3Action
      */
     protected function getStringConfig(string $configKey, string $envKey, string $default): string
     {
-<<<<<<< HEAD
-=======
-        // Check config first
->>>>>>> 4e14511d (.)
         $configValue = config($configKey);
         if (is_string($configValue) && trim($configValue) !== '') {
             return $configValue;
         }
 
-<<<<<<< HEAD
         $filesystemsKey = match ($envKey) {
             'AWS_BUCKET_NAME' => 'filesystems.disks.s3.bucket',
             'AWS_REGION' => 'filesystems.disks.s3.region',
@@ -68,15 +63,6 @@ abstract class BaseS3Action
             }
         }
 
-=======
-        // Fallback to environment
-        $envValue = env($envKey);
-        if (is_string($envValue) && trim($envValue) !== '') {
-            return $envValue;
-        }
-
-        // Return default
->>>>>>> 4e14511d (.)
         return $default;
     }
 }
