@@ -26,30 +26,6 @@ class TemporaryUploadResource extends XotBaseResource
     protected static ?string $model = TemporaryUpload::class;
 
     /**
-<<<<<<< HEAD
-     * Schema legacy del form: la sorgente di verità è TemporaryUploadForm::getFormSchema().
-     *
-     * @return array<string, Component>
-     */
-=======
-     * @return array<string, Component>
-     */
-    #[Override]
->>>>>>> 4e14511d (.)
-    public static function getFormSchema(): array
-    {
-        return [
-            'file' => FileUpload::make('file')
-                ->required()
-                ->preserveFilenames()
-                ->acceptedFileTypes(['image/*', 'application/pdf', 'application/msword'])
-                ->maxSize(10240),
-            'folder' => TextInput::make('folder')->required()->maxLength(255),
-            'expires_at' => DateTimePicker::make('expires_at')->required(),
-        ];
-    }
-
-    /**
      * @psalm-return array<never, never>
      */
     #[Override]

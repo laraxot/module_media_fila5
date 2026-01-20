@@ -6,7 +6,6 @@ return [
     'title' => 'Anhänge',
     'label' => 'Anhang hochladen',
     'fields' => [
-<<<<<<< HEAD
         'file' => [
             'label' => 'Datei',
             'tooltip' => '',
@@ -41,11 +40,5 @@ return [
     ],
     'plural_label' => 'Missing Plural label',
     'actions' => [
-=======
-        'file' => 'Datei',
-        'file_hint' => '',
-        'name' => 'Name',
-        'name_hint' => 'Dateiname',
->>>>>>> 4e14511d (.)
     ],
 ];

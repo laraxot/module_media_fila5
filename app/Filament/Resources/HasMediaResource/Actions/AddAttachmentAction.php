@@ -5,27 +5,17 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\HasMediaResource\Actions;
 
 use Exception;
-<<<<<<< HEAD
-=======
-use Filament\Actions\Action;
->>>>>>> 4e14511d (.)
 use Filament\Forms\Components\BaseFileUpload;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
 class AddAttachmentAction extends XotBaseAction
-=======
-use Webmozart\Assert\Assert;
-
-class AddAttachmentAction extends Action
->>>>>>> 4e14511d (.)
 {
     protected function setUp(): void
     {
@@ -55,7 +45,7 @@ class AddAttachmentAction extends Action
     /**
      * @return array<int, Radio|TextInput|BaseFileUpload|FileUpload>
      */
-    public static function getFormSchema(bool $asset = true): array
+    public function getFormSchema(bool $asset = true): array
     {
         // Assert::string($disk = $asset ? config('xra.asset.attachments.disk.driver') : config('xra.operation.attachments.disk.driver'));
         // Assert::isArray($file_types = $asset ? config('xra.asset.attachments.allowed_file_types') : config('xra.operation.attachments.allowed_file_types'));
@@ -93,13 +83,10 @@ class AddAttachmentAction extends Action
         ];
     }
 
-<<<<<<< HEAD
     /**
      * @param  array<string, mixed>  $data
      * @param  array<string, mixed>  $data
      */
-=======
->>>>>>> 4e14511d (.)
     public static function formHandlerCallback(RelationManager $livewire, array $data): void
     {
         $ownerRecord = $livewire->getOwnerRecord();
@@ -120,14 +107,10 @@ class AddAttachmentAction extends Action
             throw new Exception('FileAdder does not have required methods');
         }
 
-<<<<<<< HEAD
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast(SafeStringCastAction::cast($data['original_file_name'] ?? ''), '.'));
         $originalFileName = $data['original_file_name'] ?? '';
         Assert::string($originalFileName);
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast($originalFileName, '.'));
-=======
-        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast((string) ($data['original_file_name'] ?? ''), '.'));
->>>>>>> 4e14511d (.)
         if (! is_object($fileAdderWithName) || ! method_exists($fileAdderWithName, 'preservingOriginal')) {
             throw new Exception('setName did not return valid object');
         }

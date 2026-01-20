@@ -11,7 +11,6 @@ return [
     'fields' => [
         'collection_name' => [
             'label' => 'collection_name',
-<<<<<<< HEAD
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -39,26 +38,11 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-=======
-        ],
-        'name' => [
-            'label' => 'name',
-        ],
-        'mime_type' => [
-            'label' => 'mime_type',
-        ],
-        'preview' => [
-            'label' => 'preview',
-        ],
-        'human_readable_size' => [
-            'label' => 'human_readable_size',
->>>>>>> 4e14511d (.)
         ],
         'creator' => [
             'name' => [
                 'label' => 'creator.name',
             ],
-<<<<<<< HEAD
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
@@ -80,11 +64,4 @@ return [
     ],
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-=======
-        ],
-        'created_at' => [
-            'label' => 'created_at',
-        ],
-    ],
->>>>>>> 4e14511d (.)
 ];
