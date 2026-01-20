@@ -4,18 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Tables\Columns;
 
-<<<<<<< HEAD
 use Illuminate\Http\Request;
 use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn as IconColumn;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 // phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
-=======
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use Filament\Tables\Columns\IconColumn;
-use Illuminate\Http\Request;
-
->>>>>>> 4e14511d (.)
 class IconMediaColumn extends IconColumn
 {
     protected function setUp(): void
@@ -23,7 +16,6 @@ class IconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
-<<<<<<< HEAD
         $this->default(static function (mixed $record) use ($attachment) {
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
@@ -31,28 +23,13 @@ class IconMediaColumn extends IconColumn
         })
             ->icon('heroicon-o-document-text')
             ->color(static function (mixed $record) use ($attachment): string {
-=======
-        $this->default(function ($record) use ($attachment) {
-            if (is_object($record) && method_exists($record, 'getFirstMedia')) {
-                return $record->getFirstMedia($attachment);
-            }
-
-            return null;
-        })
-            ->icon('heroicon-o-document-text')
-            ->color(function ($record) use ($attachment): string {
->>>>>>> 4e14511d (.)
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     return $record->getFirstMedia($attachment) ? 'success' : 'danger';
                 }
 
                 return 'danger';
             })
-<<<<<<< HEAD
             ->tooltip(static function (mixed $record) use ($attachment): string {
-=======
-            ->tooltip(function ($record) use ($attachment): string {
->>>>>>> 4e14511d (.)
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     $media = $record->getFirstMedia($attachment);
                     if (is_object($media) && isset($media->file_name) && is_string($media->file_name)) {
@@ -65,32 +42,20 @@ class IconMediaColumn extends IconColumn
             ->action(function (array $arguments, Request $request) use ($attachment) {
                 // Skip action if record is not available or doesn't have media capabilities
                 if (! isset($arguments['record'])) {
-<<<<<<< HEAD
                     return;
-=======
-                    return null;
->>>>>>> 4e14511d (.)
                 }
 
                 $record = $arguments['record'];
 
                 // Verify record is an object and has the required method
                 if (! is_object($record) || ! method_exists($record, 'getFirstMedia')) {
-<<<<<<< HEAD
                     return;
-=======
-                    return null;
->>>>>>> 4e14511d (.)
                 }
 
                 /** @var Media|null $media */
                 $media = $record->getFirstMedia($attachment);
                 if ($media === null) {
-<<<<<<< HEAD
                     return;
-=======
-                    return null;
->>>>>>> 4e14511d (.)
                 }
 
                 return $media->toInlineResponse($request);

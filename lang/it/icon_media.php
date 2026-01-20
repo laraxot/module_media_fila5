@@ -10,10 +10,7 @@ return [
             'help' => 'Modifica lo stato corrente dell\'elemento',
             'description' => 'Azione per cambiare lo stato',
             'helper_text' => '',
-<<<<<<< HEAD
             'tooltip' => '',
-=======
->>>>>>> 4e14511d (.)
         ],
         'state' => [
             'label' => 'Stato',
@@ -21,10 +18,7 @@ return [
             'help' => 'Stato attuale dell\'elemento',
             'description' => 'Stato corrente del sistema',
             'helper_text' => '',
-<<<<<<< HEAD
             'tooltip' => '',
-=======
->>>>>>> 4e14511d (.)
         ],
         'message' => [
             'label' => 'Messaggio',
@@ -32,7 +26,6 @@ return [
             'help' => 'Messaggio informativo per l\'utente',
             'description' => 'Testo del messaggio',
             'helper_text' => '',
-<<<<<<< HEAD
             'tooltip' => '',
         ],
         'open_link' => [
@@ -64,11 +57,6 @@ return [
         ],
         'delete' => [
             'label' => 'Elimina Icon Media',
-=======
-        ],
-        'open_link' => [
-            'label' => 'open_link',
->>>>>>> 4e14511d (.)
         ],
     ],
 ];

@@ -6,7 +6,6 @@ return [
     'add_attachment' => [
         'title' => 'Allegati',
         'label' => 'Carica allegato',
-<<<<<<< HEAD
         'fields' => [
         ],
     ],
@@ -53,8 +52,5 @@ return [
         'delete' => [
             'label' => 'Elimina Actions',
         ],
-=======
-        'fields' => [],
->>>>>>> 4e14511d (.)
     ],
 ];

@@ -19,74 +19,17 @@ class MediaConvertResource extends XotBaseResource
     protected static ?string $model = MediaConvert::class;
 
     /**
-<<<<<<< HEAD
-     * Schema legacy del form: la sorgente di verità è MediaConvertForm::getFormSchema().
-     *
-     * @return array<string, Component>
-     */
-=======
-     * @return array<string, Component>
-     */
-    #[Override]
->>>>>>> 4e14511d (.)
-    public static function getFormSchema(): array
-    {
-        return [
-            'format' => Radio::make('format')
-                ->options([
-                    'webm' => 'webm',
-                    // 'webm02' => 'webm02',
-                ])
-                ->inline()
-                ->inlineLabel(false),
-            // -----------------------------------
-            'codec_video' => Radio::make('codec_video')
-                ->options([
-                    'libvpx-vp9' => 'libvpx-vp9',
-                    'libvpx-vp8' => 'libvpx-vp8',
-                ])
-                ->inline()
-                ->inlineLabel(false),
-            'codec_audio' => Radio::make('codec_audio')
-                ->options([
-                    'copy' => 'copy',
-                    'libvorbis' => 'libvorbis',
-                ])
-                ->inline()
-                ->inlineLabel(false),
-            'preset' => Radio::make('preset')
-                ->options([
-                    'fast' => 'fast',
-                    'ultrafast' => 'ultrafast',
-                ])
-                ->inline()
-                ->inlineLabel(false),
-            'bitrate' => TextInput::make('bitrate'),
-            'width' => TextInput::make('width')->numeric(),
-            'height' => TextInput::make('height')->numeric(),
-            'threads' => TextInput::make('threads'),
-            'speed' => TextInput::make('speed'),
-        ];
-    }
-
-<<<<<<< HEAD
-    /**
      * @return array<string, mixed>
      */
-=======
->>>>>>> 4e14511d (.)
     #[Override]
     public static function getRelations(): array
     {
         return [];
     }
 
-<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
-=======
->>>>>>> 4e14511d (.)
     #[Override]
     public static function getPages(): array
     {
