@@ -6,7 +6,6 @@ return [
     'add_attachment' => [
         'title' => 'Attachments',
         'label' => 'Upload attachment',
-<<<<<<< HEAD
         'fields' => [
         ],
     ],
@@ -22,8 +21,5 @@ return [
     'fields' => [
     ],
     'actions' => [
-=======
-        'fields' => [],
->>>>>>> 4e14511d (.)
     ],
 ];

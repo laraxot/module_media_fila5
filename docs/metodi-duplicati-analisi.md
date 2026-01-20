@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 module: Media
 topic: METODI_DUPLICATI_ANALISI
@@ -448,13 +447,6 @@ related:
 
 **Powered by**: Super Mucca AI 🐄✨
 **Versione**: 2.0 ULTIMATE
-=======
-# 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
-
-**Powered by**: Super Mucca AI 🐄✨  
-**Data**: 15 Ottobre 2025  
-**Versione**: 2.0 ULTIMATE  
->>>>>>> 4e14511d (.)
 **Confidenza**: 99.9% (Dati Reali dal Codice)
 
 ---
@@ -494,25 +486,15 @@ abstract class BaseModel extends XotBaseModel
 
 #### Blog BaseModel (BEN FATTO)
 ```php
-<<<<<<< HEAD
 // File: Modules/Blog/app/Models/BaseModel.php
-=======
-// File: Modules/Blog/app/Models/BaseModel.php  
->>>>>>> 4e14511d (.)
 // Linee: 46
 abstract class BaseModel extends XotBaseModel implements HasMedia
 {
     use InteractsWithMedia;  // ✅ Specifico
     use SoftDeletes;         // ✅ Specifico
-<<<<<<< HEAD
 
     protected $connection = 'blog';
 
-=======
-    
-    protected $connection = 'blog';
-    
->>>>>>> 4e14511d (.)
     protected function casts(): array
     {
         return array_merge(parent::casts(), [  // ✅ CORRETTO
@@ -530,15 +512,9 @@ abstract class BaseModel extends XotBaseModel implements HasMedia
 abstract class BaseModel extends \Modules\Xot\Models\XotBaseModel
 {
     use RelationX;  // ✅ Specifico
-<<<<<<< HEAD
 
     protected $connection = 'user';
 
-=======
-    
-    protected $connection = 'user';
-    
->>>>>>> 4e14511d (.)
     protected function casts(): array
     {
         return array_merge(parent::casts(), [  // ✅ CORRETTO
@@ -565,13 +541,8 @@ abstract class BaseModel extends \Modules\Xot\Models\XotBaseModel
 | Gdpr | ~38 | gdpr | 0 | 2 | ⭐⭐⭐⭐ BUONO |
 | Comment | ~30 | comment | 0 | 1 | ⭐⭐⭐⭐ BUONO |
 
-<<<<<<< HEAD
 **Media Linee**: 57.8 linee
 **Target Ottimale**: 25-50 linee
-=======
-**Media Linee**: 57.8 linee  
-**Target Ottimale**: 25-50 linee  
->>>>>>> 4e14511d (.)
 **Conformità**: 80% dei moduli sono OTTIMALI ✅
 
 ---
@@ -580,11 +551,7 @@ abstract class BaseModel extends \Modules\Xot\Models\XotBaseModel
 
 ### Pattern 1: getTableColumns() - ESEMPIO REALE
 
-<<<<<<< HEAD
 #### LegacyDomain/TicketResource/ListTickets.php (ECCELLENTE)
-=======
-#### Fixcity/TicketResource/ListTickets.php (ECCELLENTE)
->>>>>>> 4e14511d (.)
 ```php
 protected function getTableColumns(): array
 {
@@ -675,11 +642,7 @@ class ColumnBuilder
             ->searchable()
             ->label('ID');
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 4e14511d (.)
     /**
      * Standard name column
      */
@@ -689,11 +652,7 @@ class ColumnBuilder
             ->searchable($searchable)
             ->sortable();
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 4e14511d (.)
     /**
      * Status badge column with standard colors
      */
@@ -705,20 +664,12 @@ class ColumnBuilder
             'success' => 'resolved',
             'secondary' => 'closed',
         ];
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 4e14511d (.)
         return TextColumn::make('status')
             ->badge()
             ->colors(array_merge($defaultColors, $customColors));
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 4e14511d (.)
     /**
      * Priority badge column
      */
@@ -733,11 +684,7 @@ class ColumnBuilder
                 'danger' => 'critical',
             ]);
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 4e14511d (.)
     /**
      * Standard timestamps (created_at, updated_at)
      */
@@ -753,11 +700,7 @@ class ColumnBuilder
                 ->toggleable(isToggledHiddenByDefault: $hideUpdated),
         ];
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 4e14511d (.)
     /**
      * Email column with searchable
      */
@@ -834,11 +777,7 @@ class FilterBuilder
             ->trueLabel('Active')
             ->falseLabel('Inactive');
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 4e14511d (.)
     /**
      * Date range filter
      */
@@ -861,11 +800,7 @@ class FilterBuilder
                     );
             });
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 4e14511d (.)
     /**
      * Select filter from model
      */
@@ -928,13 +863,8 @@ public function getTableFilters(): array
 - Feature development: 40h × €50 = €2,000
 - **TOTALE**: €7,250
 
-<<<<<<< HEAD
 **ROI Anno 1**: +159% (€4,450 netto)
 **Break-Even**: 4.6 mesi
-=======
-**ROI Anno 1**: +159% (€4,450 netto)  
-**Break-Even**: 4.6 mesi  
->>>>>>> 4e14511d (.)
 **ROI 3 Anni**: +675% (€18,950 netto)
 
 ### Scenario Ottimistico
@@ -948,13 +878,8 @@ public function getTableFilters(): array
 - Development: 70h × €50 = €3,500
 - **TOTALE**: €12,250
 
-<<<<<<< HEAD
 **ROI Anno 1**: +338% (€9,450 netto)
 **Break-Even**: 2.7 mesi
-=======
-**ROI Anno 1**: +338% (€9,450 netto)  
-**Break-Even**: 2.7 mesi  
->>>>>>> 4e14511d (.)
 **ROI 3 Anni**: +1,210% (€33,950 netto)
 
 ---
@@ -987,11 +912,7 @@ public function getTableFilters(): array
 - Test dopo ogni modulo
 - Code review
 
-<<<<<<< HEAD
 **Settimana 2**: Moduli Business (LegacyDomain, Blog, Geo)
-=======
-**Settimana 2**: Moduli Business (Fixcity, Blog, Geo)
->>>>>>> 4e14511d (.)
 - 20 List files
 - Test integrazione
 - Performance check
@@ -1029,11 +950,7 @@ public function getTableFilters(): array
 3. Refactoring moduli core (Xot, User, Cms)
 
 #### ⭐⭐⭐⭐ PRIORITÀ ALTA
-<<<<<<< HEAD
 4. Refactoring moduli business (LegacyDomain, Blog, Geo)
-=======
-4. Refactoring moduli business (Fixcity, Blog, Geo)
->>>>>>> 4e14511d (.)
 5. ActionPresets per CRUD
 6. Documentazione completa
 

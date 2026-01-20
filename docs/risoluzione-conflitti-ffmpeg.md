@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Risoluzione Conflitti per l'Integrazione FFmpeg nel Modulo Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "risoluzione conflitti ffmpeg"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 4e14511d (.)
 # Risoluzione Conflitti per l'Integrazione FFmpeg nel Modulo Media
 
 ## Panoramica
@@ -78,8 +75,4 @@ Per migliorare ulteriormente l'integrazione FFmpeg:
 
 - [Documentazione ufficiale di Laravel-FFMpeg](https://github.com/protonemedia/laravel-ffmpeg)
 - [Guida all'integrazione FFmpeg](ffmpeg_integration.md)
-<<<<<<< HEAD
 - [Esempi di utilizzo FFmpeg](ffmpeg_usage.md)
-=======
-- [Esempi di utilizzo FFmpeg](ffmpeg_usage.md) 
->>>>>>> 4e14511d (.)

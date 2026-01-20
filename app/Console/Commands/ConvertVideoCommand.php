@@ -8,10 +8,7 @@ use FFMpeg\Format\Video\WebM;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
-=======
->>>>>>> 4e14511d (.)
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Webmozart\Assert\Assert;
 
@@ -34,12 +31,8 @@ class ConvertVideoCommand extends Command
             return '';
         }
 
-<<<<<<< HEAD
         $format = new WebM();
         $format = new WebM();
-=======
-        $format = new WebM;
->>>>>>> 4e14511d (.)
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file)->replaceLast('.mp4', '.'.$extension)->toString();
 
@@ -50,7 +43,6 @@ class ConvertVideoCommand extends Command
             $this->info("{$percentage}% transcoded");
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
-<<<<<<< HEAD
 
         $export->toDisk($disk);
         $export->inFormat($format);
@@ -59,15 +51,6 @@ class ConvertVideoCommand extends Command
             $export->toDisk($disk)
         )->inFormat($format);
         $formattedExport->save($file_new);
-=======
-        // @phpstan-ignore method.nonObject, method.nonObject
-        $export
-            ->toDisk($disk)
-            // @phpstan-ignore method.nonObject
-            ->inFormat($format)
-            // @phpstan-ignore method.nonObject
-            ->save($file_new);
->>>>>>> 4e14511d (.)
 
         return Storage::disk($disk)->url($file_new);
     }
