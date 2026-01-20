@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
     'navigation' => ['group' => 'Media'],
     'label' => 'Aws Test',
     'plural_label' => 'Aws Test (Plurale)',
@@ -38,9 +37,5 @@ return [
         'CloudFront Test' => ['label' => 'CloudFront Test', 'heading' => 'CloudFront Test'],
         'IAM Permissions Test' => ['label' => 'IAM Permissions Test', 'heading' => 'IAM Permissions Test'],
         'Complete Diagnostic' => ['label' => 'Complete Diagnostic', 'heading' => 'Complete Diagnostic'],
-=======
-    'navigation' => [
-        'group' => 'Media',
->>>>>>> 4e14511d (.)
     ],
 ];

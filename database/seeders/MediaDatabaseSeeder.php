@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Media\Database\Seeders;
 
 use Illuminate\Database\Seeder;
@@ -27,19 +26,5 @@ class MediaDatabaseSeeder extends Seeder
         if ($this->command !== null) {
             $this->command->info('MediaDatabaseSeeder: completato.');
         }
-=======
-namespace Modules\Media\database\seeders;
-
-use Illuminate\Database\Seeder;
-
-class MediaDatabaseSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
-    {
-        // $this->call([]);
->>>>>>> 4e14511d (.)
     }
 }

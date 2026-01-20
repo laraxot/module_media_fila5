@@ -64,21 +64,15 @@ return [
             'label' => 'Allegato',
             'placeholder' => 'Seleziona un file da allegare',
             'helper_text' => 'File di test per verificare le operazioni S3',
-<<<<<<< HEAD
             'tooltip' => '',
             'description' => '',
-=======
->>>>>>> 4e14511d (.)
         ],
         'debug_output' => [
             'label' => 'Output Debug',
             'placeholder' => 'I risultati dei test appariranno qui',
             'helper_text' => 'Output dettagliato dei test eseguiti',
-<<<<<<< HEAD
             'tooltip' => '',
             'description' => '',
-=======
->>>>>>> 4e14511d (.)
         ],
     ],
     'messages' => [
@@ -107,7 +101,6 @@ return [
         'check_cloudfront_config' => 'Verifica la configurazione CloudFront',
         'contact_admin' => 'Contatta l\'amministratore del sistema',
     ],
-<<<<<<< HEAD
     'label' => 'S3test',
     'plural_label' => 'S3test (Plurale)',
     'navigation' => [
@@ -121,6 +114,4 @@ return [
         'sort' => 1,
         'icon' => 'heroicon-o-rectangle-stack',
     ],
-=======
->>>>>>> 4e14511d (.)
 ];

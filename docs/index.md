@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Media Module Documentation
 
 **Last Update**: Feb 2026
@@ -28,46 +27,12 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 - [Modulo Xot](../../xot/docs/readme.md)
 - [Modulo Lang](../../lang/docs/readme.md)
 - [Modulo UI](../../ui/docs/readme.md)
-=======
-# Indice della Documentazione - Modulo Media
-
-## Panoramica
-Questo documento serve come indice centrale per il modulo Media, fornendo una guida per la gestione dei contenuti multimediali all'interno di un'applicazione Laravel. Il modulo Media gestisce vari tipi di file multimediali come immagini, video, documenti e audio in modo modulare e riutilizzabile.
-
-## Principi Chiave
-1. **Modularità**: Il modulo Media è progettato per essere riutilizzabile in diversi progetti, mantenendo funzionalità generiche
-2. **Estensibilità**: Consente personalizzazione e aggiunta di nuovi tipi di media senza alterare il codice principale
-3. **Affidabilità**: Garantisce la gestione sicura e efficiente dei file multimediali attraverso gestione robusta degli errori e logging
-
-## Funzionalità Principali
-- **Gestione File Multi-formato**: Supporto per immagini, video, documenti e audio
-- **Upload Avanzato**: Funzionalità di drag-and-drop e upload multiplo
-- **Ottimizzazione Media**: Compressione e ottimizzazione automatica dei file
-- **Conversione Video**: Sistema di conversione video con supporto per diversi formati
-- **Streaming Video**: Funzionalità di streaming video ottimizzata
-- **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
-- **Integrazione CDN**: Supporto per Content Delivery Network
-- **Watermark Automatico**: Applicazione automatica di watermark sui media
-
-## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
-- [Modulo Xot](../../Xot/docs/README.md)
-- [Modulo Lang](../../Lang/docs/README.md)
-- [Modulo UI](../../UI/docs/README.md)
->>>>>>> 4e14511d (.)
 
 ## Categorie Principali
 
 ### Architettura e Struttura
-<<<<<<< HEAD
 - [README](./readme.md) - Panoramica generale del modulo
 - [Architettura](./architecture/readme.md) - Architettura generale del modulo
-=======
-- [README](./README.md) - Panoramica generale del modulo
-- [Architettura](./architecture/README.md) - Architettura generale del modulo
->>>>>>> 4e14511d (.)
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -84,11 +49,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - [Risorse Filament](./filament-resources.md) - Componenti Filament Resources
 - [Pagine Filament](./filament-pages.md) - Componenti Filament Pages
 - [Azioni Filament](./filament-actions.md) - Azioni personalizzate
-<<<<<<< HEAD
 - [Convenzioni Filament](./filament_extension_pattern.md) - Pattern di estensione per Filament
-=======
-- [Convenzioni Filament](./FILAMENT_EXTENSION_PATTERN.md) - Pattern di estensione per Filament
->>>>>>> 4e14511d (.)
 
 ### API e Integrazione
 - [API RESTful](./api.md) - API per la gestione media
@@ -96,7 +57,6 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - [Servizi Esterni](./external-services.md) - Integrazione con servizi esterni
 
 ### Configurazione
-<<<<<<< HEAD
 - [Struttura Config](./config_structure.md) - Struttura dei file di configurazione
 - [Configurazione Upload](./upload-config.md) - Configurazione sistema upload
 - [Principi di Configurazione](./configurations_usage_principles.md) - Principi per l'utilizzo delle configurazioni
@@ -114,25 +74,6 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ### Testing e Qualità
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 - [Testing](./testing.md) - Strategie e approcci per il testing
-=======
-- [Struttura Config](./CONFIG_STRUCTURE.md) - Struttura dei file di configurazione
-- [Configurazione Upload](./upload-config.md) - Configurazione sistema upload
-- [Principi di Configurazione](./CONFIGURATIONS_USAGE_PRINCIPLES.md) - Principi per l'utilizzo delle configurazioni
-
-### Pattern e Architettura
-- [Pattern Factory](./FACTORY_PATTERN_ANALYSIS.md) - Analisi del pattern Factory
-- [Risoluzione Dinamica delle Classi](./DYNAMIC_CLASS_RESOLUTION.md) - Pattern di risoluzione dinamica delle classi
-- [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
-
-### Standard e Traduzioni
-- [Convenzioni di Naming](./NAMING_CONVENTIONS.md) - Standard per i nomi di file e classi
-- [Traduzioni](./translations.md) - Sistema di traduzioni
-- [Standard Traduzioni](./TRANSLATION_STANDARDS.md) - Standard per le chiavi di traduzione
-
-### Testing e Qualità
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
-- [Testing](./TESTING.md) - Strategie e approcci per il testing
->>>>>>> 4e14511d (.)
 
 ## Linee Guida per l'Implementazione
 
@@ -178,7 +119,6 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nell'upl
 ## Sottocartelle
 
 ### Actions
-<<<<<<< HEAD
 - [Index](./actions/index.md) - Indice della documentazione sulle azioni
 
 ### Architettura
@@ -198,27 +138,6 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nell'upl
 
 ### Support
 - [Index](./support/index.md) - Indice della documentazione sui componenti di supporto
-=======
-- [Index](./actions/INDEX.md) - Indice della documentazione sulle azioni
-
-### Architettura
-- [Index](./architecture/INDEX.md) - Indice della documentazione sull'architettura
-
-### Conversions
-- [Index](./conversions/INDEX.md) - Indice della documentazione sulle conversioni
-
-### Filament
-- [Index](./filament/INDEX.md) - Indice della documentazione sui componenti Filament
-
-### Performance
-- [Index](./performance/INDEX.md) - Indice della documentazione sulle ottimizzazioni
-
-### PHPStan
-- [Index](./phpstan/INDEX.md) - Indice della documentazione PHPStan
-
-### Support
-- [Index](./support/INDEX.md) - Indice della documentazione sui componenti di supporto
->>>>>>> 4e14511d (.)
 
 ## Collegamenti alla Documentazione Correlata
 - [Panoramica Architettura](./architecture.md)
@@ -234,7 +153,6 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione
 - Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
-<<<<<<< HEAD
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
@@ -249,9 +167,3 @@ Modulo: Media
 ## File disponibili
 
 <!-- auto-generato: elencare i file .md presenti -->
-=======
-- Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
-*Ultimo aggiornamento: Gennaio 2025*
->>>>>>> 4e14511d (.)

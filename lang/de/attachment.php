@@ -13,7 +13,6 @@ return [
         ],
     ],
     'fields' => [
-<<<<<<< HEAD
         'file' => [
             'label' => 'Datei',
             'tooltip' => '',
@@ -93,36 +92,12 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-=======
-        'file' => 'Datei',
-        'file_hint' => 'Einen Anhang hochladen',
-        'name' => [
-            'label' => 'Name',
-        ],
-        'guard_name' => 'Guard',
-        'collection_name' => [
-            'label' => 'Sammlung',
-        ],
-        'filename' => 'Dateiname',
-        'mime_type' => 'Typ',
-        'human_readable_size' => [
-            'label' => 'Größe',
-        ],
-        'permissions' => 'Berechtigungen',
-        'updated_at' => 'Aktualisiert am',
-        'first_name' => 'Vorname',
-        'last_name' => 'Nachname',
-        'select_all' => [
-            'name' => 'Alle auswählen',
-            'message' => '',
->>>>>>> 4e14511d (.)
         ],
         'creator' => [
             'name' => 'Ersteller',
             'full_name' => [
                 'label' => 'Ersteller',
             ],
-<<<<<<< HEAD
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
@@ -139,12 +114,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-=======
-        ],
-        'uploaded_at' => 'Aktualisiert am',
-        'created_at' => [
-            'label' => 'Hochgeladen am',
->>>>>>> 4e14511d (.)
         ],
     ],
     'actions' => [
@@ -161,9 +130,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-=======
->>>>>>> 4e14511d (.)
 ];

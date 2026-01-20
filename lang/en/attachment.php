@@ -13,7 +13,6 @@ return [
         ],
     ],
     'fields' => [
-<<<<<<< HEAD
         'file' => [
             'label' => 'file',
             'tooltip' => '',
@@ -93,36 +92,12 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-=======
-        'file' => 'file',
-        'file_hint' => 'Upload an attachment',
-        'name' => [
-            'label' => 'Name',
-        ],
-        'guard_name' => 'Guard',
-        'collection_name' => [
-            'label' => 'Collection',
-        ],
-        'filename' => 'Filename',
-        'mime_type' => 'Type',
-        'human_readable_size' => [
-            'label' => 'Size',
-        ],
-        'permissions' => 'Permissions',
-        'updated_at' => 'Updated at',
-        'first_name' => 'First Name',
-        'last_name' => 'Last Name',
-        'select_all' => [
-            'name' => 'Select All',
-            'message' => '',
->>>>>>> 4e14511d (.)
         ],
         'creator' => [
             'name' => 'Creator',
             'full_name' => [
                 'label' => 'Creator',
             ],
-<<<<<<< HEAD
             'label' => '',
             'tooltip' => '',
             'helper_text' => '',
@@ -139,12 +114,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-=======
-        ],
-        'uploaded_at' => 'Updated at',
-        'created_at' => [
-            'label' => 'Uploaded at',
->>>>>>> 4e14511d (.)
         ],
     ],
     'actions' => [
@@ -161,9 +130,6 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
-=======
->>>>>>> 4e14511d (.)
 ];

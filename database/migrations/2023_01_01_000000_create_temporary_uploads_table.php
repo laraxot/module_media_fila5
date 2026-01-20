@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-<<<<<<< HEAD
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
@@ -14,17 +13,6 @@ return new class() extends XotBaseMigration
 {
     protected ?string $model_class = TemporaryUpload::class;
 
-=======
-// ---- models ---
-
-use Modules\Xot\Database\Migrations\XotBaseMigration;
-
-/*
- * Class CreateInvitationsTable.
- */
-return new class extends XotBaseMigration
-{
->>>>>>> 4e14511d (.)
     /**
      * Run the migrations.
      */
@@ -34,14 +22,11 @@ return new class extends XotBaseMigration
         $this->tableCreate(function (Blueprint $table): void {
             $table->uuid('id')->primary();
             $table->string('session_id');
-<<<<<<< HEAD
             $table->uuid('user_id')->nullable();
             $table->string('file_name');
             $table->integer('file_size')->nullable();
             $table->string('mime_type')->nullable();
             $table->string('status')->default('uploading');
-=======
->>>>>>> 4e14511d (.)
         });
         // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
