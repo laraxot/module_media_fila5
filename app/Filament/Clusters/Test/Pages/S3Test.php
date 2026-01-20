@@ -34,6 +34,8 @@ use function Safe\unlink;
  * S3Test Page for AWS S3 testing and diagnostics.
  *
  * @property array<string, mixed> $debugResults
+ *
+ * @phpstan-ignore-next-line
  */
 class S3Test extends XotBasePage
 {
@@ -276,9 +278,12 @@ class S3Test extends XotBasePage
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
                 'AWS_USE_PATH_STYLE_ENDPOINT' => config('filesystems.disks.s3.use_path_style_endpoint', 'false'),
-                'CLOUDFRONT_BASE_URL' => config('services.cloudfront.base_url'),
-                'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id'),
-                'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key')
+                'CLOUDFRONT_BASE_URL' => config(
+                    'services.cloudfront.base_url',
+                    env('CLOUDFRONT_RESOURCE_KEY_BASE_URL'),
+                ),
+                'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id', env('CLOUDFRONT_KEYPAIR_ID')),
+                'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key') || env('CLOUDFRONT_PRIVATE_KEY')
                     ? '✅ Present'
                     : '❌ Missing',
             ],
@@ -383,6 +388,13 @@ class S3Test extends XotBasePage
      */
     private function test_s3_permissions(): array
     {
+        $tests = [
+            'ListBucket' => 's3:ListBucket',
+            'PutObject' => 's3:PutObject',
+            'GetObject' => 's3:GetObject',
+            'DeleteObject' => 's3:DeleteObject',
+        ];
+
         $results = [
             'title' => '🔒 S3 Permissions',
             'status' => 'info',
@@ -508,9 +520,9 @@ class S3Test extends XotBasePage
     {
         try {
             // Test CloudFront configuration
-            $baseUrl = config('services.cloudfront.base_url');
-            $keyPairId = config('services.cloudfront.key_pair_id');
-            $privateKey = config('services.cloudfront.private_key');
+            $baseUrl = config('services.cloudfront.base_url', env('CLOUDFRONT_RESOURCE_KEY_BASE_URL'));
+            $keyPairId = config('services.cloudfront.key_pair_id', env('CLOUDFRONT_KEYPAIR_ID'));
+            $privateKey = config('services.cloudfront.private_key', env('CLOUDFRONT_PRIVATE_KEY'));
 
             if (! $baseUrl || ! $keyPairId || ! $privateKey) {
                 return [
@@ -585,7 +597,7 @@ class S3Test extends XotBasePage
         }
 
         $output = [];
-        foreach ($this->debugResults as $result) {
+        foreach ($this->debugResults as $category => $result) {
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
@@ -644,7 +656,7 @@ class S3Test extends XotBasePage
             $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 60);
 
             // Log the email data for testing purposes (no actual email sent)
-            Log::debug('S3 Test Email Data', [
+            Log::info('S3 Test Email Data', [
                 'attachment_path' => $filePath,
                 'signed_url' => $signedUrl,
                 'timestamp' => now()->toISOString(),
@@ -803,7 +815,7 @@ class S3Test extends XotBasePage
                 ->send();
 
             // Log results for debugging
-            Log::debug('S3 Test Results', $results);
+            Log::info('S3 Test Results', $results);
         } catch (Exception $e) {
             Notification::make()
                 ->danger()
