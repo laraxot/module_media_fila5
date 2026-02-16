@@ -42,4 +42,17 @@ return [
             'label' => 'reorderRecords',
         ],
     ],
+    'label' => 'Medium',
+    'plural_label' => 'Medium (Plurale)',
+    'navigation' => [
+        'name' => 'Medium',
+        'plural' => 'Medium',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'Medium',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
 ];
