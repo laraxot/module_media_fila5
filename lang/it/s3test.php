@@ -97,4 +97,17 @@ return [
         'check_cloudfront_config' => 'Verifica la configurazione CloudFront',
         'contact_admin' => 'Contatta l\'amministratore del sistema',
     ],
+    'label' => 'S3test',
+    'plural_label' => 'S3test (Plurale)',
+    'navigation' => [
+        'name' => 'S3test',
+        'plural' => 'S3test',
+        'group' => [
+            'name' => 'General',
+            'description' => 'General Settings',
+        ],
+        'label' => 'S3test',
+        'sort' => 1,
+        'icon' => 'heroicon-o-collection',
+    ],
 ];

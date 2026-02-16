@@ -52,4 +52,6 @@ return [
             'label' => 'Test 01',
         ],
     ],
+    'label' => 'S3 Test',
+    'plural_label' => 'S3 Test (Plurale)',
 ];
