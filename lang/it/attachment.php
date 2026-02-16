@@ -60,4 +60,6 @@ return [
             ],
         ],
     ],
+    'label' => 'Attachment',
+    'plural_label' => 'Attachment (Plurale)',
 ];
