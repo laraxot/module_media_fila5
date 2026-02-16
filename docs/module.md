@@ -184,7 +184,7 @@ Security → Organization → Thumbnails → Tags → CDN
 3. **Performance Optimization**
    - Missing intelligent caching
    - No adaptive streaming for video
-   - Missing <nome progetto>ive loading
+   - Missing predictive loading
    - No bandwidth optimization
 
 ### 🟢 MEDIE (Priorità Bassa)
@@ -296,7 +296,7 @@ $share = SharingService::create($media, [
 - [ ] AI-powered content analysis
 - [ ] Smart tagging system
 - [ ] Content-based search
-- [ ] <nome progetto>ive loading
+- [ ] Predictive loading
 
 ### Fase 3: Collaboration (3-4 settimane)
 - [ ] Real-time collaboration
