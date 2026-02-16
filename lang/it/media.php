@@ -53,4 +53,6 @@ return [
     'model' => [
         'label' => 'media.model',
     ],
+    'label' => 'Media',
+    'plural_label' => 'Media (Plurale)',
 ];
