@@ -1,7 +1,7 @@
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
-**File**: `Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
+**File**: `/var/www/html/ptvx/laravel/Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
 **Linee**: 49-53
 **Tipo**: Conflitto di annotazione PHPStan
 
