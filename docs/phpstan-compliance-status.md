@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "PHPStan Level 10 Compliance Status"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "phpstan compliance status"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 3cd61a43 (.)
 # PHPStan Level 10 Compliance Status
 
 
