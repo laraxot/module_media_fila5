@@ -12,7 +12,7 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseEditRecord;
 
 class EditMedia extends XotBaseEditRecord
 {
-    protected static string $resource = MediaResource::class;
+    public static string $resource = MediaResource::class;
 
     /**
      * @return array<string, Action|ActionGroup>
