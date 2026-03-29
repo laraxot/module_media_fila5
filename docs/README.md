@@ -39,3 +39,6 @@ Media/
 ## Backlinks
 
 - [Moduli correlati](../README.md)
+
+## AI Workflows
+- [AI Methodologies](./ai-methodologies.md)
