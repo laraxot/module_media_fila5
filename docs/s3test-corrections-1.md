@@ -244,6 +244,7 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Documentazione Generale Media](../README.md)
 - [Best Practice Traduzioni](../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
@@ -251,6 +252,11 @@ private function getSolutionForError(?string $errorCode): string
 - [Documentazione Generale Media](../readme.md)
 - [Best Practice Traduzioni](../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
+=======
+- [Documentazione Generale Media](../readme.md)
+- [Best Practice Traduzioni](../../../../docs/translation-standards.md)
+- [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
+>>>>>>> 53258b2 (.)
 - [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)
 
 ---
