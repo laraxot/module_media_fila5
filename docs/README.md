@@ -8,7 +8,6 @@ Il modulo **Media** fa parte dell'ecosistema Laraxot PTVX.
 
 Gestisce le funzionalità specifiche del dominio Media.
 
-<<<<<<< HEAD
 ## Cosa copre (business)
 ||||||| parent of 53258b2 (.)
 - 🖼️ **Smart Transformations**: Generazione automatica di preview, thumbnail e formati next-gen (WebP/AVIF).
@@ -16,11 +15,7 @@ Gestisce le funzionalità specifiche del dominio Media.
 - ☁️ **Cloud Native**: Supporto multi-disk trasparente (Local, S3, Azure) gestito dall'astrazione CloudStorage.
 - 🛡️ **Safe Uploads**: Validazione rigorosa di MIME types, dimensioni e scan anti-malware integrato.
 - 🎨 **Visual Library**: Interfaccia Filament per gestire migliaia di file con drag-and-drop e visualizzazione a griglia.
-=======
-## Struttura
->>>>>>> 53258b2 (.)
 
-<<<<<<< HEAD
 - **Upload & gestione file**: associazione media a record di dominio (es. avatar, documenti, allegati).
 - **Integrazione UI**: componenti/risorse Filament per caricare e gestire media.
 - **Policy**: regole condivise su naming, storage e sicurezza (validazioni, mime types).
@@ -41,8 +36,6 @@ Le conversioni non bloccano la UI. Vengono processate in background tramite il m
 ### 📦 **Associazione Media**
 ```php
 $model->addMedia($file)->toMediaCollection('gallery');
-=======
->>>>>>> 53258b2 (.)
 ```
 Media/
 ├── app/
@@ -66,7 +59,6 @@ Media/
 ## Backlinks
 
 - [Moduli correlati](../README.md)
-<<<<<<< HEAD
 
 ## AI Workflows
 - [AI Methodologies](./ai-methodologies.md)
@@ -82,5 +74,3 @@ Workflow locale: `.github/workflows/release.yml`.
 - Marco Sottana <marco.sottana@gmail.com>
 
 **License:** MIT
-=======
->>>>>>> 53258b2 (.)
