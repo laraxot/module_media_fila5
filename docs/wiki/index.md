@@ -1,34 +1,32 @@
-# Wiki Locale - Module Media
+---
+title: "Wiki Index"
+module: "Media"
+updated: "2026-04-15T08:28:44Z"
+---
 
-## Schema di Riferimento
+# Wiki Index — Media
 
-Vedi [[../../../../docs/.schema/WIKI_SCHEMA.md|Schema Wiki Globale]]
+> **Purpose:** Content-oriented catalog of all wiki pages in this module.  
+> **Replaces embedding-based RAG at moderate scale (~100 sources).**
 
-## Struttura Locale
+## Concepts
 
-```
-wiki/
-├── concepts/       # Pattern e metodologie
-├── entities/       # Classi e componenti
-├── summaries/      # Sommari documenti
-├── comparisons/    # Confronti
-└── overviews/     # Panoramiche
-```
+_No concepts ingested yet. Drop raw documents in `../raw/articles/` and run ingest._
 
-## Pagine Compilate
+## Entities
 
-| Pagina | Tipo | Argomento |
-|--------|------|-----------|
-| [media-module](./overviews/media-module.md) | overview | Upload, storage S3, processing, FFmpeg, MediaLibrary |
+_No entities tracked yet._
 
-## Raw Sources
+## Sources
 
-Vedi [[../raw/index|Lista Sorgenti Grezzi]]
+_No sources ingested yet._
 
-## Index Globale
+## Comparisons
 
-Vedi [[../../../../docs/wiki/index|Index Globale Wiki]]
+_No comparisons synthesized yet._
 
 ---
 
-*Ultimo aggiornamento: 2026-04-15*
+**Last Updated:** 2026-04-15T08:28:44Z  
+**Total Pages:** 0  
+**Total Raw Sources:** 0
