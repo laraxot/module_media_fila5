@@ -1,34 +1,28 @@
-# Wiki Locale - Module Media
-
-## Schema di Riferimento
-
-Vedi [[../../../../docs/.schema/WIKI_SCHEMA.md|Schema Wiki Globale]]
-
-## Struttura Locale
-
-```
-wiki/
-├── concepts/       # Pattern e metodologie
-├── entities/       # Classi e componenti
-├── summaries/      # Sommari documenti
-├── comparisons/    # Confronti
-└── overviews/     # Panoramiche
-```
-
-## Pagine Compilate
-
-| Pagina | Tipo | Argomento |
-|--------|------|-----------|
-| [media-module](./overviews/media-module.md) | overview | Upload, storage S3, processing, FFmpeg, MediaLibrary |
-
-## Raw Sources
-
-Vedi [[../raw/index|Lista Sorgenti Grezzi]]
-
-## Index Globale
-
-Vedi [[../../../../docs/wiki/index|Index Globale Wiki]]
-
+---
+title: Wiki Index
+description: Catalogo del contenuto del modulo Media
+tags:
+  - index
+  - navigation
+created: 2026-04-15
 ---
 
-*Ultimo aggiornamento: 2026-04-15*
+# Wiki Index - Media
+
+Catalogo di tutto il contenuto della wiki del modulo.
+
+## Entities
+
+<!-- Pagine entità: modelli, azioni, servizi -->
+
+## Concepts
+
+<!-- Pagine concetto: pattern, architettura, flussi -->
+
+## Sources
+
+<!-- Riferimenti documentazione esterna -->
+
+## Recent Updates
+
+Vedi [log.md](./log.md) per cronologia completa.
