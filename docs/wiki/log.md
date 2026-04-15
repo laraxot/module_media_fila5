@@ -1,8 +1,23 @@
-# Media Wiki Log
+---
+title: Wiki Log
+description: Registro cronologico delle operazioni
+tags:
+  - log
+  - history
+created: 2026-04-15
+---
 
-## [2026-04-15] init | wiki bootstrap
-- Struttura wiki/log.md inizializzata.
-- Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
-- Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
-- Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
+# Wiki Log - Media
+
+Registro append-only delle operazioni sulla wiki.
+
+## [2026-04-15] setup | Inizializzazione wiki modulo
+
+- Creato schema wiki secondo pattern Karpathy LLM Wiki
+- Inizializzata struttura directory
+
+## TODO
+
+- Aggiungere prime pagine concept
+- Documentare modelli principali
+- Importare documentazione esistente
