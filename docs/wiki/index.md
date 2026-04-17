@@ -1,26 +1,34 @@
----
-title: "Media Wiki Index"
-module: "Media"
----
+# Wiki Locale - Module Media
 
-# Media Module Wiki
+## Schema di Riferimento
 
-## Indices
-- [Rules](rules/INDEX.md)
-- [Skills](skills/INDEX.md)
-- [Commands](commands/INDEX.md)
-- [Memories](memories/INDEX.md)
-- [Concepts](concepts/INDEX.md)
+Vedi [[../../../../docs/.schema/WIKI_SCHEMA.md|Schema Wiki Globale]]
 
-## On-Demand Workflow
+## Struttura Locale
 
-```bash
-qmd search "Media <topic>" --limit 5
+```
+wiki/
+├── concepts/       # Pattern e metodologie
+├── entities/       # Classi e componenti
+├── summaries/      # Sommari documenti
+├── comparisons/    # Confronti
+└── overviews/     # Panoramiche
 ```
 
+## Pagine Compilate
+
+| Pagina | Tipo | Argomento |
+|--------|------|-----------|
+| [media-module](./overviews/media-module.md) | overview | Upload, storage S3, processing, FFmpeg, MediaLibrary |
+
+## Raw Sources
+
+Vedi [[../raw/index|Lista Sorgenti Grezzi]]
+
+## Index Globale
+
+Vedi [[../../../../docs/wiki/index|Index Globale Wiki]]
+
 ---
-*Updated: 2026-05-11*
 
-## Composer / nwidart
-
-- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello fixcity)
+*Ultimo aggiornamento: 2026-04-15*
