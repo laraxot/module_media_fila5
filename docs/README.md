@@ -2,7 +2,7 @@
 
 ## Overview
 
-Il modulo **Media** fa parte dell'ecosistema Laraxot PTVX.
+Il modulo **Media** fa parte dell'ecosistema [PROJECT_NAME] platform.
 
 ## Scopo
 
@@ -74,3 +74,10 @@ Workflow locale: `.github/workflows/release.yml`.
 - Marco Sottana <marco.sottana@gmail.com>
 
 **License:** MIT
+
+
+## Standard Rules & Workflow
+
+- [[BMAD Method](../../../../docs/wiki/concepts/bmad-method.md)]
+- [[Context Engineering](../../../../docs/wiki/concepts/context-engineering.md)]
+- [[LLM Wiki Governance](../../../../docs/wiki/concepts/llm-wiki-governance.md)]
