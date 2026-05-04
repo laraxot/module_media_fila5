@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Media\Tests\TestCase;
 
 /**
  * Test that the action returns attachment schema correctly.
@@ -208,7 +209,7 @@ it('has correct remove setting', function (): void {
     // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
     // By default, Filament file uploads are removable unless specifically configured otherwise
     // We can verify that the component is a FileUpload
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component)->toBeInstanceOf(FileUpload::class);
 });
 
 /**
@@ -275,7 +276,7 @@ it('has correct panel', function (): void {
     // Assert
     $component = $form[0];
     // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component)->toBeInstanceOf(FileUpload::class);
 });
 
 /**
@@ -293,7 +294,7 @@ it('has correct help text', function (): void {
     $component = $form[0];
     // FileUpload has helperText property but no getHelper method
     // We can verify that the component is a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component)->toBeInstanceOf(FileUpload::class);
 });
 
 /**
