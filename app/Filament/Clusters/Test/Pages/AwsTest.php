@@ -32,7 +32,7 @@ class AwsTest extends XotBasePage
 
     private const KEY_PREVIEW_LENGTH = 8;
 
-    public array $connectionTests = [
+    public $connectionTests = [
         's3' => 'Test S3 Connection',
         'cloudfront' => 'Test CloudFront',
         'iam' => 'Test IAM Permissions',
