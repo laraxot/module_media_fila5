@@ -99,9 +99,7 @@ class SaveAttachmentsAction
             if ($fileAdder === null) {
                 continue;
             }
-            /** @phpstan-ignore-next-line - Spatie MediaLibrary fluent API */
             $media = $fileAdder->toMediaCollection($attachment);
-            /** @phpstan-ignore-next-line - Spatie MediaLibrary Media model */
             $data_attachments[$attachment] = $media->getPathRelativeToRoot();
         }
         /** @var array<string, string> $data_attachments */
