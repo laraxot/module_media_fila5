@@ -8,13 +8,12 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use SimpleXMLElement;
-use Webmozart\Assert\Assert;
-
 use function Safe\file_put_contents;
 use function Safe\fopen;
 use function Safe\realpath;
 use function Safe\simplexml_load_string;
+use SimpleXMLElement;
+use Webmozart\Assert\Assert;
 
 /**
  * SubtitleService.
@@ -40,7 +39,7 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -158,7 +157,7 @@ class SubtitleService
                     'item_i' => $item_i,
                     'start' => $start,
                     'end' => $end,
-                    'time' => secondsToHms($start).','.secondsToHms($end),
+                    'time' => $this->secondsToHms($start).','.$this->secondsToHms($end),
                     'text' => $item->__toString(),
                 ];
                 $data[] = $tmp;
@@ -201,5 +200,15 @@ class SubtitleService
         $header = "WEBVTT\n\n";
 
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
+    }
+
+    private function secondsToHms(float|int $seconds): string
+    {
+        $totalSeconds = (int) floor($seconds);
+        $hours = intdiv($totalSeconds, 3600);
+        $minutes = intdiv($totalSeconds % 3600, 60);
+        $secs = $totalSeconds % 60;
+
+        return sprintf('%02d:%02d:%02d', $hours, $minutes, $secs);
     }
 }
