@@ -37,12 +37,20 @@ class ConvertVideoAction
         $format = new X264;
         $format->setKiloBitrate(1000);
 
+<<<<<<< Updated upstream
+        $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
+
+        $formatted = $toDisk->inFormat($format);
+
+        $formattedMedia->save($file_new);
+=======
         $toDisk = $exportedMedia->toDisk($disk_mp4);
         Assert::isInstanceOf($toDisk, MediaExporter::class);
 
         $formatted = $toDisk->inFormat($format);
 
         $formatted->save($file_new);
+>>>>>>> Stashed changes
 
         return Storage::disk($disk_mp4)->url($file_new);
     }
