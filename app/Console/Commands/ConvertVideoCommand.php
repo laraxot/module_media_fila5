@@ -8,6 +8,8 @@ use FFMpeg\Format\Video\WebM;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
+use ProtoneMedia\LaravelFFMpeg\MediaOpener;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Webmozart\Assert\Assert;
 
@@ -34,17 +36,23 @@ class ConvertVideoCommand extends Command
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file)->replaceLast('.mp4', '.'.$extension)->toString();
 
+        /** @var MediaOpener $media */
         $media = FFMpeg::fromDisk($disk)->open($file);
+
+        /** @var MediaExporter $export */
         $export = $media->export();
 
         $export->onProgress(function (float $percentage, float $remaining, float $rate): void {
             $this->info("{$percentage}% transcoded");
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
-        $export
-            ->toDisk($disk)
-            ->inFormat($format)
-            ->save($file_new);
+        /** @var MediaExporter $toDisk */
+        $toDisk = $export->toDisk($disk);
+
+        /** @var MediaExporter $formatted */
+        $formatted = $toDisk->inFormat($format);
+
+        $formatted->save($file_new);
 
         return Storage::disk($disk)->url($file_new);
     }
