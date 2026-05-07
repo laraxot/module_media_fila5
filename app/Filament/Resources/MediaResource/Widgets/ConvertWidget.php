@@ -75,10 +75,16 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
+<<<<<<< Updated upstream
+=======
         /** @var MediaExporter $toDiskMedia */
+>>>>>>> Stashed changes
         $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
 
+<<<<<<< Updated upstream
+=======
         /** @var MediaExporter $formattedMedia */
+>>>>>>> Stashed changes
         $formattedMedia = $toDiskMedia->inFormat($format);
 
         $formattedMedia->save($file_new);

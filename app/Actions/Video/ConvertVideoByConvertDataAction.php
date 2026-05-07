@@ -43,6 +43,21 @@ class ConvertVideoByConvertDataAction
         // Instanziamo il formato prima di usarlo
         $formatInstance = new $format;
 
+<<<<<<< Updated upstream
+        FFMpeg::fromDisk($data->disk)
+            ->open($data->file)
+            ->export()
+            ->onProgress(function (float $percentage, float $remaining, float $rate): void {
+                // Gestione del progresso
+                $msg = "{$percentage}% transcoded";
+                $msg .= "{$remaining} seconds left at rate: {$rate}";
+
+                // Log o notifica del progresso
+            })
+            ->addFilter('-preset', 'ultrafast')
+            // Utilizziamo il formato istanziato come parametro
+            ->save($file_new, $formatInstance);
+=======
         /** @var MediaOpener $media */
         $media = FFMpeg::fromDisk($data->disk);
 
@@ -66,6 +81,7 @@ class ConvertVideoByConvertDataAction
         Assert::isInstanceOf($export, MediaExporter::class);
 
         $export->save($file_new);
+>>>>>>> Stashed changes
 
         // Restituisci il percorso del file senza usare il metodo url()
         return $file_new;
