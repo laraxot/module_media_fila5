@@ -28,6 +28,7 @@ Gestione media, upload, conversioni, responsive images con spatie/laravel-medial
 | Pagina | Tipo | Argomento | Data |
 |--------|------|-----------|------|
 | [.gitkeep](./concepts/.gitkeep) | Concept | - | 2026-04-21 |
+| [xotbase-table-columns-enforcement](./concepts/xotbase-table-columns-enforcement.md) | Concept | 3 Table files populated — Media, MediaConvert, TemporaryUpload | 2026-05-07 |
 
 ## Best Practices
 
