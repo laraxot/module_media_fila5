@@ -46,6 +46,13 @@ class ConvertVideoCommand extends Command
             $this->info("{$percentage}% transcoded");
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
+<<<<<<< Updated upstream
+        $export
+            ->toDisk($disk)
+            ->inFormat($format)
+            ->save($file_new);
+=======
+
         /** @var MediaExporter $toDisk */
         $toDisk = $export->toDisk($disk);
 
@@ -53,6 +60,7 @@ class ConvertVideoCommand extends Command
         $formatted = $toDisk->inFormat($format);
 
         $formatted->save($file_new);
+>>>>>>> Stashed changes
 
         return Storage::disk($disk)->url($file_new);
     }
