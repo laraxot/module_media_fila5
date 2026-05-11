@@ -32,14 +32,7 @@ class AwsTest extends XotBasePage
 
     private const KEY_PREVIEW_LENGTH = 8;
 
-<<<<<<< Updated upstream
-    public $connectionTests = [
-=======
-    /**
-     * @var array<string, string>
-     */
     public array $connectionTests = [
->>>>>>> Stashed changes
         's3' => 'Test S3 Connection',
         'cloudfront' => 'Test CloudFront',
         'iam' => 'Test IAM Permissions',
