@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Media\Filament\Resources\HasMediaResource\Tables;
+namespace Modules\base_quaeris_fila5\var\www\_bases\base_quaeris_fila5\laravel\Modules\Media\app\Filament\Resources\HasMediaResource\Tables;
 
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
@@ -11,9 +11,9 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 class HasMediasTable extends XotBaseResourceTable
 {
     /**
-     * @return array<int|string, \Filament\Tables\Columns\Column>
+     * @return array<string, Column>
      */
-    public function getTableColumns(): array
+    public static function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->sortable(),
