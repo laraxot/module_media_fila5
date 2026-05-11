@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-uses(TestCase::class);
+uses(\Modules\Media\Tests\TestCase::class);
 
 use Modules\Media\Actions\AttachMediaAction;
-use Modules\Media\Tests\TestCase;
 use Spatie\QueueableAction\QueueableAction;
 
 describe('AttachMediaAction', function () {
-    it('uses QueueableAction trait', function(): void {
+    it('uses QueueableAction trait', function (): void {
         // Arrange
         $action = new AttachMediaAction;
 
@@ -19,7 +18,7 @@ describe('AttachMediaAction', function () {
         expect(trait_exists(QueueableAction::class))->toBeTrue();
     });
 
-    it('is instance of AttachMediaAction', function(): void {
+    it('is instance of AttachMediaAction', function (): void {
         // Arrange
         $action = new AttachMediaAction;
 
@@ -27,7 +26,7 @@ describe('AttachMediaAction', function () {
         expect($action)->toBeInstanceOf(AttachMediaAction::class);
     });
 
-    it('can be instantiated', function(): void {
+    it('can be instantiated', function (): void {
         // Act
         $action = new AttachMediaAction;
 
