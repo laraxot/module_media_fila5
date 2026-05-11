@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Media\Filament\Resources\HasMediaResource\Schemas;
+namespace Modules\base_quaeris_fila5\var\www\_bases\base_quaeris_fila5\laravel\Modules\Media\app\Filament\Resources\HasMediaResource\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
@@ -13,7 +13,6 @@ class HasMediaForm extends XotBaseResourceForm
     /**
      * @return array<int|string, \Filament\Schemas\Components\Component>
      */
-
     public static function getFormSchema(): array
     {
         return [
