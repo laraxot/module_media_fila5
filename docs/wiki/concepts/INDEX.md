@@ -1,12 +1,12 @@
-# Media Module - rules Index
+# Media Module - concepts Index
 
 ## Purpose
-Index for Media module rules.
+Index for Media module concepts.
 
 ## On-Demand Loading
 
 ```bash
-qmd search "Media rules" --limit 5
+qmd search "Media concepts" --limit 5
 ```
 
 ## See Also
