@@ -1,17 +1,11 @@
-# Media Module - concepts Index
-
-## Purpose
-Index for Media module concepts.
-
-## On-Demand Loading
-
-```bash
-qmd search "Media concepts" --limit 5
-```
-
-## See Also
-- [Root Trigger Map](../../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
-- [Root Wiki](../../../docs/wiki/)
-
 ---
-*Updated: 2026-05-11*
+title: "concepts index — Media"
+type: index
+tags: [concepts, Media]
+created: 2026-05-11
+updated: 2026-05-11
+---
+
+# concepts Index — Media
+
+Concetti specifici del modulo Media. Carica on-demand via `qmd search` o consulta il [trigger map root](/docs/wiki/rules/00-TRIGGER_MAP.md).
