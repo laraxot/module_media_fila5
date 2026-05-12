@@ -7,13 +7,12 @@ namespace Modules\Media\Filament\Resources\TemporaryUploadResource\Schemas;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Component as SchemaComponent;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class TemporaryUploadForm extends XotBaseResourceForm
 {
     /**
-     * @return array<int|string, SchemaComponent>
+     * @return array<int|string, \Filament\Forms\Components\Component>
      */
     public static function getFormSchema(): array
     {
