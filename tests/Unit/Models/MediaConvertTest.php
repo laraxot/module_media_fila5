@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
+use Modules\Media\Tests\TestCase;
 
 describe('MediaConvert Model', function () {
     it('extends BaseModel', function (): void {
