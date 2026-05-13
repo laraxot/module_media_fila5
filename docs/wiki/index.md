@@ -1,22 +1,19 @@
----
-title: "Media Wiki Index"
-module: "Media"
----
+# Media Module LLM Wiki
 
-# Media Module Wiki
+Indice operativo del wiki Media.
 
-## Indices
-- [Rules](rules/INDEX.md)
-- [Skills](skills/INDEX.md)
-- [Commands](commands/INDEX.md)
-- [Memories](memories/INDEX.md)
-- [Concepts](concepts/INDEX.md)
+## Struttura canonica (sacred)
 
-## On-Demand Workflow
+- [concepts/](./concepts/): Pattern architetturali e metodologie media.
+- [entities/](./entities/): Modelli e componenti chiave.
+- [sources/](./sources/): Dati di ricerca e link esterni.
+- [comparisons/](./comparisons/): Implementazioni alternative.
+- [decisions/](./decisions/): ADL (Architectural Decision Log).
+- [troubleshooting/](./troubleshooting/): Problemi noti e soluzioni.
+- [_archive/](./_archive/): Documentazione legacy.
+- [_templates/](./_templates/): Template standard.
 
-```bash
-qmd search "Media <topic>" --limit 5
-```
+## Regole collegate
 
 - [forbidden-folders-rule](../../../../docs/wiki/concepts/forbidden-folders.md): Vincoli strutturali strict.
 - [llm-wiki-standard](../../../../docs/project/karpathy-llm-wiki-adoption.md): Mapping repository e ciclo di vita conoscenza.
