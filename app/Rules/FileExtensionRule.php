@@ -19,23 +19,21 @@ class FileExtensionRule implements Rule
      */
     public function __construct(array $validExtensions = [])
     {
-        $normalizedExtensions = array_map(
+        $this->validExtensions = array_values(array_map(
             /**
              * @param  mixed  $ext
              * @return lowercase-string
              */
             static fn ($ext): string => mb_strtolower((string) $ext),
-            $validExtensions,
-        );
-
-        $this->validExtensions = array_values($normalizedExtensions);
+            $validExtensions
+        ));
     }
 
     /**
-     * @param  mixed  $attribute  The attribute being validated (not used in this rule)
+     * @param  string  $attribute  The attribute being validated (not used in this rule)
      * @param  mixed  $value  The uploaded file to validate
      */
-    public function passes(mixed $attribute, mixed $value): bool
+    public function passes($attribute, $value): bool
     {
         if (! $value instanceof UploadedFile) {
             return false;
