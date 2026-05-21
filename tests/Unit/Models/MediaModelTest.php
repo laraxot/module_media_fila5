@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
-uses(TestCase::class);
+uses(\Modules\Media\Tests\TestCase::class);
 
 use Modules\Media\Models\Media;
-use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 describe('Media Model', function () {

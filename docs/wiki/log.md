@@ -5,12 +5,6 @@ module: "Media"
 
 # Media - Wiki Activity Log
 
-## [2026-05-21] governance | owner html2pdf canonico
-
-- Documentazione Html2Pdf completa solo in `docs/html2pdf/` (+ `README.md`).
-- Altri moduli: stub DRY verso Media. Campagna: `bashscripts/tools/dedup_module_docs.py`.
-- How-to: [module-docs-deduplication](../../../../../docs/wiki/how-to/module-docs-deduplication.md).
-
 ## [2026-05-11] Wiki Structure Created
 
 - Created wiki structure: rules/, skills/, commands/, memories/, concepts/
@@ -18,9 +12,8 @@ module: "Media"
 - Created module index.md
 - Ready for on-demand loading via QMD
 
-## [2026-04-15] init | wiki bootstrap
-- Struttura wiki/log.md inizializzata.
-- Layer raw: tutti i file in `docs/` (eccetto `wiki/`).
-- Layer wiki: `docs/wiki/` — LLM-maintained, sintesi ad alto riuso.
-- Schema: `docs/.schema/WIKI_SCHEMA.md`
-- Adozione moduli: `docs/project/llm-wiki-module-adoption.md`
+## [2026-05-21] Troubleshooting — class redeclaration across `_bases`
+
+- Aggiunta [multibase-class-redeclare-runtime.md](troubleshooting/multibase-class-redeclare-runtime.md) per FatalError `Cannot redeclare class` quando nello stack compaiono due percorsi `base_*_fila5` nello stesso processo PHP.
+- Aggiornato [wiki/index.md](index.md) con sezione Troubleshooting.
+
