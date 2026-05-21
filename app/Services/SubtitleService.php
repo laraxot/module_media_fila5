@@ -158,7 +158,7 @@ class SubtitleService
                     'item_i' => $item_i,
                     'start' => $start,
                     'end' => $end,
-                    'time' => secondsToHms($start).','.secondsToHms($end),
+                    'time' => $this->secondsToHms($start).','.$this->secondsToHms($end),
                     'text' => $item->__toString(),
                 ];
                 $data[] = $tmp;
