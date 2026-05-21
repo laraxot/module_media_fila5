@@ -9,14 +9,19 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class MediaConvertsTable extends XotBaseResourceTable
 {
+<<<<<<< Updated upstream
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
     public static function getTableColumns(): array
     {
+=======
+>>>>>>> Stashed changes
     /**
-     * @return array<int\|string, \Filament\Tables\Columns\Column>
+     * @return array<string, \Filament\Tables\Columns\Column>
      */
+    public static function getTableColumns(): array
+    {
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
             'created_at' => TextColumn::make('created_at')->dateTime(),
