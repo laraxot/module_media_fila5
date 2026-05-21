@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-uses(TestCase::class);
+uses(\Modules\Media\Tests\TestCase::class);
 
 use Modules\Media\Actions\AttachMediaAction;
-use Modules\Media\Tests\TestCase;
 use Spatie\QueueableAction\QueueableAction;
 
 describe('AttachMediaAction', function () {

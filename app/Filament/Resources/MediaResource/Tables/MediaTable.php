@@ -11,7 +11,7 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 class MediaTable extends XotBaseResourceTable
 {
     /**
-     * @return array<string, Column>
+     * @return array<string, \Filament\Tables\Columns\Column>
      */
     public static function getTableColumns(): array
     {

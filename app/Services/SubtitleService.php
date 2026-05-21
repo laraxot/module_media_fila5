@@ -203,9 +203,9 @@ class SubtitleService
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
     }
 
-    private function secondsToHms(float|int $seconds): string
+    private function secondsToHms(int|float $seconds): string
     {
-        $totalSeconds = (int) floor($seconds);
+        $totalSeconds = max(0, (int) round($seconds));
         $hours = intdiv($totalSeconds, 3600);
         $minutes = intdiv($totalSeconds % 3600, 60);
         $secs = $totalSeconds % 60;
