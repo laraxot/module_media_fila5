@@ -12,6 +12,9 @@ module: "Media"
 - [Memories](memories/INDEX.md)
 - [Concepts](concepts/INDEX.md)
 
+## Troubleshooting
+- [Multibase PHP: Cannot redeclare class (runtime)](troubleshooting/multibase-class-redeclare-runtime.md)
+
 ## On-Demand Workflow
 
 ```bash
@@ -19,4 +22,4 @@ qmd search "Media <topic>" --limit 5
 ```
 
 ---
-*Updated: 2026-05-11*
+*Updated: 2026-05-21*
