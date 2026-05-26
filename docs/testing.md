@@ -181,6 +181,7 @@ protected function createApplication()
     
     $app['config']->set([
         'database.connections.media.database' => 'healthcare_app_data_test',
+        'database.connections.media.database' => 'ptvx_data_test',
     ]);
     
     return $app;
