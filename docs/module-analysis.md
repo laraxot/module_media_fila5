@@ -61,6 +61,7 @@ The Media module provides comprehensive media file management:
 - **Cms**: Content asset management
 - **User**: User profile images
 - **healthcare_app**: Report and chart images
+- **ModuloEsempio**: Report and chart images
 - **Xot**: Base media functionality
 - **Filament**: Media management interface
 

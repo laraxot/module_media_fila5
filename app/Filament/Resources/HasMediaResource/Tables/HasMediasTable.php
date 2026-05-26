@@ -13,8 +13,11 @@ class HasMediasTable extends XotBaseResourceTable
     /**
      * @return array<int|string, \Filament\Tables\Columns\Column>
      */
-    public static function getTableColumns(): array
+    public function getTableColumns(): array
     {
+    /**
+     * @return array<int\|string, \Filament\Tables\Columns\Column>
+     */
         return [
             'id' => TextColumn::make('id')->sortable(),
             'name' => TextColumn::make('name')->searchable(),
