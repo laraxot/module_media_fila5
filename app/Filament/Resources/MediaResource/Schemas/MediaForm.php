@@ -10,9 +10,8 @@ use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 class MediaForm extends XotBaseResourceForm
 {
     /**
-     * @return array<string, \Filament\Schemas\Components\Component>
+     * @return array<string, \Filament\Forms\Components\Component>
      */
-
     public static function getFormSchema(): array
     {
         return [
