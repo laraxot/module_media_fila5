@@ -1,2 +1,7 @@
-https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
+---
+module: theme
+topic: aws
+canonical: ../../../Themes/docs/shared-components/aws.txt
+---
 
+See canonical documentation: ../../../Themes/docs/shared-components/aws.txt
