@@ -24,12 +24,12 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
-        $manager = new InterventionImageManager(new GdDriver());
+        $manager = new InterventionImageManager(new GdDriver);
 
         $image1 = $manager->decodePath($path1);
         $image2 = $manager->decodePath($path2);
 
-        $image1->insert($image2, alignment: Alignment::CENTER);
+        $image1->insert($image2, 0, 0, Alignment::CENTER);
 
         File::ensureDirectoryExists(dirname($outputPath));
         $image1->save($outputPath);
@@ -49,11 +49,11 @@ class Merge
      */
     public function execute(array $filenames, string $outputFilename): bool
     {
-        if ([] === $filenames) {
+        if ($filenames === []) {
             return false;
         }
 
-        if (1 === count($filenames)) {
+        if (count($filenames) === 1) {
             $sourcePath = public_path($filenames[0]);
             $outputPath = public_path($outputFilename);
             if (! File::exists($sourcePath)) {
@@ -65,7 +65,9 @@ class Merge
             return File::exists($outputPath);
         }
 
-        $absolutePaths = array_map(static fn (string $filename): string => public_path($filename), $filenames);
+        $absolutePaths = array_map(static function (string $filename): string {
+            return public_path($filename);
+        }, $filenames);
 
         foreach ($absolutePaths as $path) {
             if (! File::exists($path)) {
@@ -75,7 +77,7 @@ class Merge
             }
         }
 
-        $manager = new InterventionImageManager(new GdDriver());
+        $manager = new InterventionImageManager(new GdDriver);
 
         /** @var list<ImageInterface> $images */
         $images = [];
