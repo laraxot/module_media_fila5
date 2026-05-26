@@ -256,7 +256,6 @@ class Media extends SpatieMedia
     use HasXotFactory;
     use Updater;
 
-    /** @var string */
     protected $connection = 'media';
 
     /**

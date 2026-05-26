@@ -82,7 +82,6 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static ?string $disk = null;
 
-    /** @var string */
     protected $connection = 'media';
 
     /**
@@ -96,8 +95,6 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
         /**
          * @var Media|null $media
-         *
-         * @phpstan-ignore-next-line
          */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
