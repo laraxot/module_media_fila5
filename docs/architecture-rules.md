@@ -1,7 +1,9 @@
 ---
-module: theme
-topic: architecture-rules
-canonical: ../../../Themes/docs/shared-components/architecture-rules.md
+title: architecture rules — puntatore
+type: reference
+updated: 2026-05-21
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/architecture-rules.md
+# Architecture rules (puntatore)
+
+Regole globali: [../../../../docs/wiki/rules/00-TRIGGER_MAP.md](../../../../docs/wiki/rules/00-TRIGGER_MAP.md).
