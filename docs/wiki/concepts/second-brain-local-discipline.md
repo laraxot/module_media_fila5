@@ -1,7 +1,13 @@
 ---
-module: theme
-topic: second-brain-local-discipline
-canonical: ../../../../../Themes/docs/shared-components/second-brain-local-discipline-Modules.md
+title: "second-brain-local-discipline — puntatore"
+type: reference
+updated: 2026-05-21
+related:
+  - "../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md"
 ---
 
-See canonical documentation: ../../../../../Themes/docs/shared-components/second-brain-local-discipline-Modules.md
+# second brain local discipline
+
+Stub **DRY** verso wiki modulo **Xot**. Policy: [docs-deduplication](../../../../../../docs/wiki/how-to/module-docs-deduplication.md).
+
+→ [second-brain-local-discipline.md](../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md)
