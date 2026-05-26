@@ -9,18 +9,10 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class TemporaryUploadsTable extends XotBaseResourceTable
 {
-<<<<<<< Updated upstream
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
-    public static function getTableColumns(): array
-    {
-=======
->>>>>>> Stashed changes
-    /**
-     * @return array<string, \Filament\Tables\Columns\Column>
-     */
-    public static function getTableColumns(): array
+    public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),

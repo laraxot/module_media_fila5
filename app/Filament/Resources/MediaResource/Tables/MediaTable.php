@@ -13,7 +13,7 @@ class MediaTable extends XotBaseResourceTable
     /**
      * @return array<string, \Filament\Tables\Columns\Column>
      */
-    public static function getTableColumns(): array
+    public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->sortable(),
