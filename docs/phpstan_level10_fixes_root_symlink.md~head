@@ -1,7 +1,0 @@
----
-module: theme
-topic: phpstan_level10_fixes_root_symlink
-canonical: ../../../Themes/docs/shared-components/phpstan-level10-fixes-root-symlink.md~head
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-fixes-root-symlink.md~head
