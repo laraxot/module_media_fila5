@@ -34,6 +34,7 @@ use function Safe\unlink;
  * S3Test Page for AWS S3 testing and diagnostics.
  *
  * @property array<string, mixed> $debugResults
+ * @property \Filament\Schemas\Schema $form
  *
  * @phpstan-ignore-next-line
  */
@@ -117,7 +118,7 @@ class S3Test extends XotBasePage
                     ->columnSpan(1),
                 Textarea::make('debug_output')
                     ->rows(self::DEBUG_OUTPUT_ROWS)
-                    ->default($getDebugOutput(
+                    ->default($this->getDebugOutput())
                     ->disabled()
                     ->columnSpan(1),
             ]),
@@ -129,9 +130,8 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
-        /** @phpstan-ignore-next-line */
-        $form->fill([
-            'debug_output' => $this->getDebugOutput(
+        $this->form->fill([
+            'debug_output' => $this->getDebugOutput(),
         ]);
     }
 
@@ -140,7 +140,7 @@ class S3Test extends XotBasePage
      */
     public function test_s3_connection(): void
     {
-        $debugResults['s3_connection'] = $this->test_s3_connection_details();
+        $this->debugResults['s3_connection'] = $this->test_s3_connection_details();
         $this->updateDebugOutput();
     }
 
@@ -149,7 +149,7 @@ class S3Test extends XotBasePage
      */
     public function test_permissions(): void
     {
-        $debugResults['permissions'] = $this->test_s3_permissions();
+        $this->debugResults['permissions'] = $this->test_s3_permissions();
         $this->updateDebugOutput();
     }
 
@@ -158,7 +158,7 @@ class S3Test extends XotBasePage
      */
     public function test_cloud_front(): void
     {
-        $debugResults['cloudfront'] = $this->test_cloud_front_connection();
+        $this->debugResults['cloudfront'] = $this->test_cloud_front_connection();
         $this->updateDebugOutput();
     }
 
@@ -167,7 +167,7 @@ class S3Test extends XotBasePage
      */
     public function test_credentials(): void
     {
-        $debugResults['credentials'] = $this->performCredentialsTest();
+        $this->debugResults['credentials'] = $this->performCredentialsTest();
         $this->updateDebugOutput();
 
         Notification::make()
@@ -181,7 +181,7 @@ class S3Test extends XotBasePage
      */
     public function test_bucket_policy(): void
     {
-        $debugResults['bucket_policy'] = $this->checkBucketPolicy();
+        $this->debugResults['bucket_policy'] = $this->checkBucketPolicy();
         $this->updateDebugOutput();
 
         Notification::make()
@@ -195,7 +195,7 @@ class S3Test extends XotBasePage
      */
     public function test_file_operations(): void
     {
-        $debugResults['file_operations'] = $this->test_file_upload_download();
+        $this->debugResults['file_operations'] = $this->test_file_upload_download();
         $this->updateDebugOutput();
 
         Notification::make()
@@ -209,7 +209,7 @@ class S3Test extends XotBasePage
      */
     public function debugConfig(): void
     {
-        $debugResults['config'] = $this->buildConfigDebugData();
+        $this->debugResults['config'] = $this->buildConfigDebugData();
         $this->updateDebugOutput();
 
         Notification::make()
@@ -223,7 +223,7 @@ class S3Test extends XotBasePage
      */
     public function clearResults(): void
     {
-        $debugResults = [];
+        $this->debugResults = [];
         $this->updateDebugOutput();
 
         Notification::make()
@@ -234,8 +234,7 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
-        /** @phpstan-ignore-next-line */
-        $formState = $form->getState();
+        $formState = $this->form->getState();
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
@@ -375,7 +374,7 @@ class S3Test extends XotBasePage
                     'Bucket Accessible' => '❌ No',
                     'Error Code' => $e->getAwsErrorCode() ?? 'UnknownError',
                     'Message' => $e->getMessage(),
-                    'Solution' => $this->getSolutionForError($e->getAwsErrorCode(
+                    'Solution' => $this->getSolutionForError($e->getAwsErrorCode()),
                 ],
             ];
         }
@@ -592,12 +591,12 @@ class S3Test extends XotBasePage
      */
     private function getDebugOutput(): string
     {
-        if (empty($debugResults
+        if (empty($this->debugResults)) {
             return __('media::s3test.debug.run_tests_message');
         }
 
         $output = [];
-        foreach ($debugResults as $category => $result
+        foreach ($this->debugResults as $category => $result) {
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
@@ -636,8 +635,7 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
-            /** @phpstan-ignore-next-line */
-            $formState = $form->getState();
+            $formState = $this->form->getState();
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -761,9 +759,8 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
-        /** @phpstan-ignore-next-line */
-        $form->fill([
-            'debug_output' => $this->getDebugOutput(
+        $this->form->fill([
+            'debug_output' => $this->getDebugOutput(),
         ]);
     }
 
@@ -785,8 +782,7 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
-            /** @phpstan-ignore-next-line */
-            $formState = $form->getState();
+            $formState = $this->form->getState();
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
