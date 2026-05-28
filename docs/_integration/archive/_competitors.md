@@ -1,6 +1,6 @@
 ---
 module: theme
-topic: .gitkeep
+topic: _competitors
 canonical: ../../../../../Themes/docs/shared-components/.gitkeep-Modules
 ---
 
