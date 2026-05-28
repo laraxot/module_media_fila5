@@ -1,6 +1,7 @@
-https://github.com/mokhosh/laravel-youtube-api
+---
+module: theme
+topic: youtube
+canonical: ../../../Themes/docs/shared-components/youtube.txt
+---
 
-https://github.com/mokhosh/laravel-youtube-downloader
-
-
-
+See canonical documentation: ../../../Themes/docs/shared-components/youtube.txt
