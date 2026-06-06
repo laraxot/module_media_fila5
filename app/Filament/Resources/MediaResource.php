@@ -55,7 +55,9 @@ class MediaResource extends XotBaseResource
     }
 
     /**
-     * @return array<string, PageRegistration>
+     * @return array<PageRegistration>
+     *
+     * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
     #[Override]
     public static function getPages(): array
