@@ -1,7 +1,9 @@
----
-module: theme
-topic: video-manager
-canonical: ../../../Themes/docs/shared-components/video-manager-1.md
----
+https://github.com/amitavroy/MyVideoManager
 
-See canonical documentation: ../../../Themes/docs/shared-components/video-manager-1.md
+### Versione HEAD
+
+### Versione Incoming
+
+https://github.com/amitavroy/MyVideoManager
+
+---

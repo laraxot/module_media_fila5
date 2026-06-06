@@ -158,8 +158,8 @@ class SubtitleService
                     'item_i' => $item_i,
                     'start' => $start,
                     'end' => $end,
-                    'time' => $this->secondsToHms($start).','.$this->secondsToHms($end),
-                    'text' => (string) $item,
+                    'time' => secondsToHms($start).','.secondsToHms($end),
+                    'text' => $item->__toString(),
                 ];
                 $data[] = $tmp;
                 $item_i++;
@@ -169,17 +169,6 @@ class SubtitleService
         }
 
         return $data;
-    }
-
-    private function secondsToHms(int|float $seconds): string
-    {
-        $totalMs = (int) round($seconds * 1000);
-        $hours = intdiv($totalMs, 3_600_000);
-        $minutes = intdiv($totalMs % 3_600_000, 60_000);
-        $secs = intdiv($totalMs % 60_000, 1000);
-        $ms = $totalMs % 1000;
-
-        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
     }
 
     /**
@@ -212,15 +201,5 @@ class SubtitleService
         $header = "WEBVTT\n\n";
 
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
-    }
-
-    private function secondsToHms(int|float $seconds): string
-    {
-        $totalSeconds = max(0, (int) round($seconds));
-        $hours = intdiv($totalSeconds, 3600);
-        $minutes = intdiv($totalSeconds % 3600, 60);
-        $secs = $totalSeconds % 60;
-
-        return sprintf('%02d:%02d:%02d', $hours, $minutes, $secs);
     }
 }
