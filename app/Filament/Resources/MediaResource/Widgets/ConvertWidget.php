@@ -11,7 +11,6 @@ use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
-use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use RuntimeException;
 
@@ -25,13 +24,15 @@ class ConvertWidget extends XotBaseWidget
 
     public float $percentage = 0;
 
-    public float $remaining;
+    /** @var float */
+    public $remaining;
 
-    public float $rate;
+    /** @var float */
+    public $rate;
 
     protected string $view = 'media::filament.widgets.convert';
 
-    public static string $resource = MediaResource::class;
+    protected static string $resource = MediaResource::class;
 
     public function getFormSchema(): array
     {
@@ -55,7 +56,6 @@ class ConvertWidget extends XotBaseWidget
         /*
          * -preset ultrafast.
          */
-        /** @var MediaExporter $exportedMedia */
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();
@@ -76,11 +76,21 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
-        /** @var MediaExporter $toDiskMedia */
+        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
+        if ($toDiskMedia === null) {
+            throw new RuntimeException('Failed to export media to disk');
+        }
 
-        /** @var MediaExporter $formattedMedia */
+        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $formattedMedia = $toDiskMedia->inFormat($format);
+        if ($formattedMedia === null || ! is_object($formattedMedia)) {
+            throw new RuntimeException('Failed to format media');
+        }
+
+        if (! method_exists($formattedMedia, 'save')) {
+            throw new RuntimeException('Formatted media does not have save method');
+        }
 
         $formattedMedia->save($file_new);
 
