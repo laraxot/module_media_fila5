@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Enums;
 
-use Modules\Xot\Traits\EnumTrait;
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Support\Facades\Lang;
 
 enum AttachmentTypeEnum: string implements HasLabel
 {
-    use EnumTrait;
-
     case IMAGE = 'image';
     case VIDEO = 'video';
     case DOCUMENT = 'document';
@@ -44,7 +41,10 @@ enum AttachmentTypeEnum: string implements HasLabel
         return null;
     }
 
-    
+    public function getLabel(): string
+    {
+        return trans('media::attachments.types.'.$this->value);
+    }
 
     // private static function translateBaseUniquePath(): string
     // {
