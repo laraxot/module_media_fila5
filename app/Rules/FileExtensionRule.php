@@ -11,6 +11,7 @@ use function in_array;
 
 class FileExtensionRule implements Rule
 {
+    /** @var array<int, string> */
     protected array $validExtensions = [];
 
     /**
