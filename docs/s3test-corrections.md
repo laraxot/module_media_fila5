@@ -1,3 +1,13 @@
+- [Documentazione Generale Media](../README.md)
+- [Best Practice Traduzioni](../../../docs/translation-standards.md)
+- [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
+- [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)
+
+---
+
+**Ultimo aggiornamento**: Gennaio 2025
+**Autore**: Sistema di correzione automatica
+**Stato**: ✅ Completato e verificato
 # Correzioni S3Test.php - Modulo Media
 
 ## Problemi Identificati e Risolti
@@ -244,9 +254,9 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
-- [Documentazione Generale Media](../readme.md)
-- [Best Practice Traduzioni](../../../../docs/translation-standards.md)
-- [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
+- [Documentazione Generale Media](../README.md)
+- [Best Practice Traduzioni](../../../docs/translation-standards.md)
+- [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 - [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)
 
 ---
@@ -254,3 +264,10 @@ private function getSolutionForError(?string $errorCode): string
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato e verificato
+---
+module: theme
+topic: s3test-corrections
+canonical: ../../../Themes/docs/shared-components/s3test-corrections-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/s3test-corrections-1.md
