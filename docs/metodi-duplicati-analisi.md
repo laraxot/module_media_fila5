@@ -1,6 +1,4 @@
-# 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
-
-**Powered by**: Super Mucca AI 🐄✨
+**Data**: 15 Ottobre 2025
 **Versione**: 2.0 ULTIMATE
 **Confidenza**: 99.9% (Dati Reali dal Codice)
 
@@ -535,3 +533,10 @@ public function getTableFilters(): array
 4. Implementazione ColumnBuilder
 
 **Domande?** Chiedi alla Super Mucca! 🐄⚡
+---
+module: theme
+topic: metodi-duplicati-analisi
+canonical: ../../../Themes/docs/shared-components/duplicate-methods-analysis-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/duplicate-methods-analysis-Modules.md
