@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace Modules\Media\Tests\Unit\Actions;
-
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;
@@ -14,7 +12,6 @@ uses(Tests\TestCase::class)->beforeEach(function () {
     Storage::fake('attachments');
 });
 
-it('executes save attachments successfully', function(): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
@@ -49,7 +46,6 @@ it('executes save attachments successfully', function(): void {
     expect(Storage::disk('attachments')->exists('temp/contract.pdf'))->toBeTrue();
 });
 
-it('handles empty attachments', function(): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
@@ -66,7 +62,6 @@ it('handles empty attachments', function(): void {
     expect(true)->toBeTrue();
 });
 
-it('skips nonexistent files', function(): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
@@ -85,7 +80,6 @@ it('skips nonexistent files', function(): void {
     expect(true)->toBeTrue();
 });
 
-it('handles storage errors gracefully', function(): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
@@ -104,7 +98,6 @@ it('handles storage errors gracefully', function(): void {
         ->toThrow(\Exception::class, 'Storage error');
 });
 
-it('uses correct disk', function(): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
@@ -136,7 +129,6 @@ it('uses correct disk', function(): void {
     expect(Storage::disk('custom_disk')->exists('temp/invoice.pdf'))->toBeTrue();
 });
 
-it('cleans up temp files', function(): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
@@ -167,7 +159,6 @@ it('cleans up temp files', function(): void {
     expect(true)->toBeTrue();
 });
 
-it('handles multiple attachments', function(): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
