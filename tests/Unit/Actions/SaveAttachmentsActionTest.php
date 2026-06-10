@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\SaveAttachmentsAction;
-use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(Tests\TestCase::class);
 
 beforeEach(function (): void {
     Storage::fake('attachments');
