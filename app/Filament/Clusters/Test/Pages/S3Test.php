@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Filament\Clusters\Test;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Override;
 use Webmozart\Assert\Assert;
@@ -248,12 +249,12 @@ class S3Test extends XotBasePage
         }
 
         // Generate CloudFront signed URL for attachment
-        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 60);
+        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
         dddx([
             'signedurl' => $signedUrl,
             'filePath' => $filePath,
-            'url2' => Storage::disk('s3')->url((string) $filePath),
-            'url3' => Storage::disk('s3')->temporaryUrl((string) $filePath, now()->addMinutes(5)),
+            'url2' => Storage::disk('s3')->url(SafeStringCastAction::cast($filePath)),
+            'url3' => Storage::disk('s3')->temporaryUrl(SafeStringCastAction::cast($filePath), now()->addMinutes(5)),
         ]);
         $debugResults = [];
         $this->updateDebugOutput();
@@ -270,17 +271,14 @@ class S3Test extends XotBasePage
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
-                'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, 8).'...',
+                'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, 8).'...',
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
                 'AWS_USE_PATH_STYLE_ENDPOINT' => config('filesystems.disks.s3.use_path_style_endpoint', 'false'),
-                'CLOUDFRONT_BASE_URL' => config(
-                    'services.cloudfront.base_url',
-                    env('CLOUDFRONT_RESOURCE_KEY_BASE_URL'),
-                ),
-                'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id', env('CLOUDFRONT_KEYPAIR_ID')),
-                'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key') || env('CLOUDFRONT_PRIVATE_KEY')
+                'CLOUDFRONT_BASE_URL' => config('services.cloudfront.base_url'),
+                'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id'),
+                'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key')
                     ? '✅ Present'
                     : '❌ Missing',
             ],
@@ -483,7 +481,7 @@ class S3Test extends XotBasePage
                 'status' => 'info',
                 'data' => [
                     'Policy Exists' => '✅ Yes',
-                    'Policy' => json_encode(json_decode((string) $policy['Policy']), JSON_PRETTY_PRINT),
+                    'Policy' => json_encode(json_decode(SafeStringCastAction::cast($policy['Policy'])), JSON_PRETTY_PRINT),
                 ],
             ];
         } catch (AwsException $e) {
@@ -517,9 +515,9 @@ class S3Test extends XotBasePage
     {
         try {
             // Test CloudFront configuration
-            $baseUrl = config('services.cloudfront.base_url', env('CLOUDFRONT_RESOURCE_KEY_BASE_URL'));
-            $keyPairId = config('services.cloudfront.key_pair_id', env('CLOUDFRONT_KEYPAIR_ID'));
-            $privateKey = config('services.cloudfront.private_key', env('CLOUDFRONT_PRIVATE_KEY'));
+            $baseUrl = config('services.cloudfront.base_url');
+            $keyPairId = config('services.cloudfront.key_pair_id');
+            $privateKey = config('services.cloudfront.private_key');
 
             if (! $baseUrl || ! $keyPairId || ! $privateKey) {
                 return [
@@ -550,7 +548,7 @@ class S3Test extends XotBasePage
                     'Base URL' => $baseUrl,
                     'Key Pair ID' => $keyPairId,
                     'Signed URL Test' => '✅ Success',
-                    'Sample URL' => substr((string) $testUrl, 0, self::URL_PREVIEW_LENGTH).'...',
+                    'Sample URL' => substr(SafeStringCastAction::cast($testUrl), 0, self::URL_PREVIEW_LENGTH).'...',
                 ],
             ];
         } catch (Exception $e) {
@@ -599,8 +597,8 @@ class S3Test extends XotBasePage
                 continue;
             }
 
-            $title = (string) $result['title'];
-            $status = (string) $result['status'];
+            $title = SafeStringCastAction::cast($result['title']);
+            $status = SafeStringCastAction::cast($result['status']);
             $data = $result['data'];
 
             $output[] = "=== {$title} ===";
@@ -609,11 +607,11 @@ class S3Test extends XotBasePage
 
             if (is_array($data)) {
                 foreach ($data as $key => $value) {
-                    $keyStr = (string) $key;
+                    $keyStr = SafeStringCastAction::cast($key);
                     if (is_array($value)) {
                         $output[] = "{$keyStr}: ".json_encode($value, JSON_PRETTY_PRINT);
                     } else {
-                        $valueStr = (string) $value;
+                        $valueStr = SafeStringCastAction::cast($value);
                         $output[] = "{$keyStr}: {$valueStr}";
                     }
                 }
@@ -649,7 +647,7 @@ class S3Test extends XotBasePage
             }
 
             // Generate CloudFront signed URL for attachment
-            $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 60);
+            $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
 
             // Log the email data for testing purposes (no actual email sent)
             Log::debug('S3 Test Email Data', [
@@ -793,9 +791,9 @@ class S3Test extends XotBasePage
                 ],
                 'uploaded_file' => $filePath
                     ? [
-                        'path' => (string) $filePath,
-                        'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 30),
-                        'temporary_url' => $s3Disk->temporaryUrl((string) $filePath, now()->addMinutes(30)),
+                        'path' => SafeStringCastAction::cast($filePath),
+                        'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 30),
+                        'temporary_url' => $s3Disk->temporaryUrl(SafeStringCastAction::cast($filePath), now()->addMinutes(30)),
                     ] : null,
             ];
 
