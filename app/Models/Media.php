@@ -39,10 +39,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string $disk
  * @property string|null $conversions_disk
  * @property int $size
- * @property array|null $manipulations
- * @property array|null $custom_properties
- * @property array|null $generated_conversions
- * @property array|null $responsive_images
+ * @property array<string, mixed>|null $manipulations
+ * @property array<string, mixed>|null $custom_properties
+ * @property array<string, mixed>|null $generated_conversions
+ * @property array<string, mixed>|null $responsive_images
  * @property int|null $order_column
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -139,7 +139,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  *
- * @property array $entry_conversions
+ * @property array<int, array{name: string, generated: mixed, src: string}> $entry_conversions
  * @property EloquentCollection<int, MediaConvert> $mediaConverts
  * @property int|null $media_converts_count
  *
@@ -243,8 +243,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  *
- * @mixin IdeHelperMedia
- *
  * @method static MediaFactory factory($count = null, $state = [])
  *
  * @property-read ProfileContract|null $deleter
@@ -253,15 +251,17 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
+    /** @phpstan-use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
     use Updater;
 
     protected $connection = 'media';
 
     /**
-     * //EloquentCollection.
+     * @param  array<int, string>  $uuids
+     * @return MediaCollection<int, self>
      */
-    public static function findWithTemporaryUploadInCurrentSession(array $uuids): EloquentCollection
+    public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
     {
         // MediaLibraryPro::ensureInstalled();
 
@@ -300,6 +300,9 @@ class Media extends SpatieMedia
         return $this->belongsTo($userClass, 'created_by');
     }
 
+    /**
+     * @return HasMany<MediaConvert, $this>
+     */
     public function mediaConverts(): HasMany
     {
         return $this->hasMany(MediaConvert::class);
@@ -331,6 +334,9 @@ class Media extends SpatieMedia
         return url($url);
     }
 
+    /**
+     * @return array<int, array{name: string, generated: mixed, src: string}>
+     */
     public function getEntryConversionsAttribute(): array
     {
         $conversions = [];
