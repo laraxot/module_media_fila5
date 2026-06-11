@@ -81,6 +81,10 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static ?string $disk = null;
 
+    public $incrementing = false;
+
+    protected $keyType = 'string';
+
     protected $connection = 'media';
 
     /**
