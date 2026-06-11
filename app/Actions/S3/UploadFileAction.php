@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\S3;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+
 use Aws\S3\ObjectUploader;
 use Exception;
 
@@ -59,7 +61,7 @@ class UploadFileAction extends BaseS3Action
                 $this->bucketName,
                 $destinationFilePath,
                 $sourceFile,
-                (string) ($uploadOptions['ACL'] ?? 'private'),
+                SafeStringCastAction::cast($uploadOptions['ACL'] ?? 'private'),
                 $uploadOptions,
             );
 

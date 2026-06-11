@@ -49,13 +49,6 @@ abstract class BaseS3Action
             return $configValue;
         }
 
-        // Fallback to environment
-        $envValue = env($envKey);
-        if (is_string($envValue) && trim($envValue) !== '') {
-            return $envValue;
-        }
-
-        // Return default
         return $default;
     }
 }
