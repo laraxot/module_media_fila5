@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 use Modules\Media\Models\TemporaryUpload;
 
 /**
@@ -31,7 +32,10 @@ class TemporaryUploadFactory extends Factory
     public function definition(): array
     {
         return [
+            'id' => (string) Str::uuid(),
             'session_id' => $this->faker->uuid(),
+            'file_name' => 'upload-'.$this->faker->lexify('????').'.tmp',
+            'status' => 'uploading',
         ];
     }
 
