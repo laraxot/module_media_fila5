@@ -18,318 +18,343 @@ use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
 use Modules\Media\Actions\Video\GetVideoDurationAction;
 use Modules\Media\Actions\Video\GetVideoFrameContentAction;
 use Modules\Media\Actions\Video\GetVideoScreenshotAction;
+use PHPUnit\Framework\Assert;
+use ReflectionClass;
 
-describe('Media Actions Coverage', function () {
-    describe('Image Merge Action', function () {
-        it('can be instantiated', function () {
+use function Safe\class_uses;
+use function Safe\file_get_contents;
+
+describe('Media Actions Coverage', function (): void {
+    describe('Image Merge Action', function (): void {
+        it('can be instantiated', function (): void {
             $action = new ImageMerge;
-            expect($action)->toBeInstanceOf(ImageMerge::class);
+
+            Assert::assertInstanceOf(ImageMerge::class, $action);
         });
 
-        it('has handle method', function () {
-            $action = new ImageMerge;
-            expect(method_exists($action, 'handle'))->toBeTrue();
-        });
-
-        it('has execute method', function () {
-            $action = new ImageMerge;
-            expect(method_exists($action, 'execute'))->toBeTrue();
-        });
-
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(ImageMerge::class)))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has handle method', function (): void {
             $reflection = new ReflectionClass(ImageMerge::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasMethod('handle'));
+        });
+
+        it('has execute method', function (): void {
+            $reflection = new ReflectionClass(ImageMerge::class);
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(ImageMerge::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(ImageMerge::class);
         });
     });
 
-    describe('SvgExistsAction', function () {
-        it('can be instantiated', function () {
+    describe('SvgExistsAction', function (): void {
+        it('can be instantiated', function (): void {
             $action = new SvgExistsAction;
-            expect($action)->toBeInstanceOf(SvgExistsAction::class);
+
+            Assert::assertInstanceOf(SvgExistsAction::class, $action);
         });
 
-        it('can be resolved from container', function () {
+        it('can be resolved from container', function (): void {
             $action = app(SvgExistsAction::class);
-            expect($action)->toBeInstanceOf(SvgExistsAction::class);
+
+            Assert::assertInstanceOf(SvgExistsAction::class, $action);
         });
 
-        it('has execute method', function () {
-            $action = new SvgExistsAction;
-            expect(method_exists($action, 'execute'))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(SvgExistsAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(SvgExistsAction::class);
         });
     });
 
-    describe('ConvertVideoAction', function () {
-        it('can be instantiated', function () {
+    describe('ConvertVideoAction', function (): void {
+        it('can be instantiated', function (): void {
             $action = new ConvertVideoAction;
-            expect($action)->toBeInstanceOf(ConvertVideoAction::class);
+
+            Assert::assertInstanceOf(ConvertVideoAction::class, $action);
         });
 
-        it('can be resolved from container', function () {
+        it('can be resolved from container', function (): void {
             $action = app(ConvertVideoAction::class);
-            expect($action)->toBeInstanceOf(ConvertVideoAction::class);
+
+            Assert::assertInstanceOf(ConvertVideoAction::class, $action);
         });
 
-        it('has execute method', function () {
-            $action = new ConvertVideoAction;
-            expect(method_exists($action, 'execute'))->toBeTrue();
-        });
-
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(ConvertVideoAction::class)))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(ConvertVideoAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(ConvertVideoAction::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(ConvertVideoAction::class);
         });
     });
 
-    describe('ConvertVideoByConvertDataAction', function () {
-        it('can be instantiated', function () {
+    describe('ConvertVideoByConvertDataAction', function (): void {
+        it('can be instantiated', function (): void {
             $action = new ConvertVideoByConvertDataAction;
-            expect($action)->toBeInstanceOf(ConvertVideoByConvertDataAction::class);
+
+            Assert::assertInstanceOf(ConvertVideoByConvertDataAction::class, $action);
         });
 
-        it('has execute method', function () {
-            $action = new ConvertVideoByConvertDataAction;
-            expect(method_exists($action, 'execute'))->toBeTrue();
-        });
-
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(ConvertVideoByConvertDataAction::class)))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(ConvertVideoByConvertDataAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(ConvertVideoByConvertDataAction::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(ConvertVideoByConvertDataAction::class);
         });
     });
 
-    describe('ConvertVideoByMediaConvertAction', function () {
-        it('can be instantiated', function () {
+    describe('ConvertVideoByMediaConvertAction', function (): void {
+        it('can be instantiated', function (): void {
             $action = new ConvertVideoByMediaConvertAction;
-            expect($action)->toBeInstanceOf(ConvertVideoByMediaConvertAction::class);
+
+            Assert::assertInstanceOf(ConvertVideoByMediaConvertAction::class, $action);
         });
 
-        it('has execute method', function () {
-            $action = new ConvertVideoByMediaConvertAction;
-            expect(method_exists($action, 'execute'))->toBeTrue();
-        });
-
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(ConvertVideoByMediaConvertAction::class)))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(ConvertVideoByMediaConvertAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(ConvertVideoByMediaConvertAction::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(ConvertVideoByMediaConvertAction::class);
         });
     });
 
-    describe('GetVideoScreenshotAction', function () {
-        it('can be instantiated', function () {
+    describe('GetVideoScreenshotAction', function (): void {
+        it('can be instantiated', function (): void {
             $action = new GetVideoScreenshotAction;
-            expect($action)->toBeInstanceOf(GetVideoScreenshotAction::class);
+
+            Assert::assertInstanceOf(GetVideoScreenshotAction::class, $action);
         });
 
-        it('has backoff property', function () {
-            $action = new GetVideoScreenshotAction;
-            expect(property_exists($action, 'backoff'))->toBeTrue();
-        });
-
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(GetVideoScreenshotAction::class)))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has backoff property', function (): void {
             $reflection = new ReflectionClass(GetVideoScreenshotAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasProperty('backoff'));
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(GetVideoScreenshotAction::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(GetVideoScreenshotAction::class);
         });
     });
 
-    describe('GetVideoFrameContentAction', function () {
-        it('can be instantiated', function () {
+    describe('GetVideoFrameContentAction', function (): void {
+        it('can be instantiated', function (): void {
             $action = new GetVideoFrameContentAction;
-            expect($action)->toBeInstanceOf(GetVideoFrameContentAction::class);
+
+            Assert::assertInstanceOf(GetVideoFrameContentAction::class, $action);
         });
 
-        it('has execute method', function () {
-            $action = new GetVideoFrameContentAction;
-            expect(method_exists($action, 'execute'))->toBeTrue();
-        });
-
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(GetVideoFrameContentAction::class)))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(GetVideoFrameContentAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(GetVideoFrameContentAction::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(GetVideoFrameContentAction::class);
         });
     });
 
-    describe('GetVideoDurationAction', function () {
-        it('can be instantiated', function () {
+    describe('GetVideoDurationAction', function (): void {
+        it('can be instantiated', function (): void {
             $action = new GetVideoDurationAction;
-            expect($action)->toBeInstanceOf(GetVideoDurationAction::class);
+
+            Assert::assertInstanceOf(GetVideoDurationAction::class, $action);
         });
 
-        it('has execute method', function () {
-            $action = new GetVideoDurationAction;
-            expect(method_exists($action, 'execute'))->toBeTrue();
-        });
-
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(GetVideoDurationAction::class)))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(GetVideoDurationAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(GetVideoDurationAction::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(GetVideoDurationAction::class);
         });
     });
 
-    describe('S3 UploadFileAction', function () {
-        it('has execute method', function () {
+    describe('S3 UploadFileAction', function (): void {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(UploadFileAction::class);
-            expect($reflection->hasMethod('execute'))->toBeTrue();
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
         });
 
-        it('extends BaseS3Action', function () {
+        it('extends BaseS3Action', function (): void {
             $reflection = new ReflectionClass(UploadFileAction::class);
-            expect($reflection->isSubclassOf(BaseS3Action::class))->toBeTrue();
+
+            Assert::assertTrue($reflection->isSubclassOf(BaseS3Action::class));
         });
 
-        it('uses strict types', function () {
-            $reflection = new ReflectionClass(UploadFileAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(UploadFileAction::class);
         });
     });
 
-    describe('S3 DeleteFileAction', function () {
-        it('has execute method', function () {
+    describe('S3 DeleteFileAction', function (): void {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(DeleteFileAction::class);
-            expect($reflection->hasMethod('execute'))->toBeTrue();
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
         });
 
-        it('extends BaseS3Action', function () {
+        it('extends BaseS3Action', function (): void {
             $reflection = new ReflectionClass(DeleteFileAction::class);
-            expect($reflection->isSubclassOf(BaseS3Action::class))->toBeTrue();
+
+            Assert::assertTrue($reflection->isSubclassOf(BaseS3Action::class));
         });
 
-        it('uses strict types', function () {
-            $reflection = new ReflectionClass(DeleteFileAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(DeleteFileAction::class);
         });
     });
 
-    describe('S3 GetFileInfoAction', function () {
-        it('has execute method', function () {
+    describe('S3 GetFileInfoAction', function (): void {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(GetFileInfoAction::class);
-            expect($reflection->hasMethod('execute'))->toBeTrue();
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
         });
 
-        it('extends BaseS3Action', function () {
+        it('extends BaseS3Action', function (): void {
             $reflection = new ReflectionClass(GetFileInfoAction::class);
-            expect($reflection->isSubclassOf(BaseS3Action::class))->toBeTrue();
+
+            Assert::assertTrue($reflection->isSubclassOf(BaseS3Action::class));
         });
 
-        it('uses strict types', function () {
-            $reflection = new ReflectionClass(GetFileInfoAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
-        });
-    });
-
-    describe('S3 CheckFileExistsAction', function () {
-        it('has execute method', function () {
-            $reflection = new ReflectionClass(CheckFileExistsAction::class);
-            expect($reflection->hasMethod('execute'))->toBeTrue();
-        });
-
-        it('extends BaseS3Action', function () {
-            $reflection = new ReflectionClass(CheckFileExistsAction::class);
-            expect($reflection->isSubclassOf(BaseS3Action::class))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
-            $reflection = new ReflectionClass(CheckFileExistsAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(GetFileInfoAction::class);
         });
     });
 
-    describe('BaseS3Action', function () {
-        it('is abstract', function () {
-            $reflection = new ReflectionClass(BaseS3Action::class);
-            expect($reflection->isAbstract())->toBeTrue();
+    describe('S3 CheckFileExistsAction', function (): void {
+        it('has execute method', function (): void {
+            $reflection = new ReflectionClass(CheckFileExistsAction::class);
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
         });
 
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(BaseS3Action::class)))->toBeTrue();
+        it('extends BaseS3Action', function (): void {
+            $reflection = new ReflectionClass(CheckFileExistsAction::class);
+
+            Assert::assertTrue($reflection->isSubclassOf(BaseS3Action::class));
         });
 
-        it('uses strict types', function () {
-            $reflection = new ReflectionClass(BaseS3Action::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
-        });
-
-        it('has s3Client property', function () {
-            $reflection = new ReflectionClass(BaseS3Action::class);
-            expect($reflection->hasProperty('s3Client'))->toBeTrue();
-        });
-
-        it('has bucketName property', function () {
-            $reflection = new ReflectionClass(BaseS3Action::class);
-            expect($reflection->hasProperty('bucketName'))->toBeTrue();
-        });
-
-        it('has logger property', function () {
-            $reflection = new ReflectionClass(BaseS3Action::class);
-            expect($reflection->hasProperty('logger'))->toBeTrue();
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(CheckFileExistsAction::class);
         });
     });
 
-    describe('GetCloudFrontSignedUrlAction', function () {
-        it('can be instantiated', function () {
+    describe('BaseS3Action', function (): void {
+        it('is abstract', function (): void {
+            $reflection = new ReflectionClass(BaseS3Action::class);
+
+            Assert::assertTrue($reflection->isAbstract());
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(BaseS3Action::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(BaseS3Action::class);
+        });
+
+        it('has s3Client property', function (): void {
+            $reflection = new ReflectionClass(BaseS3Action::class);
+
+            Assert::assertTrue($reflection->hasProperty('s3Client'));
+        });
+
+        it('has bucketName property', function (): void {
+            $reflection = new ReflectionClass(BaseS3Action::class);
+
+            Assert::assertTrue($reflection->hasProperty('bucketName'));
+        });
+
+        it('has logger property', function (): void {
+            $reflection = new ReflectionClass(BaseS3Action::class);
+
+            Assert::assertTrue($reflection->hasProperty('logger'));
+        });
+    });
+
+    describe('GetCloudFrontSignedUrlAction', function (): void {
+        it('can be instantiated', function (): void {
             $action = new GetCloudFrontSignedUrlAction;
-            expect($action)->toBeInstanceOf(GetCloudFrontSignedUrlAction::class);
+
+            Assert::assertInstanceOf(GetCloudFrontSignedUrlAction::class, $action);
         });
 
-        it('has execute method', function () {
-            $action = new GetCloudFrontSignedUrlAction;
-            expect(method_exists($action, 'execute'))->toBeTrue();
-        });
-
-        it('uses QueueableAction trait', function () {
-            expect(in_array('Spatie\QueueableAction\QueueableAction', class_uses(GetCloudFrontSignedUrlAction::class)))->toBeTrue();
-        });
-
-        it('uses strict types', function () {
+        it('has execute method', function (): void {
             $reflection = new ReflectionClass(GetCloudFrontSignedUrlAction::class);
-            $content = file_get_contents($reflection->getFileName());
-            expect($content)->toContain('');
+
+            Assert::assertTrue($reflection->hasMethod('execute'));
+        });
+
+        it('uses QueueableAction trait', function (): void {
+            Assert::assertTrue(in_array('Spatie\QueueableAction\QueueableAction', class_uses(GetCloudFrontSignedUrlAction::class), true));
+        });
+
+        it('uses strict types', function (): void {
+            assertMediaActionDeclaresStrictTypes(GetCloudFrontSignedUrlAction::class);
         });
     });
 });
+
+/**
+ * @param class-string $class
+ */
+function assertMediaActionDeclaresStrictTypes(string $class): void
+{
+    $reflection = new ReflectionClass($class);
+    $filename = $reflection->getFileName();
+
+    Assert::assertIsString($filename);
+
+    $content = file_get_contents($filename);
+
+    Assert::assertStringContainsString('declare(strict_types=1)', $content);
+}
