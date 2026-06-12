@@ -3,13 +3,13 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
+use ReflectionClass;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\Attributes\Test;
-use ReflectionClass;
 
 class BaseModelTest extends TestCase
 {
