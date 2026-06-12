@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
+use ReflectionClass;
 
 use function Safe\class_uses;
 use Modules\Media\Actions\AttachMediaAction;
