@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
+use ReflectionClass;
 
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Actions\Image\Merge as ImageMerge;
@@ -19,7 +20,6 @@ use Modules\Media\Actions\Video\GetVideoDurationAction;
 use Modules\Media\Actions\Video\GetVideoFrameContentAction;
 use Modules\Media\Actions\Video\GetVideoScreenshotAction;
 use PHPUnit\Framework\Assert;
-use ReflectionClass;
 
 use function Safe\class_uses;
 use function Safe\file_get_contents;
