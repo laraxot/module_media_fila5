@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
-use ReflectionClass;
-
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Actions\Image\Merge as ImageMerge;
 use Modules\Media\Actions\Image\SvgExistsAction;
@@ -33,13 +31,13 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has handle method', function (): void {
-            $reflection = new ReflectionClass(ImageMerge::class);
+            $reflection = new \ReflectionClass(ImageMerge::class);
 
             Assert::assertTrue($reflection->hasMethod('handle'));
         });
 
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(ImageMerge::class);
+            $reflection = new \ReflectionClass(ImageMerge::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
@@ -67,7 +65,7 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(SvgExistsAction::class);
+            $reflection = new \ReflectionClass(SvgExistsAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
@@ -91,7 +89,7 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(ConvertVideoAction::class);
+            $reflection = new \ReflectionClass(ConvertVideoAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
@@ -113,7 +111,7 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(ConvertVideoByConvertDataAction::class);
+            $reflection = new \ReflectionClass(ConvertVideoByConvertDataAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
@@ -135,7 +133,7 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(ConvertVideoByMediaConvertAction::class);
+            $reflection = new \ReflectionClass(ConvertVideoByMediaConvertAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
@@ -157,7 +155,7 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has backoff property', function (): void {
-            $reflection = new ReflectionClass(GetVideoScreenshotAction::class);
+            $reflection = new \ReflectionClass(GetVideoScreenshotAction::class);
 
             Assert::assertTrue($reflection->hasProperty('backoff'));
         });
@@ -179,7 +177,7 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(GetVideoFrameContentAction::class);
+            $reflection = new \ReflectionClass(GetVideoFrameContentAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
@@ -201,7 +199,7 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(GetVideoDurationAction::class);
+            $reflection = new \ReflectionClass(GetVideoDurationAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
@@ -217,13 +215,13 @@ describe('Media Actions Coverage', function (): void {
 
     describe('S3 UploadFileAction', function (): void {
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(UploadFileAction::class);
+            $reflection = new \ReflectionClass(UploadFileAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
 
         it('extends BaseS3Action', function (): void {
-            $reflection = new ReflectionClass(UploadFileAction::class);
+            $reflection = new \ReflectionClass(UploadFileAction::class);
 
             Assert::assertTrue($reflection->isSubclassOf(BaseS3Action::class));
         });
@@ -235,13 +233,13 @@ describe('Media Actions Coverage', function (): void {
 
     describe('S3 DeleteFileAction', function (): void {
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(DeleteFileAction::class);
+            $reflection = new \ReflectionClass(DeleteFileAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
 
         it('extends BaseS3Action', function (): void {
-            $reflection = new ReflectionClass(DeleteFileAction::class);
+            $reflection = new \ReflectionClass(DeleteFileAction::class);
 
             Assert::assertTrue($reflection->isSubclassOf(BaseS3Action::class));
         });
@@ -253,13 +251,13 @@ describe('Media Actions Coverage', function (): void {
 
     describe('S3 GetFileInfoAction', function (): void {
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(GetFileInfoAction::class);
+            $reflection = new \ReflectionClass(GetFileInfoAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
 
         it('extends BaseS3Action', function (): void {
-            $reflection = new ReflectionClass(GetFileInfoAction::class);
+            $reflection = new \ReflectionClass(GetFileInfoAction::class);
 
             Assert::assertTrue($reflection->isSubclassOf(BaseS3Action::class));
         });
@@ -271,13 +269,13 @@ describe('Media Actions Coverage', function (): void {
 
     describe('S3 CheckFileExistsAction', function (): void {
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(CheckFileExistsAction::class);
+            $reflection = new \ReflectionClass(CheckFileExistsAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
 
         it('extends BaseS3Action', function (): void {
-            $reflection = new ReflectionClass(CheckFileExistsAction::class);
+            $reflection = new \ReflectionClass(CheckFileExistsAction::class);
 
             Assert::assertTrue($reflection->isSubclassOf(BaseS3Action::class));
         });
@@ -289,7 +287,7 @@ describe('Media Actions Coverage', function (): void {
 
     describe('BaseS3Action', function (): void {
         it('is abstract', function (): void {
-            $reflection = new ReflectionClass(BaseS3Action::class);
+            $reflection = new \ReflectionClass(BaseS3Action::class);
 
             Assert::assertTrue($reflection->isAbstract());
         });
@@ -303,19 +301,19 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has s3Client property', function (): void {
-            $reflection = new ReflectionClass(BaseS3Action::class);
+            $reflection = new \ReflectionClass(BaseS3Action::class);
 
             Assert::assertTrue($reflection->hasProperty('s3Client'));
         });
 
         it('has bucketName property', function (): void {
-            $reflection = new ReflectionClass(BaseS3Action::class);
+            $reflection = new \ReflectionClass(BaseS3Action::class);
 
             Assert::assertTrue($reflection->hasProperty('bucketName'));
         });
 
         it('has logger property', function (): void {
-            $reflection = new ReflectionClass(BaseS3Action::class);
+            $reflection = new \ReflectionClass(BaseS3Action::class);
 
             Assert::assertTrue($reflection->hasProperty('logger'));
         });
@@ -329,7 +327,7 @@ describe('Media Actions Coverage', function (): void {
         });
 
         it('has execute method', function (): void {
-            $reflection = new ReflectionClass(GetCloudFrontSignedUrlAction::class);
+            $reflection = new \ReflectionClass(GetCloudFrontSignedUrlAction::class);
 
             Assert::assertTrue($reflection->hasMethod('execute'));
         });
@@ -349,7 +347,7 @@ describe('Media Actions Coverage', function (): void {
  */
 function assertMediaActionDeclaresStrictTypes(string $class): void
 {
-    $reflection = new ReflectionClass($class);
+    $reflection = new \ReflectionClass($class);
     $filename = $reflection->getFileName();
 
     Assert::assertIsString($filename);
