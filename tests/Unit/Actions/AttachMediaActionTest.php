@@ -9,7 +9,7 @@ use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\QueueableAction\QueueableAction;
 
-uses(TestCase::class);
+uses(\Modules\Media\Tests\TestCase::class);
 
 describe('AttachMediaAction', function (): void {
     it('uses QueueableAction trait', function (): void {
