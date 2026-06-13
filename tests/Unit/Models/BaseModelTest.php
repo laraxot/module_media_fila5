@@ -3,8 +3,6 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
-use ReflectionClass;
-
 use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Tests\TestCase;
@@ -16,7 +14,7 @@ class BaseModelTest extends TestCase
     #[Test]
     public function base_model_extends_eloquent_model(): void
     {
-        $reflection = new ReflectionClass(BaseModel::class);
+        $reflection = new \ReflectionClass(BaseModel::class);
 
         Assert::assertTrue($reflection->isSubclassOf(Model::class));
     }
