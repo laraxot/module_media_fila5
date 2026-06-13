@@ -9,6 +9,7 @@ use PHPUnit\Framework\Assert;
 uses(Tests\TestCase::class);
 
 beforeEach(function (): void {
+    /** @var \Modules\Media\Tests\TestCase $this */
     Storage::fake('attachments');
 });
 
