@@ -7,33 +7,32 @@ namespace Modules\Media\Tests\Unit\Models;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(\Modules\Media\Tests\TestCase::class);
 
-beforeEach(function () {
-    $this->baseModel = new class extends BaseModel
-    {
-        protected $table = 'test_media_table';
-    };
-});
+describe('Base Model', function (): void {
+    test('base model extends eloquent model', function (): void {
+$reflection = new \ReflectionClass(BaseModel::class);
 
-test('base model extends eloquent model', function () {
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
-});
+        Assert::assertTrue($reflection->isSubclassOf(Model::class));
+    });
 
-test('base model has correct table name', function () {
-    expect($this->baseModel->getTable())->toBe('test_media_table');
-});
+    test('base model can be extended with custom table', function (): void {
+$model = new class extends BaseModel
+        {
+            protected $table = 'test_media_table';
+        };
 
-test('base model can be instantiated', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
-});
+        Assert::assertSame('test_media_table', $model->getTable());
+    });
 
-test('base model has proper inheritance chain', function () {
-    expect($this->baseModel)->toBeInstanceOf(BaseModel::class);
-    expect($this->baseModel)->toBeInstanceOf(Model::class);
-});
+    test('base model has timestamps enabled', function (): void {
+$model = new class extends BaseModel
+        {
+            protected $table = 'test_media_table';
+        };
 
-test('base model has timestamps enabled', function () {
-    expect($this->baseModel->usesTimestamps())->toBeTrue();
+        Assert::assertTrue($model->usesTimestamps());
+    });
 });

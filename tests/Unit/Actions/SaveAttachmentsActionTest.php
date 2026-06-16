@@ -10,7 +10,10 @@ use Modules\Media\Models\Media;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 
-uses(Tests\TestCase::class)->beforeEach(function () {
+uses(TestCase::class);
+
+beforeEach(function (): void {
+    /** @var \Modules\Media\Tests\TestCase $this */
     Storage::fake('attachments');
 });
 
