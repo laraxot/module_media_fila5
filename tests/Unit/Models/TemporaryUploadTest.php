@@ -1,7 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Media\Tests\TestCase;
