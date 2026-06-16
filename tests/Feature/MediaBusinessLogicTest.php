@@ -17,6 +17,7 @@ uses(TestCase::class);
 
 describe('Media Business Logic', function () {
     beforeEach(function () {
+    /** @var \Modules\Media\Tests\TestCase $this */
         Storage::fake('public');
     });
 
