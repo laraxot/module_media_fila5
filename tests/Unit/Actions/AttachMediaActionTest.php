@@ -3,13 +3,13 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
-
-uses(\Modules\Media\Tests\TestCase::class);
-
+use function Safe\class_uses;
 use Modules\Media\Actions\AttachMediaAction;
 use Spatie\QueueableAction\QueueableAction;
 
-describe('AttachMediaAction', function () {
+uses(\Modules\Media\Tests\TestCase::class);
+
+describe('AttachMediaAction', function (): void {
     it('uses QueueableAction trait', function (): void {
         // Arrange
         $action = new AttachMediaAction;
