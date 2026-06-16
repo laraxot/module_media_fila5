@@ -1,11 +1,6 @@
 <?php
 
 declare(strict_types=1);
-
-namespace Modules\Media\Tests\Unit\Models;
-
-uses(\Modules\Media\Tests\TestCase::class);
-
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\Media;
 use Modules\Media\Models\TemporaryUpload;

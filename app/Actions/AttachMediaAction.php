@@ -13,4 +13,9 @@ use Spatie\QueueableAction\QueueableAction;
 class AttachMediaAction
 {
     use QueueableAction;
+
+    public function execute(): void
+    {
+    }
 }
+
