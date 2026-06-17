@@ -19,12 +19,6 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Watermark Automatico**: Applicazione automatica di watermark sui media
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
-- [Collegamenti Documentazione](../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../docs/DOCUMENTATION_STANDARDS.md)
-- [Modulo Xot](../../Xot/docs/README.md)
-- [Modulo Lang](../../Lang/docs/README.md)
-- [Modulo UI](../../UI/docs/README.md)
 - [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
@@ -35,8 +29,6 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](./README.md) - Panoramica generale del modulo
-- [Architettura](./architecture/README.md) - Architettura generale del modulo
 - [README](./readme.md) - Panoramica generale del modulo
 - [Architettura](./architecture/readme.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
@@ -55,7 +47,6 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - [Risorse Filament](./filament-resources.md) - Componenti Filament Resources
 - [Pagine Filament](./filament-pages.md) - Componenti Filament Pages
 - [Azioni Filament](./filament-actions.md) - Azioni personalizzate
-- [Convenzioni Filament](./FILAMENT_EXTENSION_PATTERN.md) - Pattern di estensione per Filament
 - [Convenzioni Filament](./filament_extension_pattern.md) - Pattern di estensione per Filament
 
 ### API e Integrazione
@@ -81,23 +72,6 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ### Testing e Qualità
 - [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 - [Testing](./testing.md) - Strategie e approcci per il testing
-- [Struttura Config](./CONFIG_STRUCTURE.md) - Struttura dei file di configurazione
-- [Configurazione Upload](./upload-config.md) - Configurazione sistema upload
-- [Principi di Configurazione](./CONFIGURATIONS_USAGE_PRINCIPLES.md) - Principi per l'utilizzo delle configurazioni
-
-### Pattern e Architettura
-- [Pattern Factory](./FACTORY_PATTERN_ANALYSIS.md) - Analisi del pattern Factory
-- [Risoluzione Dinamica delle Classi](./DYNAMIC_CLASS_RESOLUTION.md) - Pattern di risoluzione dinamica delle classi
-- [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
-
-### Standard e Traduzioni
-- [Convenzioni di Naming](./NAMING_CONVENTIONS.md) - Standard per i nomi di file e classi
-- [Traduzioni](./translations.md) - Sistema di traduzioni
-- [Standard Traduzioni](./TRANSLATION_STANDARDS.md) - Standard per le chiavi di traduzione
-
-### Testing e Qualità
-- [PHPStan Level 10](./PHPSTAN_LEVEL10_FIXES.md) - Correzioni per PHPStan Level 10
-- [Testing](./TESTING.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
 
@@ -162,25 +136,6 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nell'upl
 
 ### Support
 - [Index](./support/index.md) - Indice della documentazione sui componenti di supporto
-- [Index](./actions/INDEX.md) - Indice della documentazione sulle azioni
-
-### Architettura
-- [Index](./architecture/INDEX.md) - Indice della documentazione sull'architettura
-
-### Conversions
-- [Index](./conversions/INDEX.md) - Indice della documentazione sulle conversioni
-
-### Filament
-- [Index](./filament/INDEX.md) - Indice della documentazione sui componenti Filament
-
-### Performance
-- [Index](./performance/INDEX.md) - Indice della documentazione sulle ottimizzazioni
-
-### PHPStan
-- [Index](./phpstan/INDEX.md) - Indice della documentazione PHPStan
-
-### Support
-- [Index](./support/INDEX.md) - Indice della documentazione sui componenti di supporto
 
 ## Collegamenti alla Documentazione Correlata
 - [Panoramica Architettura](./architecture.md)
@@ -196,12 +151,6 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione
 - Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
-- Vedi anche: [../../../../docs/README.md](../../../../docs/README.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
-*Ultimo aggiornamento: Gennaio 2025*
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
-
-- [Conflict Resolution](conflict-resolution.md)
