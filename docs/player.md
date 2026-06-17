@@ -5,10 +5,3 @@ https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views
 
 per fare blocco YOUTUBE e blocco VIMEO
 https://github.com/nWidart/laravel-videoable/blob/master/resources/views/sources/vimeo.blade.php
----
-module: theme
-topic: player
-canonical: ../../../Themes/docs/shared-components/player.txt
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/player.txt
