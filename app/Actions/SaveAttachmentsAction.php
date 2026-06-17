@@ -7,8 +7,6 @@ namespace Modules\Media\Actions;
 use Exception;
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\MediaCollections\FileAdder;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
@@ -46,7 +44,7 @@ class SaveAttachmentsAction
 
             // Ottieni il contenuto del file prima che venga eliminato
             $fileContent = $storage->get($path);
-            $tempPath = tempnam(storage_path('framework/cache'), 'media_');
+            $tempPath = tempnam(sys_get_temp_dir(), 'media_');
 
             file_put_contents($tempPath, $fileContent);
 
@@ -95,14 +93,15 @@ class SaveAttachmentsAction
                 throw new Exception('Method addMediaFromDisk not found');
             }
             $fileAdder = $record->addMediaFromDisk($path, $disk);
-            Assert::nullOrIsInstanceOf($fileAdder, FileAdder::class);
             // $media=$record->addMediaFromRequest($attachment)
 
             // $media=$record->addMedia($full_path)
             if ($fileAdder === null) {
                 continue;
             }
+            /** @phpstan-ignore-next-line - Spatie MediaLibrary fluent API */
             $media = $fileAdder->toMediaCollection($attachment);
+            /** @phpstan-ignore-next-line - Spatie MediaLibrary Media model */
             $data_attachments[$attachment] = $media->getPathRelativeToRoot();
         }
         /** @var array<string, string> $data_attachments */

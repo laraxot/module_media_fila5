@@ -1,4 +1,3 @@
-Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
 # Media Module - File Management Architecture
 
 ## 🎯 Module Overview
@@ -1145,10 +1144,3 @@ readonly class ConversionConfiguration
 - **System Performance**: <2GB memory usage per worker
 
 Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
----
-module: theme
-topic: file-management-architecture
-canonical: ../../../Themes/docs/shared-components/FILE_MANAGEMENT_ARCHITECTURE.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/FILE_MANAGEMENT_ARCHITECTURE.md

@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests;
 
-use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
-use Modules\Xot\Tests\XotBaseTestCase;
+use Modules\Xot\Providers\XotServiceProvider;
+use Modules\Xot\Tests\CreatesApplication;
 
 /**
  * Base test case for Media module.
@@ -18,17 +19,15 @@ use Modules\Xot\Tests\XotBaseTestCase;
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
  * DatabaseTransactions handles rollback between tests.
  */
-abstract class TestCase extends XotBaseTestCase
+abstract class TestCase extends BaseTestCase
 {
+    use CreatesApplication;
     use DatabaseTransactions;
 
-    /**
-     * @return array<int, class-string>
-     */
-    protected function getPackageProviders(Application $app): array
+    protected function getPackageProviders($app): array
     {
         return [
-            ...parent::getPackageProviders($app),
+            XotServiceProvider::class,
             UserServiceProvider::class,
             MediaServiceProvider::class,
         ];
