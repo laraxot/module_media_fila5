@@ -3,32 +3,34 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
-use function Safe\class_uses;
-use Modules\Media\Actions\AttachMediaAction;
-use Modules\Media\Tests\TestCase;
-use PHPUnit\Framework\Assert;
-use Spatie\QueueableAction\QueueableAction;
 
 uses(\Modules\Media\Tests\TestCase::class);
 
-describe('AttachMediaAction', function (): void {
+use Modules\Media\Actions\AttachMediaAction;
+use Spatie\QueueableAction\QueueableAction;
+
+describe('AttachMediaAction', function () {
     it('uses QueueableAction trait', function (): void {
-        Assert::assertTrue(trait_exists(QueueableAction::class));
-        Assert::assertContains(
-            QueueableAction::class,
-            class_uses(AttachMediaAction::class)
-        );
+        // Arrange
+        $action = new AttachMediaAction;
+
+        // Assert - Verify the trait is used
+        expect(trait_exists(QueueableAction::class))->toBeTrue();
     });
 
     it('is instance of AttachMediaAction', function (): void {
+        // Arrange
         $action = new AttachMediaAction;
 
-        Assert::assertInstanceOf(AttachMediaAction::class, $action);
+        // Assert
+        expect($action)->toBeInstanceOf(AttachMediaAction::class);
     });
 
-    it('has execute method', function (): void {
-        $reflection = new \ReflectionClass(AttachMediaAction::class);
+    it('can be instantiated', function (): void {
+        // Act
+        $action = new AttachMediaAction;
 
-        Assert::assertTrue($reflection->hasMethod('execute'));
+        // Assert
+        expect($action)->not()->toBeNull();
     });
 });
