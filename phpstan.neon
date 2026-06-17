@@ -11,10 +11,9 @@ parameters:
         - ./database
 
     excludePaths:
-        analyseAndScan:
-            - ./vendor (?)
-            - ./tests
-            - ./app_old (?)
+        - ./vendor
+        - ./tests
+        - ./app_old
 
     scanFiles:
         - ../../vendor/pbmedia/laravel-ffmpeg/src/Support/FFMpeg.php

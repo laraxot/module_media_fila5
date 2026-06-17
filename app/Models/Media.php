@@ -39,10 +39,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string $disk
  * @property string|null $conversions_disk
  * @property int $size
- * @property array<string, mixed>|null $manipulations
- * @property array<string, mixed>|null $custom_properties
- * @property array<string, mixed>|null $generated_conversions
- * @property array<string, mixed>|null $responsive_images
+ * @property array|null $manipulations
+ * @property array|null $custom_properties
+ * @property array|null $generated_conversions
+ * @property array|null $responsive_images
  * @property int|null $order_column
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -64,7 +64,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property UserContract|null $creator
  * @property Model|Eloquent $model
  * @property TemporaryUpload|null $temporaryUpload
- *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static Builder|Media newModelQuery()
@@ -104,12 +103,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereUserId($value)
  * @method static Builder|Media whereUuid($value)
  * @method static Builder|Media whereWidth($value)
- *
  * @property mixed $extension
  * @property mixed $human_readable_size
  * @property mixed $original_url
  * @property mixed $preview_url
- *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -118,10 +115,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
- *
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static Builder|Media whereDeletedAt($value)
@@ -138,11 +133,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
- *
- * @property array<int, array{name: string, generated: mixed, src: string}> $entry_conversions
+ * @property array $entry_conversions
  * @property EloquentCollection<int, MediaConvert> $mediaConverts
  * @property int|null $media_converts_count
- *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -189,9 +182,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
- *
  * @property ProfileContract|null $updater
- *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -242,26 +233,23 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
- *
+ * @mixin IdeHelperMedia
  * @method static MediaFactory factory($count = null, $state = [])
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin Eloquent
  */
 class Media extends SpatieMedia
 {
-    /** @phpstan-use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
     use Updater;
 
+    /** @var string */
     protected $connection = 'media';
 
     /**
-     * @param  array<int, string>  $uuids
-     * @return MediaCollection<int, self>
+     * //EloquentCollection.
      */
-    public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
+    public static function findWithTemporaryUploadInCurrentSession(array $uuids): EloquentCollection
     {
         // MediaLibraryPro::ensureInstalled();
 
@@ -300,9 +288,6 @@ class Media extends SpatieMedia
         return $this->belongsTo($userClass, 'created_by');
     }
 
-    /**
-     * @return HasMany<MediaConvert, $this>
-     */
     public function mediaConverts(): HasMany
     {
         return $this->hasMany(MediaConvert::class);
@@ -334,9 +319,6 @@ class Media extends SpatieMedia
         return url($url);
     }
 
-    /**
-     * @return array<int, array{name: string, generated: mixed, src: string}>
-     */
     public function getEntryConversionsAttribute(): array
     {
         $conversions = [];

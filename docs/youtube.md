@@ -4,10 +4,3 @@ https://github.com/mokhosh/laravel-youtube-downloader
 
 
 
----
-module: theme
-topic: youtube
-canonical: ../../../Themes/docs/shared-components/youtube.txt
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/youtube.txt

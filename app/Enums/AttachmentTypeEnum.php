@@ -4,30 +4,21 @@ declare(strict_types=1);
 
 namespace Modules\Media\Enums;
 
-use Modules\Xot\Traits\EnumTrait;
 use Filament\Support\Contracts\HasLabel;
 use Illuminate\Support\Facades\Lang;
 
 enum AttachmentTypeEnum: string implements HasLabel
 {
-    use EnumTrait;
-
     case IMAGE = 'image';
     case VIDEO = 'video';
     case DOCUMENT = 'document';
     case MANUAL = 'manual';
 
-    /**
-     * @return array<string, string|null>
-     */
     public static function getTypeNoteDescriptionsByValues(): array
     {
-        /** @var array<string, string|null> $descriptions */
-        $descriptions = collect(self::cases())
+        return collect(self::cases())
             ->mapWithKeys(static fn (self $case): array => [$case->value => $case->getTypeNote()])
-            ->all();
-
-        return $descriptions;
+            ->toArray();
     }
 
     /* Method Modules\Media\Enums\AttachmentTypeEnum::operationCases() never returns null so it can be removed from the return type
@@ -50,7 +41,10 @@ enum AttachmentTypeEnum: string implements HasLabel
         return null;
     }
 
-    
+    public function getLabel(): string
+    {
+        return trans('media::attachments.types.'.$this->value);
+    }
 
     // private static function translateBaseUniquePath(): string
     // {

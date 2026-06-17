@@ -14,7 +14,6 @@ use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Override;
 use RuntimeException;
@@ -22,7 +21,7 @@ use Webmozart\Assert\Assert;
 
 class ListMedia extends XotBaseListRecords
 {
-    public static string $resource = MediaResource::class;
+    protected static string $resource = MediaResource::class;
 
     /**
      * @return array<string, Tables\Columns\Column>
@@ -90,7 +89,7 @@ class ListMedia extends XotBaseListRecords
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
 
-                    return response()->download($filePath, SafeStringCastAction::cast($record->file_name));
+                    return response()->download($filePath, (string) $record->file_name);
                 }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')
