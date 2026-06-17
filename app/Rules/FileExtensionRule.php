@@ -11,7 +11,7 @@ use function in_array;
 
 class FileExtensionRule implements Rule
 {
-    /** @var array<int, string> */
+    /** @var list<string> */
     protected array $validExtensions = [];
 
     /**
@@ -19,14 +19,14 @@ class FileExtensionRule implements Rule
      */
     public function __construct(array $validExtensions = [])
     {
-        $this->validExtensions = array_map(
+        $this->validExtensions = array_values(array_map(
             /**
              * @param  mixed  $ext
              * @return lowercase-string
              */
             static fn ($ext): string => mb_strtolower((string) $ext),
             $validExtensions
-        );
+        ));
     }
 
     /**
@@ -42,9 +42,6 @@ class FileExtensionRule implements Rule
         return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false);
     }
 
-    /**
-     * @return array<string, string>|string
-     */
     public function message(): array|string
     {
         return trans('media::validation.mime', [

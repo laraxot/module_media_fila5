@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\S3;
 
 use Aws\S3\Exception\S3Exception;
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
 
 class GetFileInfoAction extends BaseS3Action
 {
@@ -24,7 +23,7 @@ class GetFileInfoAction extends BaseS3Action
 
             $metadata = $result['@metadata'] ?? [];
             $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
-                ? SafeStringCastAction::cast($metadata['effectiveUri'])
+                ? ((string) $metadata['effectiveUri'])
                 : null;
 
             $fileInfo = [

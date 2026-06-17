@@ -16,7 +16,6 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Section;
 use Modules\Media\Filament\Clusters\Test;
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
 
 use function Safe\json_encode;
@@ -25,7 +24,6 @@ class AwsTest extends XotBasePage
 {
     protected static ?string $cluster = Test::class;
 
-    /** @var array<string, mixed> */
     public array $testResults = [];
 
     public string $activeTab = 's3';
@@ -34,9 +32,6 @@ class AwsTest extends XotBasePage
 
     private const KEY_PREVIEW_LENGTH = 8;
 
-    /**
-     * @var array<string, string>
-     */
     public array $connectionTests = [
         's3' => 'Test S3 Connection',
         'cloudfront' => 'Test CloudFront',
@@ -44,9 +39,6 @@ class AwsTest extends XotBasePage
         'full' => 'Full Diagnostic',
     ];
 
-    /**
-     * @return array<int, Section>
-     */
     protected function getS3TestSchema(): array
     {
         return [
@@ -75,9 +67,6 @@ class AwsTest extends XotBasePage
         ];
     }
 
-    /**
-     * @return array<int, Section>
-     */
     protected function getCloudFrontTestSchema(): array
     {
         return [
@@ -96,9 +85,6 @@ class AwsTest extends XotBasePage
         ];
     }
 
-    /**
-     * @return array<int, Section>
-     */
     protected function getIamTestSchema(): array
     {
         return [
@@ -117,9 +103,6 @@ class AwsTest extends XotBasePage
         ];
     }
 
-    /**
-     * @return array<int, Section>
-     */
     protected function getDiagnosticsSchema(): array
     {
         return [
@@ -245,13 +228,10 @@ class AwsTest extends XotBasePage
     }
 
     /* Helper Methods */
-    /**
-     * @return array<string, mixed>
-     */
     protected function getAwsConfig(): array
     {
         return [
-            'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, self::KEY_PREVIEW_LENGTH).'...',
+            'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH).'...',
             'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
             'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
             'CLOUDFRONT_URL' => config('filesystems.cloudfront.url'),
