@@ -27,9 +27,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
     }
 
     /**
-     * @return array<string, array|string>
-     *
-     * @psalm-return array{'uuid.unique': array|string}
+     * @return array<string, string|array<string, string>>
      */
     public function messages(): array
     {
