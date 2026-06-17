@@ -1,16 +1,9 @@
--   [Super Cow Methodology](../../Xot/docs/super_cow_methodology.md)
--   [PHP Quality Guide](../../Xot/docs/php_quality_guide.md)
--   [Filament Extension Rules](../../Xot/docs/filament_extension_rules.md)
-
-**Key Principles:**
-1.  **DRY & KISS**: Don't repeat yourself, keep it simple.
-2.  **Zero Errors**: PHPStan Level 10 compliance is mandatory.
-3.  **XotBase**: Always extend `XotBase` classes, never Filament classes directly.
-4.  **Translations**: Use `LangServiceProvider` for automatic label resolution.
 ---
-module: theme
-topic: architecture-rules
-canonical: ../../../Themes/docs/shared-components/architecture-rules.md
+title: architecture rules — puntatore
+type: reference
+updated: 2026-05-21
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/architecture-rules.md
+# Architecture rules (puntatore)
+
+Regole globali: [../../../../docs/wiki/rules/00-TRIGGER_MAP.md](../../../../docs/wiki/rules/00-TRIGGER_MAP.md).

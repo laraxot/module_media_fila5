@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Image;
 
 use Illuminate\Support\Facades\File;
+use Intervention\Image\Alignment;
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\ImageManager as InterventionImageManager;
 use Intervention\Image\Interfaces\ImageInterface;
@@ -25,10 +26,10 @@ class Merge
     {
         $manager = new InterventionImageManager(new GdDriver);
 
-        $image1 = $manager->read($path1);
-        $image2 = $manager->read($path2);
+        $image1 = $manager->decodePath($path1);
+        $image2 = $manager->decodePath($path2);
 
-        $image1->place($image2, 'center');
+        $image1->insert($image2, 0, 0, Alignment::CENTER);
 
         File::ensureDirectoryExists(dirname($outputPath));
         $image1->save($outputPath);
@@ -84,18 +85,18 @@ class Merge
         $totalHeight = 0;
 
         foreach ($absolutePaths as $path) {
-            $img = $manager->read($path);
+            $img = $manager->decodePath($path);
             $images[] = $img;
             $totalWidth = max($totalWidth, $img->width());
             $totalHeight += $img->height();
         }
 
-        $final = $manager->create($totalWidth, $totalHeight);
+        $final = $manager->createImage($totalWidth, $totalHeight);
 
         $yOffset = 0;
         foreach ($images as $img) {
             $xOffset = (int) (($totalWidth - $img->width()) / 2);
-            $final->place($img, 'top-left', $xOffset, $yOffset);
+            $final->insert($img, $xOffset, $yOffset, Alignment::TOP_LEFT);
             $yOffset += $img->height();
         }
 
