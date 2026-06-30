@@ -189,9 +189,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
             return;
         }
 
-        $conversion = // @var mixed addMediaConversion('preview';
+        $conversion = $this->addMediaConversion('preview');
 
-        $previewManipulation = // @var mixed getPreviewManipulation(;
+        $previewManipulation = $this->getPreviewManipulation();
 
         $previewManipulation($conversion);
     }
@@ -200,12 +200,12 @@ class TemporaryUpload extends BaseModel implements HasMedia
     {
         if (
             config('media-library.enable_temporary_uploads_session_affinity', true) &&
-                // @var mixed session_id !== session(
+                $session_id !== session(
         ) {
             throw TemporaryUploadDoesNotBelongToCurrentSession::create();
         }
 
-        $media = // @var mixed getFirstMedia(;
+        $media = $this->getFirstMedia();
 
         // if (! $media instanceof \Spatie\MediaLibrary\MediaCollections\Models\Media) {
         //    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
