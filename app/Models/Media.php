@@ -105,18 +105,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereUuid($value)
  * @method static Builder|Media whereWidth($value)
  * @method static MediaFactory factory($count = null, $state = [])
- * @property-read mixed $extension
- * @property-read mixed $human_readable_size
- * @property-read mixed $original_url
- * @property-read mixed $preview_url
- * @method static MediaCollection<int, static> all($columns = ['*'])
- * @method static MediaCollection<int, static> get($columns = ['*'])
- * @mixin Eloquent
  */
 class Media extends SpatieMedia
 {
     /** @use HasXotFactory<\Modules\Media\Database\Factories\MediaFactory> */
-    /** @phpstan-use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
     use HasXotFactory;
     use Updater;
 

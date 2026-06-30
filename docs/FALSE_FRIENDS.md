@@ -1,14 +1,3 @@
----
-title: "False Friends – Media Module"
-module: "Media"
-type: concept
-tags: [FALSE, FRIENDS]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "false friends"
-related:
-  - "./webm.md"
----
 # False Friends – Media Module
 
 | Concept | Misconception | Correction |
