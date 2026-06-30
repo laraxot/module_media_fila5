@@ -1,21 +1,10 @@
----
-title: "📚 **Indice Documentazione Modulo Media**"
-module: "Media"
-type: concept
-tags: [00, INDEX]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "00 index"
-related:
-  - "./webm.md"
----
 # 📚 **Indice Documentazione Modulo Media**
 
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](README.md) - Panoramica completa, Upload e Processing.
+1. [README.md](./readme.md) - Panoramica completa, Upload e Processing.
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 

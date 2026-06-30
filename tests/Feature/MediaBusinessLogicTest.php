@@ -12,6 +12,7 @@ use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaConvert;
+use Modules\Media\Models\TemporaryUpload;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
@@ -112,7 +113,7 @@ describe('Media Business Logic', function () {
 
         foreach (['media_id', 'original_format', 'target_format', 'status'] as $requiredColumn) {
             if (! in_array($requiredColumn, $convertColumns, true)) {
-                $this->skipTest('media_converts table is missing required columns for this test in this install.');
+                $this->markTestSkipped('media_converts table is missing required columns for this test in this install.');
             }
         }
 
@@ -288,7 +289,7 @@ describe('Media Business Logic', function () {
         $convertColumns = Schema::connection('media')->getColumnListing('media_converts');
 
         if (! in_array('status', $convertColumns, true) || ! in_array('media_id', $convertColumns, true)) {
-            $this->skipTest('media_converts table is missing required columns for this test in this install.');
+            $this->markTestSkipped('media_converts table is missing required columns for this test in this install.');
         }
 
         /** @var array<string, mixed> $payload */
@@ -325,7 +326,7 @@ describe('Media Business Logic', function () {
 
         $columns = Schema::connection('media')->getColumnListing('media');
         if (! in_array('user_id', $columns, true) || ! in_array('is_public', $columns, true)) {
-            $this->skipTest('This install does not have user_id/is_public columns on media table.');
+            $this->markTestSkipped('This install does not have user_id/is_public columns on media table.');
         }
 
         $media = MediaFactory::new()->createOne([
@@ -345,7 +346,7 @@ describe('Media Business Logic', function () {
         $columns = Schema::connection('media')->getColumnListing('media');
 
         if (in_array('deleted_at', $columns, true)) {
-            $this->skipTest('This install has deleted_at on media table; deletion semantics are install-specific.');
+            $this->markTestSkipped('This install has deleted_at on media table; deletion semantics are install-specific.');
         }
 
         $media = MediaFactory::new()->createOne();
@@ -390,7 +391,7 @@ describe('Media Business Logic', function () {
 
         $validPayload = $makePayload(1024 * 1024);
         if ($validPayload === []) {
-            $this->skipTest('Unable to build minimal payload for media table in this install.');
+            $this->markTestSkipped('Unable to build minimal payload for media table in this install.');
         }
 
         $validMedia = Media::query()->create($validPayload);
@@ -431,7 +432,7 @@ describe('Media Business Logic', function () {
 
         $mediaColumns = Schema::connection('media')->getColumnListing('media');
         if (! in_array('user_id', $mediaColumns, true)) {
-            $this->skipTest('This install does not have user_id column on media table.');
+            $this->markTestSkipped('This install does not have user_id column on media table.');
         }
 
         $totalMedia = Media::where('user_id', $user->id)->count();
