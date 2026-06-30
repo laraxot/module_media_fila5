@@ -172,6 +172,3 @@ lang/lang/
 _docs/
 _docs/
 agentdb.rvf
-docs/archive/
-.devcontainer/
-.vscode/
