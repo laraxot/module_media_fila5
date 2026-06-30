@@ -197,7 +197,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
     {
         if (
             config('media-library.enable_temporary_uploads_session_affinity', true) &&
-                $session_id !== session(
+                $session_id !== session()
         ) {
             throw TemporaryUploadDoesNotBelongToCurrentSession::create();
         }
