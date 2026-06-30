@@ -1,14 +1,3 @@
----
-title: "Media - Sprint Planning Meeting"
-module: "Media"
-type: concept
-tags: [sprint, planning, meeting]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "sprint planning meeting"
-related:
-  - "./webm.md"
----
 # Media - Sprint Planning Meeting
 
 > Documento operativo per sprint planning. Modulo.
