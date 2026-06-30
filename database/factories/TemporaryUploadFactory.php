@@ -32,7 +32,7 @@ class TemporaryUploadFactory extends Factory
     public function definition(): array
     {
         return [
-            'session_id' => $faker->uuid(
+            'session_id' => $faker->uuid()
         ];
     }
 
