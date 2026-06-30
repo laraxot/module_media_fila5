@@ -14,7 +14,7 @@ use Modules\Media\Actions\GetAttachmentsSchemaAction;
  */
 it('returns attachment schema', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice', 'contract', 'receipt'];
 
     // Act
@@ -34,7 +34,7 @@ it('returns attachment schema', function (): void {
  */
 it('has correct names', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice', 'contract'];
 
     // Act
@@ -54,7 +54,7 @@ it('has correct names', function (): void {
  */
 it('has correct validation', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -85,7 +85,7 @@ it('has correct validation', function (): void {
  */
 it('has correct storage', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -101,7 +101,7 @@ it('has correct storage', function (): void {
  */
 it('has correct directory', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -117,7 +117,7 @@ it('has correct directory', function (): void {
  */
 it('has correct visibility', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -133,7 +133,7 @@ it('has correct visibility', function (): void {
  */
 it('has correct max size', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -149,7 +149,7 @@ it('has correct max size', function (): void {
  */
 it('has correct multiple setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -165,7 +165,7 @@ it('has correct multiple setting', function (): void {
  */
 it('has correct preview setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -181,7 +181,7 @@ it('has correct preview setting', function (): void {
  */
 it('has correct download setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -197,7 +197,7 @@ it('has correct download setting', function (): void {
  */
 it('has correct remove setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -216,7 +216,7 @@ it('has correct remove setting', function (): void {
  */
 it('has correct reorder setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -232,7 +232,7 @@ it('has correct reorder setting', function (): void {
  */
 it('has correct labels', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -249,7 +249,7 @@ it('has correct labels', function (): void {
  */
 it('has correct append setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -266,7 +266,7 @@ it('has correct append setting', function (): void {
  */
 it('has correct panel', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -283,7 +283,7 @@ it('has correct panel', function (): void {
  */
 it('has correct help text', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -301,7 +301,7 @@ it('has correct help text', function (): void {
  */
 it('has correct placeholder', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
