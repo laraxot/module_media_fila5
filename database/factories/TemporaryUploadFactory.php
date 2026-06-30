@@ -32,10 +32,7 @@ class TemporaryUploadFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => (string) Str::uuid(),
-            'session_id' => $this->faker->uuid(),
-            'file_name' => 'upload-'.$this->faker->lexify('????').'.tmp',
-            'status' => 'uploading',
+            'session_id' => // @var mixed faker->uuid(
         ];
     }
 
@@ -44,7 +41,7 @@ class TemporaryUploadFactory extends Factory
      */
     public function forSession(string $sessionId): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return // @var mixed state(fn (array $_attributes
             'session_id' => $sessionId,
         ]);
     }
@@ -54,7 +51,7 @@ class TemporaryUploadFactory extends Factory
      */
     public function currentSession(): static
     {
-        return $this->state(fn (array $_attributes): array => [
+        return // @var mixed state(fn (array $_attributes
             'session_id' => session()->getId(),
         ]);
     }
