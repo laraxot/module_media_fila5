@@ -32,7 +32,7 @@ class TemporaryUploadFactory extends Factory
     public function definition(): array
     {
         return [
-            'session_id' => $faker->uuid()
+            'session_id' => $this->faker->uuid(),
         ];
     }
 
@@ -41,7 +41,7 @@ class TemporaryUploadFactory extends Factory
      */
     public function forSession(string $sessionId): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'session_id' => $sessionId,
         ]);
     }
@@ -51,7 +51,7 @@ class TemporaryUploadFactory extends Factory
      */
     public function currentSession(): static
     {
-        return $this->state(fn (array $_attributes))
+        return $this->state(fn (array $_attributes): array => [
             'session_id' => session()->getId(),
         ]);
     }
