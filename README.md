@@ -29,8 +29,12 @@ $convertData = ConvertData::from([
 ]);
 app(ConvertVideoByConvertDataAction::class)->execute($media, $convertData);
 
-// URL firmato CloudFront
-$signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($media);
+
+## Documentazione tecnica
+
+- [Indice docs](./docs/README.md) — mappa knowledge base locale (wiki, audit, regole)
+
+## Documentazione essenziale
 
 // Screenshot da video
 $screenshot = app(GetVideoScreenshotAction::class)->execute($media, $atSecond);
