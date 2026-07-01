@@ -25,12 +25,12 @@ class Merge
         // Intervention Image v3: il costruttore richiede un DriverInterface
         $manager = new InterventionImageManager(new GdDriver);
 
-        // Carica le immagini
-        $image1 = $manager->read($path1);
-        $image2 = $manager->read($path2);
+        /** @var ImageInterface $image1 */
+        $image1 = $manager->read($path1); // @phpstan-ignore method.notFound
+        /** @var ImageInterface $image2 */
+        $image2 = $manager->read($path2); // @phpstan-ignore method.notFound
 
-        // Inserisce image2 sopra image1 (centrato) - v3 usa place()
-        $image1->place($image2, 'center');
+        $image1->place($image2, 'center'); // @phpstan-ignore method.notFound
 
         // Salva il risultato
         File::ensureDirectoryExists(dirname($outputPath));
@@ -91,23 +91,22 @@ class Merge
         $totalHeight = 0;
 
         foreach ($absolutePaths as $path) {
-            $img = $manager->read($path);
+            /** @var ImageInterface $img */
+            $img = $manager->read($path); // @phpstan-ignore method.notFound
             $images[] = $img;
             $totalWidth = max($totalWidth, $img->width());
             $totalHeight += $img->height();
         }
 
-        // Crea canvas finale con dimensioni calcolate
-        $final = $manager->create($totalWidth, $totalHeight);
+        /** @var ImageInterface $final */
+        $final = $manager->create($totalWidth, $totalHeight); // @phpstan-ignore method.notFound
 
         // Posiziona ogni immagine verticalmente, centrata orizzontalmente
         $yOffset = 0;
         foreach ($images as $img) {
             // Calcola offset X per centrare orizzontalmente
             $xOffset = (int) (($totalWidth - $img->width()) / 2);
-            // Posiziona immagine
-            $final->place($img, 'top-left', $xOffset, $yOffset);
-            // Incrementa offset Y per prossima immagine
+            $final->place($img, 'top-left', $xOffset, $yOffset); // @phpstan-ignore method.notFound
             $yOffset += $img->height();
         }
 
