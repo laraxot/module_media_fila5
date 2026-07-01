@@ -1,6 +1,6 @@
 ---
 module: theme
-topic: .gitkeep
+topic: __stream
 canonical: ../../../../../Themes/docs/shared-components/.gitkeep-Modules
 ---
 
