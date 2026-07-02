@@ -28,6 +28,7 @@ class SubtitleService
 
     public string $field_name = 'txt';
 
+    /** @var array<int, array<string, float|int|string|mixed>> */
     public array $subtitles = [];
 
     public Model $model;
@@ -100,7 +101,7 @@ class SubtitleService
     }
 
     /**
-     * restituisce i sottotitoli, dal file ..
+     * @return array<int, array<string, float|int|string|mixed>>
      */
     public function get(): array
     {
@@ -109,11 +110,10 @@ class SubtitleService
             return [];
         }
 
-        $func = 'getFrom'.Str::studly($info['extension']);
-
-        Assert::isArray($res = $this->{$func}());
-
-        return $res;
+        return match (Str::lower($info['extension'])) {
+            'xml' => $this->getFromXml(),
+            default => [],
+        };
     }
 
     /**
