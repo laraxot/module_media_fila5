@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use SimpleXMLElement;
-use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
 use function Safe\fopen;
@@ -41,7 +40,7 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
