@@ -3,9 +3,11 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
-use function Safe\class_uses;
+
+
 use Modules\Media\Actions\AttachMediaAction;
 use Spatie\QueueableAction\QueueableAction;
+uses(\Modules\Media\Tests\TestCase::class);
 
 uses(\Modules\Media\Tests\TestCase::class);
 
