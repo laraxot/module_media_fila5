@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-uses(\Modules\Media\Tests\TestCase::class);
 
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+uses(\Modules\Media\Tests\TestCase::class);
 
 /**
  * Test that the action returns attachment schema correctly.
