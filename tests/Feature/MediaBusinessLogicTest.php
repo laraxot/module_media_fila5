@@ -107,6 +107,7 @@ describe('Media Business Logic', function () {
     });
 
     it('can convert media to different formats', function (): void {
+        /** @var TestCase $this */
         $mediaColumns = Schema::connection('media')->getColumnListing('media');
         $convertColumns = Schema::connection('media')->getColumnListing('media_converts');
 
@@ -284,6 +285,7 @@ describe('Media Business Logic', function () {
     });
 
     it('can track media conversion status', function (): void {
+        /** @var TestCase $this */
         $mediaColumns = Schema::connection('media')->getColumnListing('media');
         $convertColumns = Schema::connection('media')->getColumnListing('media_converts');
 
@@ -320,6 +322,7 @@ describe('Media Business Logic', function () {
     });
 
     it('can manage media permissions', function (): void {
+        /** @var TestCase $this */
         $owner = UserFactory::new()->createOne();
         $otherUser = UserFactory::new()->createOne();
 
@@ -342,6 +345,7 @@ describe('Media Business Logic', function () {
     });
 
     it('can handle media deletion', function (): void {
+        /** @var TestCase $this */
         $columns = Schema::connection('media')->getColumnListing('media');
 
         if (in_array('deleted_at', $columns, true)) {
@@ -370,6 +374,7 @@ describe('Media Business Logic', function () {
     });
 
     it('can validate file size limits', function (): void {
+        /** @var TestCase $this */
         $user = UserFactory::new()->createOne();
 
         $columns = mediaTableColumns();
@@ -403,6 +408,7 @@ describe('Media Business Logic', function () {
     });
 
     it('can track media usage statistics', function (): void {
+        /** @var TestCase $this */
         $user = UserFactory::new()->createOne();
 
         $columns = mediaTableColumns();
