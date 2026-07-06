@@ -12,6 +12,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('can create media with minimal data', function (): void {
+    /** @var TestCase $this */
     $media = MediaFactory::new()->createOne([
         'model_type' => 'Modules\User\Models\User',
         'model_id' => '1',
