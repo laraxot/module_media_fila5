@@ -47,6 +47,7 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
+ * @mixin IdeHelperTemporaryUpload
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
@@ -65,7 +66,6 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-    /** @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory> */
     use HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
@@ -186,7 +186,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
             return;
         }
 
-        $conversion = $this->addMediaConversion('preview');
+        $conversion = $this->addMediaConversion('preview')->nonQueued();
 
         $previewManipulation = $this->getPreviewManipulation();
 
