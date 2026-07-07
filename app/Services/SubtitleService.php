@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use SimpleXMLElement;
-use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
 use function Safe\fopen;
@@ -28,6 +27,7 @@ class SubtitleService
 
     public string $field_name = 'txt';
 
+    /** @var array<int, array<string, float|int|string|mixed>> */
     public array $subtitles = [];
 
     public Model $model;
@@ -40,7 +40,7 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -100,7 +100,7 @@ class SubtitleService
     }
 
     /**
-     * restituisce i sottotitoli, dal file ..
+     * @return array<int, array<string, float|int|string|mixed>>
      */
     public function get(): array
     {
@@ -109,11 +109,10 @@ class SubtitleService
             return [];
         }
 
-        $func = 'getFrom'.Str::studly($info['extension']);
-
-        Assert::isArray($res = $this->{$func}());
-
-        return $res;
+        return match (Str::lower($info['extension'])) {
+            'xml' => $this->getFromXml(),
+            default => [],
+        };
     }
 
     /**
