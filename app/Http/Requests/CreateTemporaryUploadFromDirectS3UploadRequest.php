@@ -6,7 +6,6 @@ namespace Modules\Media\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Modules\Media\Models\Media;
-use Webmozart\Assert\Assert;
 
 class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 {
@@ -28,7 +27,9 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
     }
 
     /**
-     * @return array<string, string|array<string, string>>
+     * @return array<string, array|string>
+     *
+     * @psalm-return array{'uuid.unique': array|string}
      */
     public function messages(): array
     {
@@ -39,7 +40,10 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getDatabaseConnection(): string
     {
-        $mediaModel = $this->resolveMediaModel();
+        $mediaModelClass = config('media-library.media_model');
+
+        /** @var Media $mediaModel */
+        $mediaModel = new $mediaModelClass;
 
         if ($mediaModel->getConnectionName() === 'default') {
             return '';
@@ -50,15 +54,11 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getMediaTableName(): string
     {
-        return $this->resolveMediaModel()->getTable();
-    }
-
-    private function resolveMediaModel(): Media
-    {
         $mediaModelClass = config('media-library.media_model');
-        Assert::string($mediaModelClass);
-        Assert::subclassOf($mediaModelClass, Media::class);
 
-        return new $mediaModelClass;
+        /** @var Media $mediaModel */
+        $mediaModel = new $mediaModelClass;
+
+        return $mediaModel->getTable();
     }
 }
