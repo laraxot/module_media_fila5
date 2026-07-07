@@ -186,7 +186,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
             return;
         }
 
-        $conversion = $this->addMediaConversion('preview')->nonQueued();
+        $conversion = $this->addMediaConversion('preview');
 
         $previewManipulation = $this->getPreviewManipulation();
 
