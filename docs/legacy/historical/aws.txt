@@ -1,0 +1,7 @@
+---
+module: theme
+topic: aws
+canonical: ../../../../../Themes/docs/shared-components/aws.txt
+---
+
+See canonical documentation: ../../../../../Themes/docs/shared-components/aws.txt
