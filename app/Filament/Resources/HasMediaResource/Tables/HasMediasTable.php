@@ -11,9 +11,9 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 class HasMediasTable extends XotBaseResourceTable
 {
     /**
-     * @return array<string, \Filament\Tables\Columns\Column>
+     * @return array<int|string, \Filament\Tables\Columns\Column>
      */
-    public static function getTableColumns(): array
+    public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->sortable(),
