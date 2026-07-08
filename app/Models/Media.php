@@ -109,10 +109,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 class Media extends SpatieMedia
 {
     /** @use HasXotFactory<\Modules\Media\Database\Factories\MediaFactory> */
-<<<<<<< HEAD
-=======
     /** @phpstan-use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
->>>>>>> laraxot/dev
     use HasXotFactory;
     use Updater;
 

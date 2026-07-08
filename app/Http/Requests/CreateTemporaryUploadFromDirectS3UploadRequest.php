@@ -6,10 +6,7 @@ namespace Modules\Media\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Modules\Media\Models\Media;
-<<<<<<< HEAD
-=======
 use Webmozart\Assert\Assert;
->>>>>>> laraxot/dev
 
 class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 {
