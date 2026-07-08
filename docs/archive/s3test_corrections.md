@@ -246,8 +246,13 @@ private function getSolutionForError(?string $errorCode): string
 
 - [Documentazione Generale Media](../README.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Best Practice Traduzioni](../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
+=======
+- [Best Practice Traduzioni](../../../../docs/translation-standards.md)
+- [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
+>>>>>>> laraxot/dev
 =======
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)

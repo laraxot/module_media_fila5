@@ -73,7 +73,11 @@ FFMpeg::fromDisk($data->disk)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
+=======
+- [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
+>>>>>>> laraxot/dev
 =======
 - [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 >>>>>>> laraxot/dev
