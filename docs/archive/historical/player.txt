@@ -1,7 +1,11 @@
 https://github.com/spatie/laravel-sitemap/blob/main/resources/views/video.blade.php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views/pages/video.blade.php
+=======
+https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views/video.blade.php
+>>>>>>> laraxot/dev
 =======
 https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views/video.blade.php
 >>>>>>> laraxot/dev

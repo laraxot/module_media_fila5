@@ -32,7 +32,10 @@ parameters:
         - ./phpstan_constants.php
 
     scanFiles:
+<<<<<<< HEAD
     #    - ./helpers/Helper.php
+=======
+>>>>>>> laraxot/dev
     #    - ./Helpers/Helper.php
     #   - ./vendor/amenadiel/jpgraph/src/config.inc.php
 

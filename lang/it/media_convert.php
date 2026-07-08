@@ -100,7 +100,10 @@ return [
         ],
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
     'label' => 'Media Convert',
     'plural_label' => 'Media Convert (Plurale)',
     'actions' => [
@@ -114,5 +117,8 @@ return [
             'label' => 'Elimina Media Convert',
         ],
     ],
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 ];

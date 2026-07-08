@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -384,6 +385,8 @@ jobs:
 **🎯 Obiettivo**: Prevenzione completa problemi futuri  
 **✅ Status**: Linee guida implementate e testate
 =======
+=======
+>>>>>>> laraxot/dev
 ---
 module: theme
 topic: prevention_guidelines
@@ -391,4 +394,7 @@ canonical: ../../../../Themes/docs/shared-components/prevention_guidelines.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/prevention_guidelines.md
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
 
 =======
+=======
+>>>>>>> laraxot/dev
 ---
 module: theme
 topic: aws
@@ -9,4 +12,7 @@ canonical: ../../../../../Themes/docs/shared-components/aws.txt
 ---
 
 See canonical documentation: ../../../../../Themes/docs/shared-components/aws.txt
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

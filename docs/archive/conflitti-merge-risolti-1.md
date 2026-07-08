@@ -9,9 +9,15 @@ Questo documento descrive i conflitti di merge Git risolti nel modulo Media e fo
 Per una panoramica generale sulla risoluzione dei conflitti Git nel progetto, consultare:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Risoluzione Conflitti Git](../../../../docs/risoluzione_conflitti_git.md)
 - [Report completo di intervento](../../../../docs/logs/conflict_resolution_report.md)
 - [Gestione Git con Script Bash](../../../../docs/bashscripts/gestione_git.md)
+=======
+- [Risoluzione Conflitti Git](../../../../../docs/risoluzione_conflitti_git.md)
+- [Report completo di intervento](../../../../../docs/logs/conflict_resolution_report.md)
+- [Gestione Git con Script Bash](../../../../../docs/bashscripts/gestione_git.md)
+>>>>>>> laraxot/dev
 =======
 - [Risoluzione Conflitti Git](../../../../../docs/risoluzione_conflitti_git.md)
 - [Report completo di intervento](../../../../../docs/logs/conflict_resolution_report.md)
@@ -22,7 +28,11 @@ Per una panoramica generale sulla risoluzione dei conflitti Git nel progetto, co
 
 - [Risoluzione conflitto VideoEntry](./risoluzione_conflitti_video_entry.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Risoluzione conflitto MediaConvertResource](../../../../docs/media_convert_resource_conflict.md)
+=======
+- [Risoluzione conflitto MediaConvertResource](../../../../../docs/media_convert_resource_conflict.md)
+>>>>>>> laraxot/dev
 =======
 - [Risoluzione conflitto MediaConvertResource](../../../../../docs/media_convert_resource_conflict.md)
 >>>>>>> laraxot/dev
@@ -123,7 +133,11 @@ public function getFileAttribute(?string $value): ?string
 **Decisione architetturale**: È stata adottata la versione che utilizza `tap($this->model)->update($up)`, eliminando linee ridondanti e mantenendo lo stile coerente. Questa scelta garantisce che l'oggetto model sia sempre aggiornato e pronto per un utilizzo successivo.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> laraxot/dev
 =======
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
 >>>>>>> laraxot/dev
@@ -177,7 +191,11 @@ public function getFromXml($xmlFile)
 **Decisione architetturale**: È stata adottata la versione che mantiene gli import ordinati e privi di duplicazioni, eliminando linee vuote inutili e assicurando che la logica del metodo sia compatta e leggibile. Nessuna modifica funzionale è stata introdotta, ma solo miglioramenti di stile e mantenibilità.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> laraxot/dev
 =======
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
 >>>>>>> laraxot/dev
@@ -195,7 +213,11 @@ Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare 
 **Decisione architetturale**: È stata adottata la versione che utilizza `Storage::disk($disk_mp4)->path($file_new)` per mantenere coerenza con le altre azioni di conversione e per evitare la generazione di URL quando non necessaria.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> laraxot/dev
 =======
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
 >>>>>>> laraxot/dev
@@ -327,7 +349,11 @@ public static function getFormSchema(): array
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per dettagli completi sulla risoluzione di MediaConvertResource, vedere [documentazione dedicata](../../../../docs/media_convert_resource_conflict.md).
+=======
+Per dettagli completi sulla risoluzione di MediaConvertResource, vedere [documentazione dedicata](../../../../../docs/media_convert_resource_conflict.md).
+>>>>>>> laraxot/dev
 =======
 Per dettagli completi sulla risoluzione di MediaConvertResource, vedere [documentazione dedicata](../../../../../docs/media_convert_resource_conflict.md).
 >>>>>>> laraxot/dev
@@ -341,7 +367,11 @@ Per dettagli completi sulla risoluzione di MediaConvertResource, vedere [documen
 **Decisione architetturale**: È stata adottata la versione che utilizza il driver Gd di Intervention Image, con gestione esplicita delle dimensioni della canvas e posizionamento progressivo delle immagini. La soluzione mantiene la compatibilità con l'ecosistema Laravel e assicura la massima chiarezza del flusso di composizione.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> laraxot/dev
 =======
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
 >>>>>>> laraxot/dev
@@ -355,7 +385,11 @@ Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare 
 **Decisione architetturale**: È stata adottata la versione che utilizza il driver Gd di Intervention Image, con gestione esplicita delle dimensioni della canvas e posizionamento progressivo delle immagini. La soluzione mantiene la compatibilità con l'ecosistema Laravel e assicura la massima chiarezza del flusso di composizione.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> laraxot/dev
 =======
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
 >>>>>>> laraxot/dev

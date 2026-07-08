@@ -185,7 +185,11 @@ Security → Organization → Thumbnails → Tags → CDN
    - Missing intelligent caching
    - No adaptive streaming for video
 <<<<<<< HEAD
+<<<<<<< HEAD
    - Missing predictive loading
+=======
+   - Missing <nome progetto>ive loading
+>>>>>>> laraxot/dev
 =======
    - Missing <nome progetto>ive loading
 >>>>>>> laraxot/dev
@@ -301,7 +305,11 @@ $share = SharingService::create($media, [
 - [ ] Smart tagging system
 - [ ] Content-based search
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [ ] Predictive loading
+=======
+- [ ] <nome progetto>ive loading
+>>>>>>> laraxot/dev
 =======
 - [ ] <nome progetto>ive loading
 >>>>>>> laraxot/dev

@@ -17,7 +17,11 @@ use function Safe\file_get_contents;
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @param  array  $where
+=======
+ * @param  array<string, mixed>  $where
+>>>>>>> laraxot/dev
 =======
  * @param  array<string, mixed>  $where
 >>>>>>> laraxot/dev
@@ -35,7 +39,11 @@ function assertMediaTableHas(string $table, array $where, string $connection = '
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @param  array  $where
+=======
+ * @param  array<string, mixed>  $where
+>>>>>>> laraxot/dev
 =======
  * @param  array<string, mixed>  $where
 >>>>>>> laraxot/dev
@@ -84,7 +92,11 @@ function assertMediaListContains(string $needle, array $haystack): void
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @param  array  $attributes
+=======
+ * @param  array<string, mixed>  $attributes
+>>>>>>> laraxot/dev
 =======
  * @param  array<string, mixed>  $attributes
 >>>>>>> laraxot/dev
@@ -96,7 +108,11 @@ function createMedia(array $attributes = []): Media
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @param  array  $attributes
+=======
+ * @param  array<string, mixed>  $attributes
+>>>>>>> laraxot/dev
 =======
  * @param  array<string, mixed>  $attributes
 >>>>>>> laraxot/dev
@@ -123,8 +139,13 @@ function mediaTableColumns(): array
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @param  array  $payload
  * @param  array  $columns
+=======
+ * @param  array<string, mixed>  $payload
+ * @param  array<int, string>  $columns
+>>>>>>> laraxot/dev
 =======
  * @param  array<string, mixed>  $payload
  * @param  array<int, string>  $columns

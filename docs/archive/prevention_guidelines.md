@@ -375,7 +375,11 @@ jobs:
 - [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Architecture Guidelines](../docs/architecture.md)
+=======
+- [Architecture Guidelines](../../docs/architecture.md)
+>>>>>>> laraxot/dev
 =======
 - [Architecture Guidelines](../../docs/architecture.md)
 >>>>>>> laraxot/dev

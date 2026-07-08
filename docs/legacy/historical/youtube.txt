@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://github.com/mokhosh/laravel-youtube-api
 
 https://github.com/mokhosh/laravel-youtube-downloader
@@ -6,6 +7,8 @@ https://github.com/mokhosh/laravel-youtube-downloader
 
 
 =======
+=======
+>>>>>>> laraxot/dev
 ---
 module: theme
 topic: youtube
@@ -13,4 +16,7 @@ canonical: ../../../../../Themes/docs/shared-components/youtube.txt
 ---
 
 See canonical documentation: ../../../../../Themes/docs/shared-components/youtube.txt
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

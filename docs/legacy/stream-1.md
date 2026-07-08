@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 https://laravel-news.com/temporary-directory
 
 -----------------------------------------------
@@ -22,6 +23,8 @@ $tmpFile->delete();
 
 ----------------------------------------------------------------------------
 =======
+=======
+>>>>>>> laraxot/dev
 ---
 module: theme
 topic: stream-1
@@ -29,4 +32,7 @@ canonical: ../../../../Themes/docs/shared-components/stream-1.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/stream-1.md
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

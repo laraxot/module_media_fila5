@@ -15,7 +15,11 @@ Sono stati rilevati marker di conflitto git  nel file `app/Filament/Resources/Me
 
 ## Collegamenti
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Documentazione root risoluzione conflitti](../../../docs/risoluzione_conflitti_git.md#media-filament-resources-mediaconvertresourcephp)
+=======
+- [Documentazione root risoluzione conflitti](../../../../docs/risoluzione_conflitti_git.md#media-filament-resources-mediaconvertresourcephp)
+>>>>>>> laraxot/dev
 =======
 - [Documentazione root risoluzione conflitti](../../../../docs/risoluzione_conflitti_git.md#media-filament-resources-mediaconvertresourcephp)
 >>>>>>> laraxot/dev
