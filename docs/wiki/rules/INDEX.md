@@ -17,3 +17,4 @@ qmd search "Media rules" --limit 5
 *Updated: 2026-05-11*
 
 - [context-overflow-prevention](../../../../../docs/wiki/rules/context-overflow-prevention.md) — prevenzione 262K token overflow; file vietati; tool output compression
+- [module-commit-push-after-change](rules/module-commit-push-after-change.md) — dopo modifiche al modulo: commit + push nel repo del modulo
