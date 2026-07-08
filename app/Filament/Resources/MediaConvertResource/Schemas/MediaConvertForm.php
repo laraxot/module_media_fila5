@@ -15,11 +15,7 @@ use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 class MediaConvertForm extends XotBaseResourceForm
 {
     /**
-<<<<<<< HEAD
-     * @return array<int|string, SchemaComponent>
-=======
      * @return array<string, \Filament\Schemas\Components\Component>
->>>>>>> 40b96bcd6 (.)
      */
     public static function getFormSchema(): array
     {
