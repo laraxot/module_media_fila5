@@ -19,16 +19,9 @@ class MediaConvertFactory extends Factory
 
     /**
      * Define the model's default state.
-     */
-<<<<<<< HEAD
-<<<<<<< HEAD
-    /**
+     *
      * @return array<string, mixed>
      */
-=======
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
     public function definition(): array
     {
         return [];

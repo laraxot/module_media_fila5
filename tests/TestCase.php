@@ -24,15 +24,7 @@ abstract class TestCase extends XotBaseTestCase
     use DatabaseTransactions;
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-     * @param  array  $where
-=======
      * @param  array<string, mixed>  $where
->>>>>>> laraxot/dev
-=======
-     * @param  array<string, mixed>  $where
->>>>>>> laraxot/dev
      */
     public function assertMediaTableHas(string $table, array $where, string $connection = 'media'): void
     {
