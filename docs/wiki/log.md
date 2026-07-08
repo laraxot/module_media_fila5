@@ -33,4 +33,3 @@ module: "Media"
 - Created module index.md
 - Ready for on-demand loading via QMD
 
->>>>>>> 40b96bcd6 (.)

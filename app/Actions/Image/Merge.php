@@ -22,7 +22,6 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
-        // Intervention Image v3: il costruttore richiede un DriverInterface
         $manager = new InterventionImageManager(new GdDriver);
 
         /** @var ImageInterface $image1 */
@@ -51,11 +50,10 @@ class Merge
      */
     public function execute(array $filenames, string $outputFilename): bool
     {
-        if (empty($filenames)) {
+        if ($filenames === []) {
             return false;
         }
 
-        // Se c'è solo un'immagine, copiala
         if (count($filenames) === 1) {
             $sourcePath = public_path($filenames[0]);
             $outputPath = public_path($outputFilename);
@@ -68,7 +66,6 @@ class Merge
             return File::exists($outputPath);
         }
 
-        // Converti percorsi relativi in assoluti
         $absolutePaths = array_map(static function (string $filename): string {
             return public_path($filename);
         }, $filenames);
@@ -82,7 +79,6 @@ class Merge
             }
         }
 
-        // Intervention Image v3
         $manager = new InterventionImageManager(new GdDriver);
 
         // Carica tutte le immagini e calcola dimensioni totali
