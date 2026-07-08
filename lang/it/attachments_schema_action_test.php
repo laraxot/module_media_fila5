@@ -50,8 +50,6 @@ return [
             'label' => 'Elimina Attachments Schema Action Test',
         ],
     ],
-<<<<<<< HEAD
-=======
     'label' => 'Attachments Schema Action Test',
     'plural_label' => 'Attachments Schema Action Test (Plurale)',
     'navigation' => [
@@ -76,5 +74,4 @@ return [
             'label' => 'Elimina Attachments Schema Action Test',
         ],
     ],
->>>>>>> laraxot/dev
 ];
