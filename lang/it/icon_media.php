@@ -59,8 +59,6 @@ return [
             'label' => 'Elimina Icon Media',
         ],
     ],
-<<<<<<< HEAD
-=======
     'label' => 'Icon Media',
     'plural_label' => 'Icon Media (Plurale)',
     'navigation' => [
@@ -85,5 +83,4 @@ return [
             'label' => 'Elimina Icon Media',
         ],
     ],
->>>>>>> laraxot/dev
 ];

@@ -54,8 +54,6 @@ return [
             'label' => 'Elimina Add Attachment Action',
         ],
     ],
-<<<<<<< HEAD
-=======
     'plural_label' => 'Add Attachment Action (Plurale)',
     'navigation' => [
         'name' => 'Add Attachment Action',
@@ -79,5 +77,4 @@ return [
             'label' => 'Elimina Add Attachment Action',
         ],
     ],
->>>>>>> laraxot/dev
 ];
