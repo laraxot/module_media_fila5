@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni PHPStan Livello 10 - Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md).
@@ -116,3 +117,12 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 ---
 
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md).
+=======
+---
+module: theme
+topic: phpstan-level10-fixes-1
+canonical: ../../../../Themes/docs/shared-components/phpstan-level10-fixes-1.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/phpstan-level10-fixes-1.md
+>>>>>>> laraxot/dev

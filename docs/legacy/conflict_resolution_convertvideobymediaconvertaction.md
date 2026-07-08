@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
@@ -74,3 +75,12 @@ FFMpeg::fromDisk($data->disk)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
+=======
+---
+module: theme
+topic: conflict_resolution_convertvideobymediaconvertaction
+canonical: ../../../../Themes/docs/shared-components/conflict_resolution_convertvideobymediaconvertaction.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/conflict_resolution_convertvideobymediaconvertaction.md
+>>>>>>> laraxot/dev

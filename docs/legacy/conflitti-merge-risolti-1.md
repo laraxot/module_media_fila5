@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Risoluzione dei Conflitti Git nel Modulo Media
 
 ## Panoramica
@@ -390,3 +391,12 @@ I problemi di conflitto nei file relativi all'integrazione di FFmpeg erano princ
 ### Documentazione
 
 Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
+=======
+---
+module: theme
+topic: conflitti-merge-risolti-1
+canonical: ../../../../Themes/docs/shared-components/conflitti-merge-risolti-1-Modules.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/conflitti-merge-risolti-1-Modules.md
+>>>>>>> laraxot/dev

@@ -15,15 +15,26 @@ class FileExtensionRule implements Rule
     protected array $validExtensions = [];
 
     /**
+<<<<<<< HEAD
      * @param  list<string>  $validExtensions
+=======
+     * @param  array<int, string>  $validExtensions
+>>>>>>> laraxot/dev
      */
     public function __construct(array $validExtensions = [])
     {
         $this->validExtensions = array_values(array_map(
             /**
+<<<<<<< HEAD
              * @return lowercase-string
              */
             static fn (string $ext): string => mb_strtolower($ext),
+=======
+             * @param  mixed  $ext
+             * @return lowercase-string
+             */
+            static fn ($ext): string => mb_strtolower((string) $ext),
+>>>>>>> laraxot/dev
             $validExtensions
         ));
     }

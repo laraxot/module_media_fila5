@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Correzioni S3Test.php - Modulo Media
 
 ## Problemi Identificati e Risolti
@@ -254,3 +255,12 @@ private function getSolutionForError(?string $errorCode): string
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato e verificato
+=======
+---
+module: theme
+topic: s3test_corrections
+canonical: ../../../../Themes/docs/shared-components/s3test_corrections.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/s3test_corrections.md
+>>>>>>> laraxot/dev
