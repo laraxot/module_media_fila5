@@ -6,7 +6,7 @@ created: 2026-07-08
 updated: 2026-07-08
 qmd: "Media git commit push dopo modifiche regola"
 related:
-  - INDEX.md
+  - index.md
 ---
 
 # Commit & push dopo modifiche al modulo
