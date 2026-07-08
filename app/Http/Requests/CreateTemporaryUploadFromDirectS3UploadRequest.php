@@ -39,19 +39,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getDatabaseConnection(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        /** @var class-string<Media> $mediaModelClass */
-        $mediaModelClass = config('media-library.media_model');
-
-        /** @var Media $mediaModel */
-        $mediaModel = new $mediaModelClass;
-=======
         $mediaModel = $this->resolveMediaModel();
->>>>>>> laraxot/dev
-=======
-        $mediaModel = $this->resolveMediaModel();
->>>>>>> laraxot/dev
 
         if ($mediaModel->getConnectionName() === 'default') {
             return '';
@@ -62,18 +50,6 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getMediaTableName(): string
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        /** @var class-string<Media> $mediaModelClass */
-        $mediaModelClass = config('media-library.media_model');
-
-        /** @var Media $mediaModel */
-        $mediaModel = new $mediaModelClass;
-
-        return $mediaModel->getTable();
-=======
-=======
->>>>>>> laraxot/dev
         return $this->resolveMediaModel()->getTable();
     }
 
@@ -84,9 +60,5 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         Assert::subclassOf($mediaModelClass, Media::class);
 
         return new $mediaModelClass;
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
     }
 }
