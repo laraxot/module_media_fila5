@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-// Media translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Media/docs/wiki — domain i18n only.
-// File: lang/it/aws_test.php
 return [
     'navigation' => [
         'group' => 'Media',

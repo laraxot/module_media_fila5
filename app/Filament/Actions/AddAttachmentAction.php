@@ -49,7 +49,6 @@ class AddAttachmentAction extends XotBaseAction
         Assert::integer($max_size = config('media-library.max_file_size'));
 
         return [
-// Laraxot module file — see docs/wiki for domain contract.
             FileUpload::make('file')
                 ->hint(static::trans('fields.file_hint'))
                 ->storeFileNamesIn('original_file_name')

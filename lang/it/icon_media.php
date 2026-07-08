@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-// Media translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Media/docs/wiki — domain i18n only.
-// File: lang/it/icon_media.php
 return [
     'fields' => [
         'change-state' => [
@@ -37,30 +33,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-        ],
-    ],
-    'label' => 'Icon Media',
-    'plural_label' => 'Icon Media (Plurale)',
-    'navigation' => [
-        'name' => 'Icon Media',
-        'plural' => 'Icon Media',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Icon Media',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Icon Media',
-        ],
-        'edit' => [
-            'label' => 'Modifica Icon Media',
-        ],
-        'delete' => [
-            'label' => 'Elimina Icon Media',
         ],
     ],
     'label' => 'Icon Media',
