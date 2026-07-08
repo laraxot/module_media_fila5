@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
@@ -77,6 +78,8 @@ FFMpeg::fromDisk($data->disk)
 
 *Ultimo aggiornamento: giugno 2025*
 =======
+=======
+>>>>>>> laraxot/dev
 ---
 module: theme
 topic: conflict-resolution-convertvideobymediaconvertaction-1
@@ -84,4 +87,7 @@ canonical: ../../../../Themes/docs/shared-components/conflict-resolution-convert
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/conflict-resolution-convertvideobymediaconvertaction-1.md
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

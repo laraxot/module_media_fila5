@@ -1,7 +1,11 @@
 # Correzioni PHPStan Livello 10 - Modulo Media
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md).
+=======
+> **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
+>>>>>>> laraxot/dev
 =======
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
 >>>>>>> laraxot/dev
@@ -120,7 +124,11 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md).
+=======
+> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
+>>>>>>> laraxot/dev
 =======
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
 >>>>>>> laraxot/dev
