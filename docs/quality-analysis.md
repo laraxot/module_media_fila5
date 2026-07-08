@@ -4,6 +4,7 @@
 
 ---
 
+<<<<<<< HEAD
 ## Aggiornamento verifica 2026-07-01
 
 - **PHPStan** (`level: max`): **0 errori** confermati, incluso `Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php:60` (il presunto errore "Cannot instantiate class using mixed" di un run precedente era un falso positivo da OOM parziale; il codice usa già `class-string<Media>` + `@var Media $mediaModel`).
@@ -13,6 +14,8 @@
 
 ---
 
+=======
+>>>>>>> laraxot/dev
 ## Executive Summary
 
 The Media module successfully passes **PHPStan Level 10** with **0 errors** out of the box, demonstrating excellent type safety and code quality.

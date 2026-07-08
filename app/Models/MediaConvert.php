@@ -100,33 +100,60 @@ class MediaConvert extends BaseModel
 
     public function getDiskAttribute(?string $value): ?string
     {
+<<<<<<< HEAD
         if ($this->media === null) {
             return null;
         }
 
         return $this->media->disk;
+=======
+        if ($media === null)
+            return null;
+        }
+
+        return $media->disk;
+>>>>>>> laraxot/dev
     }
 
     public function getFileAttribute(?string $value): ?string
     {
+<<<<<<< HEAD
         if ($this->media === null) {
             return null;
         }
 
         return $this->media->path.'/'.$this->media->file_name;
+=======
+        if ($media === null)
+            return null;
+        }
+
+        return $media->path.'/'.$this->media->file_name;
+>>>>>>> laraxot/dev
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
     {
+<<<<<<< HEAD
         if ($this->media === null) {
             return null;
         }
         $info = pathinfo($this->media->file_name);
+=======
+        if ($media === null)
+            return null;
+        }
+        $info = pathinfo($media->file_name);
+>>>>>>> laraxot/dev
         // "dirname" => "."
         // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
+<<<<<<< HEAD
         return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
+=======
+        return $media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
+>>>>>>> laraxot/dev
     }
 }
