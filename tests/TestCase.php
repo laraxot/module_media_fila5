@@ -25,7 +25,11 @@ abstract class TestCase extends XotBaseTestCase
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param  array  $where
+=======
+     * @param  array<string, mixed>  $where
+>>>>>>> laraxot/dev
 =======
      * @param  array<string, mixed>  $where
 >>>>>>> laraxot/dev

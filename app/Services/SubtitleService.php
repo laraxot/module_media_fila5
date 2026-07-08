@@ -18,8 +18,11 @@ use function Safe\simplexml_load_string;
 /**
  * SubtitleService.
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @phpstan-type SubtitleItem array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
  */
@@ -33,7 +36,11 @@ class SubtitleService
     public string $field_name = 'txt';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /** @var list<SubtitleItem> */
+=======
+    /** @var array<int, array<string, float|int|string|mixed>> */
+>>>>>>> laraxot/dev
 =======
     /** @var array<int, array<string, float|int|string|mixed>> */
 >>>>>>> laraxot/dev
@@ -110,9 +117,13 @@ class SubtitleService
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * Restituisce i sottotitoli dal file.
      *
      * @return list<SubtitleItem>
+=======
+     * @return array<int, array<string, float|int|string|mixed>>
+>>>>>>> laraxot/dev
 =======
      * @return array<int, array<string, float|int|string|mixed>>
 >>>>>>> laraxot/dev
@@ -142,7 +153,13 @@ class SubtitleService
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return list<SubtitleItem>
+=======
+     * @return array<int, array<string, float|int|string|mixed>>
+     *
+     * @psalm-return list{0?: array{sentence_i: int<0, max>, item_i: int<0, max>, start: float|int, end: float|int, time: string, text: mixed},...}
+>>>>>>> laraxot/dev
 =======
      * @return array<int, array<string, float|int|string|mixed>>
      *
@@ -156,7 +173,10 @@ class SubtitleService
         $xmlObject = simplexml_load_string($content);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         /** @var list<SubtitleItem> $data */
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
         $data = [];

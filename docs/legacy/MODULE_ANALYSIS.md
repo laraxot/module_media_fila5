@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Modulo Media - Gestione File Multimediali
 
 ## Scopo Principale
@@ -350,6 +351,8 @@ $share = SharingService::create($media, [
 **Versione**: v2.1.0-beta  
 **Stato**: Production Ready with AI Enhancement Roadmap
 =======
+=======
+>>>>>>> laraxot/dev
 ---
 module: theme
 topic: MODULE_ANALYSIS
@@ -357,4 +360,7 @@ canonical: ../../../../Themes/docs/shared-components/MODULE_ANALYSIS-Modules.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/MODULE_ANALYSIS-Modules.md
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
