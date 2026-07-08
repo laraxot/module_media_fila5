@@ -2,17 +2,7 @@
 
 declare(strict_types=1);
 
-// Media translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Media/docs/wiki — domain i18n only.
-// File: lang/it/media_convert.php
 return [
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
-// Laraxot module file — see docs/wiki for domain contract.
     'navigation' => [
         'label' => 'media convert',
         'group' => 'media convert',
@@ -94,19 +84,6 @@ return [
             'helper_text' => 'speed',
             'description' => 'speed',
             'tooltip' => '',
-        ],
-    ],
-    'label' => 'Media Convert',
-    'plural_label' => 'Media Convert (Plurale)',
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Media Convert',
-        ],
-        'edit' => [
-            'label' => 'Modifica Media Convert',
-        ],
-        'delete' => [
-            'label' => 'Elimina Media Convert',
         ],
     ],
     'label' => 'Media Convert',

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Media\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 use Modules\Media\Models\TemporaryUpload;
 
 /**
