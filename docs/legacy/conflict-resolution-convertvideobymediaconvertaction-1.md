@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
@@ -75,3 +76,12 @@ FFMpeg::fromDisk($data->disk)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
+=======
+---
+module: theme
+topic: conflict-resolution-convertvideobymediaconvertaction-1
+canonical: ../../../../Themes/docs/shared-components/conflict-resolution-convertvideobymediaconvertaction-1.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/conflict-resolution-convertvideobymediaconvertaction-1.md
+>>>>>>> laraxot/dev

@@ -6,6 +6,10 @@ namespace Modules\Media\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Modules\Media\Models\Media;
+<<<<<<< HEAD
+=======
+use Webmozart\Assert\Assert;
+>>>>>>> laraxot/dev
 
 class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 {
@@ -38,11 +42,15 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getDatabaseConnection(): string
     {
+<<<<<<< HEAD
         /** @var class-string<Media> $mediaModelClass */
         $mediaModelClass = config('media-library.media_model');
 
         /** @var Media $mediaModel */
         $mediaModel = new $mediaModelClass;
+=======
+        $mediaModel = $this->resolveMediaModel();
+>>>>>>> laraxot/dev
 
         if ($mediaModel->getConnectionName() === 'default') {
             return '';
@@ -53,6 +61,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getMediaTableName(): string
     {
+<<<<<<< HEAD
         /** @var class-string<Media> $mediaModelClass */
         $mediaModelClass = config('media-library.media_model');
 
@@ -60,5 +69,17 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         $mediaModel = new $mediaModelClass;
 
         return $mediaModel->getTable();
+=======
+        return $this->resolveMediaModel()->getTable();
+    }
+
+    private function resolveMediaModel(): Media
+    {
+        $mediaModelClass = config('media-library.media_model');
+        Assert::string($mediaModelClass);
+        Assert::subclassOf($mediaModelClass, Media::class);
+
+        return new $mediaModelClass;
+>>>>>>> laraxot/dev
     }
 }
