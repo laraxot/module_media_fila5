@@ -13,7 +13,6 @@ class MediaConvertForm extends XotBaseResourceForm
     /**
      * @return array<string, \Filament\Schemas\Components\Component>
      */
-
     public static function getFormSchema(): array
     {
         return [
