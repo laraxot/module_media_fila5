@@ -38,8 +38,8 @@ class ConvertWidget extends XotBaseWidget
 
     public function begin(): void
     {
-        $disk_mp4 = $record->disk;
-        $file_mp4 = $record->getPath();
+        $disk_mp4 = $this->record->disk;
+        $file_mp4 = $this->record->getPath();
 
         $disk_path = Storage::disk($disk_mp4)->path('/');
         $file_mp4 = Str::after($file_mp4, $disk_path);
@@ -53,9 +53,9 @@ class ConvertWidget extends XotBaseWidget
             ->export();
 
         $exportedMedia->onProgress(function (float $percentage, float $remaining, float $rate): void {
-            $percentage = $percentage;
-            $remaining = $remaining;
-            $rate = $rate;
+            $this->percentage = $percentage;
+            $this->remaining = $remaining;
+            $this->rate = $rate;
             $msg = "{$percentage}% transcoded";
             $msg .= "{$remaining} seconds left at rate: {$rate}";
             Notification::make()

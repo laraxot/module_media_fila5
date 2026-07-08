@@ -8,7 +8,6 @@ use Illuminate\Foundation\Http\FormRequest;
 use Modules\Media\Models\Media;
 use Webmozart\Assert\Assert;
 
-// phpmd: LongClassName — nome esplicito per upload diretto S3
 class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 {
     /**

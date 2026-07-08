@@ -74,10 +74,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static ?string $disk = null;
 
-    public $incrementing = false;
-
-    protected $keyType = 'string';
-
+    /** @var string */
     protected $connection = 'media';
 
     /**
@@ -200,7 +197,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
     {
         if (
             config('media-library.enable_temporary_uploads_session_affinity', true) &&
-                $session_id !== session()
+                $this->session_id !== session()->getId()
         ) {
             throw TemporaryUploadDoesNotBelongToCurrentSession::create();
         }
