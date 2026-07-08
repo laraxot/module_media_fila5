@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Image;
 
 use Illuminate\Support\Facades\File;
-use Intervention\Image\Alignment;
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\ImageManager as InterventionImageManager;
 use Intervention\Image\Interfaces\ImageInterface;
@@ -24,12 +23,14 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
-        $manager = new InterventionImageManager(new GdDriver());
+        $manager = new InterventionImageManager(new GdDriver);
 
-        $image1 = $manager->decodePath($path1);
-        $image2 = $manager->decodePath($path2);
+        /** @var ImageInterface $image1 */
+        $image1 = $manager->read($path1); // @phpstan-ignore method.notFound
+        /** @var ImageInterface $image2 */
+        $image2 = $manager->read($path2); // @phpstan-ignore method.notFound
 
-        $image1->insert($image2, alignment: Alignment::CENTER);
+        $image1->place($image2, 'center'); // @phpstan-ignore method.notFound
 
         File::ensureDirectoryExists(dirname($outputPath));
         $image1->save($outputPath);
@@ -49,11 +50,11 @@ class Merge
      */
     public function execute(array $filenames, string $outputFilename): bool
     {
-        if ([] === $filenames) {
+        if ($filenames === []) {
             return false;
         }
 
-        if (1 === count($filenames)) {
+        if (count($filenames) === 1) {
             $sourcePath = public_path($filenames[0]);
             $outputPath = public_path($outputFilename);
             if (! File::exists($sourcePath)) {
@@ -65,7 +66,9 @@ class Merge
             return File::exists($outputPath);
         }
 
-        $absolutePaths = array_map(static fn (string $filename): string => public_path($filename), $filenames);
+        $absolutePaths = array_map(static function (string $filename): string {
+            return public_path($filename);
+        }, $filenames);
 
         foreach ($absolutePaths as $path) {
             if (! File::exists($path)) {
@@ -75,7 +78,7 @@ class Merge
             }
         }
 
-        $manager = new InterventionImageManager(new GdDriver());
+        $manager = new InterventionImageManager(new GdDriver);
 
         /** @var list<ImageInterface> $images */
         $images = [];
@@ -83,18 +86,20 @@ class Merge
         $totalHeight = 0;
 
         foreach ($absolutePaths as $path) {
-            $img = $manager->decodePath($path);
+            /** @var ImageInterface $img */
+            $img = $manager->read($path); // @phpstan-ignore method.notFound
             $images[] = $img;
             $totalWidth = max($totalWidth, $img->width());
             $totalHeight += $img->height();
         }
 
-        $final = $manager->createImage($totalWidth, $totalHeight);
+        /** @var ImageInterface $final */
+        $final = $manager->create($totalWidth, $totalHeight); // @phpstan-ignore method.notFound
 
         $yOffset = 0;
         foreach ($images as $img) {
             $xOffset = (int) (($totalWidth - $img->width()) / 2);
-            $final->insert($img, $xOffset, $yOffset, Alignment::TOP_LEFT);
+            $final->place($img, 'top-left', $xOffset, $yOffset); // @phpstan-ignore method.notFound
             $yOffset += $img->height();
         }
 
