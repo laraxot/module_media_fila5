@@ -45,11 +45,7 @@ class Merge
      * Questo metodo unisce tutte le immagini in $filenames verticalmente
      * in un'unica immagine, mantenendo la larghezza massima e sommando le altezze.
      *
-<<<<<<< HEAD
      * @param  list<string>  $filenames  Array di percorsi relativi (es: 'chart/123-0.png')
-=======
-     * @param  array<int, string>  $filenames  Array di percorsi relativi (es: 'chart/123-0.png')
->>>>>>> laraxot/dev
      * @param  string  $outputFilename  Nome file output relativo (es: 'chart/123.png')
      * @return bool Successo operazione
      */
