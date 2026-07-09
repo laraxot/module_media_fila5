@@ -81,14 +81,7 @@ class SaveAttachmentsAction
             $path = $data[$attachment];
             Assert::string($path, '['.__LINE__.']['.class_basename(self::class).']');
             $full_path = Storage::disk($disk)->path($path);
-            // *
-            dddx([
-                'exists' => Storage::disk($disk)->exists($path),
-                'path' => $path,
-                'disk' => $disk,
-                'full_path' => Storage::disk($disk)->path($path),
-            ]);
-            // */
+
             if (! method_exists($record, 'addMediaFromDisk')) {
                 throw new Exception('Method addMediaFromDisk not found');
             }

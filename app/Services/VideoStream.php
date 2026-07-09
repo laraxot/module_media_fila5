@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace Modules\Media\Services;
 
 use Exception;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Modules\Media\Models\Media;
 use Webmozart\Assert\Assert;
 
 use function is_string;
@@ -39,11 +41,20 @@ class VideoStream
      *
      * @param  string  $disk  The disk storage name
      * @param  string  $path  The path to the video file
+     * @param  Media|null  $media  Optional media model for ownership validation
      *
      * @throws Exception If the file does not exist or other errors
      */
-    public function __construct(string $disk, string $path)
+    public function __construct(string $disk, string $path, ?Media $media = null)
     {
+        // Validate ownership if media is provided and user is authenticated
+        if ($media !== null && Auth::check()) {
+            $user = Auth::user();
+            if ($media->created_by !== $user->getKey() && !$user->hasRole('super-admin')) {
+                abort(403, 'Unauthorized to stream this media');
+            }
+        }
+
         $filesystem = Storage::disk($disk);
 
         if (! $filesystem->exists($path)) {
