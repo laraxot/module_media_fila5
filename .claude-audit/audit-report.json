@@ -1,14 +1,14 @@
 {
   "version": "0.2.2",
-  "timestamp": "2026-07-09T18:23:40.848Z",
+  "timestamp": "2026-07-09T19:26:12.380Z",
   "project": {
     "name": "Media",
     "path": "/var/www/_bases/base_fixcity_fila5/laravel/Modules/Media",
     "languages": {
-      "Markdown": 364,
+      "Markdown": 366,
       "JSON": 8,
       "XML": 1,
-      "PHP": 254,
+      "PHP": 268,
       "JavaScript": 5,
       "Python": 7,
       "SCSS": 1
@@ -16,8 +16,8 @@
     "frameworks": [
       "TailwindCSS"
     ],
-    "totalFiles": 640,
-    "totalLines": 45778,
+    "totalFiles": 656,
+    "totalLines": 47589,
     "hasTests": true,
     "hasDependencyFile": true,
     "dependencyFile": "package.json",
@@ -96,5 +96,5 @@
   "mediumCount": 0,
   "lowCount": 0,
   "aiPowered": false,
-  "durationMs": 278
+  "durationMs": 165
 }
