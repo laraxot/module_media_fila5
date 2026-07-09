@@ -8,6 +8,12 @@ use Modules\Media\Models\Media;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 uses(\Modules\Media\Tests\TestCase::class);
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
