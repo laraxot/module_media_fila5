@@ -12,13 +12,17 @@ class TestCredentialsAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly CreateFilesystemStsClientAction $stsClientFactory,
+    ) {}
+
     /**
      * @return array<string, mixed>
      */
     public function execute(): array
     {
         try {
-            $result = app(CreateFilesystemStsClientAction::class)->execute()->getCallerIdentity();
+            $result = $this->stsClientFactory->execute()->getCallerIdentity();
 
             return [
                 'title' => '🔐 AWS Credentials',

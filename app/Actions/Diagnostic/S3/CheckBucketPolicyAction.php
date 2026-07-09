@@ -6,13 +6,18 @@ namespace Modules\Media\Actions\Diagnostic\S3;
 
 use Aws\Exception\AwsException;
 use Modules\Media\Actions\Diagnostic\Support\CreateFilesystemS3ClientAction;
+use Spatie\QueueableAction\QueueableAction;
+
 use function Safe\json_decode;
 use function Safe\json_encode;
-use Spatie\QueueableAction\QueueableAction;
 
 class CheckBucketPolicyAction
 {
     use QueueableAction;
+
+    public function __construct(
+        private readonly CreateFilesystemS3ClientAction $s3ClientFactory,
+    ) {}
 
     /**
      * @return array<string, mixed>
@@ -20,8 +25,8 @@ class CheckBucketPolicyAction
     public function execute(): array
     {
         try {
-            $s3 = app(CreateFilesystemS3ClientAction::class)->execute();
-            $policy = $s3->getBucketPolicy(['Bucket' => app(CreateFilesystemS3ClientAction::class)->bucket()]);
+            $s3 = $this->s3ClientFactory->execute();
+            $policy = $s3->getBucketPolicy(['Bucket' => $this->s3ClientFactory->bucket()]);
 
             return [
                 'title' => '📜 Bucket Policy',

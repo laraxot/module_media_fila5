@@ -13,14 +13,19 @@ class TestS3PermissionsAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly CreateFilesystemS3ClientAction $s3ClientFactory,
+        private readonly ResolveAwsS3ErrorSolutionAction $resolveError,
+    ) {}
+
     /**
      * @return array<string, mixed>
      */
     public function execute(): array
     {
         try {
-            $s3 = app(CreateFilesystemS3ClientAction::class)->execute();
-            $bucket = app(CreateFilesystemS3ClientAction::class)->bucket();
+            $s3 = $this->s3ClientFactory->execute();
+            $bucket = $this->s3ClientFactory->bucket();
 
             $s3->listObjectsV2(['Bucket' => $bucket, 'MaxKeys' => 1]);
 
@@ -40,7 +45,7 @@ class TestS3PermissionsAction
                 'message' => 'S3 permissions error: '.$errorCode,
                 'details' => [
                     'Error' => $exception->getMessage(),
-                    'Solution' => app(ResolveAwsS3ErrorSolutionAction::class)->execute($errorCode),
+                    'Solution' => $this->resolveError->execute($errorCode),
                 ],
             ];
         }

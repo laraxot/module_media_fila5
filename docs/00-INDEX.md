@@ -22,6 +22,9 @@
 - 🖼️ **[Media Library](./filament.md)** - La libreria media in Filament.
 - 🛠️ **[Table Actions](./filament-table-actions.md)** - Azioni di massa su file e directory.
 
+## 🪮 **Ponytail audit**
+- 📋 **[Over-engineering audit](./ponytail-audit-over-engineering.md)** - `BaseController` vuoto, remediation `.bak`.
+
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Level 10](./phpstan-level10-fixes.md)** - Report di conformità totale.
 - 🔬 **[Testing Guidelines](./testing.md)** - Strategie per testare upload e stream.

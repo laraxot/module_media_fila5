@@ -24,6 +24,6 @@ class ResolveAwsS3ErrorSolutionAction
             'BucketRegionError' => 'Update AWS_DEFAULT_REGION to match bucket region',
         ];
 
-        return $solutions[$errorCode] ?? 'Consult AWS documentation for error: '.$errorCode;
+        return $solutions[$errorCode] ?? ('Consult AWS documentation for error: '.$errorCode);
     }
 }

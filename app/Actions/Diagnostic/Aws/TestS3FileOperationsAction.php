@@ -13,14 +13,19 @@ class TestS3FileOperationsAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly CreateFilesystemS3ClientAction $s3ClientFactory,
+        private readonly ResolveAwsS3ErrorSolutionAction $resolveError,
+    ) {}
+
     /**
      * @return array<string, mixed>
      */
     public function execute(): array
     {
         try {
-            $s3 = app(CreateFilesystemS3ClientAction::class)->execute();
-            $bucket = app(CreateFilesystemS3ClientAction::class)->bucket();
+            $s3 = $this->s3ClientFactory->execute();
+            $bucket = $this->s3ClientFactory->bucket();
             $testFileName = 'test-file-'.now()->timestamp.'.txt';
             $testContent = 'Test file content for AWS S3 operations';
 
@@ -52,7 +57,7 @@ class TestS3FileOperationsAction
                 'message' => 'S3 file operations error: '.$errorCode,
                 'details' => [
                     'Error' => $exception->getMessage(),
-                    'Solution' => app(ResolveAwsS3ErrorSolutionAction::class)->execute($errorCode),
+                    'Solution' => $this->resolveError->execute($errorCode),
                 ],
             ];
         }

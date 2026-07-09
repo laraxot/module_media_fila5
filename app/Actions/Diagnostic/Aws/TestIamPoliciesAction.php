@@ -12,14 +12,18 @@ class TestIamPoliciesAction
 {
     use QueueableAction;
 
+    public function __construct(
+        private readonly CreateFilesystemS3ClientAction $s3ClientFactory,
+    ) {}
+
     /**
      * @return array<string, mixed>
      */
     public function execute(): array
     {
         try {
-            $s3 = app(CreateFilesystemS3ClientAction::class)->execute();
-            $bucket = app(CreateFilesystemS3ClientAction::class)->bucket();
+            $s3 = $this->s3ClientFactory->execute();
+            $bucket = $this->s3ClientFactory->bucket();
 
             $s3->headBucket(['Bucket' => $bucket]);
             $s3->listObjectsV2(['Bucket' => $bucket, 'MaxKeys' => 1]);

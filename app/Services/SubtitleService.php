@@ -29,7 +29,7 @@ class SubtitleService
 
     public string $field_name = 'txt';
 
-    /** @var list<SubtitleItem> */
+    /** @var array<int, array<string, float|int|string|mixed>> */
     public array $subtitles = [];
 
     public Model $model;
@@ -102,9 +102,7 @@ class SubtitleService
     }
 
     /**
-     * Restituisce i sottotitoli dal file.
-     *
-     * @return list<SubtitleItem>
+     * @return array<int, array<string, float|int|string|mixed>>
      */
     public function get(): array
     {
