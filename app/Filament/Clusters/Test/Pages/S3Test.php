@@ -188,12 +188,6 @@ class S3Test extends XotBasePage
         }
 
         $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
-        dddx([
-            'signedurl' => $signedUrl,
-            'filePath' => $filePath,
-            'url2' => Storage::disk('s3')->url($filePath),
-            'url3' => Storage::disk('s3')->temporaryUrl($filePath, now()->addMinutes(5)),
-        ]);
 
         $this->debugResults = [];
         $this->updateDebugOutput();
