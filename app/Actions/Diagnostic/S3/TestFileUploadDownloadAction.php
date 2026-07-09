@@ -6,9 +6,10 @@ namespace Modules\Media\Actions\Diagnostic\S3;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
+use Spatie\QueueableAction\QueueableAction;
+
 use function Safe\file_put_contents;
 use function Safe\unlink;
-use Spatie\QueueableAction\QueueableAction;
 
 class TestFileUploadDownloadAction
 {
@@ -60,7 +61,7 @@ class TestFileUploadDownloadAction
             ];
         } catch (Exception $exception) {
             return $this->errorResult('File operations test failed: '.$exception->getMessage(), [
-                'error_class' => $exception::class,
+                'error_class' => get_class($exception),
                 'error_file' => $exception->getFile(),
                 'error_line' => $exception->getLine(),
             ]);

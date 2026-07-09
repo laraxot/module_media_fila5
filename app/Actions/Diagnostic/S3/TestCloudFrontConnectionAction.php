@@ -14,6 +14,10 @@ class TestCloudFrontConnectionAction
 
     private const URL_PREVIEW_LENGTH = 100;
 
+    public function __construct(
+        private readonly GetCloudFrontSignedUrlAction $signedUrlAction,
+    ) {}
+
     /**
      * @return array<string, mixed>
      */
@@ -28,7 +32,7 @@ class TestCloudFrontConnectionAction
                 return $this->incompleteConfiguration($baseUrl, $keyPairId, $privateKey);
             }
 
-            $testUrl = app(GetCloudFrontSignedUrlAction::class)->execute($testFile, 5);
+            $testUrl = $this->signedUrlAction->execute($testFile, 5);
 
             return [
                 'title' => '☁️ CloudFront',
