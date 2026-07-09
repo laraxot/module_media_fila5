@@ -1,3 +1,19 @@
+@php
+// Media Blade view — see Modules/Media/docs/wiki.
+@endphp
+
+@php
+// Media Blade view — see Modules/Media/docs/wiki.
+@endphp
+
+@php
+// Media Blade view — see Modules/Media/docs/wiki.
+@endphp
+
+@php
+// Media Blade view — see Modules/Media/docs/wiki.
+@endphp
+
 <?php
 
 declare(strict_types=1);
@@ -18,6 +34,13 @@ declare(strict_types=1);
 
         $stateCount = count($state);
         $limitedStateCount = count($limitedState);
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
+// Laraxot module file — see docs/wiki for domain contract.
 
         $defaultImageUrl = $getDefaultImageUrl();
 
