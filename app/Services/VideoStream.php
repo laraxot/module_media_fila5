@@ -50,7 +50,10 @@ class VideoStream
         // Validate ownership if media is provided and user is authenticated
         if ($media !== null && Auth::check()) {
             $user = Auth::user();
-            if ($media->created_by !== $user->getKey() && !$user->hasRole('super-admin')) {
+            if ($user === null) {
+                abort(403, 'Unauthorized to stream this media');
+            }
+            if ($media->created_by !== $user->getKey() && ! $user->hasRole('super-admin')) {
                 abort(403, 'Unauthorized to stream this media');
             }
         }
