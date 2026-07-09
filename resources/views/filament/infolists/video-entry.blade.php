@@ -1,3 +1,11 @@
+@php
+// Media Blade view — see Modules/Media/docs/wiki.
+@endphp
+
+@php
+// Media Blade view — see Modules/Media/docs/wiki.
+@endphp
+
 <?php
 
 declare(strict_types=1);

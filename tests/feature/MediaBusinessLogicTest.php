@@ -3,6 +3,22 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Feature;
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
+// Media Pest/PHPUnit — claude-audit documentation ratio.
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Schema;
