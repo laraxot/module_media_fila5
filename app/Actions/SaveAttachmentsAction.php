@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Exception;
+use Spatie\QueueableAction\QueueableAction;
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia;
 use Webmozart\Assert\Assert;
@@ -15,6 +16,8 @@ use function Safe\unlink;
 
 class SaveAttachmentsAction
 {
+    use QueueableAction;
+
     /**
      * Save attachments to media library.
      *
