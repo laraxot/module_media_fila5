@@ -15,6 +15,16 @@ module: "Media"
 
 # Media - Wiki Activity Log
 
+## [2026-07-12] deadcode | swarm — GetTemporary* triplicati rimossi
+
+- Rimossi `GetTemporaryUploadPathAction`, `GetTemporaryResponsiveImagePathAction`, `GetTemporaryConversionPathAction` — 0 consumer PHP; SSoT `GenerateTemporaryUploadPathAction` (`purpose`: original|conversion|responsive)
+- Issue [#372](https://github.com/laraxot/base_fixcity_fila5/issues/372)
+
+## [2026-07-12] phpstan | swarm quality gate — 0 errori
+
+- Scope precedente (file ora rimossi): cast `(string)` su id/uuid — superseded da cleanup deadcode
+- Comando: `php -d memory_limit=2048M vendor/bin/phpstan analyse Modules/Media` → verificare post-cleanup
+
 ## [2026-05-27] lint | phpstan zero
 
 - `./vendor/bin/phpstan analyse Modules/Media` → 0 errori (135 file).
