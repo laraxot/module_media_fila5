@@ -44,11 +44,7 @@ class ConvertVideoByConvertDataAction
             ->open($data->file)
             ->export()
             ->onProgress(function (float $percentage, float $remaining, float $rate): void {
-                // Gestione del progresso
-                $msg = "{$percentage}% transcoded";
-                $msg .= "{$remaining} seconds left at rate: {$rate}";
-
-                // Log o notifica del progresso
+                // ponytail: progress reporting not wired up, no-op until a logger/notifier is needed here
             })
             ->addFilter('-preset', 'ultrafast')
             // Utilizziamo il formato istanziato come parametro

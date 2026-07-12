@@ -37,7 +37,47 @@ class FileExtensionRule implements Rule
             return false;
         }
 
-        return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false);
+        $extension = mb_strtolower($value->getClientOriginalExtension());
+        if (! in_array($extension, $this->validExtensions, strict: true)) {
+            return false;
+        }
+
+        $guessedExtension = mb_strtolower((string) $value->guessExtension());
+
+        return $guessedExtension === $extension
+            || in_array($value->getMimeType(), $this->mimeTypesForExtension($extension), strict: true);
+    }
+
+    /**
+     * @return list<string>
+     */
+    private function mimeTypesForExtension(string $extension): array
+    {
+        /** @var array<string, list<string>> $map */
+        static $map = [
+            'jpg' => ['image/jpeg'],
+            'jpeg' => ['image/jpeg'],
+            'png' => ['image/png'],
+            'gif' => ['image/gif'],
+            'webp' => ['image/webp'],
+            'svg' => ['image/svg+xml'],
+            'pdf' => ['application/pdf'],
+            'mp4' => ['video/mp4'],
+            'webm' => ['video/webm'],
+            'mp3' => ['audio/mpeg'],
+            'wav' => ['audio/wav', 'audio/x-wav'],
+            'doc' => ['application/msword'],
+            'docx' => ['application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
+            'ppt' => ['application/vnd.ms-powerpoint'],
+            'pptx' => ['application/vnd.openxmlformats-officedocument.presentationml.presentation'],
+            'xls' => ['application/vnd.ms-excel'],
+            'xlsx' => ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'],
+            'zip' => ['application/zip', 'application/x-zip-compressed'],
+            'txt' => ['text/plain'],
+            'csv' => ['text/csv', 'text/plain', 'application/csv'],
+        ];
+
+        return $map[$extension] ?? [];
     }
 
     /**

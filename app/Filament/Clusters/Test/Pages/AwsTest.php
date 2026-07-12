@@ -24,6 +24,11 @@ class AwsTest extends XotBasePage
 {
     protected static ?string $cluster = Test::class;
 
+    public static function canAccess(): bool
+    {
+        return auth()->user()?->hasRole('super-admin') ?? false;
+    }
+
     /** @var array<string, mixed> */
     public array $testResults = [];
 
