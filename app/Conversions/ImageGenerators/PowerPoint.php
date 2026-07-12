@@ -30,7 +30,8 @@ class PowerPoint extends ImageGenerator
 
     public function requirementsAreInstalled(): bool
     {
-        return true;
+        // ponytail: no LibreOffice/imagemagick pipeline yet — skip false conversions
+        return false;
     }
 
     /**

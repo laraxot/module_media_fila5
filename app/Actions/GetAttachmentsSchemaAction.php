@@ -8,9 +8,12 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Webmozart\Assert\Assert;
+use Spatie\QueueableAction\QueueableAction;
 
 class GetAttachmentsSchemaAction
 {
+    use QueueableAction;
+
     /**
      * @param  array<string>  $attachments
      * @return array<FileUpload>
