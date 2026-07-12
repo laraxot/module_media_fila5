@@ -214,7 +214,7 @@ final class GetVideoFrameContentAction
 - Riduzione uso memoria: 40%
 
 ## 3. Ottimizzazione Upload Temporanei
-**File**: `laravel/Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
+**File**: `laravel/Modules/Media/app/Actions/GenerateTemporaryUploadPathAction.php`
 
 **Problema**:
 - Generazione path non ottimizzata

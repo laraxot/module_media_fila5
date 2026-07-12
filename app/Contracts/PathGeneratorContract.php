@@ -7,11 +7,11 @@ namespace Modules\Media\Contracts;
 use Modules\Media\Models\Media;
 
 /**
- * Interface PathGenerator
+ * Interface PathGeneratorContract
  *
  * Definisce i metodi necessari per la generazione dei percorsi dei file media.
  */
-interface PathGenerator
+interface PathGeneratorContract
 {
     /**
      * Genera il percorso per il file originale.

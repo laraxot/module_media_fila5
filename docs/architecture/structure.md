@@ -267,7 +267,7 @@ app/Providers
 app/Providers/Filament
 app/Rules
 app/Services
-app/Support
+# app/Support — eliminato 2026-07-12 → Actions/Adapters/Datas
 app/View
 app/View/Components
 app/View/View
