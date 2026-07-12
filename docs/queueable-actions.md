@@ -2,7 +2,7 @@
 title: "Queueable Actions — Media Module"
 type: concept
 created: 2026-07-12
-updated: 2026-07-13
+updated: 2026-07-12
 confidence: high
 tags: [queueable-action, spatie, architecture, laraxot, media]
 related:
@@ -50,16 +50,6 @@ class DoSomethingAction
 ```php
 app(DoSomethingAction::class)->execute();
 ```
-
-## Streaming video
-
-`StreamVideoAction` (`app/Actions/Stream/StreamVideoAction.php`) sostituisce il legacy `app/Services/VideoStream.php`:
-
-```php
-app(StreamVideoAction::class)->execute($disk, $path, $media);
-```
-
-HTTP range, auth su `Media` e `exit` post-stream restano nell'Action (endpoint Folio/API futuro).
 
 ## Verification
 
