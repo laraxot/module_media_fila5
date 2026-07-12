@@ -38,10 +38,17 @@ describe('TemporaryUpload Model', function (): void {
         expect($upload->getConnectionName())->toBe('media');
     });
 
-    it('has empty guarded array', function (): void {
+    it('has explicit fillable attributes', function (): void {
         $upload = new TemporaryUpload;
 
-        expect($upload->getGuarded())->toBe([]);
+        expect($upload->getFillable())->toBe([
+            'session_id',
+            'user_id',
+            'file_name',
+            'file_size',
+            'mime_type',
+            'status',
+        ]);
     });
 
     it('has findByMediaUuid static method', function (): void {
