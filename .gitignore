@@ -174,3 +174,4 @@ _docs/
 agentdb.rvf
 tests/AuditCoverage/
 audit-coverage/
+.claude-audit/
