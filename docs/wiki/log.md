@@ -15,6 +15,12 @@ module: "Media"
 
 # Media - Wiki Activity Log
 
+## [2026-07-13] phpstan | SaveAttachmentsAction — codice orfano merge
+
+- Rimosso blocco duplicato L87–118 (loop inline residuo post-refactor `attachmentPath` + `saveAttachment`)
+- Uso: salva allegati da disco temporaneo su Spatie Media Library (`HasMedia::addMedia`)
+- PHPStan Modules: 0 errori
+
 ## [2026-07-12] deadcode | swarm — GetTemporary* triplicati rimossi
 
 - Rimossi `GetTemporaryUploadPathAction`, `GetTemporaryResponsiveImagePathAction`, `GetTemporaryConversionPathAction` — 0 consumer PHP; SSoT `GenerateTemporaryUploadPathAction` (`purpose`: original|conversion|responsive)
