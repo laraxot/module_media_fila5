@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
+use Spatie\QueueableAction\QueueableAction;
+
+use Exception;
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
