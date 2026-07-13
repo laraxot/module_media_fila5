@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\S3;
 
 use Spatie\QueueableAction\QueueableAction;
+
 use Aws\S3\Exception\S3Exception;
 
 class GetFileInfoAction extends BaseS3Action
