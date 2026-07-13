@@ -14,13 +14,10 @@ class UpdateModelSubtitleFieldAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly ExtractSubtitlePlainTextAction $extractSubtitlePlainTextAction,
-    ) {}
 
     public function execute(Model $model, string $filePath, string $fieldName = 'txt'): Model
     {
-        $plain = $this->extractSubtitlePlainTextAction->execute($filePath);
+        $plain = app(ExtractSubtitlePlainTextAction::class)->execute($filePath);
 
         return tap($model)->update([$fieldName => $plain]);
     }

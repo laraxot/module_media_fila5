@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
+use Spatie\QueueableAction\QueueableAction;
+
 use Exception;
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia;
@@ -15,6 +17,8 @@ use function Safe\unlink;
 
 class SaveAttachmentsAction
 {
+    use QueueableAction;
+
     /**
      * Save attachments to media library.
      *

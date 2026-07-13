@@ -2,17 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Modules\Media\Support;
+namespace Modules\Media\Actions\Path;
 
 use Modules\Media\Models\Media;
+use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-// use Spatie\MediaLibrary\MediaCollections\Models\Media;
-// use Spatie\MediaLibrary\Support\PathGenerator\PathGenerator;
-// use Modules\Media\Contracts\PathGenerator;
-// implements PathGenerator
-class TemporaryUploadPathGenerator
+class GenerateTemporaryUploadPathAction
 {
+    use QueueableAction;
+
     public function getPath(Media $media): string
     {
         return $this->getBasePath($media).'/'.md5($media->id.$media->uuid.'original').'/';
@@ -28,9 +27,6 @@ class TemporaryUploadPathGenerator
         return $this->getBasePath($media).'/'.md5($media->id.$media->uuid.'responsive');
     }
 
-    /**
-     * Get a unique base path for the given media.
-     */
     protected function getBasePath(Media $media): string
     {
         Assert::string($id = $media->getKey());
