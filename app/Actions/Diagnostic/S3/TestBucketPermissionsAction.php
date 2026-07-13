@@ -14,9 +14,6 @@ class TestBucketPermissionsAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly CreateFilesystemS3ClientAction $s3ClientFactory,
-    ) {}
 
     /**
      * @return array<string, mixed>
@@ -30,8 +27,8 @@ class TestBucketPermissionsAction
         ];
 
         try {
-            $s3 = $this->s3ClientFactory->execute();
-            $bucket = $this->s3ClientFactory->bucket();
+            $s3 = app(CreateFilesystemS3ClientAction::class)->execute();
+            $bucket = app(CreateFilesystemS3ClientAction::class)->bucket();
             $testKey = $testKeyPrefix.time().'.txt';
 
             $results['data'] = $this->probePermissions($s3, $bucket, $testKey);

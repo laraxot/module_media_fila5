@@ -170,7 +170,4 @@ lang/lang/
 _docs/
 _docs/
 agentdb.rvf
-
-# claude-audit bridge (non committare)
-audit-coverage/
-tests/AuditCoverage/*
+tests/AuditCoverage/

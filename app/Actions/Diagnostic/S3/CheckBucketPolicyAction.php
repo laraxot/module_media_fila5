@@ -15,9 +15,6 @@ class CheckBucketPolicyAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly CreateFilesystemS3ClientAction $s3ClientFactory,
-    ) {}
 
     /**
      * @return array<string, mixed>
@@ -25,8 +22,8 @@ class CheckBucketPolicyAction
     public function execute(): array
     {
         try {
-            $s3 = $this->s3ClientFactory->execute();
-            $policy = $s3->getBucketPolicy(['Bucket' => $this->s3ClientFactory->bucket()]);
+            $s3 = app(CreateFilesystemS3ClientAction::class)->execute();
+            $policy = $s3->getBucketPolicy(['Bucket' => app(CreateFilesystemS3ClientAction::class)->bucket()]);
 
             return [
                 'title' => '📜 Bucket Policy',

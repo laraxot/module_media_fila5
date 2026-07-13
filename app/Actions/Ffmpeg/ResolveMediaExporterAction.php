@@ -8,10 +8,6 @@ use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
-/**
- * Normalizza il risultato della fluent API FFmpeg (MediaExporter + __call verso PHPFFMpeg)
- * per l'analisi statica e runtime sicuro.
- */
 final class ResolveMediaExporterAction
 {
     use QueueableAction;
