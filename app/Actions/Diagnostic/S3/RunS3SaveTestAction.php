@@ -14,9 +14,6 @@ class RunS3SaveTestAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly GetCloudFrontSignedUrlAction $signedUrlAction,
-    ) {}
 
     /**
      * @return array<string, mixed>
@@ -26,7 +23,7 @@ class RunS3SaveTestAction
         $filename = $testFilePrefix.time().'.txt';
         Storage::disk('s3')->put($filename, 'Hello World from Filament Test');
 
-        $cloudFrontUrl = $this->signedUrlAction->execute($filename, 5);
+        $cloudFrontUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filename, 5);
 
         /** @var FilesystemAdapter $s3Disk */
         $s3Disk = Storage::disk('s3');
@@ -44,7 +41,7 @@ class RunS3SaveTestAction
         if ($attachmentPath !== null && $attachmentPath !== '') {
             $results['uploaded_file'] = [
                 'path' => $attachmentPath,
-                'cloudfront_url' => $this->signedUrlAction->execute($attachmentPath, 30),
+                'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute($attachmentPath, 30),
                 'temporary_url' => $s3Disk->temporaryUrl($attachmentPath, now()->addMinutes(30)),
             ];
         }
