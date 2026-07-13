@@ -171,3 +171,4 @@ _docs/
 _docs/
 agentdb.rvf
 tests/AuditCoverage/
+audit-coverage/
