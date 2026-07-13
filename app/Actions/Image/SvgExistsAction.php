@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Image;
 
+use Spatie\QueueableAction\QueueableAction;
+
 use Modules\UI\Actions\Icon\GetAllIconsAction;
 use Webmozart\Assert\Assert;
 use Spatie\QueueableAction\QueueableAction;

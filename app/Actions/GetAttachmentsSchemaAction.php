@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
+use Spatie\QueueableAction\QueueableAction;
+
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
