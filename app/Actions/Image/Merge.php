@@ -23,7 +23,7 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
-        $manager = new InterventionImageManager(new GdDriver);
+        $manager = new InterventionImageManager(new GdDriver());
 
         /** @var ImageInterface $image1 */
         $image1 = $manager->read($path1); // @phpstan-ignore method.notFound
@@ -78,7 +78,7 @@ class Merge
             }
         }
 
-        $manager = new InterventionImageManager(new GdDriver);
+        $manager = new InterventionImageManager(new GdDriver());
 
         /** @var list<ImageInterface> $images */
         $images = [];
