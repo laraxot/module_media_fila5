@@ -22,7 +22,7 @@ it('executes save attachments successfully', function (): void {
     /** @var TestCase $this */
     $action = new SaveAttachmentsAction();
 
-    $record = $this->makeTestMock(HasMedia::class);
+    $record = $this->makeHasMediaRecordMock();
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -53,7 +53,7 @@ it('handles empty attachments', function (): void {
     /** @var TestCase $this */
     $action = new SaveAttachmentsAction();
 
-    $record = $this->makeTestMock(HasMedia::class);
+    $record = $this->makeHasMediaRecordMock();
     $record->method('update')->with([])->willReturn(true);
 
     $action->execute($record, [], [], 'attachments');
@@ -65,7 +65,7 @@ it('skips nonexistent files', function (): void {
     /** @var TestCase $this */
     $action = new SaveAttachmentsAction();
 
-    $record = $this->makeTestMock(HasMedia::class);
+    $record = $this->makeHasMediaRecordMock();
     $record->method('update')->with([])->willReturn(true);
 
     $attachments = ['invoice'];
@@ -82,7 +82,7 @@ it('handles storage errors gracefully', function (): void {
     /** @var TestCase $this */
     $action = new SaveAttachmentsAction();
 
-    $record = $this->makeTestMock(HasMedia::class);
+    $record = $this->makeHasMediaRecordMock();
     $record->method('addMedia')->willThrowException(new Exception('Storage error'));
 
     $attachments = ['invoice'];
@@ -100,7 +100,7 @@ it('uses correct disk', function (): void {
     /** @var TestCase $this */
     $action = new SaveAttachmentsAction();
 
-    $record = $this->makeTestMock(HasMedia::class);
+    $record = $this->makeHasMediaRecordMock();
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -129,7 +129,7 @@ it('cleans up temp files', function (): void {
     /** @var TestCase $this */
     $action = new SaveAttachmentsAction();
 
-    $record = $this->makeTestMock(HasMedia::class);
+    $record = $this->makeHasMediaRecordMock();
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -157,7 +157,7 @@ it('handles multiple attachments', function (): void {
     /** @var TestCase $this */
     $action = new SaveAttachmentsAction();
 
-    $record = $this->makeTestMock(HasMedia::class);
+    $record = $this->makeHasMediaRecordMock();
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
