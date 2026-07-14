@@ -16,9 +16,8 @@ use Webmozart\Assert\Assert;
 
 class VideoEntry extends Entry
 {
-    /**
-     * @var view-string
-     */
+    /** @phpstan-var view-string */
+    /** @phpstan-ignore property.defaultValue */
     protected string $view = 'media::filament.infolists.video-entry';
 
     protected string|Closure|null $disk = null;
