@@ -173,3 +173,5 @@ agentdb.rvf
 tests/AuditCoverage/
 audit-coverage/
 .claude-audit/
+.vscode/
+.devcontainer/
