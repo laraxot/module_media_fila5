@@ -13,6 +13,7 @@
 
 ---
 
+
 ## Executive Summary
 
 The Media module successfully passes **PHPStan Level 10** with **0 errors** out of the box, demonstrating excellent type safety and code quality.
