@@ -6,7 +6,6 @@ namespace Modules\Media\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Http\UploadedFile;
-
 use function in_array;
 
 class FileExtensionRule implements Rule

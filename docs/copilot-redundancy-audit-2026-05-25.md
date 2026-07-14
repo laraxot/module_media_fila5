@@ -1,3 +1,14 @@
+---
+title: "Copilot Redundancy Audit 2026 05 25"
+module: "Media"
+type: concept
+tags: [copilot, redundancy, audit, 2026]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "copilot redundancy audit 2026 05 25"
+related:
+  - "./webm.md"
+---
 Copilot Redundancy Audit — 2026-05-25
 
 Sintesi

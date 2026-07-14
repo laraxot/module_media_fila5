@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
-use Exception;
 use Illuminate\Support\Facades\Storage;
-use Spatie\MediaLibrary\HasMedia;
-use Webmozart\Assert\Assert;
-
 use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
+use Spatie\MediaLibrary\HasMedia;
+use Webmozart\Assert\Assert;
 
 // phpmd: UnusedLocalVariable — $full_path legacy path debug (branch commentato in execute)
 class SaveAttachmentsAction
@@ -24,12 +22,13 @@ class SaveAttachmentsAction
      */
     public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
+        /** @var array<string, string> $dataAttachments */
         $dataAttachments = [];
 
         foreach ($attachments as $attachment) {
             Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
 
-            if (empty($data[$attachment])) {
+            if (! isset($data[$attachment]) || $data[$attachment] === '') {
                 continue;
             }
 
@@ -64,8 +63,7 @@ class SaveAttachmentsAction
             }
         }
 
-        if (! empty($dataAttachments)) {
-            /** @var array<string, string> $dataAttachments */
+        if ($dataAttachments !== []) {
             $record->update($dataAttachments);
         }
     }

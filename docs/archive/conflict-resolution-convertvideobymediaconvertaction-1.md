@@ -1,3 +1,14 @@
+---
+title: "Risoluzione Conflitti ConvertVideoByMediaConvertAction.php"
+module: "Media"
+type: concept
+tags: [conflict, resolution, convertvideobymediaconvertaction, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict resolution convertvideobymediaconvertaction 1"
+related:
+  - "./webm.md"
+---
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto

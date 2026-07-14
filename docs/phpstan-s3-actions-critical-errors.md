@@ -1,3 +1,14 @@
+---
+title: "PHPStan S3 Actions Critical Errors Analysis"
+module: "Media"
+type: concept
+tags: [phpstan, s3, actions, critical]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan s3 actions critical errors"
+related:
+  - "./webm.md"
+---
 # PHPStan S3 Actions Critical Errors Analysis
 
 ## Errori Critici Identificati nel Modulo Media

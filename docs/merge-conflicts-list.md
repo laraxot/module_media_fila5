@@ -1,3 +1,14 @@
+---
+title: "Merge conflict markers — file list"
+module: "Media"
+type: concept
+tags: [merge, conflicts, list]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "merge conflicts list"
+related:
+  - "./webm.md"
+---
 # Merge conflict markers — file list
 
 Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_file). Seguire la lista per assegnare task agli agenti.
