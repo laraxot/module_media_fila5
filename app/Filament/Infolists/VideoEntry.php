@@ -16,7 +16,7 @@ use Webmozart\Assert\Assert;
 
 class VideoEntry extends Entry
 {
-    /** @phpstan-var view-string */
+    /** @var view-string */
     /** @phpstan-ignore property.defaultValue */
     protected string $view = 'media::filament.infolists.video-entry';
 
