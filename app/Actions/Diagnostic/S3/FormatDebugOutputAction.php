@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Diagnostic\S3;
 
-use Spatie\QueueableAction\QueueableAction;
-
 use function Safe\json_encode;
+use Spatie\QueueableAction\QueueableAction;
 
 class FormatDebugOutputAction
 {
