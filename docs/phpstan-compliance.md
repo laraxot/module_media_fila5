@@ -1,3 +1,14 @@
+---
+title: "PHPStan Compliance - Media Module"
+module: "Media"
+type: concept
+tags: [phpstan, compliance]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan compliance"
+related:
+  - "./webm.md"
+---
 # PHPStan Compliance - Media Module
 
 ## Status: ✅ FULLY COMPLIANT

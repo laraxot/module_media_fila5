@@ -115,7 +115,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static function findByMediaUuidInCurrentSession(?string $mediaUuid): ?self
     {
-        if (! (($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
+        $temporaryUpload = static::findByMediaUuid($mediaUuid);
+
+        if (! ($temporaryUpload instanceof self)) {
             return null;
         }
 

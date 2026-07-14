@@ -1,3 +1,14 @@
+---
+title: "Traduzioni del Modulo Media"
+module: "Media"
+type: concept
+tags: [translations]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "translations"
+related:
+  - "./webm.md"
+---
 # Traduzioni del Modulo Media
 
 ## Panoramica

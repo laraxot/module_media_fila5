@@ -1,3 +1,14 @@
+---
+title: "Correzioni PHPStan Livello 7 - Modulo Media"
+module: "Media"
+type: concept
+tags: [phpstan, fixes]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan fixes"
+related:
+  - "./webm.md"
+---
 # Correzioni PHPStan Livello 7 - Modulo Media
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Media e le relative soluzioni implementate.

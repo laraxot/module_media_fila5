@@ -13,7 +13,6 @@ class TestS3PermissionsAction
 {
     use QueueableAction;
 
-
     /**
      * @return array<string, mixed>
      */

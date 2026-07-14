@@ -1,3 +1,14 @@
+---
+title: "PHPStan: FFMpeg Export save()"
+module: "Media"
+type: concept
+tags: [phpstan, ffmpeg, export]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan ffmpeg export"
+related:
+  - "./webm.md"
+---
 # PHPStan: FFMpeg Export save()
 
 ## Contesto

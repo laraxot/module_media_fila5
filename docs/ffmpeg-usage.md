@@ -1,3 +1,14 @@
+---
+title: "Utilizzo di Laravel-FFMpeg nel Modulo Media"
+module: "Media"
+type: concept
+tags: [ffmpeg, usage]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ffmpeg usage"
+related:
+  - "./webm.md"
+---
 # Utilizzo di Laravel-FFMpeg nel Modulo Media
 
 ## Introduzione

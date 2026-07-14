@@ -8,7 +8,7 @@ use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
-final class ResolveMediaExporterAction
+class ResolveMediaExporterAction
 {
     use QueueableAction;
 

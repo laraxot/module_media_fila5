@@ -1,3 +1,14 @@
+---
+title: "Correzioni PHPStan Livello 10 - Modulo Media"
+module: "Media"
+type: concept
+tags: [phpstan, level10, fixes, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan level10 fixes 1"
+related:
+  - "./webm.md"
+---
 # Correzioni PHPStan Livello 10 - Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
