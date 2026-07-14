@@ -14,7 +14,6 @@ class TestCloudFrontConnectionAction
 
     private const URL_PREVIEW_LENGTH = 100;
 
-
     /**
      * @return array<string, mixed>
      */

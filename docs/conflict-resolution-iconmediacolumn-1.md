@@ -1,3 +1,14 @@
+---
+title: "Risoluzione Conflitto IconMediaColumn.php"
+module: "Media"
+type: concept
+tags: [conflict, resolution, iconmediacolumn, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict resolution iconmediacolumn 1"
+related:
+  - "./webm.md"
+---
 # Risoluzione Conflitto IconMediaColumn.php
 
 ## Problema Identificato

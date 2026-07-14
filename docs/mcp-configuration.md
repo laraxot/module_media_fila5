@@ -1,3 +1,14 @@
+---
+title: "MCP Server Configuration - Media Module"
+module: "Media"
+type: concept
+tags: [mcp, configuration]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "mcp configuration"
+related:
+  - "./webm.md"
+---
 # MCP Server Configuration - Media Module
 
 

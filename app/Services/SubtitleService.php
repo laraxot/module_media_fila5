@@ -8,12 +8,11 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use SimpleXMLElement;
-
 use function Safe\file_put_contents;
 use function Safe\fopen;
 use function Safe\realpath;
 use function Safe\simplexml_load_string;
+use SimpleXMLElement;
 
 /**
  * SubtitleService.
@@ -42,7 +41,7 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self;
+            self::$instance = new self();
         }
 
         return self::$instance;
@@ -172,17 +171,6 @@ class SubtitleService
         return $data;
     }
 
-    private function secondsToHms(int|float $seconds): string
-    {
-        $totalMs = (int) round($seconds * 1000);
-        $hours = intdiv($totalMs, 3_600_000);
-        $minutes = intdiv($totalMs % 3_600_000, 60_000);
-        $secs = intdiv($totalMs % 60_000, 1000);
-        $ms = $totalMs % 1000;
-
-        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
-    }
-
     /**
      * Undocumented function.
      */
@@ -213,5 +201,16 @@ class SubtitleService
         $header = "WEBVTT\n\n";
 
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
+    }
+
+    private function secondsToHms(int|float $seconds): string
+    {
+        $totalMs = (int) round($seconds * 1000);
+        $hours = intdiv($totalMs, 3_600_000);
+        $minutes = intdiv($totalMs % 3_600_000, 60_000);
+        $secs = intdiv($totalMs % 60_000, 1000);
+        $ms = $totalMs % 1000;
+
+        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
     }
 }

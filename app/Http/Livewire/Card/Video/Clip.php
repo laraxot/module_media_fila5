@@ -75,7 +75,7 @@ class Clip extends Component
         }
 
         // dddx(['data'=>$data,'model'=>$this->model]);
-        /** @var array<string, string> */
+        /** @var array<string, string> $up */
         $up = collect($data)->only(['title', 'subtitle'])->all();
 
         $this->model->update($up);
