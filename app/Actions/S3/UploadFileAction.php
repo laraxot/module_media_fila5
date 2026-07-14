@@ -12,6 +12,7 @@ use function Safe\filesize;
 use function Safe\fopen;
 use function Safe\mime_content_type;
 
+// phpmd: UnusedLocalVariable — $acl opzionale S3 non sempre valorizzato dal client
 class UploadFileAction extends BaseS3Action
 {
     /**
