@@ -1,3 +1,14 @@
+---
+title: "Media - Product Launch Plan"
+module: "Media"
+type: concept
+tags: [product, launch, plan]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product launch plan"
+related:
+  - "./webm.md"
+---
 # Media - Product Launch Plan
 
 > Piano di lancio. Modulo.

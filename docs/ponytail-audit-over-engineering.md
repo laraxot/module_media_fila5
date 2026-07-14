@@ -1,3 +1,14 @@
+---
+title: "Ponytail audit — Media (over-engineering)"
+module: "Media"
+type: concept
+tags: [ponytail, audit, over, engineering]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "ponytail audit over engineering"
+related:
+  - "./webm.md"
+---
 # Ponytail audit — Media (over-engineering)
 
 **Ultimo run:** 2026-06-30  
