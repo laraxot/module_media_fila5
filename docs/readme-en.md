@@ -1,3 +1,14 @@
+---
+title: "🖼️ Media — English presentation"
+module: "Media"
+type: concept
+tags: [readme, en]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "readme en"
+related:
+  - "./webm.md"
+---
 # 🖼️ Media — English presentation
 
 [![Domain-Media](https://img.shields.io/badge/Domain-Media%20Library-AD1457.svg)](#)
