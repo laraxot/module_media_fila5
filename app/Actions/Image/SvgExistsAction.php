@@ -27,7 +27,7 @@ class SvgExistsAction
      */
     public function execute(string $svgName): bool
     {
-        if (empty($svgName)) {
+        if ($svgName === '') {
             return false;
         }
 

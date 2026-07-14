@@ -4,17 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
-use Spatie\QueueableAction\QueueableAction;
-
-use Exception;
 use Illuminate\Support\Facades\Storage;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
-
 use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
+use Spatie\MediaLibrary\HasMedia;
+use Webmozart\Assert\Assert;
 
 final class SaveAttachmentsAction
 {
@@ -34,7 +29,7 @@ final class SaveAttachmentsAction
         foreach ($attachments as $attachment) {
             $path = $this->attachmentPath($attachment, $data);
 
-            if ($path === null) {
+            if (! isset($data[$attachment]) || $data[$attachment] === '') {
                 continue;
             }
 
