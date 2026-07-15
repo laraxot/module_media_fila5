@@ -170,8 +170,6 @@ lang/lang/
 _docs/
 _docs/
 agentdb.rvf
-tests/AuditCoverage/
-audit-coverage/
-.claude-audit/
-.vscode/
+docs/archive/
 .devcontainer/
+.vscode/
