@@ -3,12 +3,6 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
-// Media Pest/PHPUnit — claude-audit documentation ratio.
-// Media Pest/PHPUnit — claude-audit documentation ratio.
-// Media Pest/PHPUnit — claude-audit documentation ratio.
-// Media Pest/PHPUnit — claude-audit documentation ratio.
-// Media Pest/PHPUnit — claude-audit documentation ratio.
-// Media Pest/PHPUnit — claude-audit documentation ratio.
 
 use Modules\Media\Models\Media;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\S3;
 
-use Spatie\QueueableAction\QueueableAction;
-
 use Aws\S3\ObjectUploader;
 use Exception;
 use function Safe\fclose;
@@ -15,8 +13,6 @@ use function Safe\mime_content_type;
 
 class UploadFileAction extends BaseS3Action
 {
-    use QueueableAction;
-
     /**
      * Upload a file to S3
      *
@@ -61,7 +57,7 @@ class UploadFileAction extends BaseS3Action
                 $this->bucketName,
                 $destinationFilePath,
                 $sourceFile,
-                $acl,
+                (string) ($uploadOptions['ACL'] ?? 'private'),
                 $uploadOptions,
             );
 

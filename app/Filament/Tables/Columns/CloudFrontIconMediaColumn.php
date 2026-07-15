@@ -7,6 +7,7 @@ namespace Modules\Media\Filament\Tables\Columns;
 use Filament\Tables\Columns\IconColumn;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 
+// phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
 class CloudFrontIconMediaColumn extends IconColumn
 {
     protected function setUp(): void

@@ -4,18 +4,14 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
-use Spatie\QueueableAction\QueueableAction;
-
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Webmozart\Assert\Assert;
-use Spatie\QueueableAction\QueueableAction;
 
+// phpmd: UnusedFormalParameter — $disk riservato a future collection dedicate
 class GetAttachmentsSchemaAction
 {
-    use QueueableAction;
-
     /**
      * @param  array<string>  $attachments
      * @return array<FileUpload>
