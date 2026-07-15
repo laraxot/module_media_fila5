@@ -14,10 +14,12 @@ use League\Flysystem\UnableToCheckFileExistence;
 use Throwable;
 use Webmozart\Assert\Assert;
 
+// phpmd: TooManyFields, TooManyPublicMethods, ExcessiveClassComplexity, LongVariable — entry video Filament ricca
 class VideoEntry extends Entry
 {
-    /** @var view-string */
-    /** @phpstan-ignore property.defaultValue */
+    /**
+     * @var view-string
+     */
     protected string $view = 'media::filament.infolists.video-entry';
 
     protected string|Closure|null $disk = null;

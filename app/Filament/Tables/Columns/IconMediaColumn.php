@@ -8,6 +8,7 @@ use Filament\Tables\Columns\IconColumn;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
+// phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
 class IconMediaColumn extends IconColumn
 {
     protected function setUp(): void

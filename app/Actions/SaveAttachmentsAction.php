@@ -11,10 +11,9 @@ use function Safe\unlink;
 use Spatie\MediaLibrary\HasMedia;
 use Webmozart\Assert\Assert;
 
-final class SaveAttachmentsAction
+// phpmd: UnusedLocalVariable — $full_path legacy path debug (branch commentato in execute)
+class SaveAttachmentsAction
 {
-    use QueueableAction;
-
     /**
      * Save attachments to media library.
      *
@@ -27,58 +26,45 @@ final class SaveAttachmentsAction
         $dataAttachments = [];
 
         foreach ($attachments as $attachment) {
-            $path = $this->attachmentPath($attachment, $data);
+            Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
 
             if (! isset($data[$attachment]) || $data[$attachment] === '') {
                 continue;
             }
 
-            $storedPath = $this->saveAttachment($record, $attachment, $path, $disk);
+            $path = $data[$attachment];
+            Assert::string($path, '['.__LINE__.']['.class_basename(self::class).']');
 
-            if ($storedPath !== null) {
-                $dataAttachments[$attachment] = $storedPath;
+            // Metodo compatibile con Laravel 9+ e Flysystem 3.x
+            $storage = Storage::disk($disk);
+
+            if (! $storage->exists($path)) {
+                continue;
+            }
+
+            // Ottieni il contenuto del file prima che venga eliminato
+            $fileContent = $storage->get($path);
+            $tempPath = tempnam(sys_get_temp_dir(), 'media_');
+
+            file_put_contents($tempPath, $fileContent);
+
+            try {
+                $media = $record->addMedia($tempPath)->usingFileName(basename($path))->toMediaCollection(
+                    $attachment,
+                    $disk,
+                );
+
+                $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
+            } finally {
+                // Cleanup del file temporaneo
+                if (file_exists($tempPath)) {
+                    unlink($tempPath);
+                }
             }
         }
 
         if ($dataAttachments !== []) {
             $record->update($dataAttachments);
-        }
-    }
-
-    /**
-     * @param  array<string, string|null>  $data
-     */
-    private function attachmentPath(string $attachment, array $data): ?string
-    {
-        if (! isset($data[$attachment]) || $data[$attachment] === '') {
-            return null;
-        }
-
-        return $data[$attachment];
-    }
-
-    private function saveAttachment(HasMedia $record, string $attachment, string $path, string $disk): ?string
-    {
-        $storage = Storage::disk($disk);
-
-        if (! $storage->exists($path)) {
-            return null;
-        }
-
-        $fileContent = $storage->get($path);
-        Assert::string($fileContent);
-
-        $tempPath = tempnam(sys_get_temp_dir(), 'media_');
-        file_put_contents($tempPath, $fileContent);
-
-        try {
-            $media = $record->addMedia($tempPath)->usingFileName(basename($path))->toMediaCollection($attachment, $disk);
-
-            return $media->getPathRelativeToRoot();
-        } finally {
-            if (file_exists($tempPath)) {
-                unlink($tempPath);
-            }
         }
     }
 }

@@ -7,6 +7,7 @@ namespace Modules\Media\Actions\Image;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\ImageManager as InterventionImageManager;
+use Intervention\Image\Interfaces\ImageInterface;
 use Spatie\QueueableAction\QueueableAction;
 
 class Merge
@@ -31,7 +32,6 @@ class Merge
 
         $image1->place($image2, 'center'); // @phpstan-ignore method.notFound
 
-        // Salva il risultato
         File::ensureDirectoryExists(dirname($outputPath));
         $image1->save($outputPath);
 
@@ -70,7 +70,6 @@ class Merge
             return public_path($filename);
         }, $filenames);
 
-        // Verifica che tutte le immagini esistano
         foreach ($absolutePaths as $path) {
             if (! File::exists($path)) {
                 logger()->error('Immagine non trovata per merge', ['path' => $path]);
@@ -81,7 +80,7 @@ class Merge
 
         $manager = new InterventionImageManager(new GdDriver());
 
-        // Carica tutte le immagini e calcola dimensioni totali
+        /** @var list<ImageInterface> $images */
         $images = [];
         $totalWidth = 0;
         $totalHeight = 0;
@@ -97,16 +96,13 @@ class Merge
         /** @var ImageInterface $final */
         $final = $manager->create($totalWidth, $totalHeight); // @phpstan-ignore method.notFound
 
-        // Posiziona ogni immagine verticalmente, centrata orizzontalmente
         $yOffset = 0;
         foreach ($images as $img) {
-            // Calcola offset X per centrare orizzontalmente
             $xOffset = (int) (($totalWidth - $img->width()) / 2);
             $final->place($img, 'top-left', $xOffset, $yOffset); // @phpstan-ignore method.notFound
             $yOffset += $img->height();
         }
 
-        // Salva risultato
         $outputPath = public_path($outputFilename);
         File::ensureDirectoryExists(dirname($outputPath));
         $final->save($outputPath);

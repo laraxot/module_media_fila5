@@ -132,7 +132,7 @@ Hook Filament/Laravel ripetuti — **non** debito. Elenco omesso.
 
 #### `getPath` — 3 classi
 
-- `Media` · `GenerateTemporaryUploadPathAction` · `Modules/Media/app/Actions/GenerateTemporaryUploadPathAction.php`
+- `Media` · `TemporaryUploadPathGenerator` · `Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
 
 _… +7 metodi in questa categoria_
 

@@ -14,9 +14,4 @@ use Modules\Xot\Filament\Clusters\XotBaseCluster;
 class Test extends XotBaseCluster
 {
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-squares-2x2';
-
-    public static function canAccess(): bool
-    {
-        return auth()->user()?->hasRole('super-admin') ?? false;
-    }
 }

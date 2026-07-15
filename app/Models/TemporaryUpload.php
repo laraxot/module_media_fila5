@@ -78,16 +78,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
     protected $connection = 'media';
 
     /**
-     * @var list<string>
+     * @var array<string>
      */
-    protected $fillable = [
-        'session_id',
-        'user_id',
-        'file_name',
-        'file_size',
-        'mime_type',
-        'status',
-    ];
+    protected $guarded = [];
 
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
@@ -239,13 +232,10 @@ class TemporaryUpload extends BaseModel implements HasMedia
         throw new Exception('['.__LINE__.']['.class_basename(self::class).']');
     }
 
-    /**
-     * @return Builder<static>
-     */
-    public function prunable(): Builder
-    {
-        return static::query()->where('created_at', '<', now()->subDay());
-    }
+    // public function prunable(): Builder
+    // { Call to an undefined method Illuminate\Database\Eloquent\Builder<Modules\Media\Models\TemporaryUpload>::old().
+    //    return self::query()->old();
+    // }
 
     protected function getPreviewManipulation(): Closure
     {
