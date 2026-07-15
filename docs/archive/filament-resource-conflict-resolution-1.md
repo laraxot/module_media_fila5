@@ -25,4 +25,4 @@ Sono stati rilevati marker di conflitto git  nel file `app/Filament/Resources/Me
 - Garantire tipizzazione e commenti PHPDoc corretti.
 
 ## Collegamenti
-- [Documentazione root risoluzione conflitti](../../../../docs/risoluzione_conflitti_git.md#media-filament-resources-mediaconvertresourcephp)
+- [Documentazione root risoluzione conflitti](../../../docs/risoluzione_conflitti_git.md#media-filament-resources-mediaconvertresourcephp)
