@@ -4,7 +4,7 @@ module: "Media"
 type: concept
 tags: [phpstan, fixes]
 created: 2026-07-14
-updated: 2026-07-14
+updated: 2026-07-15
 qmd: "phpstan fixes"
 related:
   - "./webm.md"
@@ -90,4 +90,15 @@ protected function getHeaderActions(): array
 
 **bootstrap:** corretto anche `Lang/TranslationFileForm::getFormSchema()` da istanza a `static` (fatal al caricamento classi).
 
-*ultimo aggiornamento: 2026-05-21*
+## session3 (2026-07-15) — 5 file, 32 errori → 0
+
+| file | pattern |
+|------|---------|
+| `Actions/Image/Merge.php` | Intervention v4 API + `ImageInterface` |
+| `Actions/Video/ConvertVideoBy*Action.php` | `addFilter()` fuori catena su `MediaExporter` |
+| `Filament/.../S3Test.php` | `getForm('form')` al posto di `$this->form` |
+| `Models/TemporaryUpload.php` | `class-string<Media>` dopo Assert su config |
+
+Dettaglio: [wiki/troubleshooting/phpstan-fixes.md](./wiki/troubleshooting/phpstan-fixes.md) · handoff [docs/chat/phpstan-media-session3-findings.md](../../../docs/chat/phpstan-media-session3-findings.md)
+
+*ultimo aggiornamento: 2026-07-15*
