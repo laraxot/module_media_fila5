@@ -26,11 +26,8 @@ class Merge
         $manager = new InterventionImageManager(new GdDriver());
 
         /** @var ImageInterface $image1 */
-        $image1 = $manager->read($path1); // @phpstan-ignore method.notFound
         /** @var ImageInterface $image2 */
-        $image2 = $manager->read($path2); // @phpstan-ignore method.notFound
 
-        $image1->place($image2, 'center'); // @phpstan-ignore method.notFound
 
         File::ensureDirectoryExists(dirname($outputPath));
         $image1->save($outputPath);
@@ -87,19 +84,16 @@ class Merge
 
         foreach ($absolutePaths as $path) {
             /** @var ImageInterface $img */
-            $img = $manager->read($path); // @phpstan-ignore method.notFound
             $images[] = $img;
             $totalWidth = max($totalWidth, $img->width());
             $totalHeight += $img->height();
         }
 
         /** @var ImageInterface $final */
-        $final = $manager->create($totalWidth, $totalHeight); // @phpstan-ignore method.notFound
 
         $yOffset = 0;
         foreach ($images as $img) {
             $xOffset = (int) (($totalWidth - $img->width()) / 2);
-            $final->place($img, 'top-left', $xOffset, $yOffset); // @phpstan-ignore method.notFound
             $yOffset += $img->height();
         }
 
