@@ -255,7 +255,7 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
-- [Documentazione Generale Media](../readme.md)
+- [Documentazione Generale Media](README.md)
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
 - [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)

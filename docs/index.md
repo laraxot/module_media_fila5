@@ -40,7 +40,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](./readme.md) - Panoramica generale del modulo
+- [README](README.md) - Panoramica generale del modulo
 - [Architettura](./architecture/readme.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent

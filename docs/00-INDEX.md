@@ -15,7 +15,7 @@ related:
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](./readme.md) - Panoramica completa, Upload e Processing.
+1. [README.md](README.md) - Panoramica completa, Upload e Processing.
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 
