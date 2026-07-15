@@ -48,7 +48,6 @@ class ConvertVideoByConvertDataAction
             })
             ->addFilter('-preset', 'ultrafast')
             // Utilizziamo il formato istanziato come parametro
-            // @phpstan-ignore-next-line method.notFound
             ->save($file_new, $formatInstance);
 
         // Restituisci il percorso del file senza usare il metodo url()
