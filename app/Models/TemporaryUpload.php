@@ -89,7 +89,6 @@ class TemporaryUpload extends BaseModel implements HasMedia
         /**
          * @var Media|null $media
          *
-         * @phpstan-ignore-next-line
          */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
