@@ -1,16 +1,16 @@
 ---
-title: "Phpstan Fixes"
+title: "Quality Analysis"
 type: concept
 status: deprecated
 module: "Media"
 created: 2026-07-14
 updated: 2026-07-14
-qmd: "deprecated phpstan-fixes"
+qmd: "deprecated quality-analysis"
 related:
-  - "./phpstan-fixes.md"
+  - "./quality-analysis.md"
 ---
-# Phpstan Fixes
+# Quality Analysis
 
 > Deprecated: non aggiungere date nel filename; usare `created/updated` nel front matter.
 
-Vedi il file canonico: [phpstan-fixes.md](./phpstan-fixes.md)
+Vedi il file canonico: [quality-analysis.md](./quality-analysis.md)
