@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @see https://github.com/protonemedia/laravel-ffmpeg
  */
 
-declare(strict_types=1);
-
 namespace Modules\Media\Actions\Video;
+
 
 use FFMpeg\Format\Video\X264;
 use Illuminate\Support\Facades\Storage;
