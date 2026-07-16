@@ -175,3 +175,4 @@ agentdb.rvf
 docs/archive/
 .devcontainer/
 .vscode/
+tests/AuditCoverage
