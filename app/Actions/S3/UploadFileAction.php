@@ -6,6 +6,7 @@ namespace Modules\Media\Actions\S3;
 
 use Aws\S3\ObjectUploader;
 use Exception;
+
 use function Safe\fclose;
 use function Safe\filesize;
 use function Safe\fopen;

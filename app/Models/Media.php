@@ -8,6 +8,7 @@ use Eloquent;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -65,6 +66,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property array<int, array{name: string, generated: bool, src: string}> $entry_conversions
  * @property EloquentCollection<int, MediaConvert> $mediaConverts
  * @property int|null $media_converts_count
+ *
  * @method static Builder|Media newModelQuery()
  * @method static Builder|Media newQuery()
  * @method static Builder|Media ordered()
@@ -105,27 +107,30 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereUuid($value)
  * @method static Builder|Media whereWidth($value)
  * @method static MediaFactory factory($count = null, $state = [])
+ *
  * @property-read mixed $extension
  * @property-read mixed $human_readable_size
  * @property-read mixed $original_url
  * @property-read mixed $preview_url
+ *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
+ *
  * @mixin Eloquent
  */
 class Media extends SpatieMedia
 {
-    /** @use HasXotFactory<\Modules\Media\Database\Factories\MediaFactory> */
-    /** @phpstan-use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
+    /** @use HasXotFactory<MediaFactory> */
+    /** @phpstan-use HasXotFactory<Factory<static>> */
     use HasXotFactory;
+
     use Updater;
 
     /** @var string */
     protected $connection = 'media';
 
     /**
-     * @param array<int, string> $uuids
-     *
+     * @param  array<int, string>  $uuids
      * @return MediaCollection<int, self>
      */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
