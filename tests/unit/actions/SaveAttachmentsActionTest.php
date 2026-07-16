@@ -19,7 +19,7 @@ beforeEach(function (): void {
 });
 
 it('executes save attachments successfully', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
     $record = $this->makeTestMock(HasMedia::class);
 
@@ -49,7 +49,7 @@ it('executes save attachments successfully', function (): void {
 });
 
 it('handles empty attachments', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
     $record = $this->makeTestMock(HasMedia::class);
     $record->method('update')->with([])->willReturn(true);
@@ -60,7 +60,7 @@ it('handles empty attachments', function (): void {
 });
 
 it('skips nonexistent files', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
     $record = $this->makeTestMock(HasMedia::class);
     $record->method('update')->with([])->willReturn(true);
@@ -76,7 +76,7 @@ it('skips nonexistent files', function (): void {
 });
 
 it('handles storage errors gracefully', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
     $record = $this->makeTestMock(HasMedia::class);
     $record->method('addMedia')->willThrowException(new Exception('Storage error'));
@@ -93,7 +93,7 @@ it('handles storage errors gracefully', function (): void {
 });
 
 it('uses correct disk', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
     $record = $this->makeTestMock(HasMedia::class);
 
@@ -121,7 +121,7 @@ it('uses correct disk', function (): void {
 });
 
 it('cleans up temp files', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
     $record = $this->makeTestMock(HasMedia::class);
 
@@ -148,7 +148,7 @@ it('cleans up temp files', function (): void {
 });
 
 it('handles multiple attachments', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
     $record = $this->makeTestMock(HasMedia::class);
 
