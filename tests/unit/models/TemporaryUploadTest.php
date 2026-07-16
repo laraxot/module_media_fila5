@@ -6,12 +6,13 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
+use Modules\Media\Tests\TestCase;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-        expect(new TemporaryUpload)->toBeInstanceOf(BaseModel::class);
+        expect(new TemporaryUpload())->toBeInstanceOf(BaseModel::class);
     });
 
     it('uses HasXotFactory trait', function (): void {
@@ -33,13 +34,13 @@ describe('TemporaryUpload Model', function (): void {
     });
 
     it('has media connection', function (): void {
-        $upload = new TemporaryUpload;
+        $upload = new TemporaryUpload();
 
         expect($upload->getConnectionName())->toBe('media');
     });
 
     it('has empty guarded array', function (): void {
-        $upload = new TemporaryUpload;
+        $upload = new TemporaryUpload();
 
         expect($upload->getGuarded())->toBe([]);
     });

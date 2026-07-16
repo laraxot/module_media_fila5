@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Video;
 
-
 use FFMpeg\Format\Video\X264;
 use Illuminate\Support\Facades\Storage;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;

@@ -5,11 +5,12 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Illuminate\Support\Facades\Storage;
+use Spatie\MediaLibrary\HasMedia;
+use Webmozart\Assert\Assert;
+
 use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
-use Spatie\MediaLibrary\HasMedia;
-use Webmozart\Assert\Assert;
 
 // phpmd: UnusedLocalVariable — $full_path legacy path debug (branch commentato in execute)
 class SaveAttachmentsAction
