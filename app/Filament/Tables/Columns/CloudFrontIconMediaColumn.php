@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Tables\Columns;
 
-use Filament\Tables\Columns\IconColumn;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
+use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn as IconColumn;
 
 // phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
 class CloudFrontIconMediaColumn extends IconColumn
