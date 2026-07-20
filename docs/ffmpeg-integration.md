@@ -2,10 +2,10 @@
 title: "Integrazione di FFmpeg nel Modulo Media"
 module: "Media"
 type: concept
-tags: [ffmpeg, integration]
+tags: [ffmpeg, integration, 1]
 created: 2026-07-14
 updated: 2026-07-14
-qmd: "ffmpeg integration"
+qmd: "ffmpeg integration 1"
 related:
   - "./webm.md"
 ---

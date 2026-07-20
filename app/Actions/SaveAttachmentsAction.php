@@ -6,6 +6,7 @@ namespace Modules\Media\Actions;
 
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia;
+use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
@@ -15,6 +16,8 @@ use function Safe\unlink;
 // phpmd: UnusedLocalVariable — $full_path legacy path debug (branch commentato in execute)
 class SaveAttachmentsAction
 {
+    use QueueableAction;
+
     /**
      * Save attachments to media library.
      *
