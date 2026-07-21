@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Media\Tests\Unit\Actions;
 
-=======
->>>>>>> provtv/dev
 uses(\Modules\Media\Tests\TestCase::class);
 
 use Filament\Forms\Components\FileUpload;

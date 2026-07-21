@@ -1,11 +1,7 @@
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
-<<<<<<< HEAD
 **File**: `Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
-=======
-**File**: `/var/www/html/ptvx/laravel/Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
->>>>>>> provtv/dev
 **Linee**: 49-53
 **Tipo**: Conflitto di annotazione PHPStan
 
@@ -76,7 +72,6 @@ FFMpeg::fromDisk($data->disk)
 - [Media Module Documentation](module_media.md)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
-<<<<<<< HEAD
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
@@ -157,7 +152,3 @@ FFMpeg::fromDisk($data->disk)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
-=======
-- [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
-
->>>>>>> provtv/dev

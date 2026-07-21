@@ -34,7 +34,6 @@ Gestione, manipolazione e automazione di file e media.
 
 **Nota:**
 Aggiungi solo i server che realmente ti servono per il tuo workflow.
-=======
 ---
 module: theme
 topic: mcp-server-consigliati-1
@@ -42,4 +41,3 @@ canonical: ../../../../Themes/docs/shared-components/mcp-server-consigliati-1.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/mcp-server-consigliati-1.md
->>>>>>> laraxot/dev

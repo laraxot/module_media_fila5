@@ -47,10 +47,6 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
-<<<<<<< HEAD
-=======
- * @mixin IdeHelperTemporaryUpload
->>>>>>> provtv/dev
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
@@ -69,10 +65,7 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-<<<<<<< HEAD
     /** @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory> */
-=======
->>>>>>> provtv/dev
     use HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
@@ -92,18 +85,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
         Assert::string($mediaModelClass = config('media-library.media_model'));
-<<<<<<< HEAD
         Assert::subclassOf($mediaModelClass, Media::class);
 
         /** @var class-string<Media> $mediaModelClass */
-=======
-
-        /**
-         * @var Media|null $media
-         *
-         * @phpstan-ignore-next-line
-         */
->>>>>>> provtv/dev
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
         if (! $media) {
@@ -121,13 +105,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static function findByMediaUuidInCurrentSession(?string $mediaUuid): ?self
     {
-<<<<<<< HEAD
         $temporaryUpload = static::findByMediaUuid($mediaUuid);
 
         if (! ($temporaryUpload instanceof self)) {
-=======
-        if (! (($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
->>>>>>> provtv/dev
             return null;
         }
 
@@ -205,11 +185,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
             return;
         }
 
-<<<<<<< HEAD
-        $conversion = $this->addMediaConversion('preview');
-=======
         $conversion = $this->addMediaConversion('preview')->nonQueued();
->>>>>>> provtv/dev
 
         $previewManipulation = $this->getPreviewManipulation();
 

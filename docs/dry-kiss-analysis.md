@@ -1,10 +1,6 @@
 # 🐄 DRY & KISS Analysis - Media
 
-<<<<<<< HEAD
 **Data:** 2025-10-15 | **Status:** ✅
-=======
-**Data:** [DATE] | **Status:** ✅
->>>>>>> provtv/dev
 
 ## 📊 Struttura
 Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83

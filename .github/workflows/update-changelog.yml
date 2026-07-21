@@ -10,11 +10,7 @@ jobs:
 
     steps:
       - name: Checkout code
-<<<<<<< HEAD
         uses: actions/checkout@v7
-=======
-        uses: actions/checkout@v4
->>>>>>> provtv/dev
         with:
           ref: main
 

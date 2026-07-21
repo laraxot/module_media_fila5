@@ -38,17 +38,9 @@ class ConvertVideoByMediaConvertAction
             throw new Exception('Il nome del file convertito non è stato specificato');
         }
 
-        // Instanziamo il formato prima di usarlo
-<<<<<<< HEAD
         $formatInstance = new $format();
 
         $export = FFMpeg::fromDisk($data->disk)
-=======
-        $formatInstance = new $format;
-
-        // @phpstan-ignore method.notFound
-        FFMpeg::fromDisk($data->disk)
->>>>>>> provtv/dev
             ->open($data->file)
             ->export()
             ->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
@@ -58,22 +50,11 @@ class ConvertVideoByMediaConvertAction
                     'rate' => $rate,
                 ]);
             })
-<<<<<<< HEAD
-            // Utilizziamo il formato istanziato come parametro
             ->inFormat($formatInstance);
 
-        // addFilter() e' inoltrato al driver PHPFFMpeg via __call/@mixin: la sua
-        // firma dichiarata restituisce il tipo del driver, non del MediaExporter.
-        // Non lo si concatena per non perdere il tipo corretto di $export.
         $export->addFilter('-preset', 'ultrafast');
 
         $export->save($file_new);
-=======
-            ->addFilter('-preset', 'ultrafast')
-            // Utilizziamo il formato istanziato come parametro
-            // @phpstan-ignore-next-line method.notFound
-            ->save($file_new, $formatInstance);
->>>>>>> provtv/dev
 
         $record->update([
             'status' => 'completed',

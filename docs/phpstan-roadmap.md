@@ -1,10 +1,6 @@
 # PHPStan Roadmap - Media Module
 
-<<<<<<< HEAD
 > **Date**: 2026-01-14
-=======
-> **Date**: [DATE]
->>>>>>> provtv/dev
 > **Status**: ✅ Fully Compliant (Level 10)
 > **Errors**: 0
 
