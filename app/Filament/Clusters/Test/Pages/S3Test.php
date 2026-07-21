@@ -34,6 +34,11 @@ use function Safe\unlink;
  * S3Test Page for AWS S3 testing and diagnostics.
  *
  * @property array<string, mixed> $debugResults
+<<<<<<< HEAD
+=======
+ *
+ * @phpstan-ignore-next-line
+>>>>>>> provtv/dev
  */
 class S3Test extends XotBasePage
 {
@@ -127,7 +132,12 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
+<<<<<<< HEAD
         $this->getForm('form')?->fill([
+=======
+        /** @phpstan-ignore-next-line */
+        $this->form->fill([
+>>>>>>> provtv/dev
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -231,7 +241,12 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
+<<<<<<< HEAD
         $formState = $this->getForm('form')?->getState() ?? [];
+=======
+        /** @phpstan-ignore-next-line */
+        $formState = $this->form->getState();
+>>>>>>> provtv/dev
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
@@ -274,9 +289,18 @@ class S3Test extends XotBasePage
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
                 'AWS_USE_PATH_STYLE_ENDPOINT' => config('filesystems.disks.s3.use_path_style_endpoint', 'false'),
+<<<<<<< HEAD
                 'CLOUDFRONT_BASE_URL' => config('services.cloudfront.base_url'),
                 'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id'),
                 'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key')
+=======
+                'CLOUDFRONT_BASE_URL' => config(
+                    'services.cloudfront.base_url',
+                    env('CLOUDFRONT_RESOURCE_KEY_BASE_URL'),
+                ),
+                'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id', env('CLOUDFRONT_KEYPAIR_ID')),
+                'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key') || env('CLOUDFRONT_PRIVATE_KEY')
+>>>>>>> provtv/dev
                     ? '✅ Present'
                     : '❌ Missing',
             ],
@@ -381,6 +405,16 @@ class S3Test extends XotBasePage
      */
     private function test_s3_permissions(): array
     {
+<<<<<<< HEAD
+=======
+        $tests = [
+            'ListBucket' => 's3:ListBucket',
+            'PutObject' => 's3:PutObject',
+            'GetObject' => 's3:GetObject',
+            'DeleteObject' => 's3:DeleteObject',
+        ];
+
+>>>>>>> provtv/dev
         $results = [
             'title' => '🔒 S3 Permissions',
             'status' => 'info',
@@ -506,9 +540,15 @@ class S3Test extends XotBasePage
     {
         try {
             // Test CloudFront configuration
+<<<<<<< HEAD
             $baseUrl = config('services.cloudfront.base_url');
             $keyPairId = config('services.cloudfront.key_pair_id');
             $privateKey = config('services.cloudfront.private_key');
+=======
+            $baseUrl = config('services.cloudfront.base_url', env('CLOUDFRONT_RESOURCE_KEY_BASE_URL'));
+            $keyPairId = config('services.cloudfront.key_pair_id', env('CLOUDFRONT_KEYPAIR_ID'));
+            $privateKey = config('services.cloudfront.private_key', env('CLOUDFRONT_PRIVATE_KEY'));
+>>>>>>> provtv/dev
 
             if (! $baseUrl || ! $keyPairId || ! $privateKey) {
                 return [
@@ -583,7 +623,11 @@ class S3Test extends XotBasePage
         }
 
         $output = [];
+<<<<<<< HEAD
         foreach ($this->debugResults as $result) {
+=======
+        foreach ($this->debugResults as $category => $result) {
+>>>>>>> provtv/dev
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
@@ -622,7 +666,12 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
+<<<<<<< HEAD
             $formState = $this->getForm('form')?->getState() ?? [];
+=======
+            /** @phpstan-ignore-next-line */
+            $formState = $this->form->getState();
+>>>>>>> provtv/dev
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -641,7 +690,11 @@ class S3Test extends XotBasePage
             $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 60);
 
             // Log the email data for testing purposes (no actual email sent)
+<<<<<<< HEAD
             Log::debug('S3 Test Email Data', [
+=======
+            Log::info('S3 Test Email Data', [
+>>>>>>> provtv/dev
                 'attachment_path' => $filePath,
                 'signed_url' => $signedUrl,
                 'timestamp' => now()->toISOString(),
@@ -746,7 +799,12 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
+<<<<<<< HEAD
         $this->getForm('form')?->fill([
+=======
+        /** @phpstan-ignore-next-line */
+        $this->form->fill([
+>>>>>>> provtv/dev
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -769,7 +827,12 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
+<<<<<<< HEAD
             $formState = $this->getForm('form')?->getState() ?? [];
+=======
+            /** @phpstan-ignore-next-line */
+            $formState = $this->form->getState();
+>>>>>>> provtv/dev
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -798,7 +861,11 @@ class S3Test extends XotBasePage
                 ->send();
 
             // Log results for debugging
+<<<<<<< HEAD
             Log::debug('S3 Test Results', $results);
+=======
+            Log::info('S3 Test Results', $results);
+>>>>>>> provtv/dev
         } catch (Exception $e) {
             Notification::make()
                 ->danger()

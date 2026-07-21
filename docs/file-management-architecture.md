@@ -1143,6 +1143,7 @@ readonly class ConversionConfiguration
 - **User Satisfaction**: >95% upload success rate
 - **System Performance**: <2GB memory usage per worker
 
+<<<<<<< HEAD
 Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
 # Media Module - File Management Architecture
 
@@ -2290,3 +2291,6 @@ readonly class ConversionConfiguration
 - **System Performance**: <2GB memory usage per worker
 
 Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+=======
+Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+>>>>>>> provtv/dev

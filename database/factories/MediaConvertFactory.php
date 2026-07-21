@@ -19,8 +19,11 @@ class MediaConvertFactory extends Factory
 
     /**
      * Define the model's default state.
+<<<<<<< HEAD
      *
      * @return array<string, mixed>
+=======
+>>>>>>> provtv/dev
      */
     public function definition(): array
     {

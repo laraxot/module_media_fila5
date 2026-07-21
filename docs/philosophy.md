@@ -1,6 +1,9 @@
 # Media Module: Philosophy, Purpose, and Design Principles
 
+<<<<<<< HEAD
 **Date:** December 23, 2025
+=======
+>>>>>>> provtv/dev
 
 ## 🎯 Purpose and Core Responsibilities
 

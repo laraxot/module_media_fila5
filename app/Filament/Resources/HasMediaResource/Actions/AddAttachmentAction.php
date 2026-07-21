@@ -82,9 +82,12 @@ class AddAttachmentAction extends XotBaseAction
         ];
     }
 
+<<<<<<< HEAD
     /**
      * @param array<string, mixed> $data
      */
+=======
+>>>>>>> provtv/dev
     public static function formHandlerCallback(RelationManager $livewire, array $data): void
     {
         $ownerRecord = $livewire->getOwnerRecord();
