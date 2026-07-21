@@ -187,6 +187,10 @@ $document = PatientDocument::getSecureDocument(
 
 ---
 
+<<<<<<< HEAD
 **Last Updated**: 2025-08-28
+=======
+
+>>>>>>> provtv/dev
 **Module Version**: Latest
 **Business Logic Status**: Core functionality implemented

@@ -180,7 +180,15 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
+<<<<<<< HEAD
         'database.connections.media.database' => 'quaeris_data_test',
+=======
+<<<<<<< .merge_file_5ESUsX
+        'database.connections.media.database' => 'healthcare_app_data_test',
+=======
+        'database.connections.media.database' => 'ptvx_data_test',
+>>>>>>> .merge_file_Tlc2vv
+>>>>>>> provtv/dev
     ]);
     
     return $app;
@@ -379,4 +387,8 @@ Remember: Good tests are the foundation of reliable software development.
 
 ---
 
+<<<<<<< HEAD
 *Last updated: January 2025*
+=======
+*
+>>>>>>> provtv/dev

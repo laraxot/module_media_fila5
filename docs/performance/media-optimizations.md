@@ -4,7 +4,11 @@
 **File**: `laravel/Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
 **Linee**: 1-100
 
+<<<<<<< HEAD
 **Problema**:
+=======
+**Problema**: 
+>>>>>>> provtv/dev
 - Nessun caching dei parametri di conversione
 - Notifiche inviate ad ogni progresso
 - Aggiornamenti DB frequenti durante la conversione
@@ -56,7 +60,11 @@ final class ConvertVideoByMediaConvertAction
                         'remaining' => $remaining,
                         'rate' => $rate,
                     ];
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> provtv/dev
                     // Notifica solo ogni NOTIFICATION_THRESHOLD%
                     if (($percentage - $lastNotificationPercentage) >= self::NOTIFICATION_THRESHOLD) {
                         $msg = sprintf(
@@ -65,15 +73,26 @@ final class ConvertVideoByMediaConvertAction
                             $remaining,
                             $rate
                         );
+<<<<<<< HEAD
 
+=======
+                        
+>>>>>>> provtv/dev
                         Notification::make()
                             ->title($msg)
                             ->success()
                             ->send();
+<<<<<<< HEAD
 
                         $lastNotificationPercentage = $percentage;
                     }
 
+=======
+                            
+                        $lastNotificationPercentage = $percentage;
+                    }
+                    
+>>>>>>> provtv/dev
                     // Aggiorna solo ogni 5 secondi
                     if (!Cache::has("convert_update_{$record->id}")) {
                         $record->update($updates);
@@ -137,7 +156,11 @@ final class GetVideoFrameContentAction
     /**
      * @return string|null
      */
+<<<<<<< HEAD
     public function execute(string $disk_mp4, string $file_mp4, int $time): ?string
+=======
+    public function execute(string $disk_mp4, string $file_mp4, int $time): ?string 
+>>>>>>> provtv/dev
     {
         Assert::stringNotEmpty($disk_mp4);
         Assert::stringNotEmpty($file_mp4);
@@ -148,7 +171,11 @@ final class GetVideoFrameContentAction
         }
 
         $cacheKey = $this->getCacheKey($disk_mp4, $file_mp4, $time);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> provtv/dev
         return Cache::tags(['video_frames'])
             ->remember($cacheKey, self::CACHE_TTL, function() use ($disk_mp4, $file_mp4, $time) {
                 return $this->extractFrame($disk_mp4, $file_mp4, $time);
@@ -161,11 +188,19 @@ final class GetVideoFrameContentAction
     public function extractFrameBatch(string $disk_mp4, string $file_mp4, array $times): void
     {
         Assert::allGreaterThanEq($times, 0);
+<<<<<<< HEAD
 
         foreach (array_chunk($times, self::BATCH_SIZE) as $batch) {
             foreach ($batch as $time) {
                 $cacheKey = $this->getCacheKey($disk_mp4, $file_mp4, $time);
 
+=======
+        
+        foreach (array_chunk($times, self::BATCH_SIZE) as $batch) {
+            foreach ($batch as $time) {
+                $cacheKey = $this->getCacheKey($disk_mp4, $file_mp4, $time);
+                
+>>>>>>> provtv/dev
                 if (!Cache::tags(['video_frames'])->has($cacheKey)) {
                     Cache::tags(['video_frames'])->put(
                         $cacheKey,
@@ -199,7 +234,11 @@ final class GetVideoFrameContentAction
     private function getFallbackImage(): string
     {
         $fallbackPath = config('media.video.fallback_image', self::DEFAULT_FALLBACK);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> provtv/dev
         return Cache::remember('video_fallback_image', self::CACHE_TTL, function() use ($fallbackPath) {
             return Storage::disk('public_html')->get($fallbackPath);
         });
@@ -243,7 +282,11 @@ final class TemporaryUploadPathGenerator implements PathGenerator
     public function getPath(Media $media): string
     {
         Assert::lessThanEq($media->size, self::MAX_SIZE, 'File troppo grande');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> provtv/dev
         return Cache::remember(
             "temp_path_{$media->id}",
             self::CACHE_TTL,
@@ -266,6 +309,7 @@ final class TemporaryUploadPathGenerator implements PathGenerator
         $base = config('media.temp_path', 'temp');
         $date = now()->format('Y/m/d');
         $hash = Str::random(40);
+<<<<<<< HEAD
 
         return "{$base}/{$date}/{$hash}";
     }
@@ -588,6 +632,9 @@ final class TemporaryUploadPathGenerator implements PathGenerator
         $date = now()->format('Y/m/d');
         $hash = Str::random(40);
 
+=======
+        
+>>>>>>> provtv/dev
         return "{$base}/{$date}/{$hash}";
     }
 
