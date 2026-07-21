@@ -15,14 +15,21 @@ enum AttachmentTypeEnum: string implements HasLabel
     case MANUAL = 'manual';
 
     /**
-     * @return array<string, string|null>
+     * @return array<string, string>
+     */
+    /**
+     * @return array<string, string>
      */
     public static function getTypeNoteDescriptionsByValues(): array
     {
+        /** @var array<string, string> $descriptions */
         $descriptions = [];
 
         foreach (self::cases() as $case) {
-            $descriptions[$case->value] = $case->getTypeNote();
+            $note = $case->getTypeNote();
+            if ($note !== null) {
+                $descriptions[$case->value] = $note;
+            }
         }
 
         return $descriptions;

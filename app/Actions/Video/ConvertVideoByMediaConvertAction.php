@@ -12,9 +12,7 @@ namespace Modules\Media\Actions\Video;
 use Exception;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
-use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
-use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
@@ -40,30 +38,28 @@ class ConvertVideoByMediaConvertAction
             throw new Exception('Il nome del file convertito non è stato specificato');
         }
 
-        $formatInstance = new $format;
+        // Instanziamo il formato prima di usarlo
+        $formatInstance = new $format();
 
-        $exportedMedia = FFMpeg::fromDisk($data->disk)
+        $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
-            ->export();
+            ->export()
+            ->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
+                $record->update([
+                    'percentage' => $percentage,
+                    'remaining' => $remaining,
+                    'rate' => $rate,
+                ]);
+            })
+            // Utilizziamo il formato istanziato come parametro
+            ->inFormat($formatInstance);
 
-        $exportedMedia->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
-            $record->update([
-                'percentage' => $percentage,
-                'remaining' => $remaining,
-                'rate' => $rate,
-            ]);
-        });
+        // addFilter() e' inoltrato al driver PHPFFMpeg via __call/@mixin: la sua
+        // firma dichiarata restituisce il tipo del driver, non del MediaExporter.
+        // Non lo si concatena per non perdere il tipo corretto di $export.
+        $export->addFilter('-preset', 'ultrafast');
 
-        $exportedMedia->addFilter('-preset', 'ultrafast');
-
-        $toDiskMedia = $exportedMedia->toDisk($data->disk);
-        if (! $toDiskMedia instanceof MediaExporter) {
-            throw new RuntimeException('FFMpeg toDisk() did not return a MediaExporter instance.');
-        }
-
-        $formattedMedia = $toDiskMedia->inFormat($formatInstance);
-
-        $formattedMedia->save($file_new);
+        $export->save($file_new);
 
         $record->update([
             'status' => 'completed',
