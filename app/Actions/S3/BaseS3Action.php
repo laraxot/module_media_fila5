@@ -12,14 +12,6 @@ abstract class BaseS3Action
 {
     use QueueableAction;
 
-    /** @var array<string, string> */
-    private const FALLBACK_CONFIG_KEYS = [
-        'AWS_BUCKET_NAME' => 'filesystems.disks.s3.bucket',
-        'AWS_REGION' => 'filesystems.disks.s3.region',
-        'AWS_ACCESS_KEY_ID' => 'filesystems.disks.s3.key',
-        'AWS_SECRET_ACCESS_KEY' => 'filesystems.disks.s3.secret',
-    ];
-
     protected S3Client $s3Client;
 
     protected string $bucketName;
@@ -51,21 +43,26 @@ abstract class BaseS3Action
      */
     protected function getStringConfig(string $configKey, string $envKey, string $default): string
     {
-        // Check config first
         $configValue = config($configKey);
         if (is_string($configValue) && trim($configValue) !== '') {
             return $configValue;
         }
 
-        $fallbackConfigKey = self::FALLBACK_CONFIG_KEYS[$envKey] ?? null;
-        if ($fallbackConfigKey !== null) {
-            $fallbackValue = config($fallbackConfigKey);
+        $filesystemsKey = match ($envKey) {
+            'AWS_BUCKET_NAME' => 'filesystems.disks.s3.bucket',
+            'AWS_REGION' => 'filesystems.disks.s3.region',
+            'AWS_ACCESS_KEY_ID' => 'filesystems.disks.s3.key',
+            'AWS_SECRET_ACCESS_KEY' => 'filesystems.disks.s3.secret',
+            default => null,
+        };
+
+        if ($filesystemsKey !== null) {
+            $fallbackValue = config($filesystemsKey);
             if (is_string($fallbackValue) && trim($fallbackValue) !== '') {
                 return $fallbackValue;
             }
         }
 
-        // Return default
         return $default;
     }
 }
