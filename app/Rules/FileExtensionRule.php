@@ -6,27 +6,25 @@ namespace Modules\Media\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Http\UploadedFile;
-
 use function in_array;
 
 class FileExtensionRule implements Rule
 {
-    /** @var array<int, string> */
+    /** @var list<string> */
     protected array $validExtensions = [];
 
     /**
-     * @param  array<int, string>  $validExtensions
+     * @param  list<string>  $validExtensions
      */
     public function __construct(array $validExtensions = [])
     {
-        $this->validExtensions = array_map(
+        $this->validExtensions = array_values(array_map(
             /**
-             * @param  mixed  $ext
              * @return lowercase-string
              */
-            static fn ($ext): string => mb_strtolower((string) $ext),
+            static fn (string $ext): string => mb_strtolower($ext),
             $validExtensions
-        );
+        ));
     }
 
     /**
@@ -43,7 +41,7 @@ class FileExtensionRule implements Rule
     }
 
     /**
-     * @return array<string, string>|string
+     * @return array<int|string, mixed>|string
      */
     public function message(): array|string
     {

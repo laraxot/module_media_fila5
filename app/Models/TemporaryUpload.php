@@ -32,7 +32,6 @@ use Webmozart\Assert\Assert;
  * @property Carbon|null $updated_at
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
- *
  * @method static Builder<static>|TemporaryUpload newModelQuery()
  * @method static Builder<static>|TemporaryUpload newQuery()
  * @method static Builder<static>|TemporaryUpload query()
@@ -40,30 +39,33 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereId($value)
  * @method static Builder<static>|TemporaryUpload whereSessionId($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
- *
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- *
  * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
- *
- * @mixin IdeHelperTemporaryUpload
- *
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read ProfileContract|null $updater
- *
+ * @property string|null $user_id
+ * @property string $file_name
+ * @property int|null $file_size
+ * @property string|null $mime_type
+ * @property string $status
+ * @method static Builder<static>|TemporaryUpload whereFileName($value)
+ * @method static Builder<static>|TemporaryUpload whereFileSize($value)
+ * @method static Builder<static>|TemporaryUpload whereMimeType($value)
+ * @method static Builder<static>|TemporaryUpload whereStatus($value)
+ * @method static Builder<static>|TemporaryUpload whereUserId($value)
  * @mixin \Eloquent
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-    /** @phpstan-use HasXotFactory<\Illuminate\Database\Eloquent\Factories\Factory<static>> */
+    /** @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory> */
     use HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
@@ -83,12 +85,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
         Assert::string($mediaModelClass = config('media-library.media_model'));
+        Assert::subclassOf($mediaModelClass, Media::class);
 
-        /**
-         * @var Media|null $media
-         *
-         * @phpstan-ignore-next-line
-         */
+        /** @var class-string<Media> $mediaModelClass */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
         if (! $media) {
@@ -106,7 +105,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static function findByMediaUuidInCurrentSession(?string $mediaUuid): ?self
     {
-        if (! (($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
+        $temporaryUpload = static::findByMediaUuid($mediaUuid);
+
+        if (! ($temporaryUpload instanceof self)) {
             return null;
         }
 
@@ -184,7 +185,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
             return;
         }
 
-        $conversion = $this->addMediaConversion('preview')->nonQueued();
+        $conversion = $this->addMediaConversion('preview');
 
         $previewManipulation = $this->getPreviewManipulation();
 
