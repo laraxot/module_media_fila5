@@ -1,14 +1,3 @@
----
-title: "Analisi Modelli, Factory e Seeder - Modulo Media"
-module: "Media"
-type: concept
-tags: [modelli, factory, seeder, analisi]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "modelli factory seeder analisi"
-related:
-  - "./webm.md"
----
 # Analisi Modelli, Factory e Seeder - Modulo Media
 
 ## Panoramica
