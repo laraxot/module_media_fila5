@@ -38,6 +38,7 @@ class ConvertVideoByConvertDataAction
         }
 
         // Instanziamo il formato prima di usarlo
+<<<<<<< HEAD
         $formatInstance = new $format();
 
         $export = FFMpeg::fromDisk($data->disk)
@@ -55,6 +56,30 @@ class ConvertVideoByConvertDataAction
         $export->addFilter('-preset', 'ultrafast');
 
         $export->save($file_new);
+=======
+        $formatInstance = new $format;
+
+        /** @var object $exporter */
+        $exporter = FFMpeg::fromDisk($data->disk)
+            ->open($data->file)
+            ->export()
+            ->onProgress(function (float $percentage, float $remaining, float $rate): void {
+                // Gestione del progresso
+                $msg = "{$percentage}% transcoded";
+                $msg .= "{$remaining} seconds left at rate: {$rate}";
+
+                // Log o notifica del progresso
+            })
+            ->addFilter('-preset', 'ultrafast');
+
+        if (! method_exists($exporter, 'save')) {
+            throw new Exception('Exporter FFMpeg non supporta il metodo save');
+        }
+
+        /** @var callable(string, object): void $save */
+        $save = [$exporter, 'save'];
+        $save($file_new, $formatInstance);
+>>>>>>> provtv/dev
 
         // Restituisci il percorso del file senza usare il metodo url()
         return $file_new;

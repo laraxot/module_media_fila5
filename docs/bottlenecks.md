@@ -815,6 +815,7 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 
 ## Collegamenti
 - [Roadmap Principale](./roadmap.md)
+<<<<<<< HEAD
 - [Sintesi Colli di Bottiglia](../../docs/PERFORMANCE_BOTTLENECKS.md)
 - [Best Practices](../Xot/docs/BEST-PRACTICES.md)
 - [Struttura Moduli](../Xot/docs/MODULE_STRUCTURE.md)
@@ -846,3 +847,36 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [bottlenecks.md](../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../Patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
+=======
+- [Sintesi Colli di Bottiglia](../../docs/performance_bottlenecks.md)
+- [Best Practices](../xot/docs/best-practices.md)
+- [Struttura Moduli](../xot/docs/module_structure.md)
+
+## Collegamenti tra versioni di BOTTLENECKS.md
+* [BOTTLENECKS.md](../../../xot/docs/bottlenecks.md)
+* [BOTTLENECKS.md](../../../user/docs/bottlenecks.md)
+* [BOTTLENECKS.md](../../../media/docs/bottlenecks.md)
+* [BOTTLENECKS.md](../../../cms/docs/bottlenecks.md)
+
+## Collegamenti tra versioni di bottlenecks.md
+* [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
+* [bottlenecks.md](../../chart/docs/bottlenecks.md)
+* [bottlenecks.md](../../chart/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../gdpr/docs/bottlenecks.md)
+* [bottlenecks.md](../../gdpr/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../xot/docs/bottlenecks.md)
+* [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../dental/docs/bottlenecks.md)
+* [bottlenecks.md](../../user/docs/bottlenecks.md)
+* [bottlenecks.md](../../user/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../ui/docs/bottlenecks.md)
+* [bottlenecks.md](../../ui/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../lang/docs/bottlenecks.md)
+* [bottlenecks.md](../../lang/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../job/docs/performance/bottlenecks.md)
+* [bottlenecks.md](performance/bottlenecks.md)
+* [bottlenecks.md](../../activity/docs/bottlenecks.md)
+* [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
+* [bottlenecks.md](../../cms/docs/bottlenecks.md)
+>>>>>>> provtv/dev

@@ -1,11 +1,18 @@
 # 📚 **Indice Documentazione Modulo Media**
 
+<<<<<<< HEAD
 **Last Update**: 31 Gennaio 2026
+=======
+>>>>>>> provtv/dev
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
+<<<<<<< HEAD
 1. [README.md](./README.md) - Panoramica completa, Upload e Processing.
+=======
+1. [README.md](./readme.md) - Panoramica completa, Upload e Processing.
+>>>>>>> provtv/dev
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 
@@ -29,9 +36,15 @@
 - 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
 
 ## 🔗 **Moduli Correlati**
+<<<<<<< HEAD
 - [Xot](../../Xot/docs/README.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../CloudStorage/docs/README.md) - Astrazione per provider cloud.
 - [Cms](../../Cms/docs/README.md) - Integrazione media nei blocchi di contenuto.
+=======
+- [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
+- [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
+- [Cms](../../cms/docs/readme.md) - Integrazione media nei blocchi di contenuto.
+>>>>>>> provtv/dev
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

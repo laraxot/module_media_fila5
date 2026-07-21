@@ -14,14 +14,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
+<<<<<<< HEAD
         uses: actions/checkout@v7
+=======
+        uses: actions/checkout@v4
+>>>>>>> provtv/dev
 
       - name: Create Artifact
         run: |
           zip -r ${{ github.event.repository.name }}.zip . -x ".git/*" ".github/*"
 
       - name: Attest Build Provenance
+<<<<<<< HEAD
         uses: actions/attest-build-provenance@v2
+=======
+        uses: actions/attest-build-provenance@v3
+>>>>>>> provtv/dev
         with:
           subject-path: ${{ github.event.repository.name }}.zip
 

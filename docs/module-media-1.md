@@ -3,10 +3,17 @@
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../docs/git_conflict_resolution.md).
 
 ## Informazioni Generali
+<<<<<<< HEAD
 - **Nome**: `laraxot/module_media_fila3`
 - **Descrizione**: Modulo dedicato alla gestione di immagini e video
 - **Namespace**: `Modules\Media`
 - **Repository**: https://github.com/laraxot/module_media_fila3.git
+=======
+- **Nome**: `laraxot/module_media_fila5`
+- **Descrizione**: Modulo dedicato alla gestione di immagini e video
+- **Namespace**: `Modules\Media`
+- **Repository**: https://github.com/laraxot/module_media_fila5.git
+>>>>>>> provtv/dev
 
 ## Service Providers
 1. `Modules\Media\Providers\MediaServiceProvider`

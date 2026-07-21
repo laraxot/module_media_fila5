@@ -126,5 +126,10 @@ Notification::make()
 ## Collegamenti
 
 - [Documentazione Generale Media](../structure.md)
+<<<<<<< HEAD
 - [Best Practice Traduzioni](../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
+=======
+- [Best Practice Traduzioni](../../../../docs/translation-standards.md)
+- [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
+>>>>>>> provtv/dev

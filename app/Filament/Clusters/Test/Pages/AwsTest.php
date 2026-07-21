@@ -24,7 +24,10 @@ class AwsTest extends XotBasePage
 {
     protected static ?string $cluster = Test::class;
 
+<<<<<<< HEAD
     /** @var array<string, mixed> */
+=======
+>>>>>>> provtv/dev
     public array $testResults = [];
 
     public string $activeTab = 's3';
@@ -33,7 +36,10 @@ class AwsTest extends XotBasePage
 
     private const KEY_PREVIEW_LENGTH = 8;
 
+<<<<<<< HEAD
     /** @var array<string, string> */
+=======
+>>>>>>> provtv/dev
     public array $connectionTests = [
         's3' => 'Test S3 Connection',
         'cloudfront' => 'Test CloudFront',
@@ -41,9 +47,12 @@ class AwsTest extends XotBasePage
         'full' => 'Full Diagnostic',
     ];
 
+<<<<<<< HEAD
     /**
      * @return array<int, \Filament\Schemas\Components\Component>
      */
+=======
+>>>>>>> provtv/dev
     protected function getS3TestSchema(): array
     {
         return [
@@ -72,9 +81,12 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
     /**
      * @return array<int, \Filament\Schemas\Components\Component>
      */
+=======
+>>>>>>> provtv/dev
     protected function getCloudFrontTestSchema(): array
     {
         return [
@@ -93,14 +105,21 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
     /**
      * @return array<int, \Filament\Schemas\Components\Component>
      */
+=======
+>>>>>>> provtv/dev
     protected function getIamTestSchema(): array
     {
         return [
             Section::make('IAM Permissions Test')->schema([
+<<<<<<< HEAD
                 TextInput::make('iam_user')->default(config('filesystems.disks.s3.key')),
+=======
+                TextInput::make('iam_user')->default(env('AWS_ACCESS_KEY_ID')),
+>>>>>>> provtv/dev
                 Actions::make([
                     Action::make('test_iam_credentials')->action('testIamCredentials'),
                     Action::make('test_iam_policies')->color('warning')->action('testIamPolicies'),
@@ -114,9 +133,12 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
     /**
      * @return array<int, \Filament\Schemas\Components\Component>
      */
+=======
+>>>>>>> provtv/dev
     protected function getDiagnosticsSchema(): array
     {
         return [
@@ -242,9 +264,12 @@ class AwsTest extends XotBasePage
     }
 
     /* Helper Methods */
+<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
+=======
+>>>>>>> provtv/dev
     protected function getAwsConfig(): array
     {
         return [

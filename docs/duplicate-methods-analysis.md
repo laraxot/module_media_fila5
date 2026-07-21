@@ -1,6 +1,9 @@
 # Analisi Metodi Duplicati - Modulo Media
 
+<<<<<<< HEAD
 **Data Generazione**: 2025-10-15 06:41:17
+=======
+>>>>>>> provtv/dev
 **Totale Gruppi di Duplicati**:
 
 ## Sommario Esecutivo
