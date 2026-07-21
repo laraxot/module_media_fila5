@@ -1,6 +1,10 @@
 # PHPStan Level 10 Compliance Status
 
+<<<<<<< HEAD
 **Last Updated**: 2025-12-10
+=======
+
+>>>>>>> provtv/dev
 **Status**: ✅ FULLY COMPLIANT (0 errors)
 
 ## Summary

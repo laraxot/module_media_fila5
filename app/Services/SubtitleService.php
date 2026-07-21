@@ -8,16 +8,28 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
+=======
+use SimpleXMLElement;
+use Webmozart\Assert\Assert;
+
+>>>>>>> provtv/dev
 use function Safe\file_put_contents;
 use function Safe\fopen;
 use function Safe\realpath;
 use function Safe\simplexml_load_string;
+<<<<<<< HEAD
 use SimpleXMLElement;
 
 /**
  * SubtitleService.
  *
  * @phpstan-type SubtitleItem array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}
+=======
+
+/**
+ * SubtitleService.
+>>>>>>> provtv/dev
  */
 class SubtitleService
 {
@@ -28,7 +40,10 @@ class SubtitleService
 
     public string $field_name = 'txt';
 
+<<<<<<< HEAD
     /** @var list<SubtitleItem> */
+=======
+>>>>>>> provtv/dev
     public array $subtitles = [];
 
     public Model $model;
@@ -41,7 +56,11 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
+<<<<<<< HEAD
             self::$instance = new self();
+=======
+            self::$instance = new self;
+>>>>>>> provtv/dev
         }
 
         return self::$instance;
@@ -101,9 +120,13 @@ class SubtitleService
     }
 
     /**
+<<<<<<< HEAD
      * Restituisce i sottotitoli dal file.
      *
      * @return list<SubtitleItem>
+=======
+     * restituisce i sottotitoli, dal file ..
+>>>>>>> provtv/dev
      */
     public function get(): array
     {
@@ -112,10 +135,18 @@ class SubtitleService
             return [];
         }
 
+<<<<<<< HEAD
         return match (Str::lower($info['extension'])) {
             'xml' => $this->getFromXml(),
             default => [],
         };
+=======
+        $func = 'getFrom'.Str::studly($info['extension']);
+
+        Assert::isArray($res = $this->{$func}());
+
+        return $res;
+>>>>>>> provtv/dev
     }
 
     /**
@@ -129,7 +160,13 @@ class SubtitleService
     }
 
     /**
+<<<<<<< HEAD
      * @return list<SubtitleItem>
+=======
+     * @return array<int, array<string, float|int|string|mixed>>
+     *
+     * @psalm-return list{0?: array{sentence_i: int<0, max>, item_i: int<0, max>, start: float|int, end: float|int, time: string, text: mixed},...}
+>>>>>>> provtv/dev
      */
     public function getFromXml(): array
     {
@@ -158,8 +195,13 @@ class SubtitleService
                     'item_i' => $item_i,
                     'start' => $start,
                     'end' => $end,
+<<<<<<< HEAD
                     'time' => $this->secondsToHms($start).','.$this->secondsToHms($end),
                     'text' => (string) $item,
+=======
+                    'time' => secondsToHms($start).','.secondsToHms($end),
+                    'text' => $item->__toString(),
+>>>>>>> provtv/dev
                 ];
                 $data[] = $tmp;
                 $item_i++;
@@ -202,6 +244,7 @@ class SubtitleService
 
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
     }
+<<<<<<< HEAD
 
     private function secondsToHms(int|float $seconds): string
     {
@@ -213,4 +256,6 @@ class SubtitleService
 
         return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
     }
+=======
+>>>>>>> provtv/dev
 }

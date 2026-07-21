@@ -1,6 +1,10 @@
 # Model/Factory/Seeder Audit
 
+<<<<<<< HEAD
 Generated: 2025-08-22 16:29
+=======
+Generated: [DATE] 16:29
+>>>>>>> provtv/dev
 
 ## Coverage
 | Model | Factory | Seeded |
