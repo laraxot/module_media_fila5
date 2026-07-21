@@ -21,7 +21,6 @@ Gestione media, upload, conversioni e streaming.
 
 ## Note
 - Personalizza la configurazione per esigenze di streaming o CDN.
-<<<<<<< HEAD
 # MCP Server Consigliati per il Modulo Media
 
 ## Scopo del Modulo
@@ -45,5 +44,3 @@ Gestione media, upload, conversioni e streaming.
 
 ## Note
 - Personalizza la configurazione per esigenze di streaming o CDN.
-=======
->>>>>>> provtv/dev

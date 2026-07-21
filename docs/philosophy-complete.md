@@ -1,10 +1,6 @@
 # Media - Filosofia Completa: Logica, Religione, Politica, Zen
 
-<<<<<<< HEAD
 **Data Creazione**: 2025-12-23
-=======
-**Data Creazione**: [DATE]
->>>>>>> provtv/dev
 **Status**: Documentazione Filosofica Completa
 **Versione**: 1.0.0
 
@@ -244,11 +240,7 @@ Media::registerMediaConversions(function ($media) {
 
 - [File Management Architecture](./file-management-architecture.md)
 - [Business Logic Overview](./business-logic-overview.md)
-<<<<<<< HEAD
 - [Xot Module Foundation](../../Xot/docs/philosophy-complete.md)
-=======
-- [Xot Module Foundation](../../xot/docs/philosophy-complete.md)
->>>>>>> provtv/dev
 
 ---
 

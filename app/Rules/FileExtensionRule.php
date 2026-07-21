@@ -6,20 +6,16 @@ namespace Modules\Media\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Http\UploadedFile;
-<<<<<<< HEAD
-=======
 
->>>>>>> provtv/dev
 use function in_array;
 
 class FileExtensionRule implements Rule
 {
-<<<<<<< HEAD
     /** @var list<string> */
     protected array $validExtensions = [];
 
     /**
-     * @param  list<string>  $validExtensions
+     * @param list<string> $validExtensions
      */
     public function __construct(array $validExtensions = [])
     {
@@ -30,28 +26,11 @@ class FileExtensionRule implements Rule
             static fn (string $ext): string => mb_strtolower($ext),
             $validExtensions
         ));
-=======
-    protected array $validExtensions = [];
-
-    /**
-     * @param  array<int, string>  $validExtensions
-     */
-    public function __construct(array $validExtensions = [])
-    {
-        $this->validExtensions = array_map(
-            /**
-             * @param  mixed  $ext
-             * @return lowercase-string
-             */
-            static fn ($ext): string => mb_strtolower((string) $ext),
-            $validExtensions
-        );
->>>>>>> provtv/dev
     }
 
     /**
-     * @param  string  $attribute  The attribute being validated (not used in this rule)
-     * @param  mixed  $value  The uploaded file to validate
+     * @param string $attribute The attribute being validated (not used in this rule)
+     * @param mixed $value The uploaded file to validate
      */
     public function passes($attribute, $value): bool
     {
@@ -62,12 +41,9 @@ class FileExtensionRule implements Rule
         return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false);
     }
 
-<<<<<<< HEAD
     /**
      * @return array<int|string, mixed>|string
      */
-=======
->>>>>>> provtv/dev
     public function message(): array|string
     {
         return trans('media::validation.mime', [

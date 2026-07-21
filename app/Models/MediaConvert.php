@@ -67,10 +67,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|MediaConvert whereWidth($value)
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
-<<<<<<< HEAD
-=======
- * @mixin IdeHelperMediaConvert
->>>>>>> provtv/dev
  * @property-read ProfileContract|null $deleter
  * @mixin \Eloquent
  */
@@ -94,12 +90,9 @@ class MediaConvert extends BaseModel
         'execution_time',
     ];
 
-<<<<<<< HEAD
     /**
      * @return BelongsTo<Media, $this>
      */
-=======
->>>>>>> provtv/dev
     public function media(): BelongsTo
     {
         return $this->belongsTo(Media::class);

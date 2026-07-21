@@ -36,23 +36,22 @@ abstract class BaseS3Action
     /**
      * Get string configuration value with type safety.
      *
-     * @param  string  $configKey  Config key to check first
-     * @param  string  $envKey  Environment variable key as fallback
-     * @param  string  $default  Default value if neither config nor env is valid
+     * Prefer media.* config, then filesystems.disks.s3.* — never env() outside config
+     * (larastan.noEnvCallsOutsideOfConfig).
+     *
+     * @param string $configKey Config key to check first
+     * @param string $envKey Logical AWS key used to map filesystems fallback
+     * @param string $default Default value if no config is valid
+     *
      * @return string Type-safe string value
      */
     protected function getStringConfig(string $configKey, string $envKey, string $default): string
     {
-<<<<<<< HEAD
-=======
-        // Check config first
->>>>>>> provtv/dev
         $configValue = config($configKey);
         if (is_string($configValue) && trim($configValue) !== '') {
             return $configValue;
         }
 
-<<<<<<< HEAD
         $filesystemsKey = match ($envKey) {
             'AWS_BUCKET_NAME' => 'filesystems.disks.s3.bucket',
             'AWS_REGION' => 'filesystems.disks.s3.region',
@@ -68,15 +67,6 @@ abstract class BaseS3Action
             }
         }
 
-=======
-        // Fallback to environment
-        $envValue = env($envKey);
-        if (is_string($envValue) && trim($envValue) !== '') {
-            return $envValue;
-        }
-
-        // Return default
->>>>>>> provtv/dev
         return $default;
     }
 }
