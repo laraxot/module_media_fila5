@@ -104,8 +104,6 @@ Thumbs.db
 *.old2
 *.backup
 *.backup.*
-*.backup-*
-*.backup_*
 *.bak
 *.bakcup
 *.new
@@ -122,8 +120,6 @@ Thumbs.db
 # ==============================================
 docs/phpstan/
 docs/cache/
-docs/archive/
-docs/archive/**
 
 # ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
@@ -168,10 +164,3 @@ test_media_files/
 *.fila2
 laravel
 public_html
-lang/lang/
-_docs/
-_docs/
-agentdb.rvf
-docs/archive/
-.devcontainer/
-.vscode/

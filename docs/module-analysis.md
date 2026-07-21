@@ -1,14 +1,3 @@
----
-title: "Media Module - Comprehensive Analysis"
-module: "Media"
-type: concept
-tags: [module, analysis]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "module analysis"
-related:
-  - "./webm.md"
----
 # Media Module - Comprehensive Analysis
 
 ## Module Overview
@@ -71,8 +60,7 @@ The Media module provides comprehensive media file management:
 ## Integration with Other Modules
 - **Cms**: Content asset management
 - **User**: User profile images
-- **healthcare_app**: Report and chart images
-- **ModuloEsempio**: Report and chart images
+- **Quaeris**: Report and chart images
 - **Xot**: Base media functionality
 - **Filament**: Media management interface
 

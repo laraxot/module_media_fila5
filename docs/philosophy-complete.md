@@ -1,17 +1,6 @@
----
-title: "Media - Filosofia Completa: Logica, Religione, Politica, Zen"
-module: "Media"
-type: concept
-tags: [philosophy, complete]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "philosophy complete"
-related:
-  - "./webm.md"
----
 # Media - Filosofia Completa: Logica, Religione, Politica, Zen
 
-**Data Creazione**: [DATE]
+**Data Creazione**: 2025-12-23
 **Status**: Documentazione Filosofica Completa
 **Versione**: 1.0.0
 
@@ -251,7 +240,7 @@ Media::registerMediaConversions(function ($media) {
 
 - [File Management Architecture](./file-management-architecture.md)
 - [Business Logic Overview](./business-logic-overview.md)
-- [Xot Module Foundation](../../xot/docs/philosophy-complete.md)
+- [Xot Module Foundation](../../Xot/docs/philosophy-complete.md)
 
 ---
 
