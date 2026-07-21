@@ -104,11 +104,8 @@ Thumbs.db
 *.old2
 *.backup
 *.backup.*
-<<<<<<< HEAD
 *.backup-*
 *.backup_*
-=======
->>>>>>> provtv/dev
 *.bak
 *.bakcup
 *.new
@@ -125,11 +122,8 @@ Thumbs.db
 # ==============================================
 docs/phpstan/
 docs/cache/
-<<<<<<< HEAD
 docs/archive/
 docs/archive/**
-=======
->>>>>>> provtv/dev
 
 # ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
@@ -174,7 +168,6 @@ test_media_files/
 *.fila2
 laravel
 public_html
-<<<<<<< HEAD
 lang/lang/
 _docs/
 _docs/
@@ -182,5 +175,3 @@ agentdb.rvf
 docs/archive/
 .devcontainer/
 .vscode/
-=======
->>>>>>> provtv/dev

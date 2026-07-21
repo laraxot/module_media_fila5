@@ -23,13 +23,6 @@ use ProtoneMedia\LaravelFFMpeg\Exporters\EncodingException;
 
 Il modulo Media fornisce la classe `ConvertVideoAction` per convertire facilmente i video da un formato all'altro:
 
-<<<<<<< HEAD
-=======
-> **Pattern canonico Laraxot/Media**  
-> Tutte le conversioni devono seguire il flusso ufficiale del pacchetto:
-> `FFMpeg::fromDisk()->open()->export()->toDisk()->inFormat()->save()`, eseguite dentro una Spatie QueueableAction, senza mai usare `shell_exec` o comandi FFmpeg manuali.
-
->>>>>>> provtv/dev
 ```php
 // Iniezione dell'azione in un controller o in un altro servizio
 public function __construct(ConvertVideoAction $convertVideoAction)
@@ -52,26 +45,10 @@ La conversione di un video utilizza il seguente flusso:
 1. Inizializzazione con `FFMpeg::fromDisk($disk)`
 2. Apertura del file con `open($filePath)`
 3. Preparazione per l'esportazione con `export()`
-<<<<<<< HEAD
 4. Configurazione del formato di output
 5. Impostazione del disco di output con `toDisk($disk)`
 6. Impostazione del formato di output con `inFormat($format)`
 7. Salvataggio del file convertito con `save($outputPath)`
-=======
-4. (Opzionale) Registrazione del progresso con `onProgress($callback)`
-5. Impostazione del disco di output con `toDisk($disk)`
-6. Impostazione del formato di output con `inFormat($format)` (es. `X264`, `WebM`, `CopyFormat` per export senza transcodifica)
-7. Salvataggio del file convertito con `save($outputPath)` (senza concatenare altre chiamate dopo `save()`)
-
-Per esportazioni HLS si utilizza invece il builder dedicato `exportForHLS()`:
-
-1. `FFMpeg::fromDisk($disk)->open($filePath)`
-2. `exportForHLS()`
-3. Configurazione dei bitrate con oggetti `X264` (es. `setKiloBitrate(250)`, `setKiloBitrate(500)`, …)
-4. (Opzionale) `setSegmentLength()` e `setKeyFrameInterval()`
-5. `addFormat($format[, $callback])` per risoluzioni diverse e filtri per formato
-6. `save('playlist.m3u8')`
->>>>>>> provtv/dev
 
 ## Gestione degli Errori
 
@@ -97,11 +74,7 @@ FFMpeg::fromDisk('videos')
 ```php
 FFMpeg::fromDisk('videos')
     ->open('video.mp4')
-<<<<<<< HEAD
     ->addFilter(function ($filters) {
-=======
-    ->addFilter(function (\FFMpeg\Filters\Video\VideoFilters $filters) {
->>>>>>> provtv/dev
         $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
     })
     ->export()
@@ -110,11 +83,6 @@ FFMpeg::fromDisk('videos')
     ->save('resized_video.mp4');
 ```
 
-<<<<<<< HEAD
-=======
-Per ridimensionamenti semplici è preferibile usare il metodo dedicato `resize($width, $height, $mode = 'fit')` disponibile direttamente sull'exporter, come mostrato nella documentazione ufficiale del pacchetto.
-
->>>>>>> provtv/dev
 ## Configurazione
 
 La configurazione di Laravel-FFMpeg si trova nel file `config/laravel-ffmpeg.php`. Questo file viene pubblicato durante l'installazione della libreria.

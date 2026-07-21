@@ -8,10 +8,7 @@ use Filament\Tables\Columns\IconColumn;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-<<<<<<< HEAD
 // phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
-=======
->>>>>>> provtv/dev
 class IconMediaColumn extends IconColumn
 {
     protected function setUp(): void
@@ -23,10 +20,6 @@ class IconMediaColumn extends IconColumn
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
             }
-<<<<<<< HEAD
-=======
-
->>>>>>> provtv/dev
         })
             ->icon('heroicon-o-document-text')
             ->color(function ($record) use ($attachment): string {

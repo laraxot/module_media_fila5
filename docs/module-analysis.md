@@ -60,15 +60,7 @@ The Media module provides comprehensive media file management:
 ## Integration with Other Modules
 - **Cms**: Content asset management
 - **User**: User profile images
-<<<<<<< HEAD
 - **Quaeris**: Report and chart images
-=======
-<<<<<<< .merge_file_W24vZN
-- **healthcare_app**: Report and chart images
-=======
-- **ModuloEsempio**: Report and chart images
->>>>>>> .merge_file_00nliY
->>>>>>> provtv/dev
 - **Xot**: Base media functionality
 - **Filament**: Media management interface
 

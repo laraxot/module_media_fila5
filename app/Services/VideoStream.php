@@ -6,20 +6,13 @@ namespace Modules\Media\Services;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
-<<<<<<< HEAD
-=======
 use Webmozart\Assert\Assert;
 
->>>>>>> provtv/dev
 use function is_string;
 use function Safe\fclose;
 use function Safe\fread;
 use function Safe\ob_end_clean;
 use function Safe\set_time_limit;
-<<<<<<< HEAD
-use Webmozart\Assert\Assert;
-=======
->>>>>>> provtv/dev
 
 /**
  * Handles video streaming from a given path.

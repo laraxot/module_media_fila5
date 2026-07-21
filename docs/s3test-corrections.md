@@ -244,20 +244,13 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
-<<<<<<< HEAD
 - [Documentazione Generale Media](../README.md)
 - [Best Practice Traduzioni](../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
-=======
-- [Documentazione Generale Media](../readme.md)
-- [Best Practice Traduzioni](../../../../docs/translation-standards.md)
-- [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
->>>>>>> provtv/dev
 - [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)
 
 ---
 
-<<<<<<< HEAD
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato e verificato
@@ -515,8 +508,5 @@ private function getSolutionForError(?string $errorCode): string
 ---
 
 **Ultimo aggiornamento**: Gennaio 2025
-=======
-**
->>>>>>> provtv/dev
 **Autore**: Sistema di correzione automatica
 **Stato**: ✅ Completato e verificato

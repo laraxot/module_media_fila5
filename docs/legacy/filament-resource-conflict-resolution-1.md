@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Risoluzione conflitto git su Filament MediaConvertResource
 
 ## Problema
@@ -16,12 +15,3 @@ Sono stati rilevati marker di conflitto git  nel file `app/Filament/Resources/Me
 
 ## Collegamenti
 - [Documentazione root risoluzione conflitti](../../../docs/risoluzione_conflitti_git.md#media-filament-resources-mediaconvertresourcephp)
-=======
----
-module: theme
-topic: filament-resource-conflict-resolution-1
-canonical: ../../../../Themes/docs/shared-components/filament-resource-conflict-resolution-1.md
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/filament-resource-conflict-resolution-1.md
->>>>>>> laraxot/dev

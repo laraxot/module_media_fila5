@@ -4,23 +4,17 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests;
 
-<<<<<<< HEAD
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Providers\XotServiceProvider;
 use Modules\Media\Tests\Support\HasMediaTestStub;
-=======
-use Modules\Media\Providers\MediaServiceProvider;
-use Modules\User\Providers\UserServiceProvider;
->>>>>>> provtv/dev
 use Modules\Xot\Tests\XotBaseTestCase;
 
 /**
  * Base test case for Media module.
  *
-<<<<<<< HEAD
  * Uses MySQL from .env.testing.
  * All module connections are mapped by TenantServiceProvider.
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
@@ -63,16 +57,6 @@ abstract class TestCase extends XotBaseTestCase
      * @return array<int, class-string>
      */
     protected function getPackageProviders(Application $app): array
-=======
- * Extends XotBaseTestCase (DRY + KISS + Laraxot).
- */
-abstract class TestCase extends XotBaseTestCase
-{
-    /**
-     * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
-     */
-    protected function getPackageProviders($app): array
->>>>>>> provtv/dev
     {
         return [
             ...parent::getPackageProviders($app),
