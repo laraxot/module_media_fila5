@@ -1,3 +1,9 @@
+## [0.0.3-dev.7](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.6...v0.0.3-dev.7) (2026-07-21)
+
+### Bug Fixes
+
+* resolve residual merge conflict markers after provtv/dev squash-merge ([e6a9208](https://github.com/laraxot/module_media_fila5/commit/e6a9208d7742bc71ff0bd693e7c73c5bca62e11b))
+
 ## [0.0.3-dev.2](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.1...v0.0.3-dev.2) (2026-07-08)
 
 ### Bug Fixes
