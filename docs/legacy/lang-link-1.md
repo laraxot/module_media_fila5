@@ -39,7 +39,6 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](../../../Activity/docs/lang-link.md)
 * [lang-link.md](../../../Patient/docs/lang-link.md)
 * [lang-link.md](../../../Cms/docs/lang-link.md)
-=======
 ---
 module: theme
 topic: lang-link-1
@@ -47,4 +46,3 @@ canonical: ../../../../Themes/docs/shared-components/lang-link-1-Modules.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/lang-link-1-Modules.md
->>>>>>> laraxot/dev

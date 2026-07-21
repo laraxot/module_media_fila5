@@ -55,13 +55,7 @@ class MediaResource extends XotBaseResource
     }
 
     /**
-<<<<<<< HEAD
      * @return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration, view: PageRegistration, convert: PageRegistration}
-=======
-     * @return array<PageRegistration>
-     *
-     * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
->>>>>>> provtv/dev
      */
     #[Override]
     public static function getPages(): array

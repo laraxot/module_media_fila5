@@ -62,11 +62,7 @@ class Clip extends Component
     }
 
     /**
-<<<<<<< HEAD
      * @param array<string, mixed> $data
-=======
-     * Undocumented function.
->>>>>>> provtv/dev
      */
     public function updateDataFromModal(string $id, array $data): void
     {
@@ -79,11 +75,7 @@ class Clip extends Component
         }
 
         // dddx(['data'=>$data,'model'=>$this->model]);
-<<<<<<< HEAD
         /** @var array<string, string> $up */
-=======
-        /** @var array<string, string> */
->>>>>>> provtv/dev
         $up = collect($data)->only(['title', 'subtitle'])->all();
 
         $this->model->update($up);

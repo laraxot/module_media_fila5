@@ -98,7 +98,6 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-<<<<<<< HEAD
         'id' => [
             'label' => 'id',
         ],
@@ -123,8 +122,6 @@ return [
         'created_at' => [
             'label' => 'created_at',
         ],
-=======
->>>>>>> provtv/dev
     ],
     'actions' => [
         'import' => [

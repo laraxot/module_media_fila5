@@ -243,9 +243,6 @@ The Media module needs a robust media management system for handling images, vid
 
 ---
 
-<<<<<<< HEAD
 **Created**: 2026-01-31
-=======
->>>>>>> provtv/dev
 **Status**: Pending
 **Assignee**: TBD

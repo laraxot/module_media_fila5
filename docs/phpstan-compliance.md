@@ -2,10 +2,7 @@
 
 ## Status: ✅ FULLY COMPLIANT
 
-<<<<<<< HEAD
 **Analysis Date:** September 22, 2025
-=======
->>>>>>> provtv/dev
 **PHPStan Level:** 9 (Maximum)
 **Files Analyzed:** 114
 **Errors Found:** 0

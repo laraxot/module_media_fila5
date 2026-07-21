@@ -2,19 +2,12 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
 namespace Modules\Media\Tests\Filament\Resources;
 
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Tests\TestCase;
-=======
-use Filament\Forms\Components\Radio;
-use Filament\Forms\Components\TextInput;
-use Modules\Media\Filament\Resources\MediaConvertResource;
-use Tests\TestCase;
->>>>>>> provtv/dev
 
 uses(TestCase::class);
 

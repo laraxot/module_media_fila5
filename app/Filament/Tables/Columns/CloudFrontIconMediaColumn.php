@@ -7,10 +7,7 @@ namespace Modules\Media\Filament\Tables\Columns;
 use Filament\Tables\Columns\IconColumn;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 
-<<<<<<< HEAD
 // phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
-=======
->>>>>>> provtv/dev
 class CloudFrontIconMediaColumn extends IconColumn
 {
     protected function setUp(): void
@@ -22,10 +19,6 @@ class CloudFrontIconMediaColumn extends IconColumn
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
             }
-<<<<<<< HEAD
-=======
-
->>>>>>> provtv/dev
         })
             ->icon('heroicon-o-document-text')
             ->color(function ($record) use ($attachment): string {

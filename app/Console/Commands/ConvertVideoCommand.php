@@ -30,11 +30,8 @@ class ConvertVideoCommand extends Command
             return '';
         }
 
-<<<<<<< HEAD
         $format = new WebM();
-=======
-        $format = new WebM;
->>>>>>> provtv/dev
+
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file)->replaceLast('.mp4', '.'.$extension)->toString();
 
@@ -45,20 +42,9 @@ class ConvertVideoCommand extends Command
             $this->info("{$percentage}% transcoded");
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
-<<<<<<< HEAD
-
         $export->toDisk($disk);
         $export->inFormat($format);
         $export->save($file_new);
-=======
-        // @phpstan-ignore method.nonObject, method.nonObject
-        $export
-            ->toDisk($disk)
-            // @phpstan-ignore method.nonObject
-            ->inFormat($format)
-            // @phpstan-ignore method.nonObject
-            ->save($file_new);
->>>>>>> provtv/dev
 
         return Storage::disk($disk)->url($file_new);
     }

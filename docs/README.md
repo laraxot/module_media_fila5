@@ -45,24 +45,6 @@ echo $model->getFirstMediaUrl('gallery', 'webp-compressed');
 
 ---
 
-<<<<<<< HEAD
 **🔄 Ultimo aggiornamento**: 31 Gennaio 2026
 **📦 Versione**: 3.2.0
 **✅ PHPStan level 10**: Compliance nativa garantita
-=======
-**🔄 
-**📦 Versione**: 3.2.0
-**✅ PHPStan level 10**: Compliance nativa garantita
-
-## 🚀 Release su GitHub
-Le release sono basate su tag Git e possono includere release notes generate automaticamente.
-Workflow locale: `.github/workflows/release.yml`.
-
-
-## 📄 License & Authors
-
-**Authors:**
-- Marco Sottana <marco.sottana@gmail.com>
-
-**License:** MIT
->>>>>>> provtv/dev
