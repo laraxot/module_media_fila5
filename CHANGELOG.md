@@ -1,3 +1,9 @@
+## [0.0.3-dev.8](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.7...v0.0.3-dev.8) (2026-07-21)
+
+### Bug Fixes
+
+* **media:** resolve merge conflict markers and Intervention Image v4 API ([3caf2d3](https://github.com/laraxot/module_media_fila5/commit/3caf2d35715d6983475b29662b59d190dea762a1))
+
 ## [0.0.3-dev.7](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.6...v0.0.3-dev.7) (2026-07-21)
 
 ### Bug Fixes
