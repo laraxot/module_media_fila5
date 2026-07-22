@@ -176,3 +176,6 @@ docs/archive/
 .devcontainer/
 .vscode/
 .windsurf
+
+# Local vector DB (agent tooling)
+ruvector.db
