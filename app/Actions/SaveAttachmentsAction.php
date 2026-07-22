@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Illuminate\Support\Facades\Storage;
+use Modules\Media\Datas\SaveAttachmentsData;
 use Spatie\MediaLibrary\HasMedia;
-use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
 use function Safe\tempnam;
@@ -16,26 +16,20 @@ class SaveAttachmentsAction
 {
     /**
      * Save attachments to media library.
-     *
-     * @param list<string> $attachments
-     * @param array<string, string|null> $data
      */
-    public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
+    public function execute(HasMedia $record, SaveAttachmentsData $data): void
     {
         /** @var array<string, string> $dataAttachments */
         $dataAttachments = [];
 
-        foreach ($attachments as $attachment) {
-            Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
+        foreach ($data->attachments as $attachment) {
+            $path = $attachment->path;
 
-            if (! isset($data[$attachment]) || $data[$attachment] === '') {
+            if ($path === null || $path === '') {
                 continue;
             }
 
-            $path = $data[$attachment];
-            Assert::string($path, '['.__LINE__.']['.class_basename(self::class).']');
-
-            $storage = Storage::disk($disk);
+            $storage = Storage::disk($data->disk);
 
             if (! $storage->exists($path)) {
                 continue;
@@ -48,11 +42,11 @@ class SaveAttachmentsAction
 
             try {
                 $media = $record->addMedia($tempPath)->usingFileName(basename($path))->toMediaCollection(
-                    $attachment,
-                    $disk,
+                    $attachment->name,
+                    $data->disk,
                 );
 
-                $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
+                $dataAttachments[$attachment->name] = $media->getPathRelativeToRoot();
             } finally {
                 if (file_exists($tempPath)) {
                     unlink($tempPath);
