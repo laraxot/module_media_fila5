@@ -1,60 +1,30 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+declare(strict_types=1);
 
-return new class extends Migration
+use Illuminate\Database\Schema\Blueprint;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+return new class extends XotBaseMigration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::table('temporary_uploads', function (Blueprint $table) {
-            if (! Schema::hasColumn('temporary_uploads', 'user_id')) {
+        $this->tableUpdate(function (Blueprint $table): void
+        {
+            if (! $this->hasColumn('user_id')) {
                 $table->uuid('user_id')->nullable();
             }
-            if (! Schema::hasColumn('temporary_uploads', 'file_name')) {
+            if (! $this->hasColumn('file_name')) {
                 $table->string('file_name')->nullable();
             }
-            if (! Schema::hasColumn('temporary_uploads', 'file_size')) {
+            if (! $this->hasColumn('file_size')) {
                 $table->integer('file_size')->nullable();
             }
-            if (! Schema::hasColumn('temporary_uploads', 'mime_type')) {
+            if (! $this->hasColumn('mime_type')) {
                 $table->string('mime_type')->nullable();
             }
-            if (! Schema::hasColumn('temporary_uploads', 'status')) {
+            if (! $this->hasColumn('status')) {
                 $table->string('status')->default('uploading');
-            }
-        });
-    }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::table('temporary_uploads', function (Blueprint $table) {
-            $columnsToDrop = [];
-            if (Schema::hasColumn('temporary_uploads', 'user_id')) {
-                $columnsToDrop[] = 'user_id';
-            }
-            if (Schema::hasColumn('temporary_uploads', 'file_name')) {
-                $columnsToDrop[] = 'file_name';
-            }
-            if (Schema::hasColumn('temporary_uploads', 'file_size')) {
-                $columnsToDrop[] = 'file_size';
-            }
-            if (Schema::hasColumn('temporary_uploads', 'mime_type')) {
-                $columnsToDrop[] = 'mime_type';
-            }
-            if (Schema::hasColumn('temporary_uploads', 'status')) {
-                $columnsToDrop[] = 'status';
-            }
-
-            if (! empty($columnsToDrop)) {
-                $table->dropColumn($columnsToDrop);
             }
         });
     }
