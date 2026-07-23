@@ -18,13 +18,28 @@ return new class extends XotBaseMigration
         $this->tableCreate(function (Blueprint $table): void {
             $table->uuid('id')->primary();
             $table->string('session_id');
-            $table->uuid('user_id')->nullable();
-            $table->string('file_name');
-            $table->integer('file_size')->nullable();
-            $table->string('mime_type')->nullable();
-            $table->string('status')->default('uploading');
         });
-        // -- UPDATE --
+
+        // -- UPDATE: upload metadata columns (guarded so pre-existing installs get them too) --
+        $this->tableUpdate(function (Blueprint $table): void {
+            if (! $this->hasColumn('user_id')) {
+                $table->uuid('user_id')->nullable();
+            }
+            if (! $this->hasColumn('file_name')) {
+                $table->string('file_name')->nullable();
+            }
+            if (! $this->hasColumn('file_size')) {
+                $table->integer('file_size')->nullable();
+            }
+            if (! $this->hasColumn('mime_type')) {
+                $table->string('mime_type')->nullable();
+            }
+            if (! $this->hasColumn('status')) {
+                $table->string('status')->default('uploading');
+            }
+        });
+
+        // -- UPDATE: audit timestamps --
         $this->tableUpdate(function (Blueprint $table): void {
             $this->updateTimestamps(
                 table: $table,
