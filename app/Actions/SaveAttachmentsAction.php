@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Illuminate\Support\Facades\Storage;
+use Modules\Media\Datas\SaveAttachmentsData;
 use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
@@ -16,27 +17,20 @@ class SaveAttachmentsAction
 {
     /**
      * Save attachments to media library.
-     *
-     * @param  list<string>  $attachments
-     * @param  array<string, string|null>  $data
      */
-    public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
+    public function execute(HasMedia $record, SaveAttachmentsData $data): void
     {
         /** @var array<string, string> $dataAttachments */
         $dataAttachments = [];
 
-        foreach ($attachments as $attachment) {
-            Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
+        foreach ($data->attachments as $attachment) {
+            $path = $attachment->path;
 
-            if (! isset($data[$attachment]) || $data[$attachment] === '') {
+            if ($path === null || $path === '') {
                 continue;
             }
 
-            $path = $data[$attachment];
-            Assert::string($path, '['.__LINE__.']['.class_basename(self::class).']');
-
-            // Metodo compatibile con Laravel 9+ e Flysystem 3.x
-            $storage = Storage::disk($disk);
+            $storage = Storage::disk($data->disk);
 
             if (! $storage->exists($path)) {
                 continue;
@@ -50,11 +44,11 @@ class SaveAttachmentsAction
 
             try {
                 $media = $record->addMedia($tempPath)->usingFileName(basename($path))->toMediaCollection(
-                    $attachment,
-                    $disk,
+                    $attachment->name,
+                    $data->disk,
                 );
 
-                $dataAttachments[$attachment] = $media->getPathRelativeToRoot();
+                $dataAttachments[$attachment->name] = $media->getPathRelativeToRoot();
             } finally {
                 // Cleanup del file temporaneo
                 if (file_exists($tempPath)) {

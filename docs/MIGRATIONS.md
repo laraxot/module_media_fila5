@@ -10,7 +10,7 @@ The Media module manages file storage, conversion, and temporary uploads. All mi
 |-------|----------------|--------|---------|
 | `Media` | `2022_01_01_000011_create_medias_table.php` | ✅ Active | Media file metadata and Spatie integration |
 | `MediaConvert` | `2022_01_01_000000_create_media_converts_table.php` | ✅ Active | Conversion jobs and optimization metadata |
-| `TemporaryUpload` | `2023_01_01_000000_create_temporary_uploads_table.php` | ✅ Active | Session-based temporary file uploads |
+| `TemporaryUpload` | `2023_01_01_000000_create_temporary_uploads_table.php` | ✅ Active | Session-based temporary file uploads (upload metadata columns consolidated here 2026-07-22, see [temporary-uploads-migration-consolidation.md](wiki/concepts/temporary-uploads-migration-consolidation.md)) |
 
 **Parity**: 3 models, 3 migrations (100% coverage).
 

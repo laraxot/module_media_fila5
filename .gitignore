@@ -175,4 +175,8 @@ agentdb.rvf
 docs/archive/
 .devcontainer/
 .vscode/
+.windsurf
 docs/legacy
+
+# Local vector DB (agent tooling)
+ruvector.db
