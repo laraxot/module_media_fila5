@@ -86,7 +86,7 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 6. **app/Conversions/VideoGenerators/Webm.php:15.** Correggere il suffisso .webmXXX in .webm e aggiungere un test unitario sul path risultante, inclusi filename con più punti.
 
 
-- [ ] PHPStan L10 scoped senza errori non giustificati.
+- [x] PHPStan L10 scoped senza errori non giustificati. (Modules 2026-07-27)
 - [ ] Pest scoped verde sui flussi critici.
 - [ ] Nessuna nuova estensione Filament diretta o controller FO.
 - [ ] Nessuna nuova business logic in Services/Support.
@@ -94,6 +94,11 @@ Rilevazione del 17 luglio 2026 sul working tree locale; esclusi vendor e dipende
 - [ ] Debito residuo con owner e criterio di rimozione.
 
 ## Criteri di uscita
+
+## Gate PHPStan (2026-07-27)
+
+- `cd laravel && ./vendor/bin/phpstan analyse Modules --memory-limit=-1` → **0 errori**.
+- Themes: solo insieme a Modules — [phpstan-stale-ignore-pattern](../../../../docs/wiki/troubleshooting/phpstan-stale-ignore-pattern.md).
 
 ## Verifica
 
