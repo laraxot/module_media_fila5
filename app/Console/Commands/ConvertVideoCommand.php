@@ -41,12 +41,9 @@ class ConvertVideoCommand extends Command
             $this->info("{$percentage}% transcoded");
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
-        // @phpstan-ignore method.nonObject, method.nonObject
         $export
             ->toDisk($disk)
-            // @phpstan-ignore method.nonObject
             ->inFormat($format)
-            // @phpstan-ignore method.nonObject
             ->save($file_new);
 
         return Storage::disk($disk)->url($file_new);

@@ -76,13 +76,11 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
         if ($toDiskMedia === null) {
             throw new RuntimeException('Failed to export media to disk');
         }
 
-        /** @phpstan-ignore-next-line - FFMpeg fluent API */
         $formattedMedia = $toDiskMedia->inFormat($format);
         if ($formattedMedia === null || ! is_object($formattedMedia)) {
             throw new RuntimeException('Failed to format media');
