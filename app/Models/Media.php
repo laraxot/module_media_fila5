@@ -39,10 +39,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string $disk
  * @property string|null $conversions_disk
  * @property int $size
- * @property array|null $manipulations
- * @property array|null $custom_properties
- * @property array|null $generated_conversions
- * @property array|null $responsive_images
+ * @property array<string, mixed>|null $manipulations
+ * @property array<string, mixed>|null $custom_properties
+ * @property array<string, mixed>|null $generated_conversions
+ * @property array<string, mixed>|null $responsive_images
  * @property int|null $order_column
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -133,7 +133,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> get($columns = ['*'])
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
- * @property array $entry_conversions
+ * @property array<string, mixed> $entry_conversions
  * @property EloquentCollection<int, MediaConvert> $mediaConverts
  * @property int|null $media_converts_count
  * @method static MediaCollection<int, static> all($columns = ['*'])
@@ -248,6 +248,10 @@ class Media extends SpatieMedia
 
     /**
      * //EloquentCollection.
+     *
+     * @param array<string> $uuids
+     *
+     * @return EloquentCollection<int, static>
      */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): EloquentCollection
     {
@@ -288,6 +292,9 @@ class Media extends SpatieMedia
         return $this->belongsTo($userClass, 'created_by');
     }
 
+    /**
+     * @return HasMany<MediaConvert, Media>
+     */
     public function mediaConverts(): HasMany
     {
         return $this->hasMany(MediaConvert::class);
@@ -319,6 +326,9 @@ class Media extends SpatieMedia
         return url($url);
     }
 
+    /**
+     * @return array<int, array{name: string, generated: bool, src: string}>
+     */
     public function getEntryConversionsAttribute(): array
     {
         $conversions = [];
