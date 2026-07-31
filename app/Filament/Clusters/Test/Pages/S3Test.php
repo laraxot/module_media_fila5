@@ -34,8 +34,6 @@ use function Safe\unlink;
  * S3Test Page for AWS S3 testing and diagnostics.
  *
  * @property array<string, mixed> $debugResults
- *
- * @phpstan-ignore-next-line
  */
 class S3Test extends XotBasePage
 {
@@ -250,13 +248,14 @@ class S3Test extends XotBasePage
             return;
         }
 
+        Assert::string($filePath);
         // Generate CloudFront signed URL for attachment
-        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 60);
+        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
         dddx([
             'signedurl' => $signedUrl,
             'filePath' => $filePath,
-            'url2' => Storage::disk('s3')->url((string) $filePath),
-            'url3' => Storage::disk('s3')->temporaryUrl((string) $filePath, now()->addMinutes(5)),
+            'url2' => Storage::disk('s3')->url($filePath),
+            'url3' => Storage::disk('s3')->temporaryUrl($filePath, now()->addMinutes(5)),
         ]);
         $this->debugResults = [];
         $this->updateDebugOutput();
@@ -269,11 +268,14 @@ class S3Test extends XotBasePage
      */
     private function buildConfigDebugData(): array
     {
+        $s3Key = config('filesystems.disks.s3.key', '');
+        Assert::string($s3Key);
+
         return [
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
-                'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, 8).'...',
+                'AWS_ACCESS_KEY_ID' => substr($s3Key, 0, 8).'...',
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
