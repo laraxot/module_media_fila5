@@ -263,3 +263,4 @@ phpmd*
 /docs/archive
 /docs/legacy
 .agents
+.claude
