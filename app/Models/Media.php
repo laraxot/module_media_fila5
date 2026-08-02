@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Modules\Media\Database\Factories\MediaFactory;
+use Modules\Media\Models\MediaConvert;
+use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
@@ -50,7 +52,7 @@ class Media extends SpatieMedia
     }
 
     /**
-     * @return BelongsTo<TemporaryUpload, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Modules\Media\Models\TemporaryUpload, \Modules\Media\Models\Media>
      */
     public function temporaryUpload(): BelongsTo
     {
@@ -58,7 +60,7 @@ class Media extends SpatieMedia
     }
 
     /**
-     * @return BelongsTo<Model, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<static, static>
      */
     public function creator(): BelongsTo
     {
@@ -69,7 +71,7 @@ class Media extends SpatieMedia
     }
 
     /**
-     * @return HasMany<MediaConvert, $this>
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, static>
      */
     public function mediaConverts(): HasMany
     {
