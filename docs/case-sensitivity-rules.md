@@ -1,3 +1,14 @@
+---
+title: "Case Sensitivity Rules - Media Module"
+module: "Media"
+type: rule
+tags: [case, sensitivity, rules]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "case sensitivity rules"
+related:
+  - "./webm.md"
+---
 # Case Sensitivity Rules - Media Module
 
 ## Problema / Problem

@@ -17,3 +17,6 @@ legacy/**
 *.orig
 *.rej
 *~head
+agentdb.rvf
+copilot-redundancy-audit-2026-05-25.md
+redundancy-audit-2026-05-21.md
