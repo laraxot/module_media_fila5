@@ -17,9 +17,6 @@ legacy/**
 *.orig
 *.rej
 *~head
-<<<<<<< .merge_file_0JyDmI
 agentdb.rvf
-copilot-redundancy-audit-2026-05-25.md
-redundancy-audit-2026-05-21.md
-=======
->>>>>>> .merge_file_PxXKNO
+copilot-redundancy-audit-*.md
+redundancy-audit-*.md

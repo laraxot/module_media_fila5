@@ -42,7 +42,7 @@ class FileExtensionRule implements Rule
         return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false);
     }
 
-    public function message(): array|string
+    public function message(): string
     {
         return trans('media::validation.mime', [
             'mimes' => implode(', ', $this->validExtensions),

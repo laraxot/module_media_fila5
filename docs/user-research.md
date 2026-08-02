@@ -1,17 +1,3 @@
-<<<<<<< .merge_file_za96Kf
----
-title: "Media Module - User Research"
-module: "Media"
-type: concept
-tags: [USER, RESEARCH]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "user research"
-related:
-  - "./webm.md"
----
-=======
->>>>>>> .merge_file_PztxJb
 # User Research: Media Module
 # Media Module - User Research
 

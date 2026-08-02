@@ -244,10 +244,6 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
-<<<<<<< .merge_file_6mqU04
-- [Documentazione Generale Media](README.md)
-=======
->>>>>>> .merge_file_JjEUhD
 - [Documentazione Generale Media](../readme.md)
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
