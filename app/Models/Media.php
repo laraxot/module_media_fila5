@@ -22,7 +22,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string $path
  * @property array<int, array<string, string|bool>> $conversions
  */
-final class Media extends SpatieMedia
+class Media extends SpatieMedia
 {
     /** @phpstan-use HasXotFactory<MediaFactory, Media> */
     use HasXotFactory;
@@ -51,12 +51,14 @@ final class Media extends SpatieMedia
         return $result;
     }
 
+    /** @return BelongsTo<TemporaryUpload, Media> */
     public function temporaryUpload(): BelongsTo
     {
         return $this->belongsTo(TemporaryUpload::class);
     }
 
-public function creator(): BelongsTo
+    /** @return BelongsTo<Model, Media> */
+    public function creator(): BelongsTo
     {
         /** @var class-string<Model> $userClass */
         $userClass = XotData::make()->getUserClass();
@@ -64,6 +66,7 @@ public function creator(): BelongsTo
         return $this->belongsTo($userClass, 'created_by');
     }
 
+    /** @return HasMany<MediaConvert, Media> */
     public function mediaConverts(): HasMany
     {
         return $this->hasMany(MediaConvert::class);
