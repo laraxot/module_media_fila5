@@ -60,7 +60,7 @@ class Media extends SpatieMedia
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<static, static>
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Illuminate\Database\Eloquent\Model, \Modules\Media\Models\Media>
      */
     public function creator(): BelongsTo
     {
@@ -71,7 +71,7 @@ class Media extends SpatieMedia
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, static>
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, \Modules\Media\Models\Media>
      */
     public function mediaConverts(): HasMany
     {
