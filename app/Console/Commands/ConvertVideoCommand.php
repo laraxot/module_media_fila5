@@ -8,6 +8,7 @@ use FFMpeg\Format\Video\WebM;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Webmozart\Assert\Assert;
 
@@ -41,10 +42,11 @@ class ConvertVideoCommand extends Command
             $this->info("{$percentage}% transcoded");
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
-        $export
-            ->toDisk($disk)
-            ->inFormat($format)
-            ->save($file_new);
+
+        $formattedExport = MediaExporterResolver::from(
+            $export->toDisk($disk)
+        )->inFormat($format);
+        $formattedExport->save($file_new);
 
         return Storage::disk($disk)->url($file_new);
     }

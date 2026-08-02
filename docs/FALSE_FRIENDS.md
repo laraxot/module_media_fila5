@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_raahZ0
-=======
 # False Friends – Media Module
 
 | Concept | Misconception | Correction |
@@ -16,5 +14,4 @@
 ```javascript
 // ❌ FALSE FRIEND - CDN dependency
 const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/marker-icon.png';
->>>>>>> .merge_file_QSaXzc
 ```

@@ -6,13 +6,6 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
-<<<<<<< .merge_file_Mm6juC
-use PHPUnit\Framework\Assert;
-use Webmozart\Assert\Assert as WebmozartAssert;
-
-require_once dirname(__DIR__, 2).'/Pest.php';
-=======
->>>>>>> .merge_file_PNOrxq
 
 uses(TestCase::class);
 
@@ -27,18 +20,8 @@ it('can create media with minimal data', function (): void {
         'size' => 1024,
     ]);
 
-<<<<<<< .merge_file_Mm6juC
-    Assert::assertInstanceOf(Media::class, $media);
-
-    $key = $media->getKey();
-    WebmozartAssert::integerish($key);
-
-    assertMediaTableHas('media', [
-        'id' => (int) $key,
-=======
     $this->assertDatabaseHas('media', [
         'id' => (int) $media->getKey(),
->>>>>>> .merge_file_PNOrxq
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',

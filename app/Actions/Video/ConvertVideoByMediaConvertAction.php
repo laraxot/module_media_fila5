@@ -12,6 +12,7 @@ namespace Modules\Media\Actions\Video;
 use Exception;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
+use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -38,21 +39,24 @@ class ConvertVideoByMediaConvertAction
             throw new Exception('Il nome del file convertito non è stato specificato');
         }
 
-        // Instanziamo il formato prima di usarlo
-        $formatInstance = new $format;
-
-        FFMpeg::fromDisk($data->disk)
+        $exportedMedia = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
-            ->export()
-            ->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
-                $record->update([
-                    'percentage' => $percentage,
-                    'remaining' => $remaining,
-                    'rate' => $rate,
-                ]);
-            })
-            ->addFilter('-preset', 'ultrafast')
-            ->save($file_new, $formatInstance);
+            ->export();
+
+        $exportedMedia->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
+            $record->update([
+                'percentage' => $percentage,
+                'remaining' => $remaining,
+                'rate' => $rate,
+            ]);
+        });
+
+        $exportedMedia = MediaExporterResolver::from(
+            $exportedMedia->toDisk($data->disk)
+        );
+        $exportedMedia->addFilter('-preset', 'ultrafast');
+        $exportedMedia->inFormat($format);
+        $exportedMedia->save($file_new);
 
         $record->update([
             'status' => 'completed',

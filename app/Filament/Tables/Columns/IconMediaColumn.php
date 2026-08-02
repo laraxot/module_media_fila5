@@ -19,7 +19,6 @@ class IconMediaColumn extends IconColumn
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
             }
-
         })
             ->icon('heroicon-o-document-text')
             ->color(function ($record) use ($attachment): string {

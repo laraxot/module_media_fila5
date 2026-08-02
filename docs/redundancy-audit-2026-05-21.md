@@ -6,14 +6,11 @@ tags: [redundancy, duplicate-code, filament, docs]
 created: 2026-05-21
 related:
   - docs/wiki/troubleshooting/filament-hasmediaform-redeclare.md
-  - https://github.com/laraxot/base_fixcity_fila5/issues/89
+  - https://github.com/laraxot/platform/issues/89
 ---
 
 # Media redundancy audit 2026-05-21
 
-<<<<<<< .merge_file_YVw6Cz
-Vedi il file canonico: [redundancy-audit.md](./redundancy-audit.md)
-=======
 Scope: static audit from repo root over module PHP, Blade, and docs.
 
 High-risk findings:
@@ -33,4 +30,3 @@ Suggested cleanup order:
 2. Pick one canonical performance doc and redirect the variants.
 3. Move historical evidence out of forbidden archive paths only under a dedicated docs cleanup issue.
 4. Re-run `php artisan optimize:clear` and Composer autoload checks after any namespace cleanup.
->>>>>>> .merge_file_lKPVSu

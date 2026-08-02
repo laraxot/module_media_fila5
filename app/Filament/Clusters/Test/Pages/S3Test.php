@@ -249,10 +249,7 @@ class S3Test extends XotBasePage
         }
 
         Assert::string($filePath);
-<<<<<<< .merge_file_52UpWs
 
-=======
->>>>>>> .merge_file_Niiy40
         // Generate CloudFront signed URL for attachment
         $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
         dddx([
@@ -272,23 +269,14 @@ class S3Test extends XotBasePage
      */
     private function buildConfigDebugData(): array
     {
-<<<<<<< .merge_file_52UpWs
-        $key = config('filesystems.disks.s3.key', '');
-        Assert::string($key);
-=======
         $s3Key = config('filesystems.disks.s3.key', '');
         Assert::string($s3Key);
->>>>>>> .merge_file_Niiy40
 
         return [
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
-<<<<<<< .merge_file_52UpWs
-                'AWS_ACCESS_KEY_ID' => substr($key, 0, 8).'...',
-=======
                 'AWS_ACCESS_KEY_ID' => substr($s3Key, 0, 8).'...',
->>>>>>> .merge_file_Niiy40
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),

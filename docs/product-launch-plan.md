@@ -1,17 +1,3 @@
-<<<<<<< .merge_file_w4ojL5
----
-title: "Media Module - Product Launch Plan"
-module: "Media"
-type: concept
-tags: [PRODUCT, LAUNCH, PLAN]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "product launch plan"
-related:
-  - "./webm.md"
----
-=======
->>>>>>> .merge_file_BSKbwo
 # Media - Product Launch Plan
 # Media Module - Product Launch Plan
 
