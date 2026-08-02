@@ -268,3 +268,4 @@ phpmd*
 .cursor
 .opencode
 phpstan*-*
+phpmd*.*
