@@ -51,25 +51,28 @@ class Media extends SpatieMedia
         return $result;
     }
 
-    /** @return BelongsTo<TemporaryUpload, Media> */
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Modules\Media\Models\TemporaryUpload, \Modules\Media\Models\Media>
+     * @phpstan-return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Modules\Media\Models\TemporaryUpload, \Modules\Media\Models\Media>
+     */
     public function temporaryUpload(): BelongsTo
     {
-        return $this->belongsTo(TemporaryUpload::class);
+        /** @var \Illuminate\Database\Eloquent\Relations\BelongsTo<\Modules\Media\Models\TemporaryUpload, \Modules\Media\Models\Media> $relation */
+        $relation = $this->belongsTo(TemporaryUpload::class);
+
+        return $relation;
     }
 
-    /** @return BelongsTo<Model, Media> */
-    public function creator(): BelongsTo
-    {
-        /** @var class-string<Model> $userClass */
-        $userClass = XotData::make()->getUserClass();
-
-        return $this->belongsTo($userClass, 'created_by');
-    }
-
-    /** @return HasMany<MediaConvert, Media> */
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, \Modules\Media\Models\Media>
+     * @phpstan-return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, \Modules\Media\Models\Media>
+     */
     public function mediaConverts(): HasMany
     {
-        return $this->hasMany(MediaConvert::class);
+        /** @var \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, \Modules\Media\Models\Media> $relation */
+        $relation = $this->hasMany(MediaConvert::class);
+
+        return $relation;
     }
 
     public function getUrlConv(string $conv): string
@@ -128,7 +131,6 @@ class Media extends SpatieMedia
             'updated_by' => 'string',
             'created_by' => 'string',
             'deleted_by' => 'string',
-            // 'attachment_type' => AttachmentTypeEnum::class,
             'manipulations' => 'array',
             'custom_properties' => 'array',
             'generated_conversions' => 'array',
