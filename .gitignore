@@ -1,5 +1,8 @@
+<<<<<<< .merge_file_O6AVwO
 
 !.env.example
+=======
+>>>>>>> .merge_file_262pFF
 # ==============================================
 # AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
 # Auto-generated forbidden paths — do not edit manually
@@ -18,15 +21,20 @@
 # GIT SPECIFIC
 # LARAVEL SPECIFIC
 # LARAXOT MODULE MEDIA - .GITIGNORE
+<<<<<<< .merge_file_O6AVwO
 # LOG FILES
 # Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
 # Laraxot — quality tool configs forbidden in module/theme root (use laravel/phpinsights.php, laravel/rector.php)
 # MODULE SPECIFIC - MEDIA
+=======
+# ==============================================
+>>>>>>> .merge_file_262pFF
 # Modulo Media Laraxot - Template standardizzato
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
 # SYSTEM FILES
 # Ultimo aggiornamento: 2025-01-06
+<<<<<<< .merge_file_O6AVwO
 # 🚫 File specifici del progetto
 *.backup
 *.backup-*
@@ -34,6 +42,36 @@
 *.backup_*
 *.bak
 *.bakcup
+=======
+# ==============================================
+
+# ==============================================
+# DEPENDENCIES & PACKAGES
+# ==============================================
+vendor/
+/vendor/
+node_modules/
+/node_modules/
+/docs/vendor/
+package-lock.json
+yarn.lock
+yarn-error.log
+composer.lock
+
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
+/build
+/build/
+build/
+dist/
+docs/cache/
+cache/
+
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+>>>>>>> .merge_file_262pFF
 *.cache
 *.exe
 *.fila2
@@ -50,13 +88,87 @@
 *.swp
 *.tmp
 *:Zone.Identifier
+<<<<<<< .merge_file_O6AVwO
+=======
+v8-compile-cache-*
+.php-cs-fixer.cache
+.phpunit.result.cache
+
+# ==============================================
+# LOG FILES
+# ==============================================
+*.log
+error_log
+npm-debug.log*
+npm-debug.log
+yarn-error.log*
+lerna-debug.log*
+
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
+bootstrap/compiled.php
+app/storage/
+public/storage
+public/hot
+public_html/storage
+public_html/hot
+storage/*.key
+.env
+.env.*
+!.env.example
+
+# ==============================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================
+Homestead.yaml
+Homestead.json
+/.vagrant
+/.idea
+.phpintel
+
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
+.git-rewrite/
+.git-rewrite
+.git-blame-ignore-revs
+
+# ==============================================
+# SYSTEM FILES
+# ==============================================
+>>>>>>> .merge_file_262pFF
 .DS_Store
 .DS_Store?
 .Spotlight-V100
 .Trashes
+<<<<<<< .merge_file_O6AVwO
 ._*
 .circleci
 .claude-audit
+=======
+ehthumbs.db
+Thumbs.db
+
+# ==============================================
+# BACKUP FILES
+# ==============================================
+*.old
+*.old1
+*.old2
+*.backup
+*.backup.*
+*.backup-*
+*.backup_*
+*.bak
+*.bakcup
+*.new
+
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
+.windsurf/
+>>>>>>> .merge_file_262pFF
 .cursor/
 .devcontainer
 .devcontainer/
@@ -70,6 +182,7 @@
 .php-cs-fixer.cache
 .phpintel
 .phpstorm.meta.php
+<<<<<<< .merge_file_O6AVwO
 .phpunit.result.cache
 .ralph
 .vscode/
@@ -99,11 +212,29 @@ config/local.php
 database/Factories_
 database/Factories_old
 database/Factories_old/
+=======
+
+# ==============================================
+# DOCUMENTATION CACHE
+# ==============================================
+docs/phpstan/
+docs/cache/
+docs/archive/
+docs/archive/**
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+resources/views/Components_old/
+resources/views/Components_old
+database/Migrations_old/
+>>>>>>> .merge_file_262pFF
 database/Migrations_old
 database/Migrations_old/
 database/Seeders_old
 database/Seeders_old/
 database_old
+<<<<<<< .merge_file_O6AVwO
 database_old/
 dist/
 docs/**/*-[0-9].mdarchive/
@@ -120,8 +251,20 @@ lang/lang/
 laravel
 legacy/
 lerna-debug.log*
+=======
+
+# ==============================================
+# MODULE SPECIFIC - MEDIA
+# ==============================================
+# File di configurazione locale
+config/local.php
+config/development.php
+
+# File media temporanei
+>>>>>>> .merge_file_262pFF
 media/temp/
 media/thumbnails/temp/
+<<<<<<< .merge_file_O6AVwO
 media/uploads/temp/
 media_test_data.json
 node_modules/
@@ -156,3 +299,25 @@ yarn.lock
 
 # Root quality tool configs forbidden in module root
 phpmd*
+=======
+
+# Cache media
+storage/media/
+storage/thumbnails/
+
+# File di test media
+media_test_data.json
+test_media_files/
+
+# ==============================================
+# END OF MEDIA .GITIGNORE
+# ==============================================
+
+# 🚫 File specifici del progetto
+*.fila2
+laravel
+public_html
+lang/lang/
+_docs/
+_docs/
+>>>>>>> .merge_file_262pFF

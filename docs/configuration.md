@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_ckJKPJ
 ---
 title: "Configuration"
 module: "Media"
@@ -10,3 +11,6 @@ related:
   - "./webm.md"
 ---
 # Configuration
+=======
+# Configuration
+>>>>>>> .merge_file_B7eRHO

@@ -1,14 +1,3 @@
----
-title: "Cyclomatic Complexity Report - Module: Media"
-module: "Media"
-type: concept
-tags: [cyclomatic, complexity, report]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "cyclomatic complexity report"
-related:
-  - "./webm.md"
----
 # Cyclomatic Complexity Report - Module: Media
 
 **Analyzer:** Super Mucca 🐮

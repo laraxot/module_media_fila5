@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
+uses(\Modules\Media\Tests\TestCase::class);
+
 use Modules\Media\Actions\AttachMediaAction;
+<<<<<<< .merge_file_3oUfhF
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
+=======
+>>>>>>> .merge_file_5fetWj
 use Spatie\QueueableAction\QueueableAction;
-
-uses(TestCase::class);
 
 describe('AttachMediaAction', function () {
     it('uses QueueableAction trait', function (): void {

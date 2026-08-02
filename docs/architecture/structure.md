@@ -1,14 +1,3 @@
----
-title: "Modulo Media"
-module: "Media"
-type: concept
-tags: [structure]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "structure"
-related:
-  - "./webm.md"
----
 # Modulo Media
 
 Data: 2025-04-23 19:09:56

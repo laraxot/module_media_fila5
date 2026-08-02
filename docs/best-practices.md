@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_MFqRVg
 ---
 title: "Best Practices"
 module: "Media"
@@ -10,3 +11,6 @@ related:
   - "./webm.md"
 ---
 # Best Practices
+=======
+# Best Practices
+>>>>>>> .merge_file_mKxIIE

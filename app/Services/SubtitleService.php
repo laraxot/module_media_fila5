@@ -8,16 +8,16 @@ use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+use SimpleXMLElement;
+use Webmozart\Assert\Assert;
+
 use function Safe\file_put_contents;
 use function Safe\fopen;
 use function Safe\realpath;
 use function Safe\simplexml_load_string;
-use SimpleXMLElement;
 
 /**
  * SubtitleService.
- *
- * @phpstan-type SubtitleItem array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}
  */
 class SubtitleService
 {
@@ -41,7 +41,7 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-            self::$instance = new self();
+            self::$instance = new self;
         }
 
         return self::$instance;
@@ -101,7 +101,7 @@ class SubtitleService
     }
 
     /**
-     * Restituisce i sottotitoli dal file.
+     * restituisce i sottotitoli, dal file ..
      *
      * @return list<SubtitleItem>
      */
@@ -112,10 +112,11 @@ class SubtitleService
             return [];
         }
 
-        return match (Str::lower($info['extension'])) {
-            'xml' => $this->getFromXml(),
-            default => [],
-        };
+        $func = 'getFrom'.Str::studly($info['extension']);
+
+        Assert::isArray($res = $this->{$func}());
+
+        return $res;
     }
 
     /**
@@ -129,7 +130,9 @@ class SubtitleService
     }
 
     /**
-     * @return list<SubtitleItem>
+     * @return array<int, array<string, float|int|string|mixed>>
+     *
+     * @psalm-return list{0?: array{sentence_i: int<0, max>, item_i: int<0, max>, start: float|int, end: float|int, time: string, text: mixed},...}
      */
     public function getFromXml(): array
     {
@@ -171,6 +174,17 @@ class SubtitleService
         return $data;
     }
 
+    private function secondsToHms(int|float $seconds): string
+    {
+        $totalMs = (int) round($seconds * 1000);
+        $hours = intdiv($totalMs, 3_600_000);
+        $minutes = intdiv($totalMs % 3_600_000, 60_000);
+        $secs = intdiv($totalMs % 60_000, 1000);
+        $ms = $totalMs % 1000;
+
+        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
+    }
+
     /**
      * Undocumented function.
      */
@@ -201,16 +215,5 @@ class SubtitleService
         $header = "WEBVTT\n\n";
 
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
-    }
-
-    private function secondsToHms(int|float $seconds): string
-    {
-        $totalMs = (int) round($seconds * 1000);
-        $hours = intdiv($totalMs, 3_600_000);
-        $minutes = intdiv($totalMs % 3_600_000, 60_000);
-        $secs = intdiv($totalMs % 60_000, 1000);
-        $ms = $totalMs % 1000;
-
-        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
     }
 }

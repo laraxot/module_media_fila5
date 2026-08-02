@@ -25,8 +25,13 @@ class GetFileInfoAction extends BaseS3Action
             $metadata = $result['@metadata'] ?? [];
             $effectiveUri = null;
             if (is_array($metadata) && isset($metadata['effectiveUri'])) {
+<<<<<<< .merge_file_EeC6JS
                 $effectiveUri = $metadata['effectiveUri'];
                 Assert::string($effectiveUri);
+=======
+                Assert::string($metadata['effectiveUri']);
+                $effectiveUri = $metadata['effectiveUri'];
+>>>>>>> .merge_file_BU5x9L
             }
 
             $fileInfo = [
