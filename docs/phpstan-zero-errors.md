@@ -6,9 +6,9 @@ created: 2026-06-10
 updated: 2026-06-10
 qmd: "media phpstan pest assert database helper"
 issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/330"
+  - "https://github.com/laraxot/platform/issues/330"
 discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/331"
+  - "https://github.com/laraxot/platform/discussions/331"
 related:
   - "phpstan.md"
   - "../../../../docs/wiki/troubleshooting/phpstan-test-assertion-chaining.md"
@@ -46,4 +46,4 @@ php scripts/phpstan/fix-pest-tests.php Modules/Media/tests
 
 ## Story
 
-STORY-304 · issue [#330](https://github.com/laraxot/base_fixcity_fila5/issues/330)
+STORY-304 · issue [#330](https://github.com/laraxot/platform/issues/330)

@@ -4,28 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class);
 
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
-<<<<<<< .merge_file_LW5eR9
-use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\TestCase;
-
-uses(TestCase::class);
-
-it('builds one upload component for each attachment', function (): void {
-    $form = (new GetAttachmentsSchemaAction)->execute(['invoice', 'contract']);
-
-    Assert::assertCount(2, $form);
-    Assert::assertContainsOnlyInstancesOf(FileUpload::class, $form);
-    Assert::assertSame('invoice', $form[0]->getName());
-    Assert::assertSame('contract', $form[1]->getName());
-});
-
-it('configures attachment storage and validation', function (): void {
-    $component = (new GetAttachmentsSchemaAction)->execute(['invoice'], 'private')[0];
-=======
+use Modules\Media\Tests\TestCase;
 
 /**
  * Test that the action returns attachment schema correctly.
@@ -226,7 +209,7 @@ it('has correct remove setting', function (): void {
     // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
     // By default, Filament file uploads are removable unless specifically configured otherwise
     // We can verify that the component is a FileUpload
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component)->toBeInstanceOf(FileUpload::class);
 });
 
 /**
@@ -293,7 +276,7 @@ it('has correct panel', function (): void {
     // Assert
     $component = $form[0];
     // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component)->toBeInstanceOf(FileUpload::class);
 });
 
 /**
@@ -311,7 +294,7 @@ it('has correct help text', function (): void {
     $component = $form[0];
     // FileUpload has helperText property but no getHelper method
     // We can verify that the component is a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    expect($component)->toBeInstanceOf(FileUpload::class);
 });
 
 /**
@@ -324,7 +307,6 @@ it('has correct placeholder', function (): void {
 
     // Act
     $form = $action->execute($attachments);
->>>>>>> .merge_file_7aRJq7
 
     Assert::assertSame('private', $component->getDiskName());
     Assert::assertSame('temp', $component->getDirectory());

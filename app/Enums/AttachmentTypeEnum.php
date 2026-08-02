@@ -14,11 +14,17 @@ enum AttachmentTypeEnum: string implements HasLabel
     case DOCUMENT = 'document';
     case MANUAL = 'manual';
 
+    /**
+     * @return array<string, string|null>
+     */
     public static function getTypeNoteDescriptionsByValues(): array
     {
-        return collect(self::cases())
-            ->mapWithKeys(static fn (self $case): array => [$case->value => $case->getTypeNote()])
-            ->toArray();
+        $result = [];
+        foreach (self::cases() as $case) {
+            $result[$case->value] = $case->getTypeNote();
+        }
+
+        return $result;
     }
 
     /* Method Modules\Media\Enums\AttachmentTypeEnum::operationCases() never returns null so it can be removed from the return type
