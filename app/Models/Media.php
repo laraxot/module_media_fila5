@@ -255,7 +255,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
-    /** @phpstan-ignore-next-line */
+    /** @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\MediaFactory, Media> */
     use HasXotFactory;
     use Updater;
 
