@@ -75,9 +75,7 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-    /**
-     */
-    /** @phpstan-ignore-next-line */
+    /** @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory, TemporaryUpload> */
     use HasXotFactory;
 
     use InteractsWithMedia;
