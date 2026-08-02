@@ -264,3 +264,4 @@ phpmd*
 /docs/legacy
 .agents
 .claude
+.codex
