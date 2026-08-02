@@ -28,7 +28,7 @@ class SubtitleService
 
     public string $field_name = 'txt';
 
-    /** @var list<SubtitleItem> */
+    /** @var list<array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}> */
     public array $subtitles = [];
 
     public Model $model;
@@ -101,9 +101,9 @@ class SubtitleService
     }
 
     /**
-     * restituisce i sottotitoli, dal file ..
+     * restituisce i sottotitoli, dal file.
      *
-     * @return list<SubtitleItem>
+     * @return list<array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}>
      */
     public function get(): array
     {
@@ -112,11 +112,10 @@ class SubtitleService
             return [];
         }
 
-        $func = 'getFrom'.Str::studly($info['extension']);
-
-        Assert::isArray($res = $this->{$func}());
-
-        return $res;
+        return match (Str::lower($info['extension'])) {
+            'xml' => $this->getFromXml(),
+            default => [],
+        };
     }
 
     /**
@@ -130,9 +129,7 @@ class SubtitleService
     }
 
     /**
-     * @return array<int, array<string, float|int|string|mixed>>
-     *
-     * @psalm-return list{0?: array{sentence_i: int<0, max>, item_i: int<0, max>, start: float|int, end: float|int, time: string, text: mixed},...}
+     * @return list<array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}>
      */
     public function getFromXml(): array
     {

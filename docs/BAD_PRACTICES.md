@@ -1,6 +1,3 @@
-<<<<<<< .merge_file_gXPaLg
-```
-=======
 # Bad Practices – Media Module
 
 - ❌ **VIOLATE** SVG asset location rule (see `svg-asset-location.md`) using invalid paths
@@ -17,4 +14,3 @@
 // ✅ CORRECT: SVG in standard location
 @svg('map-marker.svg')
 ```
->>>>>>> .merge_file_N6VC1d

@@ -27,8 +27,4 @@
 
 ---
 
-<<<<<<< .merge_file_zAEwTc
-- [Dependency intelligence](dependency-intelligence.md)
-=======
 **Ultimo Aggiornamento**: 2026-03-24
->>>>>>> .merge_file_goXZes

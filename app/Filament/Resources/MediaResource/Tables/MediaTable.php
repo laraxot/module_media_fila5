@@ -74,15 +74,13 @@ class MediaTable extends XotBaseResourceTable
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
-                ->action(static function ($record) {
-                    // PHPStan Level 10: isset() per Eloquent magic property
-                    if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
-                        throw new RuntimeException('Invalid record for download');
-                    }
+                ->action(static function (Media $record): \Symfony\Component\HttpFoundation\BinaryFileResponse {
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
 
-                    return response()->download($filePath, (string) $record->file_name);
+                    Assert::string($record->file_name, 'file_name must be string');
+
+                    return response()->download($filePath, $record->file_name);
                 }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')

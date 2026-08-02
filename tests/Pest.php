@@ -2,12 +2,6 @@
 
 declare(strict_types=1);
 
-<<<<<<< .merge_file_Fboosw
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
-use Modules\Media\Database\Factories\MediaFactory;
-=======
->>>>>>> .merge_file_TljFI7
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
 use Modules\Media\Tests\TestCase;
@@ -63,57 +57,10 @@ function makeMedia(array $attributes = []): Media
 
 function createMediaCollection(array $attributes = []): MediaCollection
 {
-<<<<<<< .merge_file_Fboosw
-    $columns = Schema::getColumnListing('media');
-
-    return array_values(array_filter(
-        $columns,
-        static fn (mixed $column): bool => is_string($column) && $column !== '',
-    ));
-}
-
-/**
- * @param  array<string, mixed>  $payload
- * @param  array<int, string>  $columns
- * @return array<string, mixed>
- */
-function mediaPayloadSet(array $payload, array $columns, string $column, mixed $value): array
-{
-    if (in_array($column, $columns, true)) {
-        $payload[$column] = $value;
-    }
-
-    return $payload;
-}
-
-function mediaIntegerish(mixed $value): int
-{
-    Webmozart\Assert\Assert::integerish($value);
-
-    return (int) $value;
-}
-
-/**
- * @param  class-string  $class
- */
-function assertMediaUsesQueueableAction(string $class): void
-{
-    assertMediaListContains(
-        'Spatie\QueueableAction\QueueableAction',
-        (new ReflectionClass($class))->getTraitNames(),
-    );
-}
-
-/**
- * @param  class-string  $class
- */
-function assertMediaDeclaresStrictTypes(string $class): void
-=======
     return MediaCollection::factory()->create($attributes);
 }
 
 function makeMediaCollection(array $attributes = []): MediaCollection
->>>>>>> .merge_file_TljFI7
 {
     return MediaCollection::factory()->make($attributes);
 }

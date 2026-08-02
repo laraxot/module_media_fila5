@@ -1,6 +1,3 @@
-<<<<<<< .merge_file_KI0as2
-**Assignee**: TBD
-=======
 # Task 001: Implement Media Library Management System
 
 ## Description
@@ -248,4 +245,3 @@ The Media module needs a robust media management system for handling images, vid
 
 **Status**: Pending
 **Assignee**: TBD
->>>>>>> .merge_file_yrKXo3

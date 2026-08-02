@@ -4,9 +4,6 @@
 - Owner: Modules/Media
 - Files with conflict markers: 1
 
-<<<<<<< .merge_file_s45Hti
-Vedi il file canonico: [git-merge-conflict-inventory.md](./git-merge-conflict-inventory.md)
-=======
 ## Files
 
 - docs/wiki/README.md
@@ -15,4 +12,3 @@ Vedi il file canonico: [git-merge-conflict-inventory.md](./git-merge-conflict-in
 
 - Inventory generated from `rg -l "^(<<<<<<<|=======|>>>>>>>)"`.
 - Use this list as a volatile coordination map; re-open each file before editing because other agents may resolve items in parallel.
->>>>>>> .merge_file_1alvRj

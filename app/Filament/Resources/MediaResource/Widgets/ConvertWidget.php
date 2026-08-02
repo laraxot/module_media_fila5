@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
+use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
-use RuntimeException;
 
 class ConvertWidget extends XotBaseWidget
 {
@@ -76,20 +76,9 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
-        $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
-        if ($toDiskMedia === null) {
-            throw new RuntimeException('Failed to export media to disk');
-        }
-
-        $formattedMedia = $toDiskMedia->inFormat($format);
-        if ($formattedMedia === null || ! is_object($formattedMedia)) {
-            throw new RuntimeException('Failed to format media');
-        }
-
-        if (! method_exists($formattedMedia, 'save')) {
-            throw new RuntimeException('Formatted media does not have save method');
-        }
-
+        $formattedMedia = MediaExporterResolver::from(
+            $exportedMedia->toDisk($disk_mp4)
+        )->inFormat($format);
         $formattedMedia->save($file_new);
 
         while ($this->percentage < 100) {

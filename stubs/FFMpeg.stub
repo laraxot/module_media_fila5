@@ -1,0 +1,59 @@
+<?php
+
+namespace ProtoneMedia\LaravelFFMpeg\Support;
+
+/**
+ * Stub file for FFMpeg fluent interface type hints
+ */
+class FFMpeg
+{
+    /**
+     * @return ExportMovie
+     */
+    public function open(string $file): ExportMovie;
+}
+
+class Media
+{
+    /**
+     * @return ExportMovie
+     */
+    public function export(): ExportMovie;
+}
+
+class ExportMovie
+{
+    /**
+     * @param callable $callback
+     * @return self
+     */
+    public function onProgress(callable $callback);
+
+    /**
+     * @return ExportableMovie
+     */
+    public function toDisk(string $disk): ExportableMovie;
+
+    /**
+     * @return self
+     */
+    public function addFilter(string $filter, mixed ...$options);
+}
+
+class ExportableMovie
+{
+    /**
+     * @param object $format
+     * @return FormattedMovie
+     */
+    public function inFormat(object $format): FormattedMovie;
+}
+
+class FormattedMovie
+{
+    /**
+     * @param string $filename
+     * @return void
+     */
+    public function save(string $filename): void;
+}

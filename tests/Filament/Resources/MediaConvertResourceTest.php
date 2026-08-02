@@ -7,12 +7,7 @@ namespace Modules\Media\Tests\Filament\Resources;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Modules\Media\Filament\Resources\MediaConvertResource;
-<<<<<<< .merge_file_WXhHZL
-use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\TestCase;
-=======
 use Tests\TestCase;
->>>>>>> .merge_file_tzlzx9
 
 uses(TestCase::class);
 

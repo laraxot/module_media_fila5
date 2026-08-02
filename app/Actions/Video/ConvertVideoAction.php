@@ -1,25 +1,15 @@
 <?php
 
-<<<<<<< .merge_file_BzS0Tg
 declare(strict_types=1);
 
 namespace Modules\Media\Actions\Video;
 
-=======
->>>>>>> .merge_file_sZsGKP
 /**
  * @see https://github.com/protonemedia/laravel-ffmpeg
  */
-
-<<<<<<< .merge_file_BzS0Tg
-=======
-declare(strict_types=1);
-
-namespace Modules\Media\Actions\Video;
-
->>>>>>> .merge_file_sZsGKP
 use FFMpeg\Format\Video\X264;
 use Illuminate\Support\Facades\Storage;
+use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -41,10 +31,9 @@ class ConvertVideoAction
         $format = new X264;
         $format->setKiloBitrate(1000);
 
-        $toDiskMedia = $exportedMedia->toDisk($disk_mp4);
-
-        $formattedMedia = $toDiskMedia->inFormat($format);
-
+        $formattedMedia = MediaExporterResolver::from(
+            $exportedMedia->toDisk($disk_mp4)
+        )->inFormat($format);
         $formattedMedia->save($file_new);
 
         return Storage::disk($disk_mp4)->url($file_new);

@@ -1,6 +1,3 @@
-<<<<<<< .merge_file_wWIfUn
-- [ ] No boundary cases detected
-=======
 # Documentation Merge Conflict Task List
 
 ## INCOMPLETE (3 DOCS)
@@ -14,8 +11,7 @@
 ## COMPLETE (12 DOCS)
 - [x] `Modules/Sixteen/docs/html-parity-body-policy.md` - Added lint rule
 - [x] `Modules/Notify/Modules/Xot/docs/INDEX.md` - Added missing index references
-- [x] `Modules/Fixcity/docs/docs/INDEX.md` - Added DRY/KISS requirements
+- [x] `Modules/LegacyDomain/docs/docs/INDEX.md` - Added DRY/KISS requirements
 
 ## BOUNDARY CASES (0)
 - [ ] No boundary cases detected
->>>>>>> .merge_file_Rc3LhC
