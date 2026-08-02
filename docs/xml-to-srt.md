@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_TrhlpZ
 ---
 title: "Xml To Srt"
 module: "Media"
@@ -10,3 +11,7 @@ related:
   - "./webm.md"
 ---
 https://github.com/mokhosh/laravel-xml2srt
+=======
+https://github.com/mokhosh/laravel-xml2srt
+
+>>>>>>> .merge_file_nX6J0w

@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_xsS6y4
 ---
 title: "Ottimizzazioni Correzioni"
 module: "Media"
@@ -9,3 +10,6 @@ qmd: "ottimizzazioni correzioni"
 related:
   - "./webm.md"
 ---
+=======
+
+>>>>>>> .merge_file_kpRlTQ

@@ -1,14 +1,3 @@
----
-title: "ConvertVideoByMediaConvertAction"
-module: "Media"
-type: concept
-tags: [convert, video, by, media]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "convert video by media convert"
-related:
-  - "./webm.md"
----
 # ConvertVideoByMediaConvertAction
 
 ## Panoramica
@@ -83,6 +72,7 @@ $action = new ConvertVideoByMediaConvertAction();
 $convertedPath = $action->execute($data, $record);
 ```
 
+<<<<<<< .merge_file_m3L5pS
 ## Fix PHPStan (2026-07-15)
 
 `->addFilter()` viene inoltrato al driver `PHPFFMpeg` sottostante tramite
@@ -95,3 +85,6 @@ sul tipo restituito). Fix: si mantiene il riferimento a `$export` (il
 chiama `addFilter()` e `save()` come chiamate separate su `$export`, non concatenate.
 
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions)
+=======
+[Torna alla documentazione Media](/docs/modules/module_media.md#actions)
+>>>>>>> .merge_file_kOSJcB

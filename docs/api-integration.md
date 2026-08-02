@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_rcbGlC
 ---
 title: "API Integration"
 module: "Media"
@@ -10,3 +11,6 @@ related:
   - "./webm.md"
 ---
 # API Integration
+=======
+# API Integration
+>>>>>>> .merge_file_sZuakY

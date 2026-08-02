@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_QY0sdp
 ---
 module: theme
 topic: _competitors
@@ -16,6 +17,8 @@ qmd: " competitors"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> .merge_file_ampHLm
 # _competitors
 
 <!-- Contenuto migrato da _docs/_competitors.txt -->
