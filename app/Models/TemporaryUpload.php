@@ -7,76 +7,24 @@ namespace Modules\Media\Models;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Carbon;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
-use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Webmozart\Assert\Assert;
 
-/**
- * Modules\Media\Models\TemporaryUpload.
- *
- * @property int $id
- * @property string $session_id
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property MediaCollection<int, Media> $media
- * @property int|null $media_count
- *
- * @method static Builder<static>|TemporaryUpload newModelQuery()
- * @method static Builder<static>|TemporaryUpload newQuery()
- * @method static Builder<static>|TemporaryUpload query()
- * @method static Builder<static>|TemporaryUpload whereCreatedAt($value)
- * @method static Builder<static>|TemporaryUpload whereId($value)
- * @method static Builder<static>|TemporaryUpload whereSessionId($value)
- * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
- *
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property string|null $deleted_at
- * @property string|null $deleted_by
- *
- * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
- * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
- * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
- * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
- *
- * @mixin IdeHelperTemporaryUpload
- *
- * @method static TemporaryUploadFactory factory($count = null, $state = [])
- *
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $deleter
- * @property-read ProfileContract|null $updater
- * @property string|null $user_id
- * @property string $file_name
- * @property int|null $file_size
- * @property string|null $mime_type
- * @property string $status
- *
- * @method static Builder<static>|TemporaryUpload whereFileName($value)
- * @method static Builder<static>|TemporaryUpload whereFileSize($value)
- * @method static Builder<static>|TemporaryUpload whereMimeType($value)
- * @method static Builder<static>|TemporaryUpload whereStatus($value)
- * @method static Builder<static>|TemporaryUpload whereUserId($value)
- *
- * @mixin \Eloquent
- */
 class TemporaryUpload extends BaseModel implements HasMedia
-{
-    /** @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory, TemporaryUpload> */
-    use HasXotFactory;
+{/**
+ * @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory, TemporaryUpload>
+ */
+use HasXotFactory;
 
     use InteractsWithMedia;
     use MassPrunable;
@@ -88,20 +36,12 @@ class TemporaryUpload extends BaseModel implements HasMedia
     /** @var string */
     protected $connection = 'media';
 
-    /**
-     * @var array<string>
-     */
     protected $guarded = [];
 
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
         Assert::string($mediaModelClass = config('media-library.media_model'));
 
-        /**
-         * @var Media|null $media
-         *
-         * @phpstan-ignore-next-line
-         */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
         if (! $media) {
@@ -139,9 +79,6 @@ class TemporaryUpload extends BaseModel implements HasMedia
         string $uuid,
         string $name,
     ): self {
-        /**
-         * @var TemporaryUpload $temporaryUpload
-         */
         $temporaryUpload = static::create([
             'session_id' => $sessionId,
         ]);
@@ -168,9 +105,6 @@ class TemporaryUpload extends BaseModel implements HasMedia
         string $name,
         string $diskName,
     ): self {
-        /**
-         * @var TemporaryUpload $temporaryUpload
-         */
         $temporaryUpload = static::create([
             'session_id' => $sessionId,
         ]);
