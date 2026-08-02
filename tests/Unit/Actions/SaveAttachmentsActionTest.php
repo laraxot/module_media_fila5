@@ -4,13 +4,16 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
+use Exception;
 use Illuminate\Support\Facades\Storage;
+use Mockery;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;
+use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 
-uses(Tests\TestCase::class)->beforeEach(function () {
+uses(TestCase::class)->beforeEach(function () {
     Storage::fake('attachments');
 });
 
@@ -101,7 +104,7 @@ it('handles storage errors gracefully', function (): void {
 
     // Act & Assert
     expect(fn () => $action->execute($record, $attachments, $data, 'attachments'))
-        ->toThrow(\Exception::class, 'Storage error');
+        ->toThrow(Exception::class, 'Storage error');
 });
 
 it('uses correct disk', function (): void {

@@ -32,18 +32,21 @@ class Media extends SpatieMedia
 
     /**
      * @param  array<int, string>  $uuids
-     * @return MediaCollection<int, self>
+     * @return MediaCollection<int, static>
      */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
     {
         // MediaLibraryPro::ensureInstalled();
 
-        return static::whereIn('uuid', $uuids)
+        /** @var MediaCollection<int, static> $result */
+        $result = static::whereIn('uuid', $uuids)
             ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where(
                 'session_id',
                 session()->getId(),
             ))
             ->get();
+
+        return $result;
     }
 
     /**
@@ -51,8 +54,6 @@ class Media extends SpatieMedia
      */
     public function temporaryUpload(): BelongsTo
     {
-        // MediaLibraryPro::ensureInstalled();
-
         return $this->belongsTo(TemporaryUpload::class);
     }
 

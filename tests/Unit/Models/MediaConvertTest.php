@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
-uses(TestCase::class);
-
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 describe('MediaConvert Model', function () {
     it('extends BaseModel', function (): void {
