@@ -16,17 +16,24 @@ use Modules\Xot\Traits\Updater;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
-class Media extends SpatieMedia
-{/**
- * @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\MediaFactory, Media>
+/**
+ * @property string $path
+ * @property array<int, array<string, string|bool>> $conversions
  */
-use HasXotFactory;
+class Media extends SpatieMedia
+{
+    /** @phpstan-use HasXotFactory<MediaFactory, Media> */
+    use HasXotFactory;
 
     use Updater;
 
     /** @var string */
     protected $connection = 'media';
 
+    /**
+     * @param  array<int, string>  $uuids
+     * @return MediaCollection<int, self>
+     */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
     {
         // MediaLibraryPro::ensureInstalled();
@@ -39,6 +46,9 @@ use HasXotFactory;
             ->get();
     }
 
+    /**
+     * @return BelongsTo<TemporaryUpload, $this>
+     */
     public function temporaryUpload(): BelongsTo
     {
         // MediaLibraryPro::ensureInstalled();
@@ -46,6 +56,9 @@ use HasXotFactory;
         return $this->belongsTo(TemporaryUpload::class);
     }
 
+    /**
+     * @return BelongsTo<Model, $this>
+     */
     public function creator(): BelongsTo
     {
         /** @var class-string<Model> $userClass */
@@ -54,6 +67,9 @@ use HasXotFactory;
         return $this->belongsTo($userClass, 'created_by');
     }
 
+    /**
+     * @return HasMany<MediaConvert, $this>
+     */
     public function mediaConverts(): HasMany
     {
         return $this->hasMany(MediaConvert::class);
@@ -85,6 +101,9 @@ use HasXotFactory;
         return url($url);
     }
 
+    /**
+     * @return array<int, array{name: string, generated: bool, src: string}>
+     */
     public function getEntryConversionsAttribute(): array
     {
         $conversions = [];

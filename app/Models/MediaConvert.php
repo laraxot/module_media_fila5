@@ -39,6 +39,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $converted_file
  * @property string|null $disk
  * @property string|null $file
+ * @property string|null $path
  * @property Media|null $media
  *
  * @method static MediaConvertFactory factory($count = null, $state = [])
@@ -119,7 +120,10 @@ class MediaConvert extends BaseModel
             return null;
         }
 
-        return $this->media->path.'/'.$this->media->file_name;
+        $path = $this->media->path ?? '';
+        $fileName = $this->media->file_name ?? '';
+
+        return $path.'/'.$fileName;
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
@@ -127,12 +131,15 @@ class MediaConvert extends BaseModel
         if ($this->media === null) {
             return null;
         }
-        $info = pathinfo($this->media->file_name);
+        $info = pathinfo($this->media->file_name ?? '');
         // "dirname" => "."
         // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
-        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
+        $path = $this->media->path ?? '';
+        $filename = $info['filename'] ?? '';
+
+        return $path.'/conversions/'.$filename.'_'.$this->id.'.'.$this->format;
     }
 }
