@@ -20,11 +20,13 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Webmozart\Assert\Assert;
 
-class TemporaryUpload extends BaseModel implements HasMedia
-{/**
- * @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory, TemporaryUpload>
+/**
+ * @property string $session_id
  */
-use HasXotFactory;
+class TemporaryUpload extends BaseModel implements HasMedia
+{
+    /** @phpstan-use HasXotFactory<TemporaryUploadFactory, TemporaryUpload> */
+    use HasXotFactory;
 
     use InteractsWithMedia;
     use MassPrunable;
@@ -40,11 +42,13 @@ use HasXotFactory;
 
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
-        Assert::string($mediaModelClass = config('media-library.media_model'));
+        $mediaModelClass = config('media-library.media_model');
+        Assert::string($mediaModelClass);
+        /** @var class-string<Media> $mediaModelClass */
 
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
-        if (! $media) {
+        if (! $media instanceof Media) {
             return null;
         }
 
