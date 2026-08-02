@@ -127,7 +127,8 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
-        $this->getForm('form')?->fill([
+        /** @phpstan-ignore-next-line */
+        $this->form->fill([
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -231,7 +232,8 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
-        $formState = $this->getForm('form')?->getState() ?? [];
+        /** @phpstan-ignore-next-line */
+        $formState = $this->form->getState();
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
@@ -247,7 +249,10 @@ class S3Test extends XotBasePage
         }
 
         Assert::string($filePath);
+<<<<<<< .merge_file_52UpWs
 
+=======
+>>>>>>> .merge_file_Niiy40
         // Generate CloudFront signed URL for attachment
         $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
         dddx([
@@ -267,14 +272,23 @@ class S3Test extends XotBasePage
      */
     private function buildConfigDebugData(): array
     {
+<<<<<<< .merge_file_52UpWs
         $key = config('filesystems.disks.s3.key', '');
         Assert::string($key);
+=======
+        $s3Key = config('filesystems.disks.s3.key', '');
+        Assert::string($s3Key);
+>>>>>>> .merge_file_Niiy40
 
         return [
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
+<<<<<<< .merge_file_52UpWs
                 'AWS_ACCESS_KEY_ID' => substr($key, 0, 8).'...',
+=======
+                'AWS_ACCESS_KEY_ID' => substr($s3Key, 0, 8).'...',
+>>>>>>> .merge_file_Niiy40
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
@@ -386,6 +400,13 @@ class S3Test extends XotBasePage
      */
     private function test_s3_permissions(): array
     {
+        $tests = [
+            'ListBucket' => 's3:ListBucket',
+            'PutObject' => 's3:PutObject',
+            'GetObject' => 's3:GetObject',
+            'DeleteObject' => 's3:DeleteObject',
+        ];
+
         $results = [
             'title' => '🔒 S3 Permissions',
             'status' => 'info',
@@ -590,7 +611,7 @@ class S3Test extends XotBasePage
         }
 
         $output = [];
-        foreach ($this->debugResults as $result) {
+        foreach ($this->debugResults as $category => $result) {
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
@@ -632,7 +653,8 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
-            $formState = $this->getForm('form')?->getState() ?? [];
+            /** @phpstan-ignore-next-line */
+            $formState = $this->form->getState();
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -758,7 +780,8 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
-        $this->getForm('form')?->fill([
+        /** @phpstan-ignore-next-line */
+        $this->form->fill([
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -781,7 +804,8 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
-            $formState = $this->getForm('form')?->getState() ?? [];
+            /** @phpstan-ignore-next-line */
+            $formState = $this->form->getState();
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;

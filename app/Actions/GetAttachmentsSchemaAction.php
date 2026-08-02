@@ -12,8 +12,9 @@ use Webmozart\Assert\Assert;
 class GetAttachmentsSchemaAction
 {
     /**
-     * @param  array<string>  $attachments
-     * @return array<FileUpload>
+     * @param array<string|int, string> $attachments
+     *
+     * @return array<int, FileUpload>
      */
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
