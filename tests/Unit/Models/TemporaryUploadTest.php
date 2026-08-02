@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
-uses(TestCase::class);
-
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
 
 describe('TemporaryUpload Model', function () {
     it('extends BaseModel', function (): void {

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
-uses(TestCase::class);
-
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
+
+uses(TestCase::class);
 
 describe('Media Model', function () {
     it('extends SpatieMedia', function (): void {
