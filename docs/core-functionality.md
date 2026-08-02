@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_eiIEET
 ---
 title: "Core Functionality"
 module: "Media"
@@ -10,3 +11,6 @@ related:
   - "./webm.md"
 ---
 # Core Functionality
+=======
+# Core Functionality
+>>>>>>> .merge_file_dMImrX

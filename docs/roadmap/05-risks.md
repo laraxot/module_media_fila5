@@ -1,14 +1,3 @@
----
-title: "Risks - Media"
-module: "Media"
-type: concept
-tags: [05, risks]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "05 risks"
-related:
-  - "./webm.md"
----
 # Risks - Media
 
 ## Top Risks

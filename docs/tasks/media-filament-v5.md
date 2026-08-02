@@ -1,14 +1,3 @@
----
-title: "Task: Media Filament v5 Alignment (Clusters)"
-module: "Media"
-type: concept
-tags: [media, filament, v5]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "media filament v5"
-related:
-  - "./webm.md"
----
 # Task: Media Filament v5 Alignment (Clusters)
 
 ## 📋 Obiettivo

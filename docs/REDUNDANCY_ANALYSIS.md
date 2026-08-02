@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_1NC5qq
 ---
 title: "REDUNDANCY ANALYSIS"
 module: "Media"
@@ -10,3 +11,6 @@ related:
   - "./webm.md"
 ---
 Redundancy analysis available: docs/analysis/redundancies/summary.md
+=======
+Redundancy analysis available: docs/analysis/redundancies/summary.md
+>>>>>>> .merge_file_kEi9WK

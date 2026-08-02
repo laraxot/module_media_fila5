@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_0Nvzk5
 ---
 title: "Media Module - File Management Architecture"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "file management architecture"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> .merge_file_J0OZPL
 # Media Module - File Management Architecture
 
 ## 🎯 Module Overview
