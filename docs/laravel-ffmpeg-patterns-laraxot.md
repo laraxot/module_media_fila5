@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Laravel-FFMpeg – Pattern Laraxot nel Modulo Media"
+module: "Media"
+type: pattern
+tags: [laravel, ffmpeg, patterns, laraxot]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "laravel ffmpeg patterns laraxot"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Laravel-FFMpeg – Pattern Laraxot nel Modulo Media
 
 Questa guida descrive come usare `protonemedia/laravel-ffmpeg` seguendo i pattern architetturali
@@ -380,4 +394,8 @@ $format->setKiloBitrate(1500);
 - [ ] Operazioni pesanti in `QueueableAction` o `Job`, mai in controller/blade
 - [ ] PHPStan livello 10 superato senza soppressioni
 - [ ] Progress callback tipizzato correttamente
+<<<<<<< HEAD
 - [ ] `FFMpeg::cleanupTemporaryFiles()` chiamato dopo operazioni su URL remote
+=======
+- [ ] `FFMpeg::cleanupTemporaryFiles()` chiamato dopo operazioni su URL remote
+>>>>>>> be7d0c3 (.)

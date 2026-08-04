@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Filament Version Declaration — Media"
+module: "Media"
+type: concept
+tags: [filament, version]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament version"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Filament Version Declaration — Media
 
 **Current Version**: Filament v5 (Livewire v4 + Schemas)
@@ -14,4 +28,8 @@ All resources, forms, tables, infolists, widgets and actions must follow the v5 
 
 **Last verified**: 2026-05-21
 
+<<<<<<< HEAD
 **Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+=======
+**Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+>>>>>>> be7d0c3 (.)

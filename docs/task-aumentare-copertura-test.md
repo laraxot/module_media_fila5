@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Aumentare Copertura Test - Media"
+module: "Media"
+type: concept
+tags: [task, aumentare, copertura, test]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "task aumentare copertura test"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Task: Aumentare Copertura Test - Media
 
 **Modulo**: Media
@@ -18,4 +32,8 @@
 
 - [ ] 10+ nuovi test
 - [ ] Mock per servizi esterni (FFmpeg, S3)
+<<<<<<< HEAD
 - [ ] Copertura al 50%
+=======
+- [ ] Copertura al 50%
+>>>>>>> be7d0c3 (.)

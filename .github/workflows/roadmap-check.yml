@@ -16,10 +16,18 @@ jobs:
 
     steps:
       - name: Checkout code
+<<<<<<< HEAD
         uses: actions/checkout@v4
+=======
+        uses: actions/checkout@v7
+>>>>>>> be7d0c3 (.)
 
       - name: Verify roadmap file
         run: |
           if [ ! -f docs/roadmap.md ]; then
             echo "::warning::docs/roadmap.md mancante"
+<<<<<<< HEAD
           fi
+=======
+          fi
+>>>>>>> be7d0c3 (.)

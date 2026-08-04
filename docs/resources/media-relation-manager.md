@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "MediaRelationManager"
+module: "Media"
+type: concept
+tags: [media, relation, manager]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "media relation manager"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # MediaRelationManager
 
 Il MediaRelationManager è un componente Filament che gestisce le relazioni media seguendo le convenzioni Laraxot.
@@ -78,4 +92,8 @@ class CustomMediaRelationManager extends MediaRelationManager
 ```
 ## Collegamenti tra versioni di media-relation-manager.md
 * [media-relation-manager.md](../../../media/docs/filament/relation-managers/media-relation-manager.md)
+<<<<<<< HEAD
 * [media-relation-manager.md](../../../media/docs/resources/media-relation-manager.md)
+=======
+* [media-relation-manager.md](../../../media/docs/resources/media-relation-manager.md)
+>>>>>>> be7d0c3 (.)

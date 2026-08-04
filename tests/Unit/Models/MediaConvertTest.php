@@ -6,6 +6,7 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
+<<<<<<< HEAD
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -22,6 +23,19 @@ describe('MediaConvert Model', function () {
         $model = new MediaConvert;
 
         // Assert
+=======
+
+uses(\Modules\Media\Tests\TestCase::class);
+
+describe('MediaConvert Model', function (): void {
+    it('extends BaseModel', function (): void {
+        expect(new MediaConvert)->toBeInstanceOf(BaseModel::class);
+    });
+
+    it('has correct fillable fields', function (): void {
+        $model = new MediaConvert;
+
+>>>>>>> be7d0c3 (.)
         expect($model->getFillable())->toContain('media_id');
         expect($model->getFillable())->toContain('format');
         expect($model->getFillable())->toContain('codec_video');
@@ -39,6 +53,7 @@ describe('MediaConvert Model', function () {
     });
 
     it('has media relationship', function (): void {
+<<<<<<< HEAD
         // Arrange
         $model = new MediaConvert;
 
@@ -66,14 +81,41 @@ describe('MediaConvert Model', function () {
         $model = new MediaConvert;
 
         // Assert
+=======
+        $model = new MediaConvert;
+
+        expect((new \ReflectionClass($model))->hasMethod('media'))->toBeTrue();
+    });
+
+    it('has getDiskAttribute accessor', function (): void {
+        expect((new \ReflectionClass(MediaConvert::class))->hasMethod('getDiskAttribute'))->toBeTrue();
+    });
+
+    it('has getFileAttribute accessor', function (): void {
+        expect((new \ReflectionClass(MediaConvert::class))->hasMethod('getFileAttribute'))->toBeTrue();
+    });
+
+    it('has getConvertedFileAttribute accessor', function (): void {
+        expect((new \ReflectionClass(MediaConvert::class))->hasMethod('getConvertedFileAttribute'))->toBeTrue();
+    });
+
+    it('has connection', function (): void {
+        $model = new MediaConvert;
+
+>>>>>>> be7d0c3 (.)
         expect($model->getConnectionName())->toBe('media');
     });
 
     it('uses HasXotFactory trait', function (): void {
+<<<<<<< HEAD
         // Arrange
         $traits = class_uses_recursive(MediaConvert::class);
 
         // Assert
+=======
+        $traits = class_uses_recursive(MediaConvert::class);
+
+>>>>>>> be7d0c3 (.)
         expect(in_array('Modules\Xot\Models\Traits\HasXotFactory', $traits, true))->toBeTrue();
     });
 });

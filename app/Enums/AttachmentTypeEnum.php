@@ -15,6 +15,7 @@ enum AttachmentTypeEnum: string implements HasLabel
     case MANUAL = 'manual';
 
     /**
+<<<<<<< HEAD
      * @return array<string, string|null>
      */
     public static function getTypeNoteDescriptionsByValues(): array
@@ -25,6 +26,26 @@ enum AttachmentTypeEnum: string implements HasLabel
         }
 
         return $result;
+=======
+     * @return array<string, string>
+     */
+    /**
+     * @return array<string, string>
+     */
+    public static function getTypeNoteDescriptionsByValues(): array
+    {
+        /** @var array<string, string> $descriptions */
+        $descriptions = [];
+
+        foreach (self::cases() as $case) {
+            $note = $case->getTypeNote();
+            if ($note !== null) {
+                $descriptions[$case->value] = $note;
+            }
+        }
+
+        return $descriptions;
+>>>>>>> be7d0c3 (.)
     }
 
     /* Method Modules\Media\Enums\AttachmentTypeEnum::operationCases() never returns null so it can be removed from the return type

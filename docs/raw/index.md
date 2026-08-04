@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Raw Sources — Media"
+module: "Media"
+type: concept
+tags: [index]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "index"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Raw Sources — Media
 
 Questo layer contiene le fonti grezze: documenti immutabili che l'LLM legge ma non modifica.
@@ -32,4 +46,8 @@ Il layer raw per questo modulo/tema è **l'intera cartella `docs/`** (esclusa `d
 
 ---
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2026-04-15*
+=======
+*Ultimo aggiornamento: 2026-04-15*
+>>>>>>> be7d0c3 (.)

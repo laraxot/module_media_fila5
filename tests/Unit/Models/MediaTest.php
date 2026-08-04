@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
+<<<<<<< HEAD
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 
@@ -11,6 +12,17 @@ uses(TestCase::class);
 
 it('can create media with minimal data', function (): void {
     $media = Media::factory()->create([
+=======
+use Modules\Media\Database\Factories\MediaFactory;
+use Modules\Media\Models\Media;
+use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class);
+
+test('can create media with minimal data', function (): void {
+    $media = MediaFactory::new()->createOne([
+>>>>>>> be7d0c3 (.)
         'model_type' => 'Modules\User\Models\User',
         'model_id' => '1',
         'collection_name' => 'avatars',
@@ -20,13 +32,21 @@ it('can create media with minimal data', function (): void {
         'size' => 1024,
     ]);
 
+<<<<<<< HEAD
     $this->assertDatabaseHas('media', [
+=======
+    Assert::assertInstanceOf(Media::class, $media);
+
+    /** @var TestCase $this */
+    $this->assertMediaTableHas('media', [
+>>>>>>> be7d0c3 (.)
         'id' => (int) $media->getKey(),
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',
         'disk' => 'public',
         'size' => 1024,
+<<<<<<< HEAD
     ], 'media');
 });
 
@@ -335,4 +355,7 @@ it('media has casts', function (): void {
     ksort($actualCasts);
 
     expect($actualCasts)->toBe($expectedCasts);
+=======
+    ]);
+>>>>>>> be7d0c3 (.)
 });

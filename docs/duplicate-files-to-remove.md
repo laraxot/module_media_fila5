@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "File Duplicati da Eliminare - Modulo Media"
+module: "Media"
+type: concept
+tags: [duplicate, files, remove]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "duplicate files to remove"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # File Duplicati da Eliminare - Modulo Media
 
 ## 🗑️ File da Eliminare (Case Sensitivity)
@@ -40,4 +54,8 @@ bashscripts/fix/cleanup-case-duplicates.sh
 
 **Riferimenti**:
 - [Xot File Naming Rules](../../xot/docs/file-naming-case-sensitivity.md)
+<<<<<<< HEAD
 - [Bashscripts Location Policy](../../xot/docs/bashscripts-location-policy.md)
+=======
+- [Bashscripts Location Policy](../../xot/docs/bashscripts-location-policy.md)
+>>>>>>> be7d0c3 (.)

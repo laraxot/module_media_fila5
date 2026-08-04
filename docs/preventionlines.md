@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Linee Guida Prevenzione Problemi - Modulo Media"
+module: "Media"
+type: concept
+tags: [preventionlines]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "preventionlines"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -381,4 +395,8 @@ jobs:
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 3.1.0  
 **🎯 Obiettivo**: Prevenzione completa problemi futuri  
+<<<<<<< HEAD
 **✅ Status**: Linee guida implementate e testate
+=======
+**✅ Status**: Linee guida implementate e testate
+>>>>>>> be7d0c3 (.)
