@@ -22,10 +22,6 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
-<<<<<<< HEAD
-            'placeholder' => 'name',
-=======
->>>>>>> be7d0c3 (.)
         ],
         'guard_name' => [
             'label' => 'Guard',
@@ -126,21 +122,16 @@ return [
         'created_at' => [
             'label' => 'created_at',
         ],
-<<<<<<< HEAD
         'file' => [
             'label' => 'file',
-            'placeholder' => 'file',
             'helper_text' => 'file',
             'description' => 'file',
         ],
         'attachment_type' => [
             'label' => 'attachment_type',
-            'placeholder' => 'attachment_type',
             'helper_text' => 'attachment_type',
             'description' => 'attachment_type',
         ],
-=======
->>>>>>> be7d0c3 (.)
     ],
     'actions' => [
         'import' => [

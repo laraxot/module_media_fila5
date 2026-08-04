@@ -4,14 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests;
 
-<<<<<<< HEAD
-use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use Modules\Media\Providers\MediaServiceProvider;
-use Modules\User\Providers\UserServiceProvider;
-use Modules\Xot\Providers\XotServiceProvider;
-use Modules\Xot\Tests\CreatesApplication;
-=======
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Modules\Media\Providers\MediaServiceProvider;
@@ -19,7 +11,6 @@ use Modules\Media\Tests\Support\HasMediaTestStub;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\MockObject\MockObject;
->>>>>>> be7d0c3 (.)
 
 /**
  * Base test case for Media module.
@@ -29,17 +20,6 @@ use PHPUnit\Framework\MockObject\MockObject;
  * Migrations must be run ONCE externally: php artisan migrate --env=testing
  * DatabaseTransactions handles rollback between tests.
  */
-<<<<<<< HEAD
-abstract class TestCase extends BaseTestCase
-{
-    use CreatesApplication;
-    use DatabaseTransactions;
-
-    protected function getPackageProviders($app): array
-    {
-        return [
-            XotServiceProvider::class,
-=======
 abstract class TestCase extends XotBaseTestCase
 {
     use DatabaseTransactions;
@@ -80,7 +60,6 @@ abstract class TestCase extends XotBaseTestCase
     {
         return [
             ...parent::getPackageProviders($app),
->>>>>>> be7d0c3 (.)
             UserServiceProvider::class,
             MediaServiceProvider::class,
         ];

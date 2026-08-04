@@ -7,13 +7,6 @@ namespace Modules\Media\Models;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\MassPrunable;
-use Illuminate\Http\UploadedFile;
-use Modules\Media\Database\Factories\TemporaryUploadFactory;
-use Modules\Media\Exceptions\CouldNotAddUpload;
-use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
-=======
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
@@ -22,32 +15,16 @@ use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;
->>>>>>> be7d0c3 (.)
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-<<<<<<< HEAD
-=======
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
->>>>>>> be7d0c3 (.)
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Webmozart\Assert\Assert;
 
 /**
-<<<<<<< HEAD
- * @property string $session_id
- */
-class TemporaryUpload extends BaseModel implements HasMedia
-{
-    /** @phpstan-use HasXotFactory<TemporaryUploadFactory, TemporaryUpload> */
-    use HasXotFactory;
-
-    use InteractsWithMedia;
-    use MassPrunable;
-
-=======
  * Modules\Media\Models\TemporaryUpload.
  *
  * @property string $id
@@ -95,7 +72,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-    /** @phpstan-use HasXotFactory<TemporaryUploadFactory> */
+    /** @use HasXotFactory<TemporaryUploadFactory> */
     use HasXotFactory;
 
     use HasUuids;
@@ -104,7 +81,6 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public $incrementing = false;
 
->>>>>>> be7d0c3 (.)
     public static ?Closure $manipulatePreview = null;
 
     public static ?string $disk = null;
@@ -112,24 +88,13 @@ class TemporaryUpload extends BaseModel implements HasMedia
     /** @var string */
     protected $connection = 'media';
 
-<<<<<<< HEAD
-=======
     /**
      * @var array<string>
      */
->>>>>>> be7d0c3 (.)
     protected $guarded = [];
 
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
-<<<<<<< HEAD
-        $mediaModelClass = config('media-library.media_model');
-        Assert::string($mediaModelClass);
-        /** @var class-string<Media> $mediaModelClass */
-        $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
-
-        if (! $media instanceof Media) {
-=======
         Assert::string($mediaModelClass = config('media-library.media_model'));
         Assert::subclassOf($mediaModelClass, Media::class);
 
@@ -137,7 +102,6 @@ class TemporaryUpload extends BaseModel implements HasMedia
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
         if (! $media) {
->>>>>>> be7d0c3 (.)
             return null;
         }
 
@@ -152,13 +116,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static function findByMediaUuidInCurrentSession(?string $mediaUuid): ?self
     {
-<<<<<<< HEAD
-        if (! (($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
-=======
         $temporaryUpload = static::findByMediaUuid($mediaUuid);
 
         if (! ($temporaryUpload instanceof self)) {
->>>>>>> be7d0c3 (.)
             return null;
         }
 
@@ -178,12 +138,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
         string $uuid,
         string $name,
     ): self {
-<<<<<<< HEAD
-=======
         /**
          * @var TemporaryUpload $temporaryUpload
          */
->>>>>>> be7d0c3 (.)
         $temporaryUpload = static::create([
             'session_id' => $sessionId,
         ]);
@@ -210,12 +167,9 @@ class TemporaryUpload extends BaseModel implements HasMedia
         string $name,
         string $diskName,
     ): self {
-<<<<<<< HEAD
-=======
         /**
          * @var TemporaryUpload $temporaryUpload
          */
->>>>>>> be7d0c3 (.)
         $temporaryUpload = static::create([
             'session_id' => $sessionId,
         ]);
@@ -242,11 +196,7 @@ class TemporaryUpload extends BaseModel implements HasMedia
             return;
         }
 
-<<<<<<< HEAD
-        $conversion = $this->addMediaConversion('preview')->nonQueued();
-=======
         $conversion = $this->addMediaConversion('preview');
->>>>>>> be7d0c3 (.)
 
         $previewManipulation = $this->getPreviewManipulation();
 
