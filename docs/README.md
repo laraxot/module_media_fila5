@@ -1,16 +1,25 @@
-# Documentation
+# Modulo Media — Documentazione Bridge
 
-This directory contains documentation for the module.
+Documentazione canonica per il modulo Media: gestione multimediale (immagini, video, documenti, audio) in Laraxot.
 
-## Structure
+## File Canonici
 
-- **architecture.md** - Module architecture and design patterns
-- **README.md** - This file
+1. **[README.md](README.md)** — questo file, punto di ingresso
+2. **[architecture.md](architecture.md)** — architettura, namespace, dipendenze, struttura, funzionalità
+3. **[index.md](index.md)** — bridge per discovery (legacy)
 
-## Guidelines
+## Scopo Modulo
 
-Documentation should be:
-- Clear and concise
-- Example-driven
-- Updated with code changes
-- Use Markdown format (.md)
+- Memorizzazione, elaborazione, distribuzione file multimediali
+- Supporto multi-format (immagini, video, documenti, audio)
+- Integrazione CDN e streaming video
+- Isolamento tenant
+- Conversione automatica (FFmpeg, immagini)
+
+## Linkage
+
+- Dipende da: Xot (base), Tenant, User, UI
+- Utilizzato da: temi e moduli applicativi
+- Standard di documentazione: vedi `/docs/` root
+
+Per dettagli architetturali, vedi **architecture.md**.
