@@ -127,8 +127,12 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
+<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
         $this->form->fill([
+=======
+        $this->getForm('form')?->fill([
+>>>>>>> be7d0c3 (.)
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -232,8 +236,12 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
+<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
         $formState = $this->form->getState();
+=======
+        $formState = $this->getForm('form')?->getState() ?? [];
+>>>>>>> be7d0c3 (.)
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
@@ -248,6 +256,7 @@ class S3Test extends XotBasePage
             return;
         }
 
+<<<<<<< HEAD
         Assert::string($filePath);
 
         // Generate CloudFront signed URL for attachment
@@ -257,6 +266,15 @@ class S3Test extends XotBasePage
             'filePath' => $filePath,
             'url2' => Storage::disk('s3')->url($filePath),
             'url3' => Storage::disk('s3')->temporaryUrl($filePath, now()->addMinutes(5)),
+=======
+        // Generate CloudFront signed URL for attachment
+        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 60);
+        dddx([
+            'signedurl' => $signedUrl,
+            'filePath' => $filePath,
+            'url2' => Storage::disk('s3')->url((string) $filePath),
+            'url3' => Storage::disk('s3')->temporaryUrl((string) $filePath, now()->addMinutes(5)),
+>>>>>>> be7d0c3 (.)
         ]);
         $this->debugResults = [];
         $this->updateDebugOutput();
@@ -269,14 +287,21 @@ class S3Test extends XotBasePage
      */
     private function buildConfigDebugData(): array
     {
+<<<<<<< HEAD
         $s3Key = config('filesystems.disks.s3.key', '');
         Assert::string($s3Key);
 
+=======
+>>>>>>> be7d0c3 (.)
         return [
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
+<<<<<<< HEAD
                 'AWS_ACCESS_KEY_ID' => substr($s3Key, 0, 8).'...',
+=======
+                'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, 8).'...',
+>>>>>>> be7d0c3 (.)
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
@@ -388,6 +413,7 @@ class S3Test extends XotBasePage
      */
     private function test_s3_permissions(): array
     {
+<<<<<<< HEAD
         $tests = [
             'ListBucket' => 's3:ListBucket',
             'PutObject' => 's3:PutObject',
@@ -395,6 +421,8 @@ class S3Test extends XotBasePage
             'DeleteObject' => 's3:DeleteObject',
         ];
 
+=======
+>>>>>>> be7d0c3 (.)
         $results = [
             'title' => '🔒 S3 Permissions',
             'status' => 'info',
@@ -480,15 +508,22 @@ class S3Test extends XotBasePage
             ]);
 
             $policy = $s3->getBucketPolicy(['Bucket' => config('filesystems.disks.s3.bucket')]);
+<<<<<<< HEAD
             $policyJson = $policy['Policy'];
             Assert::string($policyJson);
+=======
+>>>>>>> be7d0c3 (.)
 
             return [
                 'title' => '📜 Bucket Policy',
                 'status' => 'info',
                 'data' => [
                     'Policy Exists' => '✅ Yes',
+<<<<<<< HEAD
                     'Policy' => json_encode(json_decode($policyJson), JSON_PRETTY_PRINT),
+=======
+                    'Policy' => json_encode(json_decode((string) $policy['Policy']), JSON_PRETTY_PRINT),
+>>>>>>> be7d0c3 (.)
                 ],
             ];
         } catch (AwsException $e) {
@@ -599,15 +634,24 @@ class S3Test extends XotBasePage
         }
 
         $output = [];
+<<<<<<< HEAD
         foreach ($this->debugResults as $category => $result) {
+=======
+        foreach ($this->debugResults as $result) {
+>>>>>>> be7d0c3 (.)
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
 
+<<<<<<< HEAD
             $title = $result['title'];
             $status = $result['status'];
             Assert::string($title);
             Assert::string($status);
+=======
+            $title = (string) $result['title'];
+            $status = (string) $result['status'];
+>>>>>>> be7d0c3 (.)
             $data = $result['data'];
 
             $output[] = "=== {$title} ===";
@@ -619,10 +663,16 @@ class S3Test extends XotBasePage
                     $keyStr = (string) $key;
                     if (is_array($value)) {
                         $output[] = "{$keyStr}: ".json_encode($value, JSON_PRETTY_PRINT);
+<<<<<<< HEAD
                     } elseif (is_string($value) || is_int($value) || is_float($value) || is_bool($value) || $value === null) {
                         $output[] = "{$keyStr}: ".$value;
                     } elseif ($value instanceof \Stringable) {
                         $output[] = "{$keyStr}: ".$value;
+=======
+                    } else {
+                        $valueStr = (string) $value;
+                        $output[] = "{$keyStr}: {$valueStr}";
+>>>>>>> be7d0c3 (.)
                     }
                 }
             }
@@ -641,8 +691,12 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
+<<<<<<< HEAD
             /** @phpstan-ignore-next-line */
             $formState = $this->form->getState();
+=======
+            $formState = $this->getForm('form')?->getState() ?? [];
+>>>>>>> be7d0c3 (.)
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -657,10 +711,15 @@ class S3Test extends XotBasePage
                 return;
             }
 
+<<<<<<< HEAD
             Assert::string($filePath);
 
             // Generate CloudFront signed URL for attachment
             $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
+=======
+            // Generate CloudFront signed URL for attachment
+            $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 60);
+>>>>>>> be7d0c3 (.)
 
             // Log the email data for testing purposes (no actual email sent)
             Log::debug('S3 Test Email Data', [
@@ -768,8 +827,12 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
+<<<<<<< HEAD
         /** @phpstan-ignore-next-line */
         $this->form->fill([
+=======
+        $this->getForm('form')?->fill([
+>>>>>>> be7d0c3 (.)
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -792,8 +855,12 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
+<<<<<<< HEAD
             /** @phpstan-ignore-next-line */
             $formState = $this->form->getState();
+=======
+            $formState = $this->getForm('form')?->getState() ?? [];
+>>>>>>> be7d0c3 (.)
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -804,11 +871,19 @@ class S3Test extends XotBasePage
                     'cloudfront_url' => $cloudFrontUrl,
                     'temporary_url' => $temporaryUrl,
                 ],
+<<<<<<< HEAD
                 'uploaded_file' => is_string($filePath) && $filePath !== ''
                     ? [
                         'path' => $filePath,
                         'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 30),
                         'temporary_url' => $s3Disk->temporaryUrl($filePath, now()->addMinutes(30)),
+=======
+                'uploaded_file' => $filePath
+                    ? [
+                        'path' => (string) $filePath,
+                        'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute((string) $filePath, 30),
+                        'temporary_url' => $s3Disk->temporaryUrl((string) $filePath, now()->addMinutes(30)),
+>>>>>>> be7d0c3 (.)
                     ] : null,
             ];
 

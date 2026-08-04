@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media Module - Comprehensive Analysis"
+module: "Media"
+type: concept
+tags: [module, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "module analysis"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media Module - Comprehensive Analysis
 
 ## Module Overview

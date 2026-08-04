@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media Chaos Readiness - 2026-03-02"
+module: "Media"
+type: concept
+tags: [chaos, readiness]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "chaos readiness"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media Chaos Readiness - 2026-03-02
 
 ## Scope
@@ -9,4 +23,8 @@
 
 ## Next Chaos Steps
 - Simulate unsupported exporter methods and assert controlled exception path.
+<<<<<<< HEAD
 - Add chaos test for broken media conversion format class.
+=======
+- Add chaos test for broken media conversion format class.
+>>>>>>> be7d0c3 (.)

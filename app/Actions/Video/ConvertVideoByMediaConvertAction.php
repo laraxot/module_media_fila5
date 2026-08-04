@@ -12,7 +12,10 @@ namespace Modules\Media\Actions\Video;
 use Exception;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
+<<<<<<< HEAD
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
+=======
+>>>>>>> be7d0c3 (.)
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -39,6 +42,7 @@ class ConvertVideoByMediaConvertAction
             throw new Exception('Il nome del file convertito non è stato specificato');
         }
 
+<<<<<<< HEAD
         $exportedMedia = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
             ->export();
@@ -57,6 +61,30 @@ class ConvertVideoByMediaConvertAction
         $exportedMedia->addFilter('-preset', 'ultrafast');
         $exportedMedia->inFormat($format);
         $exportedMedia->save($file_new);
+=======
+        // Instanziamo il formato prima di usarlo
+        $formatInstance = new $format();
+
+        $export = FFMpeg::fromDisk($data->disk)
+            ->open($data->file)
+            ->export()
+            ->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
+                $record->update([
+                    'percentage' => $percentage,
+                    'remaining' => $remaining,
+                    'rate' => $rate,
+                ]);
+            })
+            // Utilizziamo il formato istanziato come parametro
+            ->inFormat($formatInstance);
+
+        // addFilter() e' inoltrato al driver PHPFFMpeg via __call/@mixin: la sua
+        // firma dichiarata restituisce il tipo del driver, non del MediaExporter.
+        // Non lo si concatena per non perdere il tipo corretto di $export.
+        $export->addFilter('-preset', 'ultrafast');
+
+        $export->save($file_new);
+>>>>>>> be7d0c3 (.)
 
         $record->update([
             'status' => 'completed',

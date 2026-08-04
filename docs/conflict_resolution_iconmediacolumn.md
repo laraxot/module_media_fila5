@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Risoluzione Conflitto IconMediaColumn.php"
+module: "Media"
+type: concept
+tags: [conflict, resolution, iconmediacolumn]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict resolution iconmediacolumn"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Risoluzione Conflitto IconMediaColumn.php
 
 ## Problema Identificato
@@ -79,4 +93,8 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 - [filament_table_actions.md](filament_table_actions.md)
 - [Modules/Media/docs/](../docs/)
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 29 luglio 2025*
+=======
+*Ultimo aggiornamento: 29 luglio 2025*
+>>>>>>> be7d0c3 (.)

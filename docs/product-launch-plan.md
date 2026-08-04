@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Media - Product Launch Plan
 # Media Module - Product Launch Plan
 
@@ -82,6 +83,19 @@
 ---
 
 *Last Updated: March 12, 2026*
+=======
+---
+title: "Media - Product Launch Plan"
+module: "Media"
+type: concept
+tags: [product, launch, plan]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product launch plan"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media - Product Launch Plan
 
 > Piano di lancio. Modulo.
@@ -137,4 +151,8 @@ Rilasciare **Media** in modo controllato, misurabile e coerente con il suo ruolo
 
 - [PRD](prd.md)
 - [User Research](user-research.md)
+<<<<<<< HEAD
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
+=======
+- [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
+>>>>>>> be7d0c3 (.)

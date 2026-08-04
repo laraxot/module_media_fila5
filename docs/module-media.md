@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Modulo Media"
+module: "Media"
+type: concept
+tags: [module, media]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "module media"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
@@ -123,4 +137,8 @@ Le modifiche vengono tracciate nel repository GitHub.
 
 ---
 
+<<<<<<< HEAD
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
+=======
+> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
+>>>>>>> be7d0c3 (.)

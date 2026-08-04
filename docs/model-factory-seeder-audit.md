@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Model/Factory/Seeder Audit"
+module: "Media"
+type: concept
+tags: [model, factory, seeder, audit]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "model factory seeder audit"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Model/Factory/Seeder Audit
 
 Generated: [DATE] 16:29
@@ -15,4 +29,8 @@ Seeder: `database/seeders/MediaDatabaseSeeder.php`
 - Add exemplar seeding for Media, TemporaryUpload (small count) in `MediaDatabaseSeeder` or dedicated seeders.
 
 ## Likely non-business-critical
+<<<<<<< HEAD
 - None; all three are concrete but can be optionally seeded for demos/tests.
+=======
+- None; all three are concrete but can be optionally seeded for demos/tests.
+>>>>>>> be7d0c3 (.)

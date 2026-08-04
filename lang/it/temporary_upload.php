@@ -30,6 +30,7 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+<<<<<<< HEAD
         'file' => [
             'label' => 'file',
             'placeholder' => 'file',
@@ -48,6 +49,8 @@ return [
             'helper_text' => 'expires_at',
             'description' => 'expires_at',
         ],
+=======
+>>>>>>> be7d0c3 (.)
     ],
     'actions' => [
         'create' => [

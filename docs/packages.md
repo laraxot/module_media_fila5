@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Pacchetti del Modulo Media"
+module: "Media"
+type: concept
+tags: [packages]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "packages"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Pacchetti del Modulo Media
 
 ## Pacchetti Utilizzati
@@ -73,4 +87,8 @@
 
 ### Versione Incoming
 
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> be7d0c3 (.)

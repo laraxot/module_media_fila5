@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media Module - Product Roadmap"
+module: "Media"
+type: concept
+tags: [PRODUCT, ROADMAP]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product roadmap"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media Module - Product Roadmap
 
 **Module:** Media  
@@ -100,4 +114,8 @@ To provide a **comprehensive media management system** that handles all image, v
 
 ---
 
+<<<<<<< HEAD
 *Last Updated: March 12, 2026*
+=======
+*Last Updated: March 12, 2026*
+>>>>>>> be7d0c3 (.)

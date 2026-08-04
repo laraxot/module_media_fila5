@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Filament 5.x compatibility - modulo Media"
+module: "Media"
+type: concept
+tags: [filament, 5x, compatibility]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament 5x compatibility"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Filament 5.x compatibility - modulo Media
 
 **Versione Filament:** v5.2.1
@@ -32,4 +46,8 @@ Questo evita errori di `ComponentNotFoundException` nelle architetture modulari.
 ## Riferimenti
 
 - [Guida upgrade Filament 5 (Xot)](../../Xot/docs/filament-5-upgrade-guide.md)
+<<<<<<< HEAD
 - [Documentazione ufficiale](https://filamentphp.com/docs/5.x/upgrade-guide)
+=======
+- [Documentazione ufficiale](https://filamentphp.com/docs/5.x/upgrade-guide)
+>>>>>>> be7d0c3 (.)

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Media Processing and Optimization"
+module: "Media"
+type: concept
+tags: [media, processing, optimization]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "media processing optimization"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Task: Media Processing and Optimization
 
 **Modulo**: Media  
@@ -19,4 +33,8 @@ Implementare elaborazione avanzata media: ottimizzazione immagini, conversione f
 ## Collegamenti
 
 - [Roadmap Media](../roadmap.md)
+<<<<<<< HEAD
 - [Indice task Media](tasks-index.md)
+=======
+- [Indice task Media](tasks-index.md)
+>>>>>>> be7d0c3 (.)

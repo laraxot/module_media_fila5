@@ -6,9 +6,15 @@ created: 2026-07-12
 updated: 2026-07-12
 qmd: "Media module no app Support TemporaryUploadPathGenerator MediaExporter QueueableAction"
 issues:
+<<<<<<< HEAD
   - "https://github.com/laraxot/platform/issues/372"
 discussions:
   - "https://github.com/laraxot/platform/discussions/273"
+=======
+  - "https://github.com/laraxot/base_fixcity_fila5/issues/372"
+discussions:
+  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+>>>>>>> be7d0c3 (.)
 related:
   - ../../../../docs/wiki/rules/queueable-action-trait-mandatory.md
 ---
