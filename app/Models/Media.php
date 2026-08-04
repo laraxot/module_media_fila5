@@ -6,13 +6,9 @@ namespace Modules\Media\Models;
 
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Modules\Media\Database\Factories\MediaFactory;
-use Modules\Media\Models\MediaConvert;
-use Modules\Media\Models\TemporaryUpload;
-use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
@@ -52,24 +48,26 @@ class Media extends SpatieMedia
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Modules\Media\Models\TemporaryUpload, \Modules\Media\Models\Media>
-     * @phpstan-return \Illuminate\Database\Eloquent\Relations\BelongsTo<\Modules\Media\Models\TemporaryUpload, \Modules\Media\Models\Media>
+     * @return BelongsTo<TemporaryUpload, Media>
+     *
+     * @phpstan-return BelongsTo<TemporaryUpload, Media>
      */
     public function temporaryUpload(): BelongsTo
     {
-        /** @var \Illuminate\Database\Eloquent\Relations\BelongsTo<\Modules\Media\Models\TemporaryUpload, \Modules\Media\Models\Media> $relation */
+        /** @var BelongsTo<TemporaryUpload, Media> $relation */
         $relation = $this->belongsTo(TemporaryUpload::class);
 
         return $relation;
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, \Modules\Media\Models\Media>
-     * @phpstan-return \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, \Modules\Media\Models\Media>
+     * @return HasMany<MediaConvert, Media>
+     *
+     * @phpstan-return HasMany<MediaConvert, Media>
      */
     public function mediaConverts(): HasMany
     {
-        /** @var \Illuminate\Database\Eloquent\Relations\HasMany<\Modules\Media\Models\MediaConvert, \Modules\Media\Models\Media> $relation */
+        /** @var HasMany<MediaConvert, Media> $relation */
         $relation = $this->hasMany(MediaConvert::class);
 
         return $relation;
