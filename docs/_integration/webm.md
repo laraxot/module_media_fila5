@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "webm"
+module: "Media"
+type: concept
+tags: [webm]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "webm"
+related:
+  - "./migrazione-filament-4.md"
+---
+>>>>>>> be7d0c3 (.)
 # webm
 
 <!-- Contenuto migrato da _docs/webm.txt -->
@@ -41,4 +55,8 @@ ffmpeg -h encoder=hevc_nvenc
     output.webm
 
 ----------------------------------
+<<<<<<< HEAD
 ffmpeg -h encoder=hevc_nvenc
+=======
+ffmpeg -h encoder=hevc_nvenc
+>>>>>>> be7d0c3 (.)

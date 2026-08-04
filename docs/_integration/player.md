@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "player"
+module: "Media"
+type: concept
+tags: [player]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "player"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # player
 
 <!-- Contenuto migrato da _docs/player.txt -->
@@ -7,4 +21,8 @@ https://github.com/spatie/laravel-sitemap/blob/main/resources/views/video.blade.
 https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views/pages/video.blade.php
 
 per fare blocco YOUTUBE e blocco VIMEO
+<<<<<<< HEAD
 https://github.com/nWidart/laravel-videoable/blob/master/resources/views/sources/vimeo.blade.php
+=======
+https://github.com/nWidart/laravel-videoable/blob/master/resources/views/sources/vimeo.blade.php
+>>>>>>> be7d0c3 (.)

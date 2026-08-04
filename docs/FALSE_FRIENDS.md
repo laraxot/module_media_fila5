@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "False Friends – Media Module"
+module: "Media"
+type: concept
+tags: [FALSE, FRIENDS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "false friends"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # False Friends – Media Module
 
 | Concept | Misconception | Correction |
@@ -15,3 +29,18 @@
 // ❌ FALSE FRIEND - CDN dependency
 const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/marker-icon.png';
 ```
+<<<<<<< HEAD
+=======
+
+### Error 2: Inline SVG Misuse
+```blade
+{{-- ❌ FALSE FRIEND - Invalid placement --}}
+<div class="map-marker" style="background-image:url({{ asset('img/markers.svg') }})"></div>
+```
+
+### Error 2: Correct Approach
+```blade
+{{-- ✅ CORRECT - Standard approach --}}
+@svg('map-marker.svg', ['class' => 'map-marker'])
+```
+>>>>>>> be7d0c3 (.)

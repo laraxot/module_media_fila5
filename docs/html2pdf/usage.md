@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Utilizzo Base e Layout"
+module: "Media"
+type: concept
+tags: [usage]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "usage"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Utilizzo Base e Layout
 
 Questa sezione descrive l'utilizzo di base della libreria, come istanziare la classe `Html2Pdf` e come gestire il layout delle pagine con i tag speciali.
@@ -118,4 +132,8 @@ Il contenuto all'interno di questo tag non verrà spezzato tra due pagine.
         <!-- Questa sezione rimarrà unita -->
     </table>
 </nobreak>
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> be7d0c3 (.)

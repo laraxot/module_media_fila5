@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media Module - Product Strategy"
+module: "Media"
+type: concept
+tags: [PRODUCT, STRATEGY]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product strategy"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media Module - Product Strategy
 
 **Module:** Media  
@@ -89,4 +103,8 @@ Easy media management.
 
 ---
 
+<<<<<<< HEAD
 *Last Updated: March 12, 2026*
+=======
+*Last Updated: March 12, 2026*
+>>>>>>> be7d0c3 (.)

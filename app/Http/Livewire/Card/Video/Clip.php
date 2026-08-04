@@ -62,8 +62,11 @@ class Clip extends Component
     }
 
     /**
+<<<<<<< HEAD
      * Undocumented function.
      *
+=======
+>>>>>>> be7d0c3 (.)
      * @param  array<string, mixed>  $data
      */
     public function updateDataFromModal(string $id, array $data): void
@@ -77,7 +80,11 @@ class Clip extends Component
         }
 
         // dddx(['data'=>$data,'model'=>$this->model]);
+<<<<<<< HEAD
         /** @var array<string, string> */
+=======
+        /** @var array<string, string> $up */
+>>>>>>> be7d0c3 (.)
         $up = collect($data)->only(['title', 'subtitle'])->all();
 
         $this->model->update($up);

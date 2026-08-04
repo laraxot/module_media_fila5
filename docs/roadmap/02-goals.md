@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Goals - Media"
+module: "Media"
+type: concept
+tags: [02, goals]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "02 goals"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Goals - Media
 
 ## Short Term

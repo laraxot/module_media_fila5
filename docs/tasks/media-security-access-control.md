@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Media Security and Access Control"
+module: "Media"
+type: concept
+tags: [media, security, access, control]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "media security access control"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Task: Media Security and Access Control
 
 **Modulo**: Media  
@@ -24,4 +38,8 @@ Nessuna.
 ## Collegamenti
 
 - [Roadmap Media](../roadmap.md)
+<<<<<<< HEAD
 - [Indice task Media](tasks-index.md)
+=======
+- [Indice task Media](tasks-index.md)
+>>>>>>> be7d0c3 (.)

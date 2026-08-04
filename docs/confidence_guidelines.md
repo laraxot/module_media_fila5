@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Massimizzare il livello di confidenza"
+module: "Media"
+type: how-to
+tags: [confidence, guidelines]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "confidence guidelines"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Massimizzare il livello di confidenza
 
 1. **Test automatizzati**: copertura >90%, includi test unitari, integrazione, e fine‑to‑end.
@@ -6,4 +20,8 @@
 4. **Revisione del codice**: code‑review obbligatoria con checklist di qualità.
 5. **Monitoraggio in produzione**: New Relic / Sentry per errori e performance.
 6. **Documentazione**: mantieni aggiornati doc e changelog.
+<<<<<<< HEAD
 7. **Rollback rapido**: feature flags e versioni per tornare indietro.
+=======
+7. **Rollback rapido**: feature flags e versioni per tornare indietro.
+>>>>>>> be7d0c3 (.)
