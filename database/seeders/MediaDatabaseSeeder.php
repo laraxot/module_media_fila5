@@ -13,15 +13,9 @@ class MediaDatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-<<<<<<< HEAD
-        $this->command->info('MediaDatabaseSeeder: entity seeders…');
-=======
         if ($this->command !== null) {
-
             $this->command->info('MediaDatabaseSeeder: entity seeders…');
-
         }
->>>>>>> be7d0c3 (.)
 
         $this->call([
             MediaSeeder::class,
@@ -29,14 +23,8 @@ class MediaDatabaseSeeder extends Seeder
             TemporaryUploadSeeder::class,
         ]);
 
-<<<<<<< HEAD
-        $this->command->info('MediaDatabaseSeeder: completato.');
-=======
         if ($this->command !== null) {
-
             $this->command->info('MediaDatabaseSeeder: completato.');
-
         }
->>>>>>> be7d0c3 (.)
     }
 }
