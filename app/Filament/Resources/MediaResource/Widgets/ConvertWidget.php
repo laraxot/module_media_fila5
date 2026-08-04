@@ -30,9 +30,11 @@ class ConvertWidget extends XotBaseWidget
     /** @var float */
     public $rate;
 
-    protected string $view = 'media::filament.widgets.convert';
-
     protected static string $resource = MediaResource::class;
+
+    
+
+    
 
     public function getFormSchema(): array
     {
