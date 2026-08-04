@@ -62,24 +62,18 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
-=======
->>>>>>> be7d0c3 (.)
     #[Override]
     public static function getRelations(): array
     {
         return [];
     }
 
-<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
-=======
->>>>>>> be7d0c3 (.)
     #[Override]
     public static function getPages(): array
     {

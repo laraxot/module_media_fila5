@@ -30,27 +30,21 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-<<<<<<< HEAD
         'file' => [
             'label' => 'file',
-            'placeholder' => 'file',
             'helper_text' => 'file',
             'description' => 'file',
         ],
         'folder' => [
             'label' => 'folder',
-            'placeholder' => 'folder',
             'helper_text' => 'folder',
             'description' => 'folder',
         ],
         'expires_at' => [
             'label' => 'expires_at',
-            'placeholder' => 'expires_at',
             'helper_text' => 'expires_at',
             'description' => 'expires_at',
         ],
-=======
->>>>>>> be7d0c3 (.)
     ],
     'actions' => [
         'create' => [

@@ -10,10 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
-<<<<<<< HEAD
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
-=======
->>>>>>> be7d0c3 (.)
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 
@@ -27,19 +24,11 @@ class ConvertWidget extends XotBaseWidget
 
     public float $percentage = 0;
 
-<<<<<<< HEAD
-    /** @var float */
-    public $remaining;
-
-    /** @var float */
-    public $rate;
-=======
     public float $remaining = 0.0;
 
     public float $rate = 0.0;
 
     protected string $view = 'media::filament.widgets.convert';
->>>>>>> be7d0c3 (.)
 
     protected static string $resource = MediaResource::class;
 
@@ -56,9 +45,6 @@ class ConvertWidget extends XotBaseWidget
         $disk_path = Storage::disk($disk_mp4)->path('/');
         $file_mp4 = Str::after($file_mp4, $disk_path);
 
-<<<<<<< HEAD
-        // dddx($file_mp4);
-
         $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
@@ -69,19 +55,6 @@ class ConvertWidget extends XotBaseWidget
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();
-        // ->addFilter(function (VideoFilters $filters) {
-        //    $filters->resize(new \FFMpeg\Coordinate\Dimension(640, 480));
-        // })
-        // ->resize(640, 480)
-=======
-        $format = new WebM();
-        $extension = mb_strtolower(class_basename($format));
-        $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
-
-        $exportedMedia = FFMpeg::fromDisk($disk_mp4)
-            ->open($file_mp4)
-            ->export();
->>>>>>> be7d0c3 (.)
 
         $exportedMedia->onProgress(function (float $percentage, float $remaining, float $rate): void {
             $this->percentage = $percentage;
@@ -95,7 +68,6 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
-<<<<<<< HEAD
         $formattedMedia = MediaExporterResolver::from(
             $exportedMedia->toDisk($disk_mp4)
         )->inFormat($format);
@@ -109,16 +81,8 @@ class ConvertWidget extends XotBaseWidget
                 replace: true,
             );
 
-            // Pause for 1 second between numbers...
-            // sleep(1);
-
             $this->start =
                 "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
         }
-=======
-        $exportedMedia->toDisk($disk_mp4);
-        $exportedMedia->inFormat($format);
-        $exportedMedia->save($file_new);
->>>>>>> be7d0c3 (.)
     }
 }

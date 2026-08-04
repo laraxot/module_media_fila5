@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Diagnostic\S3;
 
 use Spatie\QueueableAction\QueueableAction;
-<<<<<<< HEAD
 use Webmozart\Assert\Assert;
-=======
->>>>>>> be7d0c3 (.)
 
 class BuildConfigDebugDataAction
 {
@@ -19,21 +16,14 @@ class BuildConfigDebugDataAction
      */
     public function execute(): array
     {
-<<<<<<< HEAD
         $key = config('filesystems.disks.s3.key', '');
         Assert::string($key);
 
-=======
->>>>>>> be7d0c3 (.)
         return [
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
-<<<<<<< HEAD
                 'AWS_ACCESS_KEY_ID' => substr($key, 0, 8).'...',
-=======
-                'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, 8).'...',
->>>>>>> be7d0c3 (.)
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),

@@ -4,18 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-<<<<<<< HEAD
-use Exception;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Modules\Media\Database\Factories\MediaFactory;
-=======
 use Eloquent;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -24,21 +16,12 @@ use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
->>>>>>> be7d0c3 (.)
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
-<<<<<<< HEAD
- * @property string $path
- * @property array<int, array<string, string|bool>> $conversions
- */
-class Media extends SpatieMedia
-{
-    /** @phpstan-use HasXotFactory<MediaFactory, Media> */
-=======
  * @property int $id
  * @property string $model_type
  * @property string $model_id
@@ -137,8 +120,6 @@ class Media extends SpatieMedia
 class Media extends SpatieMedia
 {
     /** @use HasXotFactory<MediaFactory> */
-    /** @phpstan-use HasXotFactory<Factory<static>> */
->>>>>>> be7d0c3 (.)
     use HasXotFactory;
 
     use Updater;
@@ -148,57 +129,16 @@ class Media extends SpatieMedia
 
     /**
      * @param  array<int, string>  $uuids
-<<<<<<< HEAD
-     * @return MediaCollection<int, static>
-     */
-    public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
-    {
-        // MediaLibraryPro::ensureInstalled();
-
-        /** @var MediaCollection<int, static> $result */
-        $result = static::whereIn('uuid', $uuids)
-=======
      * @return MediaCollection<int, self>
      */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
     {
         return static::whereIn('uuid', $uuids)
->>>>>>> be7d0c3 (.)
             ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where(
                 'session_id',
                 session()->getId(),
             ))
             ->get();
-<<<<<<< HEAD
-
-        return $result;
-    }
-
-    /**
-     * @return BelongsTo<TemporaryUpload, Media>
-     *
-     * @phpstan-return BelongsTo<TemporaryUpload, Media>
-     */
-    public function temporaryUpload(): BelongsTo
-    {
-        /** @var BelongsTo<TemporaryUpload, Media> $relation */
-        $relation = $this->belongsTo(TemporaryUpload::class);
-
-        return $relation;
-    }
-
-    /**
-     * @return HasMany<MediaConvert, Media>
-     *
-     * @phpstan-return HasMany<MediaConvert, Media>
-     */
-    public function mediaConverts(): HasMany
-    {
-        /** @var HasMany<MediaConvert, Media> $relation */
-        $relation = $this->hasMany(MediaConvert::class);
-
-        return $relation;
-=======
     }
 
     /**
@@ -232,7 +172,6 @@ class Media extends SpatieMedia
     public function mediaConverts(): HasMany
     {
         return $this->hasMany(MediaConvert::class);
->>>>>>> be7d0c3 (.)
     }
 
     public function getUrlConv(string $conv): string
@@ -270,11 +209,7 @@ class Media extends SpatieMedia
         foreach ($this->getGeneratedConversions() as $conv => $state) {
             $item = [
                 'name' => is_string($conv) ? $conv : ((string) $conv),
-<<<<<<< HEAD
-                'generated' => is_bool($state) ? $state : false,
-=======
                 'generated' => (bool) $state,
->>>>>>> be7d0c3 (.)
                 'src' => $this->getUrlConv(is_string($conv) ? $conv : ((string) $conv)),
             ];
             $conversions[] = $item;

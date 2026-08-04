@@ -15,11 +15,7 @@ uses(TestCase::class);
  */
 it('returns attachment schema', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice', 'contract', 'receipt'];
 
     // Act
@@ -39,11 +35,7 @@ it('returns attachment schema', function (): void {
  */
 it('has correct names', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice', 'contract'];
 
     // Act
@@ -63,11 +55,7 @@ it('has correct names', function (): void {
  */
 it('has correct validation', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -98,11 +86,7 @@ it('has correct validation', function (): void {
  */
 it('has correct storage', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -118,11 +102,7 @@ it('has correct storage', function (): void {
  */
 it('has correct directory', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -138,11 +118,7 @@ it('has correct directory', function (): void {
  */
 it('has correct visibility', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -158,11 +134,7 @@ it('has correct visibility', function (): void {
  */
 it('has correct max size', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -178,11 +150,7 @@ it('has correct max size', function (): void {
  */
 it('has correct multiple setting', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -198,11 +166,7 @@ it('has correct multiple setting', function (): void {
  */
 it('has correct preview setting', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -218,11 +182,7 @@ it('has correct preview setting', function (): void {
  */
 it('has correct download setting', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -238,11 +198,7 @@ it('has correct download setting', function (): void {
  */
 it('has correct remove setting', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -261,11 +217,7 @@ it('has correct remove setting', function (): void {
  */
 it('has correct reorder setting', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -281,11 +233,7 @@ it('has correct reorder setting', function (): void {
  */
 it('has correct labels', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -302,11 +250,7 @@ it('has correct labels', function (): void {
  */
 it('has correct append setting', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -323,11 +267,7 @@ it('has correct append setting', function (): void {
  */
 it('has correct panel', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -344,11 +284,7 @@ it('has correct panel', function (): void {
  */
 it('has correct help text', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
@@ -366,32 +302,15 @@ it('has correct help text', function (): void {
  */
 it('has correct placeholder', function (): void {
     // Arrange
-<<<<<<< HEAD
-    $action = new GetAttachmentsSchemaAction;
-=======
     $action = new GetAttachmentsSchemaAction();
->>>>>>> be7d0c3 (.)
     $attachments = ['invoice'];
 
     // Act
     $form = $action->execute($attachments);
 
-<<<<<<< HEAD
-    Assert::assertSame('private', $component->getDiskName());
-    Assert::assertSame('temp', $component->getDirectory());
-    Assert::assertSame('public', $component->getVisibility());
-    Assert::assertSame(10 * 1024, $component->getMaxSize());
-    Assert::assertTrue($component->isRequired());
-    Assert::assertFalse($component->isMultiple());
-    Assert::assertTrue($component->isPreviewable());
-    Assert::assertTrue($component->isDownloadable());
-    Assert::assertFalse($component->isReorderable());
-    Assert::assertNotEmpty($component->getAcceptedFileTypes());
-=======
     // Assert
     $component = $form[0];
     // Check for placeholder - in our implementation, we don't set specific placeholder
     $placeholder = $component->getPlaceholder();
     expect($placeholder)->toBeNull();
->>>>>>> be7d0c3 (.)
 });

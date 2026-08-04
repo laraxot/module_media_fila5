@@ -2,29 +2,17 @@
 
 declare(strict_types=1);
 
-<<<<<<< HEAD
-namespace Modules\Media\Actions\Stream;
-=======
 namespace Modules\Media\Services;
->>>>>>> be7d0c3 (.)
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-use SimpleXMLElement;
-
-=======
->>>>>>> be7d0c3 (.)
 use function Safe\file_put_contents;
 use function Safe\fopen;
 use function Safe\realpath;
 use function Safe\simplexml_load_string;
-<<<<<<< HEAD
-=======
 use SimpleXMLElement;
->>>>>>> be7d0c3 (.)
 
 /**
  * SubtitleService.
@@ -53,11 +41,7 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
-<<<<<<< HEAD
-            self::$instance = new self;
-=======
             self::$instance = new self();
->>>>>>> be7d0c3 (.)
         }
 
         return self::$instance;
