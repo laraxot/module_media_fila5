@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Media\Actions\Video;
 
 /**
@@ -10,6 +11,16 @@ namespace Modules\Media\Actions\Video;
 use FFMpeg\Format\Video\X264;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
+=======
+/**
+ * @see https://github.com/protonemedia/laravel-ffmpeg
+ */
+
+namespace Modules\Media\Actions\Video;
+
+use FFMpeg\Format\Video\X264;
+use Illuminate\Support\Facades\Storage;
+>>>>>>> be7d0c3 (.)
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -28,6 +39,7 @@ class ConvertVideoAction
 
         $exportedMedia = $openedMedia->export();
 
+<<<<<<< HEAD
         $format = new X264;
         $format->setKiloBitrate(1000);
 
@@ -35,6 +47,14 @@ class ConvertVideoAction
             $exportedMedia->toDisk($disk_mp4)
         )->inFormat($format);
         $formattedMedia->save($file_new);
+=======
+        $format = new X264();
+        $format->setKiloBitrate(1000);
+
+        $exportedMedia->toDisk($disk_mp4);
+        $exportedMedia->inFormat($format);
+        $exportedMedia->save($file_new);
+>>>>>>> be7d0c3 (.)
 
         return Storage::disk($disk_mp4)->url($file_new);
     }

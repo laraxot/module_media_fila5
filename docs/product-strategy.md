@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Media - Product Strategy
 # Media Module - Product Strategy
 
@@ -91,6 +92,19 @@ Easy media management.
 ---
 
 *Last Updated: March 12, 2026*
+=======
+---
+title: "Media - Product Strategy"
+module: "Media"
+type: concept
+tags: [product, strategy]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product strategy"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media - Product Strategy
 
 > Strategia prodotto. Modulo.
@@ -143,4 +157,8 @@ Portare **Media** a uno stato in cui il progetto ottiene un vantaggio netto e mi
 
 - Action-first: niente generic `Services` per la business logic
 - Standard operativo: `spatie/laravel-queueable-action`
+<<<<<<< HEAD
 - Convenzione: Action con metodo `execute()` e dispatch tramite container
+=======
+- Convenzione: Action con metodo `execute()` e dispatch tramite container
+>>>>>>> be7d0c3 (.)

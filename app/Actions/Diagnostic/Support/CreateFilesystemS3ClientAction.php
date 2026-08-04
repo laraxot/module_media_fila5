@@ -6,7 +6,10 @@ namespace Modules\Media\Actions\Diagnostic\Support;
 
 use Aws\S3\S3Client;
 use Spatie\QueueableAction\QueueableAction;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+>>>>>>> be7d0c3 (.)
 
 class CreateFilesystemS3ClientAction
 {
@@ -28,9 +31,13 @@ class CreateFilesystemS3ClientAction
 
     public function bucket(): string
     {
+<<<<<<< HEAD
         $bucket = config('filesystems.disks.s3.bucket');
         Assert::string($bucket);
 
         return $bucket;
+=======
+        return (string) config('filesystems.disks.s3.bucket');
+>>>>>>> be7d0c3 (.)
     }
 }

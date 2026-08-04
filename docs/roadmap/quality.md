@@ -1,6 +1,24 @@
+<<<<<<< HEAD
+=======
+---
+title: "Checklist qualità - Media Module"
+module: "Media"
+type: concept
+tags: [quality]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "quality"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Checklist qualità - Media Module
 
 - [x] PHPStan Level 10
 - [ ] Copertura Test (Pest) > 85%
 - [ ] Performance di caricamento e trasformazione ottimizzate
+<<<<<<< HEAD
 - [ ] Traduzioni dei campi media in tutte le lingue supportate
+=======
+- [ ] Traduzioni dei campi media in tutte le lingue supportate
+>>>>>>> be7d0c3 (.)

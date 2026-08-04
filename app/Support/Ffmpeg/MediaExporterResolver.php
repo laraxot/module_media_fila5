@@ -11,7 +11,11 @@ use RuntimeException;
  * Normalizza il risultato della fluent API FFmpeg (MediaExporter + __call verso PHPFFMpeg)
  * per l'analisi statica e runtime sicuro.
  */
+<<<<<<< HEAD
 final class MediaExporterResolver
+=======
+class MediaExporterResolver
+>>>>>>> be7d0c3 (.)
 {
     /**
      * @param  mixed  $value  Valore restituito da export(), toDisk(), addFilter(), ecc.

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Risoluzione conflitto git su Filament Table ConvertAction"
+module: "Media"
+type: concept
+tags: [filament, table, actions, conflict]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "filament table actions conflict resolution"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Risoluzione conflitto git su Filament Table ConvertAction
 
 ## Problema
@@ -13,4 +27,8 @@ Sono presenti marker di conflitto git nel file `app/Filament/Actions/Table/Conve
 - Verrà verificata la sintassi e la coerenza dopo la correzione.
 
 ## Collegamenti
+<<<<<<< HEAD
 - [Documentazione root risoluzione conflitti](../../../../docs/risoluzione_conflitti_git.md#media-filament-actions-table-convertactionphp)
+=======
+- [Documentazione root risoluzione conflitti](../../../../docs/risoluzione_conflitti_git.md#media-filament-actions-table-convertactionphp)
+>>>>>>> be7d0c3 (.)
