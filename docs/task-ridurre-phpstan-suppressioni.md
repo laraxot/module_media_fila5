@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Ridurre Suppressioni PHPStan Inline - Media"
+module: "Media"
+type: concept
+tags: [task, ridurre, phpstan, suppressioni]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "task ridurre phpstan suppressioni"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Task: Ridurre Suppressioni PHPStan Inline - Media
 
 **Modulo**: Media
@@ -22,4 +36,8 @@
 ## Criteri di Completamento
 
 - [ ] Almeno 13 delle 19 suppressioni risolte
+<<<<<<< HEAD
 - [ ] PHPStan 0 errori mantenuto
+=======
+- [ ] PHPStan 0 errori mantenuto
+>>>>>>> be7d0c3 (.)

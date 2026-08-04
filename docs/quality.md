@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Quality Analysis Report - Media Module"
+module: "Media"
+type: concept
+tags: [quality]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "quality"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Quality Analysis Report - Media Module
 **Date**: [DATE]
 **Status**: ✅ **ILLUMINATED** - PHPStan Level 10 PASS
@@ -206,4 +220,8 @@ The **Media module** is in **excellent condition** with PHPStan Level 10 complia
 ---
 
 **Documentation**: Comprehensive (63 docs files)
+<<<<<<< HEAD
 **Test Coverage**: Integration tests available
+=======
+**Test Coverage**: Integration tests available
+>>>>>>> be7d0c3 (.)

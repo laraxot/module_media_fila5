@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
+<<<<<<< HEAD
 // ---- models ---
 
 use Modules\Xot\Database\Migrations\XotBaseMigration;
@@ -12,6 +13,15 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  */
 return new class extends XotBaseMigration
 {
+=======
+use Modules\Media\Models\TemporaryUpload;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+return new class() extends XotBaseMigration
+{
+    protected ?string $model_class = TemporaryUpload::class;
+
+>>>>>>> be7d0c3 (.)
     /**
      * Run the migrations.
      */

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Traduzioni del Modulo Media"
+module: "Media"
+type: concept
+tags: [translations]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "translations"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Traduzioni del Modulo Media
 
 ## Panoramica
@@ -127,4 +141,8 @@ Notification::make()
 
 - [Documentazione Generale Media](../structure.md)
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
+<<<<<<< HEAD
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
+=======
+- [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
+>>>>>>> be7d0c3 (.)

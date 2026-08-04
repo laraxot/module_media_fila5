@@ -18,5 +18,8 @@ legacy/**
 *.rej
 *~head
 agentdb.rvf
+<<<<<<< HEAD
 copilot-redundancy-audit-*.md
 redundancy-audit-*.md
+=======
+>>>>>>> be7d0c3 (.)

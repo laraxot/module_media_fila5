@@ -5,18 +5,35 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Infolists;
 
 use Closure;
+<<<<<<< HEAD
 use Filament\Infolists\Components\Entry;
+=======
+>>>>>>> be7d0c3 (.)
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\ComponentAttributeBag;
 use League\Flysystem\UnableToCheckFileExistence;
+<<<<<<< HEAD
 use Throwable;
 use Webmozart\Assert\Assert;
 
 class VideoEntry extends Entry
 {
     protected string $view = 'xot::filament.infolists.video';
+=======
+use Modules\Xot\Filament\Infolists\Components\XotBaseEntry;
+use Throwable;
+use Webmozart\Assert\Assert;
+
+// phpmd: TooManyFields, TooManyPublicMethods, ExcessiveClassComplexity, LongVariable — entry video Filament ricca
+class VideoEntry extends XotBaseEntry
+{
+    /**
+     * @var view-string
+     */
+    protected string $view = 'media::filament.infolists.video-entry';
+>>>>>>> be7d0c3 (.)
 
     protected string|Closure|null $disk = null;
 

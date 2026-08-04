@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Conversione Media"
+module: "Media"
+type: concept
+tags: [conversione, media]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conversione media"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Conversione Media
 
 ## Risorse Utili
@@ -39,4 +53,8 @@ $tmpFile->delete();
 Per il rilevamento del volume audio:
 ```php
 ->addFilter(['-filter:a', 'volumedetect', '-f', 'null'])
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> be7d0c3 (.)

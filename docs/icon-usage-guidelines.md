@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media Module Icon Usage Guidelines"
+module: "Media"
+type: how-to
+tags: [icon, usage, guidelines]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "icon usage guidelines"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media Module Icon Usage Guidelines
 
 ## File Location
@@ -48,4 +62,8 @@ When adding new icons:
 1. Add the SVG file to the correct directory
 2. Update this documentation if adding a new category of icons
 3. Test the icon in all relevant contexts (tables, forms, modals)
+<<<<<<< HEAD
 4. Ensure the icon follows the project's visual style guide
+=======
+4. Ensure the icon follows the project's visual style guide
+>>>>>>> be7d0c3 (.)

@@ -24,15 +24,31 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
+<<<<<<< HEAD
         $manager = new InterventionImageManager(new GdDriver);
+=======
+        $manager = new InterventionImageManager(new GdDriver());
+>>>>>>> be7d0c3 (.)
 
         $image1 = $manager->decodePath($path1);
         $image2 = $manager->decodePath($path2);
 
+<<<<<<< HEAD
         $image1->insert($image2, 0, 0, Alignment::CENTER);
 
         File::ensureDirectoryExists(dirname($outputPath));
         $image1->save($outputPath);
+=======
+        $width = max($image1->width(), $image2->width());
+        $height = $image1->height() + $image2->height();
+
+        $canvas = $manager->createImage($width, $height);
+        $canvas->insert($image1, 0, 0, Alignment::TOP_LEFT);
+        $canvas->insert($image2, 0, $image1->height(), Alignment::TOP_LEFT);
+
+        File::ensureDirectoryExists(dirname($outputPath));
+        $canvas->save($outputPath);
+>>>>>>> be7d0c3 (.)
 
         return File::exists($outputPath);
     }
@@ -43,7 +59,11 @@ class Merge
      * Questo metodo unisce tutte le immagini in $filenames verticalmente
      * in un'unica immagine, mantenendo la larghezza massima e sommando le altezze.
      *
+<<<<<<< HEAD
      * @param  array<int, string>  $filenames  Array di percorsi relativi (es: 'chart/123-0.png')
+=======
+     * @param  list<string>  $filenames  Array di percorsi relativi (es: 'chart/123-0.png')
+>>>>>>> be7d0c3 (.)
      * @param  string  $outputFilename  Nome file output relativo (es: 'chart/123.png')
      * @return bool Successo operazione
      */
@@ -77,7 +97,11 @@ class Merge
             }
         }
 
+<<<<<<< HEAD
         $manager = new InterventionImageManager(new GdDriver);
+=======
+        $manager = new InterventionImageManager(new GdDriver());
+>>>>>>> be7d0c3 (.)
 
         /** @var list<ImageInterface> $images */
         $images = [];

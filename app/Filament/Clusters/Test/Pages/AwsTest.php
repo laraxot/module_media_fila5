@@ -14,11 +14,17 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Actions;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Webmozart\Assert\Assert;
+=======
+use Filament\Schemas\Components\Section;
+use Modules\Media\Filament\Clusters\Test;
+use Modules\Xot\Filament\Pages\XotBasePage;
+>>>>>>> be7d0c3 (.)
 
 use function Safe\json_encode;
 
@@ -26,7 +32,11 @@ class AwsTest extends XotBasePage
 {
     protected static ?string $cluster = Test::class;
 
+<<<<<<< HEAD
     /** @var array<string, array<string, mixed>> */
+=======
+    /** @var array<string, mixed> */
+>>>>>>> be7d0c3 (.)
     public array $testResults = [];
 
     public string $activeTab = 's3';
@@ -44,7 +54,11 @@ class AwsTest extends XotBasePage
     ];
 
     /**
+<<<<<<< HEAD
      * @return array<int, Component>
+=======
+     * @return array<int, \Filament\Schemas\Components\Component>
+>>>>>>> be7d0c3 (.)
      */
     protected function getS3TestSchema(): array
     {
@@ -75,7 +89,11 @@ class AwsTest extends XotBasePage
     }
 
     /**
+<<<<<<< HEAD
      * @return array<int, Component>
+=======
+     * @return array<int, \Filament\Schemas\Components\Component>
+>>>>>>> be7d0c3 (.)
      */
     protected function getCloudFrontTestSchema(): array
     {
@@ -96,7 +114,11 @@ class AwsTest extends XotBasePage
     }
 
     /**
+<<<<<<< HEAD
      * @return array<int, Component>
+=======
+     * @return array<int, \Filament\Schemas\Components\Component>
+>>>>>>> be7d0c3 (.)
      */
     protected function getIamTestSchema(): array
     {
@@ -117,7 +139,11 @@ class AwsTest extends XotBasePage
     }
 
     /**
+<<<<<<< HEAD
      * @return array<int, Component>
+=======
+     * @return array<int, \Filament\Schemas\Components\Component>
+>>>>>>> be7d0c3 (.)
      */
     protected function getDiagnosticsSchema(): array
     {
@@ -249,11 +275,16 @@ class AwsTest extends XotBasePage
      */
     protected function getAwsConfig(): array
     {
+<<<<<<< HEAD
         $key = config('filesystems.disks.s3.key', '');
         Assert::string($key);
 
         return [
             'AWS_ACCESS_KEY_ID' => substr($key, 0, self::KEY_PREVIEW_LENGTH).'...',
+=======
+        return [
+            'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH).'...',
+>>>>>>> be7d0c3 (.)
             'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
             'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
             'CLOUDFRONT_URL' => config('filesystems.cloudfront.url'),

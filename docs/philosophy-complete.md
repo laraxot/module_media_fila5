@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media - Filosofia Completa: Logica, Religione, Politica, Zen"
+module: "Media"
+type: concept
+tags: [philosophy, complete]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "philosophy complete"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media - Filosofia Completa: Logica, Religione, Politica, Zen
 
 **Data Creazione**: [DATE]
@@ -108,7 +122,11 @@ class Media extends BaseModel
 
 Il modulo Media **è utilizzato da** tutti i moduli che gestiscono file:
 - **User**: Avatar, documenti profilo
+<<<<<<< HEAD
 - **Dominio operativo**: Documenti clienti, certificazioni dispositivi
+=======
+- **TechPlanner**: Documenti clienti, certificazioni dispositivi
+>>>>>>> be7d0c3 (.)
 - **Cms**: Immagini contenuti, media gallery
 - **Employee**: Documenti dipendenti, foto profilo
 
@@ -244,4 +262,8 @@ Media::registerMediaConversions(function ($media) {
 
 ---
 
+<<<<<<< HEAD
 **Filosofia**: Secure Upload, Smart Storage, Automatic Processing, Simple Access
+=======
+**Filosofia**: Secure Upload, Smart Storage, Automatic Processing, Simple Access
+>>>>>>> be7d0c3 (.)

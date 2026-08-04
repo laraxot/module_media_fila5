@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Copilot Redundancy Audit"
+module: "Media"
+type: concept
+tags: [copilot, redundancy, audit]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "copilot redundancy audit"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 Copilot Redundancy Audit — 2026-05-25
 
 Sintesi
@@ -7,4 +21,8 @@ Raccomandazioni
 - Centralizzare esempi di upload e gestione media in un documento condiviso e referenziarlo da ogni modulo.
 - Standardizzare nomi e posizioni dei file docs per miglior ricerca automatica.
 
+<<<<<<< HEAD
 Autore: Copilot CLI
+=======
+Autore: Copilot CLI
+>>>>>>> be7d0c3 (.)

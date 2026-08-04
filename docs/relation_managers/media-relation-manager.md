@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "MediaRelationManager"
+module: "Media"
+type: concept
+tags: [media, relation, manager]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "media relation manager"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # MediaRelationManager
 
 ## Descrizione
@@ -28,4 +42,8 @@ Le azioni sono implementate seguendo le convenzioni documentate in `filament_tab
 ## Note di Manutenzione
 - Mantenere la coerenza con le convenzioni di naming
 - Assicurarsi che tutte le azioni abbiano chiavi stringa
+<<<<<<< HEAD
 - Mantenere la documentazione PHPDoc aggiornata
+=======
+- Mantenere la documentazione PHPDoc aggiornata
+>>>>>>> be7d0c3 (.)

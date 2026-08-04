@@ -10,7 +10,11 @@ jobs:
 
     steps:
       - name: Checkout code
+<<<<<<< HEAD
         uses: actions/checkout@v4
+=======
+        uses: actions/checkout@v7
+>>>>>>> be7d0c3 (.)
         with:
           ref: main
 
@@ -25,4 +29,8 @@ jobs:
         with:
           branch: main
           commit_message: Update CHANGELOG
+<<<<<<< HEAD
           file_pattern: CHANGELOG.md
+=======
+          file_pattern: CHANGELOG.md
+>>>>>>> be7d0c3 (.)

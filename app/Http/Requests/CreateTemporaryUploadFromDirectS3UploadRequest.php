@@ -8,6 +8,10 @@ use Illuminate\Foundation\Http\FormRequest;
 use Modules\Media\Models\Media;
 use Webmozart\Assert\Assert;
 
+<<<<<<< HEAD
+=======
+// phpmd: LongClassName — nome esplicito per upload diretto S3
+>>>>>>> be7d0c3 (.)
 class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 {
     /**
@@ -28,7 +32,11 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
     }
 
     /**
+<<<<<<< HEAD
      * @return array<string, string>
+=======
+     * @return array<string, string|array<string, string>>
+>>>>>>> be7d0c3 (.)
      */
     public function messages(): array
     {
@@ -39,7 +47,11 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getDatabaseConnection(): string
     {
+<<<<<<< HEAD
         $mediaModel = $this->newMediaModel();
+=======
+        $mediaModel = $this->resolveMediaModel();
+>>>>>>> be7d0c3 (.)
 
         if ($mediaModel->getConnectionName() === 'default') {
             return '';
@@ -50,6 +62,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getMediaTableName(): string
     {
+<<<<<<< HEAD
         return $this->newMediaModel()->getTable();
     }
 
@@ -59,5 +72,17 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         Assert::isAOf($mediaModelClass, Media::class);
 
         return new $mediaModelClass;
+=======
+        return $this->resolveMediaModel()->getTable();
+    }
+
+    private function resolveMediaModel(): Media
+    {
+        $mediaModelClass = config('media-library.media_model');
+        Assert::string($mediaModelClass);
+        Assert::subclassOf($mediaModelClass, Media::class);
+
+        return new $mediaModelClass();
+>>>>>>> be7d0c3 (.)
     }
 }
