@@ -22,6 +22,7 @@ return [
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
+            'placeholder' => 'name',
         ],
         'guard_name' => [
             'label' => 'Guard',
@@ -121,6 +122,18 @@ return [
         ],
         'created_at' => [
             'label' => 'created_at',
+        ],
+        'file' => [
+            'label' => 'file',
+            'placeholder' => 'file',
+            'helper_text' => 'file',
+            'description' => 'file',
+        ],
+        'attachment_type' => [
+            'label' => 'attachment_type',
+            'placeholder' => 'attachment_type',
+            'helper_text' => 'attachment_type',
+            'description' => 'attachment_type',
         ],
     ],
     'actions' => [
