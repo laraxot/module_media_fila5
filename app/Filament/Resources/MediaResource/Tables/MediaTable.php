@@ -15,7 +15,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
-use RuntimeException;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Webmozart\Assert\Assert;
 
 class MediaTable extends XotBaseResourceTable
@@ -74,7 +74,7 @@ class MediaTable extends XotBaseResourceTable
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
-                ->action(static function (Media $record): \Symfony\Component\HttpFoundation\BinaryFileResponse {
+                ->action(static function (Media $record): BinaryFileResponse {
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
 

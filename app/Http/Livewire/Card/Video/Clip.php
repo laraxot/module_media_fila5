@@ -64,8 +64,7 @@ class Clip extends Component
     /**
      * Undocumented function.
      *
-     * @param string $id
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public function updateDataFromModal(string $id, array $data): void
     {

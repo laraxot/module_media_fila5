@@ -32,10 +32,6 @@ class ConvertWidget extends XotBaseWidget
 
     protected static string $resource = MediaResource::class;
 
-    
-
-    
-
     public function getFormSchema(): array
     {
         return [];
