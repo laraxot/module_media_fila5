@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Media - Product Roadmap
 # Media Module - Product Roadmap
 
@@ -102,6 +103,19 @@ To provide a **comprehensive media management system** that handles all image, v
 ---
 
 *Last Updated: March 12, 2026*
+=======
+---
+title: "Media - Product Roadmap"
+module: "Media"
+type: concept
+tags: [product, roadmap]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product roadmap"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Media - Product Roadmap
 
 > Documento vivente. Modulo.
@@ -147,4 +161,8 @@ Questo roadmap traduce il PRD in sequenza di rilascio per **Media**, che nel pro
 - [PRD](prd.md)
 - [Product Strategy](product-strategy.md)
 - [Sprint Planning Meeting](sprint-planning-meeting.md)
+<<<<<<< HEAD
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
+=======
+- [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
+>>>>>>> be7d0c3 (.)

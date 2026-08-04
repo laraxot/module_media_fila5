@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Migration Patterns - Media Module"
+module: "Media"
+type: pattern
+tags: [migration, patterns]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration patterns"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Migration Patterns - Media Module
 
 ## Conformità XotBaseMigration
@@ -152,4 +166,8 @@ Anche le migrazioni che **modificano** tabelle esistenti devono usare `create_`:
 - [Xot Migration Base Rules](../../Xot/docs/database/migration-base-rules.md)
 - [Root Migration Rules](../../../.windsurf/rules/migration-complete-rules.md)
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2026-02-26*
+=======
+*Ultimo aggiornamento: 2026-02-26*
+>>>>>>> be7d0c3 (.)

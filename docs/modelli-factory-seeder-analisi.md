@@ -1,4 +1,18 @@
+<<<<<<< HEAD
 
+=======
+---
+title: "Analisi Modelli, Factory e Seeder - Modulo Media"
+module: "Media"
+type: concept
+tags: [modelli, factory, seeder, analisi]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "modelli factory seeder analisi"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 
 # Analisi Modelli, Factory e Seeder - Modulo Media
 
@@ -34,7 +48,11 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 - **Versioning**: Gestione versioni multiple file
 
 **Relazioni Business Logic**:
+<<<<<<< HEAD
 - **Dominio sanitario**: Documenti pazienti, referti medici, immagini profilo
+=======
+- **<nome progetto>**: Documenti pazienti, referti medici, immagini profilo
+>>>>>>> be7d0c3 (.)
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
 - **Notify**: Allegati notifiche email
@@ -197,10 +215,17 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Performance Optimization](./performance_optimization.md)
 
 ### Moduli Collegati
+<<<<<<< HEAD
 - Modulo sanitario legacy - Documenti medici
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
 - [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
+=======
+- [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
+- [User Module](../../user/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
+- [Cms Module](../../cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
+- [Notify Module](../../notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
+>>>>>>> be7d0c3 (.)
 
 ### Librerie e Servizi
 - [Intervention Image](http://image.intervention.io/) - Image processing
@@ -208,6 +233,9 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [FFmpeg](https://ffmpeg.org/) - Video/Audio processing
 - [ImageMagick](https://imagemagick.org/) - Advanced image processing
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: Gennaio 2025*
+=======
+>>>>>>> be7d0c3 (.)
 *Analisi completa di 4 modelli attivi, sistema media completo*
 *Supporto upload, conversioni, storage locale/cloud*

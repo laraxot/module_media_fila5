@@ -88,10 +88,15 @@ class ListMedia extends XotBaseListRecords
                     }
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
+<<<<<<< HEAD
                     $fileName = $record->file_name;
                     Assert::string($fileName);
 
                     return response()->download($filePath, $fileName);
+=======
+
+                    return response()->download($filePath, (string) $record->file_name);
+>>>>>>> be7d0c3 (.)
                 }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Media Filament v5 Alignment (Clusters)"
+module: "Media"
+type: concept
+tags: [media, filament, v5]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "media filament v5"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Task: Media Filament v5 Alignment (Clusters)
 
 ## 📋 Obiettivo
@@ -19,4 +33,8 @@ Organizzare la gestione media in Clusters professionali per migliorare l'esperie
 - [ ] Ottimizzazione dei RelationManager per l'associazione media fluida.
 
 ## 🔗 Riferimenti
+<<<<<<< HEAD
 - [Roadmap Media](../roadmap.md)
+=======
+- [Roadmap Media](../roadmap.md)
+>>>>>>> be7d0c3 (.)

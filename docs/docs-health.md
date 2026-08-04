@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Docs Health - Media"
+module: "Media"
+type: concept
+tags: [docs, health]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "docs health"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Docs Health - Media
 
 ## Snapshot
@@ -28,4 +42,8 @@
 - Update this file when major cleanup is executed.
 
 ---
+<<<<<<< HEAD
 Generated during docs confidence hardening batch (2026-03-07).
+=======
+Generated during docs confidence hardening batch (2026-03-07).
+>>>>>>> be7d0c3 (.)

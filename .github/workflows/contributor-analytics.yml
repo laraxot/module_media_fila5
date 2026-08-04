@@ -32,7 +32,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
+<<<<<<< HEAD
         uses: actions/checkout@v4
+=======
+        uses: actions/checkout@v7
+>>>>>>> be7d0c3 (.)
         with:
           fetch-depth: 0
 
@@ -99,7 +103,11 @@ jobs:
           echo "![contributors](charts/contributors.svg)" >> "$OUT/README.md"
 
       - name: Upload artifact
+<<<<<<< HEAD
         uses: actions/upload-artifact@v4
+=======
+        uses: actions/upload-artifact@v7
+>>>>>>> be7d0c3 (.)
         with:
           name: contributor-analytics
           path: docs/outputs/contributor-analytics/
@@ -112,4 +120,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/outputs/contributor-analytics/
           git diff --staged --quiet || git commit -m "docs(ci): contributor analytics report [skip ci]"
+<<<<<<< HEAD
           git push || true
+=======
+          git push || true
+>>>>>>> be7d0c3 (.)

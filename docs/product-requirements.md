@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Product Requirements Document (PRD)"
+module: "Media"
+type: concept
+tags: [product, requirements]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product requirements"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Product Requirements Document (PRD)
 
 ## Metadata
@@ -163,4 +177,8 @@ Xot, Tenant, User
 | Conversion | Versione alternativa media |
 | Collection | Gruppo logico file |
 | CDN | Content Delivery Network |
+<<<<<<< HEAD
 | Responsive | Immagini multi-risoluzione |
+=======
+| Responsive | Immagini multi-risoluzione |
+>>>>>>> be7d0c3 (.)

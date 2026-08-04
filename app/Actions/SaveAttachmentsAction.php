@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
+<<<<<<< HEAD
 use Exception;
+=======
+>>>>>>> be7d0c3 (.)
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia;
 use Webmozart\Assert\Assert;
@@ -13,22 +16,39 @@ use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
 
+<<<<<<< HEAD
+=======
+// phpmd: UnusedLocalVariable — $full_path legacy path debug (branch commentato in execute)
+>>>>>>> be7d0c3 (.)
 class SaveAttachmentsAction
 {
     /**
      * Save attachments to media library.
      *
+<<<<<<< HEAD
      * @param  array<int, string>  $attachments
      * @param  array<string, mixed>  $data
      */
     public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
     {
+=======
+     * @param  list<string>  $attachments
+     * @param  array<string, string|null>  $data
+     */
+    public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
+    {
+        /** @var array<string, string> $dataAttachments */
+>>>>>>> be7d0c3 (.)
         $dataAttachments = [];
 
         foreach ($attachments as $attachment) {
             Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
 
+<<<<<<< HEAD
             if (empty($data[$attachment])) {
+=======
+            if (! isset($data[$attachment]) || $data[$attachment] === '') {
+>>>>>>> be7d0c3 (.)
                 continue;
             }
 
@@ -63,6 +83,7 @@ class SaveAttachmentsAction
             }
         }
 
+<<<<<<< HEAD
         if (! empty($dataAttachments)) {
             /** @var array<string, string> $dataAttachments */
             $record->update($dataAttachments);
@@ -107,4 +128,10 @@ class SaveAttachmentsAction
         /** @var array<string, string> $data_attachments */
         $record->update($data_attachments);
     }
+=======
+        if ($dataAttachments !== []) {
+            $record->update($dataAttachments);
+        }
+    }
+>>>>>>> be7d0c3 (.)
 }

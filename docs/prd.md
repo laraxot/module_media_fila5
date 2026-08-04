@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "PRD: Media Module"
+module: "Media"
+type: concept
+tags: [prd]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "prd"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # PRD: Media Module
 
 ## 📋 Overview
@@ -10,4 +24,8 @@ Specialized logic for Media needs a dedicated, type-safe Module to ensure mainta
 
 ## 🎯 Goals & Success Metrics
 - **Goal 1:** 100% PHPStan L10 compliance.
+<<<<<<< HEAD
 - **Goal 2:** Seamless integration with XotBase.
+=======
+- **Goal 2:** Seamless integration with XotBase.
+>>>>>>> be7d0c3 (.)

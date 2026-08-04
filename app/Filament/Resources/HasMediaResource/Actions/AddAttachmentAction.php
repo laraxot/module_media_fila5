@@ -83,7 +83,11 @@ class AddAttachmentAction extends XotBaseAction
     }
 
     /**
+<<<<<<< HEAD
      * @param  array<string, mixed>  $data
+=======
+     * @param array<string, mixed> $data
+>>>>>>> be7d0c3 (.)
      */
     public static function formHandlerCallback(RelationManager $livewire, array $data): void
     {
@@ -105,9 +109,13 @@ class AddAttachmentAction extends XotBaseAction
             throw new Exception('FileAdder does not have required methods');
         }
 
+<<<<<<< HEAD
         $originalFileName = $data['original_file_name'] ?? '';
         Assert::string($originalFileName);
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast($originalFileName, '.'));
+=======
+        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast((string) ($data['original_file_name'] ?? ''), '.'));
+>>>>>>> be7d0c3 (.)
         if (! is_object($fileAdderWithName) || ! method_exists($fileAdderWithName, 'preservingOriginal')) {
             throw new Exception('setName did not return valid object');
         }

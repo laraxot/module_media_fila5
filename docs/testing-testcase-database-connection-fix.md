@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Fix: Media TestCase - Database Connection Configuration"
+module: "Media"
+type: concept
+tags: [testing, testcase, database, connection]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "testing testcase database connection fix"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Fix: Media TestCase - Database Connection Configuration
 
 **Problema**: Test Media falliscono con QueryException per database connection 'media'
@@ -86,4 +100,8 @@ protected function setUp(): void
 ---
 
 **Status**: Completed
+<<<<<<< HEAD
 **Risultato**: Test Media ora configurano correttamente le connessioni database senza dipendere da MySQL
+=======
+**Risultato**: Test Media ora configurano correttamente le connessioni database senza dipendere da MySQL
+>>>>>>> be7d0c3 (.)

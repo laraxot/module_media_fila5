@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Dependencies (Module Media)"
+module: "Media"
+type: concept
+tags: [dependencies]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "dependencies"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Dependencies (Module Media)
 
 Canonical dependency map:
@@ -10,4 +24,8 @@ Module/theme specific notes:
 
 Installed packages index:
 
+<<<<<<< HEAD
 - [../../../../docs/packages/index.md](../../../../docs/packages/index.md)
+=======
+- [../../../../docs/packages/index.md](../../../../docs/packages/index.md)
+>>>>>>> be7d0c3 (.)

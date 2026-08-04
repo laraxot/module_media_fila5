@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "MCP Server Consigliati per il Modulo Media"
+module: "Media"
+type: concept
+tags: [mcp, server, recommended]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "mcp server recommended"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # MCP Server Consigliati per il Modulo Media
 
 ## Scopo del Modulo
@@ -20,4 +34,8 @@ Gestione media, upload, conversioni e streaming.
 ```
 
 ## Note
+<<<<<<< HEAD
 - Personalizza la configurazione per esigenze di streaming o CDN.
+=======
+- Personalizza la configurazione per esigenze di streaming o CDN.
+>>>>>>> be7d0c3 (.)

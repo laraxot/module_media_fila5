@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Upgrade Laravel 13 - Media 🐄✨"
+module: "Media"
+type: concept
+tags: [laravel, 13, upgrade]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "laravel 13 upgrade"
+related:
+  - "./webm.md"
+---
+>>>>>>> be7d0c3 (.)
 # Upgrade Laravel 13 - Media 🐄✨
 
 ## 🎯 Visione Architetturale
@@ -23,4 +37,8 @@ L'upgrade a Laravel 13 per il modulo **Media** non è un mero aggiornamento tecn
 L'aggiornamento richiede l'esecuzione di `composer go` dalla root per consolidare le dipendenze merged.
 
 ---
+<<<<<<< HEAD
 **Status**: Purificato e Pronto per il Futuro.
+=======
+**Status**: Purificato e Pronto per il Futuro.
+>>>>>>> be7d0c3 (.)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
@@ -14,6 +15,32 @@
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+=======
+# Auto-generated forbidden paths — do not edit manually
+# Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
+
+bashscripts
+_bmad-output
+.circleci
+.claude-audit
+.devcontainer
+_docs
+docs/archive
+docs/archived
+docs/legacy
+docs/workbench
+.kilocode
+.kiro
+.ralph
+scripts
+test-results
+tests/.claude-audit
+# ==============================================
+# LARAXOT MODULE MEDIA - .GITIGNORE
+# Modulo Media Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-06
+# DEPENDENCIES & PACKAGES
+>>>>>>> be7d0c3 (.)
 vendor/
 /vendor/
 node_modules/
@@ -23,16 +50,21 @@ package-lock.json
 yarn.lock
 yarn-error.log
 composer.lock
+<<<<<<< HEAD
 
 # ==============================================
 # BUILD & COMPILED FILES
 # ==============================================
+=======
+# BUILD & COMPILED FILES
+>>>>>>> be7d0c3 (.)
 /build
 /build/
 build/
 dist/
 docs/cache/
 cache/
+<<<<<<< HEAD
 
 # ==============================================
 # CACHE & TEMPORARY FILES
@@ -53,23 +85,45 @@ cache/
 *.swo
 *.swp
 *.tmp
+=======
+# CACHE & TEMPORARY FILES
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*.exe
+>>>>>>> be7d0c3 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
 .phpunit.result.cache
+<<<<<<< HEAD
 error_log
 
 # ==============================================
 # LOG FILES
 # ==============================================
+=======
+# LOG FILES
+*.log
+error_log
+>>>>>>> be7d0c3 (.)
 npm-debug.log*
 npm-debug.log
 yarn-error.log*
 lerna-debug.log*
+<<<<<<< HEAD
 
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
+=======
+# LARAVEL SPECIFIC
+>>>>>>> be7d0c3 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -80,15 +134,20 @@ storage/*.key
 .env
 .env.*
 !.env.example
+<<<<<<< HEAD
 
 # ==============================================
 # ENVIRONMENT & CONFIGURATION
 # ==============================================
+=======
+# ENVIRONMENT & CONFIGURATION
+>>>>>>> be7d0c3 (.)
 Homestead.yaml
 Homestead.json
 /.vagrant
 /.idea
 .phpintel
+<<<<<<< HEAD
 
 # ==============================================
 # GIT SPECIFIC
@@ -113,6 +172,21 @@ Thumbs.db
 # ==============================================
 # BACKUP FILES
 # ==============================================
+=======
+# GIT SPECIFIC
+.git-rewrite/
+.git-rewrite
+.git-blame-ignore-revs
+# SYSTEM FILES
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+# BACKUP FILES
+>>>>>>> be7d0c3 (.)
 *.old
 *.old1
 *.old2
@@ -123,6 +197,7 @@ Thumbs.db
 *.bak
 *.bakcup
 *.new
+<<<<<<< HEAD
 
 # ==============================================
 # DEVELOPMENT TOOLS
@@ -186,10 +261,20 @@ docs/archive/**
 # ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
+=======
+# DEVELOPMENT TOOLS
+.windsurf/
+.cursor/
+.phpstorm.meta.php
+# DOCUMENTATION CACHE
+docs/phpstan/
+# OLD DIRECTORIES (LEGACY CLEANUP)
+>>>>>>> be7d0c3 (.)
 resources/views/Components_old/
 resources/views/Components_old
 database/Migrations_old/
 database/Migrations_old
+<<<<<<< HEAD
 database/Migrations_old/
 database/Seeders_old
 database/Seeders_old/
@@ -269,3 +354,43 @@ phpmd*
 .opencode
 phpstan*-*
 phpmd*.*
+=======
+database/Seeders_old/
+database/Seeders_old
+database/Factories_old/
+database/Factories_old
+database/Factories_
+database_old/
+database_old
+# MODULE SPECIFIC - MEDIA
+# File di configurazione locale
+config/local.php
+config/development.php
+# File media temporanei
+media/temp/
+media/uploads/temp/
+media/thumbnails/temp/
+# Cache media
+storage/media/
+storage/thumbnails/
+# File di test media
+media_test_data.json
+test_media_files/
+# END OF MEDIA .GITIGNORE
+# 🚫 File specifici del progetto
+*.fila2
+laravel
+public_html
+lang/lang/
+agentdb.rvf
+.vscode/
+tests/AuditCoverage
+# AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
+
+# Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
+.cursor/
+.devcontainer/
+.vscode/
+.windsurf/
+tests/AuditCoverage/
+>>>>>>> be7d0c3 (.)
