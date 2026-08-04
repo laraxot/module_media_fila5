@@ -39,13 +39,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $converted_file
  * @property string|null $disk
  * @property string|null $file
-<<<<<<< HEAD
  * @property string|null $path
  * @property Media|null $media
  *
-=======
- * @property Media|null $media
->>>>>>> be7d0c3 (.)
  * @method static MediaConvertFactory factory($count = null, $state = [])
  * @method static Builder|MediaConvert newModelQuery()
  * @method static Builder|MediaConvert newQuery()
@@ -71,20 +67,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|MediaConvert whereUpdatedAt($value)
  * @method static Builder|MediaConvert whereUpdatedBy($value)
  * @method static Builder|MediaConvert whereWidth($value)
-<<<<<<< HEAD
  *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
- *
- * @mixin IdeHelperMediaConvert
- *
  * @property-read ProfileContract|null $deleter
  *
-=======
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $updater
- * @property-read ProfileContract|null $deleter
->>>>>>> be7d0c3 (.)
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel
@@ -130,14 +117,7 @@ class MediaConvert extends BaseModel
             return null;
         }
 
-<<<<<<< HEAD
-        $path = $this->media->path ?? '';
-        $fileName = $this->media->file_name ?? '';
-
-        return $path.'/'.$fileName;
-=======
         return $this->media->path.'/'.$this->media->file_name;
->>>>>>> be7d0c3 (.)
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
@@ -145,23 +125,12 @@ class MediaConvert extends BaseModel
         if ($this->media === null) {
             return null;
         }
-<<<<<<< HEAD
-        $info = pathinfo($this->media->file_name ?? '');
-=======
         $info = pathinfo($this->media->file_name);
->>>>>>> be7d0c3 (.)
         // "dirname" => "."
         // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
-<<<<<<< HEAD
-        $path = $this->media->path ?? '';
-        $filename = $info['filename'] ?? '';
-
-        return $path.'/conversions/'.$filename.'_'.$this->id.'.'.$this->format;
-=======
         return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
->>>>>>> be7d0c3 (.)
     }
 }
