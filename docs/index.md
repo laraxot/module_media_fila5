@@ -57,10 +57,10 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ### Configurazione
 - [Struttura Config](./config_structure.md) - Struttura dei file di configurazione
 - [Configurazione Upload](./upload-config.md) - Configurazione sistema upload
-- [Principi di Configurazione](./configurations_usage_principles.md) - Principi per l'utilizzo delle configurazioni
+- [Principi di Configurazione](./configurations-usage-principles.md) - Principi per l'utilizzo delle configurazioni
 
 ### Pattern e Architettura
-- [Pattern Factory](./factory_pattern_analysis.md) - Analisi del pattern Factory
+- [Pattern Factory](./factory-pattern-analysis.md) - Analisi del pattern Factory
 - [Risoluzione Dinamica delle Classi](./dynamic_class_resolution.md) - Pattern di risoluzione dinamica delle classi
 - [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
 

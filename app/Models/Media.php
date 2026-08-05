@@ -20,7 +20,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
-    /** @phpstan-use HasXotFactory<MediaFactory, Media> */
+    /** @phpstan-use HasXotFactory<MediaFactory> */
     use HasXotFactory;
 
     use Updater;
