@@ -13,7 +13,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
-    $form = MediaConvertResource::getFormSchema();
+    $form = MediaConvertResource::getFormSchemaOld();
 
     Assert::assertNotEmpty($form);
 

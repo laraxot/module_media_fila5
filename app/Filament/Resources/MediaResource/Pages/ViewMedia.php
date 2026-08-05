@@ -52,7 +52,7 @@ class ViewMedia extends XotBaseViewRecord
                             Action::make('convert')
                                 ->tooltip('convert')
                                 ->icon('heroicon-o-scale')
-                                ->schema(MediaConvertResource::getFormSchema())
+                                ->schema(MediaConvertResource::getFormSchemaOld())
                                 ->action(function (Media $record, array $data): void {
                                     /** @var array<string, mixed> $actionData */
                                     $actionData = $data;

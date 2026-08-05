@@ -6,7 +6,6 @@ namespace Modules\Media\Filament\Resources;
 
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Components\Component;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\CreateMediaConvert;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\EditMediaConvert;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
@@ -14,15 +13,16 @@ use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
 
+use Filament\Forms\Components\Field;
 class MediaConvertResource extends XotBaseResource
 {
     protected static ?string $model = MediaConvert::class;
 
     /**
-     * @return array<string, Component>
+     * @return array<int|string, \Filament\Schemas\Components\Component>
      */
-    #[Override]
-    public static function getFormSchema(): array
+    //#[Override]
+    public static function getFormSchemaOld(): array
     {
         return [
             'format' => Radio::make('format')
