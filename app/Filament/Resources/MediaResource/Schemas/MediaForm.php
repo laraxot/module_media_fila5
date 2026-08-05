@@ -12,7 +12,7 @@ class MediaForm extends XotBaseResourceForm
     /**
      * @return array<string, \Filament\Schemas\Components\Component>
      */
-    public static function getFormSchema(): array
+    public static function getFormSchemaOld(): array
     {
         return [
             'name' => TextInput::make('name'),

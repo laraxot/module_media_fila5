@@ -15,7 +15,7 @@ class TemporaryUploadForm extends XotBaseResourceForm
     /**
      * @return array<string, Component>
      */
-    public static function getFormSchema(): array
+    public static function getFormSchemaOld(): array
     {
         return [
             'file' => FileUpload::make('file')
