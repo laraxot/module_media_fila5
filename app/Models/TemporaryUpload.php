@@ -25,7 +25,7 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-    /** @phpstan-use HasXotFactory<TemporaryUploadFactory, TemporaryUpload> */
+    /** @phpstan-use HasXotFactory<TemporaryUploadFactory> */
     use HasXotFactory;
 
     use InteractsWithMedia;

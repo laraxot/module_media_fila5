@@ -52,7 +52,7 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 ### 📚 **Documentazione Aggiornata**
 - `laravel/Modules/Media/docs/README.md` - Aggiunta sezione correzioni
 - `laravel/Modules/Media/docs/s3test_corrections.md` - Documentazione dettagliata correzioni
-- `laravel/Modules/Media/docs/prevention_guidelines.md` - Linee guida prevenzione
+- `laravel/Modules/Media/docs/prevention-guidelines.md` - Linee guida prevenzione
 
 ## ✅ **Conformità Raggiunta**
 
@@ -136,7 +136,7 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 ## 🔗 **Collegamenti**
 
 - [Correzioni Dettagliate](s3test_corrections.md)
-- [Linee Guida Prevenzione](prevention_guidelines.md)
+- [Linee Guida Prevenzione](prevention-guidelines.md)
 - [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
 
