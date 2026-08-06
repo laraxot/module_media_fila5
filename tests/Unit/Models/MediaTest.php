@@ -320,7 +320,7 @@ it('media has factory', function (): void {
 });
 
 it('media has casts', function (): void {
-    $media = new Media;
+    $media = new Media();
 
     $expectedCasts = [
         'id' => 'string',
