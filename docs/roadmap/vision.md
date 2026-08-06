@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Visione - Media Module"
 module: "Media"
@@ -11,15 +9,10 @@ qmd: "vision"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Visione - Media Module
 
 Fornire un sistema universale e performante per:
 
 - Gestione, trasformazione e ottimizzazione dei file multimediali
 - Integrazione con principali provider di storage e CDN
-<<<<<<< HEAD
 - Elaborazione immagini e video
-=======
-- Elaborazione immagini e video
->>>>>>> be7d0c3 (.)

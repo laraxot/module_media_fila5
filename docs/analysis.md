@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module Analysis"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "analysis"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module Analysis
 
 ## Overview
@@ -91,8 +88,4 @@ Modules/Media/
 
 ### Versione Incoming
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> be7d0c3 (.)

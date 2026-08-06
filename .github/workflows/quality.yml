@@ -20,11 +20,7 @@ jobs:
     environment: Testing
     
     steps:
-<<<<<<< HEAD
-      - uses: actions/checkout@v5
-=======
       - uses: actions/checkout@v7
->>>>>>> be7d0c3 (.)
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -65,9 +61,5 @@ jobs:
             ./vendor/bin/phpinsights analyse Modules/Media --format=table --no-interaction || true
           else
             echo "PHPInsights not found, skipping..."
-<<<<<<< HEAD
-          fi
-=======
           fi
 
->>>>>>> be7d0c3 (.)

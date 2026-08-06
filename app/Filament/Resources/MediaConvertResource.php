@@ -19,10 +19,11 @@ class MediaConvertResource extends XotBaseResource
     protected static ?string $model = MediaConvert::class;
 
     /**
+     * Schema legacy del form: la sorgente di verità è MediaConvertForm::getFormSchema().
+     *
      * @return array<string, Component>
      */
-    #[Override]
-    public static function getFormSchema(): array
+    public static function getFormSchemaOld(): array
     {
         return [
             'format' => Radio::make('format')

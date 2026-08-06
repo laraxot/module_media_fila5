@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "🐄 DRY & KISS Analysis - Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "dry kiss analysis"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # 🐄 DRY & KISS Analysis - Media
 
 **Data:** [DATE] | **Status:** ✅
@@ -34,8 +31,4 @@ Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83
 ## 🚀 PIANO
 Resources refactoring (2 giorni)
 
-<<<<<<< HEAD
 **Status:** 🟢 BUONO
-=======
-**Status:** 🟢 BUONO
->>>>>>> be7d0c3 (.)

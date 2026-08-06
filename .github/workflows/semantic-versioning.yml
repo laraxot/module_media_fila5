@@ -14,11 +14,7 @@ jobs:
   tag:
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - uses: actions/checkout@v4
-=======
       - uses: actions/checkout@v7
->>>>>>> be7d0c3 (.)
         with:
           fetch-depth: 0
 
@@ -27,8 +23,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           tag_prefix: Modules/Media/v
-<<<<<<< HEAD
           release_branches: main
-=======
-          release_branches: main
->>>>>>> be7d0c3 (.)

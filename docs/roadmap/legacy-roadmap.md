@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Media Module Roadmap
-
-Vedi [roadmap/00-index](roadmap/00-index.md).
-=======
 ---
 title: "Media Module Roadmap"
 module: "Media"
@@ -17,4 +12,3 @@ related:
 # Media Module Roadmap
 
 Vedi [roadmap/00-index](roadmap/00-index.md).
->>>>>>> be7d0c3 (.)

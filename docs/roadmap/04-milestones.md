@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Milestones - Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "04 milestones"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Milestones - Media
 
 ## M1 Documentation Baseline

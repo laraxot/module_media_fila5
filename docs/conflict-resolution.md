@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Conflict Resolution — Module Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "conflict resolution"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Conflict Resolution — Module Media
 
 ## Summary
@@ -35,8 +32,4 @@ related:
 - composer.json
 
 ## Backlinks
-<<<<<<< HEAD
 - [Root conflict resolution report](../../../../docs/conflict-resolution-report.md)
-=======
-- [Root conflict resolution report](../../../../docs/conflict-resolution-report.md)
->>>>>>> be7d0c3 (.)

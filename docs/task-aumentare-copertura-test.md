@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task: Aumentare Copertura Test - Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "task aumentare copertura test"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Task: Aumentare Copertura Test - Media
 
 **Modulo**: Media
@@ -32,8 +29,4 @@ related:
 
 - [ ] 10+ nuovi test
 - [ ] Mock per servizi esterni (FFmpeg, S3)
-<<<<<<< HEAD
 - [ ] Copertura al 50%
-=======
-- [ ] Copertura al 50%
->>>>>>> be7d0c3 (.)

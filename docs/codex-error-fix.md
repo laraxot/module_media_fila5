@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Codex Configuration Error Fixes"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "codex error fix"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Codex Configuration Error Fixes
 
 Questo documento descrive le correzioni applicate agli errori riscontrati durante l'avvio di `codex`.
@@ -93,8 +90,4 @@ args = ["laravel/artisan", "boost:mcp"]
         "boost:mcp"
     ]
 }
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> be7d0c3 (.)

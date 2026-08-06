@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "User Interface"
 module: "Media"
@@ -11,5 +9,4 @@ qmd: "user interface"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # User Interface

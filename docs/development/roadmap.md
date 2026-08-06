@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module Roadmap"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "roadmap"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module Roadmap
 
 ## Module Progress Overview
@@ -111,8 +108,4 @@ Overall Module Completion: 60%
 
 ### Versione Incoming
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> be7d0c3 (.)

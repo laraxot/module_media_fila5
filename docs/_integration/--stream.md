@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "__stream"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: " stream"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # __stream
 
 <!-- Contenuto migrato da _docs/__stream.txt -->

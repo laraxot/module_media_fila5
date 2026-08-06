@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media module overview"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "module overview"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media module overview
 
 ## Scopo ("perché esiste")
@@ -100,8 +97,4 @@ Nel modulo sono presenti azioni e risorse che orchestrano conversioni (es. WebM)
 - **Riallineare business logic**: riscrivere i documenti che parlano di “healthcare/<nome progetto>” se non sono pertinenti al progetto corrente.
 - **Link**: sostituire link assoluti nei `.md` con link relativi (policy progetto).
 - **Filament wrappers**: audit completo del modulo per assicurare che Widgets/Pages/Resources estendano solo XotBase/UIBase.
-<<<<<<< HEAD
 - **Testing**: migrare test legacy PHPUnit-style verso Pest e spezzare file troppo grandi per ridurre warning PHPMD.
-=======
-- **Testing**: migrare test legacy PHPUnit-style verso Pest e spezzare file troppo grandi per ridurre warning PHPMD.
->>>>>>> be7d0c3 (.)

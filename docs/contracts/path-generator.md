@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "PathGenerator Interface"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "path generator"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # PathGenerator Interface
 
 ## Descrizione
@@ -58,8 +55,4 @@ Questa interfaccia definisce il contratto per la generazione dei percorsi dei fi
 ## Note di Manutenzione
 - Aggiornare la documentazione quando si modificano i metodi
 - Verificare che tutte le implementazioni rispettino il contratto
-<<<<<<< HEAD
 - Testare la generazione dei percorsi in diverse condizioni
-=======
-- Testare la generazione dei percorsi in diverse condizioni
->>>>>>> be7d0c3 (.)

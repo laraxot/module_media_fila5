@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Laravel Folio + Volt - Best Practices and Patterns Analysis"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "folio volt best practices"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Laravel Folio + Volt - Best Practices and Patterns Analysis
 
 ## Overview
@@ -114,8 +111,4 @@ middleware(['auth', 'verified']);
 - Genesis Starter Kit: https://github.com/thedevdojo/genesis
 
 ## Date
-<<<<<<< HEAD
 [DATE]
-=======
-[DATE]
->>>>>>> be7d0c3 (.)

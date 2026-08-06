@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "__stream"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "stream"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 
 # __stream
 
@@ -38,8 +35,4 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 // Cleanup the temporary file
 $tmpFile->delete();
 
-<<<<<<< HEAD
 ----------------------------------------------------------------------------
-=======
-----------------------------------------------------------------------------
->>>>>>> be7d0c3 (.)

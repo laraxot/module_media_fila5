@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Risoluzione Conflitti Git - SubtitleService.php"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "resolution conflitti subtitleservice"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Risoluzione Conflitti Git - SubtitleService.php
 
 ## Intento
@@ -26,8 +23,4 @@ related:
 
 ## Collegamenti
 - [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../../docs/risoluzione_conflitti_git.md)
-<<<<<<< HEAD
 - [Documentazione Conflitti Git nei Moduli](../../../../../docs/conflitti_git_moduli.md)
-=======
-- [Documentazione Conflitti Git nei Moduli](../../../../../docs/conflitti_git_moduli.md)
->>>>>>> be7d0c3 (.)

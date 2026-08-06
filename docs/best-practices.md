@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Best Practices"
 module: "Media"
@@ -11,5 +9,4 @@ qmd: "best practices"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Best Practices

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Case Sensitivity Rules - Media Module"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "case sensitivity rules"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Case Sensitivity Rules - Media Module
 
 ## Problema / Problem
@@ -38,8 +35,4 @@ I seguenti file sono stati eliminati perché violavano le regole:
 
 ## Update Log
 
-<<<<<<< HEAD
 - **[DATE]**: Removed `mediaconvertresourcetest.php` duplicate
-=======
-- **[DATE]**: Removed `mediaconvertresourcetest.php` duplicate
->>>>>>> be7d0c3 (.)

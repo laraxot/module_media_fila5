@@ -6,6 +6,7 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
+use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
@@ -22,7 +23,7 @@ it('can create media with minimal data', function (): void {
     ]);
 
     assertMediaTableHas('media', [
-        'id' => (int) $media->getKey(),
+        'id' => SafeIntCastAction::cast($media->getKey()),
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',
@@ -60,7 +61,7 @@ it('can create media with all fields', function (): void {
     $media = Media::factory()->create($mediaData);
 
     assertMediaTableHas('media', [
-        'id' => (int) $media->getKey(),
+        'id' => SafeIntCastAction::cast($media->getKey()),
         'collection_name' => 'images',
         'name' => 'full-image',
         'file_name' => 'full-image.png',
@@ -87,7 +88,7 @@ it('can create media with all fields', function (): void {
 
 it('media delete removes the record', function (): void {
     $media = Media::factory()->create();
-    $mediaId = (int) $media->getKey();
+    $mediaId = SafeIntCastAction::cast($media->getKey());
 
     $media->delete();
 
@@ -227,7 +228,7 @@ it('can update media', function (): void {
     $media->update(['name' => 'New Name']);
 
     assertMediaTableHas('media', [
-        'id' => (int) $media->getKey(),
+        'id' => SafeIntCastAction::cast($media->getKey()),
         'name' => 'New Name',
     ]);
 });
