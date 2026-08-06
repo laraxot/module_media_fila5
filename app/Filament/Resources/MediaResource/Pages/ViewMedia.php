@@ -96,7 +96,7 @@ class ViewMedia extends XotBaseViewRecord
     protected function getHeaderWidgets(): array
     {
         return [
-            ConvertWidget::make(['record' => $record]
+            ConvertWidget::make(['record' => $record])
         ];
     }
 }
