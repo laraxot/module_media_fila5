@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module - Testing Guidelines"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "testing guidelines"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module - Testing Guidelines
 
 ## Testing Framework Requirements
@@ -479,8 +476,4 @@ describe('Media Performance Tests', function () {
 
 
 **Testing Framework**: Pest
-<<<<<<< HEAD
 **Environment**: .env.testing
-=======
-**Environment**: .env.testing
->>>>>>> be7d0c3 (.)

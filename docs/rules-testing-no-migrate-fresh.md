@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "rules testing no migrate fresh"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH
 
 ## Rule
@@ -24,8 +21,4 @@ related:
 
 ## Correct Approach
 - Only use `DatabaseTransactions` to rollback state after tests.
-<<<<<<< HEAD
 - Maintain strict database boundaries.
-=======
-- Maintain strict database boundaries.
->>>>>>> be7d0c3 (.)

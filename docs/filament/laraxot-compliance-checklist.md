@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Checklist Conformità Laraxot - Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "laraxot compliance checklist"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Checklist Conformità Laraxot - Modulo Media
 
 ## 🎯 **CHECKLIST PRE-COMMIT OBBLIGATORIA**
@@ -210,19 +207,11 @@ class ExamplePage extends XotBasePage
 ## 🔗 **Collegamenti Documentazione**
 
 - [S3Test Refactoring Analysis](s3test-refactoring-analysis.md)
-<<<<<<< HEAD
 - [Media Module README](../readme.md)
-=======
-- [Media Module README](README.md)
->>>>>>> be7d0c3 (.)
 - [Laraxot Best Practices](../../../../../docs/laraxot-best-practices.md)
 - [PHPStan Guidelines](../../../../../docs/phpstan-guidelines.md)
 
 ---
 
 **Versione**: 1.0
-<<<<<<< HEAD
 **Applicabilità**: Tutti i file Filament del modulo Media
-=======
-**Applicabilità**: Tutti i file Filament del modulo Media
->>>>>>> be7d0c3 (.)

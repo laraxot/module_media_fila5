@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media - Sprint Planning Meeting"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "sprint planning meeting"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media - Sprint Planning Meeting
 
 > Documento operativo per sprint planning. Modulo.
@@ -60,8 +57,4 @@ Spostare **Media** in avanti sui gap P0/P1 piu' vicini al valore, evitando lavor
 
 - [Product Strategy](product-strategy.md)
 - [Product Launch Plan](product-launch-plan.md)
-<<<<<<< HEAD
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
-=======
-- [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
->>>>>>> be7d0c3 (.)

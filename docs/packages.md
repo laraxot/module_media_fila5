@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Pacchetti del Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "packages"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Pacchetti del Modulo Media
 
 ## Pacchetti Utilizzati
@@ -87,8 +84,4 @@ related:
 
 ### Versione Incoming
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> be7d0c3 (.)

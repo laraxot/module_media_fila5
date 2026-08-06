@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Changelog"
 module: "Media"
@@ -11,13 +9,8 @@ qmd: "changelog"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Changelog
 
 All notable changes to this project will be documented in this file.
 
-<<<<<<< HEAD
 ## [Unreleased]
-=======
-## [Unreleased]
->>>>>>> be7d0c3 (.)

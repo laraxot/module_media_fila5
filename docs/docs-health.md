@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Docs Health - Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "docs health"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Docs Health - Media
 
 ## Snapshot
@@ -42,8 +39,4 @@ related:
 - Update this file when major cleanup is executed.
 
 ---
-<<<<<<< HEAD
 Generated during docs confidence hardening batch (2026-03-07).
-=======
-Generated during docs confidence hardening batch (2026-03-07).
->>>>>>> be7d0c3 (.)

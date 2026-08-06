@@ -17,7 +17,7 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 class TemporaryUploadsTable extends XotBaseResourceTable
 {
     /**
-     * @return array<string, \Filament\Tables\Columns\Column>
+     * @return array<string, Column>
      * @return array<string, Column>
      */
     public function getTableColumns(): array

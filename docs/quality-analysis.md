@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Quality Analysis Report - Media Module"
 module: "Media"
@@ -11,15 +9,12 @@ qmd: "quality analysis"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Quality Analysis Report - Media Module
 **Date**: [DATE]
 **Status**: ✅ **ILLUMINATED** - PHPStan Level 10 PASS
 
 ---
 
-<<<<<<< HEAD
-=======
 ## Aggiornamento verifica 2026-07-01
 
 - **PHPStan** (`level: max`): **0 errori** confermati, incluso `Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php:60` (il presunto errore "Cannot instantiate class using mixed" di un run precedente era un falso positivo da OOM parziale; il codice usa già `class-string<Media>` + `@var Media $mediaModel`).
@@ -30,7 +25,6 @@ related:
 ---
 
 
->>>>>>> be7d0c3 (.)
 ## Executive Summary
 
 The Media module successfully passes **PHPStan Level 10** with **0 errors** out of the box, demonstrating excellent type safety and code quality.
@@ -233,8 +227,4 @@ The **Media module** is in **excellent condition** with PHPStan Level 10 complia
 ---
 
 **Documentation**: Comprehensive (63 docs files)
-<<<<<<< HEAD
 **Test Coverage**: Integration tests available
-=======
-**Test Coverage**: Integration tests available
->>>>>>> be7d0c3 (.)

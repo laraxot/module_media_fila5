@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module - User Research"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "user research"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module - User Research
 
 **Module:** Media  
@@ -99,8 +96,4 @@ Majority of uploads from mobile.
 
 ---
 
-<<<<<<< HEAD
 *Last Updated: March 12, 2026*
-=======
-*Last Updated: March 12, 2026*
->>>>>>> be7d0c3 (.)

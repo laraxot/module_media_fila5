@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "MediaRelationManager Documentation"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "media relation manager"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # MediaRelationManager Documentation
 
 ## Overview
@@ -63,8 +60,4 @@ class YourResource extends Resource
 - Implementata integrazione Laraxot
 ## Collegamenti tra versioni di media-relation-manager.md
 * [media-relation-manager.md](../../../media/docs/filament/relation-managers/media-relation-manager.md)
-<<<<<<< HEAD
 * [media-relation-manager.md](../../../media/docs/resources/media-relation-manager.md)
-=======
-* [media-relation-manager.md](../../../media/docs/resources/media-relation-manager.md)
->>>>>>> be7d0c3 (.)

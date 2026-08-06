@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task: Media Docs Consolidation & Cleanup"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "media cleanup docs"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Task: Media Docs Consolidation & Cleanup
 
 ## 📋 Obiettivo
@@ -32,8 +29,4 @@ Sfoltire l'enorme documentazione del modulo Media (160+ file), eliminando duplic
 - [ ] Aggiornare `00-index.md` rimuovendo riferimenti a file temporanei.
 
 ## 🔗 Riferimenti
-<<<<<<< HEAD
 - [Roadmap Media](../roadmap.md)
-=======
-- [Roadmap Media](../roadmap.md)
->>>>>>> be7d0c3 (.)

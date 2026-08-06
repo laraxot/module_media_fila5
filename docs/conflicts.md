@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Risoluzione Conflitti - Media"
 module: "Media"
@@ -11,13 +9,8 @@ qmd: "conflicts"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Risoluzione Conflitti - Media
 
 ## File modificati
 
-<<<<<<< HEAD
 ## Decisioni adottate
-=======
-## Decisioni adottate
->>>>>>> be7d0c3 (.)

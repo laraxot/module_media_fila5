@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Utilizzo di Laravel-FFMpeg nel Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "ffmpeg usage"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Utilizzo di Laravel-FFMpeg nel Modulo Media
 
 ## Introduzione
@@ -139,8 +136,4 @@ try {
 
 - [Documentazione ufficiale di Laravel-FFMpeg](https://github.com/protonemedia/laravel-ffmpeg)
 - [Documentazione di FFmpeg](https://ffmpeg.org/documentation.html)
-<<<<<<< HEAD
 - [Articolo: How to use FFmpeg in your Laravel projects](https://protone.media/en/blog/how-to-use-ffmpeg-in-your-laravel-projects)
-=======
-- [Articolo: How to use FFmpeg in your Laravel projects](https://protone.media/en/blog/how-to-use-ffmpeg-in-your-laravel-projects)
->>>>>>> be7d0c3 (.)

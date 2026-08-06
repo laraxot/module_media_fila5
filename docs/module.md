@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Modulo Media - Gestione File Multimediali"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "module"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Modulo Media - Gestione File Multimediali
 
 ## Scopo Principale

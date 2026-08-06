@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module - File Management Architecture"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "file management architecture"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module - File Management Architecture
 
 ## 🎯 Module Overview
