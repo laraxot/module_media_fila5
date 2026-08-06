@@ -319,7 +319,11 @@ it('media has factory', function(): void {
     expect($media)->toBeInstanceOf(Media::class);
 });
 
+<<<<<<< HEAD
 it('media has casts', function(): void {
+=======
+it('media has casts', function (): void {
+>>>>>>> d2bb446 (.)
     $media = new Media;
 
     $expectedCasts = [
