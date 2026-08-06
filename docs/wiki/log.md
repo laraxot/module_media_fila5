@@ -5,11 +5,14 @@ module: "Media"
 
 # Media - Wiki Activity Log
 
+<<<<<<< HEAD
 ## [2026-05-27] lint | phpstan zero
 
 - `./vendor/bin/phpstan analyse Modules/Media` → 0 errori (135 file).
 - Commento provtv/module_media_fila5#3; inventario mono corretto (ex 33 errori stale).
 
+=======
+>>>>>>> 9aef2ca (.)
 ## [2026-05-21] governance | owner html2pdf canonico
 
 - Documentazione Html2Pdf completa solo in `docs/html2pdf/` (+ `README.md`).

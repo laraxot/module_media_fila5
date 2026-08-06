@@ -12,8 +12,13 @@ use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 class HasMediaForm extends XotBaseResourceForm
 {
     /**
+<<<<<<< HEAD
      * @return array<int|string, Component>
+=======
+     * @return array<int|string, \Filament\Schemas\Components\Component>
+>>>>>>> 9aef2ca (.)
      */
+
     public static function getFormSchema(): array
     {
         return [
