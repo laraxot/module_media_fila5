@@ -39,7 +39,7 @@ class IconMediaColumn extends IconColumn
 
                 return 'Documento non caricato';
             })
-            ->action(function (array $arguments, Request $request) use ($attachment) {
+            ->action(function (array $arguments, Request $request) use ($attachment): void {
                 // Skip action if record is not available or doesn't have media capabilities
                 if (! isset($arguments['record'])) {
                     return;
@@ -58,7 +58,7 @@ class IconMediaColumn extends IconColumn
                     return;
                 }
 
-                return $media->toInlineResponse($request);
+                $media->toInlineResponse($request);
 
                 // return $media->toResponse($request);
                 // return Storage::disk($media->disk)->download($media->getPathRelativeToRoot());
