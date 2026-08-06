@@ -64,6 +64,7 @@ related:
 - [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
 - [Cms](../../cms/docs/readme.md) - Integrazione media nei blocchi di contenuto.
+# Documentation Index
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
