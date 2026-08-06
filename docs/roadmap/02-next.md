@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Next (Module Media)"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "02 next"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Next (Module Media)
 
 ## Features

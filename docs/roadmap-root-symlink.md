@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,10 +12,13 @@ qmd: "roadmap root symlink"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 roadmap_media.md
 ## Collegamenti tra versioni di roadmap_root_symlink.md
 * [roadmap_root_symlink.md](../../../notify/docs/roadmap_root_symlink.md)
 * [roadmap_root_symlink.md](../../../media/docs/roadmap_root_symlink.md)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 766d652 (.)
@@ -28,3 +32,5 @@ See canonical documentation: ../../../Themes/docs/shared-components/roadmap-root
 >>>>>>> 33a3006 (.)
 =======
 >>>>>>> 766d652 (.)
+=======
+>>>>>>> 7605234 (.)

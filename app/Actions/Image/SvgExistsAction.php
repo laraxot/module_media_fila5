@@ -22,7 +22,11 @@ class SvgExistsAction
      */
     public function execute(string $svgName): bool
     {
+<<<<<<< HEAD
         if ($svgName === '') {
+=======
+        if (empty($svgName)) {
+>>>>>>> 7605234 (.)
             return false;
         }
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,3 +29,9 @@ See canonical documentation: ../../../Themes/docs/shared-components/roadmap-root
 >>>>>>> 33a3006 (.)
 =======
 >>>>>>> 766d652 (.)
+=======
+roadmap_media.md
+## Collegamenti tra versioni di roadmap_root_symlink.md
+* [roadmap_root_symlink.md](../../../Notify/docs/roadmap_root_symlink.md)
+* [roadmap_root_symlink.md](../../../Media/docs/roadmap_root_symlink.md)
+>>>>>>> 7605234 (.)

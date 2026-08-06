@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 **Problema**:
+=======
+# Ottimizzazioni Performance Modulo Media
+
+## 1. Ottimizzazione Conversione Video
+**File**: `laravel/Modules/Media/app/Actions/Video/ConvertVideoByMediaConvertAction.php`
+**Linee**: 1-100
+
+**Problema**: 
+>>>>>>> 7605234 (.)
 - Nessun caching dei parametri di conversione
 - Notifiche inviate ad ogni progresso
 - Aggiornamenti DB frequenti durante la conversione
@@ -64,10 +74,17 @@ final class ConvertVideoByMediaConvertAction
                             ->title($msg)
                             ->success()
                             ->send();
+<<<<<<< HEAD
 
                         $lastNotificationPercentage = $percentage;
                     }
 
+=======
+                            
+                        $lastNotificationPercentage = $percentage;
+                    }
+                    
+>>>>>>> 7605234 (.)
                     // Aggiorna solo ogni 5 secondi
                     if (!Cache::has("convert_update_{$record->id}")) {
                         $record->update($updates);
@@ -131,7 +148,11 @@ final class GetVideoFrameContentAction
     /**
      * @return string|null
      */
+<<<<<<< HEAD
     public function execute(string $disk_mp4, string $file_mp4, int $time): ?string
+=======
+    public function execute(string $disk_mp4, string $file_mp4, int $time): ?string 
+>>>>>>> 7605234 (.)
     {
         Assert::stringNotEmpty($disk_mp4);
         Assert::stringNotEmpty($file_mp4);
@@ -155,11 +176,19 @@ final class GetVideoFrameContentAction
     public function extractFrameBatch(string $disk_mp4, string $file_mp4, array $times): void
     {
         Assert::allGreaterThanEq($times, 0);
+<<<<<<< HEAD
 
         foreach (array_chunk($times, self::BATCH_SIZE) as $batch) {
             foreach ($batch as $time) {
                 $cacheKey = $this->getCacheKey($disk_mp4, $file_mp4, $time);
 
+=======
+        
+        foreach (array_chunk($times, self::BATCH_SIZE) as $batch) {
+            foreach ($batch as $time) {
+                $cacheKey = $this->getCacheKey($disk_mp4, $file_mp4, $time);
+                
+>>>>>>> 7605234 (.)
                 if (!Cache::tags(['video_frames'])->has($cacheKey)) {
                     Cache::tags(['video_frames'])->put(
                         $cacheKey,
@@ -260,7 +289,11 @@ final class TemporaryUploadPathGenerator implements PathGenerator
         $base = config('media.temp_path', 'temp');
         $date = now()->format('Y/m/d');
         $hash = Str::random(40);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 7605234 (.)
         return "{$base}/{$date}/{$hash}";
     }
 
@@ -313,6 +346,7 @@ final class TemporaryUploadPathGenerator implements PathGenerator
 - Cache tags richiedono Redis/Memcached
 - Compatibile con FFmpeg e Laravel
 - Configurazioni esternalizzate
+<<<<<<< HEAD
 # Ottimizzazioni Performance Modulo Media
 
 ## 1. Ottimizzazione Conversione Video
@@ -661,3 +695,5 @@ canonical: ../../../../Themes/docs/shared-components/media-optimizations.md
 >>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../../Themes/docs/shared-components/media-optimizations.md
+=======
+>>>>>>> 7605234 (.)

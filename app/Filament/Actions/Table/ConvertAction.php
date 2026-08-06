@@ -10,10 +10,17 @@ namespace Modules\Media\Filament\Actions\Table;
 
 // Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
 // use Filament\Actions\Action;
+<<<<<<< HEAD
 use Filament\Forms\Components\Radio;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 
 class ConvertAction extends XotBaseAction
+=======
+use Filament\Actions\Action;
+use Filament\Forms\Components\Radio;
+
+class ConvertAction extends Action
+>>>>>>> 7605234 (.)
 {
     protected function setUp(): void
     {

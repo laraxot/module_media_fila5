@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Migration Patterns - Media Module"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "migration patterns"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Migration Patterns - Media Module
 
 ## Conformità XotBaseMigration

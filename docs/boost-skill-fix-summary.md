@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Boost Skill Fix Summary - Media Module"
 module: "Media"
@@ -12,6 +13,8 @@ related:
 ---
 =======
 >>>>>>> 3eb428d (.)
+=======
+>>>>>>> 7605234 (.)
 # Boost Skill Fix Summary - Media Module
 
 **Date**: 2026-03-02  
@@ -66,6 +69,10 @@ Critical dependencies for Media module:
    - Storage needs config
    - Cannot operate in isolation
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 3eb428d (.)
+=======
+
+>>>>>>> 7605234 (.)

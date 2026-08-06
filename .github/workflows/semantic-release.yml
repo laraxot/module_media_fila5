@@ -23,20 +23,28 @@ jobs:
     steps:
       - name: Checkout
 <<<<<<< HEAD
+<<<<<<< HEAD
         uses: actions/checkout@v7
 =======
         uses: actions/checkout@v4
 >>>>>>> 33a3006 (.)
+=======
+        uses: actions/checkout@v4
+>>>>>>> 7605234 (.)
         with:
           fetch-depth: 0
           fetch-tags: true
 
       - name: Setup Node.js
 <<<<<<< HEAD
+<<<<<<< HEAD
         uses: actions/setup-node@v7
 =======
         uses: actions/setup-node@v4
 >>>>>>> 33a3006 (.)
+=======
+        uses: actions/setup-node@v4
+>>>>>>> 7605234 (.)
         with:
           node-version: 20
 

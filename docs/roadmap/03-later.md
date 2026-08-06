@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Later (Module Media)"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "03 later"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Later (Module Media)
 
 ## Longer-term ideas

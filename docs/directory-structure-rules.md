@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Directory Structure Rules"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "directory structure rules"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Directory Structure Rules
 
 Per il modulo Media valgono queste regole:

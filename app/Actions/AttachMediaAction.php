@@ -13,9 +13,13 @@ use Spatie\QueueableAction\QueueableAction;
 class AttachMediaAction
 {
     use QueueableAction;
+<<<<<<< HEAD
 
     public function execute(): void
     {
     }
 }
 
+=======
+}
+>>>>>>> 7605234 (.)

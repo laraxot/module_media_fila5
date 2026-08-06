@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "PathGenerator Interface"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "path generator 1"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # PathGenerator Interface
 
 ## Descrizione
