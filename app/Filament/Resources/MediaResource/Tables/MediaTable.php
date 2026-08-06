@@ -21,7 +21,7 @@ use Webmozart\Assert\Assert;
 class MediaTable extends XotBaseResourceTable
 {
     /**
-     * @return array<string, Column>
+     * @return array<string, \Filament\Tables\Columns\Column>
      */
     public function getTableColumns(): array
     {
