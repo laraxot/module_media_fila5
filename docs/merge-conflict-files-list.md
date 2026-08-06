@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Merge Conflict Files List"
 module: "Media"
@@ -91,3 +92,12 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 *Generated on: $(date)
 *Total files: 96
 *Status: Pending resolution*
+=======
+---
+module: theme
+topic: merge-conflict-files-list
+canonical: ../../../Themes/docs/shared-components/merge-conflict-files-list.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/merge-conflict-files-list.md
+>>>>>>> 33a3006 (.)

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Stream"
 module: "Media"
 type: concept
@@ -32,3 +33,11 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 $tmpFile->delete();
 
 ----------------------------------------------------------------------------
+=======
+module: theme
+topic: stream
+canonical: ../../../Themes/docs/shared-components/__stream.txt
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/__stream.txt
+>>>>>>> 33a3006 (.)

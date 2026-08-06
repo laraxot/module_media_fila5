@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Video Manager"
 module: "Media"
@@ -17,4 +18,12 @@ https://github.com/amitavroy/MyVideoManager
 
 https://github.com/amitavroy/MyVideoManager
 
+=======
+>>>>>>> 33a3006 (.)
 ---
+module: theme
+topic: video-manager
+canonical: ../../../Themes/docs/shared-components/video-manager-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/video-manager-1.md

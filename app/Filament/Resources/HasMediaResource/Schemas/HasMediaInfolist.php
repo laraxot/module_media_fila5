@@ -11,7 +11,11 @@ use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceInfolist;
 class HasMediaInfolist extends XotBaseResourceInfolist
 {
     /**
+<<<<<<< HEAD
      * @return array<string, Component>
+=======
+     * @return array<string, \Filament\Schemas\Components\Component>
+>>>>>>> 33a3006 (.)
      */
     public static function getInfolistSchema(): array
     {

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Migrazione Filament"
 module: "Media"
 type: concept
@@ -9,3 +10,11 @@ qmd: "migrazione filament"
 related:
   - "./webm.md"
 ---
+=======
+module: theme
+topic: migrazione-filament
+canonical: ../../../Themes/docs/shared-components/.gitkeep
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep
+>>>>>>> 33a3006 (.)

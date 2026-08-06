@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Guida Migrazione Step By Step"
 module: "Media"
 type: concept
@@ -9,3 +10,11 @@ qmd: "guida migrazione step by step"
 related:
   - "./webm.md"
 ---
+=======
+module: theme
+topic: guida-migrazione-step-by-step
+canonical: ../../../Themes/docs/shared-components/.gitkeep
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep
+>>>>>>> 33a3006 (.)

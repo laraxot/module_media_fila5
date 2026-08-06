@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Analisi Dettagliata dei Colli di Bottiglia - Modulo Media"
 module: "Media"
@@ -370,4 +371,12 @@ final class Media extends Model
 
 ```
 
+=======
+>>>>>>> 33a3006 (.)
 ---
+module: theme
+topic: bottlenecks-detailed
+canonical: ../../../Themes/docs/shared-components/bottlenecks-detailed-1-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/bottlenecks-detailed-1-Modules.md

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: second brain — puntatore modulo
 type: reference
 qmd: second brain modulo wiki locale laravel
@@ -29,3 +30,11 @@ Stub **puntatore**: disciplina e link esterni curati stanno nella wiki di proget
 - **PHPStan modulo:** 0 errori (2026-05-21) — [phpstan-fixes.md](phpstan-fixes.md)
 =======
 >>>>>>> 9aef2ca (.)
+=======
+module: theme
+topic: second-brain
+canonical: ../../../Themes/docs/shared-components/second-brain.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/second-brain.md
+>>>>>>> 33a3006 (.)
