@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Modulo Media"
 module: "Media"
 type: concept
@@ -138,6 +139,11 @@ module: theme
 topic: module-media
 canonical: ../../../Themes/docs/shared-components/module-media-1.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: module-media
+canonical: ../../../Themes/docs/shared-components/module-media-1.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/module-media-1.md

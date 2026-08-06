@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Riepilogo Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept
@@ -157,6 +158,11 @@ module: theme
 topic: corrections
 canonical: ../../../Themes/docs/shared-components/corrections_summary.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: corrections
+canonical: ../../../Themes/docs/shared-components/corrections_summary.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/corrections_summary.md

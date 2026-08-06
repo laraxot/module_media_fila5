@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Video Manager"
 module: "Media"
@@ -20,6 +21,8 @@ https://github.com/amitavroy/MyVideoManager
 
 =======
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 ---
 module: theme
 topic: video-manager

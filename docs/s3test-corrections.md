@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept
@@ -266,6 +267,11 @@ module: theme
 topic: s3test-corrections
 canonical: ../../../Themes/docs/shared-components/s3test-corrections-1.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: s3test-corrections
+canonical: ../../../Themes/docs/shared-components/s3test-corrections-1.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/s3test-corrections-1.md

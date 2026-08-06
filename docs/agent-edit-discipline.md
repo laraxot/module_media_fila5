@@ -5,6 +5,7 @@ canonical: ../../../Themes/docs/shared-components/agent-edit-discipline.md
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Disciplina edit e qualità (puntatore)
 
 <<<<<<< HEAD
@@ -29,3 +30,6 @@ Stub **DRY**: policy nella wiki di progetto; discussione in GitHub issue [#124](
 =======
 See canonical documentation: ../../../Themes/docs/shared-components/agent-edit-discipline.md
 >>>>>>> 33a3006 (.)
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/agent-edit-discipline.md
+>>>>>>> 766d652 (.)

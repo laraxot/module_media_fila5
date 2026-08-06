@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Roadmap Root Symlink"
 module: "Media"
 type: concept
@@ -15,10 +16,15 @@ roadmap_media.md
 * [roadmap_root_symlink.md](../../../notify/docs/roadmap_root_symlink.md)
 * [roadmap_root_symlink.md](../../../media/docs/roadmap_root_symlink.md)
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: roadmap-root-symlink
 canonical: ../../../Themes/docs/shared-components/roadmap-root-symlink.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/roadmap-root-symlink.md
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
