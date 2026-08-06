@@ -11,10 +11,7 @@ use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
-=======
->>>>>>> 7605234 (.)
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
@@ -23,11 +20,7 @@ class AddAttachmentAction extends XotBaseAction
     protected function setUp(): void
     {
         parent::setUp();
-<<<<<<< HEAD
-        $this->icon('heroicon-o-plus'
-=======
         $this->icon('heroicon-o-plus')
->>>>>>> 7605234 (.)
             ->color('success')
             ->button()
             ->schema(fn (): array => static::getFormSchema(false))
@@ -91,12 +84,8 @@ class AddAttachmentAction extends XotBaseAction
     }
 
     /**
-<<<<<<< HEAD
      * @param  array<string, mixed>  $data
      * @param  array<string, mixed>  $data
-=======
-     * @param array<string, mixed> $data
->>>>>>> 7605234 (.)
      */
     public static function formHandlerCallback(RelationManager $livewire, array $data): void
     {
@@ -118,14 +107,10 @@ class AddAttachmentAction extends XotBaseAction
             throw new Exception('FileAdder does not have required methods');
         }
 
-<<<<<<< HEAD
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast(SafeStringCastAction::cast($data['original_file_name'] ?? ''), '.'));
         $originalFileName = $data['original_file_name'] ?? '';
         Assert::string($originalFileName);
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast($originalFileName, '.'));
-=======
-        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast((string) ($data['original_file_name'] ?? ''), '.'));
->>>>>>> 7605234 (.)
         if (! is_object($fileAdderWithName) || ! method_exists($fileAdderWithName, 'preservingOriginal')) {
             throw new Exception('setName did not return valid object');
         }

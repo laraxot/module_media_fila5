@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Task: Media Processing and Optimization"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "media processing optimization"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Task: Media Processing and Optimization
 
 **Modulo**: Media  

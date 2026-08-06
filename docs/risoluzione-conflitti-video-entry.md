@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Risoluzione Conflitto in VideoEntry"
 module: "Media"
 type: concept
@@ -12,21 +9,6 @@ qmd: "risoluzione conflitti video entry"
 related:
   - "./webm.md"
 ---
-# Risoluzione Conflitto in VideoEntry
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: risoluzione-conflitti-video-entry
-canonical: ../../../Themes/docs/shared-components/conflict-resolution-video-entry.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/conflict-resolution-video-entry.md
-=======
 # Risoluzione Conflitto in VideoEntry
 
 ## Panoramica
@@ -105,4 +87,3 @@ La soluzione è stata verificata con:
 
 - [Documentazione principale risoluzione conflitti git](../../../../../docs/risoluzione_conflitti_git.md)
 - [Documentazione dettagliata VideoEntry](../../../../../docs/video_entry_conflict.md)
->>>>>>> 7605234 (.)

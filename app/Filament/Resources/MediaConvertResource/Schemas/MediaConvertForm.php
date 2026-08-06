@@ -6,20 +6,13 @@ namespace Modules\Media\Filament\Resources\MediaConvertResource\Schemas;
 
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
-<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
-=======
->>>>>>> 7605234 (.)
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class MediaConvertForm extends XotBaseResourceForm
 {
     /**
-<<<<<<< HEAD
      * @return array<string, Component>
-=======
-     * @return array<string, \Filament\Schemas\Components\Component>
->>>>>>> 7605234 (.)
      */
     public static function getFormSchema(): array
     {
@@ -59,9 +52,5 @@ class MediaConvertForm extends XotBaseResourceForm
             'threads' => TextInput::make('threads'),
             'speed' => TextInput::make('speed'),
         ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 7605234 (.)
     }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Case Sensitivity Rules - Media Module"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "case sensitivity rules"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Case Sensitivity Rules - Media Module
 
 ## Problema / Problem

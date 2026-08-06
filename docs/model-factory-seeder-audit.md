@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Model/Factory/Seeder Audit"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "model factory seeder audit"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Model/Factory/Seeder Audit
 
 Generated: [DATE] 16:29

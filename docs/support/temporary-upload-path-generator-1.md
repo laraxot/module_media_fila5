@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "TemporaryUploadPathGenerator"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "temporary upload path generator 1"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # TemporaryUploadPathGenerator
 
 ## Descrizione

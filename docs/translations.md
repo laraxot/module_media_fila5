@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Traduzioni del Modulo Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "translations"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Traduzioni del Modulo Media
 
 ## Panoramica

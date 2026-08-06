@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Rules Index"
 module: "Media"
 type: rule
@@ -13,23 +10,7 @@ related:
   - "./webm.md"
 ---
 # Rules Index
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: rules-index
-canonical: ../../../Themes/docs/shared-components/rules-index.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/rules-index.md
-=======
-# Rules Index
 
 This module follows the global Laraxot coding standards.
 
 - [Coding Standards](../../../../docs/laraxot-coding-standards.md)
->>>>>>> 7605234 (.)

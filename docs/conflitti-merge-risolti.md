@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Risoluzione dei Conflitti Git nel Modulo Media"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "conflitti merge risolti"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Risoluzione dei Conflitti Git nel Modulo Media
 
 ## Panoramica
@@ -130,21 +125,6 @@ public function getFileAttribute(?string $value): ?string
 
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: conflitti-merge-risolti
-canonical: ../../../Themes/docs/shared-components/conflitti-merge-risolti-1.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: conflitti-merge-risolti
-canonical: ../../../Themes/docs/shared-components/conflitti-merge-risolti-1.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/conflitti-merge-risolti-1.md
-=======
 ---
 
 **Collegamento bidirezionale:** questo file è referenziato anche nella documentazione principale in `/docs/risoluzione_conflitti_git.md`.
@@ -421,4 +401,3 @@ I problemi di conflitto nei file relativi all'integrazione di FFmpeg erano princ
 ### Documentazione
 
 Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
->>>>>>> 7605234 (.)

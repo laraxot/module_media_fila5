@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Convenzioni per le Table Actions in Filament"
 module: "Media"
 type: concept
@@ -12,21 +9,6 @@ qmd: "filament table actions 1"
 related:
   - "./webm.md"
 ---
-# Convenzioni per le Table Actions in Filament
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: filament-table-actions-1
-canonical: ../../../Themes/docs/shared-components/filament-table-actions-1.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/filament-table-actions-1.md
-=======
 # Convenzioni per le Table Actions in Filament
 
 ## Regola Fondamentale
@@ -112,4 +94,3 @@ Le chiavi devono:
 - Mantenere coerenza nei nomi delle chiavi tra diverse classi
 - Documentare eventuali chiavi personalizzate
 - Le chiavi sono case-sensitive, mantenere la coerenza
->>>>>>> 7605234 (.)

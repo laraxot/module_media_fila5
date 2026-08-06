@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Testing Rules Summary"
 module: "Media"
 type: rule
@@ -12,21 +9,6 @@ qmd: "testing rules"
 related:
   - "./webm.md"
 ---
-# Testing Rules Summary
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: testing-rules
-canonical: ../../../Themes/docs/shared-components/testing-rules-Modules.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/testing-rules-Modules.md
-=======
 # Testing Rules Summary
 
 ## Regole Fondamentali dei Test
@@ -130,4 +112,3 @@ Ogni modulo e tema deve documentare:
 4. Errori comuni da evitare
 
 I file di documentazione vanno nelle cartelle `docs/` dentro ogni modulo/tema.
->>>>>>> 7605234 (.)

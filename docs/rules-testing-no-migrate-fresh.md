@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH"
 module: "Media"
 type: rule
@@ -12,21 +9,6 @@ qmd: "rules testing no migrate fresh"
 related:
   - "./webm.md"
 ---
-# CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: rules-testing-no-migrate-fresh
-canonical: ../../../Themes/docs/shared-components/rules-testing-no-migrate-fresh.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/rules-testing-no-migrate-fresh.md
-=======
 # CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH
 
 ## Rule
@@ -40,4 +22,3 @@ See canonical documentation: ../../../Themes/docs/shared-components/rules-testin
 ## Correct Approach
 - Only use `DatabaseTransactions` to rollback state after tests.
 - Maintain strict database boundaries.
->>>>>>> 7605234 (.)

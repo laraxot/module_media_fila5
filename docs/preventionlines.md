@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Linee Guida Prevenzione Problemi - Modulo Media"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "preventionlines"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -392,25 +387,9 @@ jobs:
 - [Translation Standards](translations.md)
 - [Architecture Guidelines](../../docs/architecture.md)
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: preventionlines
-canonical: ../../../Themes/docs/shared-components/prevention-guidelines.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: preventionlines
-canonical: ../../../Themes/docs/shared-components/prevention-guidelines.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/prevention-guidelines.md
-=======
 ---
 
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 3.1.0  
 **🎯 Obiettivo**: Prevenzione completa problemi futuri  
 **✅ Status**: Linee guida implementate e testate
->>>>>>> 7605234 (.)

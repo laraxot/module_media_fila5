@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Ottimizzazioni Performance Modulo Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "media optimizations 1"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Ottimizzazioni Performance Modulo Media
 
 ## 1. Ottimizzazione Conversione Video

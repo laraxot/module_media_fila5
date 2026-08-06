@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "S3Test.php - Analisi Refactoring e Regole di Conformità Laraxot"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "s3test refactoring analysis"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # S3Test.php - Analisi Refactoring e Regole di Conformità Laraxot
 
 ## 🚨 **PROBLEMATICHE IDENTIFICATE E RISOLTE**
