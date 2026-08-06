@@ -27,6 +27,9 @@ class MediaConvertsTable extends XotBaseResourceTable
      */
     public function getTableColumns(): array
     {
+    /**
+     * @return array<int\|string, \Filament\Tables\Columns\Column>
+     */
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
             'created_at' => TextColumn::make('created_at')->dateTime(),
