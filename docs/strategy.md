@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Product Strategy: Media Module"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "strategy"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Product Strategy: Media Module
 
 ## 🌍 Market Context

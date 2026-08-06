@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Modulo Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "module media 1"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).

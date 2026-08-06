@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Merge conflict markers — file list"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "merge conflicts list"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Merge conflict markers — file list
 
 Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_file). Seguire la lista per assegnare task agli agenti.
@@ -36,19 +31,11 @@ Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_fil
 - laravel/Modules/Geo/docs/wiki/index.md
 - laravel/Modules/Geo/docs/wiki/log.md
 - laravel/Modules/Geo/docs/wiki/AGENTS.md
-<<<<<<< HEAD
 - laravel/Modules/LegacyDomain/docs/wiki/index.md
 - laravel/Modules/LegacyDomain/docs/wiki/log.md
 - laravel/Modules/LegacyDomain/docs/wiki/README.md
 - laravel/Modules/Xot/docs/phpstan-fixes.md
 - laravel/Modules/LegacyDomain/resources/views/filament/widgets/ticket-create-wizard.blade.php
-=======
-- laravel/Modules/Fixcity/docs/wiki/index.md
-- laravel/Modules/Fixcity/docs/wiki/log.md
-- laravel/Modules/Fixcity/docs/wiki/README.md
-- laravel/Modules/Xot/docs/phpstan-fixes.md
-- laravel/Modules/Fixcity/resources/views/filament/widgets/ticket-create-wizard.blade.php
->>>>>>> 7605234 (.)
 - laravel/Modules/Xot/docs/phpstan-audit.md
 - laravel/Modules/Xot/docs/filament-4-laraxot-e5a872.md
 - laravel/Modules/Xot/docs/mcp-database-tools.md
@@ -64,42 +51,14 @@ Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_fil
 - laravel/Modules/Xot/docs/base-model.md
 - laravel/Modules/Xot/docs/comprehensive-chart-pdf-guide.md
 - laravel/Modules/Xot/docs/models/dry-kiss-analysis.md
-<<<<<<< HEAD
 - laravel/Modules/LegacyDomain/resources/views/filament/widgets/ticket-create-wizard.blade.php
 
 ## Stato
 
 - [x] laravel/Modules/LegacyDomain/resources/views/filament/widgets/ticket-create-wizard.blade.php — risolto (merge markers rimossi e unione logica applicata)
-=======
-- laravel/Modules/Fixcity/resources/views/filament/widgets/ticket-create-wizard.blade.php
-
-## Stato
-
-- [x] laravel/Modules/Fixcity/resources/views/filament/widgets/ticket-create-wizard.blade.php — risolto (merge markers rimossi e unione logica applicata)
->>>>>>> 7605234 (.)
 - [ ] gli altri file: da verificare e risolvere
 
 ## Note
 
 - Regola: ogni modulo e tema deve avere un file `docs/merge-conflicts-list.md` con la lista locale e lo stato di avanzamento.
 - Quando si risolve un file, aggiornare lo stato nella lista e sincronizzare l'LLM Wiki (qmd embed) per ingestione.
-<<<<<<< HEAD
-=======
-module: theme
-topic: merge-conflicts-list
-canonical: ../../../Themes/docs/shared-components/merge-conflicts-list.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-list.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: merge-conflicts-list
-canonical: ../../../Themes/docs/shared-components/merge-conflicts-list.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-list.md
->>>>>>> 766d652 (.)
-=======
-
->>>>>>> 7605234 (.)

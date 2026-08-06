@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ---
 title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
 module: "Media"
@@ -12,8 +9,6 @@ qmd: "agents"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media
@@ -37,19 +32,6 @@ You are the **Media Wiki Maintainer**. Your job is to:
 ## Frontmatter Schema
 
 ```yaml
-<<<<<<< HEAD
-=======
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
----
-module: theme
-topic: AGENTS
-canonical: ../../../../Themes/docs/shared-components/AGENTS-Modules.md
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/AGENTS-Modules.md
-=======
 ---
 title: "Page Title"
 type: concept|entity|source|comparison|decision|troubleshooting
@@ -167,4 +149,3 @@ Related:
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
 - [Module Documentation](../README.md)
->>>>>>> 7605234 (.)

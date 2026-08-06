@@ -11,8 +11,7 @@ use function in_array;
 
 class FileExtensionRule implements Rule
 {
-<<<<<<< HEAD
-    /** @var array<int, string> */
+    /** @var list<string> */
     protected array $validExtensions = [];
 
     /**
@@ -20,31 +19,13 @@ class FileExtensionRule implements Rule
      */
     public function __construct(array $validExtensions = [])
     {
-        $this->validExtensions = array_map(
+        $this->validExtensions = array_values(array_map(
             /**
              * @return lowercase-string
              */
             static fn (string $ext): string => mb_strtolower($ext),
             $validExtensions
-        );
-=======
-    /** @var list<string> */
-    protected array $validExtensions = [];
-
-    /**
-     * @param  array<int, string>  $validExtensions
-     */
-    public function __construct(array $validExtensions = [])
-    {
-        $this->validExtensions = array_values(array_map(
-            /**
-             * @param  mixed  $ext
-             * @return lowercase-string
-             */
-            static fn ($ext): string => mb_strtolower((string) $ext),
-            $validExtensions
         ));
->>>>>>> 7605234 (.)
     }
 
     /**

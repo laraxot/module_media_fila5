@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ---
 title: "Report PHPStan - Modulo Media"
 module: "Media"
@@ -12,8 +9,6 @@ qmd: "phpstan report"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale
@@ -79,18 +74,4 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 
    - Monitorare l'utilizzo dello storage
 
-<<<<<<< HEAD
-=======
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
 ---
-module: theme
-topic: phpstan-report
-canonical: ../../../Themes/docs/shared-components/phpstan-report-1.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-report-1.md
-=======
----
->>>>>>> 7605234 (.)

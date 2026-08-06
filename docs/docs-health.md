@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Docs Health - Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "docs health"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Docs Health - Media
 
 ## Snapshot

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media Module: Philosophy, Purpose, and Design Principles"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "philosophy"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Media Module: Philosophy, Purpose, and Design Principles
 
 

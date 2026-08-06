@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Metodi duplicati — Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "duplicate methods"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Metodi duplicati — Media
 
 Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambito.

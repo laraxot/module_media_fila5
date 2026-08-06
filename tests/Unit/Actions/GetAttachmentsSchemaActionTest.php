@@ -4,29 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-<<<<<<< HEAD
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
 use Modules\Media\Tests\TestCase;
 
 uses(TestCase::class);
-=======
-uses(\Modules\Media\Tests\TestCase::class);
-
-use Filament\Forms\Components\FileUpload;
-use Modules\Media\Actions\GetAttachmentsSchemaAction;
->>>>>>> 7605234 (.)
 
 /**
  * Test that the action returns attachment schema correctly.
  */
-<<<<<<< HEAD
-it('returns attachment schema', function(): void {
-=======
 it('returns attachment schema', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice', 'contract', 'receipt'];
 
     // Act
@@ -44,13 +33,9 @@ it('returns attachment schema', function (): void {
 /**
  * Test that the schema has correct names.
  */
-<<<<<<< HEAD
-it('has correct names', function(): void {
-=======
 it('has correct names', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice', 'contract'];
 
     // Act
@@ -68,13 +53,9 @@ it('has correct names', function (): void {
 /**
  * Test that the schema has correct validation.
  */
-<<<<<<< HEAD
-it('has correct validation', function(): void {
-=======
 it('has correct validation', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -103,13 +84,9 @@ it('has correct validation', function (): void {
 /**
  * Test that the schema has correct storage.
  */
-<<<<<<< HEAD
-it('has correct storage', function(): void {
-=======
 it('has correct storage', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -123,13 +100,9 @@ it('has correct storage', function (): void {
 /**
  * Test that the schema has correct directory.
  */
-<<<<<<< HEAD
-it('has correct directory', function(): void {
-=======
 it('has correct directory', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -143,13 +116,9 @@ it('has correct directory', function (): void {
 /**
  * Test that the schema has correct visibility.
  */
-<<<<<<< HEAD
-it('has correct visibility', function(): void {
-=======
 it('has correct visibility', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -163,13 +132,9 @@ it('has correct visibility', function (): void {
 /**
  * Test that the schema has correct max size.
  */
-<<<<<<< HEAD
-it('has correct max size', function(): void {
-=======
 it('has correct max size', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -183,13 +148,9 @@ it('has correct max size', function (): void {
 /**
  * Test that the schema has correct multiple setting.
  */
-<<<<<<< HEAD
-it('has correct multiple setting', function(): void {
-=======
 it('has correct multiple setting', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -203,13 +164,9 @@ it('has correct multiple setting', function (): void {
 /**
  * Test that the schema has correct preview setting.
  */
-<<<<<<< HEAD
-it('has correct preview setting', function(): void {
-=======
 it('has correct preview setting', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -223,13 +180,9 @@ it('has correct preview setting', function (): void {
 /**
  * Test that the schema has correct download setting.
  */
-<<<<<<< HEAD
-it('has correct download setting', function(): void {
-=======
 it('has correct download setting', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -243,13 +196,9 @@ it('has correct download setting', function (): void {
 /**
  * Test that the schema has correct remove setting.
  */
-<<<<<<< HEAD
-it('has correct remove setting', function(): void {
-=======
 it('has correct remove setting', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -260,23 +209,15 @@ it('has correct remove setting', function (): void {
     // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
     // By default, Filament file uploads are removable unless specifically configured otherwise
     // We can verify that the component is a FileUpload
-<<<<<<< HEAD
     expect($component)->toBeInstanceOf(FileUpload::class);
-=======
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
->>>>>>> 7605234 (.)
 });
 
 /**
  * Test that the schema has correct reorder setting.
  */
-<<<<<<< HEAD
-it('has correct reorder setting', function(): void {
-=======
 it('has correct reorder setting', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -290,13 +231,9 @@ it('has correct reorder setting', function (): void {
 /**
  * Test that the schema has correct labels.
  */
-<<<<<<< HEAD
-it('has correct labels', function(): void {
-=======
 it('has correct labels', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -311,13 +248,9 @@ it('has correct labels', function (): void {
 /**
  * Test that the schema has correct append setting.
  */
-<<<<<<< HEAD
-it('has correct append setting', function(): void {
-=======
 it('has correct append setting', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -332,13 +265,9 @@ it('has correct append setting', function (): void {
 /**
  * Test that the schema has correct panel.
  */
-<<<<<<< HEAD
-it('has correct panel', function(): void {
-=======
 it('has correct panel', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -347,23 +276,15 @@ it('has correct panel', function (): void {
     // Assert
     $component = $form[0];
     // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-<<<<<<< HEAD
     expect($component)->toBeInstanceOf(FileUpload::class);
-=======
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
->>>>>>> 7605234 (.)
 });
 
 /**
  * Test that the schema has correct help text.
  */
-<<<<<<< HEAD
-it('has correct help text', function(): void {
-=======
 it('has correct help text', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act
@@ -373,23 +294,15 @@ it('has correct help text', function (): void {
     $component = $form[0];
     // FileUpload has helperText property but no getHelper method
     // We can verify that the component is a FileUpload instance
-<<<<<<< HEAD
     expect($component)->toBeInstanceOf(FileUpload::class);
-=======
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
->>>>>>> 7605234 (.)
 });
 
 /**
  * Test that the schema has correct placeholder.
  */
-<<<<<<< HEAD
-it('has correct placeholder', function(): void {
-=======
 it('has correct placeholder', function (): void {
->>>>>>> 7605234 (.)
     // Arrange
-    $action = new GetAttachmentsSchemaAction;
+    $action = new GetAttachmentsSchemaAction();
     $attachments = ['invoice'];
 
     // Act

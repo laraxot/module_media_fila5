@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "_competitors"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: " competitors"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # _competitors
 
 <!-- Contenuto migrato da _docs/_competitors.txt -->

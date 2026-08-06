@@ -3,24 +3,16 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-<<<<<<< HEAD
 use Modules\Media\Models\TemporaryUpload;
-=======
-// ---- models ---
-
->>>>>>> 7605234 (.)
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /*
  * Class CreateTemporaryUploadsTable.
  */
-return new class extends XotBaseMigration
+return new class() extends XotBaseMigration
 {
-<<<<<<< HEAD
     protected ?string $model_class = TemporaryUpload::class;
 
-=======
->>>>>>> 7605234 (.)
     /**
      * Run the migrations.
      */

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Server MCP consigliati per il modulo Media"
 module: "Media"
 type: concept
@@ -12,21 +9,6 @@ qmd: "mcp server consigliati 1"
 related:
   - "./webm.md"
 ---
-# Server MCP consigliati per il modulo Media
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: mcp-server-consigliati-1
-canonical: ../../../Themes/docs/shared-components/mcp-server-consigliati-1.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-consigliati-1.md
-=======
 # Server MCP consigliati per il modulo Media
 
 ## Scopo del modulo
@@ -52,4 +34,3 @@ Gestione, manipolazione e automazione di file e media.
 
 **Nota:**
 Aggiungi solo i server che realmente ti servono per il tuo workflow.
->>>>>>> 7605234 (.)
