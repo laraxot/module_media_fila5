@@ -14,6 +14,7 @@ use Spatie\MediaLibrary\MediaCollections\FileAdder;
 uses(TestCase::class);
 
 beforeEach(function (): void {
+    /** @var \Modules\Media\Tests\TestCase $this */
     Storage::fake('attachments');
 });
 
