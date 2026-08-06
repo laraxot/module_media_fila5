@@ -13,6 +13,7 @@ class MediaForm extends XotBaseResourceForm
     /**
      * @return array<string, Component>
      */
+
     public static function getFormSchema(): array
     {
         return [
