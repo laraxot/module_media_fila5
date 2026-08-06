@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Integrazione di FFmpeg nel Modulo Media"
 module: "Media"
 type: concept
@@ -12,10 +13,15 @@ related:
 ---
 # Integrazione di FFmpeg nel Modulo Media
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: ffmpeg-integration
 canonical: ../../../Themes/docs/shared-components/ffmpeg-integration-1.md
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/ffmpeg-integration-1.md

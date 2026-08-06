@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Merge conflict markers — file list"
 module: "Media"
 type: concept
@@ -71,3 +72,11 @@ canonical: ../../../Themes/docs/shared-components/merge-conflicts-list.md
 
 See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-list.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: merge-conflicts-list
+canonical: ../../../Themes/docs/shared-components/merge-conflicts-list.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/merge-conflicts-list.md
+>>>>>>> 766d652 (.)

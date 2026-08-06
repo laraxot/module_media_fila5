@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Configurazione della Sicurezza"
 module: "Media"
 type: concept
@@ -26,6 +27,11 @@ module: theme
 topic: security
 canonical: ../../../../Themes/docs/shared-components/security.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: security
+canonical: ../../../../Themes/docs/shared-components/security.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/security.md

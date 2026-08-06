@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Stream"
 module: "Media"
 type: concept
@@ -41,3 +42,11 @@ canonical: ../../../Themes/docs/shared-components/__stream.txt
 
 See canonical documentation: ../../../Themes/docs/shared-components/__stream.txt
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: stream
+canonical: ../../../Themes/docs/shared-components/__stream.txt
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/__stream.txt
+>>>>>>> 766d652 (.)

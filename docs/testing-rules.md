@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Testing Rules Summary"
 module: "Media"
 type: rule
@@ -12,10 +13,15 @@ related:
 ---
 # Testing Rules Summary
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: testing-rules
 canonical: ../../../Themes/docs/shared-components/testing-rules-Modules.md
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/testing-rules-Modules.md

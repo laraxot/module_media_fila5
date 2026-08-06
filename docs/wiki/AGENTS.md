@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
 module: "Media"
@@ -35,6 +36,8 @@ You are the **Media Wiki Maintainer**. Your job is to:
 ```yaml
 =======
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 ---
 module: theme
 topic: AGENTS
