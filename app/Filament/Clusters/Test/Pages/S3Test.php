@@ -549,7 +549,7 @@ class S3Test extends XotBasePage
                     'Base URL' => $baseUrl,
                     'Key Pair ID' => $keyPairId,
                     'Signed URL Test' => '✅ Success',
-                    'Sample URL' => substr((string) $testUrl, 0, self::URL_PREVIEW_LENGTH).'...',
+                    'Sample URL' => substr(SafeStringCastAction::cast($testUrl), 0, self::URL_PREVIEW_LENGTH).'...',
                 ],
             ];
         } catch (Exception $e) {
@@ -612,7 +612,7 @@ class S3Test extends XotBasePage
 
             if (is_array($data)) {
                 foreach ($data as $key => $value) {
-                    $keyStr = (string) $key;
+                    $keyStr = SafeStringCastAction::cast($key);
                     if (is_array($value)) {
                         $output[] = "{$keyStr}: ".json_encode($value, JSON_PRETTY_PRINT);
                     } else {
