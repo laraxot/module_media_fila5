@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "agents"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> laraxot/dev
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media
