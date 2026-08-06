@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Utilizzo Base e Layout"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "usage"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Utilizzo Base e Layout
 
 Questa sezione descrive l'utilizzo di base della libreria, come istanziare la classe `Html2Pdf` e come gestire il layout delle pagine con i tag speciali.
@@ -25,21 +20,6 @@ Questa sezione descrive l'utilizzo di base della libreria, come istanziare la cl
 *   [Integrazione con Laravel e Best Practices](./laravel.md)
 *   [Configurazione della Sicurezza](./security.md)
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: usage
-canonical: ../../../../Themes/docs/shared-components/usage.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: usage
-canonical: ../../../../Themes/docs/shared-components/usage.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/usage.md
-=======
 ---
 
 ## 🔧 Utilizzo Base
@@ -150,4 +130,3 @@ Il contenuto all'interno di questo tag non verrà spezzato tra due pagine.
     </table>
 </nobreak>
 ```
->>>>>>> 7605234 (.)

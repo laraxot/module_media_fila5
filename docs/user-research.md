@@ -1,5 +1,4 @@
 # User Research: Media Module
-<<<<<<< HEAD
 # Media Module - User Research
 
 **Module:** Media  
@@ -89,8 +88,6 @@ Majority of uploads from mobile.
 
 *Last Updated: March 12, 2026*
 # User Research: Media Module
-=======
->>>>>>> 7605234 (.)
 
 ## 🔬 Research Goals
 Identify user needs for Media functionality.

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Correzioni PHPStan Livello 10 - Modulo Media"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "phpstan level10 fixes conflict"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Correzioni PHPStan Livello 10 - Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
@@ -129,22 +124,6 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 3. Eseguire l'analisi PHPStan a livello 10 per verificare che le correzioni risolvano effettivamente gli errori.
 4. Documentare pattern e soluzioni standard per gestire risorse di file e altri tipi speciali nel progetto.
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: phpstan-level10-fixes-conflict
-canonical: ../../../Themes/docs/shared-components/phpstan-level10-fixes-1-Modules.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: phpstan-level10-fixes-conflict
-canonical: ../../../Themes/docs/shared-components/phpstan-level10-fixes-1-Modules.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-fixes-1-Modules.md
-=======
 ---
 
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
->>>>>>> 7605234 (.)

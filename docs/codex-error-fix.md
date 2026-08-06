@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 ---
 title: "Codex Configuration Error Fixes"
 module: "Media"
@@ -12,8 +9,6 @@ qmd: "codex error fix"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Codex Configuration Error Fixes
 
 Questo documento descrive le correzioni applicate agli errori riscontrati durante l'avvio di `codex`.
@@ -31,19 +26,6 @@ Racchiudere sempre i valori di `name` e `description` tra virgolette doppie nel 
 
 **Esempio Errato:**
 ```yaml
-<<<<<<< HEAD
-=======
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
----
-module: theme
-topic: codex-error-fix
-canonical: ../../../Themes/docs/shared-components/codex-error-fix.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/codex-error-fix.md
-=======
 ---
 name: { my-skill-name }
 description: Rule: always do X.
@@ -109,4 +91,3 @@ args = ["laravel/artisan", "boost:mcp"]
     ]
 }
 ```
->>>>>>> 7605234 (.)

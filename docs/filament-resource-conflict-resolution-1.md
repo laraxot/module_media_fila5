@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Risoluzione conflitto git su Filament MediaConvertResource"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "filament resource conflict resolution 1"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Risoluzione conflitto git su Filament MediaConvertResource
 
 ## Problema

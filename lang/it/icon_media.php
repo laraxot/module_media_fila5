@@ -46,58 +46,7 @@ return [
         ],
         'label' => 'Icon Media',
         'sort' => 1,
-<<<<<<< HEAD
         'icon' => 'heroicon-o-rectangle-stack',
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Icon Media',
-        ],
-        'edit' => [
-            'label' => 'Modifica Icon Media',
-        ],
-        'delete' => [
-            'label' => 'Elimina Icon Media',
-        ],
-    ],
-    'label' => 'Icon Media',
-    'plural_label' => 'Icon Media (Plurale)',
-    'navigation' => [
-        'name' => 'Icon Media',
-        'plural' => 'Icon Media',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Icon Media',
-        'sort' => 1,
-=======
->>>>>>> 7605234 (.)
-        'icon' => 'heroicon-o-collection',
-    ],
-    'actions' => [
-        'create' => [
-            'label' => 'Crea Icon Media',
-        ],
-        'edit' => [
-            'label' => 'Modifica Icon Media',
-        ],
-        'delete' => [
-            'label' => 'Elimina Icon Media',
-        ],
-    ],
-    'label' => 'Icon Media',
-    'plural_label' => 'Icon Media (Plurale)',
-    'navigation' => [
-        'name' => 'Icon Media',
-        'plural' => 'Icon Media',
-        'group' => [
-            'name' => 'General',
-            'description' => 'General Settings',
-        ],
-        'label' => 'Icon Media',
-        'sort' => 1,
-        'icon' => 'heroicon-o-collection',
     ],
     'actions' => [
         'create' => [

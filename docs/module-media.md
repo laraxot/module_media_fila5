@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Modulo Media"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "module media"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
@@ -137,22 +132,6 @@ composer format        # Formatta il codice
 ## Changelog
 Le modifiche vengono tracciate nel repository GitHub.
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: module-media
-canonical: ../../../Themes/docs/shared-components/module-media-1.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: module-media
-canonical: ../../../Themes/docs/shared-components/module-media-1.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/module-media-1.md
-=======
 ---
 
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
->>>>>>> 7605234 (.)

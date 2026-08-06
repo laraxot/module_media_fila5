@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "PHPStan S3 Actions Critical Errors Analysis"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "phpstan s3 actions critical errors"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # PHPStan S3 Actions Critical Errors Analysis
 
 ## Errori Critici Identificati nel Modulo Media

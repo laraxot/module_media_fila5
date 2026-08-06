@@ -5,16 +5,10 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\Media;
-<<<<<<< HEAD
 use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 uses(TestCase::class);
-=======
-use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
-
-uses(\Modules\Media\Tests\TestCase::class);
->>>>>>> 7605234 (.)
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Dependencies (Module Media)"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "dependencies"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Dependencies (Module Media)
 
 Canonical dependency map:

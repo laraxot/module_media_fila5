@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Riepilogo Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "corrections"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Riepilogo Correzioni S3Test.php - Modulo Media
 
 ## 🎯 **Obiettivo Completato**
@@ -156,25 +151,9 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 - [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: corrections
-canonical: ../../../Themes/docs/shared-components/corrections_summary.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: corrections
-canonical: ../../../Themes/docs/shared-components/corrections_summary.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/corrections_summary.md
-=======
 ---
 
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 3.1.0  
 **✅ Status**: Tutti i problemi risolti e prevenzione implementata  
 **🎯 Obiettivo**: Completato con successo
->>>>>>> 7605234 (.)

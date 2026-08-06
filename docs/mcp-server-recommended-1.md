@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "MCP Server Consigliati per il Modulo Media"
 module: "Media"
 type: concept
@@ -12,21 +9,6 @@ qmd: "mcp server recommended 1"
 related:
   - "./webm.md"
 ---
-# MCP Server Consigliati per il Modulo Media
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: mcp-server-recommended-1
-canonical: ../../../Themes/docs/shared-components/mcp-server-recommended-1.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-recommended-1.md
-=======
 # MCP Server Consigliati per il Modulo Media
 
 ## Scopo del Modulo
@@ -50,4 +32,3 @@ Gestione media, upload, conversioni e streaming.
 
 ## Note
 - Personalizza la configurazione per esigenze di streaming o CDN.
->>>>>>> 7605234 (.)

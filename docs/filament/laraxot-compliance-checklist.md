@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Checklist Conformità Laraxot - Modulo Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "laraxot compliance checklist"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Checklist Conformità Laraxot - Modulo Media
 
 ## 🎯 **CHECKLIST PRE-COMMIT OBBLIGATORIA**

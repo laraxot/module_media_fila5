@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Pacchetti del Modulo Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "packages"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Pacchetti del Modulo Media
 
 ## Pacchetti Utilizzati

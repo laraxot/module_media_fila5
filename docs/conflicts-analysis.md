@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Analisi Conflitti - README.md"
 module: "Media"
 type: concept
@@ -13,21 +10,6 @@ related:
   - "./webm.md"
 ---
 # Analisi Conflitti - README.md
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: conflicts-analysis
-canonical: ../../../Themes/docs/shared-components/conflicts-analysis.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/conflicts-analysis.md
-=======
-# Analisi Conflitti - README.md
 
 ## Obiettivi Funzionali
 
@@ -37,4 +19,3 @@ See canonical documentation: ../../../Themes/docs/shared-components/conflicts-an
 
 ## Collegamenti correlati
 - [[conflicts_overview]]
->>>>>>> 7605234 (.)

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Guida agli Stili, Tabelle e Immagini"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "styling"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Guida agli Stili, Tabelle e Immagini
 
 Questa guida illustra come applicare stili CSS, creare layout con tabelle e gestire le immagini nei PDF generati con Html2Pdf.
@@ -25,21 +20,6 @@ Questa guida illustra come applicare stili CSS, creare layout con tabelle e gest
 *   [Integrazione con Laravel e Best Practices](./laravel.md)
 *   [Configurazione della Sicurezza](./security.md)
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: styling
-canonical: ../../../../Themes/docs/shared-components/styling-Modules.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: styling
-canonical: ../../../../Themes/docs/shared-components/styling-Modules.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/styling-Modules.md
-=======
 ---
 
 ## 🎨 Stili e CSS
@@ -168,4 +148,3 @@ $src = 'data:image/png;base64,' . $imageData;
 // Passa la stringa $src alla view
 return view('pdf.template', compact('src'));
 ```
->>>>>>> 7605234 (.)

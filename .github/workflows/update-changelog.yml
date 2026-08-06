@@ -10,11 +10,7 @@ jobs:
 
     steps:
       - name: Checkout code
-<<<<<<< HEAD
         uses: actions/checkout@v7
-=======
-        uses: actions/checkout@v4
->>>>>>> 7605234 (.)
         with:
           ref: main
 
@@ -25,11 +21,7 @@ jobs:
           release-notes: ${{ github.event.release.body }}
 
       - name: Commit updated CHANGELOG
-<<<<<<< HEAD
-        uses: stefanzweifel/git-auto-commit-action@v7
-=======
         uses: stefanzweifel/git-auto-commit-action@v5
->>>>>>> 7605234 (.)
         with:
           branch: main
           commit_message: Update CHANGELOG

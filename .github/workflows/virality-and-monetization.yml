@@ -12,11 +12,7 @@ jobs:
     name: Generate storytelling + assets
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - uses: actions/checkout@v7
-=======
-      - uses: actions/checkout@v4
->>>>>>> 7605234 (.)
       - name: Collect release metadata
         id: release_info
         run: |
@@ -33,11 +29,7 @@ jobs:
           npm install --prefer-offline
           npm run build:share-card -- --module "Media" --version "${{ steps.release_info.outputs.version }}"
       - name: Archive marketing kit
-<<<<<<< HEAD
         uses: actions/upload-artifact@v7
-=======
-        uses: actions/upload-artifact@v4
->>>>>>> 7605234 (.)
         with:
           name: "Media-marketing-kit"
           path: |
@@ -49,11 +41,7 @@ jobs:
     needs: craft-marketing-kit
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - uses: actions/download-artifact@v8
-=======
       - uses: actions/download-artifact@v4
->>>>>>> 7605234 (.)
         with:
           name: "Media-marketing-kit"
           path: kit
@@ -82,11 +70,7 @@ jobs:
     needs: craft-marketing-kit
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
       - uses: actions/checkout@v7
-=======
-      - uses: actions/checkout@v4
->>>>>>> 7605234 (.)
       - name: Build distributable package
         run: |
           composer install --no-dev --prefer-dist
@@ -109,11 +93,7 @@ jobs:
     needs: [announce-social, monetize-marketplaces]
     runs-on: ubuntu-latest
     steps:
-<<<<<<< HEAD
-      - uses: actions/download-artifact@v8
-=======
       - uses: actions/download-artifact@v4
->>>>>>> 7605234 (.)
         with:
           name: "Media-marketing-kit"
           path: kit

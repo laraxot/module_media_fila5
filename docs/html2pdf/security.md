@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Configurazione della Sicurezza"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "security"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Configurazione della Sicurezza
 
 A partire dalla versione 5.3, `Html2Pdf` ha introdotto un `Security Service` per controllare l'accesso a risorse esterne (immagini, fogli di stile, etc.) e prevenire vulnerabilità.
@@ -25,21 +20,6 @@ A partire dalla versione 5.3, `Html2Pdf` ha introdotto un `Security Service` per
 *   [Funzionalità Avanzate](./advanced.md)
 *   [Integrazione con Laravel e Best Practices](./laravel.md)
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: security
-canonical: ../../../../Themes/docs/shared-components/security.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: security
-canonical: ../../../../Themes/docs/shared-components/security.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/security.md
-=======
 ---
 
 ## 🛡️ Security Service
@@ -184,4 +164,3 @@ public function isUriValid(string $uri): bool
     return true;
 }
 ```
->>>>>>> 7605234 (.)

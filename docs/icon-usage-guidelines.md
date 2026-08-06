@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media Module Icon Usage Guidelines"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "icon usage guidelines"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Media Module Icon Usage Guidelines
 
 ## File Location
