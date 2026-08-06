@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "ConvertVideoByConvertDataAction"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "convert video"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # ConvertVideoByConvertDataAction
 
 ## Panoramica
@@ -72,8 +69,4 @@ $action = new ConvertVideoByConvertDataAction();
 $convertedPath = $action->execute($data);
 ```
 
-<<<<<<< HEAD
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions)
-=======
-[Torna alla documentazione Media](/docs/modules/module_media.md#actions)
->>>>>>> be7d0c3 (.)

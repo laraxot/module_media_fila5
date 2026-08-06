@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Colli di Bottiglia e Soluzioni - Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "bottlenecks"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Colli di Bottiglia e Soluzioni - Modulo Media
 
 ## Panoramica
@@ -859,8 +856,4 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [bottlenecks.md](performance/bottlenecks.md)
 * [bottlenecks.md](../../activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
-<<<<<<< HEAD
 * [bottlenecks.md](../../cms/docs/bottlenecks.md)
-=======
-* [bottlenecks.md](../../cms/docs/bottlenecks.md)
->>>>>>> be7d0c3 (.)

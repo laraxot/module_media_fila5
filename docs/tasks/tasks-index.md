@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Indice task - Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "tasks index"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Indice task - Modulo Media
 
 Lista dei task del modulo con link ai file .md separati. Ogni task è un file nella cartella `tasks/`. Dettagli dalla [roadmap](../roadmap.md).
@@ -37,8 +34,4 @@ Lista dei task del modulo con link ai file .md separati. Ogni task è un file ne
 ## Collegamenti
 
 - [Roadmap Media](../roadmap.md)
-<<<<<<< HEAD
 - [Scopo moduli progetto](../../../../../docs/moduli-scopo.md)
-=======
-- [Scopo moduli progetto](../../../../../docs/moduli-scopo.md)
->>>>>>> be7d0c3 (.)

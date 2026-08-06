@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Fasi di sviluppo - Media Module"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "phases"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Fasi di sviluppo - Media Module
 
 ## Fase 1: Infrastruttura Core (Completata)
@@ -36,8 +33,4 @@ related:
 
 - [ ] Controllo accessi basato su permessi per ogni singolo asset
 - [ ] AI-Powered Tagging: riconoscimento automatico del contenuto delle immagini
-<<<<<<< HEAD
 - [ ] URL firmati e temporanei per la consegna sicura dei media
-=======
-- [ ] URL firmati e temporanei per la consegna sicura dei media
->>>>>>> be7d0c3 (.)

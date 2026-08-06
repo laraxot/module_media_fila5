@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Goals - Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "02 goals"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Goals - Media
 
 ## Short Term

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Risoluzione conflitto git su Filament MediaConvertResource"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "filament resource conflict resolution"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Risoluzione conflitto git su Filament MediaConvertResource
 
 ## Problema
@@ -28,8 +25,4 @@ Sono stati rilevati marker di conflitto git  nel file `app/Filament/Resources/Me
 - Garantire tipizzazione e commenti PHPDoc corretti.
 
 ## Collegamenti
-<<<<<<< HEAD
 - [Documentazione root risoluzione conflitti](../../../../docs/risoluzione_conflitti_git.md#media-filament-resources-mediaconvertresourcephp)
-=======
-- [Documentazione root risoluzione conflitti](../../../../docs/risoluzione_conflitti_git.md#media-filament-resources-mediaconvertresourcephp)
->>>>>>> be7d0c3 (.)

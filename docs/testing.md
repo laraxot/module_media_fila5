@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Testing Documentation"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "testing"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Testing Documentation
 
 ## Overview

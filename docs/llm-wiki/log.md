@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Activity Log"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "log"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Activity Log
 
 > **Module**: Media
@@ -33,8 +30,4 @@ related:
 
 ---
 
-<<<<<<< HEAD
 _Log entries appended chronologically below_
-=======
-_Log entries appended chronologically below_
->>>>>>> be7d0c3 (.)

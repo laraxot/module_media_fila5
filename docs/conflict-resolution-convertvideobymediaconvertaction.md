@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Risoluzione Conflitti ConvertVideoByMediaConvertAction.php"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "conflict resolution convertvideobymediaconvertaction"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
@@ -86,11 +83,6 @@ FFMpeg::fromDisk($data->disk)
 - [Media Module Documentation](module_media.md)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
-<<<<<<< HEAD
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
-=======
-- [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
-
->>>>>>> be7d0c3 (.)

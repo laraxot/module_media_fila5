@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Linee Guida Prevenzione Problemi - Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "prevention guidelines"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -395,8 +392,4 @@ jobs:
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 3.1.0  
 **🎯 Obiettivo**: Prevenzione completa problemi futuri  
-<<<<<<< HEAD
 **✅ Status**: Linee guida implementate e testate
-=======
-**✅ Status**: Linee guida implementate e testate
->>>>>>> be7d0c3 (.)

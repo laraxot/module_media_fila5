@@ -27,11 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-<<<<<<< HEAD
-        uses: actions/checkout@v4
-=======
         uses: actions/checkout@v7
->>>>>>> be7d0c3 (.)
         with:
           fetch-depth: 0
 
@@ -39,11 +35,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y cloc
 
       - name: Setup Node.js
-<<<<<<< HEAD
-        uses: actions/setup-node@v4
-=======
         uses: actions/setup-node@v7
->>>>>>> be7d0c3 (.)
         with:
           node-version: '20'
 
@@ -58,18 +50,10 @@ jobs:
         run: cat reports/contributor-lines-summary.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload HTML report
-<<<<<<< HEAD
-        uses: actions/upload-artifact@v4
-=======
         uses: actions/upload-artifact@v7
->>>>>>> be7d0c3 (.)
         with:
           name: contributor-lines-report
           path: |
             reports/contributor-lines.html
             reports/contributor-lines-summary.md
-<<<<<<< HEAD
           retention-days: 90
-=======
-          retention-days: 90
->>>>>>> be7d0c3 (.)

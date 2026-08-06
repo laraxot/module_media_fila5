@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Ottimizzazioni Performance Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "media optimizations"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Ottimizzazioni Performance Modulo Media
 
 ## 1. Ottimizzazione Conversione Video
@@ -332,8 +329,4 @@ final class TemporaryUploadPathGenerator implements PathGenerator
 - Uso di Assert per validazioni runtime
 - Cache tags richiedono Redis/Memcached
 - Compatibile con FFmpeg e Laravel
-<<<<<<< HEAD
 - Configurazioni esternalizzate
-=======
-- Configurazioni esternalizzate
->>>>>>> be7d0c3 (.)

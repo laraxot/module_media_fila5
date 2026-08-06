@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "False Friends – Media Module"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "false friends"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # False Friends – Media Module
 
 | Concept | Misconception | Correction |
@@ -29,8 +26,6 @@ related:
 // ❌ FALSE FRIEND - CDN dependency
 const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/marker-icon.png';
 ```
-<<<<<<< HEAD
-=======
 
 ### Error 2: Inline SVG Misuse
 ```blade
@@ -43,4 +38,3 @@ const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/marker-icon.png';
 {{-- ✅ CORRECT - Standard approach --}}
 @svg('map-marker.svg', ['class' => 'map-marker'])
 ```
->>>>>>> be7d0c3 (.)
