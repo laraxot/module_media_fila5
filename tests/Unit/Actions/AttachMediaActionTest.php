@@ -11,7 +11,7 @@ use Spatie\QueueableAction\QueueableAction;
 uses(TestCase::class);
 
 describe('AttachMediaAction', function () {
-    it('uses QueueableAction trait', function (): void {
+    it('uses QueueableAction trait', function(): void {
         // Arrange
         $action = new AttachMediaAction();
 
@@ -19,7 +19,7 @@ describe('AttachMediaAction', function () {
         expect(trait_exists(QueueableAction::class))->toBeTrue();
     });
 
-    it('is instance of AttachMediaAction', function (): void {
+    it('is instance of AttachMediaAction', function(): void {
         // Arrange
         $action = new AttachMediaAction();
 
@@ -27,7 +27,7 @@ describe('AttachMediaAction', function () {
         expect($action)->toBeInstanceOf(AttachMediaAction::class);
     });
 
-    it('can be instantiated', function (): void {
+    it('can be instantiated', function(): void {
         // Act
         $action = new AttachMediaAction();
 
