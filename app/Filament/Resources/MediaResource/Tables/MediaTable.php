@@ -21,10 +21,13 @@ use Webmozart\Assert\Assert;
 class MediaTable extends XotBaseResourceTable
 {
     /**
-     * @return array<string, \Filament\Tables\Columns\Column>
+     * @return array<string, Column>
      */
     public function getTableColumns(): array
     {
+    /**
+     * @return array<int\|string, \Filament\Tables\Columns\Column>
+     */
         return [
             'id' => TextColumn::make('id')->sortable(),
             'name' => TextColumn::make('name')->searchable()->sortable(),
