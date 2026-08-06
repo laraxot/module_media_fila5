@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Linee Guida Prevenzione Problemi - Modulo Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "prevention guidelines"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> laraxot/dev
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -385,7 +388,11 @@ jobs:
 - [Correzioni S3Test.php](s3test_corrections.md)
 - [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
+<<<<<<< HEAD
 - [Architecture Guidelines](../../docs/architecture.md)
+=======
+- [Architecture Guidelines](../docs/architecture.md)
+>>>>>>> laraxot/dev
 
 ---
 

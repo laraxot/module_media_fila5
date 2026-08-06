@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Indice della Documentazione - Modulo Media
 
 ## Panoramica
@@ -17,6 +18,29 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
 - **Integrazione CDN**: Supporto per Content Delivery Network
 - **Watermark Automatico**: Applicazione automatica di watermark sui media
+=======
+# Media Module Documentation
+
+**Last Update**: Feb 2026
+**Status**: Active Development
+
+## Quick Start
+
+- [README.md](./README.md) - Panoramica modulo
+
+## Core Features
+
+- **Multi-format Files**: Immagini, video, documenti, audio
+- **Upload**: Drag-and-drop, multi-upload
+- **Media Library**: Gestione file (spatie/laravel-medialibrary)
+- **Image Processing**: Ottimizzazione immagini (intervention/image)
+- **Video Conversion**: Conversione video (FFmpeg)
+- **CDN Integration**: Integrazione CDN
+
+## Standards
+
+Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
+>>>>>>> laraxot/dev
 
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
