@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept
@@ -260,8 +261,11 @@ private function getSolutionForError(?string $errorCode): string
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 - [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)
 
+=======
+module: theme
+topic: s3test_corrections
+canonical: ../../../../Themes/docs/shared-components/s3test_corrections.md
+>>>>>>> 33a3006 (.)
 ---
 
-**Ultimo aggiornamento**: Gennaio 2025
-**Autore**: Sistema di correzione automatica
-**Stato**: ✅ Completato e verificato
+See canonical documentation: ../../../../Themes/docs/shared-components/s3test_corrections.md

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Modulo Media"
 module: "Media"
 type: concept
@@ -132,6 +133,11 @@ composer format        # Formatta il codice
 ## Changelog
 Le modifiche vengono tracciate nel repository GitHub.
 
+=======
+module: theme
+topic: module-media
+canonical: ../../../Themes/docs/shared-components/module-media-1.md
+>>>>>>> 33a3006 (.)
 ---
 
-> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
+See canonical documentation: ../../../Themes/docs/shared-components/module-media-1.md

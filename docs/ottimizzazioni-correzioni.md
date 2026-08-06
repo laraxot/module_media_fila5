@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Ottimizzazioni Correzioni"
 module: "Media"
 type: concept
@@ -9,3 +10,11 @@ qmd: "ottimizzazioni correzioni"
 related:
   - "./webm.md"
 ---
+=======
+module: theme
+topic: ottimizzazioni-correzioni
+canonical: ../../../Themes/docs/shared-components/.gitkeep
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep
+>>>>>>> 33a3006 (.)

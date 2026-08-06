@@ -1,9 +1,10 @@
 ---
-title: agent edit discipline — puntatore
-type: reference
-updated: 2026-05-21
+module: theme
+topic: agent-edit-discipline
+canonical: ../../../Themes/docs/shared-components/agent-edit-discipline.md
 ---
 
+<<<<<<< HEAD
 # Disciplina edit e qualità (puntatore)
 
 <<<<<<< HEAD
@@ -25,3 +26,6 @@ Stub **DRY**: policy nella wiki di progetto; discussione in GitHub issue [#124](
 - Deduplica docs: [../../../../docs/wiki/how-to/module-docs-deduplication.md](../../../../docs/wiki/how-to/module-docs-deduplication.md)
 - Prompt LLM: [../../../../bashscripts/tools/prompts/llm-wiki.txt](../../../../bashscripts/tools/prompts/llm-wiki.txt) §2.1
 >>>>>>> 9aef2ca (.)
+=======
+See canonical documentation: ../../../Themes/docs/shared-components/agent-edit-discipline.md
+>>>>>>> 33a3006 (.)

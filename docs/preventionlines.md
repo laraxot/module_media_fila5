@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Linee Guida Prevenzione Problemi - Modulo Media"
 module: "Media"
 type: concept
@@ -387,9 +388,11 @@ jobs:
 - [Translation Standards](translations.md)
 - [Architecture Guidelines](../../docs/architecture.md)
 
+=======
+module: theme
+topic: preventionlines
+canonical: ../../../Themes/docs/shared-components/prevention-guidelines.md
+>>>>>>> 33a3006 (.)
 ---
 
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
-**📦 Versione**: 3.1.0  
-**🎯 Obiettivo**: Prevenzione completa problemi futuri  
-**✅ Status**: Linee guida implementate e testate
+See canonical documentation: ../../../Themes/docs/shared-components/prevention-guidelines.md

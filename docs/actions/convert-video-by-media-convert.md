@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "ConvertVideoByMediaConvertAction"
 module: "Media"
 type: concept
@@ -95,3 +96,11 @@ sul tipo restituito). Fix: si mantiene il riferimento a `$export` (il
 chiama `addFilter()` e `save()` come chiamate separate su `$export`, non concatenate.
 
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions)
+=======
+module: theme
+topic: convert-video-by-media-convert
+canonical: ../../../../Themes/docs/shared-components/convert-video-by-media-convert-1.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/convert-video-by-media-convert-1.md
+>>>>>>> 33a3006 (.)

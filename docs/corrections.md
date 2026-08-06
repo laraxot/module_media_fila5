@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Riepilogo Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept
@@ -151,9 +152,11 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 - [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
 
+=======
+module: theme
+topic: corrections
+canonical: ../../../Themes/docs/shared-components/corrections_summary.md
+>>>>>>> 33a3006 (.)
 ---
 
-**🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
-**📦 Versione**: 3.1.0  
-**✅ Status**: Tutti i problemi risolti e prevenzione implementata  
-**🎯 Obiettivo**: Completato con successo
+See canonical documentation: ../../../Themes/docs/shared-components/corrections_summary.md
