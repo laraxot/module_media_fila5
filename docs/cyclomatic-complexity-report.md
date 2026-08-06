@@ -11,7 +11,6 @@ related:
 ---
 # Cyclomatic Complexity Report - Module: Media
 
-**Generated:** 2025-10-01 19:44:11
 **Analyzer:** Super Mucca 🐮
 
 ---

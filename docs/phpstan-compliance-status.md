@@ -11,7 +11,6 @@ related:
 ---
 # PHPStan Level 10 Compliance Status
 
-**Last Updated**: 2025-12-10
 
 **Status**: ✅ FULLY COMPLIANT (0 errors)
 
