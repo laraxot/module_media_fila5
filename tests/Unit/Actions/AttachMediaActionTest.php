@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
+use ReflectionClass;
 
 use Modules\Media\Actions\AttachMediaAction;
 use Modules\Media\Tests\TestCase;
