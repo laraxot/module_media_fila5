@@ -21,13 +21,13 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class MediaConvertsTable extends XotBaseResourceTable
 {
-<<<<<<< Updated upstream
     /**
      * @return array<string, Column>
      * @return array<string, Column>
      */
     public function getTableColumns(): array
     {
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
     /**
@@ -38,6 +38,8 @@ class MediaConvertsTable extends XotBaseResourceTable
     /**
      * @return array<int\|string, \Filament\Tables\Columns\Column>
      */
+=======
+>>>>>>> 33a3006 (.)
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
             'created_at' => TextColumn::make('created_at')->dateTime(),

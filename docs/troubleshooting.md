@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Troubleshooting"
 module: "Media"
 type: concept
@@ -10,3 +11,11 @@ related:
   - "./webm.md"
 ---
 # Troubleshooting
+=======
+module: theme
+topic: troubleshooting
+canonical: ../../../Themes/docs/shared-components/troubleshooting-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/troubleshooting-Modules.md
+>>>>>>> 33a3006 (.)
