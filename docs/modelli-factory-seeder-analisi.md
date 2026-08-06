@@ -221,9 +221,6 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
 =======
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
-- [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
-- [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
-- [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
 - [User Module](../../user/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
 - [Notify Module](../../notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
@@ -235,6 +232,5 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [FFmpeg](https://ffmpeg.org/) - Video/Audio processing
 - [ImageMagick](https://imagemagick.org/) - Advanced image processing
 
-*Ultimo aggiornamento: Gennaio 2025*
 *Analisi completa di 4 modelli attivi, sistema media completo*
 *Supporto upload, conversioni, storage locale/cloud*

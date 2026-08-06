@@ -11,7 +11,6 @@ related:
 ---
 # Media - Filosofia Completa: Logica, Religione, Politica, Zen
 
-**Data Creazione**: 2025-12-23
 **Data Creazione**: [DATE]
 **Status**: Documentazione Filosofica Completa
 **Versione**: 1.0.0
@@ -252,7 +251,6 @@ Media::registerMediaConversions(function ($media) {
 
 - [File Management Architecture](./file-management-architecture.md)
 - [Business Logic Overview](./business-logic-overview.md)
-- [Xot Module Foundation](../../Xot/docs/philosophy-complete.md)
 - [Xot Module Foundation](../../xot/docs/philosophy-complete.md)
 
 ---

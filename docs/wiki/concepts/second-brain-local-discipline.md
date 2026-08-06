@@ -1,29 +1,13 @@
 ---
-title: "Second Brain Local Discipline (stub Media)"
-type: concept
-module: Media
-tags: [second-brain, stub, hackernoon, harness]
-created: 2026-06-05
-updated: 2026-06-05
-qmd: "media second brain stub canonical xot harness hackernoon llm-wiki"
-issues:
-  - "https://github.com/laraxot/base_fixcity_fila5/issues/272"
-discussions:
-  - "https://github.com/laraxot/base_fixcity_fila5/discussions/273"
+title: "second-brain-local-discipline — puntatore"
+type: reference
+updated: 2026-05-21
 related:
-  - ../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md
-  - ../../../../docs/wiki/concepts/ai-harness-module-discipline.md
-  - ../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md
-  - ../../../../../../bashscripts/tools/prompts/llm-wiki.txt
+  - "../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md"
 ---
 
-# Contratto wiki locale — stub Media
+# second brain local discipline
 
-| Risorsa | Link |
-|---------|------|
-| **Canon** | [Xot second-brain-local-discipline.md](../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md) |
-| **Harness moduli** | [ai-harness-module-discipline.md](../../../../docs/wiki/concepts/ai-harness-module-discipline.md) |
-| **Tips 001–022** | [hackernoon map](../../../../../../docs/wiki/concepts/hackernoon-ai-coding-tips-fixcity-map.md) |
-| **Prompt router** | [llm-wiki.txt](../../../../../../bashscripts/tools/prompts/llm-wiki.txt) |
+Stub **DRY** verso wiki modulo **Xot**. Policy: [docs-deduplication](../../../../../../docs/wiki/how-to/module-docs-deduplication.md).
 
-Solo decisioni specifiche di **Media** in `docs/wiki/`; contratto generico in Xot.
+→ [second-brain-local-discipline.md](../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md)

@@ -18,6 +18,7 @@ class HasMediaForm extends XotBaseResourceForm
      * @return array<int|string, \Filament\Schemas\Components\Component>
 >>>>>>> 9aef2ca (.)
      */
+
     public static function getFormSchema(): array
     {
         return [
