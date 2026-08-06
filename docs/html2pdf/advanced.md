@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Funzionalità Avanzate"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "advanced"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Funzionalità Avanzate
 
 Questa sezione copre funzionalità avanzate come la generazione di codici a barre, QR code, la creazione di segnalibri (bookmark), indici e altri metodi utili della libreria.
@@ -127,8 +124,4 @@ Ora puoi usare `font-family: MyCustomFont;` nel tuo CSS inline.
 Imposta il titolo visibile nelle proprietà del file PDF.
 ```php
 $html2pdf->pdf->SetTitle('Il Mio Bel Documento');
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> be7d0c3 (.)

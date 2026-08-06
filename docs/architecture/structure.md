@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "structure"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Modulo Media
 
 Data: 2025-04-23 19:09:56
@@ -423,8 +420,4 @@ tests_old/Unit
 * [structure.md](../../../activity/docs/structure.md)
 * [structure.md](../../../cms/docs/structure.md)
 * [structure.md](../../../cms/docs/themes/structure.md)
-<<<<<<< HEAD
 * [structure.md](../../../cms/docs/components/structure.md)
-=======
-* [structure.md](../../../cms/docs/components/structure.md)
->>>>>>> be7d0c3 (.)

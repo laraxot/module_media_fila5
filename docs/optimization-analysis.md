@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Analisi di Ottimizzazione - Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "optimization analysis"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Analisi di Ottimizzazione - Modulo Media
 
 ## 🎯 Principi Applicati: DRY + KISS + SOLID + ROBUST + Laraxot
@@ -93,8 +90,4 @@ class ImageOptimizationService
 - **Fase 4**: Advanced access control
 
 ---
-<<<<<<< HEAD
 *Stato: 🟡 Funzionale ma Necessita Security Enhancement*
-=======
-*Stato: 🟡 Funzionale ma Necessita Security Enhancement*
->>>>>>> be7d0c3 (.)

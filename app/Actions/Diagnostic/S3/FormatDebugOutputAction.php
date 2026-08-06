@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Diagnostic\S3;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_encode;
@@ -42,8 +43,8 @@ class FormatDebugOutputAction
         }
 
         $lines = [
-            '=== '.(string) $result['title'].' ===',
-            'Status: '.(string) $result['status'],
+            '=== '.SafeStringCastAction::cast($result['title']).' ===',
+            'Status: '.SafeStringCastAction::cast($result['status']),
             '',
         ];
 
@@ -78,6 +79,6 @@ class FormatDebugOutputAction
             return $key.': '.json_encode($value, JSON_PRETTY_PRINT);
         }
 
-        return $key.': '.(string) $value;
+        return $key.': '.SafeStringCastAction::cast($value);
     }
 }

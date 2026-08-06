@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Testing Rules Summary"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "testing rules"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Testing Rules Summary
 
 ## Regole Fondamentali dei Test
@@ -114,8 +111,4 @@ Ogni modulo e tema deve documentare:
 3. Esempi di test corretti
 4. Errori comuni da evitare
 
-<<<<<<< HEAD
 I file di documentazione vanno nelle cartelle `docs/` dentro ogni modulo/tema.
-=======
-I file di documentazione vanno nelle cartelle `docs/` dentro ogni modulo/tema.
->>>>>>> be7d0c3 (.)

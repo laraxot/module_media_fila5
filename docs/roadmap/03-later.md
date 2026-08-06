@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Later (Module Media)
-
-## Longer-term ideas
-=======
 ---
 title: "Later (Module Media)"
 module: "Media"
@@ -17,4 +12,3 @@ related:
 # Later (Module Media)
 
 ## Longer-term ideas
->>>>>>> be7d0c3 (.)

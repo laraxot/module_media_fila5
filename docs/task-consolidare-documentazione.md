@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task: Consolidare Documentazione - Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "task consolidare documentazione"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Task: Consolidare Documentazione - Media
 
 **Modulo**: Media
@@ -23,8 +20,4 @@ related:
 ## Criteri di Completamento
 
 - [ ] Rimossi duplicati da 130 docs
-<<<<<<< HEAD
 - [ ] README.md aggiornato
-=======
-- [ ] README.md aggiornato
->>>>>>> be7d0c3 (.)

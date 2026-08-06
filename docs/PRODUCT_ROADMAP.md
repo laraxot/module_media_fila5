@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module - Product Roadmap"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "product roadmap"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module - Product Roadmap
 
 **Module:** Media  
@@ -114,8 +111,4 @@ To provide a **comprehensive media management system** that handles all image, v
 
 ---
 
-<<<<<<< HEAD
 *Last Updated: March 12, 2026*
-=======
-*Last Updated: March 12, 2026*
->>>>>>> be7d0c3 (.)

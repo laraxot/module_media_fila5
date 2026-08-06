@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module Performance Bottlenecks"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "bottlenecks"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module Performance Bottlenecks
 
 ## File Upload and Processing
@@ -254,8 +251,4 @@ Implementare:
 
 ### Versione Incoming
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> be7d0c3 (.)

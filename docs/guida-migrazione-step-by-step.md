@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Guida Migrazione Step By Step"
 module: "Media"
@@ -11,5 +9,3 @@ qmd: "guida migrazione step by step"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
-

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Dependencies (Module Media)"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "dependencies"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Dependencies (Module Media)
 
 Canonical dependency map:
@@ -24,8 +21,4 @@ Module/theme specific notes:
 
 Installed packages index:
 
-<<<<<<< HEAD
 - [../../../../docs/packages/index.md](../../../../docs/packages/index.md)
-=======
-- [../../../../docs/packages/index.md](../../../../docs/packages/index.md)
->>>>>>> be7d0c3 (.)

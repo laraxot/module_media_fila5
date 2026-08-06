@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Correzioni S3Test.php - Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "s3test corrections"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Correzioni S3Test.php - Modulo Media
 
 ## Problemi Identificati e Risolti
@@ -267,8 +264,4 @@ private function getSolutionForError(?string $errorCode): string
 
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di correzione automatica
-<<<<<<< HEAD
 **Stato**: ✅ Completato e verificato
-=======
-**Stato**: ✅ Completato e verificato
->>>>>>> be7d0c3 (.)

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Risks - Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "05 risks"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Risks - Media
 
 ## Top Risks

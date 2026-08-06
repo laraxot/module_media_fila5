@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Migrazione Filament"
 module: "Media"
@@ -11,5 +9,3 @@ qmd: "migrazione filament"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
-

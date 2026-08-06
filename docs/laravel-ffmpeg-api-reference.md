@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Laravel-FFMpeg – API Reference Completa"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "laravel ffmpeg api reference"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Laravel-FFMpeg – API Reference Completa
 
 > Package: `protonemedia/laravel-ffmpeg` v8+
@@ -503,8 +500,4 @@ use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use ProtoneMedia\LaravelFFMpeg\Format\Video\X264;
 ```
 
-<<<<<<< HEAD
 Nota: `FFMpeg::open()` restituisce `MediaOpener`, non `static`. Tipizzare correttamente le variabili intermedie per soddisfare PHPStan.
-=======
-Nota: `FFMpeg::open()` restituisce `MediaOpener`, non `static`. Tipizzare correttamente le variabili intermedie per soddisfare PHPStan.
->>>>>>> be7d0c3 (.)

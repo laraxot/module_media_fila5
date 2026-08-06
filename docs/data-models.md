@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Data Models"
 module: "Media"
@@ -11,5 +9,4 @@ qmd: "data models"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Data Models

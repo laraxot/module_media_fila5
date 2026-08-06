@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "TemporaryUploadPathGenerator Documentation"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "temporary upload path generator"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # TemporaryUploadPathGenerator Documentation
 
 ## Overview
@@ -124,8 +121,4 @@ $media = Media::find(1);
 $originalPath = $generator->getPath($media);
 $conversionPath = $generator->getPathForConversions($media);
 $responsivePath = $generator->getPathForResponsiveImages($media);
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> be7d0c3 (.)

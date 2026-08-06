@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-roadmap_media.md
-## Collegamenti tra versioni di roadmap_root_symlink.md
-* [roadmap_root_symlink.md](../../../notify/docs/roadmap_root_symlink.md)
-* [roadmap_root_symlink.md](../../../media/docs/roadmap_root_symlink.md)
-=======
 ---
 title: "Roadmap Root Symlink"
 module: "Media"
@@ -19,4 +13,3 @@ roadmap_media.md
 ## Collegamenti tra versioni di roadmap_root_symlink.md
 * [roadmap_root_symlink.md](../../../notify/docs/roadmap_root_symlink.md)
 * [roadmap_root_symlink.md](../../../media/docs/roadmap_root_symlink.md)
->>>>>>> be7d0c3 (.)

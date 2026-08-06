@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Directory Structure Rules"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "directory structure rules"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Directory Structure Rules
 
 Per il modulo Media valgono queste regole:
@@ -23,8 +20,4 @@ Per il modulo Media valgono queste regole:
 
 La vecchia cartella duplicata individuata era `Media/bashscripts/_docs`.
 
-<<<<<<< HEAD
 Regola canonica: [no-lang-lang-and-no-underscore-docs-rule](../../../../docs/wiki/concepts/no-lang-lang-and-no-underscore-docs-rule.md).
-=======
-Regola canonica: [no-lang-lang-and-no-underscore-docs-rule](../../../../docs/wiki/concepts/no-lang-lang-and-no-underscore-docs-rule.md).
->>>>>>> be7d0c3 (.)

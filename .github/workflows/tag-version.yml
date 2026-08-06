@@ -13,20 +13,12 @@ jobs:
 
     steps:
       - name: Checkout code
-<<<<<<< HEAD
-        uses: actions/checkout@v4
-=======
         uses: actions/checkout@v7
->>>>>>> be7d0c3 (.)
         with:
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Setup Node.js
-<<<<<<< HEAD
-        uses: actions/setup-node@v4
-=======
         uses: actions/setup-node@v7
->>>>>>> be7d0c3 (.)
         with:
           node-version: 20
 
@@ -37,8 +29,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-<<<<<<< HEAD
         run: npx semantic-release
-=======
-        run: npx semantic-release
->>>>>>> be7d0c3 (.)

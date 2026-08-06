@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task: Media Security and Access Control"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "media security access control"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Task: Media Security and Access Control
 
 **Modulo**: Media  
@@ -38,8 +35,4 @@ Nessuna.
 ## Collegamenti
 
 - [Roadmap Media](../roadmap.md)
-<<<<<<< HEAD
 - [Indice task Media](tasks-index.md)
-=======
-- [Indice task Media](tasks-index.md)
->>>>>>> be7d0c3 (.)

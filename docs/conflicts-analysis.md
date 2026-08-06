@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Analisi Conflitti - README.md"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "conflicts analysis"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Analisi Conflitti - README.md
 
 ## Obiettivi Funzionali
@@ -21,8 +18,4 @@ related:
 ## Impatto
 
 ## Collegamenti correlati
-<<<<<<< HEAD
 - [[conflicts_overview]]
-=======
-- [[conflicts_overview]]
->>>>>>> be7d0c3 (.)

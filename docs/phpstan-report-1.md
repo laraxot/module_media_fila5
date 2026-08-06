@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Report PHPStan - Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "phpstan report 1"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale

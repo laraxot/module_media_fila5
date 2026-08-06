@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "BMAD Method v6.3 operativo nel progetto"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "bmad method"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # BMAD Method v6.3 operativo nel progetto
 
 ## Regola pratica
@@ -45,8 +42,4 @@ BMAD non e' un generatore casuale di codice: e' il processo di delivery. Prima s
 
 - Raw ufficiale BMAD: `docs/raw/bmad/llms-full.txt`.
 - Sintesi progetto: `docs/wiki/bmad-method-v63.md`.
-<<<<<<< HEAD
 - Ogni modulo/tema mantiene questa nota in `docs/wiki/bmad-method.md` come promemoria operativo.
-=======
-- Ogni modulo/tema mantiene questa nota in `docs/wiki/bmad-method.md` come promemoria operativo.
->>>>>>> be7d0c3 (.)

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-https://github.com/mokhosh/laravel-youtube-api
-
-https://github.com/mokhosh/laravel-youtube-downloader
-=======
 ---
 title: "Youtube"
 module: "Media"
@@ -17,7 +12,3 @@ related:
 https://github.com/mokhosh/laravel-youtube-api
 
 https://github.com/mokhosh/laravel-youtube-downloader
-
-
-
->>>>>>> be7d0c3 (.)

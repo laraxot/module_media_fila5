@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Risoluzione dei Conflitti Git nel Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "conflitti merge risolti"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Risoluzione dei Conflitti Git nel Modulo Media
 
 ## Panoramica
@@ -403,8 +400,4 @@ I problemi di conflitto nei file relativi all'integrazione di FFmpeg erano princ
 
 ### Documentazione
 
-<<<<<<< HEAD
 Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
-=======
-Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
->>>>>>> be7d0c3 (.)

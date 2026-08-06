@@ -20,11 +20,7 @@ jobs:
 
     steps:
       - name: Checkout code
-<<<<<<< HEAD
-        uses: actions/checkout@v4
-=======
         uses: actions/checkout@v7
->>>>>>> be7d0c3 (.)
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -61,8 +57,4 @@ jobs:
             echo "❌ Found $VIOLATIONS direct Filament extensions in Media:"
             grep -r "extends.*Filament" laravel/Modules/Media --include="*.php" | grep -v "XotBase"
             exit 1
-<<<<<<< HEAD
           fi
-=======
-          fi
->>>>>>> be7d0c3 (.)

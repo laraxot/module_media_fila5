@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module - Business Logic Overview"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "business logic overview"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module - Business Logic Overview
 
 ## Core Business Logic Components
@@ -203,8 +200,4 @@ $document = PatientDocument::getSecureDocument(
 
 
 **Module Version**: Latest
-<<<<<<< HEAD
 **Business Logic Status**: Core functionality implemented
-=======
-**Business Logic Status**: Core functionality implemented
->>>>>>> be7d0c3 (.)

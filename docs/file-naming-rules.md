@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Regole di Naming per File"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "file naming rules"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Regole di Naming per File
 
 ## 🎯 Regola Fondamentale: NO Duplicati Case-Insensitive
@@ -131,8 +128,4 @@ Se entrambi i file contengono contenuto diverso:
 - PSR-4: Autoloading Standard
 - Laravel Naming Conventions
 - Filament Best Practices
-<<<<<<< HEAD
 - Git Case Sensitivity Issues
-=======
-- Git Case Sensitivity Issues
->>>>>>> be7d0c3 (.)

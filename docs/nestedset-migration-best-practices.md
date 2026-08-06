@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "NestedSet Migration Best Practices - Media Module"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "nestedset migration best practices"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # NestedSet Migration Best Practices - Media Module
 
 ## Overview
@@ -474,8 +471,4 @@ return new class extends XotBaseMigration
 
 - [Documentazione principale](/docs/migration/nestedset-best-practices.md)
 - [Media Module Architecture](/docs/architecture/media-module.md)
-<<<<<<< HEAD
 - [AddressItemEnum Integration](/docs/address-item-enum-integration.md)
-=======
-- [AddressItemEnum Integration](/docs/address-item-enum-integration.md)
->>>>>>> be7d0c3 (.)

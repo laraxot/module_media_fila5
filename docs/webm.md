@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Webm"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "webm"
 related:
   - "./migrazione-filament-4.md"
 ---
->>>>>>> be7d0c3 (.)
 https://pixelpoint.io/blog/web-optimized-video-ffmpeg/
 
 ffmpeg -i in.mp4 -c:v libvpx-vp9 -threads 4 out.mp4
@@ -55,4 +52,4 @@ ffmpeg -h encoder=hevc_nvenc
     output.webm
 
 ----------------------------------
-ffmpeg -h encoder=hevc_nvenc  
+ffmpeg -h encoder=hevc_nvenc

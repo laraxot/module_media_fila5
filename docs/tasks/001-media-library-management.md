@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Task 001: Implement Media Library Management System"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "001 media library management"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Task 001: Implement Media Library Management System
 
 ## Description
@@ -258,8 +255,4 @@ The Media module needs a robust media management system for handling images, vid
 ---
 
 **Status**: Pending
-<<<<<<< HEAD
 **Assignee**: TBD
-=======
-**Assignee**: TBD
->>>>>>> be7d0c3 (.)

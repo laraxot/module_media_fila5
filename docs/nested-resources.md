@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module - Nested Resource Implementation Guide"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "nested resources"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module - Nested Resource Implementation Guide
 
 ## Overview

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "FileUpload foreach Error Fix - Internal Server Error"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "fileupload foreach error fix"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # FileUpload foreach Error Fix - Internal Server Error
 
 ## Problema Identificato
@@ -216,8 +213,4 @@ public function getFormFill(): array
 - [Modules/User/docs/registration-widget.md](../laravel/modules/user/docs/registration-widget.md)
 
 *Autore: AI Assistant*
-<<<<<<< HEAD
 *Versione: 1.0*
-=======
-*Versione: 1.0*
->>>>>>> be7d0c3 (.)

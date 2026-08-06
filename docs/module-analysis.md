@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Module - Comprehensive Analysis"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "module analysis"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Module - Comprehensive Analysis
 
 ## Module Overview

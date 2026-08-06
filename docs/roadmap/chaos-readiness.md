@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Media Chaos Readiness - 2026-03-02"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "chaos readiness"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Media Chaos Readiness - 2026-03-02
 
 ## Scope
@@ -23,8 +20,4 @@ related:
 
 ## Next Chaos Steps
 - Simulate unsupported exporter methods and assert controlled exception path.
-<<<<<<< HEAD
 - Add chaos test for broken media conversion format class.
-=======
-- Add chaos test for broken media conversion format class.
->>>>>>> be7d0c3 (.)

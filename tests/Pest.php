@@ -15,6 +15,8 @@ use function Safe\file_get_contents;
  * Vietato pest()->extend() e pest()->uses() qui (PHPStan method.internalClass).
  */
 
+require_once __DIR__.'/../../Xot/tests/XotBasePest.php';
+
 /**
  * @param  array<string, mixed>  $where
  */

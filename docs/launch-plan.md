@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Product Launch Plan: Media Module"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "launch plan"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Product Launch Plan: Media Module
 
 ## 🚀 Launch Overview
@@ -19,8 +16,4 @@ related:
 - **Launch Lead:** @CoreTeam
 
 ## 🎯 Launch Goals
-<<<<<<< HEAD
 - Deploy stable version of Media Module.
-=======
-- Deploy stable version of Media Module.
->>>>>>> be7d0c3 (.)

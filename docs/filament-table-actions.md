@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Convenzioni per le Table Actions in Filament"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "filament table actions"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Convenzioni per le Table Actions in Filament
 
 ## Regola Fondamentale
@@ -96,8 +93,4 @@ Le chiavi devono:
 - Non usare mai indici numerici, né impliciti né espliciti
 - Mantenere coerenza nei nomi delle chiavi tra diverse classi
 - Documentare eventuali chiavi personalizzate
-<<<<<<< HEAD
 - Le chiavi sono case-sensitive, mantenere la coerenza
-=======
-- Le chiavi sono case-sensitive, mantenere la coerenza
->>>>>>> be7d0c3 (.)

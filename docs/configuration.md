@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Configuration"
 module: "Media"
@@ -11,5 +9,4 @@ qmd: "configuration"
 related:
   - "./webm.md"
 ---
->>>>>>> be7d0c3 (.)
 # Configuration
