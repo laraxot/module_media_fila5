@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Quality Analysis Report - Media Module"
 module: "Media"
 type: concept
@@ -19,6 +20,11 @@ module: theme
 topic: quality
 canonical: ../../../Themes/docs/shared-components/quality-analysis.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: quality
+canonical: ../../../Themes/docs/shared-components/quality-analysis.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/quality-analysis.md

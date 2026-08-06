@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "ConvertVideoByMediaConvertAction"
 module: "Media"
 type: concept
@@ -104,3 +105,11 @@ canonical: ../../../../Themes/docs/shared-components/convert-video-by-media-conv
 
 See canonical documentation: ../../../../Themes/docs/shared-components/convert-video-by-media-convert-1.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: convert-video-by-media-convert
+canonical: ../../../../Themes/docs/shared-components/convert-video-by-media-convert-1.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/convert-video-by-media-convert-1.md
+>>>>>>> 766d652 (.)

@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Risoluzione Conflitti Git - SubtitleService.php"
 module: "Media"
 type: concept
@@ -12,10 +13,15 @@ related:
 ---
 # Risoluzione Conflitti Git - SubtitleService.php
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: risoluzione-conflitti-subtitleservice
 canonical: ../../../Themes/docs/shared-components/conflict-resolution-subtitleservice.md
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/conflict-resolution-subtitleservice.md

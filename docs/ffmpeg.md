@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Ffmpeg"
 module: "Media"
 type: concept
@@ -12,10 +13,15 @@ related:
 ---
 WINDOWS
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: ffmpeg
 canonical: ../../../Themes/docs/shared-components/ffmpeg.txt
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/ffmpeg.txt

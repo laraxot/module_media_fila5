@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Report PHPStan - Modulo Media"
 module: "Media"
@@ -77,6 +78,8 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
 
 =======
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 ---
 module: theme
 topic: phpstan-report

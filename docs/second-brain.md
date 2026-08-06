@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: second brain — puntatore modulo
 type: reference
 qmd: second brain modulo wiki locale laravel
@@ -38,3 +39,11 @@ canonical: ../../../Themes/docs/shared-components/second-brain.md
 
 See canonical documentation: ../../../Themes/docs/shared-components/second-brain.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: second-brain
+canonical: ../../../Themes/docs/shared-components/second-brain.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/second-brain.md
+>>>>>>> 766d652 (.)

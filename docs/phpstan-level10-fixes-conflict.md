@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Correzioni PHPStan Livello 10 - Modulo Media"
 module: "Media"
 type: concept
@@ -130,6 +131,11 @@ module: theme
 topic: phpstan-level10-fixes-conflict
 canonical: ../../../Themes/docs/shared-components/phpstan-level10-fixes-1-Modules.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: phpstan-level10-fixes-conflict
+canonical: ../../../Themes/docs/shared-components/phpstan-level10-fixes-1-Modules.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-fixes-1-Modules.md

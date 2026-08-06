@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Risoluzione dei Conflitti Git nel Modulo Media"
 module: "Media"
 type: concept
@@ -131,6 +132,11 @@ module: theme
 topic: conflitti-merge-risolti
 canonical: ../../../Themes/docs/shared-components/conflitti-merge-risolti-1.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: conflitti-merge-risolti
+canonical: ../../../Themes/docs/shared-components/conflitti-merge-risolti-1.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/conflitti-merge-risolti-1.md

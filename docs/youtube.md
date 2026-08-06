@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Youtube"
 module: "Media"
 type: concept
@@ -16,10 +17,15 @@ https://github.com/mokhosh/laravel-youtube-downloader
 
 
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: youtube
 canonical: ../../../Themes/docs/shared-components/youtube.txt
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/youtube.txt

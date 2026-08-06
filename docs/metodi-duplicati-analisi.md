@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION"
 module: "Media"
 type: concept
@@ -555,3 +556,11 @@ canonical: ../../../Themes/docs/shared-components/duplicate-methods-analysis-Mod
 
 See canonical documentation: ../../../Themes/docs/shared-components/duplicate-methods-analysis-Modules.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: metodi-duplicati-analisi
+canonical: ../../../Themes/docs/shared-components/duplicate-methods-analysis-Modules.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/duplicate-methods-analysis-Modules.md
+>>>>>>> 766d652 (.)

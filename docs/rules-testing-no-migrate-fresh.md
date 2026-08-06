@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH"
 module: "Media"
 type: rule
@@ -12,10 +13,15 @@ related:
 ---
 # CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: rules-testing-no-migrate-fresh
 canonical: ../../../Themes/docs/shared-components/rules-testing-no-migrate-fresh.md
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/rules-testing-no-migrate-fresh.md

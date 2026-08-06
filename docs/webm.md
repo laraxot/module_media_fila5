@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Webm"
 module: "Media"
 type: concept
@@ -12,10 +13,15 @@ related:
 ---
 https://pixelpoint.io/blog/web-optimized-video-ffmpeg/
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: webm
 canonical: ../../../Themes/docs/shared-components/webm.txt
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/webm.txt
