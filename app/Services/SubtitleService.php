@@ -171,6 +171,17 @@ class SubtitleService
         return $data;
     }
 
+    private function secondsToHms(int|float $seconds): string
+    {
+        $totalMs = (int) round($seconds * 1000);
+        $hours = intdiv($totalMs, 3_600_000);
+        $minutes = intdiv($totalMs % 3_600_000, 60_000);
+        $secs = intdiv($totalMs % 60_000, 1000);
+        $ms = $totalMs % 1000;
+
+        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
+    }
+
     /**
      * Undocumented function.
      */
