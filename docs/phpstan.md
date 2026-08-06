@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "PHPStan Configuration"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "phpstan"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # PHPStan Configuration
 
 This module adheres to PHPStan Level 10.

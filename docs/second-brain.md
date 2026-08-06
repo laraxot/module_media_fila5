@@ -1,6 +1,7 @@
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: second brain — puntatore modulo
 type: reference
 qmd: second brain modulo wiki locale laravel
@@ -9,6 +10,12 @@ updated: 2026-05-21
 =======
 updated: 2026-05-19
 >>>>>>> 9aef2ca (.)
+=======
+title: second brain — puntatore modulo
+type: reference
+qmd: second brain modulo wiki locale laravel
+updated: 2026-05-21
+>>>>>>> 7605234 (.)
 ---
 
 # Second brain (modulo)
@@ -26,6 +33,7 @@ Stub **puntatore**: disciplina e link esterni curati stanno nella wiki di proget
 - Modello: [../../../../docs/wiki/concepts/second-brain-operating-model.md](../../../../docs/wiki/concepts/second-brain-operating-model.md)
 - Guida wiki modulo: [../../../../docs/wiki/how-to/module-wiki-documentation.md](../../../../docs/wiki/how-to/module-wiki-documentation.md)
 - Benchmark lettura esterna (Karpathy, Obsidian, PARA, …): [../../../../docs/wiki/sources/second-brain-external-benchmarks.md](../../../../docs/wiki/sources/second-brain-external-benchmarks.md)
+<<<<<<< HEAD
 <<<<<<< HEAD
 - **Filament (stack attuale): v5** — non v4. Policy: [../../../../docs/wiki/memories/filament-version-policy.md](../../../../docs/wiki/memories/filament-version-policy.md) · Xot: [../../Xot/docs/filament-5-laraxot-rules.md](../../Xot/docs/filament-5-laraxot-rules.md)
 - **PHPStan modulo:** 0 errori (2026-05-21) — [phpstan-fixes.md](phpstan-fixes.md)
@@ -47,3 +55,7 @@ canonical: ../../../Themes/docs/shared-components/second-brain.md
 
 See canonical documentation: ../../../Themes/docs/shared-components/second-brain.md
 >>>>>>> 766d652 (.)
+=======
+- **Filament (stack attuale): v5** — non v4. Policy: [../../../../docs/wiki/memories/filament-version-policy.md](../../../../docs/wiki/memories/filament-version-policy.md) · Xot: [../../Xot/docs/filament-5-laraxot-rules.md](../../Xot/docs/filament-5-laraxot-rules.md)
+- **PHPStan modulo:** 0 errori (2026-05-21) — [phpstan-fixes.md](phpstan-fixes.md)
+>>>>>>> 7605234 (.)

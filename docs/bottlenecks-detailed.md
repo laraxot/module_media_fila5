@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Analisi Dettagliata dei Colli di Bottiglia - Modulo Media"
 module: "Media"
@@ -11,6 +12,8 @@ qmd: "bottlenecks detailed"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Analisi Dettagliata dei Colli di Bottiglia - Modulo Media
 
 ## Panoramica
@@ -372,6 +375,7 @@ final class Media extends Model
 
 ```
 
+<<<<<<< HEAD
 =======
 >>>>>>> 33a3006 (.)
 =======
@@ -383,3 +387,6 @@ canonical: ../../../Themes/docs/shared-components/bottlenecks-detailed-1-Modules
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/bottlenecks-detailed-1-Modules.md
+=======
+---
+>>>>>>> 7605234 (.)

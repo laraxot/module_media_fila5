@@ -12,10 +12,14 @@ class HasMediasTable extends XotBaseResourceTable
 {
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @return array<int|string, Column>
 =======
      * @return array<int|string, \Filament\Tables\Columns\Column>
 >>>>>>> 9aef2ca (.)
+=======
+     * @return array<int|string, \Filament\Tables\Columns\Column>
+>>>>>>> 7605234 (.)
      */
     public function getTableColumns(): array
     {

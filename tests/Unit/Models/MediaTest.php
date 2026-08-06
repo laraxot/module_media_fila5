@@ -4,15 +4,26 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
+<<<<<<< HEAD
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
+=======
+use Modules\Media\Database\Factories\MediaFactory;
+use Modules\Media\Models\Media;
+use Modules\Media\Tests\TestCase;
+>>>>>>> 7605234 (.)
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
 it('can create media with minimal data', function(): void {
     $media = Media::factory()->create([
+=======
+test('can create media with minimal data', function (): void {
+    $media = MediaFactory::new()->createOne([
+>>>>>>> 7605234 (.)
         'model_type' => 'Modules\User\Models\User',
         'model_id' => '1',
         'collection_name' => 'avatars',
@@ -22,8 +33,16 @@ it('can create media with minimal data', function(): void {
         'size' => 1024,
     ]);
 
+<<<<<<< HEAD
     assertMediaTableHas('media', [
         'id' => SafeIntCastAction::cast($media->getKey()),
+=======
+    Assert::assertInstanceOf(Media::class, $media);
+
+    /** @var TestCase $this */
+    $this->assertMediaTableHas('media', [
+        'id' => (int) $media->getKey(),
+>>>>>>> 7605234 (.)
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',
@@ -31,6 +50,7 @@ it('can create media with minimal data', function(): void {
         'size' => 1024,
     ]);
 });
+<<<<<<< HEAD
 
 it('can create media with all fields', function(): void {
     $mediaData = [
@@ -348,3 +368,5 @@ it('media has casts', function (): void {
 
     expect($actualCasts)->toBe($expectedCasts);
 });
+=======
+>>>>>>> 7605234 (.)

@@ -8,7 +8,10 @@ use FFMpeg\Format\Video\WebM;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
+=======
+>>>>>>> 7605234 (.)
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Webmozart\Assert\Assert;
 
@@ -32,9 +35,12 @@ class ConvertVideoCommand extends Command
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         $format = new WebM();
 =======
 >>>>>>> d2bb446 (.)
+=======
+>>>>>>> 7605234 (.)
         $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file)->replaceLast('.mp4', '.'.$extension)->toString();
@@ -50,10 +56,13 @@ class ConvertVideoCommand extends Command
         $export->toDisk($disk);
         $export->inFormat($format);
         $export->save($file_new);
+<<<<<<< HEAD
         $formattedExport = MediaExporterResolver::from(
             $export->toDisk($disk)
         )->inFormat($format);
         $formattedExport->save($file_new);
+=======
+>>>>>>> 7605234 (.)
 
         return Storage::disk($disk)->url($file_new);
     }

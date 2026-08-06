@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,3 +26,10 @@ canonical: ../../../Themes/docs/shared-components/rules-index.md
 >>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/rules-index.md
+=======
+# Rules Index
+
+This module follows the global Laraxot coding standards.
+
+- [Coding Standards](../../../../docs/laraxot-coding-standards.md)
+>>>>>>> 7605234 (.)

@@ -7,7 +7,10 @@ namespace Modules\Media\Models;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+=======
+>>>>>>> 7605234 (.)
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
@@ -27,13 +30,20 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\Media\Models\TemporaryUpload.
  *
+<<<<<<< HEAD
  * @property string $id
+=======
+ * @property int $id
+>>>>>>> 7605234 (.)
  * @property string $session_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 7605234 (.)
  * @method static Builder<static>|TemporaryUpload newModelQuery()
  * @method static Builder<static>|TemporaryUpload newQuery()
  * @method static Builder<static>|TemporaryUpload query()
@@ -41,18 +51,27 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereId($value)
  * @method static Builder<static>|TemporaryUpload whereSessionId($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 7605234 (.)
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property string|null $deleted_at
  * @property string|null $deleted_by
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 7605234 (.)
  * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
  * @method static TemporaryUploadFactory factory($count = null, $state = [])
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 7605234 (.)
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $deleter
  * @property-read ProfileContract|null $updater
@@ -61,17 +80,24 @@ use Webmozart\Assert\Assert;
  * @property int|null $file_size
  * @property string|null $mime_type
  * @property string $status
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 7605234 (.)
  * @method static Builder<static>|TemporaryUpload whereFileName($value)
  * @method static Builder<static>|TemporaryUpload whereFileSize($value)
  * @method static Builder<static>|TemporaryUpload whereMimeType($value)
  * @method static Builder<static>|TemporaryUpload whereStatus($value)
  * @method static Builder<static>|TemporaryUpload whereUserId($value)
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 7605234 (.)
  * @mixin \Eloquent
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
+<<<<<<< HEAD
     /** @use HasXotFactory<TemporaryUploadFactory> */
     use HasXotFactory;
 
@@ -81,6 +107,13 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public $incrementing = false;
 
+=======
+    /** @phpstan-use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory> */
+    use HasXotFactory;
+    use InteractsWithMedia;
+    use MassPrunable;
+
+>>>>>>> 7605234 (.)
     public static ?Closure $manipulatePreview = null;
 
     public static ?string $disk = null;
@@ -96,9 +129,18 @@ class TemporaryUpload extends BaseModel implements HasMedia
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
         Assert::string($mediaModelClass = config('media-library.media_model'));
+<<<<<<< HEAD
         Assert::subclassOf($mediaModelClass, Media::class);
 
         /** @var class-string<Media> $mediaModelClass */
+=======
+
+        /**
+         * @var Media|null $media
+         *
+         * @phpstan-ignore-next-line
+         */
+>>>>>>> 7605234 (.)
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
         if (! $media) {
@@ -116,9 +158,13 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static function findByMediaUuidInCurrentSession(?string $mediaUuid): ?self
     {
+<<<<<<< HEAD
         $temporaryUpload = static::findByMediaUuid($mediaUuid);
 
         if (! ($temporaryUpload instanceof self)) {
+=======
+        if (! (($temporaryUpload = static::findByMediaUuid($mediaUuid)) instanceof self)) {
+>>>>>>> 7605234 (.)
             return null;
         }
 

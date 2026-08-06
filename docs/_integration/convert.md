@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "convert"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "convert"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # convert
 
 <!-- Contenuto migrato da _docs/convert.txt -->

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaConvertResource\Tables;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\BulkAction;
@@ -17,11 +18,15 @@ use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
+=======
+use Filament\Tables\Columns\TextColumn;
+>>>>>>> 7605234 (.)
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class MediaConvertsTable extends XotBaseResourceTable
 {
     /**
+<<<<<<< HEAD
      * @return array<string, Column>
      * @return array<string, Column>
      */
@@ -40,12 +45,19 @@ class MediaConvertsTable extends XotBaseResourceTable
      */
 =======
 >>>>>>> 33a3006 (.)
+=======
+     * @return array<string, \Filament\Tables\Columns\Column>
+     */
+    public function getTableColumns(): array
+    {
+>>>>>>> 7605234 (.)
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
             'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];
     }
+<<<<<<< HEAD
 
     /**
      * @return array<string, BaseFilter>
@@ -96,4 +108,6 @@ class MediaConvertsTable extends XotBaseResourceTable
             'delete' => DeleteBulkAction::make(),
         ];
     }
+=======
+>>>>>>> 7605234 (.)
 }

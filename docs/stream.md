@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ qmd: "stream"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 https://laravel-news.com/temporary-directory
 
 
@@ -33,6 +36,7 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 // Cleanup the temporary file
 $tmpFile->delete();
 
+<<<<<<< HEAD
 ----------------------------------------------------------------------------
 =======
 module: theme
@@ -50,3 +54,6 @@ canonical: ../../../Themes/docs/shared-components/__stream.txt
 
 See canonical documentation: ../../../Themes/docs/shared-components/__stream.txt
 >>>>>>> 766d652 (.)
+=======
+----------------------------------------------------------------------------
+>>>>>>> 7605234 (.)

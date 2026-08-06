@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Changelog"
 module: "Media"
@@ -12,6 +13,8 @@ related:
 ---
 =======
 >>>>>>> 93ebb48 (.)
+=======
+>>>>>>> 7605234 (.)
 # Changelog
 
 All notable changes to this project will be documented in this file.

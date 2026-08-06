@@ -21,6 +21,7 @@ Gestione media, upload, conversioni e streaming.
 
 ## Note
 - Personalizza la configurazione per esigenze di streaming o CDN.
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,3 +49,5 @@ canonical: ../../../Themes/docs/shared-components/mcp-server-recommended-1.md
 >>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/mcp-server-recommended-1.md
+=======
+>>>>>>> 7605234 (.)

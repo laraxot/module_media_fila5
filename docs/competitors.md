@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,3 +26,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/_competitors
 >>>>>>> 33a3006 (.)
 =======
 >>>>>>> 766d652 (.)
+=======
+https://github.com/outer-web/filament-image-library
+>>>>>>> 7605234 (.)

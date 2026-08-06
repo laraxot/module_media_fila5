@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Media Module - Business Logic Overview"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "business logic overview"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Media Module - Business Logic Overview
 
 ## Core Business Logic Components

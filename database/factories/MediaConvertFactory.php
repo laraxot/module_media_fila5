@@ -19,6 +19,7 @@ class MediaConvertFactory extends Factory
 
     /**
      * Define the model's default state.
+<<<<<<< HEAD
      *
      * @return array<string, mixed>
      */
@@ -39,5 +40,11 @@ class MediaConvertFactory extends Factory
             'rate' => '1.000',
             'execution_time' => '0.000',
         ];
+=======
+     */
+    public function definition(): array
+    {
+        return [];
+>>>>>>> 7605234 (.)
     }
 }

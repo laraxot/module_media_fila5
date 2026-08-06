@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ qmd: "metodi duplicati analisi"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
 
 **Powered by**: Super Mucca AI 🐄✨
@@ -119,7 +122,11 @@ abstract class BaseModel extends \Modules\Xot\Models\XotBaseModel
 
 ### Pattern 1: getTableColumns() - ESEMPIO REALE
 
+<<<<<<< HEAD
 #### LegacyDomain/TicketResource/ListTickets.php (ECCELLENTE)
+=======
+#### Fixcity/TicketResource/ListTickets.php (ECCELLENTE)
+>>>>>>> 7605234 (.)
 ```php
 protected function getTableColumns(): array
 {
@@ -480,7 +487,11 @@ public function getTableFilters(): array
 - Test dopo ogni modulo
 - Code review
 
+<<<<<<< HEAD
 **Settimana 2**: Moduli Business (LegacyDomain, Blog, Geo)
+=======
+**Settimana 2**: Moduli Business (Fixcity, Blog, Geo)
+>>>>>>> 7605234 (.)
 - 20 List files
 - Test integrazione
 - Performance check
@@ -518,7 +529,11 @@ public function getTableFilters(): array
 3. Refactoring moduli core (Xot, User, Cms)
 
 #### ⭐⭐⭐⭐ PRIORITÀ ALTA
+<<<<<<< HEAD
 4. Refactoring moduli business (LegacyDomain, Blog, Geo)
+=======
+4. Refactoring moduli business (Fixcity, Blog, Geo)
+>>>>>>> 7605234 (.)
 5. ActionPresets per CRUD
 6. Documentazione completa
 
@@ -548,6 +563,7 @@ public function getTableFilters(): array
 4. Implementazione ColumnBuilder
 
 **Domande?** Chiedi alla Super Mucca! 🐄⚡
+<<<<<<< HEAD
 =======
 module: theme
 topic: metodi-duplicati-analisi
@@ -564,3 +580,5 @@ canonical: ../../../Themes/docs/shared-components/duplicate-methods-analysis-Mod
 
 See canonical documentation: ../../../Themes/docs/shared-components/duplicate-methods-analysis-Modules.md
 >>>>>>> 766d652 (.)
+=======
+>>>>>>> 7605234 (.)

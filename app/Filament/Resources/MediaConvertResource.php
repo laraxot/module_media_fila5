@@ -19,11 +19,18 @@ class MediaConvertResource extends XotBaseResource
     protected static ?string $model = MediaConvert::class;
 
     /**
+<<<<<<< HEAD
      * Schema legacy del form: la sorgente di verità è MediaConvertForm::getFormSchema().
      *
      * @return array<string, Component>
      */
     public static function getFormSchemaOld(): array
+=======
+     * @return array<string, Component>
+     */
+    #[Override]
+    public static function getFormSchema(): array
+>>>>>>> 7605234 (.)
     {
         return [
             'format' => Radio::make('format')
@@ -63,18 +70,24 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
+=======
+>>>>>>> 7605234 (.)
     #[Override]
     public static function getRelations(): array
     {
         return [];
     }
 
+<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
+=======
+>>>>>>> 7605234 (.)
     #[Override]
     public static function getPages(): array
     {

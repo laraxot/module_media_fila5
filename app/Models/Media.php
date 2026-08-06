@@ -65,7 +65,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property array<int, array{name: string, generated: bool, src: string}> $entry_conversions
  * @property EloquentCollection<int, MediaConvert> $mediaConverts
  * @property int|null $media_converts_count
+<<<<<<< HEAD
  *
+=======
+>>>>>>> 7605234 (.)
  * @method static Builder|Media newModelQuery()
  * @method static Builder|Media newQuery()
  * @method static Builder|Media ordered()
@@ -106,6 +109,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereUuid($value)
  * @method static Builder|Media whereWidth($value)
  * @method static MediaFactory factory($count = null, $state = [])
+<<<<<<< HEAD
  *
  * @property-read mixed $extension
  * @property-read mixed $human_readable_size
@@ -128,6 +132,21 @@ class Media extends SpatieMedia
 
     /**
      * @param  array<int, string>  $uuids
+=======
+ */
+class Media extends SpatieMedia
+{
+    /** @use HasXotFactory<\Modules\Media\Database\Factories\MediaFactory> */
+    use HasXotFactory;
+    use Updater;
+
+    /** @var string */
+    protected $connection = 'media';
+
+    /**
+     * @param array<int, string> $uuids
+     *
+>>>>>>> 7605234 (.)
      * @return MediaCollection<int, self>
      */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection

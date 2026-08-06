@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Linee Guida Prevenzione Problemi - Modulo Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "prevention guidelines"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php

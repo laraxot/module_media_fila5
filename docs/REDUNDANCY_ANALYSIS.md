@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,3 +26,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/REDUNDANCY_A
 >>>>>>> 33a3006 (.)
 =======
 >>>>>>> 766d652 (.)
+=======
+Redundancy analysis available: docs/analysis/redundancies/summary.md
+>>>>>>> 7605234 (.)

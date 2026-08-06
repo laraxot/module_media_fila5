@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Media Module Wiki Index"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "index"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Media Module Wiki Index
 
 > **Module**: Media

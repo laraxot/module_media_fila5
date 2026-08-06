@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "MCP Server Configuration - Media Module"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "mcp configuration"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # MCP Server Configuration - Media Module
 
 
@@ -139,4 +142,8 @@ The Media module's MCP configuration enables AI assistants to interact with:
 
 **Module**: Media (File & Asset Management)
 **MCP Version**: 2.0.0
+<<<<<<< HEAD
 **Last Review**: 31 Gennaio 2026
+=======
+**Last Review**: 31 Gennaio 2026
+>>>>>>> 7605234 (.)

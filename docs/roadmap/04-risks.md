@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Risks and dependencies (Module Media)"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "04 risks"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Risks and dependencies (Module Media)
 
 ## Risks

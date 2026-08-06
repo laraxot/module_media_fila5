@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Modulo Media - Gestione File Multimediali"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "module"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Modulo Media - Gestione File Multimediali
 
 ## Scopo Principale
@@ -357,4 +360,8 @@ $share = SharingService::create($media, [
 ---
 
 **Versione**: v2.1.0-beta  
+<<<<<<< HEAD
 **Stato**: Production Ready with AI Enhancement Roadmap
+=======
+**Stato**: Production Ready with AI Enhancement Roadmap
+>>>>>>> 7605234 (.)

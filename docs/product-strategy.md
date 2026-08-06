@@ -1,4 +1,5 @@
 # Media - Product Strategy
+<<<<<<< HEAD
 # Media Module - Product Strategy
 
 **Module:** Media  
@@ -92,6 +93,8 @@ Easy media management.
 
 *Last Updated: March 12, 2026*
 # Media - Product Strategy
+=======
+>>>>>>> 7605234 (.)
 
 > Strategia prodotto. Modulo.
 > Allineamento strategico stimato: 63%.

@@ -1,5 +1,6 @@
 https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
 
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,3 +28,5 @@ canonical: ../../../Themes/docs/shared-components/aws.txt
 >>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/aws.txt
+=======
+>>>>>>> 7605234 (.)

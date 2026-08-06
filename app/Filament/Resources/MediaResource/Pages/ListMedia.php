@@ -21,7 +21,11 @@ use Webmozart\Assert\Assert;
 
 class ListMedia extends XotBaseListRecords
 {
+<<<<<<< HEAD
     public static string $resource = MediaResource::class;
+=======
+    protected static string $resource = MediaResource::class;
+>>>>>>> 7605234 (.)
 
     /**
      * @return array<string, Tables\Columns\Column>
@@ -88,10 +92,15 @@ class ListMedia extends XotBaseListRecords
                     }
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
+<<<<<<< HEAD
                     $fileName = $record->file_name;
                     Assert::string($fileName);
 
                     return response()->download($filePath, $fileName);
+=======
+
+                    return response()->download($filePath, (string) $record->file_name);
+>>>>>>> 7605234 (.)
                 }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')

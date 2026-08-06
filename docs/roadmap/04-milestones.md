@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Milestones - Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "04 milestones"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Milestones - Media
 
 ## M1 Documentation Baseline
@@ -24,4 +27,8 @@ related:
 ## M3 Regression Safety
 
 - Test minimi sui flussi critici in esecuzione regolare.
+<<<<<<< HEAD
 - Riduzione regressioni ricorrenti.
+=======
+- Riduzione regressioni ricorrenti.
+>>>>>>> 7605234 (.)

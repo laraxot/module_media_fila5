@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "__stream"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: " stream"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # __stream
 
 <!-- Contenuto migrato da _docs/__stream.txt -->
@@ -35,4 +38,8 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 // Cleanup the temporary file
 $tmpFile->delete();
 
+<<<<<<< HEAD
 ----------------------------------------------------------------------------
+=======
+----------------------------------------------------------------------------
+>>>>>>> 7605234 (.)

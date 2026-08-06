@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Goals - Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "02 goals"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Goals - Media
 
 ## Short Term
@@ -26,4 +29,8 @@ related:
 ## Long Term
 
 1. Stabilita sotto fault randomizzati (chaos testing).
+<<<<<<< HEAD
 2. Manutenibilita alta con onboarding rapido.
+=======
+2. Manutenibilita alta con onboarding rapido.
+>>>>>>> 7605234 (.)

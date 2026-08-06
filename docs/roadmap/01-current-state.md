@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Current State - Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "01 current state"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Current State - Media
 
 ## Baseline
@@ -21,4 +24,8 @@ related:
 
 1. Coerenza tra regole architetturali e implementazione runtime.
 2. Coerenza tra naming, namespace e percorsi view/traduzioni.
+<<<<<<< HEAD
 3. Copertura test minima per i flussi critici.
+=======
+3. Copertura test minima per i flussi critici.
+>>>>>>> 7605234 (.)
