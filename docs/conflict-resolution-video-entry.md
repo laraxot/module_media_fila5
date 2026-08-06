@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Risoluzione Conflitto in VideoEntry"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "conflict resolution video entry"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Risoluzione Conflitto in VideoEntry
 
 ## Panoramica

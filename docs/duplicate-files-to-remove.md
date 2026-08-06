@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "File Duplicati da Eliminare - Modulo Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "duplicate files to remove"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # File Duplicati da Eliminare - Modulo Media
 
 ## 🗑️ File da Eliminare (Case Sensitivity)

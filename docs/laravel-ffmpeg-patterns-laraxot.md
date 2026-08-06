@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Laravel-FFMpeg – Pattern Laraxot nel Modulo Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "laravel ffmpeg patterns laraxot"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Laravel-FFMpeg – Pattern Laraxot nel Modulo Media
 
 Questa guida descrive come usare `protonemedia/laravel-ffmpeg` seguendo i pattern architetturali

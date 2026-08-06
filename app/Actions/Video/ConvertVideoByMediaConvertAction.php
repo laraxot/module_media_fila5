@@ -41,7 +41,11 @@ class ConvertVideoByMediaConvertAction
         // Instanziamo il formato prima di usarlo
         $formatInstance = new $format;
 
+<<<<<<< HEAD
         $export = FFMpeg::fromDisk($data->disk)
+=======
+        FFMpeg::fromDisk($data->disk)
+>>>>>>> 7605234 (.)
             ->open($data->file)
             ->export()
             ->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
@@ -51,6 +55,7 @@ class ConvertVideoByMediaConvertAction
                     'rate' => $rate,
                 ]);
             })
+<<<<<<< HEAD
             // Utilizziamo il formato istanziato come parametro
             ->inFormat($formatInstance);
 
@@ -60,6 +65,12 @@ class ConvertVideoByMediaConvertAction
         $export->addFilter('-preset', 'ultrafast');
 
         $export->save($file_new);
+=======
+            ->addFilter('-preset', 'ultrafast')
+            // Utilizziamo il formato istanziato come parametro
+            // @phpstan-ignore-next-line method.notFound
+            ->save($file_new, $formatInstance);
+>>>>>>> 7605234 (.)
 
         $record->update([
             'status' => 'completed',

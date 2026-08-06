@@ -1,4 +1,5 @@
 # Media - Product Roadmap
+<<<<<<< HEAD
 # Media Module - Product Roadmap
 
 **Module:** Media  
@@ -103,6 +104,8 @@ To provide a **comprehensive media management system** that handles all image, v
 
 *Last Updated: March 12, 2026*
 # Media - Product Roadmap
+=======
+>>>>>>> 7605234 (.)
 
 > Documento vivente. Modulo.
 > Maturita' stimata: 63% implementato, 37% gap residuo.

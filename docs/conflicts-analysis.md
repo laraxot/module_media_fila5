@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,3 +26,15 @@ canonical: ../../../Themes/docs/shared-components/conflicts-analysis.md
 >>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/conflicts-analysis.md
+=======
+# Analisi Conflitti - README.md
+
+## Obiettivi Funzionali
+
+## Decisioni Architetturali
+
+## Impatto
+
+## Collegamenti correlati
+- [[conflicts_overview]]
+>>>>>>> 7605234 (.)

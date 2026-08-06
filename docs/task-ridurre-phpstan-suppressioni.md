@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Task: Ridurre Suppressioni PHPStan Inline - Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "task ridurre phpstan suppressioni"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Task: Ridurre Suppressioni PHPStan Inline - Media
 
 **Modulo**: Media

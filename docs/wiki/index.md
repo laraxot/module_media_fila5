@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Media Module Wiki Index"
 type: index
 module: Media
@@ -26,6 +27,13 @@ related:
 - [ai-harness-module-discipline](../../docs/wiki/concepts/ai-harness-module-discipline.md)
 - [second-brain-local-discipline](./concepts/second-brain-local-discipline.md) → canon Xot
 
+=======
+title: "Media Wiki Index"
+module: "Media"
+---
+
+# Media Module Wiki
+>>>>>>> 7605234 (.)
 
 ## Indices
 - [Rules](rules/INDEX.md)

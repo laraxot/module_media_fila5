@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,3 +26,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/troubleshoot
 >>>>>>> 33a3006 (.)
 =======
 >>>>>>> 766d652 (.)
+=======
+# Troubleshooting
+>>>>>>> 7605234 (.)

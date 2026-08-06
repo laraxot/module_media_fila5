@@ -37,6 +37,7 @@ return [
         ],
         'label' => 'Attachments Schema Action Test',
         'sort' => 1,
+<<<<<<< HEAD
         'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
@@ -61,6 +62,8 @@ return [
         ],
         'label' => 'Attachments Schema Action Test',
         'sort' => 1,
+=======
+>>>>>>> 7605234 (.)
         'icon' => 'heroicon-o-collection',
     ],
     'actions' => [

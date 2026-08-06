@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Modulo Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "structure"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Modulo Media
 
 Data: [DATE] 19:09:56

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "player"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "player"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # player
 
 <!-- Contenuto migrato da _docs/player.txt -->

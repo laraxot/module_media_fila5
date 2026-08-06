@@ -1,4 +1,5 @@
 # Media - Product Launch Plan
+<<<<<<< HEAD
 # Media Module - Product Launch Plan
 
 **Module:** Media  
@@ -83,6 +84,8 @@
 
 *Last Updated: March 12, 2026*
 # Media - Product Launch Plan
+=======
+>>>>>>> 7605234 (.)
 
 > Piano di lancio. Modulo.
 > Launch readiness stimata: 63%.

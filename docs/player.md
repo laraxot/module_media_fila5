@@ -5,6 +5,7 @@ https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views
 
 per fare blocco YOUTUBE e blocco VIMEO
 https://github.com/nWidart/laravel-videoable/blob/master/resources/views/sources/vimeo.blade.php
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,3 +33,5 @@ canonical: ../../../Themes/docs/shared-components/player.txt
 >>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/player.txt
+=======
+>>>>>>> 7605234 (.)

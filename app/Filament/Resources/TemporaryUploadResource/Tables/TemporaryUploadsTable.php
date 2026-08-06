@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\TemporaryUploadResource\Tables;
 
+<<<<<<< HEAD
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -12,11 +13,15 @@ use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Models\TemporaryUpload;
+=======
+use Filament\Tables\Columns\TextColumn;
+>>>>>>> 7605234 (.)
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class TemporaryUploadsTable extends XotBaseResourceTable
 {
     /**
+<<<<<<< HEAD
      * @return array<string, Column>
      * @return array<string, Column>
      */
@@ -35,12 +40,19 @@ class TemporaryUploadsTable extends XotBaseResourceTable
      */
 =======
 >>>>>>> 33a3006 (.)
+=======
+     * @return array<string, \Filament\Tables\Columns\Column>
+     */
+    public function getTableColumns(): array
+    {
+>>>>>>> 7605234 (.)
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
             'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];
     }
+<<<<<<< HEAD
 
     /**
      * @return array<string, SelectFilter>
@@ -76,4 +88,6 @@ class TemporaryUploadsTable extends XotBaseResourceTable
             'delete' => DeleteBulkAction::make(),
         ];
     }
+=======
+>>>>>>> 7605234 (.)
 }

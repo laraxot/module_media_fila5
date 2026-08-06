@@ -7,13 +7,20 @@ namespace Modules\Media\Filament\Resources\TemporaryUploadResource\Schemas;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Component;
+=======
+>>>>>>> 7605234 (.)
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceForm;
 
 class TemporaryUploadForm extends XotBaseResourceForm
 {
     /**
+<<<<<<< HEAD
      * @return array<string, Component>
+=======
+     * @return array<string, \Filament\Schemas\Components\Component>
+>>>>>>> 7605234 (.)
      */
     public static function getFormSchema(): array
     {
@@ -26,5 +33,9 @@ class TemporaryUploadForm extends XotBaseResourceForm
             'folder' => TextInput::make('folder')->required()->maxLength(255),
             'expires_at' => DateTimePicker::make('expires_at')->required(),
         ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7605234 (.)
     }
 }

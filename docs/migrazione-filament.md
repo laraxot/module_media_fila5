@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,3 +25,6 @@ See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep
 >>>>>>> 33a3006 (.)
 =======
 >>>>>>> 766d652 (.)
+=======
+
+>>>>>>> 7605234 (.)

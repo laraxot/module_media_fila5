@@ -46,6 +46,7 @@ return [
         ],
         'label' => 'Icon Media',
         'sort' => 1,
+<<<<<<< HEAD
         'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
@@ -70,6 +71,8 @@ return [
         ],
         'label' => 'Icon Media',
         'sort' => 1,
+=======
+>>>>>>> 7605234 (.)
         'icon' => 'heroicon-o-collection',
     ],
     'actions' => [

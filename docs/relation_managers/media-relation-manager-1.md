@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "MediaRelationManager"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "media relation manager 1"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # MediaRelationManager
 
 ## Descrizione

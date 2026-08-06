@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Video Manager"
 module: "Media"
@@ -11,6 +12,8 @@ qmd: "video manager"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 https://github.com/amitavroy/MyVideoManager
 
 ### Versione HEAD
@@ -19,6 +22,7 @@ https://github.com/amitavroy/MyVideoManager
 
 https://github.com/amitavroy/MyVideoManager
 
+<<<<<<< HEAD
 =======
 >>>>>>> 33a3006 (.)
 =======
@@ -30,3 +34,6 @@ canonical: ../../../Themes/docs/shared-components/video-manager-1.md
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/video-manager-1.md
+=======
+---
+>>>>>>> 7605234 (.)

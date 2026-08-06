@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Dependency Intelligence - Module Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "dependency intelligence"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Dependency Intelligence - Module Media
 
 Aggiornato da `composer show` il 2026-03-02.

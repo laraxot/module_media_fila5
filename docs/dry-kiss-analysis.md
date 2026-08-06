@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "🐄 DRY & KISS Analysis - Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "dry kiss analysis"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # 🐄 DRY & KISS Analysis - Media
 
 **Data:** [DATE] | **Status:** ✅

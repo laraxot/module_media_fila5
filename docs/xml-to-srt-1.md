@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Xml To Srt 1"
 module: "Media"
@@ -9,4 +10,6 @@ qmd: "xml to srt 1"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 https://github.com/mokhosh/laravel-xml2srt

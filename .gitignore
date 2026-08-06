@@ -1,6 +1,7 @@
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
+<<<<<<< HEAD
 # AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
 # Auto-generated forbidden paths — do not edit manually
 # Laraxot — IDE folders forbidden at module/theme root (see module-theme-root-hygiene)
@@ -9,11 +10,16 @@
 # Modulo Media Laraxot - Template standardizzato
 # Ultimo aggiornamento: 2025-01-06
 # Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
+=======
+# Modulo Media Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-06
+>>>>>>> 7605234 (.)
 # ==============================================
 
 # ==============================================
 # DEPENDENCIES & PACKAGES
 # ==============================================
+<<<<<<< HEAD
 # Auto-generated forbidden paths — do not edit manually
 # Reason: root cleanup policy (see docs/wiki/rules/root-cleanup-policy.md)
 
@@ -38,6 +44,8 @@ tests/.claude-audit
 # Modulo Media Laraxot - Template standardizzato
 # Ultimo aggiornamento: 2025-01-06
 # DEPENDENCIES & PACKAGES
+=======
+>>>>>>> 7605234 (.)
 vendor/
 /vendor/
 node_modules/
@@ -51,7 +59,10 @@ composer.lock
 # ==============================================
 # BUILD & COMPILED FILES
 # ==============================================
+<<<<<<< HEAD
 # BUILD & COMPILED FILES
+=======
+>>>>>>> 7605234 (.)
 /build
 /build/
 build/
@@ -59,6 +70,7 @@ dist/
 docs/cache/
 cache/
 
+<<<<<<< HEAD
 
 # ==============================================
 # CACHE & TEMPORARY FILES
@@ -79,16 +91,36 @@ cache/
 *.swo
 *.swp
 *.tmp
+=======
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*.exe
+>>>>>>> 7605234 (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
 .phpunit.result.cache
+<<<<<<< HEAD
 error_log
+=======
+>>>>>>> 7605234 (.)
 
 # ==============================================
 # LOG FILES
 # ==============================================
+<<<<<<< HEAD
 # LOG FILES
+=======
+>>>>>>> 7605234 (.)
 *.log
 error_log
 npm-debug.log*
@@ -99,7 +131,10 @@ lerna-debug.log*
 # ==============================================
 # LARAVEL SPECIFIC
 # ==============================================
+<<<<<<< HEAD
 # LARAVEL SPECIFIC
+=======
+>>>>>>> 7605234 (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -114,7 +149,10 @@ storage/*.key
 # ==============================================
 # ENVIRONMENT & CONFIGURATION
 # ==============================================
+<<<<<<< HEAD
 # ENVIRONMENT & CONFIGURATION
+=======
+>>>>>>> 7605234 (.)
 Homestead.yaml
 Homestead.json
 /.vagrant
@@ -130,6 +168,7 @@ Homestead.json
 
 # ==============================================
 # SYSTEM FILES
+<<<<<<< HEAD
 # =============================================
 .DS_Store
 .DS_Store?
@@ -138,12 +177,21 @@ Homestead.json
 ._*
 .circleci
 .claude-audit
+=======
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+>>>>>>> 7605234 (.)
 ehthumbs.db
 Thumbs.db
 
 # ==============================================
 # BACKUP FILES
 # ==============================================
+<<<<<<< HEAD
 # GIT SPECIFIC
 .git-rewrite/
 .git-rewrite
@@ -157,6 +205,8 @@ Thumbs.db
 ehthumbs.db
 Thumbs.db
 # BACKUP FILES
+=======
+>>>>>>> 7605234 (.)
 *.old
 *.old1
 *.old2
@@ -173,6 +223,7 @@ Thumbs.db
 # ==============================================
 .windsurf/
 .cursor/
+<<<<<<< HEAD
 .devcontainer
 .devcontainer/
 .env
@@ -218,6 +269,9 @@ config/local.php
 database/Factories_
 database/Factories_old
 database/Factories_old/
+=======
+.phpstorm.meta.php
+>>>>>>> 7605234 (.)
 
 # ==============================================
 # DOCUMENTATION CACHE
@@ -230,6 +284,7 @@ docs/archive/**
 # ==============================================
 # OLD DIRECTORIES (LEGACY CLEANUP)
 # ==============================================
+<<<<<<< HEAD
 # DEVELOPMENT TOOLS
 .windsurf/
 .cursor/
@@ -237,10 +292,13 @@ docs/archive/**
 # DOCUMENTATION CACHE
 docs/phpstan/
 # OLD DIRECTORIES (LEGACY CLEANUP)
+=======
+>>>>>>> 7605234 (.)
 resources/views/Components_old/
 resources/views/Components_old
 database/Migrations_old/
 database/Migrations_old
+<<<<<<< HEAD
 database/Migrations_old/
 database/Seeders_old
 database/Seeders_old/
@@ -320,6 +378,8 @@ phpmd*
 .opencode
 phpstan*-*
 phpmd*.*
+=======
+>>>>>>> 7605234 (.)
 database/Seeders_old/
 database/Seeders_old
 database/Factories_old/
@@ -327,14 +387,26 @@ database/Factories_old
 database/Factories_
 database_old/
 database_old
+<<<<<<< HEAD
 # MODULE SPECIFIC - MEDIA
 # File di configurazione locale
 config/local.php
 config/development.php
+=======
+
+# ==============================================
+# MODULE SPECIFIC - MEDIA
+# ==============================================
+# File di configurazione locale
+config/local.php
+config/development.php
+
+>>>>>>> 7605234 (.)
 # File media temporanei
 media/temp/
 media/uploads/temp/
 media/thumbnails/temp/
+<<<<<<< HEAD
 # Cache media
 storage/media/
 storage/thumbnails/
@@ -342,11 +414,27 @@ storage/thumbnails/
 media_test_data.json
 test_media_files/
 # END OF MEDIA .GITIGNORE
+=======
+
+# Cache media
+storage/media/
+storage/thumbnails/
+
+# File di test media
+media_test_data.json
+test_media_files/
+
+# ==============================================
+# END OF MEDIA .GITIGNORE
+# ==============================================
+
+>>>>>>> 7605234 (.)
 # 🚫 File specifici del progetto
 *.fila2
 laravel
 public_html
 lang/lang/
+<<<<<<< HEAD
 agentdb.rvf
 .vscode/
 tests/AuditCoverage
@@ -358,3 +446,8 @@ tests/AuditCoverage
 .vscode/
 .windsurf/
 tests/AuditCoverage/
+=======
+_docs/
+_docs/
+agentdb.rvf
+>>>>>>> 7605234 (.)

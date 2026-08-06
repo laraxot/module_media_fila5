@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Git Conflict Inventory"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "git merge conflict inventory"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Git Conflict Inventory
 
 - Date: 2026-04-28

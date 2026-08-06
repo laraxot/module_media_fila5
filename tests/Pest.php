@@ -15,8 +15,11 @@ use function Safe\file_get_contents;
  * Vietato pest()->extend() e pest()->uses() qui (PHPStan method.internalClass).
  */
 
+<<<<<<< HEAD
 require_once __DIR__.'/../../Xot/tests/XotBasePest.php';
 
+=======
+>>>>>>> 7605234 (.)
 /**
  * @param  array<string, mixed>  $where
  */
@@ -133,6 +136,7 @@ function assertMediaUsesQueueableAction(string $class): void
 }
 
 /**
+<<<<<<< HEAD
  * Normalizza un valore numerico (spesso mixed, es. da getKey()/getAttribute())
  * in int per confronti/assert type-safe nei test.
  */
@@ -144,6 +148,8 @@ function mediaIntegerish(mixed $value): int
 }
 
 /**
+=======
+>>>>>>> 7605234 (.)
  * @param  class-string  $class
  */
 function assertMediaDeclaresStrictTypes(string $class): void

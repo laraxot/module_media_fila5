@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Risks - Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "05 risks"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Risks - Media
 
 ## Top Risks
@@ -21,4 +24,8 @@ related:
 
 1. Aggiornare docs insieme ai fix di codice.
 2. Usare checklist pre-merge e post-fix.
+<<<<<<< HEAD
 3. Mantenere un set di file canonici per diagnosi rapida.
+=======
+3. Mantenere un set di file canonici per diagnosi rapida.
+>>>>>>> 7605234 (.)

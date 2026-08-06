@@ -4,11 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Tables\Columns;
 
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn as IconColumn;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 // phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
+=======
+use Filament\Tables\Columns\IconColumn;
+use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
+>>>>>>> 7605234 (.)
 class IconMediaColumn extends IconColumn
 {
     protected function setUp(): void
