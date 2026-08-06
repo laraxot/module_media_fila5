@@ -104,7 +104,7 @@ class MediaConvert extends BaseModel
 
     public function getDiskAttribute(?string $value): ?string
     {
-        if ($media === null
+        if ($media === null)
             return null;
         }
 
@@ -113,7 +113,7 @@ class MediaConvert extends BaseModel
 
     public function getFileAttribute(?string $value): ?string
     {
-        if ($media === null
+        if ($media === null)
             return null;
         }
 
@@ -122,7 +122,7 @@ class MediaConvert extends BaseModel
 
     public function getConvertedFileAttribute(?string $value): ?string
     {
-        if ($media === null
+        if ($media === null)
             return null;
         }
         $info = pathinfo($media->file_name);
