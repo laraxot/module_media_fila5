@@ -22,16 +22,9 @@ return array (
   'label' => 'Missing Label',
   'plural_label' => 'Missing Plural label',
   'fields' => 
-<<<<<<< HEAD
-  array ()
-  ),
-  'actions' => 
-  array ()
-=======
   array (
   ),
   'actions' => 
   array (
->>>>>>> 7605234 (.)
   ),
 );

@@ -122,7 +122,6 @@ return [
         'created_at' => [
             'label' => 'created_at',
         ],
-<<<<<<< HEAD
         'file' => [
             'label' => 'file',
             'helper_text' => 'file',
@@ -133,8 +132,6 @@ return [
             'helper_text' => 'attachment_type',
             'description' => 'attachment_type',
         ],
-=======
->>>>>>> 7605234 (.)
     ],
     'actions' => [
         'import' => [

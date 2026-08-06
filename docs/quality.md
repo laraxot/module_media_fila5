@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Quality Analysis Report - Media Module"
 module: "Media"
 type: concept
@@ -12,27 +9,10 @@ qmd: "quality"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Quality Analysis Report - Media Module
 **Date**: [DATE]
 **Status**: ✅ **ILLUMINATED** - PHPStan Level 10 PASS
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: quality
-canonical: ../../../Themes/docs/shared-components/quality-analysis.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: quality
-canonical: ../../../Themes/docs/shared-components/quality-analysis.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/quality-analysis.md
-=======
 ---
 
 ## Executive Summary
@@ -238,4 +218,3 @@ The **Media module** is in **excellent condition** with PHPStan Level 10 complia
 
 **Documentation**: Comprehensive (63 docs files)
 **Test Coverage**: Integration tests available
->>>>>>> 7605234 (.)

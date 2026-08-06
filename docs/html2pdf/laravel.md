@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Integrazione con Laravel e Best Practices"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "laravel"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Integrazione con Laravel e Best Practices
 
 Questa guida si concentra su come integrare e utilizzare `Html2Pdf` in un'applicazione Laravel, seguendo le best practice specifiche del progetto Laraxot.
@@ -25,21 +20,6 @@ Questa guida si concentra su come integrare e utilizzare `Html2Pdf` in un'applic
 *   [Funzionalità Avanzate](./advanced.md)
 *   [Configurazione della Sicurezza](./security.md)
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: laravel
-canonical: ../../../../Themes/docs/shared-components/laravel.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: laravel
-canonical: ../../../../Themes/docs/shared-components/laravel.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/laravel.md
-=======
 ---
 
 ## 🔗 Integrazione con Laravel
@@ -178,4 +158,3 @@ Mail::to('user@example.com')->send(new ReportMail($pdfContent));
 ### Problema: Il testo o una tabella vengono spezzati male tra le pagine
 **Causa:** Contenuto troppo grande per rimanere in una singola pagina.
 **Soluzione:** Usa il tag `<nobreak>` per forzare un blocco di contenuto a rimanere unito, oppure rivedi la struttura per renderla più flessibile.
->>>>>>> 7605234 (.)

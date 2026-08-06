@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Workstreams - Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "03 workstreams"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Workstreams - Media
 
 ## WS1 Architecture
@@ -32,8 +29,4 @@ related:
 ## WS4 Testing
 
 - Test funzionali mirati sui percorsi ad alto rischio.
-<<<<<<< HEAD
 - Checklist di validazione post-fix.
-=======
-- Checklist di validazione post-fix.
->>>>>>> 7605234 (.)

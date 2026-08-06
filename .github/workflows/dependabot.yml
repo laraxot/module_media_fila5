@@ -11,11 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
     steps:
-<<<<<<< HEAD
       - uses: actions/checkout@v7
-=======
-      - uses: actions/checkout@v4
->>>>>>> 7605234 (.)
 
       - name: Setup PHP
         uses: shivammathur/setup-php@latest

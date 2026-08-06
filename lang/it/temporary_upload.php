@@ -30,7 +30,6 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
-<<<<<<< HEAD
         'file' => [
             'label' => 'file',
             'helper_text' => 'file',
@@ -46,8 +45,6 @@ return [
             'helper_text' => 'expires_at',
             'description' => 'expires_at',
         ],
-=======
->>>>>>> 7605234 (.)
     ],
     'actions' => [
         'create' => [

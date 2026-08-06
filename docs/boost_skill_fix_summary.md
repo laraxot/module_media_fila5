@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Boost Skill Fix Summary - Media Module"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "boost skill fix summary"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Boost Skill Fix Summary - Media Module
 
 **Date**: 2026-03-02  
@@ -67,20 +62,3 @@ Critical dependencies for Media module:
    - Filesystem needs framework
    - Storage needs config
    - Cannot operate in isolation
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: boost_skill_fix_summary
-canonical: ../../../Themes/docs/shared-components/boost-skill-fix-summary.md
----
-
-See canonical documentation: ../../../Themes/docs/shared-components/boost-skill-fix-summary.md
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-=======
-
->>>>>>> 7605234 (.)

@@ -1,23 +1,14 @@
 <?php
 
 declare(strict_types=1);
-<<<<<<< HEAD
-use ReflectionClass;
-=======
->>>>>>> 7605234 (.)
 
 namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
-<<<<<<< HEAD
 use Modules\Media\Tests\TestCase;
 
 uses(TestCase::class);
-=======
-
-uses(\Modules\Media\Tests\TestCase::class);
->>>>>>> 7605234 (.)
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {

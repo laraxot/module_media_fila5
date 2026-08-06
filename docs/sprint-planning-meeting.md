@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media - Sprint Planning Meeting"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "sprint planning meeting"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Media - Sprint Planning Meeting
 
 > Documento operativo per sprint planning. Modulo.

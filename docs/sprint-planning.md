@@ -1,5 +1,4 @@
 # Sprint Planning: Media Module
-<<<<<<< HEAD
 # Media Module - Sprint Planning
 
 **Module:** Media  
@@ -69,8 +68,6 @@ Implement core media upload and storage system with basic transformations.
 
 *Last Updated: March 12, 2026*
 # Sprint Planning: Media Module
-=======
->>>>>>> 7605234 (.)
 
 ## 🏁 Sprint Goal
 Finalize documentation and validation for Media.

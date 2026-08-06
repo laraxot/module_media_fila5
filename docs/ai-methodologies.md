@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "AI Methodologies Handbook"
 module: "Media"
 type: concept
@@ -12,21 +9,6 @@ qmd: "ai methodologies"
 related:
   - "./webm.md"
 ---
-# AI Methodologies Handbook
-=======
-=======
->>>>>>> 766d652 (.)
-module: theme
-topic: ai-methodologies
-canonical: ../../../Themes/docs/shared-components/ai-methodologies.md
----
-<<<<<<< HEAD
->>>>>>> 33a3006 (.)
-=======
->>>>>>> 766d652 (.)
-
-See canonical documentation: ../../../Themes/docs/shared-components/ai-methodologies.md
-=======
 # AI Methodologies Handbook
 
 This file is a DRY local index for AI workflows in this module or theme.
@@ -48,4 +30,3 @@ This file is a DRY local index for AI workflows in this module or theme.
 ## OpenViking Rule
 
 Do not duplicate installation or runtime setup here. Keep operational details only in the canonical guide and use this file as a local routing document.
->>>>>>> 7605234 (.)

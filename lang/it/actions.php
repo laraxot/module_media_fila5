@@ -20,11 +20,7 @@ return [
         ],
         'label' => 'Actions',
         'sort' => 1,
-<<<<<<< HEAD
         'icon' => 'heroicon-o-rectangle-stack',
-=======
-        'icon' => 'heroicon-o-collection',
->>>>>>> 7605234 (.)
     ],
     'fields' => [
         'id' => [

@@ -6,14 +6,9 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
-<<<<<<< HEAD
 use Modules\Media\Tests\TestCase;
 
 uses(TestCase::class);
-=======
-
-uses(\Modules\Media\Tests\TestCase::class);
->>>>>>> 7605234 (.)
 
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {

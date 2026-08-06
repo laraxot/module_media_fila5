@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ---
-<<<<<<< HEAD
-<<<<<<< HEAD
 title: "Funzionalità Avanzate"
 module: "Media"
 type: concept
@@ -12,8 +9,6 @@ qmd: "advanced"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 7605234 (.)
 # Funzionalità Avanzate
 
 Questa sezione copre funzionalità avanzate come la generazione di codici a barre, QR code, la creazione di segnalibri (bookmark), indici e altri metodi utili della libreria.
@@ -25,21 +20,6 @@ Questa sezione copre funzionalità avanzate come la generazione di codici a barr
 *   [Integrazione con Laravel e Best Practices](./laravel.md)
 *   [Configurazione della Sicurezza](./security.md)
 
-<<<<<<< HEAD
-=======
-module: theme
-topic: advanced
-canonical: ../../../../Themes/docs/shared-components/advanced-Modules.md
->>>>>>> 33a3006 (.)
-=======
-module: theme
-topic: advanced
-canonical: ../../../../Themes/docs/shared-components/advanced-Modules.md
->>>>>>> 766d652 (.)
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/advanced-Modules.md
-=======
 ---
 
 ## 📋 Codici a Barre e QR Code
@@ -145,4 +125,3 @@ Imposta il titolo visibile nelle proprietà del file PDF.
 ```php
 $html2pdf->pdf->SetTitle('Il Mio Bel Documento');
 ```
->>>>>>> 7605234 (.)
