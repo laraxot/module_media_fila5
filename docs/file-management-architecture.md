@@ -2,7 +2,11 @@
 title: "Media Module - File Management Architecture"
 module: "Media"
 type: concept
+<<<<<<< HEAD
 tags: [file, management, architecture]
+=======
+tags: [FILE, MANAGEMENT, ARCHITECTURE]
+>>>>>>> 3eb428d (.)
 created: 2026-07-14
 updated: 2026-07-14
 qmd: "file management architecture"
