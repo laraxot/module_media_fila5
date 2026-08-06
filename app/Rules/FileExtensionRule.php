@@ -11,7 +11,6 @@ use function in_array;
 
 class FileExtensionRule implements Rule
 {
-    /** @var list<string> */
     protected array $validExtensions = [];
 
     /**
@@ -19,13 +18,13 @@ class FileExtensionRule implements Rule
      */
     public function __construct(array $validExtensions = [])
     {
-        $this->validExtensions = array_values(array_map(
+        $this->validExtensions = array_map(
             /**
              * @return lowercase-string
              */
             static fn (string $ext): string => mb_strtolower($ext),
             $validExtensions
-        ));
+        );
     }
 
     /**
