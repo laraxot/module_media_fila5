@@ -65,6 +65,9 @@ class Clip extends Component
      *
      * @param  array<string, mixed>  $data
      */
+    /**
+     * @param  array<string, mixed>  $data
+     */
     public function updateDataFromModal(string $id, array $data): void
     {
         if ($id !== 'editClip') {
