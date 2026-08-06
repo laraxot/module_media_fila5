@@ -40,7 +40,14 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getDatabaseConnection(): string
     {
+<<<<<<< HEAD
         $mediaModel = $this->resolveMediaModel();
+=======
+        $mediaModelClass = config('media-library.media_model');
+
+        /** @var Media $mediaModel */
+        $mediaModel = new $mediaModelClass;
+>>>>>>> d2bb446 (.)
 
         if ($mediaModel->getConnectionName() === 'default') {
             return '';
@@ -60,6 +67,13 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         Assert::string($mediaModelClass);
         Assert::subclassOf($mediaModelClass, Media::class);
 
+<<<<<<< HEAD
         return new $mediaModelClass();
+=======
+        /** @var Media $mediaModel */
+        $mediaModel = new $mediaModelClass;
+
+        return $mediaModel->getTable();
+>>>>>>> d2bb446 (.)
     }
 }
