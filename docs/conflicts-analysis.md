@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Analisi Conflitti - README.md"
 module: "Media"
 type: concept
@@ -12,10 +13,15 @@ related:
 ---
 # Analisi Conflitti - README.md
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: conflicts-analysis
 canonical: ../../../Themes/docs/shared-components/conflicts-analysis.md
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/conflicts-analysis.md

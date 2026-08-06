@@ -1,9 +1,10 @@
-# Quality Analysis Report - Media Module
-**Date**: 2025-11-11
-**Status**: ✅ **ILLUMINATED** - PHPStan Level 10 PASS
-
+---
+module: theme
+topic: quality-analysis-2025-11-11
+canonical: ../../../../Themes/docs/shared-components/quality-analysis-.md
 ---
 
+<<<<<<< HEAD:docs/legacy/quality-analysis-2025-11-11.md
 ## Executive Summary
 
 The Media module successfully passes **PHPStan Level 10** with **0 errors** out of the box, demonstrating excellent type safety and code quality.
@@ -207,3 +208,6 @@ The **Media module** is in **excellent condition** with PHPStan Level 10 complia
 
 **Documentation**: Comprehensive (63 docs files)
 **Test Coverage**: Integration tests available
+=======
+See canonical documentation: ../../../../Themes/docs/shared-components/quality-analysis-.md
+>>>>>>> 766d652 (.):docs/archive/quality-analysis-2025-11-11.md

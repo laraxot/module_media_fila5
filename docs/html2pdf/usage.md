@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Utilizzo Base e Layout"
 module: "Media"
 type: concept
@@ -26,6 +27,11 @@ module: theme
 topic: usage
 canonical: ../../../../Themes/docs/shared-components/usage.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: usage
+canonical: ../../../../Themes/docs/shared-components/usage.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/usage.md

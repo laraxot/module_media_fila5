@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "PathGenerator Interface"
 module: "Media"
 type: concept
@@ -12,10 +13,15 @@ related:
 ---
 # PathGenerator Interface
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: path-generator
 canonical: ../../../../Themes/docs/shared-components/path-generator-1.md
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../../Themes/docs/shared-components/path-generator-1.md

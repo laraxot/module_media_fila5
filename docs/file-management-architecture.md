@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Media Module - File Management Architecture"
 module: "Media"
 type: concept
@@ -1168,3 +1169,11 @@ canonical: ../../../Themes/docs/shared-components/FILE_MANAGEMENT_ARCHITECTURE.m
 
 See canonical documentation: ../../../Themes/docs/shared-components/FILE_MANAGEMENT_ARCHITECTURE.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: file-management-architecture
+canonical: ../../../Themes/docs/shared-components/FILE_MANAGEMENT_ARCHITECTURE.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/FILE_MANAGEMENT_ARCHITECTURE.md
+>>>>>>> 766d652 (.)

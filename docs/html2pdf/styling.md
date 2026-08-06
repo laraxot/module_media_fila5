@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Guida agli Stili, Tabelle e Immagini"
 module: "Media"
 type: concept
@@ -26,6 +27,11 @@ module: theme
 topic: styling
 canonical: ../../../../Themes/docs/shared-components/styling-Modules.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: styling
+canonical: ../../../../Themes/docs/shared-components/styling-Modules.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/styling-Modules.md

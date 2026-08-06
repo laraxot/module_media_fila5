@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Integrazione con Laravel e Best Practices"
 module: "Media"
 type: concept
@@ -26,6 +27,11 @@ module: theme
 topic: laravel
 canonical: ../../../../Themes/docs/shared-components/laravel.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: laravel
+canonical: ../../../../Themes/docs/shared-components/laravel.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/laravel.md

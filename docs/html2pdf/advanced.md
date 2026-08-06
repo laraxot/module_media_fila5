@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Funzionalità Avanzate"
 module: "Media"
 type: concept
@@ -26,6 +27,11 @@ module: theme
 topic: advanced
 canonical: ../../../../Themes/docs/shared-components/advanced-Modules.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: advanced
+canonical: ../../../../Themes/docs/shared-components/advanced-Modules.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/advanced-Modules.md

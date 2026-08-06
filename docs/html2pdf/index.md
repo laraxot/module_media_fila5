@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Html2Pdf - Panoramica e Installazione"
 module: "Media"
 type: concept
@@ -26,6 +27,11 @@ module: theme
 topic: index
 canonical: ../../../../Themes/docs/shared-components/README-Modules.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: index
+canonical: ../../../../Themes/docs/shared-components/README-Modules.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/README-Modules.md

@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Player"
 module: "Media"
 type: concept
@@ -12,10 +13,15 @@ related:
 ---
 https://github.com/spatie/laravel-sitemap/blob/main/resources/views/video.blade.php
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: player
 canonical: ../../../Themes/docs/shared-components/player.txt
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/player.txt

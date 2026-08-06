@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Ottimizzazioni Performance Modulo Media"
 module: "Media"
 type: concept
@@ -12,10 +13,15 @@ related:
 ---
 # Ottimizzazioni Performance Modulo Media
 =======
+=======
+>>>>>>> 766d652 (.)
 module: theme
 topic: media-optimizations
 canonical: ../../../../Themes/docs/shared-components/media-optimizations.md
 ---
+<<<<<<< HEAD
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../../Themes/docs/shared-components/media-optimizations.md

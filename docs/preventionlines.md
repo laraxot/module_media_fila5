@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Linee Guida Prevenzione Problemi - Modulo Media"
 module: "Media"
 type: concept
@@ -393,6 +394,11 @@ module: theme
 topic: preventionlines
 canonical: ../../../Themes/docs/shared-components/prevention-guidelines.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: preventionlines
+canonical: ../../../Themes/docs/shared-components/prevention-guidelines.md
+>>>>>>> 766d652 (.)
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/prevention-guidelines.md

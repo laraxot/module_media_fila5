@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Server MCP consigliati per il modulo Media"
 module: "Media"
 type: concept
@@ -43,3 +44,11 @@ canonical: ../../../Themes/docs/shared-components/mcp_server_consigliati.md
 
 See canonical documentation: ../../../Themes/docs/shared-components/mcp_server_consigliati.md
 >>>>>>> 33a3006 (.)
+=======
+module: theme
+topic: mcp-server-consigliati
+canonical: ../../../Themes/docs/shared-components/mcp_server_consigliati.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/mcp_server_consigliati.md
+>>>>>>> 766d652 (.)

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Codex Configuration Error Fixes"
 module: "Media"
@@ -29,6 +30,8 @@ Racchiudere sempre i valori di `name` e `description` tra virgolette doppie nel 
 ```yaml
 =======
 >>>>>>> 33a3006 (.)
+=======
+>>>>>>> 766d652 (.)
 ---
 module: theme
 topic: codex-error-fix

@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD:docs/archive/mcp-server-recommended.md
 title: "MCP Server Consigliati per il Modulo Media"
 module: "Media"
 type: concept
@@ -10,25 +11,11 @@ related:
   - "./webm.md"
 ---
 # MCP Server Consigliati per il Modulo Media
+=======
+module: theme
+topic: mcp_server_recommended
+canonical: ../../../../Themes/docs/shared-components/mcp-server-recommended-1.md
+---
+>>>>>>> 766d652 (.):docs/archive/mcp_server_recommended.md
 
-## Scopo del Modulo
-Gestione media, upload, conversioni e streaming.
-
-## Server MCP Consigliati
-- `filesystem`: Per gestione file media, upload e conversioni.
-- `fetch`: Per recupero o invio media a servizi esterni.
-- `memory`: Per caching temporaneo durante le operazioni di conversione.
-
-## Configurazione Minima Esempio
-```json
-{
-  "mcpServers": {
-    "filesystem": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-filesystem"] },
-    "fetch": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-fetch"] },
-    "memory": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-memory"] }
-  }
-}
-```
-
-## Note
-- Personalizza la configurazione per esigenze di streaming o CDN.
+See canonical documentation: ../../../../Themes/docs/shared-components/mcp-server-recommended-1.md

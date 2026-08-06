@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD:docs/legacy/conflict-resolution-iconmediacolumn.md
 title: "Risoluzione Conflitto IconMediaColumn.php"
 module: "Media"
 type: concept
@@ -91,3 +92,11 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 - [Modules/Media/docs/](../docs/)
 
 *
+=======
+module: theme
+topic: conflict_resolution_iconmediacolumn
+canonical: ../../../../Themes/docs/shared-components/conflict-resolution-iconmediacolumn-1.md
+---
+
+See canonical documentation: ../../../../Themes/docs/shared-components/conflict-resolution-iconmediacolumn-1.md
+>>>>>>> 766d652 (.):docs/archive/conflict_resolution_iconmediacolumn.md
