@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Module Media Root Symlink 1"
 module: "Media"
 type: concept
@@ -10,3 +11,11 @@ related:
   - "./webm.md"
 ---
 module_media.md
+=======
+module: theme
+topic: module-media-root-symlink-1
+canonical: ../../../Themes/docs/shared-components/module-media-root-symlink-1.md
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/module-media-root-symlink-1.md
+>>>>>>> 33a3006 (.)

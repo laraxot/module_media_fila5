@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Risoluzione Conflitti ConvertVideoByMediaConvertAction.php"
 module: "Media"
 type: concept
@@ -84,4 +85,11 @@ FFMpeg::fromDisk($data->disk)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
 - [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
+=======
+module: theme
+topic: conflict_resolution_convertvideobymediaconvertaction
+canonical: ../../../../Themes/docs/shared-components/conflict_resolution_convertvideobymediaconvertaction.md
+---
+>>>>>>> 33a3006 (.)
 
+See canonical documentation: ../../../../Themes/docs/shared-components/conflict_resolution_convertvideobymediaconvertaction.md

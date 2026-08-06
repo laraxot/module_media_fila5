@@ -35,6 +35,7 @@ use function Safe\unlink;
  * S3Test Page for AWS S3 testing and diagnostics.
  *
  * @property array<string, mixed> $debugResults
+ * @property \Filament\Schemas\Schema $form
  *
  * @phpstan-ignore-next-line
  */
@@ -130,7 +131,11 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
+<<<<<<< HEAD
         $this->getForm('form')?->fill([
+=======
+        $this->form->fill([
+>>>>>>> 33a3006 (.)
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -234,7 +239,11 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
+<<<<<<< HEAD
         $formState = $this->getForm('form')?->getState() ?? [];
+=======
+        $formState = $this->form->getState();
+>>>>>>> 33a3006 (.)
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
@@ -586,7 +595,11 @@ class S3Test extends XotBasePage
         }
 
         $output = [];
+<<<<<<< HEAD
         foreach ($this->debugResults as $result) {
+=======
+        foreach ($this->debugResults as $category => $result) {
+>>>>>>> 33a3006 (.)
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
@@ -625,7 +638,11 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
+<<<<<<< HEAD
             $formState = $this->getForm('form')?->getState() ?? [];
+=======
+            $formState = $this->form->getState();
+>>>>>>> 33a3006 (.)
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -749,7 +766,11 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
+<<<<<<< HEAD
         $this->getForm('form')?->fill([
+=======
+        $this->form->fill([
+>>>>>>> 33a3006 (.)
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -772,7 +793,11 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
+<<<<<<< HEAD
             $formState = $this->getForm('form')?->getState() ?? [];
+=======
+            $formState = $this->form->getState();
+>>>>>>> 33a3006 (.)
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;

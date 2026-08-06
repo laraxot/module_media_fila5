@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Correzioni PHPStan Livello 10 - Modulo Media"
 module: "Media"
 type: concept
@@ -124,6 +125,11 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 3. Eseguire l'analisi PHPStan a livello 10 per verificare che le correzioni risolvano effettivamente gli errori.
 4. Documentare pattern e soluzioni standard per gestire risorse di file e altri tipi speciali nel progetto.
 
+=======
+module: theme
+topic: phpstan-level10-fixes-conflict
+canonical: ../../../Themes/docs/shared-components/phpstan-level10-fixes-1-Modules.md
+>>>>>>> 33a3006 (.)
 ---
 
-> **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
+See canonical documentation: ../../../Themes/docs/shared-components/phpstan-level10-fixes-1-Modules.md
