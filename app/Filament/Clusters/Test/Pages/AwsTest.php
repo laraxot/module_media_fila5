@@ -69,7 +69,7 @@ class AwsTest extends XotBasePage
                         ->label('S3 Test Results')
                         ->rows(10)
                         ->disabled()
-                        ->default(fn () => json_encode($this->testResults['s3'] ?? [], JSON_PRETTY_PRINT)),
+                        ->default(fn () => json_encode(// @var mixed testResults['s3'] ?? [], JSON_PRETTY_PRINT
                 ]),
         ];
     }
@@ -90,7 +90,7 @@ class AwsTest extends XotBasePage
                     ->label('CloudFront Test Results')
                     ->rows(10)
                     ->disabled()
-                    ->default(fn () => json_encode($this->testResults['cloudfront'] ?? [], JSON_PRETTY_PRINT)),
+                    ->default(fn () => json_encode(// @var mixed testResults['cloudfront'] ?? [], JSON_PRETTY_PRINT
             ]),
         ];
     }
@@ -111,7 +111,7 @@ class AwsTest extends XotBasePage
                     ->label('IAM Test Results')
                     ->rows(10)
                     ->disabled()
-                    ->default(fn () => json_encode($this->testResults['iam'] ?? [], JSON_PRETTY_PRINT)),
+                    ->default(fn () => json_encode(// @var mixed testResults['iam'] ?? [], JSON_PRETTY_PRINT
             ]),
         ];
     }
@@ -133,8 +133,8 @@ class AwsTest extends XotBasePage
                     ->label('Full Diagnostic Results')
                     ->rows(15)
                     ->disabled()
-                    ->default(fn () => json_encode($this->testResults['full'] ?? [], JSON_PRETTY_PRINT)),
-                KeyValue::make('aws_config')->columnSpanFull()->state($this->getAwsConfig(...)),
+                    ->default(fn () => json_encode(// @var mixed testResults['full'] ?? [], JSON_PRETTY_PRINT
+                KeyValue::make('aws_config')->columnSpanFull()->state(// @var mixed getAwsConfig(...
             ]),
         ];
     }
@@ -156,7 +156,7 @@ class AwsTest extends XotBasePage
                 'Bucket' => config('filesystems.disks.s3.bucket'),
             ]);
 
-            $this->testResults['s3'] = [
+            // @var mixed testResults['s3'] = [
                 'status' => 'success',
                 'message' => 'Successfully connected to S3 bucket',
                 'details' => [
@@ -170,12 +170,12 @@ class AwsTest extends XotBasePage
                 ->success()
                 ->send();
         } catch (AwsException $e) {
-            $this->testResults['s3'] = [
+            // @var mixed testResults['s3'] = [
                 'status' => 'error',
                 'message' => $e->getAwsErrorCode() ?? 'UnknownError',
                 'details' => [
                     'Error' => $e->getMessage(),
-                    'Solution' => $this->getS3Solution($e->getAwsErrorCode() ?? 'UnknownError'),
+                    'Solution' => // @var mixed getS3Solution($e->getAwsErrorCode(
                 ],
             ];
 
@@ -191,7 +191,7 @@ class AwsTest extends XotBasePage
     {
         try {
             // Implement CloudFront config test
-            $this->testResults['cloudfront'] = [
+            // @var mixed testResults['cloudfront'] = [
                 'status' => 'success',
                 'message' => 'CloudFront configuration valid',
                 'details' => [
@@ -205,7 +205,7 @@ class AwsTest extends XotBasePage
                 ->success()
                 ->send();
         } catch (Exception $e) {
-            $this->testResults['cloudfront'] = [
+            // @var mixed testResults['cloudfront'] = [
                 'status' => 'error',
                 'message' => 'CloudFront configuration error',
                 'details' => [
@@ -223,18 +223,18 @@ class AwsTest extends XotBasePage
 
     public function runFullDiagnostic(): void
     {
-        $this->test_s3_connection();
-        $this->test_s3_permissions();
-        $this->test_s3_file_operations();
-        $this->test_cloud_front_config();
-        $this->test_cloud_front_signed_urls();
-        $this->test_iam_credentials();
-        $this->test_iam_policies();
+        // @var mixed test_s3_connection(;
+        // @var mixed test_s3_permissions(;
+        // @var mixed test_s3_file_operations(;
+        // @var mixed test_cloud_front_config(;
+        // @var mixed test_cloud_front_signed_urls(;
+        // @var mixed test_iam_credentials(;
+        // @var mixed test_iam_policies(;
 
-        $this->testResults['full'] = [
+        // @var mixed testResults['full'] = [
             'status' => 'completed',
             'message' => 'Full diagnostic completed',
-            'details' => $this->testResults,
+            'details' => // @var mixed testResults,
         ];
 
         Notification::make()
@@ -292,7 +292,7 @@ class AwsTest extends XotBasePage
                 'MaxKeys' => 1,
             ]);
 
-            $this->testResults['s3_permissions'] = [
+            // @var mixed testResults['s3_permissions'] = [
                 'status' => 'success',
                 'message' => 'S3 permissions verified successfully',
                 'details' => [
@@ -306,12 +306,12 @@ class AwsTest extends XotBasePage
                 ->success()
                 ->send();
         } catch (AwsException $e) {
-            $this->testResults['s3_permissions'] = [
+            // @var mixed testResults['s3_permissions'] = [
                 'status' => 'error',
                 'message' => 'S3 permissions error: '.($e->getAwsErrorCode() ?? 'UnknownError'),
                 'details' => [
                     'Error' => $e->getMessage(),
-                    'Solution' => $this->getS3Solution($e->getAwsErrorCode() ?? 'UnknownError'),
+                    'Solution' => // @var mixed getS3Solution($e->getAwsErrorCode(
                 ],
             ];
 
@@ -358,7 +358,7 @@ class AwsTest extends XotBasePage
                 'Key' => $testFileName,
             ]);
 
-            $this->testResults['s3_operations'] = [
+            // @var mixed testResults['s3_operations'] = [
                 'status' => 'success',
                 'message' => 'S3 file operations completed successfully',
                 'details' => [
@@ -374,12 +374,12 @@ class AwsTest extends XotBasePage
                 ->success()
                 ->send();
         } catch (AwsException $e) {
-            $this->testResults['s3_operations'] = [
+            // @var mixed testResults['s3_operations'] = [
                 'status' => 'error',
                 'message' => 'S3 file operations error: '.($e->getAwsErrorCode() ?? 'UnknownError'),
                 'details' => [
                     'Error' => $e->getMessage(),
-                    'Solution' => $this->getS3Solution($e->getAwsErrorCode() ?? 'UnknownError'),
+                    'Solution' => // @var mixed getS3Solution($e->getAwsErrorCode(
                 ],
             ];
 
@@ -403,7 +403,7 @@ class AwsTest extends XotBasePage
                 throw new Exception('Missing CloudFront configuration');
             }
 
-            $this->testResults['cloudfront_signed'] = [
+            // @var mixed testResults['cloudfront_signed'] = [
                 'status' => 'success',
                 'message' => 'CloudFront signed URL configuration valid',
                 'details' => [
@@ -418,7 +418,7 @@ class AwsTest extends XotBasePage
                 ->success()
                 ->send();
         } catch (Exception $e) {
-            $this->testResults['cloudfront_signed'] = [
+            // @var mixed testResults['cloudfront_signed'] = [
                 'status' => 'error',
                 'message' => 'CloudFront signed URL error',
                 'details' => [
@@ -448,7 +448,7 @@ class AwsTest extends XotBasePage
 
             $result = $sts->getCallerIdentity();
 
-            $this->testResults['iam_credentials'] = [
+            // @var mixed testResults['iam_credentials'] = [
                 'status' => 'success',
                 'message' => 'IAM credentials verified successfully',
                 'details' => [
@@ -463,7 +463,7 @@ class AwsTest extends XotBasePage
                 ->success()
                 ->send();
         } catch (AwsException $e) {
-            $this->testResults['iam_credentials'] = [
+            // @var mixed testResults['iam_credentials'] = [
                 'status' => 'error',
                 'message' => 'IAM credentials error: '.($e->getAwsErrorCode() ?? 'UnknownError'),
                 'details' => [
@@ -504,7 +504,7 @@ class AwsTest extends XotBasePage
                 'MaxKeys' => 1,
             ]);
 
-            $this->testResults['iam_policies'] = [
+            // @var mixed testResults['iam_policies'] = [
                 'status' => 'success',
                 'message' => 'IAM policies verified successfully',
                 'details' => [
@@ -519,7 +519,7 @@ class AwsTest extends XotBasePage
                 ->success()
                 ->send();
         } catch (AwsException $e) {
-            $this->testResults['iam_policies'] = [
+            // @var mixed testResults['iam_policies'] = [
                 'status' => 'error',
                 'message' => 'IAM policies error: '.($e->getAwsErrorCode() ?? 'UnknownError'),
                 'details' => [
