@@ -42,3 +42,4 @@ related:
 ## Stato Generale: ✅ COMPLETO
 
 ---
+*Ultimo aggiornamento: 2025-01-06*

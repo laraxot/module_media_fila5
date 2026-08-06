@@ -36,8 +36,6 @@ use function Safe\unlink;
  *
  * @property array<string, mixed> $debugResults
  * @property \Filament\Schemas\Schema $form
- *
- * @phpstan-ignore-next-line
  */
 class S3Test extends XotBasePage
 {
