@@ -9,7 +9,11 @@ jobs:
   stargazer_welcome:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
       - uses: actions/first-interaction@v3
+=======
+      - uses: actions/first-interaction@v1
+>>>>>>> 7605234 (.)
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: |

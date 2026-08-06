@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "ffmpeg"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "ffmpeg"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # ffmpeg
 
 <!-- Contenuto migrato da _docs/ffmpeg.txt -->

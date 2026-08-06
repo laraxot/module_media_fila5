@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Risoluzione conflitto git su Filament Table ConvertAction"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "filament table actions conflict resolution 1"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Risoluzione conflitto git su Filament Table ConvertAction
 
 ## Problema

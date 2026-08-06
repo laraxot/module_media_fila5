@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ->addFilter(['-filter:a', 'volumedetect', '-f', 'null'])
 
 https://gist.github.com/Nks/b3b1cd7398a560eda8ddb7e37901869e?permalink_comment_id=3450216
@@ -14,6 +15,8 @@ qmd: "convert"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 https://tobyokeke.com/how-to-convert-uploaded-videos-in-laravel-1d605baf5033
 
 https://stackoverflow.com/questions/76302960/convert-large-video-files-with-php-ffmpeg
@@ -25,6 +28,7 @@ https://stackoverflow.com/questions/76302960/convert-large-video-files-with-php-
 
 
 https://gist.github.com/Nks/b3b1cd7398a560eda8ddb7e37901869e?permalink_comment_id=3450216
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 766d652 (.)
@@ -38,3 +42,6 @@ canonical: ../../../Themes/docs/shared-components/convert.txt
 >>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/convert.txt
+=======
+
+>>>>>>> 7605234 (.)

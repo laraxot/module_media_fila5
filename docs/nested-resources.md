@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Media Module - Nested Resource Implementation Guide"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "nested resources"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Media Module - Nested Resource Implementation Guide
 
 ## Overview
@@ -210,4 +213,8 @@ Following the documented approach in `Modules/UI/docs/filament/nested-resource.m
 ### 3. Performance Optimization
 - Media asset caching strategies
 - Optimized queries for large media datasets
+<<<<<<< HEAD
 - Efficient handling of media transformations
+=======
+- Efficient handling of media transformations
+>>>>>>> 7605234 (.)

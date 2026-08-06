@@ -5,15 +5,22 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\RelationManagers;
 
 use Modules\Media\Filament\Actions\AddAttachmentAction;
+<<<<<<< HEAD
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Modules\Xot\Filament\Actions\XotBaseActionGroup;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+=======
+use Modules\Xot\Filament\Actions\XotBaseAction;
+use Modules\Xot\Filament\Actions\XotBaseActionGroup;
+use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
+>>>>>>> 7605234 (.)
 use Override;
 
 class MediaRelationManager extends XotBaseRelationManager
 {
+<<<<<<< HEAD
     /**
      * Dichiarata esplicitamente perche' questo RelationManager e' condiviso: vive in
      * `Filament\RelationManagers\` e non sotto una Resource, quindi il namespace non
@@ -25,6 +32,8 @@ class MediaRelationManager extends XotBaseRelationManager
      */
     protected static string $resource = MediaResource::class;
 
+=======
+>>>>>>> 7605234 (.)
     protected static string $relationship = 'media';
 
     protected static ?string $inverseRelationship = 'model';

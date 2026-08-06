@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Cyclomatic Complexity Report - Module: Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "cyclomatic complexity report"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Cyclomatic Complexity Report - Module: Media
 
 **Analyzer:** Super Mucca 🐮

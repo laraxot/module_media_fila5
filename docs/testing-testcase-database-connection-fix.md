@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Fix: Media TestCase - Database Connection Configuration"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "testing testcase database connection fix"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # Fix: Media TestCase - Database Connection Configuration
 
 **Problema**: Test Media falliscono con QueryException per database connection 'media'

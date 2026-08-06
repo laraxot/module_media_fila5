@@ -11,12 +11,17 @@ use Modules\Media\Tests\TestCase;
 uses(TestCase::class);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     function makeMediaTestBaseModel(): BaseModel
 =======
 beforeEach(function () {
     $this->baseModel = new class extends BaseModel
 >>>>>>> d2bb446 (.)
+=======
+if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
+    function makeMediaTestBaseModel(): BaseModel
+>>>>>>> 7605234 (.)
     {
         return new class extends BaseModel
         {

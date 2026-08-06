@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ qmd: "convert video by media convert"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 7605234 (.)
 # ConvertVideoByMediaConvertAction
 
 ## Panoramica
@@ -85,6 +88,7 @@ $action = new ConvertVideoByMediaConvertAction();
 $convertedPath = $action->execute($data, $record);
 ```
 
+<<<<<<< HEAD
 ## Fix PHPStan (2026-07-15)
 
 `->addFilter()` viene inoltrato al driver `PHPFFMpeg` sottostante tramite
@@ -113,3 +117,6 @@ canonical: ../../../../Themes/docs/shared-components/convert-video-by-media-conv
 
 See canonical documentation: ../../../../Themes/docs/shared-components/convert-video-by-media-convert-1.md
 >>>>>>> 766d652 (.)
+=======
+[Torna alla documentazione Media](/docs/modules/module_media.md#actions)
+>>>>>>> 7605234 (.)

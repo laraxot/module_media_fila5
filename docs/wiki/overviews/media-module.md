@@ -144,7 +144,11 @@ class Ticket extends XotBaseModel implements HasMedia {
 ## Cross-References
 
 - [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]] — XotBaseServiceProvider, XotBaseModel
+<<<<<<< HEAD
 - [[../../../../../../laravel/Modules/LegacyDomain/docs/wiki/overviews/laraxot-module|LegacyDomain Module]] — FileUpload in wizard Step 2 (immagini segnalazione)
+=======
+- [[../../../../../../laravel/Modules/Fixcity/docs/wiki/overviews/fixcity-module|Fixcity Module]] — FileUpload in wizard Step 2 (immagini segnalazione)
+>>>>>>> 7605234 (.)
 
 ## Raw Sources Prioritari
 

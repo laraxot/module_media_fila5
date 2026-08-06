@@ -4,6 +4,7 @@ https://github.com/mokhosh/laravel-youtube-downloader
 
 
 
+<<<<<<< HEAD
 ---
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,3 +36,5 @@ canonical: ../../../Themes/docs/shared-components/youtube.txt
 >>>>>>> 766d652 (.)
 
 See canonical documentation: ../../../Themes/docs/shared-components/youtube.txt
+=======
+>>>>>>> 7605234 (.)
