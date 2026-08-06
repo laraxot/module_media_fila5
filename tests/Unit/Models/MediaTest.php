@@ -11,7 +11,7 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
-it('can create media with minimal data', function (): void {
+it('can create media with minimal data', function(): void {
     $media = Media::factory()->create([
         'model_type' => 'Modules\User\Models\User',
         'model_id' => '1',
@@ -32,7 +32,7 @@ it('can create media with minimal data', function (): void {
     ]);
 });
 
-it('can create media with all fields', function (): void {
+it('can create media with all fields', function(): void {
     $mediaData = [
         'model_type' => 'App\\Models\\Post',
         'model_id' => '123',
@@ -86,7 +86,7 @@ it('can create media with all fields', function (): void {
     expect($media->responsive_images)->toBe(['thumb' => 'thumb.jpg', 'medium' => 'medium.jpg']);
 });
 
-it('media delete removes the record', function (): void {
+it('media delete removes the record', function(): void {
     $media = Media::factory()->create();
     $mediaId = SafeIntCastAction::cast($media->getKey());
 
@@ -95,7 +95,7 @@ it('media delete removes the record', function (): void {
     assertMediaTableMissing('media', ['id' => $mediaId]);
 });
 
-it('can find media by model type', function (): void {
+it('can find media by model type', function(): void {
     $media = Media::factory()->create(['model_type' => 'App\Models\UniqueModel']);
 
     $foundMedia = Media::where('model_type', 'App\Models\UniqueModel')->first();
@@ -104,7 +104,7 @@ it('can find media by model type', function (): void {
     expect($media->id)->toBe($foundMedia->id);
 });
 
-it('can find media by model id', function (): void {
+it('can find media by model id', function(): void {
     $media = Media::factory()->create(['model_id' => '999']);
 
     $foundMedia = Media::where('model_id', '999')->first();
@@ -113,7 +113,7 @@ it('can find media by model id', function (): void {
     expect($media->id)->toBe($foundMedia->id);
 });
 
-it('can find media by collection name', function (): void {
+it('can find media by collection name', function(): void {
     Media::factory()->create(['collection_name' => 'avatars']);
     Media::factory()->create(['collection_name' => 'images']);
     Media::factory()->create(['collection_name' => 'documents']);
@@ -126,7 +126,7 @@ it('can find media by collection name', function (): void {
     expect($firstAvatarMedia->collection_name)->toBe('avatars');
 });
 
-it('can find media by name', function (): void {
+it('can find media by name', function(): void {
     $media = Media::factory()->create(['name' => 'unique-media-name']);
 
     $foundMedia = Media::where('name', 'unique-media-name')->first();
@@ -135,7 +135,7 @@ it('can find media by name', function (): void {
     expect($media->id)->toBe($foundMedia->id);
 });
 
-it('can find media by file name', function (): void {
+it('can find media by file name', function(): void {
     $media = Media::factory()->create(['file_name' => 'unique-file.jpg']);
 
     $foundMedia = Media::where('file_name', 'unique-file.jpg')->first();
@@ -144,7 +144,7 @@ it('can find media by file name', function (): void {
     expect($media->id)->toBe($foundMedia->id);
 });
 
-it('can find media by disk', function (): void {
+it('can find media by disk', function(): void {
     Media::factory()->create(['disk' => 'public']);
     Media::factory()->create(['disk' => 's3']);
     Media::factory()->create(['disk' => 'local']);
@@ -157,7 +157,7 @@ it('can find media by disk', function (): void {
     expect($firstPublicMedia->disk)->toBe('public');
 });
 
-it('can find media by mime type', function (): void {
+it('can find media by mime type', function(): void {
     Media::factory()->create(['mime_type' => 'image/jpeg']);
     Media::factory()->create(['mime_type' => 'image/png']);
     Media::factory()->create(['mime_type' => 'application/pdf']);
@@ -170,7 +170,7 @@ it('can find media by mime type', function (): void {
     expect($firstJpegMedia->mime_type)->toBe('image/jpeg');
 });
 
-it('can find media by size range', function (): void {
+it('can find media by size range', function(): void {
     Media::factory()->create(['size' => 512]);
     Media::factory()->create(['size' => 1024]);
     Media::factory()->create(['size' => 2048]);
@@ -181,7 +181,7 @@ it('can find media by size range', function (): void {
     expect($largeMedia->every(fn (Media $media): bool => $media->size > 1000))->toBeTrue();
 });
 
-it('can find media by name pattern', function (): void {
+it('can find media by name pattern', function(): void {
     Media::factory()->create(['name' => 'profile-avatar']);
     Media::factory()->create(['name' => 'cover-image']);
     Media::factory()->create(['name' => 'logo-brand']);
@@ -192,7 +192,7 @@ it('can find media by name pattern', function (): void {
     expect($profileMedia->contains(fn (Media $media): bool => str_contains($media->name, 'profile')))->toBeTrue();
 });
 
-it('can find media by custom properties', function (): void {
+it('can find media by custom properties', function(): void {
     Media::factory()->create([
         'custom_properties' => ['alt' => 'Profile picture', 'category' => 'avatar'],
     ]);
@@ -207,7 +207,7 @@ it('can find media by custom properties', function (): void {
     expect($avatarMedia->contains(fn (Media $media): bool => ($media->custom_properties['category'] ?? null) === 'avatar'))->toBeTrue();
 });
 
-it('can find media by manipulations', function (): void {
+it('can find media by manipulations', function(): void {
     Media::factory()->create([
         'manipulations' => ['resize' => ['width' => 800, 'height' => 600]],
     ]);
@@ -222,7 +222,7 @@ it('can find media by manipulations', function (): void {
     expect($resizeMedia->contains(fn (Media $media): bool => array_key_exists('resize', $media->manipulations ?? [])))->toBeTrue();
 });
 
-it('can update media', function (): void {
+it('can update media', function(): void {
     $media = Media::factory()->create(['name' => 'Old Name']);
 
     $media->update(['name' => 'New Name']);
@@ -233,7 +233,7 @@ it('can update media', function (): void {
     ]);
 });
 
-it('can handle null values', function (): void {
+it('can handle null values', function(): void {
     $media = Media::factory()->create([
         'model_type' => 'App\Models\Test',
         'model_id' => '1',
@@ -265,25 +265,25 @@ it('can handle null values', function (): void {
     expect($fresh->responsive_images)->toBe([]);
 });
 
-it('media has media converts relationship', function (): void {
+it('media has media converts relationship', function(): void {
     $media = Media::factory()->create();
 
     expect(method_exists($media, 'mediaConverts'))->toBeTrue();
 });
 
-it('media has temporary upload relationship', function (): void {
+it('media has temporary upload relationship', function(): void {
     $media = Media::factory()->create();
 
     expect(method_exists($media, 'temporaryUpload'))->toBeTrue();
 });
 
-it('media has creator relationship', function (): void {
+it('media has creator relationship', function(): void {
     $media = Media::factory()->create();
 
     expect(method_exists($media, 'creator'))->toBeTrue();
 });
 
-it('media can get url conversion', function (): void {
+it('media can get url conversion', function(): void {
     $media = Media::factory()->create([
         'file_name' => 'test-image.jpg',
     ]);
@@ -298,7 +298,7 @@ it('media can get url conversion', function (): void {
     expect($url400)->toContain('400.jpg');
 });
 
-it('media has entry conversions attribute', function (): void {
+it('media has entry conversions attribute', function(): void {
     $media = Media::factory()->create([
         'generated_conversions' => ['thumb' => true, 'medium' => false],
     ]);
@@ -312,14 +312,14 @@ it('media has entry conversions attribute', function (): void {
     expect($entryConversions[0])->toHaveKey('src');
 });
 
-it('media has factory', function (): void {
+it('media has factory', function(): void {
     $media = Media::factory()->create();
 
     expect($media->id)->not()->toBeNull();
     expect($media)->toBeInstanceOf(Media::class);
 });
 
-it('media has casts', function (): void {
+it('media has casts', function(): void {
     $media = new Media;
 
     $expectedCasts = [

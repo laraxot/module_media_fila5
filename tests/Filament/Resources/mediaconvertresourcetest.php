@@ -11,7 +11,7 @@ use Modules\Media\Tests\TestCase;
 
 uses(TestCase::class);
 
-test('get form schema returns expected components', function (): void {
+test('get form schema returns expected components', function(): void {
     $form = MediaConvertResource::getFormSchema();
 
     expect($form)->toBeArray();
