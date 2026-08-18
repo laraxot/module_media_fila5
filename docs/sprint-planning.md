@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Media Module - Sprint Planning"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "sprint planning"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> laraxot/dev
 # Sprint Planning: Media Module
 # Media Module - Sprint Planning
 
@@ -81,4 +84,8 @@ Implement core media upload and storage system with basic transformations.
 # Sprint Planning: Media Module
 
 ## 🏁 Sprint Goal
+<<<<<<< HEAD
 Finalize documentation and validation for Media.
+=======
+Finalize documentation and validation for Media.
+>>>>>>> laraxot/dev

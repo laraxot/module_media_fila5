@@ -357,4 +357,8 @@ $share = SharingService::create($media, [
 ---
 
 **Versione**: v2.1.0-beta  
+<<<<<<< HEAD
 **Stato**: Production Ready with AI Enhancement Roadmap
+=======
+**Stato**: Production Ready with AI Enhancement Roadmap
+>>>>>>> laraxot/dev

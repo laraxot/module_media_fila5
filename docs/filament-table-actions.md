@@ -93,4 +93,8 @@ Le chiavi devono:
 - Non usare mai indici numerici, né impliciti né espliciti
 - Mantenere coerenza nei nomi delle chiavi tra diverse classi
 - Documentare eventuali chiavi personalizzate
+<<<<<<< HEAD
 - Le chiavi sono case-sensitive, mantenere la coerenza
+=======
+- Le chiavi sono case-sensitive, mantenere la coerenza
+>>>>>>> laraxot/dev

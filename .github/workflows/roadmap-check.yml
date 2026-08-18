@@ -22,4 +22,8 @@ jobs:
         run: |
           if [ ! -f docs/roadmap.md ]; then
             echo "::warning::docs/roadmap.md mancante"
+<<<<<<< HEAD
           fi
+=======
+          fi
+>>>>>>> laraxot/dev

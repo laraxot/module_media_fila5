@@ -500,4 +500,8 @@ use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use ProtoneMedia\LaravelFFMpeg\Format\Video\X264;
 ```
 
+<<<<<<< HEAD
 Nota: `FFMpeg::open()` restituisce `MediaOpener`, non `static`. Tipizzare correttamente le variabili intermedie per soddisfare PHPStan.
+=======
+Nota: `FFMpeg::open()` restituisce `MediaOpener`, non `static`. Tipizzare correttamente le variabili intermedie per soddisfare PHPStan.
+>>>>>>> laraxot/dev
