@@ -124,4 +124,8 @@ Ora puoi usare `font-family: MyCustomFont;` nel tuo CSS inline.
 Imposta il titolo visibile nelle proprietà del file PDF.
 ```php
 $html2pdf->pdf->SetTitle('Il Mio Bel Documento');
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> laraxot/dev

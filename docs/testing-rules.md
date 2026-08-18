@@ -111,4 +111,8 @@ Ogni modulo e tema deve documentare:
 3. Esempi di test corretti
 4. Errori comuni da evitare
 
+<<<<<<< HEAD
 I file di documentazione vanno nelle cartelle `docs/` dentro ogni modulo/tema.
+=======
+I file di documentazione vanno nelle cartelle `docs/` dentro ogni modulo/tema.
+>>>>>>> laraxot/dev

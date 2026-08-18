@@ -139,7 +139,11 @@ protected function getFormSchema(): array
 
 ## 🔗 **Collegamenti Documentazione**
 
+<<<<<<< HEAD
 - [Media Module README](README.md)
+=======
+- [Media Module README](../readme.md)
+>>>>>>> laraxot/dev
 - [Filament Best Practices](../../../../docs/filament-best-practices.md)
 - [Translation Rules](../../../../docs/translation-rules.md)
 - [PHPStan Guidelines](../../../../docs/phpstan-guidelines.md)
@@ -155,4 +159,8 @@ protected function getFormSchema(): array
 
 **Data Refactoring**: 2025-08-07
 **Versione PHPStan**: Livello 9
+<<<<<<< HEAD
 **Status**: ✅ Completato e Validato
+=======
+**Status**: ✅ Completato e Validato
+>>>>>>> laraxot/dev

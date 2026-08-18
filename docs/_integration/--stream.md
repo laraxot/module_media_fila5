@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 module: theme
 topic: __stream
 canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
@@ -6,6 +7,8 @@ canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
 # __stream
 
 See canonical documentation: ../../../../Themes/docs/shared-components/.gitkeep-Modules
+=======
+>>>>>>> laraxot/dev
 title: "__stream"
 module: "Media"
 type: concept
@@ -42,4 +45,8 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 // Cleanup the temporary file
 $tmpFile->delete();
 
+<<<<<<< HEAD
 ----------------------------------------------------------------------------
+=======
+----------------------------------------------------------------------------
+>>>>>>> laraxot/dev

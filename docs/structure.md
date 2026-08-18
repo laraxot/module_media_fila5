@@ -420,4 +420,8 @@ tests_old/Unit
 * [structure.md](../../../activity/docs/structure.md)
 * [structure.md](../../../cms/docs/structure.md)
 * [structure.md](../../../cms/docs/themes/structure.md)
+<<<<<<< HEAD
 * [structure.md](../../../cms/docs/components/structure.md)
+=======
+* [structure.md](../../../cms/docs/components/structure.md)
+>>>>>>> laraxot/dev

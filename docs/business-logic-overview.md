@@ -200,4 +200,8 @@ $document = PatientDocument::getSecureDocument(
 
 
 **Module Version**: Latest
+<<<<<<< HEAD
 **Business Logic Status**: Core functionality implemented
+=======
+**Business Logic Status**: Core functionality implemented
+>>>>>>> laraxot/dev

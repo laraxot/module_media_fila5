@@ -52,4 +52,8 @@ ffmpeg -h encoder=hevc_nvenc
     output.webm
 
 ----------------------------------
+<<<<<<< HEAD
 ffmpeg -h encoder=hevc_nvenc  
+=======
+ffmpeg -h encoder=hevc_nvenc
+>>>>>>> laraxot/dev

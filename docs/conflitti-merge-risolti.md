@@ -400,4 +400,8 @@ I problemi di conflitto nei file relativi all'integrazione di FFmpeg erano princ
 
 ### Documentazione
 
+<<<<<<< HEAD
 Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
+=======
+Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
+>>>>>>> laraxot/dev

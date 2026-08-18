@@ -122,6 +122,19 @@ return [
         'created_at' => [
             'label' => 'created_at',
         ],
+<<<<<<< HEAD
+=======
+        'file' => [
+            'label' => 'file',
+            'helper_text' => 'file',
+            'description' => 'file',
+        ],
+        'attachment_type' => [
+            'label' => 'attachment_type',
+            'helper_text' => 'attachment_type',
+            'description' => 'attachment_type',
+        ],
+>>>>>>> laraxot/dev
     ],
     'actions' => [
         'import' => [

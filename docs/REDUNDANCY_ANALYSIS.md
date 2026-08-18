@@ -9,4 +9,8 @@ qmd: "redundancy analysis"
 related:
   - "./webm.md"
 ---
+<<<<<<< HEAD
 Redundancy analysis available: docs/analysis/redundancies/summary.md
+=======
+Redundancy analysis available: docs/analysis/redundancies/summary.md
+>>>>>>> laraxot/dev

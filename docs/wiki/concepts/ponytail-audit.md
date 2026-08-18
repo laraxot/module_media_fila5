@@ -17,4 +17,8 @@ related:
 - [Remediation](../../../../../../docs/project/ponytail-audit-remediation.md)
 - [Findings Media](../../ponytail-audit-over-engineering.md)
 
+<<<<<<< HEAD
 Aggiornare solo finding e stato specifici di questo modulo.
+=======
+Aggiornare solo finding e stato specifici di questo modulo.
+>>>>>>> laraxot/dev

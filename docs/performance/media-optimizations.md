@@ -329,4 +329,8 @@ final class TemporaryUploadPathGenerator implements PathGenerator
 - Uso di Assert per validazioni runtime
 - Cache tags richiedono Redis/Memcached
 - Compatibile con FFmpeg e Laravel
+<<<<<<< HEAD
 - Configurazioni esternalizzate
+=======
+- Configurazioni esternalizzate
+>>>>>>> laraxot/dev

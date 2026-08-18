@@ -43,7 +43,11 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 - **Versioning**: Gestione versioni multiple file
 
 **Relazioni Business Logic**:
+<<<<<<< HEAD
 - **SaluteOra**: Documenti pazienti, referti medici, immagini profilo
+=======
+- **Dominio sanitario**: Documenti pazienti, referti medici, immagini profilo
+>>>>>>> laraxot/dev
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
 - **Notify**: Allegati notifiche email
@@ -146,7 +150,11 @@ Tutti i modelli attivi hanno le factory corrispondenti.
 - **Streaming**: Streaming file grandi
 
 ### File Processing
+<<<<<<< HEAD
 - **Image Processing**: 
+=======
+- **Image Processing**:
+>>>>>>> laraxot/dev
   - Resize, crop, rotate
   - Filters e effetti
   - Format conversion
@@ -206,7 +214,11 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Performance Optimization](./performance_optimization.md)
 
 ### Moduli Collegati
+<<<<<<< HEAD
 - [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
+=======
+- Modulo sanitario legacy - Documenti medici
+>>>>>>> laraxot/dev
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
 - [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
@@ -219,4 +231,8 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 *Ultimo aggiornamento: Gennaio 2025*
 *Analisi completa di 4 modelli attivi, sistema media completo*
+<<<<<<< HEAD
 *Supporto upload, conversioni, storage locale/cloud*
+=======
+*Supporto upload, conversioni, storage locale/cloud*
+>>>>>>> laraxot/dev

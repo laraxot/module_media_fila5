@@ -90,4 +90,8 @@ class ImageOptimizationService
 - **Fase 4**: Advanced access control
 
 ---
+<<<<<<< HEAD
 *Stato: 🟡 Funzionale ma Necessita Security Enhancement*
+=======
+*Stato: 🟡 Funzionale ma Necessita Security Enhancement*
+>>>>>>> laraxot/dev

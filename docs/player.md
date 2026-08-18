@@ -15,4 +15,8 @@ https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views
 
 
 per fare blocco YOUTUBE e blocco VIMEO
+<<<<<<< HEAD
 https://github.com/nWidart/laravel-videoable/blob/master/resources/views/sources/vimeo.blade.php
+=======
+https://github.com/nWidart/laravel-videoable/blob/master/resources/views/sources/vimeo.blade.php
+>>>>>>> laraxot/dev

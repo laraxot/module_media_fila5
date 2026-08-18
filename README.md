@@ -83,4 +83,8 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 
 ---
 
+<<<<<<< HEAD
 **Quick links:** [Index](./docs/INDEX.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/TROUBLESHOOTING.md) | [Contributing](./docs/CONTRIBUTING.md)
+=======
+**Quick links:** [Index](./docs/INDEX.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/TROUBLESHOOTING.md) | [Contributing](./docs/CONTRIBUTING.md)
+>>>>>>> laraxot/dev

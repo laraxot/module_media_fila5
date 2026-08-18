@@ -255,7 +255,10 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Documentazione Generale Media](README.md)
+=======
+>>>>>>> laraxot/dev
 - [Documentazione Generale Media](../readme.md)
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
@@ -265,4 +268,8 @@ private function getSolutionForError(?string $errorCode): string
 
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di correzione automatica
+<<<<<<< HEAD
 **Stato**: ✅ Completato e verificato
+=======
+**Stato**: ✅ Completato e verificato
+>>>>>>> laraxot/dev

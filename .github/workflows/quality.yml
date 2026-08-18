@@ -61,4 +61,9 @@ jobs:
             ./vendor/bin/phpinsights analyse Modules/Media --format=table --no-interaction || true
           else
             echo "PHPInsights not found, skipping..."
+<<<<<<< HEAD
           fi
+=======
+          fi
+
+>>>>>>> laraxot/dev

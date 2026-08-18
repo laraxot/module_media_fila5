@@ -23,4 +23,8 @@ jobs:
         uses: ramsey/composer-install@latest
 
       - name: Run Pint
+<<<<<<< HEAD
         run: ./vendor/bin/pint --test
+=======
+        run: ./vendor/bin/pint --test
+>>>>>>> laraxot/dev

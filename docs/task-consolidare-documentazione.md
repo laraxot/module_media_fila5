@@ -20,4 +20,8 @@ related:
 ## Criteri di Completamento
 
 - [ ] Rimossi duplicati da 130 docs
+<<<<<<< HEAD
 - [ ] README.md aggiornato
+=======
+- [ ] README.md aggiornato
+>>>>>>> laraxot/dev

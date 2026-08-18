@@ -26,4 +26,8 @@ $ which ffprobe
 
 add to .env
 FFMPEG_PATH=c:/ProgramData/chocolatey/bin/ffmpeg.exe
+<<<<<<< HEAD
 FFPROBE_PATH=c:/ProgramData/chocolatey/bin/ffprobe.exe
+=======
+FFPROBE_PATH=c:/ProgramData/chocolatey/bin/ffprobe.exe
+>>>>>>> laraxot/dev

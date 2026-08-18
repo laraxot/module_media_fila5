@@ -18,5 +18,10 @@ legacy/**
 *.rej
 *~head
 agentdb.rvf
+<<<<<<< HEAD
 copilot-redundancy-audit-2026-05-25.md
 redundancy-audit-2026-05-21.md
+=======
+copilot-redundancy-audit-*.md
+redundancy-audit-*.md
+>>>>>>> laraxot/dev

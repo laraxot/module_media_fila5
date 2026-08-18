@@ -50,4 +50,8 @@ $tmpFile->delete();
 Per il rilevamento del volume audio:
 ```php
 ->addFilter(['-filter:a', 'volumedetect', '-f', 'null'])
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> laraxot/dev

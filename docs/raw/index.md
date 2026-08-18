@@ -43,4 +43,8 @@ Il layer raw per questo modulo/tema è **l'intera cartella `docs/`** (esclusa `d
 
 ---
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: 2026-04-15*
+=======
+*Ultimo aggiornamento: 2026-04-15*
+>>>>>>> laraxot/dev

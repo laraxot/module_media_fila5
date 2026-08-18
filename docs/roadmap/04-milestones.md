@@ -24,4 +24,8 @@ related:
 ## M3 Regression Safety
 
 - Test minimi sui flussi critici in esecuzione regolare.
+<<<<<<< HEAD
 - Riduzione regressioni ricorrenti.
+=======
+- Riduzione regressioni ricorrenti.
+>>>>>>> laraxot/dev
