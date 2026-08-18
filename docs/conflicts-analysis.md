@@ -18,4 +18,8 @@ related:
 ## Impatto
 
 ## Collegamenti correlati
+<<<<<<< HEAD
 - [[conflicts_overview]]
+=======
+- [[conflicts_overview]]
+>>>>>>> laraxot/dev

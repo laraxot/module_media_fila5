@@ -33,4 +33,8 @@ related:
 ## Criteri di Completamento
 
 - [ ] Almeno 13 delle 19 suppressioni risolte
+<<<<<<< HEAD
 - [ ] PHPStan 0 errori mantenuto
+=======
+- [ ] PHPStan 0 errori mantenuto
+>>>>>>> laraxot/dev

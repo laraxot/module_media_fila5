@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "Correzioni S3Test.php - Modulo Media"
 module: "Media"
@@ -9,6 +13,11 @@ qmd: "s3test corrections 1"
 related:
   - "./webm.md"
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Correzioni S3Test.php - Modulo Media
 
 ## Problemi Identificati e Risolti
@@ -255,7 +264,15 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [Documentazione Generale Media](README.md)
+=======
+<<<<<<< HEAD
+- [Documentazione Generale Media](README.md)
+=======
+- [Documentazione Generale Media](../readme.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
 - [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)

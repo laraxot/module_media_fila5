@@ -59,4 +59,8 @@ When adding new icons:
 1. Add the SVG file to the correct directory
 2. Update this documentation if adding a new category of icons
 3. Test the icon in all relevant contexts (tables, forms, modals)
+<<<<<<< HEAD
 4. Ensure the icon follows the project's visual style guide
+=======
+4. Ensure the icon follows the project's visual style guide
+>>>>>>> laraxot/dev

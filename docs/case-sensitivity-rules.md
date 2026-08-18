@@ -35,4 +35,8 @@ I seguenti file sono stati eliminati perché violavano le regole:
 
 ## Update Log
 
+<<<<<<< HEAD
 - **[DATE]**: Removed `mediaconvertresourcetest.php` duplicate
+=======
+- **[DATE]**: Removed `mediaconvertresourcetest.php` duplicate
+>>>>>>> laraxot/dev

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Report PHPStan - Modulo Media"
+module: "Media"
+type: concept
+tags: [phpstan, report, 1]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "phpstan report 1"
+related:
+  - "./webm.md"
+---
+>>>>>>> laraxot/dev
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale
