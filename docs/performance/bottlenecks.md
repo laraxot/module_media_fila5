@@ -251,4 +251,8 @@ Implementare:
 
 ### Versione Incoming
 
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> laraxot/dev

@@ -15,4 +15,8 @@ related:
 
 ## Goals
 
+<<<<<<< HEAD
 ## Non-goals
+=======
+## Non-goals
+>>>>>>> laraxot/dev

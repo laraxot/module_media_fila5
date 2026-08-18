@@ -43,4 +43,8 @@ Questo evita errori di `ComponentNotFoundException` nelle architetture modulari.
 ## Riferimenti
 
 - [Guida upgrade Filament 5 (Xot)](../../Xot/docs/filament-5-upgrade-guide.md)
+<<<<<<< HEAD
 - [Documentazione ufficiale](https://filamentphp.com/docs/5.x/upgrade-guide)
+=======
+- [Documentazione ufficiale](https://filamentphp.com/docs/5.x/upgrade-guide)
+>>>>>>> laraxot/dev

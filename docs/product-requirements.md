@@ -174,4 +174,8 @@ Xot, Tenant, User
 | Conversion | Versione alternativa media |
 | Collection | Gruppo logico file |
 | CDN | Content Delivery Network |
+<<<<<<< HEAD
 | Responsive | Immagini multi-risoluzione |
+=======
+| Responsive | Immagini multi-risoluzione |
+>>>>>>> laraxot/dev

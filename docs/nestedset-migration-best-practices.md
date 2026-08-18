@@ -471,4 +471,8 @@ return new class extends XotBaseMigration
 
 - [Documentazione principale](/docs/migration/nestedset-best-practices.md)
 - [Media Module Architecture](/docs/architecture/media-module.md)
+<<<<<<< HEAD
 - [AddressItemEnum Integration](/docs/address-item-enum-integration.md)
+=======
+- [AddressItemEnum Integration](/docs/address-item-enum-integration.md)
+>>>>>>> laraxot/dev

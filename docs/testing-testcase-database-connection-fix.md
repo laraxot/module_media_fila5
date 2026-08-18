@@ -97,4 +97,8 @@ protected function setUp(): void
 ---
 
 **Status**: Completed
+<<<<<<< HEAD
 **Risultato**: Test Media ora configurano correttamente le connessioni database senza dipendere da MySQL
+=======
+**Risultato**: Test Media ora configurano correttamente le connessioni database senza dipendere da MySQL
+>>>>>>> laraxot/dev

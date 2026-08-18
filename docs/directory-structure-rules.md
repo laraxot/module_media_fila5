@@ -20,4 +20,8 @@ Per il modulo Media valgono queste regole:
 
 La vecchia cartella duplicata individuata era `Media/bashscripts/_docs`.
 
+<<<<<<< HEAD
 Regola canonica: [no-lang-lang-and-no-underscore-docs-rule](../../../../docs/wiki/concepts/no-lang-lang-and-no-underscore-docs-rule.md).
+=======
+Regola canonica: [no-lang-lang-and-no-underscore-docs-rule](../../../../docs/wiki/concepts/no-lang-lang-and-no-underscore-docs-rule.md).
+>>>>>>> laraxot/dev

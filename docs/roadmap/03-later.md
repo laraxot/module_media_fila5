@@ -11,4 +11,8 @@ related:
 ---
 # Later (Module Media)
 
+<<<<<<< HEAD
 ## Longer-term ideas
+=======
+## Longer-term ideas
+>>>>>>> laraxot/dev

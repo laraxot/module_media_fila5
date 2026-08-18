@@ -14,4 +14,8 @@ related:
 - [x] PHPStan Level 10
 - [ ] Copertura Test (Pest) > 85%
 - [ ] Performance di caricamento e trasformazione ottimizzate
+<<<<<<< HEAD
 - [ ] Traduzioni dei campi media in tutte le lingue supportate
+=======
+- [ ] Traduzioni dei campi media in tutte le lingue supportate
+>>>>>>> laraxot/dev
