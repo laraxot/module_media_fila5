@@ -23,4 +23,8 @@ related:
 
 ## Collegamenti
 - [Linee Guida Generali per la Risoluzione dei Conflitti Git](../../../../../docs/risoluzione_conflitti_git.md)
+<<<<<<< HEAD
 - [Documentazione Conflitti Git nei Moduli](../../../../../docs/conflitti_git_moduli.md)
+=======
+- [Documentazione Conflitti Git nei Moduli](../../../../../docs/conflitti_git_moduli.md)
+>>>>>>> laraxot/dev

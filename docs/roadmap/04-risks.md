@@ -13,4 +13,8 @@ related:
 
 ## Risks
 
+<<<<<<< HEAD
 ## Dependencies
+=======
+## Dependencies
+>>>>>>> laraxot/dev

@@ -21,4 +21,8 @@ Specialized logic for Media needs a dedicated, type-safe Module to ensure mainta
 
 ## 🎯 Goals & Success Metrics
 - **Goal 1:** 100% PHPStan L10 compliance.
+<<<<<<< HEAD
 - **Goal 2:** Seamless integration with XotBase.
+=======
+- **Goal 2:** Seamless integration with XotBase.
+>>>>>>> laraxot/dev

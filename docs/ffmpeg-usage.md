@@ -136,4 +136,8 @@ try {
 
 - [Documentazione ufficiale di Laravel-FFMpeg](https://github.com/protonemedia/laravel-ffmpeg)
 - [Documentazione di FFmpeg](https://ffmpeg.org/documentation.html)
+<<<<<<< HEAD
 - [Articolo: How to use FFmpeg in your Laravel projects](https://protone.media/en/blog/how-to-use-ffmpeg-in-your-laravel-projects)
+=======
+- [Articolo: How to use FFmpeg in your Laravel projects](https://protone.media/en/blog/how-to-use-ffmpeg-in-your-laravel-projects)
+>>>>>>> laraxot/dev

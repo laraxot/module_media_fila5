@@ -163,4 +163,8 @@ public function isUriValid(string $uri): bool
     }
     return true;
 }
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> laraxot/dev
