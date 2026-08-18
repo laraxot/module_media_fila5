@@ -54,8 +54,8 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 ## Documentation
 
 **Start here:**
-1. [Documentation Index](./docs/index.md) — Navigation & file guide
-2. [Architecture](./docs/architecture.md) — System design & patterns
+1. [Documentation Index](./docs/INDEX.md) — Navigation & file guide
+2. [Architecture](./docs/ARCHITECTURE.md) — System design & patterns
 3. [Patterns & Best Practices](./docs/PATTERNS.md) — Common patterns & anti-patterns
 4. [Troubleshooting](./docs/TROUBLESHOOTING.md) — Error resolution
 
@@ -73,7 +73,7 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 
 - **Semantic Release:** [Workflow](./.github/workflows/semantic-release.yml)
 - **Configuration:** [.releaserc.json](./.releaserc.json)
-- **Changelog:** [changelog.md](./changelog.md)
+- **Changelog:** [CHANGELOG.md](./CHANGELOG.md)
 
 ## Philosophy
 
@@ -83,4 +83,4 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 
 ---
 
-**Quick links:** [Index](./docs/index.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/TROUBLESHOOTING.md) | [Contributing](./docs/CONTRIBUTING.md)
+**Quick links:** [Index](./docs/INDEX.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/TROUBLESHOOTING.md) | [Contributing](./docs/CONTRIBUTING.md)
