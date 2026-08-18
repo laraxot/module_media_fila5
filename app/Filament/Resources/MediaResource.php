@@ -8,6 +8,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\PageRegistration;
+use Filament\Schemas\Components\Component;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
@@ -17,15 +18,14 @@ use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
 
-use Filament\Forms\Components\Field;
 class MediaResource extends XotBaseResource
 {
     protected static ?string $model = Media::class;
 
     /**
-     * @return array<string, mixed>
+     * @return array<string, Component>
      */
-    //#[Override]
+    #[Override]
     public static function getFormSchemaOld(): array
     {
         return [

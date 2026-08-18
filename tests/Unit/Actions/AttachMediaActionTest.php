@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Actions;
 
 use Modules\Media\Actions\AttachMediaAction;
-use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\TestCase;
 use Spatie\QueueableAction\QueueableAction;
 
 uses(TestCase::class);

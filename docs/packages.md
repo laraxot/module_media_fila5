@@ -1,3 +1,14 @@
+---
+title: "Pacchetti del Modulo Media"
+module: "Media"
+type: concept
+tags: [packages]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "packages"
+related:
+  - "./webm.md"
+---
 # Pacchetti del Modulo Media
 
 ## Pacchetti Utilizzati
