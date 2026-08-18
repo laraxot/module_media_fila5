@@ -121,8 +121,4 @@ $media = Media::find(1);
 $originalPath = $generator->getPath($media);
 $conversionPath = $generator->getPathForConversions($media);
 $responsivePath = $generator->getPathForResponsiveImages($media);
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> laraxot/dev

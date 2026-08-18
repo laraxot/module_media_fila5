@@ -6,34 +6,19 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
-<<<<<<< HEAD
-use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\TestCase;
-=======
 use Modules\Media\Tests\TestCase;
->>>>>>> laraxot/dev
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {
-<<<<<<< HEAD
-        Assert::assertInstanceOf(BaseModel::class, new MediaConvert);
-=======
         expect(new MediaConvert)->toBeInstanceOf(BaseModel::class);
->>>>>>> laraxot/dev
     });
 
     it('has correct fillable fields', function (): void {
         $model = new MediaConvert;
 
-<<<<<<< HEAD
-        Assert::assertSame([
-            'media_id', 'format', 'codec_video', 'codec_audio', 'preset', 'bitrate',
-            'width', 'height', 'threads', 'speed', 'percentage', 'remaining', 'rate',
-            'execution_time',
-        ], $model->getFillable());
-=======
         expect($model->getFillable())->toContain('media_id');
         expect($model->getFillable())->toContain('format');
         expect($model->getFillable())->toContain('codec_video');
@@ -48,27 +33,11 @@ describe('MediaConvert Model', function (): void {
         expect($model->getFillable())->toContain('remaining');
         expect($model->getFillable())->toContain('rate');
         expect($model->getFillable())->toContain('execution_time');
->>>>>>> laraxot/dev
     });
 
     it('has media relationship', function (): void {
         $model = new MediaConvert;
 
-<<<<<<< HEAD
-        Assert::assertTrue((new \ReflectionClass($model))->hasMethod('media'));
-    });
-
-    it('has getDiskAttribute accessor', function (): void {
-        Assert::assertTrue((new \ReflectionClass(MediaConvert::class))->hasMethod('getDiskAttribute'));
-    });
-
-    it('has getFileAttribute accessor', function (): void {
-        Assert::assertTrue((new \ReflectionClass(MediaConvert::class))->hasMethod('getFileAttribute'));
-    });
-
-    it('has getConvertedFileAttribute accessor', function (): void {
-        Assert::assertTrue((new \ReflectionClass(MediaConvert::class))->hasMethod('getConvertedFileAttribute'));
-=======
         expect((new \ReflectionClass($model))->hasMethod('media'))->toBeTrue();
     });
 
@@ -82,26 +51,17 @@ describe('MediaConvert Model', function (): void {
 
     it('has getConvertedFileAttribute accessor', function (): void {
         expect((new \ReflectionClass(MediaConvert::class))->hasMethod('getConvertedFileAttribute'))->toBeTrue();
->>>>>>> laraxot/dev
     });
 
     it('has connection', function (): void {
         $model = new MediaConvert;
 
-<<<<<<< HEAD
-        Assert::assertSame('media', $model->getConnectionName());
-=======
         expect($model->getConnectionName())->toBe('media');
->>>>>>> laraxot/dev
     });
 
     it('uses HasXotFactory trait', function (): void {
         $traits = class_uses_recursive(MediaConvert::class);
 
-<<<<<<< HEAD
-        Assert::assertContains('Modules\Xot\Models\Traits\HasXotFactory', $traits);
-=======
         expect(in_array('Modules\Xot\Models\Traits\HasXotFactory', $traits, true))->toBeTrue();
->>>>>>> laraxot/dev
     });
 });

@@ -35,8 +35,4 @@ Nessuna.
 ## Collegamenti
 
 - [Roadmap Media](../roadmap.md)
-<<<<<<< HEAD
 - [Indice task Media](tasks-index.md)
-=======
-- [Indice task Media](tasks-index.md)
->>>>>>> laraxot/dev

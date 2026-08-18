@@ -29,8 +29,4 @@ related:
 
 - [ ] 10+ nuovi test
 - [ ] Mock per servizi esterni (FFmpeg, S3)
-<<<<<<< HEAD
 - [ ] Copertura al 50%
-=======
-- [ ] Copertura al 50%
->>>>>>> laraxot/dev

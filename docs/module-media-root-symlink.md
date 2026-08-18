@@ -9,8 +9,4 @@ qmd: "module media root symlink"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
 module_media.md
-=======
-module_media.md
->>>>>>> laraxot/dev

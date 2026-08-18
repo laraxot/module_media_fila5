@@ -15,8 +15,4 @@ related:
 
 ## Bugfixes
 
-<<<<<<< HEAD
 ## Quality gates
-=======
-## Quality gates
->>>>>>> laraxot/dev

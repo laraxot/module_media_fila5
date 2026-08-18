@@ -4,20 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
-<<<<<<< HEAD
-use Modules\Media\Database\Factories\MediaFactory;
-use Modules\Media\Models\Media;
-use Modules\Media\Tests\TestCase;
-use PHPUnit\Framework\Assert;
-use Webmozart\Assert\Assert as WebmozartAssert;
-
-require_once dirname(__DIR__, 2).'/Pest.php';
-
-uses(TestCase::class);
-
-test('can create media with minimal data', function (): void {
-    $media = MediaFactory::new()->createOne([
-=======
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
@@ -27,7 +13,6 @@ uses(TestCase::class);
 
 it('can create media with minimal data', function (): void {
     $media = Media::factory()->create([
->>>>>>> laraxot/dev
         'model_type' => 'Modules\User\Models\User',
         'model_id' => '1',
         'collection_name' => 'avatars',
@@ -37,18 +22,8 @@ it('can create media with minimal data', function (): void {
         'size' => 1024,
     ]);
 
-<<<<<<< HEAD
-    Assert::assertInstanceOf(Media::class, $media);
-
-    $key = $media->getKey();
-    WebmozartAssert::integerish($key);
-
-    assertMediaTableHas('media', [
-        'id' => (int) $key,
-=======
     assertMediaTableHas('media', [
         'id' => SafeIntCastAction::cast($media->getKey()),
->>>>>>> laraxot/dev
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',
@@ -56,8 +31,6 @@ it('can create media with minimal data', function (): void {
         'size' => 1024,
     ]);
 });
-<<<<<<< HEAD
-=======
 
 it('can create media with all fields', function (): void {
     $mediaData = [
@@ -371,4 +344,3 @@ it('media has casts', function (): void {
 
     expect($actualCasts)->toBe($expectedCasts);
 });
->>>>>>> laraxot/dev

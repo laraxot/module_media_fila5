@@ -29,8 +29,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-<<<<<<< HEAD
         run: npx semantic-release
-=======
-        run: npx semantic-release
->>>>>>> laraxot/dev

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "False Friends – Media Module"
 module: "Media"
@@ -39,5 +37,4 @@ const iconUrl = 'https://unpkg.com/leaflet@1.9.4/dist/marker-icon.png';
 ```blade
 {{-- ✅ CORRECT - Standard approach --}}
 @svg('map-marker.svg', ['class' => 'map-marker'])
->>>>>>> laraxot/dev
 ```

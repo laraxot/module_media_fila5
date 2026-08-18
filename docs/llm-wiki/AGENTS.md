@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
 module: "Media"
@@ -13,11 +9,6 @@ qmd: "agents"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
-=======
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media
@@ -157,8 +148,4 @@ Related:
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
-<<<<<<< HEAD
 - [Module Documentation](../README.md)
-=======
-- [Module Documentation](../README.md)
->>>>>>> laraxot/dev

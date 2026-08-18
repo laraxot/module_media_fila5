@@ -391,8 +391,4 @@ $format->setKiloBitrate(1500);
 - [ ] Operazioni pesanti in `QueueableAction` o `Job`, mai in controller/blade
 - [ ] PHPStan livello 10 superato senza soppressioni
 - [ ] Progress callback tipizzato correttamente
-<<<<<<< HEAD
 - [ ] `FFMpeg::cleanupTemporaryFiles()` chiamato dopo operazioni su URL remote
-=======
-- [ ] `FFMpeg::cleanupTemporaryFiles()` chiamato dopo operazioni su URL remote
->>>>>>> laraxot/dev

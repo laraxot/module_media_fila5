@@ -122,8 +122,4 @@ assert(is_string($color));
 ## References
 
 - [Official Docs: Custom Properties](https://spatie.be/docs/laravel-medialibrary/v11/advanced-usage/using-custom-properties)
-<<<<<<< HEAD
 - [Xot Schemaless Guide](../../xot/docs/spatie-schemaless-attributes.md)
-=======
-- [Xot Schemaless Guide](../../xot/docs/spatie-schemaless-attributes.md)
->>>>>>> laraxot/dev

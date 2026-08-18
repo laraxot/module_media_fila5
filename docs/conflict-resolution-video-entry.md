@@ -86,8 +86,4 @@ La soluzione è stata verificata con:
 ## Collegamenti Bidirezionali
 
 - [Documentazione principale risoluzione conflitti git](../../../../../docs/risoluzione_conflitti_git.md)
-<<<<<<< HEAD
 - [Documentazione dettagliata VideoEntry](../../../../../docs/video_entry_conflict.md)
-=======
-- [Documentazione dettagliata VideoEntry](../../../../../docs/video_entry_conflict.md)
->>>>>>> laraxot/dev

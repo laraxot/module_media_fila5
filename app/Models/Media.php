@@ -8,10 +8,7 @@ use Eloquent;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
-=======
->>>>>>> laraxot/dev
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -124,10 +121,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 class Media extends SpatieMedia
 {
     /** @use HasXotFactory<MediaFactory> */
-<<<<<<< HEAD
-    /** @phpstan-use HasXotFactory<Factory<static>> */
-=======
->>>>>>> laraxot/dev
     use HasXotFactory;
 
     use Updater;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media Module - Product Launch Plan"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "product launch plan"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> laraxot/dev
 # Media - Product Launch Plan
 # Media Module - Product Launch Plan
 
@@ -151,8 +148,4 @@ Rilasciare **Media** in modo controllato, misurabile e coerente con il suo ruolo
 
 - [PRD](prd.md)
 - [User Research](user-research.md)
-<<<<<<< HEAD
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
-=======
-- [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
->>>>>>> laraxot/dev

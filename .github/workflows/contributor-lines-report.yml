@@ -56,8 +56,4 @@ jobs:
           path: |
             reports/contributor-lines.html
             reports/contributor-lines-summary.md
-<<<<<<< HEAD
           retention-days: 90
-=======
-          retention-days: 90
->>>>>>> laraxot/dev

@@ -41,8 +41,4 @@ related:
 
 ## Stato Generale: ✅ COMPLETO
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> laraxot/dev

@@ -21,8 +21,4 @@ Module/theme specific notes:
 
 Installed packages index:
 
-<<<<<<< HEAD
 - [../../../../docs/packages/index.md](../../../../docs/packages/index.md)
-=======
-- [../../../../docs/packages/index.md](../../../../docs/packages/index.md)
->>>>>>> laraxot/dev

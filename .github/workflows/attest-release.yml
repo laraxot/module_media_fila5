@@ -29,8 +29,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-<<<<<<< HEAD
           gh release upload ${{ github.event.release.tag_name }} ${{ github.event.repository.name }}.zip
-=======
-          gh release upload ${{ github.event.release.tag_name }} ${{ github.event.repository.name }}.zip
->>>>>>> laraxot/dev

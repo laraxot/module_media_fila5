@@ -207,19 +207,11 @@ class ExamplePage extends XotBasePage
 ## 🔗 **Collegamenti Documentazione**
 
 - [S3Test Refactoring Analysis](s3test-refactoring-analysis.md)
-<<<<<<< HEAD
-- [Media Module README](README.md)
-=======
 - [Media Module README](../readme.md)
->>>>>>> laraxot/dev
 - [Laraxot Best Practices](../../../../../docs/laraxot-best-practices.md)
 - [PHPStan Guidelines](../../../../../docs/phpstan-guidelines.md)
 
 ---
 
 **Versione**: 1.0
-<<<<<<< HEAD
 **Applicabilità**: Tutti i file Filament del modulo Media
-=======
-**Applicabilità**: Tutti i file Filament del modulo Media
->>>>>>> laraxot/dev

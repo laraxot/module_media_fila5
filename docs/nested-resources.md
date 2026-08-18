@@ -210,8 +210,4 @@ Following the documented approach in `Modules/UI/docs/filament/nested-resource.m
 ### 3. Performance Optimization
 - Media asset caching strategies
 - Optimized queries for large media datasets
-<<<<<<< HEAD
 - Efficient handling of media transformations
-=======
-- Efficient handling of media transformations
->>>>>>> laraxot/dev

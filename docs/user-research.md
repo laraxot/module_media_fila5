@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media Module - User Research"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "user research"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> laraxot/dev
 # User Research: Media Module
 # Media Module - User Research
 
@@ -104,8 +101,4 @@ Majority of uploads from mobile.
 # User Research: Media Module
 
 ## 🔬 Research Goals
-<<<<<<< HEAD
 Identify user needs for Media functionality.
-=======
-Identify user needs for Media functionality.
->>>>>>> laraxot/dev

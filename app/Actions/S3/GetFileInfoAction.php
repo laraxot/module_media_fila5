@@ -25,13 +25,8 @@ class GetFileInfoAction extends BaseS3Action
             $metadata = $result['@metadata'] ?? [];
             $effectiveUri = null;
             if (is_array($metadata) && isset($metadata['effectiveUri'])) {
-<<<<<<< HEAD
-                $effectiveUri = $metadata['effectiveUri'];
-                Assert::string($effectiveUri);
-=======
                 Assert::string($metadata['effectiveUri']);
                 $effectiveUri = $metadata['effectiveUri'];
->>>>>>> laraxot/dev
             }
 
             $fileInfo = [
