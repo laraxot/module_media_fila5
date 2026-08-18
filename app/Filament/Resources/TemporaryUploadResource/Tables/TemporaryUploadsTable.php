@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\TemporaryUploadResource\Tables;
 
-<<<<<<< HEAD
-use Filament\Tables\Columns\TextColumn;
-=======
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -15,18 +12,13 @@ use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Models\TemporaryUpload;
->>>>>>> laraxot/dev
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 
 class TemporaryUploadsTable extends XotBaseResourceTable
 {
     /**
-<<<<<<< HEAD
-     * @return array<string, \Filament\Tables\Columns\Column>
-=======
      * @return array<string, Column>
      * @return array<string, Column>
->>>>>>> laraxot/dev
      */
     public function getTableColumns(): array
     {
@@ -36,8 +28,6 @@ class TemporaryUploadsTable extends XotBaseResourceTable
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];
     }
-<<<<<<< HEAD
-=======
 
     /**
      * @return array<string, SelectFilter>
@@ -73,5 +63,4 @@ class TemporaryUploadsTable extends XotBaseResourceTable
             'delete' => DeleteBulkAction::make(),
         ];
     }
->>>>>>> laraxot/dev
 }

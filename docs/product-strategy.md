@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media Module - Product Strategy"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "product strategy"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> laraxot/dev
 # Media - Product Strategy
 # Media Module - Product Strategy
 
@@ -157,8 +154,4 @@ Portare **Media** a uno stato in cui il progetto ottiene un vantaggio netto e mi
 
 - Action-first: niente generic `Services` per la business logic
 - Standard operativo: `spatie/laravel-queueable-action`
-<<<<<<< HEAD
 - Convenzione: Action con metodo `execute()` e dispatch tramite container
-=======
-- Convenzione: Action con metodo `execute()` e dispatch tramite container
->>>>>>> laraxot/dev

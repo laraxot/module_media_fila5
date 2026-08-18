@@ -5,23 +5,15 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\HasMediaResource\RelationManagers;
 
 use Modules\Media\Filament\Resources\HasMediaResource\Actions\AddAttachmentAction;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Actions\XotBaseAction;
-use Modules\Xot\Filament\Actions\XotBaseActionGroup;
-use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
-=======
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Modules\Xot\Filament\Actions\XotBaseActionGroup;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Resources\XotBaseResource;
->>>>>>> laraxot/dev
 use Override;
 
 class MediaRelationManager extends XotBaseRelationManager
 {
-<<<<<<< HEAD
-=======
     /**
      * Il namespace annida questo RelationManager sotto `HasMediaResource`, ma quella
      * classe non esiste: c'e' solo la cartella con Schemas/Tables/Actions. Senza una
@@ -32,7 +24,6 @@ class MediaRelationManager extends XotBaseRelationManager
      */
     protected static string $resource = MediaResource::class;
 
->>>>>>> laraxot/dev
     protected static string $relationship = 'media';
 
     protected static ?string $inverseRelationship = 'model';

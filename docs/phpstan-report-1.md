@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Report PHPStan - Modulo Media"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "phpstan report 1"
 related:
   - "./webm.md"
 ---
->>>>>>> laraxot/dev
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale

@@ -30,8 +30,4 @@ related:
 
 ---
 
-<<<<<<< HEAD
 _Log entries appended chronologically below_
-=======
-_Log entries appended chronologically below_
->>>>>>> laraxot/dev

@@ -264,8 +264,4 @@ private function getSolutionForError(?string $errorCode): string
 
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di correzione automatica
-<<<<<<< HEAD
 **Stato**: ✅ Completato e verificato
-=======
-**Stato**: ✅ Completato e verificato
->>>>>>> laraxot/dev

@@ -39,13 +39,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $converted_file
  * @property string|null $disk
  * @property string|null $file
-<<<<<<< HEAD
- * @property Media|null $media
-=======
  * @property string|null $path
  * @property Media|null $media
  *
->>>>>>> laraxot/dev
  * @method static MediaConvertFactory factory($count = null, $state = [])
  * @method static Builder|MediaConvert newModelQuery()
  * @method static Builder|MediaConvert newQuery()
@@ -71,17 +67,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|MediaConvert whereUpdatedAt($value)
  * @method static Builder|MediaConvert whereUpdatedBy($value)
  * @method static Builder|MediaConvert whereWidth($value)
-<<<<<<< HEAD
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $updater
- * @property-read ProfileContract|null $deleter
-=======
  *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
  * @property-read ProfileContract|null $deleter
  *
->>>>>>> laraxot/dev
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel

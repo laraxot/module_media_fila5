@@ -17,8 +17,4 @@ related:
 4. **Revisione del codice**: code‑review obbligatoria con checklist di qualità.
 5. **Monitoraggio in produzione**: New Relic / Sentry per errori e performance.
 6. **Documentazione**: mantieni aggiornati doc e changelog.
-<<<<<<< HEAD
 7. **Rollback rapido**: feature flags e versioni per tornare indietro.
-=======
-7. **Rollback rapido**: feature flags e versioni per tornare indietro.
->>>>>>> laraxot/dev

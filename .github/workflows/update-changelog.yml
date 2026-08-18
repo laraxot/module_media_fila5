@@ -25,8 +25,4 @@ jobs:
         with:
           branch: main
           commit_message: Update CHANGELOG
-<<<<<<< HEAD
           file_pattern: CHANGELOG.md
-=======
-          file_pattern: CHANGELOG.md
->>>>>>> laraxot/dev

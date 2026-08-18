@@ -84,8 +84,4 @@ related:
 
 ### Versione Incoming
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> laraxot/dev

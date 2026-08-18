@@ -30,8 +30,4 @@ Implementare elaborazione avanzata media: ottimizzazione immagini, conversione f
 ## Collegamenti
 
 - [Roadmap Media](../roadmap.md)
-<<<<<<< HEAD
 - [Indice task Media](tasks-index.md)
-=======
-- [Indice task Media](tasks-index.md)
->>>>>>> laraxot/dev

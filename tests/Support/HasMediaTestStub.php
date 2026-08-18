@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Support;
 
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Model;
-=======
->>>>>>> laraxot/dev
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Collection;
 use Spatie\MediaLibrary\Conversions\Conversion;
@@ -32,11 +29,7 @@ abstract class HasMediaTestStub implements HasMedia
     }
 
     /**
-<<<<<<< HEAD
-     * @return MorphMany<Media, Model>
-=======
      * @return MorphMany<Media, \Illuminate\Database\Eloquent\Model>
->>>>>>> laraxot/dev
      */
     public function media(): MorphMany
     {
@@ -64,11 +57,7 @@ abstract class HasMediaTestStub implements HasMedia
      */
     public function getMedia(string $collectionName = 'default', callable|array $filters = []): Collection
     {
-<<<<<<< HEAD
-        return new Collection;
-=======
         return new Collection();
->>>>>>> laraxot/dev
     }
 
     public function clearMediaCollection(string $collectionName = 'default'): HasMedia

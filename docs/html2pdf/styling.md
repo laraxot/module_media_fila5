@@ -147,8 +147,4 @@ $src = 'data:image/png;base64,' . $imageData;
 
 // Passa la stringa $src alla view
 return view('pdf.template', compact('src'));
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> laraxot/dev

@@ -29,8 +29,4 @@ Sfoltire l'enorme documentazione del modulo Media (160+ file), eliminando duplic
 - [ ] Aggiornare `00-index.md` rimuovendo riferimenti a file temporanei.
 
 ## 🔗 Riferimenti
-<<<<<<< HEAD
 - [Roadmap Media](../roadmap.md)
-=======
-- [Roadmap Media](../roadmap.md)
->>>>>>> laraxot/dev

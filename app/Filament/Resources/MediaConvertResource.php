@@ -19,16 +19,10 @@ class MediaConvertResource extends XotBaseResource
     protected static ?string $model = MediaConvert::class;
 
     /**
-<<<<<<< HEAD
-     * @return array<string, Component>
-     */
-    #[Override]
-=======
      * Schema legacy del form: la sorgente di verità è MediaConvertForm::getFormSchema().
      *
      * @return array<string, Component>
      */
->>>>>>> laraxot/dev
     public static function getFormSchemaOld(): array
     {
         return [
@@ -69,24 +63,18 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @return array<string, mixed>
      */
->>>>>>> laraxot/dev
     #[Override]
     public static function getRelations(): array
     {
         return [];
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @return array<string, mixed>
      */
->>>>>>> laraxot/dev
     #[Override]
     public static function getPages(): array
     {

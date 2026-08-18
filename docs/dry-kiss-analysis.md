@@ -31,8 +31,4 @@ Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83
 ## 🚀 PIANO
 Resources refactoring (2 giorni)
 
-<<<<<<< HEAD
 **Status:** 🟢 BUONO
-=======
-**Status:** 🟢 BUONO
->>>>>>> laraxot/dev

@@ -90,8 +90,4 @@ args = ["laravel/artisan", "boost:mcp"]
         "boost:mcp"
     ]
 }
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> laraxot/dev

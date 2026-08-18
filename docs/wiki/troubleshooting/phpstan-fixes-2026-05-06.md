@@ -1,26 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-title: "Phpstan Fixes"
-type: concept
-status: deprecated
-module: "Media"
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "deprecated phpstan-fixes"
-related:
-  - "./phpstan-fixes.md"
----
-# Phpstan Fixes
-
-> Deprecated: non aggiungere date nel filename; usare `created/updated` nel front matter.
-
-Vedi il file canonico: [phpstan-fixes.md](./phpstan-fixes.md)
-<<<<<<< HEAD
-=======
-=======
 title: "PHPStan Fixes 2026-05-06"
 type: troubleshooting
 sources: ["phpstan_modules_initial.json"]
@@ -55,5 +33,3 @@ Incorrect type inference during fluent chain. `inFormat()` might return a driver
 ## Fix Strategy
 1. BREAK the fluent chain.
 2. Assert type after `inFormat()`.
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
