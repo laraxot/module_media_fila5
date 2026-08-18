@@ -9,4 +9,8 @@ qmd: "core functionality"
 related:
   - "./webm.md"
 ---
+<<<<<<< HEAD
 # Core Functionality
+=======
+# Core Functionality
+>>>>>>> laraxot/dev

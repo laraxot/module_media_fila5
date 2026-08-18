@@ -21,6 +21,10 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Filament\Clusters\Test;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+>>>>>>> laraxot/dev
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Override;
 use Webmozart\Assert\Assert;
@@ -246,6 +250,7 @@ class S3Test extends XotBasePage
             return;
         }
 
+<<<<<<< HEAD
         Assert::string($filePath);
 
         // Generate CloudFront signed URL for attachment
@@ -255,6 +260,15 @@ class S3Test extends XotBasePage
             'filePath' => $filePath,
             'url2' => Storage::disk('s3')->url($filePath),
             'url3' => Storage::disk('s3')->temporaryUrl($filePath, now()->addMinutes(5)),
+=======
+        // Generate CloudFront signed URL for attachment
+        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
+        dddx([
+            'signedurl' => $signedUrl,
+            'filePath' => $filePath,
+            'url2' => Storage::disk('s3')->url(SafeStringCastAction::cast($filePath)),
+            'url3' => Storage::disk('s3')->temporaryUrl(SafeStringCastAction::cast($filePath), now()->addMinutes(5)),
+>>>>>>> laraxot/dev
         ]);
         $this->debugResults = [];
         $this->updateDebugOutput();
@@ -267,14 +281,21 @@ class S3Test extends XotBasePage
      */
     private function buildConfigDebugData(): array
     {
+<<<<<<< HEAD
         $key = config('filesystems.disks.s3.key', '');
         Assert::string($key);
 
+=======
+>>>>>>> laraxot/dev
         return [
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
+<<<<<<< HEAD
                 'AWS_ACCESS_KEY_ID' => substr($key, 0, 8).'...',
+=======
+                'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, 8).'...',
+>>>>>>> laraxot/dev
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
@@ -471,15 +492,22 @@ class S3Test extends XotBasePage
             ]);
 
             $policy = $s3->getBucketPolicy(['Bucket' => config('filesystems.disks.s3.bucket')]);
+<<<<<<< HEAD
             $policyJson = $policy['Policy'];
             Assert::string($policyJson);
+=======
+>>>>>>> laraxot/dev
 
             return [
                 'title' => '📜 Bucket Policy',
                 'status' => 'info',
                 'data' => [
                     'Policy Exists' => '✅ Yes',
+<<<<<<< HEAD
                     'Policy' => json_encode(json_decode($policyJson), JSON_PRETTY_PRINT),
+=======
+                    'Policy' => json_encode(json_decode(SafeStringCastAction::cast($policy['Policy'])), JSON_PRETTY_PRINT),
+>>>>>>> laraxot/dev
                 ],
             ];
         } catch (AwsException $e) {
@@ -595,10 +623,15 @@ class S3Test extends XotBasePage
                 continue;
             }
 
+<<<<<<< HEAD
             $title = $result['title'];
             $status = $result['status'];
             Assert::string($title);
             Assert::string($status);
+=======
+            $title = SafeStringCastAction::cast($result['title']);
+            $status = SafeStringCastAction::cast($result['status']);
+>>>>>>> laraxot/dev
             $data = $result['data'];
 
             $output[] = "=== {$title} ===";
@@ -610,10 +643,16 @@ class S3Test extends XotBasePage
                     $keyStr = (string) $key;
                     if (is_array($value)) {
                         $output[] = "{$keyStr}: ".json_encode($value, JSON_PRETTY_PRINT);
+<<<<<<< HEAD
                     } elseif (is_string($value) || is_int($value) || is_float($value) || is_bool($value) || $value === null) {
                         $output[] = "{$keyStr}: ".$value;
                     } elseif ($value instanceof \Stringable) {
                         $output[] = "{$keyStr}: ".$value;
+=======
+                    } else {
+                        $valueStr = SafeStringCastAction::cast($value);
+                        $output[] = "{$keyStr}: {$valueStr}";
+>>>>>>> laraxot/dev
                     }
                 }
             }
@@ -647,10 +686,15 @@ class S3Test extends XotBasePage
                 return;
             }
 
+<<<<<<< HEAD
             Assert::string($filePath);
 
             // Generate CloudFront signed URL for attachment
             $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
+=======
+            // Generate CloudFront signed URL for attachment
+            $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
+>>>>>>> laraxot/dev
 
             // Log the email data for testing purposes (no actual email sent)
             Log::debug('S3 Test Email Data', [
@@ -792,11 +836,19 @@ class S3Test extends XotBasePage
                     'cloudfront_url' => $cloudFrontUrl,
                     'temporary_url' => $temporaryUrl,
                 ],
+<<<<<<< HEAD
                 'uploaded_file' => is_string($filePath) && $filePath !== ''
                     ? [
                         'path' => $filePath,
                         'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 30),
                         'temporary_url' => $s3Disk->temporaryUrl($filePath, now()->addMinutes(30)),
+=======
+                'uploaded_file' => $filePath
+                    ? [
+                        'path' => SafeStringCastAction::cast($filePath),
+                        'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 30),
+                        'temporary_url' => $s3Disk->temporaryUrl(SafeStringCastAction::cast($filePath), now()->addMinutes(30)),
+>>>>>>> laraxot/dev
                     ] : null,
             ];
 

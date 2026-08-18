@@ -26,4 +26,8 @@ Seeder: `database/seeders/MediaDatabaseSeeder.php`
 - Add exemplar seeding for Media, TemporaryUpload (small count) in `MediaDatabaseSeeder` or dedicated seeders.
 
 ## Likely non-business-critical
+<<<<<<< HEAD
 - None; all three are concrete but can be optionally seeded for demos/tests.
+=======
+- None; all three are concrete but can be optionally seeded for demos/tests.
+>>>>>>> laraxot/dev

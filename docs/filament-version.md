@@ -25,4 +25,8 @@ All resources, forms, tables, infolists, widgets and actions must follow the v5 
 
 **Last verified**: 2026-05-21
 
+<<<<<<< HEAD
 **Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+=======
+**Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+>>>>>>> laraxot/dev

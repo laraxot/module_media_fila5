@@ -128,4 +128,8 @@ Se entrambi i file contengono contenuto diverso:
 - PSR-4: Autoloading Standard
 - Laravel Naming Conventions
 - Filament Best Practices
+<<<<<<< HEAD
 - Git Case Sensitivity Issues
+=======
+- Git Case Sensitivity Issues
+>>>>>>> laraxot/dev

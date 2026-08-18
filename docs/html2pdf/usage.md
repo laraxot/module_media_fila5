@@ -129,4 +129,8 @@ Il contenuto all'interno di questo tag non verrà spezzato tra due pagine.
         <!-- Questa sezione rimarrà unita -->
     </table>
 </nobreak>
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> laraxot/dev

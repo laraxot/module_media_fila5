@@ -61,4 +61,8 @@ _No troubleshooting pages created yet_
 
 _Media provides specific functionality for the Laraxot ecosystem._
 
+<<<<<<< HEAD
 See [project wiki](../../docs/wiki/index.md) for cross-module integration.
+=======
+See [project wiki](../../docs/wiki/index.md) for cross-module integration.
+>>>>>>> laraxot/dev
