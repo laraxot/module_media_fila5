@@ -108,8 +108,4 @@ Overall Module Completion: 60%
 
 ### Versione Incoming
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> laraxot/dev

@@ -17,13 +17,9 @@ use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
 use Modules\Media\Filament\Clusters\Test;
-<<<<<<< HEAD
-use Modules\Xot\Filament\Pages\XotBasePage;
-use Webmozart\Assert\Assert;
-=======
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
->>>>>>> laraxot/dev
+use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
 
@@ -254,16 +250,8 @@ class AwsTest extends XotBasePage
      */
     protected function getAwsConfig(): array
     {
-<<<<<<< HEAD
-        $key = config('filesystems.disks.s3.key', '');
-        Assert::string($key);
-
-        return [
-            'AWS_ACCESS_KEY_ID' => substr($key, 0, self::KEY_PREVIEW_LENGTH).'...',
-=======
         return [
             'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, self::KEY_PREVIEW_LENGTH).'...',
->>>>>>> laraxot/dev
             'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
             'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
             'CLOUDFRONT_URL' => config('filesystems.cloudfront.url'),

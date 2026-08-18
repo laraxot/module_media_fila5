@@ -50,8 +50,4 @@ Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambi
 - Se il metodo ha firme diverse, meglio evitare l’ereditarietà implicita e preferire un service/helper dedicato.
 - Per i metodi di tipo accessor/mutator, la duplicazione è spesso legata a pattern Eloquent ricorrenti.
 
-<<<<<<< HEAD
 > Documento generato il 2026-06-15 da Claude Code.
-=======
-> Documento generato il 2026-06-15 da Claude Code.
->>>>>>> laraxot/dev

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Changelog
-
-Tutte le variazioni importanti di Media saranno generate automaticamente da semantic-release.
-=======
 ---
 title: "Changelog"
 module: "Media"
@@ -17,4 +12,3 @@ related:
 # Changelog
 
 Tutte le variazioni importanti di Media saranno generate automaticamente da semantic-release.
->>>>>>> laraxot/dev

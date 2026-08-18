@@ -62,11 +62,8 @@ class Clip extends Component
     }
 
     /**
-<<<<<<< HEAD
-=======
      * Undocumented function.
      *
->>>>>>> laraxot/dev
      * @param  array<string, mixed>  $data
      */
     public function updateDataFromModal(string $id, array $data): void

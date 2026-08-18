@@ -476,8 +476,4 @@ describe('Media Performance Tests', function () {
 
 
 **Testing Framework**: Pest
-<<<<<<< HEAD
 **Environment**: .env.testing
-=======
-**Environment**: .env.testing
->>>>>>> laraxot/dev

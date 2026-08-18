@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ---
 title: "Merge Conflict Files List"
 module: "Media"
@@ -92,5 +90,4 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 ---
 *Generated on: $(date)
 *Total files: 96
->>>>>>> laraxot/dev
 *Status: Pending resolution*

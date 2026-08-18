@@ -14,8 +14,4 @@ related:
 
 <!-- Contenuto migrato da _docs/_competitors.txt -->
 
-<<<<<<< HEAD
 https://github.com/outer-web/filament-image-library
-=======
-https://github.com/outer-web/filament-image-library
->>>>>>> laraxot/dev

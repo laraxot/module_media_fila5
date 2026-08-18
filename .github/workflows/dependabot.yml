@@ -27,8 +27,4 @@ jobs:
         run: composer validate --strict
 
       - name: Check for security advisories
-<<<<<<< HEAD
         run: composer audit --format=json | jq '.advisories | length' | xargs -I {} sh -c 'if [ {} -gt 0 ]; then echo "Security advisories found!"; exit 1; else echo "No security advisories"; fi'
-=======
-        run: composer audit --format=json | jq '.advisories | length' | xargs -I {} sh -c 'if [ {} -gt 0 ]; then echo "Security advisories found!"; exit 1; else echo "No security advisories"; fi'
->>>>>>> laraxot/dev

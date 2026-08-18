@@ -42,8 +42,4 @@ BMAD non e' un generatore casuale di codice: e' il processo di delivery. Prima s
 
 - Raw ufficiale BMAD: `docs/raw/bmad/llms-full.txt`.
 - Sintesi progetto: `docs/wiki/bmad-method-v63.md`.
-<<<<<<< HEAD
 - Ogni modulo/tema mantiene questa nota in `docs/wiki/bmad-method.md` come promemoria operativo.
-=======
-- Ogni modulo/tema mantiene questa nota in `docs/wiki/bmad-method.md` come promemoria operativo.
->>>>>>> laraxot/dev

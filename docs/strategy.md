@@ -15,8 +15,4 @@ related:
 Specialized requirement for Media within the Public Administration sector.
 
 ## 💎 Unique Value Proposition
-<<<<<<< HEAD
 Agnostic, modular, and type-safe implementation of Media logic.
-=======
-Agnostic, modular, and type-safe implementation of Media logic.
->>>>>>> laraxot/dev

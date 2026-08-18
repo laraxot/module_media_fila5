@@ -16,8 +16,4 @@ related:
 - **Launch Lead:** @CoreTeam
 
 ## 🎯 Launch Goals
-<<<<<<< HEAD
 - Deploy stable version of Media Module.
-=======
-- Deploy stable version of Media Module.
->>>>>>> laraxot/dev

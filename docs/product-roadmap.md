@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media Module - Product Roadmap"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "product roadmap"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> laraxot/dev
 # Media - Product Roadmap
 # Media Module - Product Roadmap
 
@@ -161,8 +158,4 @@ Questo roadmap traduce il PRD in sequenza di rilascio per **Media**, che nel pro
 - [PRD](prd.md)
 - [Product Strategy](product-strategy.md)
 - [Sprint Planning Meeting](sprint-planning-meeting.md)
-<<<<<<< HEAD
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
-=======
-- [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
->>>>>>> laraxot/dev

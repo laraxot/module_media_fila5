@@ -58,10 +58,7 @@ class ViewMedia extends XotBaseViewRecord
                                     $actionData = $data;
                                     $actionData['disk'] = (string) $record->disk;
                                     $actionData['file'] = (string) $record->path.'/'.(string) $record->file_name;
-<<<<<<< HEAD
-=======
                                     $actionData['file'] = ((string) $record->path).'/'.((string) $record->file_name);
->>>>>>> laraxot/dev
                                     $convert_data = ConvertData::from($actionData);
 
                                     /** @var array<string, mixed> $convertArray */

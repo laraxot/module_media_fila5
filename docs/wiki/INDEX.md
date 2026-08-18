@@ -23,8 +23,4 @@ qmd search "Media <topic>" --limit 5
 
 ## Composer / nwidart
 
-<<<<<<< HEAD
-- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello fixcity)
-=======
 - [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello laraxot)
->>>>>>> laraxot/dev

@@ -17,8 +17,4 @@ Develop the Media Module as a high-performance, specialized component of the Lar
 ## 🗓️ Timeline
 ### Q1 2026: Foundation
 - Standardize Media Module Documentation - *Status: Shipped*
-<<<<<<< HEAD
 - PHPStan Level 10 Audit - *Status: In Progress*
-=======
-- PHPStan Level 10 Audit - *Status: In Progress*
->>>>>>> laraxot/dev

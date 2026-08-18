@@ -26,16 +26,10 @@ class TemporaryUploadResource extends XotBaseResource
     protected static ?string $model = TemporaryUpload::class;
 
     /**
-<<<<<<< HEAD
-     * @return array<string, Component>
-     */
-    #[Override]
-=======
      * Schema legacy del form: la sorgente di verità è TemporaryUploadForm::getFormSchema().
      *
      * @return array<string, Component>
      */
->>>>>>> laraxot/dev
     public static function getFormSchemaOld(): array
     {
         return [

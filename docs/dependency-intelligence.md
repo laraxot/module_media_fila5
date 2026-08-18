@@ -53,8 +53,4 @@ Aggiornato da `composer show` il 2026-03-02.
 ## Deep Study References
 
 - [Composer packages study](../../../../docs/architecture/composer-packages-study.md)
-<<<<<<< HEAD
 - [Composer packages full inventory](../../../../docs/architecture/composer-packages-full-inventory.md)
-=======
-- [Composer packages full inventory](../../../../docs/architecture/composer-packages-full-inventory.md)
->>>>>>> laraxot/dev

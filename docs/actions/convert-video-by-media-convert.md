@@ -94,8 +94,4 @@ sul tipo restituito). Fix: si mantiene il riferimento a `$export` (il
 `MediaExporter`) in una variabile, si applica `->inFormat()` in chain, e si
 chiama `addFilter()` e `save()` come chiamate separate su `$export`, non concatenate.
 
-<<<<<<< HEAD
 [Torna alla documentazione Media](/docs/modules/module_media.md#actions)
-=======
-[Torna alla documentazione Media](/docs/modules/module_media.md#actions)
->>>>>>> laraxot/dev

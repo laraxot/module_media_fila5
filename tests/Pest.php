@@ -3,10 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\DB;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Schema;
-=======
->>>>>>> laraxot/dev
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Models\Media;
 use PHPUnit\Framework\Assert;
@@ -19,11 +16,8 @@ use function Safe\file_get_contents;
  * Vietato pest()->extend() e pest()->uses() qui (PHPStan method.internalClass).
  */
 
-<<<<<<< HEAD
-=======
 require_once __DIR__.'/../../Xot/tests/XotBasePest.php';
 
->>>>>>> laraxot/dev
 /**
  * @param  array<string, mixed>  $where
  */
@@ -106,19 +100,11 @@ function makeMedia(array $attributes = []): Media
  */
 function mediaTableColumns(): array
 {
-<<<<<<< HEAD
-    $columns = Schema::getColumnListing('media');
-
-    return array_values(array_filter(
-        $columns,
-        static fn (mixed $column): bool => is_string($column) && $column !== '',
-=======
     $columns = \Illuminate\Support\Facades\Schema::getColumnListing('media');
 
     return array_values(array_filter(
         $columns,
         static fn (mixed $column): bool => is_string($column) && '' !== $column,
->>>>>>> laraxot/dev
     ));
 }
 
@@ -136,16 +122,6 @@ function mediaPayloadSet(array $payload, array $columns, string $column, mixed $
     return $payload;
 }
 
-<<<<<<< HEAD
-function mediaIntegerish(mixed $value): int
-{
-    Webmozart\Assert\Assert::integerish($value);
-
-    return (int) $value;
-}
-
-=======
->>>>>>> laraxot/dev
 /**
  * @param  class-string  $class
  */
@@ -158,8 +134,6 @@ function assertMediaUsesQueueableAction(string $class): void
 }
 
 /**
-<<<<<<< HEAD
-=======
  * Normalizza un valore numerico (spesso mixed, es. da getKey()/getAttribute())
  * in int per confronti/assert type-safe nei test.
  */
@@ -171,7 +145,6 @@ function mediaIntegerish(mixed $value): int
 }
 
 /**
->>>>>>> laraxot/dev
  * @param  class-string  $class
  */
 function assertMediaDeclaresStrictTypes(string $class): void

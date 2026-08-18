@@ -11,8 +11,4 @@ related:
 ---
 # Media Module Roadmap
 
-<<<<<<< HEAD
 Vedi [roadmap/00-index](roadmap/00-index.md).
-=======
-Vedi [roadmap/00-index](roadmap/00-index.md).
->>>>>>> laraxot/dev

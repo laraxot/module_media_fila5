@@ -18,8 +18,4 @@ Raccomandazioni
 - Centralizzare esempi di upload e gestione media in un documento condiviso e referenziarlo da ogni modulo.
 - Standardizzare nomi e posizioni dei file docs per miglior ricerca automatica.
 
-<<<<<<< HEAD
 Autore: Copilot CLI
-=======
-Autore: Copilot CLI
->>>>>>> laraxot/dev

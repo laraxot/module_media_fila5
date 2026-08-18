@@ -391,8 +391,4 @@ Remember: Good tests are the foundation of reliable software development.
 
 ---
 
-<<<<<<< HEAD
 *
-=======
-*
->>>>>>> laraxot/dev

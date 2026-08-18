@@ -13,8 +13,4 @@ related:
 
 <!-- Contenuto migrato da _docs/aws.txt -->
 
-<<<<<<< HEAD
 https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
-=======
-https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
->>>>>>> laraxot/dev

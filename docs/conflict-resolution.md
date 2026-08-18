@@ -32,8 +32,4 @@ related:
 - composer.json
 
 ## Backlinks
-<<<<<<< HEAD
 - [Root conflict resolution report](../../../../docs/conflict-resolution-report.md)
-=======
-- [Root conflict resolution report](../../../../docs/conflict-resolution-report.md)
->>>>>>> laraxot/dev

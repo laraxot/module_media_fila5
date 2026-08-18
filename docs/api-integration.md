@@ -9,8 +9,4 @@ qmd: "api integration"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
 # API Integration
-=======
-# API Integration
->>>>>>> laraxot/dev

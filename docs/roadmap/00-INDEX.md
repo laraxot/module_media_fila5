@@ -33,8 +33,4 @@ related:
 
 ## Collegamenti
 
-<<<<<<< HEAD
 - [00-index modulo](../00-index.md)
-=======
-- [00-index modulo](../00-index.md)
->>>>>>> laraxot/dev

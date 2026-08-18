@@ -9,8 +9,4 @@ qmd: "user interface"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
 # User Interface
-=======
-# User Interface
->>>>>>> laraxot/dev

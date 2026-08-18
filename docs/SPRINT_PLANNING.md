@@ -76,8 +76,4 @@ Implement core media upload and storage system with basic transformations.
 
 ---
 
-<<<<<<< HEAD
 *Last Updated: March 12, 2026*
-=======
-*Last Updated: March 12, 2026*
->>>>>>> laraxot/dev

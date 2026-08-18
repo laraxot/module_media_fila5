@@ -20,8 +20,4 @@ related:
 
 ## Next Chaos Steps
 - Simulate unsupported exporter methods and assert controlled exception path.
-<<<<<<< HEAD
 - Add chaos test for broken media conversion format class.
-=======
-- Add chaos test for broken media conversion format class.
->>>>>>> laraxot/dev

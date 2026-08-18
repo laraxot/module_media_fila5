@@ -13,8 +13,4 @@ related:
 
 ## Features
 
-<<<<<<< HEAD
 ## Refactors
-=======
-## Refactors
->>>>>>> laraxot/dev

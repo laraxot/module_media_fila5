@@ -21,8 +21,4 @@ related:
 
 1. Aggiornare docs insieme ai fix di codice.
 2. Usare checklist pre-merge e post-fix.
-<<<<<<< HEAD
 3. Mantenere un set di file canonici per diagnosi rapida.
-=======
-3. Mantenere un set di file canonici per diagnosi rapida.
->>>>>>> laraxot/dev

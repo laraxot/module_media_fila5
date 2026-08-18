@@ -109,8 +109,4 @@ jobs:
           curl -X POST https://usX.api.mailchimp.com/3.0/campaigns/${{ secrets.MAILCHIMP_CAMPAIGN_ID }}/content \
             -u "anystring:${{ secrets.MAILCHIMP_API_KEY }}" \
             -H 'Content-Type: application/json' \
-<<<<<<< HEAD
             -d @marketing/newsletter.md
-=======
-            -d @marketing/newsletter.md
->>>>>>> laraxot/dev

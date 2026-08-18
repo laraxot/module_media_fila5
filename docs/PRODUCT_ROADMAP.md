@@ -111,8 +111,4 @@ To provide a **comprehensive media management system** that handles all image, v
 
 ---
 
-<<<<<<< HEAD
 *Last Updated: March 12, 2026*
-=======
-*Last Updated: March 12, 2026*
->>>>>>> laraxot/dev
