@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 ---
 title: "Media Module - File Management Architecture"
 module: "Media"
@@ -9,6 +13,11 @@ qmd: "file management architecture"
 related:
   - "./webm.md"
 ---
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Media Module - File Management Architecture
 
 ## 🎯 Module Overview
@@ -1154,4 +1163,12 @@ readonly class ConversionConfiguration
 - **User Satisfaction**: >95% upload success rate
 - **System Performance**: <2GB memory usage per worker
 
+<<<<<<< HEAD
 Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+=======
+<<<<<<< HEAD
+Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+=======
+Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

@@ -9,4 +9,8 @@ qmd: "configuration"
 related:
   - "./webm.md"
 ---
+<<<<<<< HEAD
 # Configuration
+=======
+# Configuration
+>>>>>>> laraxot/dev

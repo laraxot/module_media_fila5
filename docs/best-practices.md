@@ -9,4 +9,8 @@ qmd: "best practices"
 related:
   - "./webm.md"
 ---
+<<<<<<< HEAD
 # Best Practices
+=======
+# Best Practices
+>>>>>>> laraxot/dev

@@ -39,4 +39,8 @@ related:
 - Update this file when major cleanup is executed.
 
 ---
+<<<<<<< HEAD
 Generated during docs confidence hardening batch (2026-03-07).
+=======
+Generated during docs confidence hardening batch (2026-03-07).
+>>>>>>> laraxot/dev

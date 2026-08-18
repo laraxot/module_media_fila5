@@ -26,4 +26,8 @@ related:
 ## Long Term
 
 1. Stabilita sotto fault randomizzati (chaos testing).
+<<<<<<< HEAD
 2. Manutenibilita alta con onboarding rapido.
+=======
+2. Manutenibilita alta con onboarding rapido.
+>>>>>>> laraxot/dev

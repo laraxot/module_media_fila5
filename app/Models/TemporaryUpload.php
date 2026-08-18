@@ -72,7 +72,11 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
+<<<<<<< HEAD
     /** @phpstan-use HasXotFactory<TemporaryUploadFactory> */
+=======
+    /** @use HasXotFactory<TemporaryUploadFactory> */
+>>>>>>> laraxot/dev
     use HasXotFactory;
 
     use HasUuids;

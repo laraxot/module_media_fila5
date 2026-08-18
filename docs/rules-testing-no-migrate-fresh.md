@@ -21,4 +21,8 @@ related:
 
 ## Correct Approach
 - Only use `DatabaseTransactions` to rollback state after tests.
+<<<<<<< HEAD
 - Maintain strict database boundaries.
+=======
+- Maintain strict database boundaries.
+>>>>>>> laraxot/dev
