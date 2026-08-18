@@ -26,7 +26,7 @@ class AwsTest extends XotBasePage
 {
     protected static ?string $cluster = Test::class;
 
-    /** @var array<string, array<string, mixed>> */
+    /** @var array<string, mixed> */
     public array $testResults = [];
 
     public string $activeTab = 's3';

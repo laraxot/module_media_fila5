@@ -8,6 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Modules\Media\Models\Media;
 use Webmozart\Assert\Assert;
 
+// phpmd: LongClassName — nome esplicito per upload diretto S3
 class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 {
     /**
@@ -28,7 +29,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
     }
 
     /**
-     * @return array<string, string>
+     * @return array<string, string|array<string, string>>
      */
     public function messages(): array
     {
@@ -39,7 +40,7 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getDatabaseConnection(): string
     {
-        $mediaModel = $this->newMediaModel();
+        $mediaModel = $this->resolveMediaModel();
 
         if ($mediaModel->getConnectionName() === 'default') {
             return '';
@@ -50,14 +51,15 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getMediaTableName(): string
     {
-        return $this->newMediaModel()->getTable();
+        return $this->resolveMediaModel()->getTable();
     }
 
-    protected function newMediaModel(): Media
+    private function resolveMediaModel(): Media
     {
         $mediaModelClass = config('media-library.media_model');
-        Assert::isAOf($mediaModelClass, Media::class);
+        Assert::string($mediaModelClass);
+        Assert::subclassOf($mediaModelClass, Media::class);
 
-        return new $mediaModelClass;
+        return new $mediaModelClass();
     }
 }

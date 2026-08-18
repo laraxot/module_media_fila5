@@ -8,9 +8,9 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\PageRegistration;
+use Filament\Schemas\Components\Component;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\CreateTemporaryUpload;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\EditTemporaryUpload;
-use Filament\Forms\Components\Field;
 // use Modules\Media\Filament\Resources\TemporaryUploadResource\RelationManagers;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\ListTemporaryUploads;
 // use Filament\Forms;
@@ -26,9 +26,9 @@ class TemporaryUploadResource extends XotBaseResource
     protected static ?string $model = TemporaryUpload::class;
 
     /**
-     * @return array<string, mixed>
+     * @return array<string, Component>
      */
-    //#[Override]
+    #[Override]
     public static function getFormSchemaOld(): array
     {
         return [
