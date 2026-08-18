@@ -39,9 +39,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $converted_file
  * @property string|null $disk
  * @property string|null $file
- * @property string|null $path
  * @property Media|null $media
- *
  * @method static MediaConvertFactory factory($count = null, $state = [])
  * @method static Builder|MediaConvert newModelQuery()
  * @method static Builder|MediaConvert newQuery()
@@ -67,14 +65,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder|MediaConvert whereUpdatedAt($value)
  * @method static Builder|MediaConvert whereUpdatedBy($value)
  * @method static Builder|MediaConvert whereWidth($value)
- *
  * @property-read ProfileContract|null $creator
  * @property-read ProfileContract|null $updater
- *
- * @mixin IdeHelperMediaConvert
- *
  * @property-read ProfileContract|null $deleter
- *
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel
@@ -120,10 +113,7 @@ class MediaConvert extends BaseModel
             return null;
         }
 
-        $path = $this->media->path ?? '';
-        $fileName = $this->media->file_name ?? '';
-
-        return $path.'/'.$fileName;
+        return $this->media->path.'/'.$this->media->file_name;
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
@@ -131,15 +121,12 @@ class MediaConvert extends BaseModel
         if ($this->media === null) {
             return null;
         }
-        $info = pathinfo($this->media->file_name ?? '');
+        $info = pathinfo($this->media->file_name);
         // "dirname" => "."
         // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
         // "extension" => "mp4"
         // "filename" => "20600550-uhd_3840_2160_30fps"
 
-        $path = $this->media->path ?? '';
-        $filename = $info['filename'] ?? '';
-
-        return $path.'/conversions/'.$filename.'_'.$this->id.'.'.$this->format;
+        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
     }
 }

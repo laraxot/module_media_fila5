@@ -1,3 +1,14 @@
+---
+title: "Indice della Documentazione - Modulo Media"
+module: "Media"
+type: concept
+tags: [index]
+created: 2026-07-14
+updated: 2026-07-24
+qmd: "index modulo media bridge readme"
+related:
+  - "./README.md"
+---
 # Indice della Documentazione - Modulo Media
 
 ## Panoramica
@@ -29,7 +40,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](./readme.md) - Panoramica generale del modulo
+- [README](README.md) - Panoramica generale del modulo
 - [Architettura](./architecture/readme.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
@@ -57,10 +68,10 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ### Configurazione
 - [Struttura Config](./config_structure.md) - Struttura dei file di configurazione
 - [Configurazione Upload](./upload-config.md) - Configurazione sistema upload
-- [Principi di Configurazione](./configurations-usage-principles.md) - Principi per l'utilizzo delle configurazioni
+- [Principi di Configurazione](./configurations_usage_principles.md) - Principi per l'utilizzo delle configurazioni
 
 ### Pattern e Architettura
-- [Pattern Factory](./factory-pattern-analysis.md) - Analisi del pattern Factory
+- [Pattern Factory](./factory_pattern_analysis.md) - Analisi del pattern Factory
 - [Risoluzione Dinamica delle Classi](./dynamic_class_resolution.md) - Pattern di risoluzione dinamica delle classi
 - [Queueable Actions](./queueable-action.md) - Utilizzo di Spatie Queueable Actions
 
@@ -78,79 +89,24 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ### 1. Struttura del Modulo
 Il modulo Media segue una struttura standard con directory per modelli, servizi, provider e componenti Filament per garantire chiarezza e manutenibilità.
 
-### 2. Tipi di Media Supportati
-Supporta diversi tipi di media con gestione specifica per ogni formato:
-```php
-// Esempio Configurazione Media
-return [
-    'image' => [
-        'allowed_formats' => ['jpg', 'jpeg', 'png', 'gif', 'webp'],
-        'max_size' => 10240, // KB
-        'optimize' => true,
-    ],
-    'video' => [
-        'allowed_formats' => ['mp4', 'avi', 'mov', 'wmv'],
-        'max_size' => 102400, // KB
-        'convert_to' => 'mp4',
-    ],
-];
-```
+# Indice della Documentazione - Modulo Media
 
-### 3. Servizi Disponibili
-- **SubtitleService**: Gestione e elaborazione sottotitoli
-- **VideoStream**: Streaming video ottimizzato
-- **MediaService**: Servizio principale per la gestione media
+> **Verificato 2026-07-24**: questo file conteneva un indice autogenerato con oltre 30 link a file mai esistiti
+> (`file-upload.md`, `video-conversion.md`, `filament-resources.md`, sottocartelle `actions/`, `architecture/`,
+> `conversions/`, `filament/`, `performance/`, `phpstan/`, `support/` — nessuna esiste sotto `Media/docs/`),
+> in contraddizione con [`README.md`](./README.md) che è l'indice reale e aggiornato. Contenuto consolidato qui:
+> **usare `README.md` come punto di ingresso canonico**, questo file resta come bridge per chi arriva da `index.md`
+> per convenzione di discovery.
 
-### 4. Gestione Errori
-Implementare una gestione robusta degli errori per gestire i fallimenti nell'upload o elaborazione dei media.
+Per la mappa reale della documentazione del modulo Media (scopo, wiki locale, audit, regole architettura), vedi
+**[README.md](./README.md)**.
 
-## Problemi Comuni e Soluzioni
-- **Errori di Upload**: Assicurarsi della corretta configurazione dei limiti di dimensione file
-- **Errori di Conversione**: Verificare la configurazione dei servizi di conversione video
-- **Problemi di Ottimizzazione**: Controllare le impostazioni di ottimizzazione per ogni tipo di media
-- **Colli di Bottiglia Performance**: Utilizzare il queueing per operazioni pesanti come conversione video
-
-## Documentazione e Aggiornamenti
-- Documentare qualsiasi implementazione personalizzata o nuovi tipi di media nella cartella di documentazione pertinente
-- Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Media
-
-## Sottocartelle
-
-### Actions
-- [Index](./actions/index.md) - Indice della documentazione sulle azioni
-
-### Architettura
-- [Index](./architecture/index.md) - Indice della documentazione sull'architettura
-
-### Conversions
-- [Index](./conversions/index.md) - Indice della documentazione sulle conversioni
-
-### Filament
-- [Index](./filament/index.md) - Indice della documentazione sui componenti Filament
-
-### Performance
-- [Index](./performance/index.md) - Indice della documentazione sulle ottimizzazioni
-
-### PHPStan
-- [Index](./phpstan/index.md) - Indice della documentazione PHPStan
-
-### Support
-- [Index](./support/index.md) - Indice della documentazione sui componenti di supporto
-
-## Collegamenti alla Documentazione Correlata
-- [Panoramica Architettura](./architecture.md)
-- [Funzionalità Core](./core-functionality.md)
-- [Gestione File](./file-management.md)
-- [Ottimizzazione](./optimization-analysis.md)
-- [Troubleshooting](./troubleshooting.md)
-
-## Note sulla Manutenzione
-Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
-
-## Risoluzione Conflitti e Standard
-- **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione
-- Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
-- **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
-- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
-
+Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un indice esaustivo):
+- [structure.md](./structure.md)
+- [data-models.md](./data-models.md)
+- [core-functionality.md](./core-functionality.md)
+- [file-management-architecture.md](./file-management-architecture.md)
+- [phpstan_level10_fixes.md](./phpstan_level10_fixes.md) / [phpstan-report.md](./phpstan-report.md)
+- [testing.md](./testing.md)
+- [troubleshooting.md](./troubleshooting.md)
+- [wiki/index.md](./wiki/index.md)

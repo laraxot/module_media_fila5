@@ -52,12 +52,12 @@ class ViewMedia extends XotBaseViewRecord
                             Action::make('convert')
                                 ->tooltip('convert')
                                 ->icon('heroicon-o-scale')
-                                ->schema(MediaConvertResource::getFormSchemaOld())
+                                ->schema(MediaConvertResource::getFormSchema())
                                 ->action(function (Media $record, array $data): void {
                                     /** @var array<string, mixed> $actionData */
                                     $actionData = $data;
                                     $actionData['disk'] = (string) $record->disk;
-                                    $actionData['file'] = ((string) $record->path).'/'.((string) $record->file_name);
+                                    $actionData['file'] = (string) $record->path.'/'.(string) $record->file_name;
                                     $convert_data = ConvertData::from($actionData);
 
                                     /** @var array<string, mixed> $convertArray */

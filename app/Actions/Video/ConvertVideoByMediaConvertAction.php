@@ -12,7 +12,6 @@ namespace Modules\Media\Actions\Video;
 use Exception;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
-use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
 
@@ -39,24 +38,28 @@ class ConvertVideoByMediaConvertAction
             throw new Exception('Il nome del file convertito non è stato specificato');
         }
 
-        $exportedMedia = FFMpeg::fromDisk($data->disk)
+        // Instanziamo il formato prima di usarlo
+        $formatInstance = new $format();
+
+        $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
-            ->export();
+            ->export()
+            ->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
+                $record->update([
+                    'percentage' => $percentage,
+                    'remaining' => $remaining,
+                    'rate' => $rate,
+                ]);
+            })
+            // Utilizziamo il formato istanziato come parametro
+            ->inFormat($formatInstance);
 
-        $exportedMedia->onProgress(function (float $percentage, float $remaining, float $rate) use ($record): void {
-            $record->update([
-                'percentage' => $percentage,
-                'remaining' => $remaining,
-                'rate' => $rate,
-            ]);
-        });
+        // addFilter() e' inoltrato al driver PHPFFMpeg via __call/@mixin: la sua
+        // firma dichiarata restituisce il tipo del driver, non del MediaExporter.
+        // Non lo si concatena per non perdere il tipo corretto di $export.
+        $export->addFilter('-preset', 'ultrafast');
 
-        $exportedMedia = MediaExporterResolver::from(
-            $exportedMedia->toDisk($data->disk)
-        );
-        $exportedMedia->addFilter('-preset', 'ultrafast');
-        $exportedMedia->inFormat($format);
-        $exportedMedia->save($file_new);
+        $export->save($file_new);
 
         $record->update([
             'status' => 'completed',

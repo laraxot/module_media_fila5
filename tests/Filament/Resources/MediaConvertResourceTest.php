@@ -7,13 +7,13 @@ namespace Modules\Media\Tests\Filament\Resources;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Modules\Media\Filament\Resources\MediaConvertResource;
-use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+use PHPUnit\Framework\TestCase;
 
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
-    $form = MediaConvertResource::getFormSchemaOld();
+    $form = MediaConvertResource::getFormSchema();
 
     Assert::assertNotEmpty($form);
 
