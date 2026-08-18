@@ -213,4 +213,8 @@ public function getFormFill(): array
 - [Modules/User/docs/registration-widget.md](../laravel/modules/user/docs/registration-widget.md)
 
 *Autore: AI Assistant*
+<<<<<<< HEAD
 *Versione: 1.0*
+=======
+*Versione: 1.0*
+>>>>>>> laraxot/dev

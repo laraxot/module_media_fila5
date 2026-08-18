@@ -31,4 +31,8 @@ Gestione media, upload, conversioni e streaming.
 ```
 
 ## Note
+<<<<<<< HEAD
 - Personalizza la configurazione per esigenze di streaming o CDN.
+=======
+- Personalizza la configurazione per esigenze di streaming o CDN.
+>>>>>>> laraxot/dev

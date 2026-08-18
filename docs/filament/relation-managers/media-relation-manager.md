@@ -60,4 +60,8 @@ class YourResource extends Resource
 - Implementata integrazione Laraxot
 ## Collegamenti tra versioni di media-relation-manager.md
 * [media-relation-manager.md](../../../media/docs/filament/relation-managers/media-relation-manager.md)
+<<<<<<< HEAD
 * [media-relation-manager.md](../../../media/docs/resources/media-relation-manager.md)
+=======
+* [media-relation-manager.md](../../../media/docs/resources/media-relation-manager.md)
+>>>>>>> laraxot/dev

@@ -34,4 +34,8 @@ L'upgrade a Laravel 13 per il modulo **Media** non è un mero aggiornamento tecn
 L'aggiornamento richiede l'esecuzione di `composer go` dalla root per consolidare le dipendenze merged.
 
 ---
+<<<<<<< HEAD
 **Status**: Purificato e Pronto per il Futuro.
+=======
+**Status**: Purificato e Pronto per il Futuro.
+>>>>>>> laraxot/dev

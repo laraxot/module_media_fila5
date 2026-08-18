@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Indice della Documentazione - Modulo Media"
 module: "Media"
@@ -9,6 +10,9 @@ qmd: "index modulo media bridge readme"
 related:
   - "./README.md"
 ---
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 # Indice della Documentazione - Modulo Media
 
 ## Panoramica
@@ -28,6 +32,32 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
 - **Integrazione CDN**: Supporto per Content Delivery Network
 - **Watermark Automatico**: Applicazione automatica di watermark sui media
+<<<<<<< HEAD
+=======
+=======
+# Media Module Documentation
+
+**Last Update**: Feb 2026
+**Status**: Active Development
+
+## Quick Start
+
+- [README.md](./README.md) - Panoramica modulo
+
+## Core Features
+
+- **Multi-format Files**: Immagini, video, documenti, audio
+- **Upload**: Drag-and-drop, multi-upload
+- **Media Library**: Gestione file (spatie/laravel-medialibrary)
+- **Image Processing**: Ottimizzazione immagini (intervention/image)
+- **Video Conversion**: Conversione video (FFmpeg)
+- **CDN Integration**: Integrazione CDN
+
+## Standards
+
+Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
@@ -40,7 +70,11 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ## Categorie Principali
 
 ### Architettura e Struttura
+<<<<<<< HEAD
 - [README](README.md) - Panoramica generale del modulo
+=======
+- [README](./readme.md) - Panoramica generale del modulo
+>>>>>>> laraxot/dev
 - [Architettura](./architecture/readme.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
@@ -89,6 +123,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ### 1. Struttura del Modulo
 Il modulo Media segue una struttura standard con directory per modelli, servizi, provider e componenti Filament per garantire chiarezza e manutenibilità.
 
+<<<<<<< HEAD
 # Indice della Documentazione - Modulo Media
 
 > **Verificato 2026-07-24**: questo file conteneva un indice autogenerato con oltre 30 link a file mai esistiti
@@ -110,3 +145,81 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
 - [wiki/index.md](./wiki/index.md)
+=======
+### 2. Tipi di Media Supportati
+Supporta diversi tipi di media con gestione specifica per ogni formato:
+```php
+// Esempio Configurazione Media
+return [
+    'image' => [
+        'allowed_formats' => ['jpg', 'jpeg', 'png', 'gif', 'webp'],
+        'max_size' => 10240, // KB
+        'optimize' => true,
+    ],
+    'video' => [
+        'allowed_formats' => ['mp4', 'avi', 'mov', 'wmv'],
+        'max_size' => 102400, // KB
+        'convert_to' => 'mp4',
+    ],
+];
+```
+
+### 3. Servizi Disponibili
+- **SubtitleService**: Gestione e elaborazione sottotitoli
+- **VideoStream**: Streaming video ottimizzato
+- **MediaService**: Servizio principale per la gestione media
+
+### 4. Gestione Errori
+Implementare una gestione robusta degli errori per gestire i fallimenti nell'upload o elaborazione dei media.
+
+## Problemi Comuni e Soluzioni
+- **Errori di Upload**: Assicurarsi della corretta configurazione dei limiti di dimensione file
+- **Errori di Conversione**: Verificare la configurazione dei servizi di conversione video
+- **Problemi di Ottimizzazione**: Controllare le impostazioni di ottimizzazione per ogni tipo di media
+- **Colli di Bottiglia Performance**: Utilizzare il queueing per operazioni pesanti come conversione video
+
+## Documentazione e Aggiornamenti
+- Documentare qualsiasi implementazione personalizzata o nuovi tipi di media nella cartella di documentazione pertinente
+- Aggiornare questo indice se vengono introdotte nuove funzionalità o modifiche significative al modulo Media
+
+## Sottocartelle
+
+### Actions
+- [Index](./actions/index.md) - Indice della documentazione sulle azioni
+
+### Architettura
+- [Index](./architecture/index.md) - Indice della documentazione sull'architettura
+
+### Conversions
+- [Index](./conversions/index.md) - Indice della documentazione sulle conversioni
+
+### Filament
+- [Index](./filament/index.md) - Indice della documentazione sui componenti Filament
+
+### Performance
+- [Index](./performance/index.md) - Indice della documentazione sulle ottimizzazioni
+
+### PHPStan
+- [Index](./phpstan/index.md) - Indice della documentazione PHPStan
+
+### Support
+- [Index](./support/index.md) - Indice della documentazione sui componenti di supporto
+
+## Collegamenti alla Documentazione Correlata
+- [Panoramica Architettura](./architecture.md)
+- [Funzionalità Core](./core-functionality.md)
+- [Gestione File](./file-management.md)
+- [Ottimizzazione](./optimization-analysis.md)
+- [Troubleshooting](./troubleshooting.md)
+
+## Note sulla Manutenzione
+Questa documentazione viene aggiornata regolarmente. Prima di apportare modifiche al codice, consultare la documentazione pertinente e aggiornare i documenti correlati.
+
+## Risoluzione Conflitti e Standard
+- **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione
+- Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
+- **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
+- Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
+- Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
+
+>>>>>>> laraxot/dev
