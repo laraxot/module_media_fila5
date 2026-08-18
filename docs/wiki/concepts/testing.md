@@ -27,8 +27,4 @@ Tutti i test devono essere scritti utilizzando **Pest PHP**. L'uso di classi PHP
 Prima di ogni commit, i test devono passare i seguenti controlli:
 1. Pest: `cd laravel && ./vendor/bin/pest laravel/Modules/Media/tests`
 2. PHPStan: `cd laravel && ./vendor/bin/phpstan analyse laravel/Modules/Media/tests --level=5`
-<<<<<<< HEAD
 3. PHPMD: `phpmd laravel/Modules/Media/tests text phpmd.xml`
-=======
-3. PHPMD: `phpmd laravel/Modules/Media/tests text phpmd.xml`
->>>>>>> laraxot/dev

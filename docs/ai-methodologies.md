@@ -29,8 +29,4 @@ This file is a DRY local index for AI workflows in this module or theme.
 
 ## OpenViking Rule
 
-<<<<<<< HEAD
 Do not duplicate installation or runtime setup here. Keep operational details only in the canonical guide and use this file as a local routing document.
-=======
-Do not duplicate installation or runtime setup here. Keep operational details only in the canonical guide and use this file as a local routing document.
->>>>>>> laraxot/dev

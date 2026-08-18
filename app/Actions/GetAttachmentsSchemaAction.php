@@ -12,13 +12,8 @@ use Webmozart\Assert\Assert;
 class GetAttachmentsSchemaAction
 {
     /**
-<<<<<<< HEAD
-     * @param  array<string>  $attachments
-     * @return array<FileUpload>
-=======
      * @param  array<string|int, string>  $attachments
      * @return array<int, FileUpload>
->>>>>>> laraxot/dev
      */
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
@@ -27,10 +22,6 @@ class GetAttachmentsSchemaAction
         foreach ($attachments as $attachment) {
             $attachmentStr = (string) $attachment;
             $fileUpload = FileUpload::make($attachmentStr)
-<<<<<<< HEAD
-                // $fileUpload=SpatieMediaLibraryFileUpload::make($attachmentStr)
-=======
->>>>>>> laraxot/dev
                 ->directory('temp')
                 ->disk($disk)
                 ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])

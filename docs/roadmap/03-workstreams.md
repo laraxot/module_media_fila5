@@ -29,8 +29,4 @@ related:
 ## WS4 Testing
 
 - Test funzionali mirati sui percorsi ad alto rischio.
-<<<<<<< HEAD
 - Checklist di validazione post-fix.
-=======
-- Checklist di validazione post-fix.
->>>>>>> laraxot/dev

@@ -1,16 +1,4 @@
 ---
-<<<<<<< HEAD
-title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
-module: "Media"
-type: concept
-tags: [AGENTS]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "agents"
-related:
-  - "./webm.md"
----
-=======
 title: "Agent instructions"
 type: reference
 tags: [agents, coding-agent, llm-wiki]
@@ -23,7 +11,6 @@ related:
   - ./coding-agent-manifests.md
 ---
 
->>>>>>> laraxot/dev
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media
@@ -163,8 +150,4 @@ Related:
 
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
-<<<<<<< HEAD
 - [Module Documentation](../README.md)
-=======
-- [Module Documentation](../README.md)
->>>>>>> laraxot/dev

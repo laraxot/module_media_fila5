@@ -23,16 +23,10 @@ class MediaResource extends XotBaseResource
     protected static ?string $model = Media::class;
 
     /**
-<<<<<<< HEAD
-     * @return array<string, Component>
-     */
-    #[Override]
-=======
      * Schema legacy del form: la sorgente di verità è MediaForm::getFormSchema().
      *
      * @return array<string, Component>
      */
->>>>>>> laraxot/dev
     public static function getFormSchemaOld(): array
     {
         return [

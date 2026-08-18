@@ -9,8 +9,4 @@ qmd: "troubleshooting"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
 # Troubleshooting
-=======
-# Troubleshooting
->>>>>>> laraxot/dev

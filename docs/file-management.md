@@ -167,8 +167,4 @@ protected static function booted()
 - [Mappatura dei Campi Database nel Modulo Patient](/laravel/modules/patient/docs/database_field_mapping.md)
 - [Migrazioni del Database](/docs/database-migrations.md)
 - [Gestione degli Utenti](/docs/user-management.md)
-<<<<<<< HEAD
 - [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md)
-=======
-- [Pattern di Ereditarietà dei Modelli](/docs/model-inheritance-patterns.md)
->>>>>>> laraxot/dev

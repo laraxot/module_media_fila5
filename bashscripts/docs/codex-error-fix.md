@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 # Codex Configuration Error Fixes
 
 Questo documento descrive le correzioni applicate agli errori riscontrati durante l'avvio di `codex`.
@@ -84,15 +80,3 @@ args = ["laravel/artisan", "boost:mcp"]
     ]
 }
 ```
-<<<<<<< HEAD
-=======
-=======
----
-module: theme
-topic: codex-error-fix
-canonical: ../../../../Themes/docs/shared-components/codex-error-fix.md
----
-
-See canonical documentation: ../../../../Themes/docs/shared-components/codex-error-fix.md
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

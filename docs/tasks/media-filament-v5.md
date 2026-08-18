@@ -30,8 +30,4 @@ Organizzare la gestione media in Clusters professionali per migliorare l'esperie
 - [ ] Ottimizzazione dei RelationManager per l'associazione media fluida.
 
 ## 🔗 Riferimenti
-<<<<<<< HEAD
 - [Roadmap Media](../roadmap.md)
-=======
-- [Roadmap Media](../roadmap.md)
->>>>>>> laraxot/dev

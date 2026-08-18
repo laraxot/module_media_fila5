@@ -57,8 +57,4 @@ Spostare **Media** in avanti sui gap P0/P1 piu' vicini al valore, evitando lavor
 
 - [Product Strategy](product-strategy.md)
 - [Product Launch Plan](product-launch-plan.md)
-<<<<<<< HEAD
 - [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
-=======
-- [Indice centrale](../../../../docs/project/PRODUCT_DOCS_INDEX_2026_03_12.md)
->>>>>>> laraxot/dev

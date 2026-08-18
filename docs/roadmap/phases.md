@@ -33,8 +33,4 @@ related:
 
 - [ ] Controllo accessi basato su permessi per ogni singolo asset
 - [ ] AI-Powered Tagging: riconoscimento automatico del contenuto delle immagini
-<<<<<<< HEAD
 - [ ] URL firmati e temporanei per la consegna sicura dei media
-=======
-- [ ] URL firmati e temporanei per la consegna sicura dei media
->>>>>>> laraxot/dev
