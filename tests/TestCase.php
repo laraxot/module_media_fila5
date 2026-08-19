@@ -6,11 +6,16 @@ namespace Modules\Media\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Facades\Schema;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
+use Modules\Xot\Tests\XotBasePest;
 use Modules\Xot\Tests\XotBaseTestCase;
+use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\MockObject\MockObject;
+use ReflectionClass;
 use Spatie\MediaLibrary\HasMedia;
+use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Base test case for Media module.
@@ -30,6 +35,60 @@ abstract class TestCase extends XotBaseTestCase
     public function assertMediaTableHas(string $table, array $where, string $connection = 'media'): void
     {
         $this->assertDatabaseHas($table, $where, $connection);
+    }
+
+    /**
+     * Colonne della tabella `media`, filtrate e riindicizzate per l'inferenza PHPStan.
+     *
+     * @return array<int, string>
+     */
+    public static function mediaTableColumns(): array
+    {
+        $columns = Schema::getColumnListing('media');
+
+        return array_values(array_filter(
+            $columns,
+            static fn (mixed $column): bool => is_string($column) && $column !== '',
+        ));
+    }
+
+    /**
+     * Aggiunge `$column` al payload solo se la tabella `media` ha davvero quella colonna:
+     * lo schema varia fra installazioni e un insert cieco fallirebbe.
+     *
+     * @param  array<string, mixed>  $payload
+     * @param  array<int, string>  $columns
+     * @return array<string, mixed>
+     */
+    public static function mediaPayloadSet(array $payload, array $columns, string $column, mixed $value): array
+    {
+        if (in_array($column, $columns, true)) {
+            $payload[$column] = $value;
+        }
+
+        return $payload;
+    }
+
+    /**
+     * @param  class-string  $class
+     */
+    public static function assertMediaUsesQueueableAction(string $class): void
+    {
+        XotBasePest::assertListContains(
+            QueueableAction::class,
+            (new ReflectionClass($class))->getTraitNames(),
+        );
+    }
+
+    /**
+     * @param  class-string  $class
+     */
+    public static function assertMediaDeclaresStrictTypes(string $class): void
+    {
+        Assert::assertStringContainsString(
+            'declare(strict_types=1);',
+            XotBasePest::reflectionSource($class),
+        );
     }
 
     /**

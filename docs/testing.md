@@ -392,3 +392,43 @@ Remember: Good tests are the foundation of reliable software development.
 ---
 
 *
+
+## Baseline coverage e helper di test — 2026-08-19
+
+Comando (la sola variabile `XDEBUG_MODE` non basta: Pest esce
+`Unable to get coverage using Xdebug`):
+
+```bash
+cd laravel
+php -d xdebug.mode=coverage ./vendor/bin/pest -c Modules/Media/phpunit.xml --coverage --min=0
+```
+
+| Misura | test passati | test falliti | `Call to undefined function` | coverage |
+|---|---:|---:|---:|---:|
+| prima | 163 | 62 | 23 | non stampata |
+| dopo | **186** | **39** | **0** | non stampata |
+
+Pest stampa la tabella di coverage **solo a exit 0**: finché la suite è rossa il numero non
+esiste. I 39 rossi residui sono tutti `SQLSTATE[HY000] … no such table` su SQLite — blocco
+d'ambiente, non difetto di codice: il MySQL di progetto `10.100.200.53` è irraggiungibile e
+`XotBaseTestCase` ricade su `fixcity_data.sqlite`, che non ha lo schema.
+
+### Dove stanno gli helper, e perché non in `tests/Pest.php`
+
+`Pest\Bootstrappers\BootFiles` carica `Helpers.php`, `Pest.php` ed `Expectations.php` da un
+solo percorso per run — quello della root. Le funzioni dichiarate in
+`Modules/Media/tests/Pest.php` non venivano mai caricate: erano 12, e le due usate dai test
+di reflection producevano 23 fallimenti.
+
+Regola attuale:
+
+| Serve | Dove sta |
+|---|---|
+| assert condiviso fra moduli | `Modules\Xot\Tests\XotBasePest::` (metodo statico, PSR-4) |
+| helper di dominio Media | `Modules\Media\Tests\TestCase::` (metodo statico) |
+| funzione libera in `tests/Pest.php` | **mai** — `grep -c '^function '` deve dare `0` |
+
+Cancellati perché duplicavano `XotBasePest`: `assertMediaTableHas`, `assertMediaTableMissing`,
+`assertMediaListContains`, `assertMediaReflectionFilename`, `mediaReflectionSource`.
+Spostati come statici su `TestCase`: `mediaTableColumns`, `mediaPayloadSet`,
+`assertMediaUsesQueueableAction`, `assertMediaDeclaresStrictTypes`.
