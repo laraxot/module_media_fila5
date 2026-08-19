@@ -16,7 +16,7 @@ use function Safe\file_get_contents;
  * Vietato pest()->extend() e pest()->uses() qui (PHPStan method.internalClass).
  */
 
-require_once __DIR__.'/../../Xot/tests/XotBasePest.php';
+// Helper condivisi: Modules\Xot\Tests\XotBasePest, per autoload PSR-4. Niente require_once.
 
 /**
  * @param  array<string, mixed>  $where
@@ -100,11 +100,11 @@ function makeMedia(array $attributes = []): Media
  */
 function mediaTableColumns(): array
 {
-    $columns = \Illuminate\Support\Facades\Schema::getColumnListing('media');
+    $columns = Schema::getColumnListing('media');
 
     return array_values(array_filter(
         $columns,
-        static fn (mixed $column): bool => is_string($column) && '' !== $column,
+        static fn (mixed $column): bool => is_string($column) && $column !== '',
     ));
 }
 

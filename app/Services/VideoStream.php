@@ -7,6 +7,7 @@ namespace Modules\Media\Services;
 use Exception;
 use Illuminate\Support\Facades\Storage;
 use Webmozart\Assert\Assert;
+
 use function is_string;
 use function Safe\fclose;
 use function Safe\fread;

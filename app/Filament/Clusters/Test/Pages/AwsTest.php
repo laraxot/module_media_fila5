@@ -19,7 +19,6 @@ use Filament\Schemas\Components\Section;
 use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
-use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
 
@@ -32,9 +31,9 @@ class AwsTest extends XotBasePage
 
     public string $activeTab = 's3';
 
-    private const DEFAULT_REGION = 'eu-west-1';
+    private const string DEFAULT_REGION = 'eu-west-1';
 
-    private const KEY_PREVIEW_LENGTH = 8;
+    private const int KEY_PREVIEW_LENGTH = 8;
 
     /** @var array<string, string> */
     public array $connectionTests = [
