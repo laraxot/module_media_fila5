@@ -6,7 +6,6 @@ namespace Modules\Media\Actions\S3;
 
 use Aws\S3\ObjectUploader;
 use Exception;
-use Webmozart\Assert\Assert;
 
 use function Safe\fclose;
 use function Safe\filesize;

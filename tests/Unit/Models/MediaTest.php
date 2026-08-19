@@ -305,7 +305,6 @@ it('media has entry conversions attribute', function (): void {
 
     $entryConversions = $media->entry_conversions;
 
-    expect($entryConversions)->toBeArray();
     expect($entryConversions)->toHaveCount(2);
     expect($entryConversions[0])->toHaveKey('name');
     expect($entryConversions[0])->toHaveKey('generated');
@@ -315,8 +314,7 @@ it('media has entry conversions attribute', function (): void {
 it('media has factory', function (): void {
     $media = Media::factory()->create();
 
-    expect($media->id)->not()->toBeNull();
-    expect($media)->toBeInstanceOf(Media::class);
+    expect($media->id)->toBeGreaterThan(0);
 });
 
 it('media has casts', function (): void {

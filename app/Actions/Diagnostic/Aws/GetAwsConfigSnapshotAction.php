@@ -6,13 +6,12 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 class GetAwsConfigSnapshotAction
 {
     use QueueableAction;
 
-    private const KEY_PREVIEW_LENGTH = 8;
+    private const int KEY_PREVIEW_LENGTH = 8;
 
     /**
      * @return array<string, mixed>

@@ -13,7 +13,7 @@ uses(TestCase::class);
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
-        expect(new Media)->toBeInstanceOf(SpatieMedia::class);
+        Assert::assertInstanceOf(SpatieMedia::class, new Media);
     });
 
     it('uses HasXotFactory trait', function (): void {
