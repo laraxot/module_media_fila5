@@ -18,6 +18,7 @@ use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
+use Spatie\QueueableAction\ActionJob;
 
 class MediaConvertsTable extends XotBaseResourceTable
 {
@@ -69,7 +70,10 @@ class MediaConvertsTable extends XotBaseResourceTable
                     'file' => $record->file,
                     'disk' => $record->disk,
                 ]);
-                app(ConvertVideoByMediaConvertAction::class)->onQueue()->execute($data, $record);
+                // `QueueableAction::onQueue()` restituisce una classe anonima non tipizzata:
+                // PHPStan la vede `mixed` e ogni chiamata su di essa e' un errore. Il job
+                // che quel proxy costruisce e' pubblico, quindi lo si accoda direttamente.
+                dispatch(new ActionJob(app(ConvertVideoByMediaConvertAction::class), [$data, $record]));
             }),
         ];
     }
