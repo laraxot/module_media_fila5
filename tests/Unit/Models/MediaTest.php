@@ -8,6 +8,7 @@ use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use PHPUnit\Framework\Assert;
+use Modules\Xot\Tests\XotBasePest;
 
 uses(TestCase::class);
 
@@ -22,7 +23,7 @@ it('can create media with minimal data', function (): void {
         'size' => 1024,
     ]);
 
-    assertMediaTableHas('media', [
+    XotBasePest::assertTableHas('media', 'media', [
         'id' => SafeIntCastAction::cast($media->getKey()),
         'collection_name' => 'avatars',
         'name' => 'test-image',
@@ -60,7 +61,7 @@ it('can create media with all fields', function (): void {
 
     $media = Media::factory()->create($mediaData);
 
-    assertMediaTableHas('media', [
+    XotBasePest::assertTableHas('media', 'media', [
         'id' => SafeIntCastAction::cast($media->getKey()),
         'collection_name' => 'images',
         'name' => 'full-image',
@@ -92,7 +93,7 @@ it('media delete removes the record', function (): void {
 
     $media->delete();
 
-    assertMediaTableMissing('media', ['id' => $mediaId]);
+    XotBasePest::assertTableMissing('media', 'media', ['id' => $mediaId]);
 });
 
 it('can find media by model type', function (): void {
@@ -227,7 +228,7 @@ it('can update media', function (): void {
 
     $media->update(['name' => 'New Name']);
 
-    assertMediaTableHas('media', [
+    XotBasePest::assertTableHas('media', 'media', [
         'id' => SafeIntCastAction::cast($media->getKey()),
         'name' => 'New Name',
     ]);
