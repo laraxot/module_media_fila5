@@ -11,7 +11,6 @@ use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
-use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
@@ -83,7 +82,7 @@ describe('Media Business Logic', function () {
         }
 
         if (in_array('size', $mediaColumns, true) && in_array('file_size', $temporaryColumns, true)) {
-            $mediaPayload['size'] = (int) $temporaryUpload->file_size;
+            $mediaPayload['size'] = $temporaryUpload->file_size ?? 0;
         }
 
         if ($user instanceof User && in_array('user_id', $mediaColumns, true)) {
@@ -93,14 +92,13 @@ describe('Media Business Logic', function () {
         $media = MediaFactory::new()->createOne($mediaPayload);
 
         expect($media)
-            ->toBeInstanceOf(Media::class)
             ->and($media->file_name)
             ->toBe($mediaPayload['file_name'])
             ->and($media->mime_type)
             ->toBe($mediaPayload['mime_type']);
 
         assertMediaTableHas('media', [
-            'id' => (int) $media->getKey(),
+            'id' => $media->id,
             'file_name' => $mediaPayload['file_name'],
             'mime_type' => $mediaPayload['mime_type'],
         ]);
@@ -136,7 +134,6 @@ describe('Media Business Logic', function () {
         ]);
 
         expect($mediaConvert)
-            ->toBeInstanceOf(MediaConvert::class)
             ->and($mediaConvert->media_id)
             ->toBe($media->id)
             ->and($mediaConvert->getAttribute('original_format'))
@@ -145,8 +142,8 @@ describe('Media Business Logic', function () {
             ->toBe('png');
 
         assertMediaTableHas('media_converts', [
-            'id' => (int) $mediaConvert->getKey(),
-            'media_id' => (int) $media->getKey(),
+            'id' => $mediaConvert->id,
+            'media_id' => $media->id,
             'original_format' => 'jpeg',
             'target_format' => 'png',
             'status' => 'pending',
@@ -194,7 +191,7 @@ describe('Media Business Logic', function () {
 
         /** @var array<string, mixed> $expected */
         $expected = [
-            'id' => (int) $temporaryUpload->getKey(),
+            'id' => $temporaryUpload->id,
             'status' => 'completed',
         ];
 
@@ -236,12 +233,12 @@ describe('Media Business Logic', function () {
             ->toBe('documents');
 
         assertMediaTableHas('media', [
-            'id' => (int) $profileMedia->getKey(),
+            'id' => $profileMedia->id,
             'collection_name' => 'profile',
         ]);
 
         assertMediaTableHas('media', [
-            'id' => (int) $documentMedia->getKey(),
+            'id' => $documentMedia->id,
             'collection_name' => 'documents',
         ]);
     });
@@ -314,7 +311,7 @@ describe('Media Business Logic', function () {
         expect($mediaConvert->fresh()?->getAttribute('status'))->toBe('completed');
 
         assertMediaTableHas('media_converts', [
-            'id' => (int) $mediaConvert->getKey(),
+            'id' => $mediaConvert->id,
             'status' => 'completed',
         ]);
     });
@@ -349,7 +346,7 @@ describe('Media Business Logic', function () {
         }
 
         $media = MediaFactory::new()->createOne();
-        $mediaId = (int) $media->getKey();
+        $mediaId = $media->id;
 
         $media->delete();
 
@@ -394,11 +391,11 @@ describe('Media Business Logic', function () {
         }
 
         $validMedia = Media::query()->create($validPayload);
-        $sizeValue = (int) ($validMedia->getAttribute('file_size') ?? $validMedia->getAttribute('size') ?? 0);
+        $sizeValue = $validMedia->size;
         expect($sizeValue)->toBeLessThanOrEqual(10 * 1024 * 1024);
 
         $largeMedia = Media::query()->create($makePayload(15 * 1024 * 1024));
-        $largeSizeValue = (int) ($largeMedia->getAttribute('file_size') ?? $largeMedia->getAttribute('size') ?? 0);
+        $largeSizeValue = $largeMedia->size;
         expect($largeSizeValue)->toBeGreaterThan(10 * 1024 * 1024);
     });
 

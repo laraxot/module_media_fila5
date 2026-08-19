@@ -59,7 +59,7 @@ class MediaColumnFileStub
      * Il nome della proprieta' e' imposto da Spatie: le closure della colonna
      * leggono `$media->file_name`. Non e' camelCase e non puo' esserlo.
      *
-     * @SuppressWarnings(PHPMD.CamelCasePropertyName)
+     * @SuppressWarnings("PHPMD.CamelCasePropertyName")
      */
     public string $file_name;
 

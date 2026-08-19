@@ -19,6 +19,7 @@ use Modules\Media\Actions\Video\GetVideoDurationAction;
 use Modules\Media\Actions\Video\GetVideoFrameContentAction;
 use Modules\Media\Actions\Video\GetVideoScreenshotAction;
 use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
 uses(TestCase::class);
@@ -26,8 +27,7 @@ uses(TestCase::class);
 describe('Media Actions Coverage', function () {
     describe('Image Merge Action', function () {
         it('can be instantiated', function (): void {
-            $action = new ImageMerge();
-            expect($action)->toBeInstanceOf(ImageMerge::class);
+            Assert::assertInstanceOf(ImageMerge::class, new ImageMerge);
         });
 
         it('has handle method', function (): void {
@@ -49,13 +49,11 @@ describe('Media Actions Coverage', function () {
 
     describe('SvgExistsAction', function () {
         it('can be instantiated', function (): void {
-            $action = new SvgExistsAction();
-            expect($action)->toBeInstanceOf(SvgExistsAction::class);
+            Assert::assertInstanceOf(SvgExistsAction::class, new SvgExistsAction);
         });
 
         it('can be resolved from container', function (): void {
-            $action = app(SvgExistsAction::class);
-            expect($action)->toBeInstanceOf(SvgExistsAction::class);
+            Assert::assertInstanceOf(SvgExistsAction::class, app(SvgExistsAction::class));
         });
 
         it('has execute method', function (): void {
@@ -69,13 +67,11 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoAction', function () {
         it('can be instantiated', function (): void {
-            $action = new ConvertVideoAction();
-            expect($action)->toBeInstanceOf(ConvertVideoAction::class);
+            Assert::assertInstanceOf(ConvertVideoAction::class, new ConvertVideoAction);
         });
 
         it('can be resolved from container', function (): void {
-            $action = app(ConvertVideoAction::class);
-            expect($action)->toBeInstanceOf(ConvertVideoAction::class);
+            Assert::assertInstanceOf(ConvertVideoAction::class, app(ConvertVideoAction::class));
         });
 
         it('has execute method', function (): void {
@@ -93,8 +89,7 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByConvertDataAction', function () {
         it('can be instantiated', function (): void {
-            $action = new ConvertVideoByConvertDataAction();
-            expect($action)->toBeInstanceOf(ConvertVideoByConvertDataAction::class);
+            Assert::assertInstanceOf(ConvertVideoByConvertDataAction::class, new ConvertVideoByConvertDataAction);
         });
 
         it('has execute method', function (): void {
@@ -112,8 +107,7 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByMediaConvertAction', function () {
         it('can be instantiated', function (): void {
-            $action = new ConvertVideoByMediaConvertAction();
-            expect($action)->toBeInstanceOf(ConvertVideoByMediaConvertAction::class);
+            Assert::assertInstanceOf(ConvertVideoByMediaConvertAction::class, new ConvertVideoByMediaConvertAction);
         });
 
         it('has execute method', function (): void {
@@ -131,8 +125,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoScreenshotAction', function () {
         it('can be instantiated', function (): void {
-            $action = new GetVideoScreenshotAction();
-            expect($action)->toBeInstanceOf(GetVideoScreenshotAction::class);
+            Assert::assertInstanceOf(GetVideoScreenshotAction::class, new GetVideoScreenshotAction);
         });
 
         it('has backoff property', function (): void {
@@ -150,8 +143,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoFrameContentAction', function () {
         it('can be instantiated', function (): void {
-            $action = new GetVideoFrameContentAction();
-            expect($action)->toBeInstanceOf(GetVideoFrameContentAction::class);
+            Assert::assertInstanceOf(GetVideoFrameContentAction::class, new GetVideoFrameContentAction);
         });
 
         it('has execute method', function (): void {
@@ -169,8 +161,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoDurationAction', function () {
         it('can be instantiated', function (): void {
-            $action = new GetVideoDurationAction();
-            expect($action)->toBeInstanceOf(GetVideoDurationAction::class);
+            Assert::assertInstanceOf(GetVideoDurationAction::class, new GetVideoDurationAction);
         });
 
         it('has execute method', function (): void {
@@ -270,8 +261,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetCloudFrontSignedUrlAction', function () {
         it('can be instantiated', function (): void {
-            $action = new GetCloudFrontSignedUrlAction();
-            expect($action)->toBeInstanceOf(GetCloudFrontSignedUrlAction::class);
+            Assert::assertInstanceOf(GetCloudFrontSignedUrlAction::class, new GetCloudFrontSignedUrlAction);
         });
 
         it('has execute method', function (): void {

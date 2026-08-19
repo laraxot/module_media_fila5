@@ -43,17 +43,17 @@ class S3Test extends XotBasePage
     /** @var array<string, mixed> */
     public array $debugResults = [];
 
-    private const DEFAULT_REGION = 'eu-west-1';
+    private const string DEFAULT_REGION = 'eu-west-1';
 
-    private const TEST_FILE_PREFIX = 'test-upload-';
+    private const string TEST_FILE_PREFIX = 'test-upload-';
 
-    private const PERMISSION_TEST_PREFIX = 'test-permissions-';
+    private const string PERMISSION_TEST_PREFIX = 'test-permissions-';
 
-    private const CLOUDFRONT_TEST_FILE = 'test-file.txt';
+    private const string CLOUDFRONT_TEST_FILE = 'test-file.txt';
 
-    private const DEBUG_OUTPUT_ROWS = 15;
+    private const int DEBUG_OUTPUT_ROWS = 15;
 
-    private const URL_PREVIEW_LENGTH = 100;
+    private const int URL_PREVIEW_LENGTH = 100;
 
     public function mount(): void
     {
@@ -128,7 +128,7 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
-        $this->getForm('form')?->fill([
+        $this->getSchema('form')?->fill([
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -232,7 +232,7 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
-        $formState = $this->getForm('form')?->getState() ?? [];
+        $formState = $this->getSchema('form')?->getState() ?? [];
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
@@ -623,7 +623,7 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
-            $formState = $this->getForm('form')?->getState() ?? [];
+            $formState = $this->getSchema('form')?->getState() ?? [];
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -747,7 +747,7 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
-        $this->getForm('form')?->fill([
+        $this->getSchema('form')?->fill([
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -770,7 +770,7 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
-            $formState = $this->getForm('form')?->getState() ?? [];
+            $formState = $this->getSchema('form')?->getState() ?? [];
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;

@@ -38,7 +38,7 @@ class ConvertVideoByConvertDataAction
         }
 
         // Instanziamo il formato prima di usarlo
-        $formatInstance = new $format();
+        $formatInstance = new $format;
 
         $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
