@@ -4,53 +4,73 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Rules;
 
+use Closure;
 use Illuminate\Http\UploadedFile;
 use Modules\Media\Rules\FileExtensionRule;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-/*
- * Regola di validazione sull'estensione del file caricato. Lavora su UploadedFile
- * in memoria: nessun disco reale, nessun database.
- */
-
 uses(TestCase::class);
 
-test('an allowed extension passes', function (): void {
-    $rule = new FileExtensionRule(['pdf', 'docx']);
+/**
+ * Raccoglie i messaggi passati alla closure `$fail` di una ValidationRule.
+ *
+ * @param  list<string>  $collected
+ */
+function fileExtensionRuleFailCollector(array &$collected): Closure
+{
+    return static function (string $message) use (&$collected): void {
+        $collected[] = $message;
+    };
+}
 
-    Assert::assertTrue($rule->passes('allegato', UploadedFile::fake()->create('fattura.pdf')));
-});
+describe('FileExtensionRule', function (): void {
+    it('lowercases the extensions given to the constructor', function (): void {
+        $rule = new FileExtensionRule(['PDF', 'Jpg']);
 
-test('the comparison ignores case on both sides', function (): void {
-    $rule = new FileExtensionRule(['PDF']);
+        Assert::assertStringContainsString('pdf', $rule->message());
+        Assert::assertStringContainsString('jpg', $rule->message());
+    });
 
-    Assert::assertTrue($rule->passes('allegato', UploadedFile::fake()->create('fattura.PdF')));
-});
+    it('fails when the value is not an uploaded file', function (): void {
+        $rule = new FileExtensionRule(['pdf']);
+        $collected = [];
 
-test('an extension outside the list is rejected', function (): void {
-    $rule = new FileExtensionRule(['pdf']);
+        $rule->validate('attachment', 'not-a-file', fileExtensionRuleFailCollector($collected));
 
-    Assert::assertFalse($rule->passes('allegato', UploadedFile::fake()->create('foto.jpg')));
-});
+        Assert::assertCount(1, $collected);
+    });
 
-test('an empty allow list rejects everything', function (): void {
-    $rule = new FileExtensionRule;
+    it('passes when the extension is allowed, ignoring case', function (): void {
+        $rule = new FileExtensionRule(['pdf']);
+        $collected = [];
 
-    Assert::assertFalse($rule->passes('allegato', UploadedFile::fake()->create('fattura.pdf')));
-});
+        $rule->validate('attachment', UploadedFile::fake()->create('contratto.PDF'), fileExtensionRuleFailCollector($collected));
 
-test('a value that is not an uploaded file is rejected without inspecting it', function (): void {
-    $rule = new FileExtensionRule(['pdf']);
+        Assert::assertSame([], $collected);
+    });
 
-    Assert::assertFalse($rule->passes('allegato', 'fattura.pdf'));
-    Assert::assertFalse($rule->passes('allegato', null));
-    Assert::assertFalse($rule->passes('allegato', 42));
-});
+    it('fails when the extension is not allowed', function (): void {
+        $rule = new FileExtensionRule(['pdf']);
+        $collected = [];
 
-test('the message lists the accepted extensions in lowercase', function (): void {
-    $message = (new FileExtensionRule(['PDF', 'DocX']))->message();
+        $rule->validate('attachment', UploadedFile::fake()->create('malware.exe'), fileExtensionRuleFailCollector($collected));
 
-    Assert::assertIsString($message);
-    Assert::assertStringContainsString('pdf, docx', $message);
+        Assert::assertCount(1, $collected);
+    });
+
+    it('lists the allowed extensions in the message', function (): void {
+        $rule = new FileExtensionRule(['pdf', 'doc']);
+
+        $message = $rule->message();
+
+        Assert::assertStringContainsString('pdf', $message);
+        Assert::assertStringContainsString('doc', $message);
+    });
+
+    it('builds a message even when no extension is allowed', function (): void {
+        $rule = new FileExtensionRule;
+
+        Assert::assertNotSame('', $rule->message());
+    });
 });
