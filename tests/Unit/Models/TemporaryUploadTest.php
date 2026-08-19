@@ -13,7 +13,7 @@ uses(TestCase::class);
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-        expect(new TemporaryUpload)->toBeInstanceOf(BaseModel::class);
+        Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload);
     });
 
     it('uses HasXotFactory trait', function (): void {

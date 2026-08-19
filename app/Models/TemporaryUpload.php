@@ -72,10 +72,10 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
+    use HasUuids;
+
     /** @use HasXotFactory<TemporaryUploadFactory> */
     use HasXotFactory;
-
-    use HasUuids;
     use InteractsWithMedia;
     use MassPrunable;
 
