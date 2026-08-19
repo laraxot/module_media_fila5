@@ -79,7 +79,7 @@ it('has correct validation', function (): void {
         'docx',
     ];
 
-    Assert::assertTrue(collect($acceptedTypes)->contains(fn ($t): bool => in_array($t, $allowed, true)));
+    Assert::assertTrue(collect($acceptedTypes)->contains(static fn (mixed $t): bool => in_array($t, $allowed, true)));
 });
 
 /**
