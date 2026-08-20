@@ -17,7 +17,7 @@ use PHPUnit\Framework\Assert;
  * della lettura: i test coprono entrambe le forme.
  */
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 test('every setter returns the same instance so the calls can be chained', function (): void {
     $entry = VideoEntry::make('video');
