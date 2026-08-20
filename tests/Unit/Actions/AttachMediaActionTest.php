@@ -10,7 +10,7 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 describe('AttachMediaAction', function () {
     it('uses QueueableAction trait', function (): void {

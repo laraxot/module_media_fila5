@@ -20,6 +20,11 @@ uses(TestCase::class);
 
 describe('Media Business Logic', function () {
     beforeEach(function (): void {
+        /** @var TestCase $this */
+        if (TestCase::mediaDbUnavailable()) {
+            $this->markTestSkipped('DB `media` non raggiungibile: blocco di ambiente.');
+        }
+
         Storage::fake('public');
     });
 
@@ -373,7 +378,8 @@ describe('Media Business Logic', function () {
         $columns = TestCase::mediaTableColumns();
 
         $makePayload = function (int $size) use ($user, $columns): array {
-            $payload = TestCase::mediaPayloadSet([], $columns, 'user_id', $user->id);
+            $payload = TestCase::mediaBasePayload($columns, $user);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'user_id', $user->id);
             $payload = TestCase::mediaPayloadSet($payload, $columns, 'file_size', $size);
             $payload = TestCase::mediaPayloadSet($payload, $columns, 'size', $size);
             $payload = TestCase::mediaPayloadSet($payload, $columns, 'file_name', 'test-file.pdf');
@@ -406,7 +412,8 @@ describe('Media Business Logic', function () {
         $columns = TestCase::mediaTableColumns();
 
         $makePayload = function (string $mime, string $fileName) use ($user, $columns): array {
-            $payload = TestCase::mediaPayloadSet([], $columns, 'user_id', $user->id);
+            $payload = TestCase::mediaBasePayload($columns, $user);
+            $payload = TestCase::mediaPayloadSet($payload, $columns, 'user_id', $user->id);
             $payload = TestCase::mediaPayloadSet($payload, $columns, 'mime_type', $mime);
             $payload = TestCase::mediaPayloadSet($payload, $columns, 'file_name', $fileName);
             $payload = TestCase::mediaPayloadSet($payload, $columns, 'disk', 'public');
