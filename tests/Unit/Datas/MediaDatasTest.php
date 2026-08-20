@@ -23,7 +23,7 @@ use function Safe\unlink;
  * un file su storage_path.
  */
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 test('convert data reports whether the source file is on the disk', function (): void {
     Storage::fake('video');

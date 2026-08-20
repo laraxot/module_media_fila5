@@ -9,7 +9,7 @@ use Modules\Media\Models\TemporaryUpload;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {

@@ -5,16 +5,14 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Filament;
 
 use Filament\Actions\Action;
+use Filament\Actions\BulkAction;
+use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Contracts\HasTable;
-use Filament\Tables\Table;
-use Mockery;
-use Mockery\MockInterface;
 use Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm;
 use Modules\Media\Filament\Resources\MediaConvertResource\Tables\MediaConvertsTable;
 use Modules\Media\Tests\TestCase;
@@ -27,26 +25,7 @@ use PHPUnit\Framework\Assert;
  * proposito, sono l'unico punto che tocca il database.
  */
 
-uses(TestCase::class);
-
-/**
- * @return array<int, Action>
- */
-function mediaConvertTableRecordActions(): array
-{
-    /** @var HasTable&MockInterface $livewire */
-    $livewire = Mockery::mock(HasTable::class);
-    $table = Table::make($livewire);
-
-    /** @var array<int, Action> $actions */
-    $actions = array_values((new MediaConvertsTable)->table($table)->getRecordActions());
-
-    return $actions;
-}
-
-afterEach(function (): void {
-    Mockery::close();
-});
+uses(TestCase::class)->group('no-media-db');
 
 test('the form exposes one component per conversion parameter', function (): void {
     $schema = MediaConvertForm::getFormSchema();
@@ -97,21 +76,28 @@ test('the table lists the identifier and both timestamps', function (): void {
 });
 
 test('the table offers view, edit and convert row actions', function (): void {
-    $actions = mediaConvertTableRecordActions();
+    $actions = (new MediaConvertsTable)->getTableActions();
 
     Assert::assertCount(3, $actions);
-    Assert::assertInstanceOf(ViewAction::class, $actions[0]);
-    Assert::assertInstanceOf(EditAction::class, $actions[1]);
-    Assert::assertInstanceOf(Action::class, $actions[2]);
-    Assert::assertSame('convert', $actions[2]->getName());
+    Assert::assertArrayHasKey('view', $actions);
+    Assert::assertInstanceOf(ViewAction::class, $actions['view']);
+    Assert::assertArrayHasKey('edit', $actions);
+    Assert::assertInstanceOf(EditAction::class, $actions['edit']);
+    Assert::assertArrayHasKey('convert', $actions);
+    Assert::assertInstanceOf(Action::class, $actions['convert']);
+    Assert::assertSame('convert', $actions['convert']->getName());
 });
 
 test('the table exposes bulk actions keyed by name', function (): void {
     $bulk = (new MediaConvertsTable)->getTableBulkActions();
 
     Assert::assertNotSame([], $bulk);
+    Assert::assertArrayHasKey('delete', $bulk);
+    Assert::assertInstanceOf(DeleteBulkAction::class, $bulk['delete']);
+
     foreach ($bulk as $key => $action) {
         Assert::assertIsString($key);
+        Assert::assertInstanceOf(BulkAction::class, $action);
         Assert::assertSame($key, $action->getName());
     }
 });

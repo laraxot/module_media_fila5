@@ -5,12 +5,9 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Filament;
 
 use Filament\Actions\Action;
-use Filament\Actions\ActionGroup;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Contracts\HasTable;
-use Filament\Tables\Table;
-use Mockery;
-use Mockery\MockInterface;
 use Modules\Media\Filament\Resources\MediaResource\Tables\MediaTable;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
@@ -21,23 +18,7 @@ use PHPUnit\Framework\Assert;
  * connessioni.
  */
 
-uses(TestCase::class);
-
-/**
- * @return array<int, Action|ActionGroup>
- */
-function mediaTableRecordActions(): array
-{
-    /** @var HasTable&MockInterface $livewire */
-    $livewire = Mockery::mock(HasTable::class);
-    $table = Table::make($livewire);
-
-    return array_values((new MediaTable)->table($table)->getRecordActions());
-}
-
-afterEach(function (): void {
-    Mockery::close();
-});
+uses(TestCase::class)->group('no-media-db');
 
 test('the table exposes the media columns in a stable order', function (): void {
     $columns = (new MediaTable)->getTableColumns();
@@ -85,24 +66,23 @@ test('updated_at is the only column hidden behind the toggle', function (): void
 });
 
 test('the row actions are keyed by their own name, with one documented deviation', function (): void {
-    $actions = mediaTableRecordActions();
+    $actions = (new MediaTable)->getTableActions();
 
     Assert::assertCount(5, $actions);
 
-    $actionsByName = [];
-    foreach ($actions as $action) {
-        Assert::assertInstanceOf(Action::class, $action);
-        $actionsByName[$action->getName()] = $action;
-    }
+    Assert::assertArrayHasKey('view', $actions);
+    Assert::assertInstanceOf(ViewAction::class, $actions['view']);
 
-    Assert::assertSame(
-        ['view', 'view_attachment', 'delete', 'download_attachment', 'convert'],
-        array_keys($actionsByName),
-    );
+    Assert::assertArrayHasKey('view_attachment', $actions);
+    Assert::assertInstanceOf(Action::class, $actions['view_attachment']);
 
-    // Deviazione reale, non un refuso del test: la voce 'download' in getTableActions()
-    // costruisce `Action::make('download_attachment')`. Il nome finisce nelle chiamate
-    // Livewire, quindi non lo si rinomina di nascosto: il test lo fissa e la
-    // discrepanza e' segnalata a chi possiede il modulo.
-    Assert::assertSame('download_attachment', $actionsByName['download_attachment']->getName());
+    Assert::assertArrayHasKey('delete', $actions);
+    Assert::assertInstanceOf(DeleteAction::class, $actions['delete']);
+
+    // Deviazione reale: la chiave e' 'download' ma l'azione si chiama 'download_attachment'.
+    Assert::assertArrayHasKey('download', $actions);
+    Assert::assertSame('download_attachment', $actions['download']->getName());
+
+    Assert::assertArrayHasKey('convert', $actions);
+    Assert::assertInstanceOf(Action::class, $actions['convert']);
 });
