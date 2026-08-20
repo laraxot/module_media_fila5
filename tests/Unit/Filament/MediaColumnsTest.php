@@ -69,7 +69,7 @@ class MediaColumnFileStub
     }
 }
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 function mediaColumnRecordWith(?object $media): MediaColumnRecordStub
 {
