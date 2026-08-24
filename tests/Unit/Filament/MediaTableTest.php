@@ -81,7 +81,9 @@ test('the row actions are keyed by their own name, with one documented deviation
 
     // Deviazione reale: la chiave e' 'download' ma l'azione si chiama 'download_attachment'.
     Assert::assertArrayHasKey('download', $actions);
-    Assert::assertSame('download_attachment', $actions['download']->getName());
+    $download = $actions['download'];
+    Assert::assertInstanceOf(Action::class, $download);
+    Assert::assertSame('download_attachment', $download->getName());
 
     Assert::assertArrayHasKey('convert', $actions);
     Assert::assertInstanceOf(Action::class, $actions['convert']);

@@ -22,6 +22,8 @@ use ReflectionClass;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
 
+use function Safe\file_get_contents;
+
 /**
  * Base test case for Media module.
  *
@@ -88,21 +90,33 @@ abstract class TestCase extends XotBaseTestCase
         }
     }
 
+    /**
+     * Salta Feature / `media-db` offline; Unit puri e `no-media-db` restano verdi.
+     *
+     * Pest `uses()->group('…')` non sempre riempie i gruppi PHPUnit, e `groups()` è
+     * `@internal`: si legge il `group('…')` dal file sorgente del test.
+     */
     protected function shouldSkipForMissingMediaDb(): bool
     {
         if (! static::mediaDbUnavailable()) {
             return false;
         }
 
-        if (in_array('media-db', $this->groups(), true)) {
-            return true;
-        }
-
-        if (in_array('no-media-db', $this->groups(), true)) {
-            return false;
-        }
-
         $testFile = $this->resolvePestTestFile();
+
+        if ($testFile !== null && is_file($testFile)) {
+            try {
+                $source = file_get_contents($testFile);
+            } catch (\Throwable) {
+                $source = '';
+            }
+            if (str_contains($source, "group('no-media-db')")) {
+                return false;
+            }
+            if (str_contains($source, "group('media-db')")) {
+                return true;
+            }
+        }
 
         // Unit: esegui offline; i test DB-dependent usano gruppo `media-db`.
         if ($testFile !== null && str_contains($testFile, '/tests/Unit/')) {

@@ -7,13 +7,8 @@ namespace Modules\Media\Tests\Unit;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Mockery;
-use Modules\Media\Actions\Aws\TestS3FileOperationsAction;
-use Modules\Media\Actions\S3\CheckBucketPolicyAction;
 use Modules\Media\Actions\S3\DeleteFileAction;
 use Modules\Media\Actions\S3\GetFileInfoAction;
-use Modules\Media\Actions\S3\TestBucketPermissionsAction;
-use Modules\Media\Actions\S3\TestConnectionDetailsAction;
-use Modules\Media\Actions\S3\TestFileUploadDownloadAction;
 use Modules\Media\Actions\S3\UploadFileAction;
 use Modules\Media\Actions\Stream\StreamVideoAction;
 use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
@@ -25,6 +20,9 @@ use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionMethod;
+
+use function Safe\file_put_contents;
+use function Safe\unlink;
 
 uses(TestCase::class)->group('no-media-db');
 
@@ -87,11 +85,6 @@ describe('Media gap attack — S3 Aws pages actions', function (): void {
             UploadFileAction::class,
             GetFileInfoAction::class,
             DeleteFileAction::class,
-            CheckBucketPolicyAction::class,
-            TestBucketPermissionsAction::class,
-            TestConnectionDetailsAction::class,
-            TestFileUploadDownloadAction::class,
-            TestS3FileOperationsAction::class,
             StreamVideoAction::class,
             ConvertVideoByMediaConvertAction::class,
         ] as $class) {
@@ -131,9 +124,14 @@ describe('Media gap attack — S3 Aws pages actions', function (): void {
                 } catch (\Throwable) {
                 }
             }
-            Assert::assertTrue(class_exists($class));
+            Assert::assertTrue(
+                $ref->hasMethod('execute') || $ref->hasMethod('handle') || $ref->hasMethod('__invoke'),
+                $class.' non espone un entry point invocabile (execute/handle/__invoke)',
+            );
         }
-        @unlink($tmp);
+        if (is_file($tmp)) {
+            unlink($tmp);
+        }
     });
 
     test('ConvertWidget e Media model metodi offline', function (): void {

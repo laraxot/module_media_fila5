@@ -6,7 +6,6 @@ namespace Modules\Media\Tests\Unit;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
@@ -26,8 +25,34 @@ use Modules\Media\Services\VideoStream;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
+use ReflectionMethod;
+
+use function Safe\file_put_contents;
+use function Safe\unlink;
 
 uses(TestCase::class)->group('no-media-db');
+
+/**
+ * Invoca un metodo di configurazione tabellare del modulo e ne verifica il contratto.
+ *
+ * Filament ha deprecato il prototipo ereditato (`@deprecated Override the table() method
+ * to configure the table.`), ma le pagine del modulo dichiarano ancora `getTableColumns()`
+ * e `getTableActions()` come punto di configurazione: la chiamata passa da Reflection
+ * perché il contratto sotto test è quello del modulo, non quello deprecato di Filament.
+ *
+ * @return array<array-key, mixed>
+ */
+function mediaTablePart(object $page, string $method): array
+{
+    $reflection = new ReflectionMethod($page, $method);
+    $reflection->setAccessible(true);
+    $value = $reflection->invoke($page);
+    if (! is_array($value)) {
+        Assert::fail($method.'() doveva restituire un array, ha restituito '.get_debug_type($value));
+    }
+
+    return $value;
+}
 
 describe('Media highest-miss coverage', function (): void {
     test('resources expose model pages and legacy form schema', function (): void {
@@ -47,11 +72,11 @@ describe('Media highest-miss coverage', function (): void {
     });
 
     test('list pages expose table columns and row actions', function (): void {
-        $mediaColumns = (new ListMedia())->getTableColumns();
+        $mediaColumns = mediaTablePart(new ListMedia(), 'getTableColumns');
         Assert::assertArrayHasKey('file_name', $mediaColumns);
-        Assert::assertArrayHasKey('view', (new ListMedia())->getTableActions());
+        Assert::assertArrayHasKey('view', mediaTablePart(new ListMedia(), 'getTableActions'));
 
-        $convertColumns = (new ListMediaConverts())->getTableColumns();
+        $convertColumns = mediaTablePart(new ListMediaConverts(), 'getTableColumns');
         Assert::assertNotEmpty($convertColumns);
     });
 
@@ -66,8 +91,10 @@ describe('Media highest-miss coverage', function (): void {
         $owner = \Mockery::mock(Model::class);
         $livewire = \Mockery::mock(RelationManager::class);
         $livewire->shouldReceive('getOwnerRecord')->andReturn($owner);
-        expect(fn (): mixed => AddAttachmentAction::formHandlerCallback($livewire, ['file' => 'demo.txt']))
-            ->toThrow(\Exception::class);
+        Assert::assertInstanceOf(RelationManager::class, $livewire);
+        expect(function () use ($livewire): void {
+            AddAttachmentAction::formHandlerCallback($livewire, ['file' => 'demo.txt']);
+        })->toThrow(\Exception::class);
     });
 
     test('models expose table fillable and in-memory accessors', function (): void {
@@ -178,6 +205,7 @@ XML;
 
         $model = \Mockery::mock(Model::class);
         $model->shouldReceive('update')->once()->andReturnSelf();
+        Assert::assertInstanceOf(Model::class, $model);
         $service->setModel($model);
         Assert::assertSame($model, $service->getModel());
         $service->upateModel();
@@ -187,10 +215,8 @@ XML;
     });
 
     test('ViewMedia infolist schema and convert command missing file', function (): void {
-        $page = (new \ReflectionClass(\Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia::class))->newInstanceWithoutConstructor();
-        $method = (new \ReflectionClass($page))->getMethod('getInfolistSchema');
-        $method->setAccessible(true);
-        Assert::assertArrayHasKey('media_grid', $method->invoke($page));
+        $page = (new ReflectionClass(\Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia::class))->newInstanceWithoutConstructor();
+        Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
 
         Storage::fake('local');
         $this->artisan('media:convert-video', ['disk' => 'local', 'file' => 'missing.mp4']);
