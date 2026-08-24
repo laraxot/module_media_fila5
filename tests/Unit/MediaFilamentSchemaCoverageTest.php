@@ -8,8 +8,14 @@ use Modules\Media\Tests\TestCase;
 use Modules\Xot\Tests\FilamentSchemaCoverage;
 use PHPUnit\Framework\Assert;
 
+use function Safe\glob;
+
 uses(TestCase::class)->group('no-media-db');
 
+/**
+ * @return array{string, string} radice `app/` del modulo e namespace corrispondente
+ */
+/** @return list{string, string} */
 function mediaFilamentContext(): array
 {
     return [dirname(__DIR__, 2).'/app', 'Modules\\Media\\'];
@@ -47,7 +53,10 @@ describe('Media Filament schema coverage', function (): void {
 describe('Media enum and provider coverage', function (): void {
     test('enums expose cases and labels', function (): void {
         [$appRoot, $ns] = mediaFilamentContext();
-        foreach (glob($appRoot.'/Enums/*.php') ?: [] as $file) {
+        foreach (glob($appRoot.'/Enums/*.php') as $file) {
+            if (! is_string($file)) {
+                continue;
+            }
             $class = $ns.str_replace(['/', '.php'], ['\\', ''], substr($file, strlen($appRoot) + 1));
             if (! enum_exists($class)) {
                 continue;
@@ -58,8 +67,14 @@ describe('Media enum and provider coverage', function (): void {
 
     test('service providers declare module name', function (): void {
         [$appRoot, $ns] = mediaFilamentContext();
-        foreach (glob($appRoot.'/Providers/*ServiceProvider.php') ?: [] as $file) {
+        foreach (glob($appRoot.'/Providers/*ServiceProvider.php') as $file) {
+            if (! is_string($file)) {
+                continue;
+            }
             $class = $ns.str_replace(['/', '.php'], ['\\', ''], substr($file, strlen($appRoot) + 1));
+            if (! class_exists($class)) {
+                continue;
+            }
             $provider = new $class(app());
             if (property_exists($provider, 'name')) {
                 Assert::assertSame('Media', $provider->name);

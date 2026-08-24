@@ -12,9 +12,6 @@ use ReflectionClass;
 
 uses(TestCase::class)->group('no-media-db');
 
-/**
- * @return mixed
- */
 function mediaInvoke(object $target, string $method, mixed ...$args): mixed
 {
     $ref = new ReflectionClass($target);
@@ -24,13 +21,47 @@ function mediaInvoke(object $target, string $method, mixed ...$args): mixed
     return $callable->invoke($target, ...$args);
 }
 
+/**
+ * Invoca un metodo che il contratto dichiara `string` e ne verifica il tipo di ritorno.
+ */
+function mediaInvokeString(object $target, string $method, mixed ...$args): string
+{
+    $value = mediaInvoke($target, $method, ...$args);
+    if (! is_string($value)) {
+        Assert::fail($method.'() doveva restituire una stringa, ha restituito '.get_debug_type($value));
+    }
+
+    return $value;
+}
+
+/**
+ * Invoca un metodo che il contratto dichiara `array` e ne verifica il tipo di ritorno.
+ *
+ * @return array<array-key, mixed>
+ */
+function mediaInvokeArray(object $target, string $method, mixed ...$args): array
+{
+    $value = mediaInvoke($target, $method, ...$args);
+    if (! is_array($value)) {
+        Assert::fail($method.'() doveva restituire un array, ha restituito '.get_debug_type($value));
+    }
+
+    return $value;
+}
+
+/**
+ * @template T of object
+ *
+ * @param  class-string<T>  $class
+ * @return T
+ */
 function mediaPageWithoutLivewire(string $class): object
 {
     $page = (new ReflectionClass($class))->newInstanceWithoutConstructor();
-    if (property_exists($page, 'debugResults')) {
+    if ($page instanceof S3Test) {
         $page->debugResults = [];
     }
-    if (property_exists($page, 'testResults')) {
+    if ($page instanceof AwsTest) {
         $page->testResults = [];
     }
 
@@ -45,16 +76,16 @@ describe('Media diagnostic Filament pages', function (): void {
         Assert::assertNotEmpty(mediaInvoke($page, 'getFormActions'));
         Assert::assertNotEmpty(mediaInvoke($page, 'getFormSchema'));
 
-        Assert::assertStringContainsString('credentials', mediaInvoke($page, 'getSolutionForError', null));
-        Assert::assertStringContainsString('IAM', mediaInvoke($page, 'getSolutionForError', 'AccessDenied'));
-        Assert::assertStringContainsString('SECRET', mediaInvoke($page, 'getSolutionForError', 'SignatureDoesNotMatch'));
-        Assert::assertStringContainsString('ACCESS_KEY', mediaInvoke($page, 'getSolutionForError', 'InvalidAccessKeyId'));
-        Assert::assertStringContainsString('bucket', strtolower((string) mediaInvoke($page, 'getSolutionForError', 'NoSuchBucket')));
-        Assert::assertStringContainsString('REGION', mediaInvoke($page, 'getSolutionForError', 'BucketRegionError'));
-        Assert::assertStringContainsString('documentation', mediaInvoke($page, 'getSolutionForError', 'SomethingElse'));
+        Assert::assertStringContainsString('credentials', mediaInvokeString($page, 'getSolutionForError', null));
+        Assert::assertStringContainsString('IAM', mediaInvokeString($page, 'getSolutionForError', 'AccessDenied'));
+        Assert::assertStringContainsString('SECRET', mediaInvokeString($page, 'getSolutionForError', 'SignatureDoesNotMatch'));
+        Assert::assertStringContainsString('ACCESS_KEY', mediaInvokeString($page, 'getSolutionForError', 'InvalidAccessKeyId'));
+        Assert::assertStringContainsString('bucket', strtolower(mediaInvokeString($page, 'getSolutionForError', 'NoSuchBucket')));
+        Assert::assertStringContainsString('REGION', mediaInvokeString($page, 'getSolutionForError', 'BucketRegionError'));
+        Assert::assertStringContainsString('documentation', mediaInvokeString($page, 'getSolutionForError', 'SomethingElse'));
 
-        $emptyDebug = mediaInvoke($page, 'getDebugOutput');
-        Assert::assertIsString($emptyDebug);
+        $emptyDebug = mediaInvokeString($page, 'getDebugOutput');
+        Assert::assertStringNotContainsString('=== S3 ===', $emptyDebug);
 
         $page->debugResults = [
             's3' => [
@@ -64,7 +95,7 @@ describe('Media diagnostic Filament pages', function (): void {
             ],
             'skip' => 'not-an-array',
         ];
-        Assert::assertStringContainsString('=== S3 ===', mediaInvoke($page, 'getDebugOutput'));
+        Assert::assertStringContainsString('=== S3 ===', mediaInvokeString($page, 'getDebugOutput'));
     });
 
     test('S3Test AWS probes surface structured error payloads', function (): void {
@@ -100,7 +131,7 @@ describe('Media diagnostic Filament pages', function (): void {
         ]);
         $page = mediaPageWithoutLivewire(AwsTest::class);
 
-        $config = mediaInvoke($page, 'getAwsConfig');
+        $config = mediaInvokeArray($page, 'getAwsConfig');
         Assert::assertArrayHasKey('AWS_DEFAULT_REGION', $config);
 
         foreach (['getS3TestSchema', 'getCloudFrontTestSchema', 'getIamTestSchema', 'getDiagnosticsSchema'] as $method) {
@@ -118,17 +149,17 @@ describe('Media diagnostic Filament pages', function (): void {
             }
             try {
                 mediaInvoke($page, $method);
-                Assert::assertTrue(true);
+                Assert::assertNotEmpty($page->testResults, $method.'() non ha registrato alcun risultato in testResults');
             } catch (\Throwable $e) {
                 Assert::assertNotSame('', $e->getMessage());
             }
         }
 
-        Assert::assertStringContainsString('credentials', mediaInvoke($page, 'getS3Solution', null));
-        Assert::assertStringContainsString('SECRET', mediaInvoke($page, 'getS3Solution', 'SignatureDoesNotMatch'));
-        Assert::assertStringContainsString('IAM', mediaInvoke($page, 'getS3Solution', 'AccessDenied'));
-        Assert::assertStringContainsString('bucket', strtolower((string) mediaInvoke($page, 'getS3Solution', 'NoSuchBucket')));
-        Assert::assertStringContainsString('ACCESS_KEY', mediaInvoke($page, 'getS3Solution', 'InvalidAccessKeyId'));
-        Assert::assertStringContainsString('documentation', mediaInvoke($page, 'getS3Solution', 'UnknownCode'));
+        Assert::assertStringContainsString('credentials', mediaInvokeString($page, 'getS3Solution', null));
+        Assert::assertStringContainsString('SECRET', mediaInvokeString($page, 'getS3Solution', 'SignatureDoesNotMatch'));
+        Assert::assertStringContainsString('IAM', mediaInvokeString($page, 'getS3Solution', 'AccessDenied'));
+        Assert::assertStringContainsString('bucket', strtolower(mediaInvokeString($page, 'getS3Solution', 'NoSuchBucket')));
+        Assert::assertStringContainsString('ACCESS_KEY', mediaInvokeString($page, 'getS3Solution', 'InvalidAccessKeyId'));
+        Assert::assertStringContainsString('documentation', mediaInvokeString($page, 'getS3Solution', 'UnknownCode'));
     });
 });

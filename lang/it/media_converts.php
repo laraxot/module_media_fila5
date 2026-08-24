@@ -7,6 +7,9 @@ return [
         'id' => ['label' => 'id'],
         'created_at' => ['label' => 'created_at'],
         'updated_at' => ['label' => 'updated_at'],
+        'format' => ['label' => 'format'],
+        'codec_video' => ['label' => 'codec_video'],
+        'codec_audio' => ['label' => 'codec_audio'],
     ],
     'actions' => [
         'view' => ['label' => 'view', 'icon' => 'view', 'tooltip' => 'view'],
