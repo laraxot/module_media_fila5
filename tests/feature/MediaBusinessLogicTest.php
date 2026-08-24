@@ -15,6 +15,7 @@ use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
+use Modules\Xot\Actions\Cast\SafeIntCastAction;
 
 uses(TestCase::class);
 
@@ -100,7 +101,7 @@ describe('Media Business Logic', function () {
             ->toBe($mediaPayload['mime_type']);
 
         assertMediaTableHas('media', [
-            'id' => (int) $media->getKey(),
+            'id' => SafeIntCastAction::cast($media->getKey()),
             'file_name' => $mediaPayload['file_name'],
             'mime_type' => $mediaPayload['mime_type'],
         ]);
@@ -145,8 +146,8 @@ describe('Media Business Logic', function () {
             ->toBe('png');
 
         assertMediaTableHas('media_converts', [
-            'id' => (int) $mediaConvert->getKey(),
-            'media_id' => (int) $media->getKey(),
+            'id' => SafeIntCastAction::cast($mediaConvert->getKey()),
+            'media_id' => SafeIntCastAction::cast($media->getKey()),
             'original_format' => 'jpeg',
             'target_format' => 'png',
             'status' => 'pending',
@@ -194,7 +195,7 @@ describe('Media Business Logic', function () {
 
         /** @var array<string, mixed> $expected */
         $expected = [
-            'id' => (int) $temporaryUpload->getKey(),
+            'id' => SafeIntCastAction::cast($temporaryUpload->getKey()),
             'status' => 'completed',
         ];
 
@@ -236,12 +237,12 @@ describe('Media Business Logic', function () {
             ->toBe('documents');
 
         assertMediaTableHas('media', [
-            'id' => (int) $profileMedia->getKey(),
+            'id' => SafeIntCastAction::cast($profileMedia->getKey()),
             'collection_name' => 'profile',
         ]);
 
         assertMediaTableHas('media', [
-            'id' => (int) $documentMedia->getKey(),
+            'id' => SafeIntCastAction::cast($documentMedia->getKey()),
             'collection_name' => 'documents',
         ]);
     });
@@ -314,7 +315,7 @@ describe('Media Business Logic', function () {
         expect($mediaConvert->fresh()?->getAttribute('status'))->toBe('completed');
 
         assertMediaTableHas('media_converts', [
-            'id' => (int) $mediaConvert->getKey(),
+            'id' => SafeIntCastAction::cast($mediaConvert->getKey()),
             'status' => 'completed',
         ]);
     });
@@ -349,7 +350,7 @@ describe('Media Business Logic', function () {
         }
 
         $media = MediaFactory::new()->createOne();
-        $mediaId = (int) $media->getKey();
+        $mediaId = SafeIntCastAction::cast($media->getKey());
 
         $media->delete();
 
@@ -394,11 +395,11 @@ describe('Media Business Logic', function () {
         }
 
         $validMedia = Media::query()->create($validPayload);
-        $sizeValue = (int) ($validMedia->getAttribute('file_size') ?? $validMedia->getAttribute('size') ?? 0);
+        $sizeValue = SafeIntCastAction::cast($validMedia->getAttribute('file_size') ?? $validMedia->getAttribute('size') ?? 0);
         expect($sizeValue)->toBeLessThanOrEqual(10 * 1024 * 1024);
 
         $largeMedia = Media::query()->create($makePayload(15 * 1024 * 1024));
-        $largeSizeValue = (int) ($largeMedia->getAttribute('file_size') ?? $largeMedia->getAttribute('size') ?? 0);
+        $largeSizeValue = SafeIntCastAction::cast($largeMedia->getAttribute('file_size') ?? $largeMedia->getAttribute('size') ?? 0);
         expect($largeSizeValue)->toBeGreaterThan(10 * 1024 * 1024);
     });
 
