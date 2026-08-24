@@ -1,3 +1,10 @@
+## [0.0.3-dev.13](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.12...v0.0.3-dev.13) (2026-08-24)
+
+### Bug Fixes
+
+* **media:** make the temporary upload path generator work with the real key type ([0dd30ad](https://github.com/laraxot/module_media_fila5/commit/0dd30ad8f7634b0d1a65f577abe59565f2ada7f2))
+* **phpstan:** type closure and method params to close typeCoverage.paramTypeCoverage ([ee6160e](https://github.com/laraxot/module_media_fila5/commit/ee6160e125bde1c37fba092321aa1899cbceb313))
+
 ## [0.0.3-dev.12](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.11...v0.0.3-dev.12) (2026-08-24)
 
 ### Bug Fixes
