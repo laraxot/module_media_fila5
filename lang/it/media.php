@@ -14,7 +14,7 @@ return [
         'icon' => 'media-main-animated',
     ],
     'fields' => [
-        'name' => ['label' => 'Nome', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
+        'name' => ['label' => 'Nome', 'tooltip' => '', 'helper_text' => '', 'description' => '', 'placeholder' => 'name'],
         'guard_name' => ['label' => 'Guard', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'collection_name' => ['label' => 'Collezione', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'filename' => ['label' => 'Nome File', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
@@ -35,8 +35,11 @@ return [
         'model_type' => ['label' => 'model_type'],
         'model_id' => ['label' => 'model_id'],
         'created_at' => ['label' => 'created_at'],
-        'file' => ['label' => 'file', 'helper_text' => 'file', 'description' => 'file'],
-        'attachment_type' => ['label' => 'attachment_type', 'helper_text' => 'attachment_type', 'description' => 'attachment_type'],
+        'file' => ['label' => 'file', 'helper_text' => 'file', 'description' => 'file', 'placeholder' => 'file'],
+        'attachment_type' => ['label' => 'attachment_type', 'helper_text' => 'attachment_type', 'description' => 'attachment_type', 'placeholder' => 'attachment_type'],
+        'url' => ['label' => 'url'],
+        'entry_conversions' => ['label' => 'entry_conversions'],
+        'src' => ['label' => 'src'],
     ],
     'actions' => [
         'import' => [
@@ -53,8 +56,13 @@ return [
         'convert' => ['label' => 'convert', 'icon' => 'convert', 'tooltip' => 'convert'],
         'create' => ['label' => 'create', 'icon' => 'create', 'tooltip' => 'create'],
         'layout' => ['label' => 'layout', 'icon' => 'layout', 'tooltip' => 'layout'],
+        'createAnother' => ['label' => 'createAnother', 'icon' => 'createAnother', 'tooltip' => 'createAnother'],
+        'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
     ],
     'model' => ['label' => 'media.model'],
     'label' => 'Media',
     'plural_label' => 'Media (Plurale)',
+    'sections' => [
+        'empty' => ['label' => 'empty', 'heading' => 'empty'],
+    ],
 ];

@@ -9,6 +9,10 @@ use Modules\Xot\Tests\ModuleDeepCoverage;
 
 uses(TestCase::class)->group('no-media-db');
 
+/**
+ * @return array{string, string} radice `app/` del modulo e namespace corrispondente
+ */
+/** @return list{string, string} */
 function mediaDeepContext(): array
 {
     return [dirname(__DIR__, 2).'/app', 'Modules\\Media\\'];

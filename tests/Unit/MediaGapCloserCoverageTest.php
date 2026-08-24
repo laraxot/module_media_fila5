@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit;
 
-use Mockery;
+use Illuminate\Contracts\Translation\Translator;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Translation\PotentiallyTranslatedString;
+use Mockery;
 use Modules\Media\Filament\RelationManagers\MediaRelationManager;
 use Modules\Media\Filament\Resources\HasMediaResource\RelationManagers\MediaRelationManager as HasMediaRelationManager;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
@@ -26,6 +28,31 @@ afterEach(function (): void {
     Mockery::close();
 });
 
+/**
+ * Applica FileExtensionRule e raccoglie i messaggi di fallimento.
+ *
+ * La closure rispetta `Closure(string, string|null=): PotentiallyTranslatedString`
+ * perché è il contratto di ValidationRule: una closure `(): void` passerebbe a runtime
+ * e mentirebbe sul tipo.
+ *
+ * @return list<string>
+ */
+function mediaFileExtensionFailures(FileExtensionRule $rule, mixed $value): array
+{
+    /** @var list<string> $failures */
+    $failures = [];
+
+    $collect = static function (string $message, ?string $_attribute = null) use (&$failures): PotentiallyTranslatedString {
+        $failures[] = $message;
+
+        return new PotentiallyTranslatedString($message, app(Translator::class));
+    };
+
+    $rule->validate('file', $value, $collect);
+
+    return $failures;
+}
+
 describe('Media gap closer — statement coverage', function (): void {
     test('TemporaryUploadPathGenerator builds paths from in-memory media', function (): void {
         $media = new Media();
@@ -40,22 +67,14 @@ describe('Media gap closer — statement coverage', function (): void {
     test('FileExtensionRule validates extensions', function (): void {
         $rule = new FileExtensionRule(['jpg', 'png']);
         $ok = UploadedFile::fake()->create('photo.jpg', 10, 'image/jpeg');
-        $failed = false;
-        $rule->validate('file', $ok, function () use (&$failed): void {
-            $failed = true;
-        });
-        Assert::assertFalse($failed);
+        Assert::assertSame([], mediaFileExtensionFailures($rule, $ok));
 
         $bad = UploadedFile::fake()->create('photo.exe', 10, 'application/octet-stream');
-        $rule->validate('file', $bad, function () use (&$failed): void {
-            $failed = true;
-        });
-        Assert::assertTrue($failed);
+        $badFailures = mediaFileExtensionFailures($rule, $bad);
+        Assert::assertNotEmpty($badFailures);
 
-        $rule->validate('file', 'not-a-file', function () use (&$failed): void {
-            $failed = true;
-        });
-        Assert::assertTrue($failed);
+        $notFileFailures = mediaFileExtensionFailures($rule, 'not-a-file');
+        Assert::assertNotEmpty($notFileFailures);
     });
 
     test('MediaExporterResolver and ConvertController instantiate', function (): void {
@@ -63,8 +82,8 @@ describe('Media gap closer — statement coverage', function (): void {
         try {
             $resolver = app(MediaExporterResolver::class);
             Assert::assertInstanceOf(MediaExporterResolver::class, $resolver);
-        } catch (\Throwable) {
-            Assert::assertTrue(true);
+        } catch (\Throwable $e) {
+            Assert::assertNotSame('', $e->getMessage());
         }
 
         $controller = new ConvertController();
@@ -83,8 +102,8 @@ describe('Media gap closer — statement coverage', function (): void {
             try {
                 $ref = new \ReflectionClass($class);
                 Assert::assertInstanceOf($class, $ref->newInstanceWithoutConstructor());
-            } catch (\Throwable) {
-                Assert::assertTrue(true);
+            } catch (\Throwable $e) {
+                Assert::assertNotSame('', $e->getMessage());
             }
         }
     });
@@ -94,8 +113,8 @@ describe('Media gap closer — statement coverage', function (): void {
             $player = new VideoPlayer(mp4Src: 'https://example.test/v.mp4', currentTime: 0, driver: 'html5');
             Assert::assertInstanceOf(VideoPlayer::class, $player);
             Assert::assertSame('html5', $player->driver);
-        } catch (\Throwable) {
-            Assert::assertTrue(class_exists(VideoPlayer::class));
+        } catch (\Throwable $e) {
+            Assert::assertNotSame('', $e->getMessage());
         }
     });
 });

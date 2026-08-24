@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit;
 
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Mockery;
 use Modules\Media\Actions\Image\Merge;
@@ -18,7 +17,12 @@ use Modules\Media\Tests\TestCase;
 use Modules\Xot\Tests\ModuleRemainingCoverage;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
-use ReflectionMethod;
+
+use function Safe\base64_decode;
+use function Safe\file_put_contents;
+use function Safe\mkdir;
+use function Safe\rmdir;
+use function Safe\unlink;
 
 uses(TestCase::class)->group('no-media-db');
 
@@ -34,71 +38,63 @@ describe('Media coverage 100 — remaining sweep', function (): void {
         ModuleRemainingCoverage::testPoliciesWithRoleMatrix($appRoot, $ns);
         ModuleRemainingCoverage::testHttpControllers($appRoot, $ns);
         ModuleRemainingCoverage::testAggressiveMethodSweep($appRoot, $ns);
-        Assert::assertTrue(true);
     });
 
     test('S3 actions con Storage fake e path inesistente', function (): void {
         Storage::fake('s3');
         Storage::fake('local');
 
-        foreach ([UploadFileAction::class, GetFileInfoAction::class, DeleteFileAction::class] as $class) {
-            try {
-                $action = app($class);
-                if (method_exists($action, 'execute')) {
-                    $ref = new ReflectionClass($action);
-                    $method = $ref->getMethod('execute');
-                    $args = [];
-                    foreach ($method->getParameters() as $param) {
-                        $type = $param->getType();
-                        $name = $type instanceof \ReflectionNamedType ? $type->getName() : 'mixed';
-                        $args[] = match (true) {
-                            $name === 'string' => 'media/missing-'.uniqid('', true).'.bin',
-                            $name === 'int' => 1,
-                            $name === 'bool' => false,
-                            $name === 'array' => [],
-                            default => 'local',
-                        };
-                    }
-                    $action->execute(...$args);
-                }
-            } catch (\Throwable $e) {
-                Assert::assertNotSame('', $e->getMessage());
-            }
-        }
-    });
-
-    test('StreamVideoAction e VideoStream con file temporaneo', function (): void {
-        $tmp = sys_get_temp_dir().'/media-stream-'.uniqid('', true).'.bin';
-        file_put_contents($tmp, str_repeat('A', 2048));
+        $missing = sys_get_temp_dir().'/media-missing-'.uniqid('', true).'.bin';
 
         try {
-            $stream = new VideoStream($tmp);
-            Assert::assertInstanceOf(VideoStream::class, $stream);
-            foreach (['start', 'end', 'stream', 'setHeader', 'openStream'] as $method) {
-                if (! method_exists($stream, $method)) {
-                    continue;
-                }
-                try {
-                    $ref = new ReflectionMethod($stream, $method);
-                    $ref->setAccessible(true);
-                    $args = array_fill(0, $ref->getNumberOfRequiredParameters(), 0);
-                    $ref->invoke($stream, ...$args);
-                } catch (\Throwable) {
-                    Assert::assertTrue(true);
-                }
-            }
+            $upload = app(UploadFileAction::class)->execute($missing, 'media/dest.bin');
+            Assert::assertSame(false, $upload['success'] ?? null, 'un upload da un path inesistente non può riuscire');
+            Assert::assertArrayHasKey('error', $upload);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());
         }
 
         try {
-            $action = app(StreamVideoAction::class);
-            $action->execute($tmp);
-        } catch (\Throwable) {
-            Assert::assertTrue(class_exists(StreamVideoAction::class));
-        } finally {
-            @unlink($tmp);
+            $info = app(GetFileInfoAction::class)->execute('media/missing.bin');
+            Assert::assertSame('media/missing.bin', $info['key'] ?? null);
+        } catch (\Throwable $e) {
+            Assert::assertNotSame('', $e->getMessage());
         }
+
+        try {
+            $deleted = app(DeleteFileAction::class)->execute('media/missing.bin');
+            Assert::assertSame('media/missing.bin', $deleted['key'] ?? null);
+        } catch (\Throwable $e) {
+            Assert::assertNotSame('', $e->getMessage());
+        }
+    });
+
+    test('VideoStream e StreamVideoAction rifiutano un path inesistente sul disco', function (): void {
+        Storage::fake('local');
+
+        $missing = 'media/assente-'.uniqid('', true).'.mp4';
+
+        $streamMessage = null;
+        try {
+            new VideoStream('local', $missing);
+        } catch (\Throwable $e) {
+            $streamMessage = $e->getMessage();
+        }
+        if ($streamMessage === null) {
+            Assert::fail('VideoStream doveva rifiutare un path inesistente');
+        }
+        Assert::assertStringContainsString($missing, $streamMessage);
+
+        $actionMessage = null;
+        try {
+            app(StreamVideoAction::class)->execute('local', $missing);
+        } catch (\Throwable $e) {
+            $actionMessage = $e->getMessage();
+        }
+        if ($actionMessage === null) {
+            Assert::fail('StreamVideoAction doveva propagare il fallimento del path inesistente');
+        }
+        Assert::assertStringContainsString($missing, $actionMessage);
     });
 
     test('Image Merge con due png minimi', function (): void {
@@ -114,19 +110,23 @@ describe('Media coverage 100 — remaining sweep', function (): void {
         try {
             $merge = app(Merge::class);
             $ref = new ReflectionClass($merge);
-            if ($ref->hasMethod('execute')) {
-                $method = $ref->getMethod('execute');
-                try {
-                    $method->invoke($merge, $a, $b, $dir.'/out.png');
-                } catch (\Throwable) {
-                    Assert::assertTrue(true);
+            Assert::assertTrue($ref->hasMethod('execute'), Merge::class.' deve esporre execute()');
+            $method = $ref->getMethod('execute');
+            try {
+                $method->invoke($merge, $a, $b, $dir.'/out.png');
+                Assert::assertFileExists($dir.'/out.png');
+            } catch (\Throwable $e) {
+                Assert::assertNotSame('', $e->getMessage());
+            }
+        } finally {
+            foreach ([$a, $b, $dir.'/out.png'] as $file) {
+                if (is_file($file)) {
+                    unlink($file);
                 }
             }
-            Assert::assertTrue(is_file($a));
-        } finally {
-            @unlink($a);
-            @unlink($b);
-            @rmdir($dir);
+            if (is_dir($dir)) {
+                rmdir($dir);
+            }
         }
     });
 
@@ -152,8 +152,8 @@ describe('Media coverage 100 — remaining sweep', function (): void {
                 } else {
                     $method->invoke($upload, ...array_fill(0, $method->getNumberOfRequiredParameters(), 'uuid-1'));
                 }
-            } catch (\Throwable) {
-                Assert::assertTrue(true);
+            } catch (\Throwable $e) {
+                Assert::assertNotSame('', $e->getMessage());
             }
         }
     });

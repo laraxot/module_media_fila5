@@ -14,6 +14,10 @@ afterEach(function (): void {
     Mockery::close();
 });
 
+/**
+ * @return array{string, string} radice `app/` del modulo e namespace corrispondente
+ */
+/** @return list{string, string} */
 function mediaBusinessContext(): array
 {
     return [dirname(__DIR__, 2).'/app', 'Modules\\Media\\'];
