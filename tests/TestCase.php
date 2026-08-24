@@ -172,6 +172,7 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
+<<<<<<< .merge_file_JIyQZX
      * Controparte di {@see self::assertMediaTableHas()}: la riga non deve esistere.
      *
      * @param  array<string, mixed>  $where
@@ -182,6 +183,8 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
+=======
+>>>>>>> .merge_file_sZ8hm8
      * Colonne della tabella `media`, filtrate e riindicizzate per l'inferenza PHPStan.
      *
      * @return array<int, string>
