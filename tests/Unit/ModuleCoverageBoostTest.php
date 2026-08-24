@@ -4,30 +4,29 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit;
 
-use BackedEnum;
+use Filament\Support\Contracts\HasLabel;
 use Modules\Media\Tests\TestCase;
-use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
-use ReflectionMethod;
-use UnitEnum;
 
 use function Safe\glob;
 
 uses(TestCase::class)->group('no-media-db');
 
 /**
- * @return list<string>
+ * @return list<class-string>
  */
 function mediaBoostClasses(string $pattern): array
 {
     $root = dirname(__DIR__, 2).'/app';
-    /** @var list<string> $files */
     $files = glob($root.'/'.$pattern);
     $classes = [];
 
     foreach ($files as $file) {
+        if (! is_string($file)) {
+            continue;
+        }
         $relative = str_replace($root.'/', '', $file);
         $class = 'Modules\\Media\\'.str_replace(['/', '.php'], ['\\', ''], $relative);
         if (class_exists($class)) {
@@ -43,13 +42,13 @@ function mediaBoostClasses(string $pattern): array
 describe('Media coverage boost', function (): void {
     test('enums expose cases and labels or options', function (): void {
         foreach (mediaBoostClasses('Enums/*.php') as $class) {
-            $ref = new ReflectionClass($class);
-            if (! $ref->isEnum()) {
+            if (! enum_exists($class)) {
                 continue;
             }
-            Assert::assertNotEmpty($class::cases());
-            if (method_exists($class, 'getLabel')) {
-                foreach ($class::cases() as $case) {
+            $cases = $class::cases();
+            Assert::assertNotEmpty($cases);
+            foreach ($cases as $case) {
+                if ($case instanceof HasLabel) {
                     Assert::assertIsString($case->getLabel());
                 }
             }
