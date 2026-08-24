@@ -172,6 +172,16 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
+     * Controparte di {@see self::assertMediaTableHas()}: la riga non deve esistere.
+     *
+     * @param  array<string, mixed>  $where
+     */
+    public function assertMediaTableMissing(string $table, array $where, string $connection = 'media'): void
+    {
+        $this->assertDatabaseMissing($table, $where, $connection);
+    }
+
+    /**
      * Colonne della tabella `media`, filtrate e riindicizzate per l'inferenza PHPStan.
      *
      * @return array<int, string>
