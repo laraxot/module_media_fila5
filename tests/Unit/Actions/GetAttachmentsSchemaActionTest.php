@@ -15,19 +15,20 @@ uses(TestCase::class);
  */
 it('returns attachment schema', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice', 'contract', 'receipt'];
 
     // Act
     $form = $action->execute($attachments);
 
     // Assert
-    expect($form)->toBeArray()->toHaveCount(3);
+    expect($form)->toHaveCount(3);
 
-    // Verifica che ogni attachment abbia un FileUpload component
-    foreach ($form as $component) {
-        expect($component)->toBeInstanceOf(FileUpload::class);
-    }
+    // Il tipo dei componenti e' gia' dichiarato dal return type dell'action: cio' che
+    // il test verifica e' che ogni allegato chiesto abbia il proprio campo, con il nome
+    // dell'allegato.
+    expect(array_map(static fn (FileUpload $component): string => $component->getName(), $form))
+        ->toBe($attachments);
 });
 
 /**
@@ -35,7 +36,7 @@ it('returns attachment schema', function (): void {
  */
 it('has correct names', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice', 'contract'];
 
     // Act
@@ -55,7 +56,7 @@ it('has correct names', function (): void {
  */
 it('has correct validation', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -86,7 +87,7 @@ it('has correct validation', function (): void {
  */
 it('has correct storage', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -102,7 +103,7 @@ it('has correct storage', function (): void {
  */
 it('has correct directory', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -118,7 +119,7 @@ it('has correct directory', function (): void {
  */
 it('has correct visibility', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -134,7 +135,7 @@ it('has correct visibility', function (): void {
  */
 it('has correct max size', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -150,7 +151,7 @@ it('has correct max size', function (): void {
  */
 it('has correct multiple setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -166,7 +167,7 @@ it('has correct multiple setting', function (): void {
  */
 it('has correct preview setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -182,7 +183,7 @@ it('has correct preview setting', function (): void {
  */
 it('has correct download setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -198,18 +199,17 @@ it('has correct download setting', function (): void {
  */
 it('has correct remove setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
     $form = $action->execute($attachments);
 
     // Assert
-    $component = $form[0];
-    // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
-    // By default, Filament file uploads are removable unless specifically configured otherwise
-    // We can verify that the component is a FileUpload
-    expect($component)->toBeInstanceOf(FileUpload::class);
+    // `FileUpload` non espone un `isRemovable()`: la rimozione si controlla con
+    // `deleteUploadedFileUsing()`. Il tipo del componente lo dichiara gia' l'action,
+    // quindi si verifica il nome del campo, che e' cio' che l'action decide.
+    expect($form[0]->getName())->toBe($attachments[0]);
 });
 
 /**
@@ -217,7 +217,7 @@ it('has correct remove setting', function (): void {
  */
 it('has correct reorder setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -233,7 +233,7 @@ it('has correct reorder setting', function (): void {
  */
 it('has correct labels', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -250,7 +250,7 @@ it('has correct labels', function (): void {
  */
 it('has correct append setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -267,16 +267,16 @@ it('has correct append setting', function (): void {
  */
 it('has correct panel', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
     $form = $action->execute($attachments);
 
     // Assert
-    $component = $form[0];
-    // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-    expect($component)->toBeInstanceOf(FileUpload::class);
+    // `FileUpload` non espone `getPanel()`: si verifica il nome del campo, che e'
+    // cio' che l'action decide a partire dall'allegato.
+    expect($form[0]->getName())->toBe($attachments[0]);
 });
 
 /**
@@ -284,17 +284,16 @@ it('has correct panel', function (): void {
  */
 it('has correct help text', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
     $form = $action->execute($attachments);
 
     // Assert
-    $component = $form[0];
-    // FileUpload has helperText property but no getHelper method
-    // We can verify that the component is a FileUpload instance
-    expect($component)->toBeInstanceOf(FileUpload::class);
+    // `FileUpload` non espone `getHelper()`: si verifica il nome del campo, che e'
+    // cio' che l'action decide a partire dall'allegato.
+    expect($form[0]->getName())->toBe($attachments[0]);
 });
 
 /**
@@ -302,7 +301,7 @@ it('has correct help text', function (): void {
  */
 it('has correct placeholder', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act

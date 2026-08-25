@@ -20,7 +20,7 @@ use Modules\Media\Http\Requests\CreateTemporaryUploadFromDirectS3UploadRequest;
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaConvert;
 use Modules\Media\Models\TemporaryUpload;
-use Modules\Media\Services\SubtitleService;
+use Modules\Media\Actions\Stream\SubtitleService;
 use Modules\Media\Services\VideoStream;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
@@ -178,7 +178,7 @@ XML;
         }
     });
 
-    test('stream SubtitleService parses xml like the domain service', function (): void {
+    test('SubtitleService exposes xml, content and model accessors', function (): void {
         $xml = <<<'XML'
 <?xml version="1.0"?>
 <doc>
@@ -195,8 +195,8 @@ XML;
         $path = sys_get_temp_dir().'/media-stream-sub-'.uniqid('', true).'.xml';
         file_put_contents($path, $xml);
 
-        $service = \Modules\Media\Actions\Stream\SubtitleService::make()->setFilePath($path);
-        Assert::assertSame($service, \Modules\Media\Actions\Stream\SubtitleService::getInstance());
+        $service = SubtitleService::make()->setFilePath($path);
+        Assert::assertSame($service, SubtitleService::getInstance());
         Assert::assertStringContainsString('hello', $service->getPlain());
         $items = $service->get();
         Assert::assertNotEmpty($items);

@@ -12,7 +12,7 @@ uses(TestCase::class);
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-        expect(new TemporaryUpload)->toBeInstanceOf(BaseModel::class);
+        expect((new \ReflectionClass(TemporaryUpload::class))->isSubclassOf(BaseModel::class))->toBeTrue();
     });
 
     it('uses HasXotFactory trait', function (): void {

@@ -12,7 +12,7 @@ uses(TestCase::class);
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
-        expect(new Media)->toBeInstanceOf(SpatieMedia::class);
+        expect((new \ReflectionClass(Media::class))->isSubclassOf(SpatieMedia::class))->toBeTrue();
     });
 
     it('uses HasXotFactory trait', function (): void {

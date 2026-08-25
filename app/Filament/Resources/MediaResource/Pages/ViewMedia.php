@@ -40,7 +40,7 @@ class ViewMedia extends XotBaseViewRecord
                     'media_preview' => Section::make()->schema([
                         'image' => ImageEntry::make('url')
                             ->defaultImageUrl(fn (Media $record) => $record->getUrl())
-                            ->size(500)
+                            ->imageSize(500)
                             ->visible(fn (Media $record): bool => $record->type === 'image'),
                         'video' => VideoEntry::make('url')
                             ->defaultImageUrl(fn (Media $record) => $record->getUrl())
