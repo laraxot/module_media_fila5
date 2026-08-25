@@ -24,7 +24,11 @@ class ConvertWidget extends XotBaseWidget
 
     public float $percentage = 0;
 
+<<<<<<< HEAD
    public float $remaining = 0.0;
+=======
+    public float $remaining = 0.0;
+>>>>>>> laraxot/dev
 
     public float $rate = 0.0;
 
@@ -68,7 +72,11 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
+<<<<<<< HEAD
        $formattedMedia = MediaExporterResolver::from(
+=======
+        $formattedMedia = MediaExporterResolver::from(
+>>>>>>> laraxot/dev
             $exportedMedia->toDisk($disk_mp4)
         )->inFormat($format);
         $formattedMedia->save($file_new);

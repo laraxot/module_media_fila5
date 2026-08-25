@@ -128,7 +128,11 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
+<<<<<<< HEAD
        $this->getSchema('form')?->fill([
+=======
+        $this->getSchema('form')?->fill([
+>>>>>>> laraxot/dev
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -232,7 +236,11 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
+<<<<<<< HEAD
        $formState = $this->getSchema('form')?->getState() ?? [];
+=======
+        $formState = $this->getSchema('form')?->getState() ?? [];
+>>>>>>> laraxot/dev
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
@@ -248,7 +256,11 @@ class S3Test extends XotBasePage
         }
 
         // Generate CloudFront signed URL for attachment
+<<<<<<< HEAD
        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
+=======
+        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
+>>>>>>> laraxot/dev
         dddx([
             'signedurl' => $signedUrl,
             'filePath' => $filePath,
@@ -270,12 +282,20 @@ class S3Test extends XotBasePage
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
+<<<<<<< HEAD
                'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, 8).'...',
+=======
+                'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, 8).'...',
+>>>>>>> laraxot/dev
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
                 'AWS_USE_PATH_STYLE_ENDPOINT' => config('filesystems.disks.s3.use_path_style_endpoint', 'false'),
+<<<<<<< HEAD
                'CLOUDFRONT_BASE_URL' => config('services.cloudfront.base_url'),
+=======
+                'CLOUDFRONT_BASE_URL' => config('services.cloudfront.base_url'),
+>>>>>>> laraxot/dev
                 'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id'),
                 'CLOUDFRONT_PRIVATE_KEY' => config('services.cloudfront.private_key')
                     ? '✅ Present'
@@ -369,7 +389,11 @@ class S3Test extends XotBasePage
                     'Bucket Accessible' => '❌ No',
                     'Error Code' => $e->getAwsErrorCode() ?? 'UnknownError',
                     'Message' => $e->getMessage(),
+<<<<<<< HEAD
                    'Solution' => $this->getSolutionForError($e->getAwsErrorCode()),
+=======
+                    'Solution' => $this->getSolutionForError($e->getAwsErrorCode()),
+>>>>>>> laraxot/dev
                 ],
             ];
         }
@@ -473,7 +497,11 @@ class S3Test extends XotBasePage
                 'status' => 'info',
                 'data' => [
                     'Policy Exists' => '✅ Yes',
+<<<<<<< HEAD
                    'Policy' => json_encode(json_decode(SafeStringCastAction::cast($policy['Policy'])), JSON_PRETTY_PRINT),
+=======
+                    'Policy' => json_encode(json_decode(SafeStringCastAction::cast($policy['Policy'])), JSON_PRETTY_PRINT),
+>>>>>>> laraxot/dev
                 ],
             ];
         } catch (AwsException $e) {
@@ -507,7 +535,11 @@ class S3Test extends XotBasePage
     {
         try {
             // Test CloudFront configuration
+<<<<<<< HEAD
            $baseUrl = config('services.cloudfront.base_url');
+=======
+            $baseUrl = config('services.cloudfront.base_url');
+>>>>>>> laraxot/dev
             $keyPairId = config('services.cloudfront.key_pair_id');
             $privateKey = config('services.cloudfront.private_key');
 
@@ -584,12 +616,20 @@ class S3Test extends XotBasePage
         }
 
         $output = [];
+<<<<<<< HEAD
        foreach ($this->debugResults as $result) {
+=======
+        foreach ($this->debugResults as $result) {
+>>>>>>> laraxot/dev
             if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
                 continue;
             }
 
+<<<<<<< HEAD
            $title = SafeStringCastAction::cast($result['title']);
+=======
+            $title = SafeStringCastAction::cast($result['title']);
+>>>>>>> laraxot/dev
             $status = SafeStringCastAction::cast($result['status']);
             $data = $result['data'];
 
@@ -603,7 +643,11 @@ class S3Test extends XotBasePage
                     if (is_array($value)) {
                         $output[] = "{$keyStr}: ".json_encode($value, JSON_PRETTY_PRINT);
                     } else {
+<<<<<<< HEAD
                        $valueStr = SafeStringCastAction::cast($value);
+=======
+                        $valueStr = SafeStringCastAction::cast($value);
+>>>>>>> laraxot/dev
                         $output[] = "{$keyStr}: {$valueStr}";
                     }
                 }
@@ -623,7 +667,11 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
+<<<<<<< HEAD
            $formState = $this->getSchema('form')?->getState() ?? [];
+=======
+            $formState = $this->getSchema('form')?->getState() ?? [];
+>>>>>>> laraxot/dev
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -639,7 +687,11 @@ class S3Test extends XotBasePage
             }
 
             // Generate CloudFront signed URL for attachment
+<<<<<<< HEAD
            $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
+=======
+            $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
+>>>>>>> laraxot/dev
 
             // Log the email data for testing purposes (no actual email sent)
             Log::debug('S3 Test Email Data', [
@@ -678,7 +730,11 @@ class S3Test extends XotBasePage
         try {
             $testData = 'This is a test file content for S3 upload/download test.';
             $testFileName = 'test-file-'.time().'.txt';
+<<<<<<< HEAD
            $localTestPath = sys_get_temp_dir().'/'.$testFileName;
+=======
+            $localTestPath = sys_get_temp_dir().'/'.$testFileName;
+>>>>>>> laraxot/dev
 
             // Create test file
             file_put_contents($localTestPath, $testData);
@@ -747,7 +803,11 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
+<<<<<<< HEAD
        $this->getSchema('form')?->fill([
+=======
+        $this->getSchema('form')?->fill([
+>>>>>>> laraxot/dev
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -770,7 +830,11 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
+<<<<<<< HEAD
            $formState = $this->getSchema('form')?->getState() ?? [];
+=======
+            $formState = $this->getSchema('form')?->getState() ?? [];
+>>>>>>> laraxot/dev
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
@@ -783,7 +847,11 @@ class S3Test extends XotBasePage
                 ],
                 'uploaded_file' => $filePath
                     ? [
+<<<<<<< HEAD
                        'path' => SafeStringCastAction::cast($filePath),
+=======
+                        'path' => SafeStringCastAction::cast($filePath),
+>>>>>>> laraxot/dev
                         'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 30),
                         'temporary_url' => $s3Disk->temporaryUrl(SafeStringCastAction::cast($filePath), now()->addMinutes(30)),
                     ] : null,

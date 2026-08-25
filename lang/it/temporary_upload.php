@@ -30,7 +30,11 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+<<<<<<< HEAD
        'file' => [
+=======
+        'file' => [
+>>>>>>> laraxot/dev
             'label' => 'file',
             'helper_text' => 'file',
             'description' => 'file',

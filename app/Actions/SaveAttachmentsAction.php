@@ -18,7 +18,11 @@ class SaveAttachmentsAction
     /**
      * Save attachments to media library.
      *
+<<<<<<< HEAD
     * @param  list<string>  $attachments
+=======
+     * @param  list<string>  $attachments
+>>>>>>> laraxot/dev
      * @param  array<string, string|null>  $data
      */
     public function execute(HasMedia $record, array $attachments, array $data, string $disk = 'attachments'): void
@@ -29,7 +33,11 @@ class SaveAttachmentsAction
         foreach ($attachments as $attachment) {
             Assert::string($attachment, '['.__LINE__.']['.class_basename(self::class).']');
 
+<<<<<<< HEAD
            if (! isset($data[$attachment]) || $data[$attachment] === '') {
+=======
+            if (! isset($data[$attachment]) || $data[$attachment] === '') {
+>>>>>>> laraxot/dev
                 continue;
             }
 
@@ -45,7 +53,11 @@ class SaveAttachmentsAction
 
             // Ottieni il contenuto del file prima che venga eliminato
             $fileContent = $storage->get($path);
+<<<<<<< HEAD
            $tempPath = tempnam(sys_get_temp_dir(), 'media_');
+=======
+            $tempPath = tempnam(sys_get_temp_dir(), 'media_');
+>>>>>>> laraxot/dev
 
             file_put_contents($tempPath, $fileContent);
 
@@ -64,7 +76,11 @@ class SaveAttachmentsAction
             }
         }
 
+<<<<<<< HEAD
        if ($dataAttachments !== []) {
+=======
+        if ($dataAttachments !== []) {
+>>>>>>> laraxot/dev
             $record->update($dataAttachments);
         }
     }

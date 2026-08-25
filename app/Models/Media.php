@@ -33,7 +33,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string $disk
  * @property string|null $conversions_disk
  * @property int $size
+<<<<<<< HEAD
 * @property array<string, mixed>|null $manipulations
+=======
+ * @property array<string, mixed>|null $manipulations
+>>>>>>> laraxot/dev
  * @property array<string, mixed>|null $custom_properties
  * @property array<string, bool>|null $generated_conversions
  * @property array<string, string>|null $responsive_images
@@ -55,7 +59,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string|null $caption
  * @property string|null $exif
  * @property string|null $curations
+<<<<<<< HEAD
 * @property string|null $deleted_at
+=======
+ * @property string|null $deleted_at
+>>>>>>> laraxot/dev
  * @property string|null $deleted_by
  * @property UserContract|null $creator
  * @property Model|Eloquent $model
@@ -78,7 +86,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereCreatedBy($value)
  * @method static Builder|Media whereCurations($value)
  * @method static Builder|Media whereCustomProperties($value)
+<<<<<<< HEAD
 * @method static Builder|Media whereDeletedAt($value)
+=======
+ * @method static Builder|Media whereDeletedAt($value)
+>>>>>>> laraxot/dev
  * @method static Builder|Media whereDeletedBy($value)
  * @method static Builder|Media whereDescription($value)
  * @method static Builder|Media whereDirectory($value)
@@ -105,7 +117,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereUserId($value)
  * @method static Builder|Media whereUuid($value)
  * @method static Builder|Media whereWidth($value)
+<<<<<<< HEAD
 * @method static MediaFactory factory($count = null, $state = [])
+=======
+ * @method static MediaFactory factory($count = null, $state = [])
+>>>>>>> laraxot/dev
  *
  * @property-read mixed $extension
  * @property-read mixed $human_readable_size
@@ -119,7 +135,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
+<<<<<<< HEAD
    /** @use HasXotFactory<MediaFactory> */
+=======
+    /** @use HasXotFactory<MediaFactory> */
+>>>>>>> laraxot/dev
     use HasXotFactory;
 
     use Updater;
@@ -128,7 +148,11 @@ class Media extends SpatieMedia
     protected $connection = 'media';
 
     /**
+<<<<<<< HEAD
     * @param  array<int, string>  $uuids
+=======
+     * @param  array<int, string>  $uuids
+>>>>>>> laraxot/dev
      * @return MediaCollection<int, self>
      */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
@@ -166,7 +190,11 @@ class Media extends SpatieMedia
         return $this->belongsTo($userClass, 'created_by');
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return HasMany<MediaConvert, $this>
      */
     public function mediaConverts(): HasMany
@@ -200,7 +228,11 @@ class Media extends SpatieMedia
         return url($url);
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<int, array{name: string, generated: bool, src: string}>
      */
     public function getEntryConversionsAttribute(): array
@@ -209,7 +241,11 @@ class Media extends SpatieMedia
         foreach ($this->getGeneratedConversions() as $conv => $state) {
             $item = [
                 'name' => is_string($conv) ? $conv : ((string) $conv),
+<<<<<<< HEAD
                'generated' => (bool) $state,
+=======
+                'generated' => (bool) $state,
+>>>>>>> laraxot/dev
                 'src' => $this->getUrlConv(is_string($conv) ? $conv : ((string) $conv)),
             ];
             $conversions[] = $item;

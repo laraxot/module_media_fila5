@@ -98,7 +98,11 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+<<<<<<< HEAD
        'id' => [
+=======
+        'id' => [
+>>>>>>> laraxot/dev
             'label' => 'id',
         ],
         'file_name' => [
