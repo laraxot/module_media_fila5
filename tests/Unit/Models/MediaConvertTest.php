@@ -8,7 +8,11 @@ use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 
+<<<<<<< HEAD
 ses(TestCase::class);
+=======
+uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {
@@ -35,7 +39,11 @@ describe('MediaConvert Model', function (): void {
     });
 
     it('has media relationship', function (): void {
+<<<<<<< HEAD
        $model = new MediaConvert;
+=======
+        $model = new MediaConvert;
+>>>>>>> laraxot/dev
 
         expect((new \ReflectionClass($model))->hasMethod('media'))->toBeTrue();
     });
@@ -59,7 +67,11 @@ describe('MediaConvert Model', function (): void {
     });
 
     it('uses HasXotFactory trait', function (): void {
+<<<<<<< HEAD
        $traits = class_uses_recursive(MediaConvert::class);
+=======
+        $traits = class_uses_recursive(MediaConvert::class);
+>>>>>>> laraxot/dev
 
         expect(in_array('Modules\Xot\Models\Traits\HasXotFactory', $traits, true))->toBeTrue();
     });

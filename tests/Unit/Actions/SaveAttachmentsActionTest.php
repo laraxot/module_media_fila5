@@ -23,7 +23,11 @@ it('executes save attachments successfully', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
    $record = $this->makeHasMediaRecordMock();
+=======
+    $record = $this->makeHasMediaRecordMock();
+>>>>>>> laraxot/dev
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -57,7 +61,11 @@ it('handles empty attachments', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
    $record = $this->makeHasMediaRecordMock();
+=======
+    $record = $this->makeHasMediaRecordMock();
+>>>>>>> laraxot/dev
     $record->expects($this->never())->method('update');
 
     // Act + Assert: senza allegati `$dataAttachments` resta vuoto, quindi
@@ -69,7 +77,11 @@ it('skips nonexistent files', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
    $record = $this->makeHasMediaRecordMock();
+=======
+    $record = $this->makeHasMediaRecordMock();
+>>>>>>> laraxot/dev
     $record->expects($this->never())->method('update');
 
     $attachments = ['invoice'];
@@ -77,7 +89,11 @@ it('skips nonexistent files', function (): void {
         'invoice' => 'nonexistent/file.pdf',
     ];
 
+<<<<<<< HEAD
    // Act + Assert: il file non esiste sul disco, quindi il ciclo salta l'allegato
+=======
+    // Act + Assert: il file non esiste sul disco, quindi il ciclo salta l'allegato
+>>>>>>> laraxot/dev
     // e `update()` non viene mai chiamato. Lo verifica l'aspettativa sul mock.
     $action->execute($record, $attachments, $data, 'attachments');
 });
@@ -86,7 +102,11 @@ it('handles storage errors gracefully', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
    $record = $this->makeHasMediaRecordMock();
+=======
+    $record = $this->makeHasMediaRecordMock();
+>>>>>>> laraxot/dev
     $record->method('addMedia')->willThrowException(new Exception('Storage error'));
 
     $attachments = ['invoice'];
@@ -98,14 +118,22 @@ it('handles storage errors gracefully', function (): void {
 
     // Act & Assert
     expect(fn () => $action->execute($record, $attachments, $data, 'attachments'))
+<<<<<<< HEAD
        ->toThrow(Exception::class, 'Storage error');
+=======
+        ->toThrow(Exception::class, 'Storage error');
+>>>>>>> laraxot/dev
 });
 
 it('uses correct disk', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
    $record = $this->makeHasMediaRecordMock();
+=======
+    $record = $this->makeHasMediaRecordMock();
+>>>>>>> laraxot/dev
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -137,7 +165,11 @@ it('cleans up temp files', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
    $record = $this->makeHasMediaRecordMock();
+=======
+    $record = $this->makeHasMediaRecordMock();
+>>>>>>> laraxot/dev
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
@@ -156,7 +188,11 @@ it('cleans up temp files', function (): void {
 
     Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
 
+<<<<<<< HEAD
    // `tempnam(sys_get_temp_dir(), 'media_')` crea il file temporaneo che il blocco
+=======
+    // `tempnam(sys_get_temp_dir(), 'media_')` crea il file temporaneo che il blocco
+>>>>>>> laraxot/dev
     // `finally` deve rimuovere: si confronta l'elenco prima e dopo, non un booleano.
     $tempFilesBefore = glob(sys_get_temp_dir().'/media_*');
 
@@ -171,7 +207,11 @@ it('handles multiple attachments', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
+<<<<<<< HEAD
    $record = $this->makeHasMediaRecordMock();
+=======
+    $record = $this->makeHasMediaRecordMock();
+>>>>>>> laraxot/dev
 
     $media = $this->makeTestMock(Media::class);
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');

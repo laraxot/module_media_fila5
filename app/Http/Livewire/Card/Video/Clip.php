@@ -63,7 +63,11 @@ class Clip extends Component
 
     /**
      * Undocumented function.
+<<<<<<< HEAD
     *
+=======
+     *
+>>>>>>> laraxot/dev
      * @param  array<string, mixed>  $data
      */
     public function updateDataFromModal(string $id, array $data): void
@@ -77,7 +81,11 @@ class Clip extends Component
         }
 
         // dddx(['data'=>$data,'model'=>$this->model]);
+<<<<<<< HEAD
        /** @var array<string, string> $up */
+=======
+        /** @var array<string, string> $up */
+>>>>>>> laraxot/dev
         $up = collect($data)->only(['title', 'subtitle'])->all();
 
         $this->model->update($up);

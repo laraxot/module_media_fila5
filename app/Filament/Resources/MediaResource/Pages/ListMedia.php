@@ -88,7 +88,11 @@ class ListMedia extends XotBaseListRecords
                     }
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
+<<<<<<< HEAD
                    $fileName = $record->file_name;
+=======
+                    $fileName = $record->file_name;
+>>>>>>> laraxot/dev
                     Assert::string($fileName);
 
                     return response()->download($filePath, $fileName);

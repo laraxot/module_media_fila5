@@ -11,7 +11,11 @@ use Webmozart\Assert\Assert;
 
 class GetAttachmentsSchemaAction
 {
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @param  array<string|int, string>  $attachments
      * @return array<int, FileUpload>
      */
@@ -22,7 +26,11 @@ class GetAttachmentsSchemaAction
         foreach ($attachments as $attachment) {
             $attachmentStr = (string) $attachment;
             $fileUpload = FileUpload::make($attachmentStr)
+<<<<<<< HEAD
                ->directory('temp')
+=======
+                ->directory('temp')
+>>>>>>> laraxot/dev
                 ->disk($disk)
                 ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
                 ->maxSize(10 * 1024)
@@ -41,7 +49,11 @@ class GetAttachmentsSchemaAction
 
                     $sessionFiles = [];
 
+<<<<<<< HEAD
                    foreach ($state as $file) {
+=======
+                    foreach ($state as $file) {
+>>>>>>> laraxot/dev
                         $sessionFiles[] = $file;
                     }
 
@@ -49,7 +61,11 @@ class GetAttachmentsSchemaAction
                     $set($attachment, $sessionFiles);
                 });
 
+<<<<<<< HEAD
            $form[] = $fileUpload;
+=======
+            $form[] = $fileUpload;
+>>>>>>> laraxot/dev
         }
 
         return $form;

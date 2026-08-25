@@ -22,14 +22,22 @@ it('can create media with minimal data', function (): void {
         'size' => 1024,
     ]);
 
+<<<<<<< HEAD
    assertMediaTableHas('media', [
+=======
+    assertMediaTableHas('media', [
+>>>>>>> laraxot/dev
         'id' => SafeIntCastAction::cast($media->getKey()),
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',
         'disk' => 'public',
         'size' => 1024,
+<<<<<<< HEAD
    ]);
+=======
+    ]);
+>>>>>>> laraxot/dev
 });
 
 it('can create media with all fields', function (): void {
@@ -60,7 +68,11 @@ it('can create media with all fields', function (): void {
 
     $media = Media::factory()->create($mediaData);
 
+<<<<<<< HEAD
    assertMediaTableHas('media', [
+=======
+    assertMediaTableHas('media', [
+>>>>>>> laraxot/dev
         'id' => SafeIntCastAction::cast($media->getKey()),
         'collection_name' => 'images',
         'name' => 'full-image',
@@ -70,7 +82,11 @@ it('can create media with all fields', function (): void {
         'conversions_disk' => 's3-conversions',
         'size' => 2048,
         'order_column' => 1,
+<<<<<<< HEAD
    ]);
+=======
+    ]);
+>>>>>>> laraxot/dev
 
     // Verifica campi JSON
     expect($media->manipulations)->toBe(['resize' => ['width' => 800, 'height' => 600]]);
@@ -88,7 +104,11 @@ it('can create media with all fields', function (): void {
 
 it('media delete removes the record', function (): void {
     $media = Media::factory()->create();
+<<<<<<< HEAD
    $mediaId = SafeIntCastAction::cast($media->getKey());
+=======
+    $mediaId = SafeIntCastAction::cast($media->getKey());
+>>>>>>> laraxot/dev
 
     $media->delete();
 
@@ -100,7 +120,11 @@ it('can find media by model type', function (): void {
 
     $foundMedia = Media::where('model_type', 'App\Models\UniqueModel')->first();
 
+<<<<<<< HEAD
    Assert::assertInstanceOf(Media::class, $foundMedia);
+=======
+    Assert::assertInstanceOf(Media::class, $foundMedia);
+>>>>>>> laraxot/dev
     expect($media->id)->toBe($foundMedia->id);
 });
 
@@ -109,7 +133,11 @@ it('can find media by model id', function (): void {
 
     $foundMedia = Media::where('model_id', '999')->first();
 
+<<<<<<< HEAD
    Assert::assertInstanceOf(Media::class, $foundMedia);
+=======
+    Assert::assertInstanceOf(Media::class, $foundMedia);
+>>>>>>> laraxot/dev
     expect($media->id)->toBe($foundMedia->id);
 });
 
@@ -121,7 +149,11 @@ it('can find media by collection name', function (): void {
     $avatarMedia = Media::where('collection_name', 'avatars')->get();
 
     expect($avatarMedia)->toHaveCount(1);
+<<<<<<< HEAD
    $firstAvatarMedia = $avatarMedia->first();
+=======
+    $firstAvatarMedia = $avatarMedia->first();
+>>>>>>> laraxot/dev
     Assert::assertInstanceOf(Media::class, $firstAvatarMedia);
     expect($firstAvatarMedia->collection_name)->toBe('avatars');
 });
@@ -131,7 +163,11 @@ it('can find media by name', function (): void {
 
     $foundMedia = Media::where('name', 'unique-media-name')->first();
 
+<<<<<<< HEAD
    Assert::assertInstanceOf(Media::class, $foundMedia);
+=======
+    Assert::assertInstanceOf(Media::class, $foundMedia);
+>>>>>>> laraxot/dev
     expect($media->id)->toBe($foundMedia->id);
 });
 
@@ -140,7 +176,11 @@ it('can find media by file name', function (): void {
 
     $foundMedia = Media::where('file_name', 'unique-file.jpg')->first();
 
+<<<<<<< HEAD
    Assert::assertInstanceOf(Media::class, $foundMedia);
+=======
+    Assert::assertInstanceOf(Media::class, $foundMedia);
+>>>>>>> laraxot/dev
     expect($media->id)->toBe($foundMedia->id);
 });
 
@@ -152,7 +192,11 @@ it('can find media by disk', function (): void {
     $publicMedia = Media::where('disk', 'public')->get();
 
     expect($publicMedia)->toHaveCount(1);
+<<<<<<< HEAD
    $firstPublicMedia = $publicMedia->first();
+=======
+    $firstPublicMedia = $publicMedia->first();
+>>>>>>> laraxot/dev
     Assert::assertInstanceOf(Media::class, $firstPublicMedia);
     expect($firstPublicMedia->disk)->toBe('public');
 });
@@ -165,7 +209,11 @@ it('can find media by mime type', function (): void {
     $jpegMedia = Media::where('mime_type', 'image/jpeg')->get();
 
     expect($jpegMedia)->toHaveCount(1);
+<<<<<<< HEAD
    $firstJpegMedia = $jpegMedia->first();
+=======
+    $firstJpegMedia = $jpegMedia->first();
+>>>>>>> laraxot/dev
     Assert::assertInstanceOf(Media::class, $firstJpegMedia);
     expect($firstJpegMedia->mime_type)->toBe('image/jpeg');
 });
@@ -178,7 +226,11 @@ it('can find media by size range', function (): void {
     $largeMedia = Media::where('size', '>', 1000)->get();
 
     expect($largeMedia)->toHaveCount(2);
+<<<<<<< HEAD
    expect($largeMedia->every(fn (Media $media): bool => $media->size > 1000))->toBeTrue();
+=======
+    expect($largeMedia->every(fn (Media $media): bool => $media->size > 1000))->toBeTrue();
+>>>>>>> laraxot/dev
 });
 
 it('can find media by name pattern', function (): void {
@@ -189,7 +241,11 @@ it('can find media by name pattern', function (): void {
     $profileMedia = Media::where('name', 'like', '%profile%')->get();
 
     expect($profileMedia->count())->toBeGreaterThanOrEqual(1);
+<<<<<<< HEAD
    expect($profileMedia->contains(fn (Media $media): bool => str_contains($media->name, 'profile')))->toBeTrue();
+=======
+    expect($profileMedia->contains(fn (Media $media): bool => str_contains($media->name, 'profile')))->toBeTrue();
+>>>>>>> laraxot/dev
 });
 
 it('can find media by custom properties', function (): void {
@@ -204,7 +260,11 @@ it('can find media by custom properties', function (): void {
     $avatarMedia = Media::whereJsonContains('custom_properties->category', 'avatar')->get();
 
     expect($avatarMedia->count())->toBeGreaterThanOrEqual(1);
+<<<<<<< HEAD
    expect($avatarMedia->contains(fn (Media $media): bool => ($media->custom_properties['category'] ?? null) === 'avatar'))->toBeTrue();
+=======
+    expect($avatarMedia->contains(fn (Media $media): bool => ($media->custom_properties['category'] ?? null) === 'avatar'))->toBeTrue();
+>>>>>>> laraxot/dev
 });
 
 it('can find media by manipulations', function (): void {
@@ -219,7 +279,11 @@ it('can find media by manipulations', function (): void {
     $resizeMedia = Media::whereJsonContains('manipulations->resize', ['width' => 800, 'height' => 600])->get();
 
     expect($resizeMedia->count())->toBeGreaterThanOrEqual(1);
+<<<<<<< HEAD
    expect($resizeMedia->contains(fn (Media $media): bool => array_key_exists('resize', $media->manipulations ?? [])))->toBeTrue();
+=======
+    expect($resizeMedia->contains(fn (Media $media): bool => array_key_exists('resize', $media->manipulations ?? [])))->toBeTrue();
+>>>>>>> laraxot/dev
 });
 
 it('can update media', function (): void {
@@ -227,7 +291,11 @@ it('can update media', function (): void {
 
     $media->update(['name' => 'New Name']);
 
+<<<<<<< HEAD
    assertMediaTableHas('media', [
+=======
+    assertMediaTableHas('media', [
+>>>>>>> laraxot/dev
         'id' => SafeIntCastAction::cast($media->getKey()),
         'name' => 'New Name',
     ]);
@@ -255,7 +323,11 @@ it('can handle null values', function (): void {
     // Spatie Media may generate a UUID even if null is provided.
     // Verify via casts (less brittle than DB JSON string matching).
     $fresh = $media->fresh();
+<<<<<<< HEAD
    Assert::assertInstanceOf(Media::class, $fresh);
+=======
+    Assert::assertInstanceOf(Media::class, $fresh);
+>>>>>>> laraxot/dev
     expect($fresh->mime_type)->toBeNull();
     expect($fresh->conversions_disk)->toBeNull();
     expect($fresh->order_column)->toBeNull();
@@ -314,7 +386,11 @@ it('media has entry conversions attribute', function (): void {
 it('media has factory', function (): void {
     $media = Media::factory()->create();
 
+<<<<<<< HEAD
    // `$media->id` e' dichiarato int e `create()` restituisce Media: le due asserzioni
+=======
+    // `$media->id` e' dichiarato int e `create()` restituisce Media: le due asserzioni
+>>>>>>> laraxot/dev
     // di prima erano gia' vere per tipo. Cio' che il test vuole dire e' che la factory
     // ha persistito il record.
     expect($media->exists)->toBeTrue();

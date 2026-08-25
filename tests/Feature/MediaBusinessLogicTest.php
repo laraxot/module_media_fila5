@@ -22,7 +22,11 @@ require_once dirname(__DIR__).'/Pest.php';
 uses(TestCase::class);
 
 describe('Media Business Logic', function () {
+<<<<<<< HEAD
    beforeEach(function (): void {
+=======
+    beforeEach(function (): void {
+>>>>>>> laraxot/dev
         Storage::fake('public');
     });
 
@@ -31,12 +35,20 @@ describe('Media Business Logic', function () {
 
         $temporaryColumns = Schema::connection('media')->getColumnListing('temporary_uploads');
 
+<<<<<<< HEAD
        /** @var array<string, mixed> $temporaryPayload */
+=======
+        /** @var array<string, mixed> $temporaryPayload */
+>>>>>>> laraxot/dev
         $temporaryPayload = [
             'session_id' => session()->getId(),
         ];
 
+<<<<<<< HEAD
        $user = null;
+=======
+        $user = null;
+>>>>>>> laraxot/dev
 
         if (in_array('user_id', $temporaryColumns, true)) {
             $user = UserFactory::new()->createOne();
@@ -59,7 +71,11 @@ describe('Media Business Logic', function () {
             $temporaryPayload['status'] = 'uploading';
         }
 
+<<<<<<< HEAD
        $temporaryUpload = TemporaryUploadFactory::new()->createOne($temporaryPayload);
+=======
+        $temporaryUpload = TemporaryUploadFactory::new()->createOne($temporaryPayload);
+>>>>>>> laraxot/dev
 
         $mediaColumns = Schema::connection('media')->getColumnListing('media');
 
@@ -86,7 +102,11 @@ describe('Media Business Logic', function () {
         }
 
         if (in_array('size', $mediaColumns, true) && in_array('file_size', $temporaryColumns, true)) {
+<<<<<<< HEAD
            $mediaPayload['size'] = mediaIntegerish($temporaryUpload->file_size);
+=======
+            $mediaPayload['size'] = mediaIntegerish($temporaryUpload->file_size);
+>>>>>>> laraxot/dev
         }
 
         if ($user instanceof User && in_array('user_id', $mediaColumns, true)) {
@@ -112,7 +132,11 @@ describe('Media Business Logic', function () {
 
         foreach (['media_id', 'original_format', 'target_format', 'status'] as $requiredColumn) {
             if (! in_array($requiredColumn, $convertColumns, true)) {
+<<<<<<< HEAD
                Assert::markTestSkipped('media_converts table is missing required columns for this test in this install.');
+=======
+                Assert::markTestSkipped('media_converts table is missing required columns for this test in this install.');
+>>>>>>> laraxot/dev
             }
         }
 
@@ -122,7 +146,11 @@ describe('Media Business Logic', function () {
         ];
 
         if (in_array('user_id', $mediaColumns, true)) {
+<<<<<<< HEAD
            $user = UserFactory::new()->createOne();
+=======
+            $user = UserFactory::new()->createOne();
+>>>>>>> laraxot/dev
             $payload['user_id'] = $user->id;
         }
 
@@ -135,7 +163,11 @@ describe('Media Business Logic', function () {
             'status' => 'pending',
         ]);
 
+<<<<<<< HEAD
        Assert::assertInstanceOf(MediaConvert::class, $mediaConvert);
+=======
+        Assert::assertInstanceOf(MediaConvert::class, $mediaConvert);
+>>>>>>> laraxot/dev
         Assert::assertEquals($media->id, $mediaConvert->media_id);
         Assert::assertSame('jpeg', $mediaConvert->getAttribute('original_format'));
         Assert::assertSame('png', $mediaConvert->getAttribute('target_format'));
@@ -154,12 +186,20 @@ describe('Media Business Logic', function () {
 
         $columns = Schema::connection('media')->getColumnListing('temporary_uploads');
 
+<<<<<<< HEAD
        /** @var array<string, mixed> $payload */
+=======
+        /** @var array<string, mixed> $payload */
+>>>>>>> laraxot/dev
         $payload = [
             'session_id' => session()->getId(),
         ];
 
+<<<<<<< HEAD
        $user = null;
+=======
+        $user = null;
+>>>>>>> laraxot/dev
 
         if (in_array('user_id', $columns, true)) {
             $user = UserFactory::new()->createOne();
@@ -182,7 +222,11 @@ describe('Media Business Logic', function () {
             $payload['status'] = 'uploading';
         }
 
+<<<<<<< HEAD
        $temporaryUpload = TemporaryUploadFactory::new()->createOne($payload);
+=======
+        $temporaryUpload = TemporaryUploadFactory::new()->createOne($payload);
+>>>>>>> laraxot/dev
 
         $temporaryUpload->update(['status' => 'completed']);
 
@@ -210,19 +254,31 @@ describe('Media Business Logic', function () {
             'disk' => 'public',
         ];
 
+<<<<<<< HEAD
        /** @var array<string, mixed> $documentPayload */
+=======
+        /** @var array<string, mixed> $documentPayload */
+>>>>>>> laraxot/dev
         $documentPayload = [
             'collection_name' => 'documents',
             'disk' => 'public',
         ];
 
         if (in_array('user_id', $columns, true)) {
+<<<<<<< HEAD
            $user = UserFactory::new()->createOne();
+=======
+            $user = UserFactory::new()->createOne();
+>>>>>>> laraxot/dev
             $profilePayload['user_id'] = $user->id;
             $documentPayload['user_id'] = $user->id;
         }
 
+<<<<<<< HEAD
        $profileMedia = MediaFactory::new()->createOne($profilePayload);
+=======
+        $profileMedia = MediaFactory::new()->createOne($profilePayload);
+>>>>>>> laraxot/dev
 
         $documentMedia = MediaFactory::new()->createOne($documentPayload);
 
@@ -249,7 +305,11 @@ describe('Media Business Logic', function () {
             'file_name' => 'valid-image.jpg',
         ];
 
+<<<<<<< HEAD
        $user = null;
+=======
+        $user = null;
+>>>>>>> laraxot/dev
 
         if (in_array('user_id', $columns, true)) {
             $user = UserFactory::new()->createOne();
@@ -267,7 +327,11 @@ describe('Media Business Logic', function () {
             'file_name' => 'valid-document.pdf',
         ];
 
+<<<<<<< HEAD
        if ($user instanceof User && in_array('user_id', $columns, true)) {
+=======
+        if ($user instanceof User && in_array('user_id', $columns, true)) {
+>>>>>>> laraxot/dev
             $documentPayload['user_id'] = $user->id;
         }
 
@@ -282,7 +346,11 @@ describe('Media Business Logic', function () {
         $convertColumns = Schema::connection('media')->getColumnListing('media_converts');
 
         if (! in_array('status', $convertColumns, true) || ! in_array('media_id', $convertColumns, true)) {
+<<<<<<< HEAD
            Assert::markTestSkipped('media_converts table is missing required columns for this test in this install.');
+=======
+            Assert::markTestSkipped('media_converts table is missing required columns for this test in this install.');
+>>>>>>> laraxot/dev
         }
 
         /** @var array<string, mixed> $payload */
@@ -291,7 +359,11 @@ describe('Media Business Logic', function () {
         ];
 
         if (in_array('user_id', $mediaColumns, true)) {
+<<<<<<< HEAD
            $user = UserFactory::new()->createOne();
+=======
+            $user = UserFactory::new()->createOne();
+>>>>>>> laraxot/dev
             $payload['user_id'] = $user->id;
         }
 
@@ -302,7 +374,11 @@ describe('Media Business Logic', function () {
             'status' => 'pending',
         ]);
 
+<<<<<<< HEAD
        $mediaConvert->update(['status' => 'processing']);
+=======
+        $mediaConvert->update(['status' => 'processing']);
+>>>>>>> laraxot/dev
         $mediaConvert->update(['status' => 'completed']);
 
         Assert::assertSame('completed', $mediaConvert->fresh()?->getAttribute('status'));
@@ -327,7 +403,11 @@ describe('Media Business Logic', function () {
             'is_public' => false,
         ]);
 
+<<<<<<< HEAD
        Assert::assertEquals($owner->id, $media->user_id);
+=======
+        Assert::assertEquals($owner->id, $media->user_id);
+>>>>>>> laraxot/dev
         Assert::assertFalse((bool) $media->getAttribute('is_public'));
         Assert::assertNotEquals($otherUser->id, $media->user_id);
     });
@@ -357,7 +437,11 @@ describe('Media Business Logic', function () {
 
         $url = $media->getUrl();
 
+<<<<<<< HEAD
        Assert::assertNotEmpty($url);
+=======
+        Assert::assertNotEmpty($url);
+>>>>>>> laraxot/dev
         Assert::assertStringContainsString('test-image.jpg', $url);
     });
 
@@ -382,7 +466,11 @@ describe('Media Business Logic', function () {
 
         $validPayload = $makePayload(1024 * 1024);
         if ($validPayload === []) {
+<<<<<<< HEAD
            Assert::markTestSkipped('Unable to build minimal payload for media table in this install.');
+=======
+            Assert::markTestSkipped('Unable to build minimal payload for media table in this install.');
+>>>>>>> laraxot/dev
         }
 
         $validMedia = Media::query()->create($validPayload);
@@ -421,7 +509,11 @@ describe('Media Business Logic', function () {
             Media::query()->create($makePayload('application/pdf', "doc-{$i}.pdf"));
         }
 
+<<<<<<< HEAD
        $mediaColumns = Schema::connection('media')->getColumnListing('media');
+=======
+        $mediaColumns = Schema::connection('media')->getColumnListing('media');
+>>>>>>> laraxot/dev
         if (! in_array('user_id', $mediaColumns, true)) {
             Assert::markTestSkipped('This install does not have user_id column on media table.');
         }
@@ -430,7 +522,11 @@ describe('Media Business Logic', function () {
         $imageCount = Media::where('user_id', $user->id)->where('mime_type', 'like', 'image/%')->count();
         $documentCount = Media::where('user_id', $user->id)->where('mime_type', 'like', 'application/%')->count();
 
+<<<<<<< HEAD
        Assert::assertSame(8, $totalMedia);
+=======
+        Assert::assertSame(8, $totalMedia);
+>>>>>>> laraxot/dev
         Assert::assertSame(5, $imageCount);
         Assert::assertSame(3, $documentCount);
     });

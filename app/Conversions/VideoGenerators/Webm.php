@@ -47,7 +47,11 @@ class Webm extends ImageGenerator
         return true;
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return Collection<int, string>
      */
     public function supportedExtensions(): Collection
@@ -59,7 +63,11 @@ class Webm extends ImageGenerator
         ]);
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return Collection<int, string>
      */
     public function supportedMimeTypes(): Collection

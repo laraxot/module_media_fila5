@@ -8,7 +8,11 @@ use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
+<<<<<<< HEAD
 ses(TestCase::class);
+=======
+uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
@@ -22,19 +26,31 @@ describe('Media Model', function (): void {
     });
 
     it('uses Updater trait', function (): void {
+<<<<<<< HEAD
        $traits = class_uses_recursive(Media::class);
+=======
+        $traits = class_uses_recursive(Media::class);
+>>>>>>> laraxot/dev
 
         expect(in_array('Modules\Xot\Traits\Updater', $traits, true))->toBeTrue();
     });
 
     it('has media connection', function (): void {
+<<<<<<< HEAD
        $model = new Media;
+=======
+        $model = new Media;
+>>>>>>> laraxot/dev
 
         expect($model->getConnectionName())->toBe('media');
     });
 
     it('has findWithTemporaryUploadInCurrentSession static method', function (): void {
+<<<<<<< HEAD
        expect((new \ReflectionClass(Media::class))->hasMethod('findWithTemporaryUploadInCurrentSession'))->toBeTrue();
+=======
+        expect((new \ReflectionClass(Media::class))->hasMethod('findWithTemporaryUploadInCurrentSession'))->toBeTrue();
+>>>>>>> laraxot/dev
     });
 
     it('has temporaryUpload relationship', function (): void {
@@ -71,14 +87,22 @@ describe('Media Model', function (): void {
     });
 
     it('casts uuid to string', function (): void {
+<<<<<<< HEAD
        $model = new Media;
+=======
+        $model = new Media;
+>>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['uuid'] ?? null)->toBe('string');
     });
 
     it('casts datetime fields', function (): void {
+<<<<<<< HEAD
        $model = new Media;
+=======
+        $model = new Media;
+>>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['created_at'] ?? null)->toBe('datetime');
@@ -87,7 +111,11 @@ describe('Media Model', function (): void {
     });
 
     it('casts user fields to string', function (): void {
+<<<<<<< HEAD
        $model = new Media;
+=======
+        $model = new Media;
+>>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['updated_by'] ?? null)->toBe('string');
@@ -96,7 +124,11 @@ describe('Media Model', function (): void {
     });
 
     it('casts array fields', function (): void {
+<<<<<<< HEAD
        $model = new Media;
+=======
+        $model = new Media;
+>>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['manipulations'] ?? null)->toBe('array');
@@ -106,7 +138,11 @@ describe('Media Model', function (): void {
     });
 
     it('has entry_conversions attribute', function (): void {
+<<<<<<< HEAD
        // entry_conversions is a dynamic attribute from getEntryConversionsAttribute accessor
+=======
+        // entry_conversions is a dynamic attribute from getEntryConversionsAttribute accessor
+>>>>>>> laraxot/dev
         expect((new \ReflectionClass(Media::class))->hasMethod('getEntryConversionsAttribute'))->toBeTrue();
     });
 });

@@ -48,7 +48,11 @@ abstract class BaseS3Action
             return $configValue;
         }
 
+<<<<<<< HEAD
        $filesystemsKey = match ($envKey) {
+=======
+        $filesystemsKey = match ($envKey) {
+>>>>>>> laraxot/dev
             'AWS_BUCKET_NAME' => 'filesystems.disks.s3.bucket',
             'AWS_REGION' => 'filesystems.disks.s3.region',
             'AWS_ACCESS_KEY_ID' => 'filesystems.disks.s3.key',

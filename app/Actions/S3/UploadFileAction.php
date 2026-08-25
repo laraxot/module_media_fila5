@@ -59,7 +59,11 @@ class UploadFileAction extends BaseS3Action
                 $this->bucketName,
                 $destinationFilePath,
                 $sourceFile,
+<<<<<<< HEAD
                $acl,
+=======
+                $acl,
+>>>>>>> laraxot/dev
                 $uploadOptions,
             );
 

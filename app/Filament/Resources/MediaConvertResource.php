@@ -19,7 +19,11 @@ class MediaConvertResource extends XotBaseResource
     protected static ?string $model = MediaConvert::class;
 
     /**
+<<<<<<< HEAD
     * Schema legacy del form: la sorgente di verità è MediaConvertForm::getFormSchema().
+=======
+     * Schema legacy del form: la sorgente di verità è MediaConvertForm::getFormSchema().
+>>>>>>> laraxot/dev
      *
      * @return array<string, Component>
      */
@@ -63,7 +67,11 @@ class MediaConvertResource extends XotBaseResource
         ];
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, mixed>
      */
     #[Override]
@@ -72,7 +80,11 @@ class MediaConvertResource extends XotBaseResource
         return [];
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, mixed>
      */
     #[Override]
