@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Task 001: Implement Media Library Management System"
 module: "Media"
@@ -13,11 +9,6 @@ qmd: "001 media library management"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7605234 (.)
->>>>>>> laraxot/dev
 # Task 001: Implement Media Library Management System
 
 ## Description
@@ -264,12 +255,4 @@ The Media module needs a robust media management system for handling images, vid
 ---
 
 **Status**: Pending
-<<<<<<< HEAD
 **Assignee**: TBD
-=======
-<<<<<<< HEAD
-**Assignee**: TBD
-=======
-**Assignee**: TBD
->>>>>>> 7605234 (.)
->>>>>>> laraxot/dev
