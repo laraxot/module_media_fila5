@@ -23,10 +23,11 @@ class MediaResource extends XotBaseResource
     protected static ?string $model = Media::class;
 
     /**
+    * Schema legacy del form: la sorgente di verità è MediaForm::getFormSchema().
+     *
      * @return array<string, Component>
      */
-    #[Override]
-    public static function getFormSchema(): array
+    public static function getFormSchemaOld(): array
     {
         return [
             'file' => FileUpload::make('file')
@@ -55,9 +56,7 @@ class MediaResource extends XotBaseResource
     }
 
     /**
-     * @return array<PageRegistration>
-     *
-     * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
+    * @return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration, view: PageRegistration, convert: PageRegistration}
      */
     #[Override]
     public static function getPages(): array

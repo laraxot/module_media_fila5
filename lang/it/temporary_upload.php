@@ -30,6 +30,21 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+       'file' => [
+            'label' => 'file',
+            'helper_text' => 'file',
+            'description' => 'file',
+        ],
+        'folder' => [
+            'label' => 'folder',
+            'helper_text' => 'folder',
+            'description' => 'folder',
+        ],
+        'expires_at' => [
+            'label' => 'expires_at',
+            'helper_text' => 'expires_at',
+            'description' => 'expires_at',
+        ],
     ],
     'actions' => [
         'create' => [

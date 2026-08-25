@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-uses(\Modules\Media\Tests\TestCase::class);
-
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Media\Tests\TestCase;
+
+ses(TestCase::class);
 
 /**
  * Test that the action returns attachment schema correctly.
@@ -21,12 +22,13 @@ it('returns attachment schema', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
-    expect($form)->toBeArray()->toHaveCount(3);
+   expect($form)->toHaveCount(3);
 
-    // Verifica che ogni attachment abbia un FileUpload component
-    foreach ($form as $component) {
-        expect($component)->toBeInstanceOf(FileUpload::class);
-    }
+    // Il tipo dei componenti e' gia' dichiarato dal return type dell'action: cio' che
+    // il test verifica e' che ogni allegato chiesto abbia il proprio campo, con il nome
+    // dell'allegato.
+    expect(array_map(static fn (FileUpload $component): string => $component->getName(), $form))
+        ->toBe($attachments);
 });
 
 /**
@@ -204,11 +206,10 @@ it('has correct remove setting', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
-    $component = $form[0];
-    // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
-    // By default, Filament file uploads are removable unless specifically configured otherwise
-    // We can verify that the component is a FileUpload
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+   // `FileUpload` non espone un `isRemovable()`: la rimozione si controlla con
+    // `deleteUploadedFileUsing()`. Il tipo del componente lo dichiara gia' l'action,
+    // quindi si verifica il nome del campo, che e' cio' che l'action decide.
+    expect($form[0]->getName())->toBe($attachments[0]);
 });
 
 /**
@@ -273,9 +274,9 @@ it('has correct panel', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
-    $component = $form[0];
-    // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+   // `FileUpload` non espone `getPanel()`: si verifica il nome del campo, che e'
+    // cio' che l'action decide a partire dall'allegato.
+    expect($form[0]->getName())->toBe($attachments[0]);
 });
 
 /**
@@ -290,10 +291,9 @@ it('has correct help text', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
-    $component = $form[0];
-    // FileUpload has helperText property but no getHelper method
-    // We can verify that the component is a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+   // `FileUpload` non espone `getHelper()`: si verifica il nome del campo, che e'
+    // cio' che l'action decide a partire dall'allegato.
+    expect($form[0]->getName())->toBe($attachments[0]);
 });
 
 /**

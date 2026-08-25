@@ -6,6 +6,8 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
+use Modules\Xot\Actions\Cast\SafeIntCastAction;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
@@ -20,14 +22,14 @@ it('can create media with minimal data', function (): void {
         'size' => 1024,
     ]);
 
-    $this->assertDatabaseHas('media', [
-        'id' => (int) $media->getKey(),
+   assertMediaTableHas('media', [
+        'id' => SafeIntCastAction::cast($media->getKey()),
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',
         'disk' => 'public',
         'size' => 1024,
-    ], 'media');
+   ]);
 });
 
 it('can create media with all fields', function (): void {
@@ -58,8 +60,8 @@ it('can create media with all fields', function (): void {
 
     $media = Media::factory()->create($mediaData);
 
-    $this->assertDatabaseHas('media', [
-        'id' => (int) $media->getKey(),
+   assertMediaTableHas('media', [
+        'id' => SafeIntCastAction::cast($media->getKey()),
         'collection_name' => 'images',
         'name' => 'full-image',
         'file_name' => 'full-image.png',
@@ -68,7 +70,7 @@ it('can create media with all fields', function (): void {
         'conversions_disk' => 's3-conversions',
         'size' => 2048,
         'order_column' => 1,
-    ], 'media');
+   ]);
 
     // Verifica campi JSON
     expect($media->manipulations)->toBe(['resize' => ['width' => 800, 'height' => 600]]);
@@ -86,11 +88,11 @@ it('can create media with all fields', function (): void {
 
 it('media delete removes the record', function (): void {
     $media = Media::factory()->create();
-    $mediaId = (int) $media->getKey();
+   $mediaId = SafeIntCastAction::cast($media->getKey());
 
     $media->delete();
 
-    $this->assertDatabaseMissing('media', ['id' => $mediaId], 'media');
+    assertMediaTableMissing('media', ['id' => $mediaId]);
 });
 
 it('can find media by model type', function (): void {
@@ -98,7 +100,7 @@ it('can find media by model type', function (): void {
 
     $foundMedia = Media::where('model_type', 'App\Models\UniqueModel')->first();
 
-    expect($foundMedia)->not()->toBeNull();
+   Assert::assertInstanceOf(Media::class, $foundMedia);
     expect($media->id)->toBe($foundMedia->id);
 });
 
@@ -107,7 +109,7 @@ it('can find media by model id', function (): void {
 
     $foundMedia = Media::where('model_id', '999')->first();
 
-    expect($foundMedia)->not()->toBeNull();
+   Assert::assertInstanceOf(Media::class, $foundMedia);
     expect($media->id)->toBe($foundMedia->id);
 });
 
@@ -119,7 +121,9 @@ it('can find media by collection name', function (): void {
     $avatarMedia = Media::where('collection_name', 'avatars')->get();
 
     expect($avatarMedia)->toHaveCount(1);
-    expect($avatarMedia->first()->collection_name)->toBe('avatars');
+   $firstAvatarMedia = $avatarMedia->first();
+    Assert::assertInstanceOf(Media::class, $firstAvatarMedia);
+    expect($firstAvatarMedia->collection_name)->toBe('avatars');
 });
 
 it('can find media by name', function (): void {
@@ -127,7 +131,7 @@ it('can find media by name', function (): void {
 
     $foundMedia = Media::where('name', 'unique-media-name')->first();
 
-    expect($foundMedia)->not()->toBeNull();
+   Assert::assertInstanceOf(Media::class, $foundMedia);
     expect($media->id)->toBe($foundMedia->id);
 });
 
@@ -136,7 +140,7 @@ it('can find media by file name', function (): void {
 
     $foundMedia = Media::where('file_name', 'unique-file.jpg')->first();
 
-    expect($foundMedia)->not()->toBeNull();
+   Assert::assertInstanceOf(Media::class, $foundMedia);
     expect($media->id)->toBe($foundMedia->id);
 });
 
@@ -148,7 +152,9 @@ it('can find media by disk', function (): void {
     $publicMedia = Media::where('disk', 'public')->get();
 
     expect($publicMedia)->toHaveCount(1);
-    expect($publicMedia->first()->disk)->toBe('public');
+   $firstPublicMedia = $publicMedia->first();
+    Assert::assertInstanceOf(Media::class, $firstPublicMedia);
+    expect($firstPublicMedia->disk)->toBe('public');
 });
 
 it('can find media by mime type', function (): void {
@@ -159,7 +165,9 @@ it('can find media by mime type', function (): void {
     $jpegMedia = Media::where('mime_type', 'image/jpeg')->get();
 
     expect($jpegMedia)->toHaveCount(1);
-    expect($jpegMedia->first()->mime_type)->toBe('image/jpeg');
+   $firstJpegMedia = $jpegMedia->first();
+    Assert::assertInstanceOf(Media::class, $firstJpegMedia);
+    expect($firstJpegMedia->mime_type)->toBe('image/jpeg');
 });
 
 it('can find media by size range', function (): void {
@@ -170,7 +178,7 @@ it('can find media by size range', function (): void {
     $largeMedia = Media::where('size', '>', 1000)->get();
 
     expect($largeMedia)->toHaveCount(2);
-    expect($largeMedia->every(fn ($media) => $media->size > 1000))->toBeTrue();
+   expect($largeMedia->every(fn (Media $media): bool => $media->size > 1000))->toBeTrue();
 });
 
 it('can find media by name pattern', function (): void {
@@ -181,7 +189,7 @@ it('can find media by name pattern', function (): void {
     $profileMedia = Media::where('name', 'like', '%profile%')->get();
 
     expect($profileMedia->count())->toBeGreaterThanOrEqual(1);
-    expect($profileMedia->contains(fn ($media) => str_contains($media->name, 'profile')))->toBeTrue();
+   expect($profileMedia->contains(fn (Media $media): bool => str_contains($media->name, 'profile')))->toBeTrue();
 });
 
 it('can find media by custom properties', function (): void {
@@ -196,7 +204,7 @@ it('can find media by custom properties', function (): void {
     $avatarMedia = Media::whereJsonContains('custom_properties->category', 'avatar')->get();
 
     expect($avatarMedia->count())->toBeGreaterThanOrEqual(1);
-    expect($avatarMedia->contains(fn ($media) => ($media->custom_properties['category'] ?? null) === 'avatar'))->toBeTrue();
+   expect($avatarMedia->contains(fn (Media $media): bool => ($media->custom_properties['category'] ?? null) === 'avatar'))->toBeTrue();
 });
 
 it('can find media by manipulations', function (): void {
@@ -211,7 +219,7 @@ it('can find media by manipulations', function (): void {
     $resizeMedia = Media::whereJsonContains('manipulations->resize', ['width' => 800, 'height' => 600])->get();
 
     expect($resizeMedia->count())->toBeGreaterThanOrEqual(1);
-    expect($resizeMedia->contains(fn ($media) => array_key_exists('resize', $media->manipulations ?? [])))->toBeTrue();
+   expect($resizeMedia->contains(fn (Media $media): bool => array_key_exists('resize', $media->manipulations ?? [])))->toBeTrue();
 });
 
 it('can update media', function (): void {
@@ -219,10 +227,10 @@ it('can update media', function (): void {
 
     $media->update(['name' => 'New Name']);
 
-    $this->assertDatabaseHas('media', [
-        'id' => (int) $media->getKey(),
+   assertMediaTableHas('media', [
+        'id' => SafeIntCastAction::cast($media->getKey()),
         'name' => 'New Name',
-    ], 'media');
+    ]);
 });
 
 it('can handle null values', function (): void {
@@ -247,7 +255,7 @@ it('can handle null values', function (): void {
     // Spatie Media may generate a UUID even if null is provided.
     // Verify via casts (less brittle than DB JSON string matching).
     $fresh = $media->fresh();
-    expect($fresh)->not()->toBeNull();
+   Assert::assertInstanceOf(Media::class, $fresh);
     expect($fresh->mime_type)->toBeNull();
     expect($fresh->conversions_disk)->toBeNull();
     expect($fresh->order_column)->toBeNull();
@@ -297,7 +305,6 @@ it('media has entry conversions attribute', function (): void {
 
     $entryConversions = $media->entry_conversions;
 
-    expect($entryConversions)->toBeArray();
     expect($entryConversions)->toHaveCount(2);
     expect($entryConversions[0])->toHaveKey('name');
     expect($entryConversions[0])->toHaveKey('generated');
@@ -307,8 +314,11 @@ it('media has entry conversions attribute', function (): void {
 it('media has factory', function (): void {
     $media = Media::factory()->create();
 
-    expect($media->id)->not()->toBeNull();
-    expect($media)->toBeInstanceOf(Media::class);
+   // `$media->id` e' dichiarato int e `create()` restituisce Media: le due asserzioni
+    // di prima erano gia' vere per tipo. Cio' che il test vuole dire e' che la factory
+    // ha persistito il record.
+    expect($media->exists)->toBeTrue();
+    expect($media->getKey())->toBeGreaterThan(0);
 });
 
 it('media has casts', function (): void {

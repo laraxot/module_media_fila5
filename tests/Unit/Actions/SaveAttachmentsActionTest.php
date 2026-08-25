@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
+use Exception;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;
-use Spatie\MediaLibrary\HasMedia;
+use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 
-uses(Tests\TestCase::class)->beforeEach(function () {
+use function Safe\glob;
+
+uses(TestCase::class);
+
+beforeEach(function (): void {
     Storage::fake('attachments');
 });
 
@@ -18,18 +23,17 @@ it('executes save attachments successfully', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
-    // Mock del record HasMedia
-    $record = Mockery::mock(HasMedia::class);
+   $record = $this->makeHasMediaRecordMock();
 
-    $media = Mockery::mock(Media::class);
-    $media->shouldReceive('getPathRelativeToRoot')->andReturn('media/test-path');
+    $media = $this->makeTestMock(Media::class);
+    $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-    $fileAdder = Mockery::mock(FileAdder::class);
-    $fileAdder->shouldReceive('usingFileName')->andReturnSelf();
-    $fileAdder->shouldReceive('toMediaCollection')->andReturn($media);
+    $fileAdder = $this->makeTestMock(FileAdder::class);
+    $fileAdder->method('usingFileName')->willReturnSelf();
+    $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    $record->shouldReceive('addMedia')->andReturn($fileAdder);
-    $record->shouldReceive('update')->andReturn(true);
+    $record->method('addMedia')->willReturn($fileAdder);
+    $record->method('update')->willReturn(true);
 
     $attachments = ['invoice', 'contract'];
     $data = [
@@ -53,44 +57,37 @@ it('handles empty attachments', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
-    $record = Mockery::mock(HasMedia::class);
-    $record->shouldReceive('update')->with([])->andReturn(true);
+   $record = $this->makeHasMediaRecordMock();
+    $record->expects($this->never())->method('update');
 
-    $attachments = [];
-    $data = [];
-
-    // Act
-    $action->execute($record, $attachments, $data, 'attachments');
-
-    // Assert - non dovrebbe lanciare eccezioni
-    expect(true)->toBeTrue();
+    // Act + Assert: senza allegati `$dataAttachments` resta vuoto, quindi
+    // `update()` non viene mai chiamato. Lo verifica l'aspettativa sul mock.
+    $action->execute($record, [], [], 'attachments');
 });
 
 it('skips nonexistent files', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
-    $record = Mockery::mock(HasMedia::class);
-    $record->shouldReceive('update')->with([])->andReturn(true);
+   $record = $this->makeHasMediaRecordMock();
+    $record->expects($this->never())->method('update');
 
     $attachments = ['invoice'];
     $data = [
         'invoice' => 'nonexistent/file.pdf',
     ];
 
-    // Act
+   // Act + Assert: il file non esiste sul disco, quindi il ciclo salta l'allegato
+    // e `update()` non viene mai chiamato. Lo verifica l'aspettativa sul mock.
     $action->execute($record, $attachments, $data, 'attachments');
-
-    // Assert - non dovrebbe lanciare eccezioni
-    expect(true)->toBeTrue();
 });
 
 it('handles storage errors gracefully', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
-    $record = Mockery::mock(HasMedia::class);
-    $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
+   $record = $this->makeHasMediaRecordMock();
+    $record->method('addMedia')->willThrowException(new Exception('Storage error'));
 
     $attachments = ['invoice'];
     $data = [
@@ -101,24 +98,24 @@ it('handles storage errors gracefully', function (): void {
 
     // Act & Assert
     expect(fn () => $action->execute($record, $attachments, $data, 'attachments'))
-        ->toThrow(\Exception::class, 'Storage error');
+       ->toThrow(Exception::class, 'Storage error');
 });
 
 it('uses correct disk', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
-    $record = Mockery::mock(HasMedia::class);
+   $record = $this->makeHasMediaRecordMock();
 
-    $media = Mockery::mock(Media::class);
-    $media->shouldReceive('getPathRelativeToRoot')->andReturn('media/test-path');
+    $media = $this->makeTestMock(Media::class);
+    $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-    $fileAdder = Mockery::mock(FileAdder::class);
-    $fileAdder->shouldReceive('usingFileName')->andReturnSelf();
-    $fileAdder->shouldReceive('toMediaCollection')->andReturn($media);
+    $fileAdder = $this->makeTestMock(FileAdder::class);
+    $fileAdder->method('usingFileName')->willReturnSelf();
+    $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    $record->shouldReceive('addMedia')->andReturn($fileAdder);
-    $record->shouldReceive('update')->andReturn(true);
+    $record->method('addMedia')->willReturn($fileAdder);
+    $record->method('update')->willReturn(true);
 
     $attachments = ['invoice'];
     $data = [
@@ -140,17 +137,17 @@ it('cleans up temp files', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
-    $record = Mockery::mock(HasMedia::class);
+   $record = $this->makeHasMediaRecordMock();
 
-    $media = Mockery::mock(Media::class);
-    $media->shouldReceive('getPathRelativeToRoot')->andReturn('media/test-path');
+    $media = $this->makeTestMock(Media::class);
+    $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-    $fileAdder = Mockery::mock(FileAdder::class);
-    $fileAdder->shouldReceive('usingFileName')->andReturnSelf();
-    $fileAdder->shouldReceive('toMediaCollection')->andReturn($media);
+    $fileAdder = $this->makeTestMock(FileAdder::class);
+    $fileAdder->method('usingFileName')->willReturnSelf();
+    $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    $record->shouldReceive('addMedia')->andReturn($fileAdder);
-    $record->shouldReceive('update')->andReturn(true);
+    $record->method('addMedia')->willReturn($fileAdder);
+    $record->method('update')->willReturn(true);
 
     $attachments = ['invoice'];
     $data = [
@@ -159,29 +156,32 @@ it('cleans up temp files', function (): void {
 
     Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
 
+   // `tempnam(sys_get_temp_dir(), 'media_')` crea il file temporaneo che il blocco
+    // `finally` deve rimuovere: si confronta l'elenco prima e dopo, non un booleano.
+    $tempFilesBefore = glob(sys_get_temp_dir().'/media_*');
+
     // Act
     $action->execute($record, $attachments, $data, 'attachments');
 
-    // Assert - il file temporaneo dovrebbe essere pulito
-    // Questo test verifica che la pulizia avvenga nel finally block
-    expect(true)->toBeTrue();
+    // Assert - il blocco finally ha rimosso il file temporaneo
+    expect(glob(sys_get_temp_dir().'/media_*'))->toBe($tempFilesBefore);
 });
 
 it('handles multiple attachments', function (): void {
     // Arrange
     $action = new SaveAttachmentsAction;
 
-    $record = Mockery::mock(HasMedia::class);
+   $record = $this->makeHasMediaRecordMock();
 
-    $media = Mockery::mock(Media::class);
-    $media->shouldReceive('getPathRelativeToRoot')->times(3)->andReturn('media/test-path');
+    $media = $this->makeTestMock(Media::class);
+    $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-    $fileAdder = Mockery::mock(FileAdder::class);
-    $fileAdder->shouldReceive('usingFileName')->times(3)->andReturnSelf();
-    $fileAdder->shouldReceive('toMediaCollection')->times(3)->andReturn($media);
+    $fileAdder = $this->makeTestMock(FileAdder::class);
+    $fileAdder->method('usingFileName')->willReturnSelf();
+    $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    $record->shouldReceive('addMedia')->times(3)->andReturn($fileAdder);
-    $record->shouldReceive('update')->andReturn(true);
+    $record->method('addMedia')->willReturn($fileAdder);
+    $record->method('update')->willReturn(true);
 
     $attachments = ['invoice', 'contract', 'receipt'];
     $data = [

@@ -1,10 +1,21 @@
+---
+title: "📚 **Indice Documentazione Modulo Media**"
+module: "Media"
+type: concept
+tags: [00, index]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "00 index"
+related:
+  - "./webm.md"
+---
 # 📚 **Indice Documentazione Modulo Media**
 
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](./readme.md) - Panoramica completa, Upload e Processing.
+1. [README.md](README.md) - Panoramica completa, Upload e Processing.
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 
@@ -22,23 +33,6 @@
 - 🖼️ **[Media Library](./filament.md)** - La libreria media in Filament.
 - 🛠️ **[Table Actions](./filament-table-actions.md)** - Azioni di massa su file e directory.
 
-## 📋 **Documenti Prodotto & Sviluppo**
-
-### Product
-| File | Scopo |
-|------|-------|
-| PRD.md | Product Requirements |
-| PRODUCT_ROADMAP.md | Roadmap |
-| PRODUCT_STRATEGY.md | Strategy |
-| PRODUCT_LAUNCH_PLAN.md | Launch Plan |
-
-### Development
-| File | Scopo |
-|------|-------|
-| GSD_WORKFLOW.md | GSD Workflow |
-| SPRINT_PLANNING.md | Sprint Planning |
-| USER_RESEARCH.md | User Research |
-
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Level 10](./phpstan-level10-fixes.md)** - Report di conformità totale.
 - 🔬 **[Testing Guidelines](./testing.md)** - Strategie per testare upload e stream.
@@ -53,7 +47,6 @@
 - [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
 - [Cms](../../cms/docs/readme.md) - Integrazione media nei blocchi di contenuto.
-- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

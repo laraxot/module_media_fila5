@@ -59,7 +59,7 @@ class UploadFileAction extends BaseS3Action
                 $this->bucketName,
                 $destinationFilePath,
                 $sourceFile,
-                (string) ($uploadOptions['ACL'] ?? 'private'),
+               $acl,
                 $uploadOptions,
             );
 
@@ -89,9 +89,6 @@ class UploadFileAction extends BaseS3Action
                 'bucket' => $this->bucketName,
             ];
         } catch (Exception $exception) {
-            // Initialize $sourceFile as null if not already defined
-            $sourceFile ??= null;
-
             if (isset($sourceFile) && is_resource($sourceFile)) {
                 fclose($sourceFile);
             }

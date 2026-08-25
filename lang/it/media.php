@@ -98,6 +98,40 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+       'id' => [
+            'label' => 'id',
+        ],
+        'file_name' => [
+            'label' => 'file_name',
+        ],
+        'disk' => [
+            'label' => 'disk',
+        ],
+        'size' => [
+            'label' => 'size',
+        ],
+        'order_column' => [
+            'label' => 'order_column',
+        ],
+        'model_type' => [
+            'label' => 'model_type',
+        ],
+        'model_id' => [
+            'label' => 'model_id',
+        ],
+        'created_at' => [
+            'label' => 'created_at',
+        ],
+        'file' => [
+            'label' => 'file',
+            'helper_text' => 'file',
+            'description' => 'file',
+        ],
+        'attachment_type' => [
+            'label' => 'attachment_type',
+            'helper_text' => 'attachment_type',
+            'description' => 'attachment_type',
+        ],
     ],
     'actions' => [
         'import' => [
