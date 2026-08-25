@@ -8,7 +8,11 @@ use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
 use Modules\Media\Tests\TestCase;
 
+<<<<<<< HEAD
 ses(TestCase::class);
+=======
+uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 /**
  * Test that the action returns attachment schema correctly.
@@ -22,7 +26,11 @@ it('returns attachment schema', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
+<<<<<<< HEAD
    expect($form)->toHaveCount(3);
+=======
+    expect($form)->toHaveCount(3);
+>>>>>>> laraxot/dev
 
     // Il tipo dei componenti e' gia' dichiarato dal return type dell'action: cio' che
     // il test verifica e' che ogni allegato chiesto abbia il proprio campo, con il nome
@@ -206,7 +214,11 @@ it('has correct remove setting', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
+<<<<<<< HEAD
    // `FileUpload` non espone un `isRemovable()`: la rimozione si controlla con
+=======
+    // `FileUpload` non espone un `isRemovable()`: la rimozione si controlla con
+>>>>>>> laraxot/dev
     // `deleteUploadedFileUsing()`. Il tipo del componente lo dichiara gia' l'action,
     // quindi si verifica il nome del campo, che e' cio' che l'action decide.
     expect($form[0]->getName())->toBe($attachments[0]);
@@ -274,7 +286,11 @@ it('has correct panel', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
+<<<<<<< HEAD
    // `FileUpload` non espone `getPanel()`: si verifica il nome del campo, che e'
+=======
+    // `FileUpload` non espone `getPanel()`: si verifica il nome del campo, che e'
+>>>>>>> laraxot/dev
     // cio' che l'action decide a partire dall'allegato.
     expect($form[0]->getName())->toBe($attachments[0]);
 });
@@ -291,7 +307,11 @@ it('has correct help text', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
+<<<<<<< HEAD
    // `FileUpload` non espone `getHelper()`: si verifica il nome del campo, che e'
+=======
+    // `FileUpload` non espone `getHelper()`: si verifica il nome del campo, che e'
+>>>>>>> laraxot/dev
     // cio' che l'action decide a partire dall'allegato.
     expect($form[0]->getName())->toBe($attachments[0]);
 });

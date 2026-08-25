@@ -50,7 +50,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('SvgExistsAction', function () {
+<<<<<<< HEAD
        it('can be instantiated', function (): void {
+=======
+        it('can be instantiated', function (): void {
+>>>>>>> laraxot/dev
             // `new SvgExistsAction()` restituisce per costruzione un SvgExistsAction: cio' che il test
             // puo' verificare e' che il costruttore non abbia parametri obbligatori.
             expect((new ReflectionClass(SvgExistsAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
@@ -73,7 +77,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('ConvertVideoAction', function () {
+<<<<<<< HEAD
        it('can be instantiated', function (): void {
+=======
+        it('can be instantiated', function (): void {
+>>>>>>> laraxot/dev
             // `new ConvertVideoAction()` restituisce per costruzione un ConvertVideoAction: cio' che il test
             // puo' verificare e' che il costruttore non abbia parametri obbligatori.
             expect((new ReflectionClass(ConvertVideoAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
@@ -100,7 +108,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('ConvertVideoByConvertDataAction', function () {
+<<<<<<< HEAD
        it('can be instantiated', function (): void {
+=======
+        it('can be instantiated', function (): void {
+>>>>>>> laraxot/dev
             // `new ConvertVideoByConvertDataAction()` restituisce per costruzione un ConvertVideoByConvertDataAction: cio' che il test
             // puo' verificare e' che il costruttore non abbia parametri obbligatori.
             expect((new ReflectionClass(ConvertVideoByConvertDataAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
@@ -121,7 +133,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('ConvertVideoByMediaConvertAction', function () {
+<<<<<<< HEAD
        it('can be instantiated', function (): void {
+=======
+        it('can be instantiated', function (): void {
+>>>>>>> laraxot/dev
             // `new ConvertVideoByMediaConvertAction()` restituisce per costruzione un ConvertVideoByMediaConvertAction: cio' che il test
             // puo' verificare e' che il costruttore non abbia parametri obbligatori.
             expect((new ReflectionClass(ConvertVideoByMediaConvertAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
@@ -142,7 +158,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('GetVideoScreenshotAction', function () {
+<<<<<<< HEAD
        it('can be instantiated', function (): void {
+=======
+        it('can be instantiated', function (): void {
+>>>>>>> laraxot/dev
             // `new GetVideoScreenshotAction()` restituisce per costruzione un GetVideoScreenshotAction: cio' che il test
             // puo' verificare e' che il costruttore non abbia parametri obbligatori.
             expect((new ReflectionClass(GetVideoScreenshotAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
@@ -163,7 +183,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('GetVideoFrameContentAction', function () {
+<<<<<<< HEAD
        it('can be instantiated', function (): void {
+=======
+        it('can be instantiated', function (): void {
+>>>>>>> laraxot/dev
             // `new GetVideoFrameContentAction()` restituisce per costruzione un GetVideoFrameContentAction: cio' che il test
             // puo' verificare e' che il costruttore non abbia parametri obbligatori.
             expect((new ReflectionClass(GetVideoFrameContentAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
@@ -184,7 +208,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('GetVideoDurationAction', function () {
+<<<<<<< HEAD
        it('can be instantiated', function (): void {
+=======
+        it('can be instantiated', function (): void {
+>>>>>>> laraxot/dev
             // `new GetVideoDurationAction()` restituisce per costruzione un GetVideoDurationAction: cio' che il test
             // puo' verificare e' che il costruttore non abbia parametri obbligatori.
             expect((new ReflectionClass(GetVideoDurationAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
@@ -205,7 +233,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('S3 UploadFileAction', function () {
+<<<<<<< HEAD
        it('has execute method', function (): void {
+=======
+        it('has execute method', function (): void {
+>>>>>>> laraxot/dev
             expect((new ReflectionClass(UploadFileAction::class))->hasMethod('execute'))->toBeTrue();
         });
 
@@ -219,7 +251,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('S3 DeleteFileAction', function () {
+<<<<<<< HEAD
        it('has execute method', function (): void {
+=======
+        it('has execute method', function (): void {
+>>>>>>> laraxot/dev
             expect((new ReflectionClass(DeleteFileAction::class))->hasMethod('execute'))->toBeTrue();
         });
 
@@ -233,7 +269,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('S3 GetFileInfoAction', function () {
+<<<<<<< HEAD
        it('has execute method', function (): void {
+=======
+        it('has execute method', function (): void {
+>>>>>>> laraxot/dev
             expect((new ReflectionClass(GetFileInfoAction::class))->hasMethod('execute'))->toBeTrue();
         });
 
@@ -247,7 +287,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('S3 CheckFileExistsAction', function () {
+<<<<<<< HEAD
        it('has execute method', function (): void {
+=======
+        it('has execute method', function (): void {
+>>>>>>> laraxot/dev
             expect((new ReflectionClass(CheckFileExistsAction::class))->hasMethod('execute'))->toBeTrue();
         });
 
@@ -261,7 +305,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('BaseS3Action', function () {
+<<<<<<< HEAD
        it('is abstract', function (): void {
+=======
+        it('is abstract', function (): void {
+>>>>>>> laraxot/dev
             expect((new ReflectionClass(BaseS3Action::class))->isAbstract())->toBeTrue();
         });
 
@@ -287,7 +335,11 @@ describe('Media Actions Coverage', function () {
     });
 
     describe('GetCloudFrontSignedUrlAction', function () {
+<<<<<<< HEAD
        it('can be instantiated', function (): void {
+=======
+        it('can be instantiated', function (): void {
+>>>>>>> laraxot/dev
             // `new GetCloudFrontSignedUrlAction()` restituisce per costruzione un GetCloudFrontSignedUrlAction: cio' che il test
             // puo' verificare e' che il costruttore non abbia parametri obbligatori.
             expect((new ReflectionClass(GetCloudFrontSignedUrlAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)

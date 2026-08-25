@@ -26,7 +26,11 @@ class AwsTest extends XotBasePage
 {
     protected static ?string $cluster = Test::class;
 
+<<<<<<< HEAD
    /** @var array<string, mixed> */
+=======
+    /** @var array<string, mixed> */
+>>>>>>> laraxot/dev
     public array $testResults = [];
 
     public string $activeTab = 's3';
@@ -35,7 +39,11 @@ class AwsTest extends XotBasePage
 
     private const KEY_PREVIEW_LENGTH = 8;
 
+<<<<<<< HEAD
    /** @var array<string, string> */
+=======
+    /** @var array<string, string> */
+>>>>>>> laraxot/dev
     public array $connectionTests = [
         's3' => 'Test S3 Connection',
         'cloudfront' => 'Test CloudFront',
@@ -43,7 +51,11 @@ class AwsTest extends XotBasePage
         'full' => 'Full Diagnostic',
     ];
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<int, Component>
      */
     protected function getS3TestSchema(): array
@@ -74,7 +86,11 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<int, Component>
      */
     protected function getCloudFrontTestSchema(): array
@@ -95,14 +111,22 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<int, Component>
      */
     protected function getIamTestSchema(): array
     {
         return [
             Section::make('IAM Permissions Test')->schema([
+<<<<<<< HEAD
                TextInput::make('iam_user')->default(config('filesystems.disks.s3.key')),
+=======
+                TextInput::make('iam_user')->default(config('filesystems.disks.s3.key')),
+>>>>>>> laraxot/dev
                 Actions::make([
                     Action::make('test_iam_credentials')->action('testIamCredentials'),
                     Action::make('test_iam_policies')->color('warning')->action('testIamPolicies'),
@@ -116,7 +140,11 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<int, Component>
      */
     protected function getDiagnosticsSchema(): array
@@ -244,7 +272,11 @@ class AwsTest extends XotBasePage
     }
 
     /* Helper Methods */
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, mixed>
      */
     protected function getAwsConfig(): array

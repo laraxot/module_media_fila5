@@ -33,7 +33,11 @@ class PowerPoint extends ImageGenerator
         return true;
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return Collection<int, string>
      */
     public function supportedExtensions(): Collection
@@ -41,7 +45,11 @@ class PowerPoint extends ImageGenerator
         return collect(['ppt', 'pptx']);
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return Collection<int, string>
      */
     public function supportedMimeTypes(): Collection

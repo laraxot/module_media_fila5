@@ -29,7 +29,11 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
     }
 
     /**
+<<<<<<< HEAD
     * @return array<string, string|array<string, string>>
+=======
+     * @return array<string, string|array<string, string>>
+>>>>>>> laraxot/dev
      */
     public function messages(): array
     {
@@ -40,7 +44,11 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getDatabaseConnection(): string
     {
+<<<<<<< HEAD
        $mediaModel = $this->resolveMediaModel();
+=======
+        $mediaModel = $this->resolveMediaModel();
+>>>>>>> laraxot/dev
 
         if ($mediaModel->getConnectionName() === 'default') {
             return '';
@@ -51,7 +59,11 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
 
     protected function getMediaTableName(): string
     {
+<<<<<<< HEAD
        return $this->resolveMediaModel()->getTable();
+=======
+        return $this->resolveMediaModel()->getTable();
+>>>>>>> laraxot/dev
     }
 
     private function resolveMediaModel(): Media

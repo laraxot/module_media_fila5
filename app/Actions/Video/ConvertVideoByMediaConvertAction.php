@@ -39,7 +39,11 @@ class ConvertVideoByMediaConvertAction
         }
 
         // Instanziamo il formato prima di usarlo
+<<<<<<< HEAD
        $formatInstance = new $format();
+=======
+        $formatInstance = new $format();
+>>>>>>> laraxot/dev
 
         $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
@@ -51,7 +55,11 @@ class ConvertVideoByMediaConvertAction
                     'rate' => $rate,
                 ]);
             })
+<<<<<<< HEAD
            // Utilizziamo il formato istanziato come parametro
+=======
+            // Utilizziamo il formato istanziato come parametro
+>>>>>>> laraxot/dev
             ->inFormat($formatInstance);
 
         // addFilter() e' inoltrato al driver PHPFFMpeg via __call/@mixin: la sua

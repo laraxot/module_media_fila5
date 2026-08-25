@@ -28,7 +28,11 @@ class ConvertVideoAction
 
         $exportedMedia = $openedMedia->export();
 
+<<<<<<< HEAD
        $format = new X264();
+=======
+        $format = new X264();
+>>>>>>> laraxot/dev
         $format->setKiloBitrate(1000);
 
         $exportedMedia->toDisk($disk_mp4);

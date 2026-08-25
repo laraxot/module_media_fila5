@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+# Media Module Documentation
+=======
+<<<<<<< HEAD
+# Indice della Documentazione - Modulo Media
+>>>>>>> laraxot/dev
+
+**Last Update**: Feb 2026
+**Status**: Active Development
+
+## Quick Start
+
+<<<<<<< HEAD
+=======
+## Funzionalità Principali
+- **Gestione File Multi-formato**: Supporto per immagini, video, documenti e audio
+- **Upload Avanzato**: Funzionalità di drag-and-drop e upload multiplo
+- **Ottimizzazione Media**: Compressione e ottimizzazione automatica dei file
+- **Conversione Video**: Sistema di conversione video con supporto per diversi formati
+- **Streaming Video**: Funzionalità di streaming video ottimizzata
+- **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
+- **Integrazione CDN**: Supporto per Content Delivery Network
+- **Watermark Automatico**: Applicazione automatica di watermark sui media
+=======
 # Media Module Documentation
 
 **Last Update**: Feb 2026
@@ -5,6 +29,7 @@
 
 ## Quick Start
 
+>>>>>>> laraxot/dev
 - [README.md](./README.md) - Panoramica modulo
 
 ## Core Features
@@ -19,6 +44,10 @@
 ## Standards
 
 Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)

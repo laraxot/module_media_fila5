@@ -14,7 +14,11 @@ use Override;
 
 class MediaRelationManager extends XotBaseRelationManager
 {
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * Il namespace annida questo RelationManager sotto `HasMediaResource`, ma quella
      * classe non esiste: c'e' solo la cartella con Schemas/Tables/Actions. Senza una
      * dichiarazione esplicita `getResource()` deriverebbe `…\HasMediaResource` e
