@@ -374,19 +374,9 @@ jobs:
 - [Correzioni S3Test.php](s3test_corrections.md)
 - [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
-<<<<<<< HEAD
-- [Architecture Guidelines](../docs/architecture.md)
-=======
-<<<<<<< HEAD
-- [Architecture Guidelines](../docs/architecture.md)
-=======
-<<<<<<< HEAD
 - [Architecture Guidelines](../../docs/architecture.md)
-=======
+
 - [Architecture Guidelines](../docs/architecture.md)
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ---
 
