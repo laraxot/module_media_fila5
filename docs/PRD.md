@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ---
 title: "Product Requirements Document (PRD) - Media Module"
 module: "Media"
@@ -30,10 +25,6 @@ Media module for Laraxot platform providing core functionality.
 - PHPStan Level 10 compliance
 - Pest test coverage >90%
 - Integration testing
-
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 # PRD: Media Module
 
 ## 📋 Overview
@@ -47,10 +38,3 @@ Specialized logic for Media needs a dedicated, type-safe Module to ensure mainta
 ## 🎯 Goals & Success Metrics
 - **Goal 1:** 100% PHPStan L10 compliance.
 - **Goal 2:** Seamless integration with XotBase.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev

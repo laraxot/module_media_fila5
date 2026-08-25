@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 # Media Module Documentation
-=======
-<<<<<<< HEAD
+
 # Indice della Documentazione - Modulo Media
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 **Last Update**: Feb 2026
 **Status**: Active Development
 
 ## Quick Start
 
-<<<<<<< HEAD
-=======
 ## Funzionalità Principali
 - **Gestione File Multi-formato**: Supporto per immagini, video, documenti e audio
 - **Upload Avanzato**: Funzionalità di drag-and-drop e upload multiplo
@@ -31,7 +23,6 @@
 
 ## Quick Start
 
->>>>>>> laraxot/dev
 - [README.md](./README.md) - Panoramica modulo
 
 ## Core Features
@@ -46,13 +37,6 @@
 ## Standards
 
 Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
 
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)

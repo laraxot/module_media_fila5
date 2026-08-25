@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD:docs/archive/mcp-server-recommended.md
 title: "MCP Server Consigliati per il Modulo Media"
 module: "Media"
 type: concept
@@ -11,11 +10,10 @@ related:
   - "./webm.md"
 ---
 # MCP Server Consigliati per il Modulo Media
-=======
+
 module: theme
 topic: mcp_server_recommended
 canonical: ../../../../Themes/docs/shared-components/mcp-server-recommended-1.md
 ---
->>>>>>> 766d652 (.):docs/archive/mcp_server_recommended.md
 
 See canonical documentation: ../../../../Themes/docs/shared-components/mcp-server-recommended-1.md
