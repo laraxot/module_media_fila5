@@ -21,7 +21,7 @@ if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
 }
 
 test('base model extends eloquent model', function (): void {
-    expect(makeMediaTestBaseModel())->toBeInstanceOf(Model::class);
+    expect((new \ReflectionClass(BaseModel::class))->isSubclassOf(Model::class))->toBeTrue();
 });
 
 test('base model has correct table name', function (): void {
@@ -29,13 +29,17 @@ test('base model has correct table name', function (): void {
 });
 
 test('base model can be instantiated', function (): void {
-    expect(makeMediaTestBaseModel())->toBeInstanceOf(BaseModel::class);
+    // La fixture e' una classe anonima che estende BaseModel: cio' che il test puo'
+    // verificare e' che la classe base sia istanziabile per derivazione, non che
+    // `new` restituisca il proprio tipo.
+    expect((new \ReflectionClass(makeMediaTestBaseModel()))->isSubclassOf(BaseModel::class))->toBeTrue();
 });
 
 test('base model has proper inheritance chain', function (): void {
-    $model = makeMediaTestBaseModel();
-    expect($model)->toBeInstanceOf(BaseModel::class);
-    expect($model)->toBeInstanceOf(Model::class);
+    $reflection = new \ReflectionClass(makeMediaTestBaseModel());
+
+    expect($reflection->isSubclassOf(BaseModel::class))->toBeTrue();
+    expect($reflection->isSubclassOf(Model::class))->toBeTrue();
 });
 
 test('base model has timestamps enabled', function (): void {

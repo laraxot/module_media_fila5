@@ -66,7 +66,7 @@ test('updated_at is the only column hidden behind the toggle', function (): void
 });
 
 test('the row actions are keyed by their own name, with one documented deviation', function (): void {
-    $actions = (new MediaTable)->getTableActions();
+    $actions = (new MediaTable)->getTableActions(); // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
 
     Assert::assertCount(5, $actions);
 
