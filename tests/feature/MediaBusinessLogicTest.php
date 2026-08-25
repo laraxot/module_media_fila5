@@ -11,7 +11,6 @@ use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
-use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
@@ -93,8 +92,8 @@ describe('Media Business Logic', function () {
 
         $media = MediaFactory::new()->createOne($mediaPayload);
 
-        expect($media)
-            ->toBeInstanceOf(Media::class)
+        expect($media->exists)
+            ->toBeTrue()
             ->and($media->file_name)
             ->toBe($mediaPayload['file_name'])
             ->and($media->mime_type)
@@ -136,8 +135,8 @@ describe('Media Business Logic', function () {
             'status' => 'pending',
         ]);
 
-        expect($mediaConvert)
-            ->toBeInstanceOf(MediaConvert::class)
+        expect($mediaConvert->exists)
+            ->toBeTrue()
             ->and($mediaConvert->media_id)
             ->toBe($media->id)
             ->and($mediaConvert->getAttribute('original_format'))

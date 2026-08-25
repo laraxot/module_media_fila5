@@ -14,7 +14,6 @@ uses(TestCase::class);
 test('get form schema returns expected components', function (): void {
     $form = MediaConvertResource::getFormSchema();
 
-    expect($form)->toBeArray();
     expect($form)->not->toBeEmpty();
 
     $componentClasses = array_map(get_class(...), $form);
