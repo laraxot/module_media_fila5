@@ -11,6 +11,8 @@ use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 
+use function Safe\glob;
+
 uses(TestCase::class);
 
 beforeEach(function (): void {
@@ -19,7 +21,7 @@ beforeEach(function (): void {
 
 it('executes save attachments successfully', function (): void {
     // Arrange
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     $record = $this->makeHasMediaRecordMock();
 
@@ -53,40 +55,36 @@ it('executes save attachments successfully', function (): void {
 
 it('handles empty attachments', function (): void {
     // Arrange
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     $record = $this->makeHasMediaRecordMock();
-    $record->method('update')->with([])->willReturn(true);
+    $record->expects($this->never())->method('update');
 
-    // Act
+    // Act + Assert: senza allegati `$dataAttachments` resta vuoto, quindi
+    // `update()` non viene mai chiamato. Lo verifica l'aspettativa sul mock.
     $action->execute($record, [], [], 'attachments');
-
-    // Assert - non dovrebbe lanciare eccezioni
-    expect(true)->toBeTrue();
 });
 
 it('skips nonexistent files', function (): void {
     // Arrange
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     $record = $this->makeHasMediaRecordMock();
-    $record->method('update')->with([])->willReturn(true);
+    $record->expects($this->never())->method('update');
 
     $attachments = ['invoice'];
     $data = [
         'invoice' => 'nonexistent/file.pdf',
     ];
 
-    // Act
+    // Act + Assert: il file non esiste sul disco, quindi il ciclo salta l'allegato
+    // e `update()` non viene mai chiamato. Lo verifica l'aspettativa sul mock.
     $action->execute($record, $attachments, $data, 'attachments');
-
-    // Assert - non dovrebbe lanciare eccezioni
-    expect(true)->toBeTrue();
 });
 
 it('handles storage errors gracefully', function (): void {
     // Arrange
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     $record = $this->makeHasMediaRecordMock();
     $record->method('addMedia')->willThrowException(new Exception('Storage error'));
@@ -105,7 +103,7 @@ it('handles storage errors gracefully', function (): void {
 
 it('uses correct disk', function (): void {
     // Arrange
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     $record = $this->makeHasMediaRecordMock();
 
@@ -137,7 +135,7 @@ it('uses correct disk', function (): void {
 
 it('cleans up temp files', function (): void {
     // Arrange
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     $record = $this->makeHasMediaRecordMock();
 
@@ -158,17 +156,20 @@ it('cleans up temp files', function (): void {
 
     Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
 
+    // `tempnam(sys_get_temp_dir(), 'media_')` crea il file temporaneo che il blocco
+    // `finally` deve rimuovere: si confronta l'elenco prima e dopo, non un booleano.
+    $tempFilesBefore = glob(sys_get_temp_dir().'/media_*');
+
     // Act
     $action->execute($record, $attachments, $data, 'attachments');
 
-    // Assert - il file temporaneo dovrebbe essere pulito
-    // Questo test verifica che la pulizia avvenga nel finally block
-    expect(true)->toBeTrue();
+    // Assert - il blocco finally ha rimosso il file temporaneo
+    expect(glob(sys_get_temp_dir().'/media_*'))->toBe($tempFilesBefore);
 });
 
 it('handles multiple attachments', function (): void {
     // Arrange
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     $record = $this->makeHasMediaRecordMock();
 
