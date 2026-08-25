@@ -43,7 +43,6 @@ class ConvertVideoCommand extends Command
             $this->info("{$percentage}% transcoded");
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
-
         $export->toDisk($disk);
         $export->inFormat($format);
         $export->save($file_new);
