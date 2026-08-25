@@ -8,30 +8,16 @@ use Modules\Media\Actions\AttachMediaAction;
 use Modules\Media\Tests\TestCase;
 use Spatie\QueueableAction\QueueableAction;
 
+use function Safe\class_uses;
+
 uses(TestCase::class);
 
 describe('AttachMediaAction', function () {
+    // Prima c'erano tre test per lo stesso fatto e nessuno lo verificava:
+    // `trait_exists()` guarda il vendor, non l'action; `toBeInstanceOf` e
+    // `not()->toBeNull()` su `new AttachMediaAction()` sono veri per costruzione.
     it('uses QueueableAction trait', function (): void {
-        // Arrange
-        $action = new AttachMediaAction();
-
-        // Assert - Verify the trait is used
-        expect(trait_exists(QueueableAction::class))->toBeTrue();
-    });
-
-    it('is instance of AttachMediaAction', function (): void {
-        // Arrange
-        $action = new AttachMediaAction();
-
-        // Assert
-        expect($action)->toBeInstanceOf(AttachMediaAction::class);
-    });
-
-    it('can be instantiated', function (): void {
-        // Act
-        $action = new AttachMediaAction();
-
-        // Assert
-        expect($action)->not()->toBeNull();
+        expect(class_uses(AttachMediaAction::class))
+            ->toHaveKey(QueueableAction::class);
     });
 });

@@ -26,8 +26,10 @@ uses(TestCase::class);
 describe('Media Actions Coverage', function () {
     describe('Image Merge Action', function () {
         it('can be instantiated', function (): void {
-            $action = new ImageMerge();
-            expect($action)->toBeInstanceOf(ImageMerge::class);
+            // `new ImageMerge()` restituisce per costruzione un ImageMerge: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(ImageMerge::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('has handle method', function (): void {
@@ -49,13 +51,16 @@ describe('Media Actions Coverage', function () {
 
     describe('SvgExistsAction', function () {
         it('can be instantiated', function (): void {
-            $action = new SvgExistsAction();
-            expect($action)->toBeInstanceOf(SvgExistsAction::class);
+            // `new SvgExistsAction()` restituisce per costruzione un SvgExistsAction: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(SvgExistsAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('can be resolved from container', function (): void {
-            $action = app(SvgExistsAction::class);
-            expect($action)->toBeInstanceOf(SvgExistsAction::class);
+            // Il fatto che conta e' che il container sappia costruirla senza
+            // sollevare: il tipo di ritorno di `app()` e' gia' noto staticamente.
+            expect(static fn (): SvgExistsAction => app(SvgExistsAction::class))->not->toThrow(\Throwable::class);
         });
 
         it('has execute method', function (): void {
@@ -69,13 +74,16 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoAction', function () {
         it('can be instantiated', function (): void {
-            $action = new ConvertVideoAction();
-            expect($action)->toBeInstanceOf(ConvertVideoAction::class);
+            // `new ConvertVideoAction()` restituisce per costruzione un ConvertVideoAction: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(ConvertVideoAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('can be resolved from container', function (): void {
-            $action = app(ConvertVideoAction::class);
-            expect($action)->toBeInstanceOf(ConvertVideoAction::class);
+            // Il fatto che conta e' che il container sappia costruirla senza
+            // sollevare: il tipo di ritorno di `app()` e' gia' noto staticamente.
+            expect(static fn (): ConvertVideoAction => app(ConvertVideoAction::class))->not->toThrow(\Throwable::class);
         });
 
         it('has execute method', function (): void {
@@ -93,8 +101,10 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByConvertDataAction', function () {
         it('can be instantiated', function (): void {
-            $action = new ConvertVideoByConvertDataAction();
-            expect($action)->toBeInstanceOf(ConvertVideoByConvertDataAction::class);
+            // `new ConvertVideoByConvertDataAction()` restituisce per costruzione un ConvertVideoByConvertDataAction: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(ConvertVideoByConvertDataAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('has execute method', function (): void {
@@ -112,8 +122,10 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByMediaConvertAction', function () {
         it('can be instantiated', function (): void {
-            $action = new ConvertVideoByMediaConvertAction();
-            expect($action)->toBeInstanceOf(ConvertVideoByMediaConvertAction::class);
+            // `new ConvertVideoByMediaConvertAction()` restituisce per costruzione un ConvertVideoByMediaConvertAction: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(ConvertVideoByMediaConvertAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('has execute method', function (): void {
@@ -131,8 +143,10 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoScreenshotAction', function () {
         it('can be instantiated', function (): void {
-            $action = new GetVideoScreenshotAction();
-            expect($action)->toBeInstanceOf(GetVideoScreenshotAction::class);
+            // `new GetVideoScreenshotAction()` restituisce per costruzione un GetVideoScreenshotAction: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(GetVideoScreenshotAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('has backoff property', function (): void {
@@ -150,8 +164,10 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoFrameContentAction', function () {
         it('can be instantiated', function (): void {
-            $action = new GetVideoFrameContentAction();
-            expect($action)->toBeInstanceOf(GetVideoFrameContentAction::class);
+            // `new GetVideoFrameContentAction()` restituisce per costruzione un GetVideoFrameContentAction: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(GetVideoFrameContentAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('has execute method', function (): void {
@@ -169,8 +185,10 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoDurationAction', function () {
         it('can be instantiated', function (): void {
-            $action = new GetVideoDurationAction();
-            expect($action)->toBeInstanceOf(GetVideoDurationAction::class);
+            // `new GetVideoDurationAction()` restituisce per costruzione un GetVideoDurationAction: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(GetVideoDurationAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('has execute method', function (): void {
@@ -270,8 +288,10 @@ describe('Media Actions Coverage', function () {
 
     describe('GetCloudFrontSignedUrlAction', function () {
         it('can be instantiated', function (): void {
-            $action = new GetCloudFrontSignedUrlAction();
-            expect($action)->toBeInstanceOf(GetCloudFrontSignedUrlAction::class);
+            // `new GetCloudFrontSignedUrlAction()` restituisce per costruzione un GetCloudFrontSignedUrlAction: cio' che il test
+            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
+            expect((new ReflectionClass(GetCloudFrontSignedUrlAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
+                ->toBe(0);
         });
 
         it('has execute method', function (): void {
