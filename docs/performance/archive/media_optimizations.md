@@ -1,17 +1,3 @@
-<<<<<<< HEAD
----
-title: "Ottimizzazioni Performance Modulo Media"
-module: "Media"
-type: concept
-tags: [media, optimizations]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "media optimizations"
-related:
-  - "./webm.md"
----
-=======
->>>>>>> laraxot/dev
 # Ottimizzazioni Performance Modulo Media
 
 ## 1. Ottimizzazione Conversione Video

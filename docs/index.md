@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-# Indice della Documentazione - Modulo Media
 
-## Panoramica
-Questo documento serve come indice centrale per il modulo Media, fornendo una guida per la gestione dei contenuti multimediali all'interno di un'applicazione Laravel. Il modulo Media gestisce vari tipi di file multimediali come immagini, video, documenti e audio in modo modulare e riutilizzabile.
+**Last Update**: Feb 2026
+**Status**: Active Development
 
-## Principi Chiave
-1. **Modularità**: Il modulo Media è progettato per essere riutilizzabile in diversi progetti, mantenendo funzionalità generiche
-2. **Estensibilità**: Consente personalizzazione e aggiunta di nuovi tipi di media senza alterare il codice principale
-3. **Affidabilità**: Garantisce la gestione sicura e efficiente dei file multimediali attraverso gestione robusta degli errori e logging
+## Quick Start
 
 ## Funzionalità Principali
 - **Gestione File Multi-formato**: Supporto per immagini, video, documenti e audio
@@ -18,7 +13,6 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
 - **Integrazione CDN**: Supporto per Content Delivery Network
 - **Watermark Automatico**: Applicazione automatica di watermark sui media
-=======
 # Media Module Documentation
 
 **Last Update**: Feb 2026
@@ -40,7 +34,6 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ## Standards
 
 Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
->>>>>>> laraxot/dev
 
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)

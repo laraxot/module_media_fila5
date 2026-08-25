@@ -12,7 +12,7 @@ class CreateFilesystemS3ClientAction
 {
     use QueueableAction;
 
-    private const DEFAULT_REGION = 'eu-west-1';
+    private const string DEFAULT_REGION = 'eu-west-1';
 
     public function execute(): S3Client
     {
