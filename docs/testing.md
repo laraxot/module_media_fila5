@@ -1,3 +1,14 @@
+---
+title: "Testing Documentation"
+module: "Media"
+type: concept
+tags: [testing]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "testing"
+related:
+  - "./webm.md"
+---
 # Testing Documentation
 
 ## Overview
@@ -180,7 +191,8 @@ protected function createApplication()
     $app = parent::createApplication();
     
     $app['config']->set([
-'database.connections.media.database' => 'Quaeris_data_test',
+        'database.connections.media.database' => 'healthcare_app_data_test',
+        'database.connections.media.database' => 'ptvx_data_test',
     ]);
     
     return $app;
