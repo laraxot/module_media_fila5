@@ -216,5 +216,15 @@ The **Media module** is in **excellent condition** with PHPStan Level 10 complia
 
 ---
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+**Next Review**: After high-priority refactoring (Q1 2025)
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 **Documentation**: Comprehensive (63 docs files)
 **Test Coverage**: Integration tests available
