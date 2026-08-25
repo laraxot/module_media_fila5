@@ -14,7 +14,11 @@ enum AttachmentTypeEnum: string implements HasLabel
     case DOCUMENT = 'document';
     case MANUAL = 'manual';
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, string>
      */
     /**

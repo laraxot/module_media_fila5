@@ -27,7 +27,11 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\Media\Models\TemporaryUpload.
  *
+<<<<<<< HEAD
 * @property string $id
+=======
+ * @property string $id
+>>>>>>> laraxot/dev
  * @property string $session_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -72,7 +76,11 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
+<<<<<<< HEAD
    /** @use HasXotFactory<TemporaryUploadFactory> */
+=======
+    /** @use HasXotFactory<TemporaryUploadFactory> */
+>>>>>>> laraxot/dev
     use HasXotFactory;
 
     use HasUuids;
@@ -96,7 +104,11 @@ class TemporaryUpload extends BaseModel implements HasMedia
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
         Assert::string($mediaModelClass = config('media-library.media_model'));
+<<<<<<< HEAD
        Assert::subclassOf($mediaModelClass, Media::class);
+=======
+        Assert::subclassOf($mediaModelClass, Media::class);
+>>>>>>> laraxot/dev
 
         /** @var class-string<Media> $mediaModelClass */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
@@ -116,7 +128,11 @@ class TemporaryUpload extends BaseModel implements HasMedia
 
     public static function findByMediaUuidInCurrentSession(?string $mediaUuid): ?self
     {
+<<<<<<< HEAD
        $temporaryUpload = static::findByMediaUuid($mediaUuid);
+=======
+        $temporaryUpload = static::findByMediaUuid($mediaUuid);
+>>>>>>> laraxot/dev
 
         if (! ($temporaryUpload instanceof self)) {
             return null;
@@ -196,7 +212,11 @@ class TemporaryUpload extends BaseModel implements HasMedia
             return;
         }
 
+<<<<<<< HEAD
        $conversion = $this->addMediaConversion('preview');
+=======
+        $conversion = $this->addMediaConversion('preview');
+>>>>>>> laraxot/dev
 
         $previewManipulation = $this->getPreviewManipulation();
 

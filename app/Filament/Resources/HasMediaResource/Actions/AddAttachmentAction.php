@@ -83,7 +83,11 @@ class AddAttachmentAction extends XotBaseAction
         ];
     }
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @param  array<string, mixed>  $data
      * @param  array<string, mixed>  $data
      */
@@ -107,7 +111,11 @@ class AddAttachmentAction extends XotBaseAction
             throw new Exception('FileAdder does not have required methods');
         }
 
+<<<<<<< HEAD
        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast(SafeStringCastAction::cast($data['original_file_name'] ?? ''), '.'));
+=======
+        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast(SafeStringCastAction::cast($data['original_file_name'] ?? ''), '.'));
+>>>>>>> laraxot/dev
         $originalFileName = $data['original_file_name'] ?? '';
         Assert::string($originalFileName);
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast($originalFileName, '.'));

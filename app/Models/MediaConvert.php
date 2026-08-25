@@ -39,7 +39,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $converted_file
  * @property string|null $disk
  * @property string|null $file
+<<<<<<< HEAD
 * @property string|null $path
+=======
+ * @property string|null $path
+>>>>>>> laraxot/dev
  * @property Media|null $media
  *
  * @method static MediaConvertFactory factory($count = null, $state = [])
@@ -94,7 +98,11 @@ class MediaConvert extends BaseModel
         'execution_time',
     ];
 
+<<<<<<< HEAD
    /**
+=======
+    /**
+>>>>>>> laraxot/dev
      * @return BelongsTo<Media, $this>
      */
     public function media(): BelongsTo
