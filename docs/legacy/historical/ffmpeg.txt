@@ -1,0 +1,7 @@
+---
+module: theme
+topic: ffmpeg
+canonical: ../../../../../Themes/docs/shared-components/ffmpeg.txt
+---
+
+See canonical documentation: ../../../../../Themes/docs/shared-components/ffmpeg.txt
