@@ -79,7 +79,7 @@ it('has correct validation', function (): void {
         'docx',
     ];
 
-    expect(collect($acceptedTypes)->contains(fn ($t) => in_array($t, $allowed, true)))->toBeTrue();
+    expect(collect($acceptedTypes)->contains(fn (mixed $t) => in_array($t, $allowed, true)))->toBeTrue();
 });
 
 /**
