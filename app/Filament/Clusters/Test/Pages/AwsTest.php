@@ -31,9 +31,9 @@ class AwsTest extends XotBasePage
 
     public string $activeTab = 's3';
 
-    private const DEFAULT_REGION = 'eu-west-1';
+    private const string DEFAULT_REGION = 'eu-west-1';
 
-    private const KEY_PREVIEW_LENGTH = 8;
+    private const int KEY_PREVIEW_LENGTH = 8;
 
     /** @var array<string, string> */
     public array $connectionTests = [

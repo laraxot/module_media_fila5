@@ -43,17 +43,17 @@ class S3Test extends XotBasePage
     /** @var array<string, mixed> */
     public array $debugResults = [];
 
-    private const DEFAULT_REGION = 'eu-west-1';
+    private const string DEFAULT_REGION = 'eu-west-1';
 
-    private const TEST_FILE_PREFIX = 'test-upload-';
+    private const string TEST_FILE_PREFIX = 'test-upload-';
 
-    private const PERMISSION_TEST_PREFIX = 'test-permissions-';
+    private const string PERMISSION_TEST_PREFIX = 'test-permissions-';
 
-    private const CLOUDFRONT_TEST_FILE = 'test-file.txt';
+    private const string CLOUDFRONT_TEST_FILE = 'test-file.txt';
 
-    private const DEBUG_OUTPUT_ROWS = 15;
+    private const int DEBUG_OUTPUT_ROWS = 15;
 
-    private const URL_PREVIEW_LENGTH = 100;
+    private const int URL_PREVIEW_LENGTH = 100;
 
     public function mount(): void
     {

@@ -11,7 +11,7 @@ class GetAwsConfigSnapshotAction
 {
     use QueueableAction;
 
-    private const KEY_PREVIEW_LENGTH = 8;
+    private const int KEY_PREVIEW_LENGTH = 8;
 
     /**
      * @return array<string, mixed>
