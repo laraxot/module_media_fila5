@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+---
+title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
+module: "Media"
+type: concept
+tags: [AGENTS]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "agents"
+related:
+  - "./webm.md"
+---
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media
