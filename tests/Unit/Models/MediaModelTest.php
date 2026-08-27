@@ -5,13 +5,15 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\Media;
+use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
-        expect(new Media)->toBeInstanceOf(SpatieMedia::class);
+        Assert::assertInstanceOf(SpatieMedia::class, new Media);
     });
 
     it('uses HasXotFactory trait', function (): void {

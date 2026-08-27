@@ -6,7 +6,10 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-return new class() extends XotBaseMigration
+/*
+ * Class CreateTemporaryUploadsTable.
+ */
+return new class extends XotBaseMigration
 {
     protected ?string $model_class = TemporaryUpload::class;
 

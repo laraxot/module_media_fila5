@@ -108,10 +108,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder|Media whereWidth($value)
  * @method static MediaFactory factory($count = null, $state = [])
  *
- * @property-read mixed $extension
- * @property-read mixed $human_readable_size
- * @property-read mixed $original_url
- * @property-read mixed $preview_url
+ * @property-read string $extension
+ * @property-read string $human_readable_size
+ * @property-read string $original_url
+ * @property-read string $preview_url
  *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static MediaCollection<int, static> get($columns = ['*'])
@@ -121,7 +121,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 class Media extends SpatieMedia
 {
     /** @use HasXotFactory<MediaFactory> */
-    /** @phpstan-use HasXotFactory<Factory<static>> */
     use HasXotFactory;
 
     use Updater;
