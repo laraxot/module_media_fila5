@@ -60,6 +60,10 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         Assert::string($mediaModelClass);
         Assert::subclassOf($mediaModelClass, Media::class);
 
+<<<<<<< .merge_file_J9XlFo
         return new $mediaModelClass();
+=======
+        return new $mediaModelClass;
+>>>>>>> .merge_file_dRAzfH
     }
 }
