@@ -74,8 +74,8 @@ class TemporaryUpload extends BaseModel implements HasMedia
 {
     use HasUuids;
 
-    /** @use HasXotFactory<TemporaryUploadFactory> */
     use HasXotFactory;
+
     use InteractsWithMedia;
     use MassPrunable;
 

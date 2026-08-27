@@ -47,7 +47,7 @@ test('HasMediaForm espone una section con name', function (): void {
 });
 
 test('MediasTable e TemporaryUploadsTable espongono colonne indicizzate', function (): void {
-    foreach ([new MediasTable, new TemporaryUploadsTable, new HasMediasTable] as $tabella) {
+    foreach ([new MediasTable(), new TemporaryUploadsTable(), new HasMediasTable()] as $tabella) {
         $colonne = $tabella->getTableColumns();
         Assert::assertNotEmpty($colonne);
         Assert::assertContainsOnlyInstancesOf(Column::class, $colonne);
@@ -58,7 +58,7 @@ test('MediasTable e TemporaryUploadsTable espongono colonne indicizzate', functi
 });
 
 test('GenerateTemporaryUploadPathAction costruisce path distinti per purpose', function (): void {
-    $action = new GenerateTemporaryUploadPathAction;
+    $action = new GenerateTemporaryUploadPathAction();
     $media = new Media([
         'id' => '42',
         'uuid' => '550e8400-e29b-41d4-a716-446655440000',
@@ -76,7 +76,7 @@ test('GenerateTemporaryUploadPathAction costruisce path distinti per purpose', f
 });
 
 test('ResolveMediaExporterAction accetta MediaExporter e rifiuta altri tipi', function (): void {
-    $action = new ResolveMediaExporterAction;
+    $action = new ResolveMediaExporterAction();
     $exporter = Mockery::mock(MediaExporter::class);
 
     Assert::assertSame($exporter, $action->execute($exporter));
