@@ -37,7 +37,11 @@ module: "Media"
 # Media Module Wiki
 
 ## Indices
+<<<<<<< .merge_file_KfULsW
 - [Rules](rules/index.md)
+=======
+- [Rules](rules/INDEX.md)
+>>>>>>> .merge_file_hj6Lvw
 - [Skills](skills/INDEX.md)
 - [Commands](commands/INDEX.md)
 - [Memories](memories/INDEX.md)
