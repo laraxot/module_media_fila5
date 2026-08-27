@@ -411,7 +411,7 @@ php -d xdebug.mode=coverage ./vendor/bin/pest -c Modules/Media/phpunit.xml --cov
 Pest stampa la tabella di coverage **solo a exit 0**: finché la suite è rossa il numero non
 esiste. I 39 rossi residui sono tutti `SQLSTATE[HY000] … no such table` su SQLite — blocco
 d'ambiente, non difetto di codice: il MySQL di progetto `10.100.200.53` è irraggiungibile e
-`XotBaseTestCase` ricade su `fixcity_data.sqlite`, che non ha lo schema.
+`XotBaseTestCase` ricade su `ptv_data.sqlite`, che non ha lo schema.
 
 ### Dove stanno gli helper, e perché non in `tests/Pest.php`
 
