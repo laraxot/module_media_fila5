@@ -556,4 +556,4 @@ Systematic error resolution for file upload, storage, processing, and permission
 
 ---
 
-**Related:** [Patterns](./PATTERNS.md) | [Architecture](./ARCHITECTURE.md) | [Performance](./PERFORMANCE-OPTIMIZATION.md)
+**Related:** [Patterns](./PATTERNS.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)

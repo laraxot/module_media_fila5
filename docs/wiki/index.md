@@ -6,7 +6,7 @@ module: "Media"
 # Media Module Wiki
 
 ## Indices
-- [Rules](rules/INDEX.md)
+- [Rules](rules/index.md)
 - [Skills](skills/INDEX.md)
 - [Commands](commands/INDEX.md)
 - [Memories](memories/INDEX.md)
@@ -37,7 +37,7 @@ module: "Media"
 # Media Module Wiki
 
 ## Indices
-- [Rules](rules/INDEX.md)
+- [Rules](rules/index.md)
 - [Skills](skills/INDEX.md)
 - [Commands](commands/INDEX.md)
 - [Memories](memories/INDEX.md)
