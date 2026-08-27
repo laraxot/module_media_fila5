@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use Mockery;
+use Mockery\Expectation;
 use Mockery\MockInterface;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
@@ -258,6 +259,20 @@ abstract class TestCase extends XotBaseTestCase
         $mock = Mockery::mock(HasMedia::class);
 
         return $mock;
+    }
+
+    /**
+     * Mockery::shouldReceive() con un singolo nome di metodo restituisce a runtime
+     * una Mockery\Expectation concreta, ma la firma nativa dichiara l'unione
+     * ExpectationInterface|Expectation|HigherOrderMessage: questo helper restringe
+     * il tipo in un punto solo cosi' with()/once()/andReturnUsing() restano disponibili.
+     */
+    public static function mockExpectation(MockInterface $mock, string $method): Expectation
+    {
+        /** @var Expectation $expectation */
+        $expectation = $mock->shouldReceive($method);
+
+        return $expectation;
     }
 
     /**

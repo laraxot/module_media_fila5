@@ -121,7 +121,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 class Media extends SpatieMedia
 {
     use HasXotFactory;
-
     use Updater;
 
     /** @var string */

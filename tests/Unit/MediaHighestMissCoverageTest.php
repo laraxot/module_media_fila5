@@ -95,7 +95,7 @@ describe('Media highest-miss coverage', function (): void {
 
         $owner = \Mockery::mock(Model::class);
         $livewire = \Mockery::mock(RelationManager::class);
-        $livewire->shouldReceive('getOwnerRecord')->andReturn($owner);
+        TestCase::mockExpectation($livewire, 'getOwnerRecord')->andReturn($owner);
         Assert::assertInstanceOf(RelationManager::class, $livewire);
         expect(function () use ($livewire): void {
             AddAttachmentAction::formHandlerCallback($livewire, ['file' => 'demo.txt']);
@@ -209,7 +209,7 @@ XML;
         Assert::assertStringContainsString('hello', $service->getContent());
 
         $model = \Mockery::mock(Model::class);
-        $model->shouldReceive('update')->once()->andReturnSelf();
+        TestCase::mockExpectation($model, 'update')->once()->andReturnSelf();
         Assert::assertInstanceOf(Model::class, $model);
         $service->setModel($model);
         Assert::assertSame($model, $service->getModel());
@@ -224,6 +224,7 @@ XML;
         Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
 
         Storage::fake('local');
+        // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
         $this->artisan('media:convert-video', ['disk' => 'local', 'file' => 'missing.mp4']);
     });
 
