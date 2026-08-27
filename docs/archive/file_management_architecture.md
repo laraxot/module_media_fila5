@@ -1143,7 +1143,6 @@ readonly class ConversionConfiguration
 - **User Satisfaction**: >95% upload success rate
 - **System Performance**: <2GB memory usage per worker
 
-<<<<<<< .merge_file_nqZTJp
 Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
 
 
@@ -1152,6 +1151,3 @@ Il modulo Media rappresenta un componente critico per user experience e richiede
 ## Contenuto assorbito da `FILE_MANAGEMENT_ARCHITECTURE.md`
 
 See canonical documentation: ../../../../Themes/docs/shared-components/FILE_MANAGEMENT_ARCHITECTURE.md
-=======
-Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
->>>>>>> .merge_file_gb0P37
