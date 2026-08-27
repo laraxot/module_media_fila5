@@ -12,10 +12,21 @@ class Webm extends ImageGenerator
 {
     public function convert(string $file, ?Conversion $conversion = null): string
     {
-        unset($conversion);
-        throw new \RuntimeException(
-            'Webm Spatie conversion is not implemented; this generator must not stub-throw after debug removal. Source: '.$file
-        );
+        $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.webmXXX';
+        dddx([
+            'file' => $file,
+            '$pathToImageFile' => ${$pathToImageFile},
+            'conversion' => $conversion,
+        ]);
+
+        /*
+         * $image = imagecreatefromwebp($file);
+         *
+         * imagepng($image, $pathToImageFile, 9);
+         *
+         * imagedestroy($image);
+         */
+        return $pathToImageFile;
     }
 
     public function requirementsAreInstalled(): bool
