@@ -38,7 +38,11 @@ class ConvertVideoByConvertDataAction
         }
 
         // Instanziamo il formato prima di usarlo
+<<<<<<< .merge_file_O1p7YU
         $formatInstance = new $format();
+=======
+        $formatInstance = new $format;
+>>>>>>> .merge_file_Dcbmma
 
         $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
