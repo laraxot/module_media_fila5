@@ -54,10 +54,10 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 ## Documentation
 
 **Start here:**
-1. [Documentation Index](./docs/INDEX.md) — Navigation & file guide
-2. [Architecture](./docs/ARCHITECTURE.md) — System design & patterns
+1. [Documentation Index](./docs/index.md) — Navigation & file guide
+2. [Architecture](./docs/architecture.md) — System design & patterns
 3. [Patterns & Best Practices](./docs/PATTERNS.md) — Common patterns & anti-patterns
-4. [Troubleshooting](./docs/TROUBLESHOOTING.md) — Error resolution
+4. [Troubleshooting](./docs/troubleshooting.md) — Error resolution
 
 **Deep dives:**
 - [API Documentation](./docs/API.md) — Action signatures & contracts
@@ -65,8 +65,8 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 - [Components](./docs/COMPONENTS.md) — Intervention Image, Storage strategies
 
 **Operations:**
-- [Performance Optimization](./docs/PERFORMANCE-OPTIMIZATION.md) — Tuning guide
-- [Migration Guide](./docs/MIGRATIONS.md) — Database upgrades
+- [Performance Optimization](./docs/performance-optimization.md) — Tuning guide
+- [Migration Guide](./docs/migrations.md) — Database upgrades
 - [Testing Guidelines](./docs/testing-guidelines.md) — Test strategies
 
 ## Release & Automation
@@ -83,4 +83,4 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 
 ---
 
-**Quick links:** [Index](./docs/INDEX.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/TROUBLESHOOTING.md) | [Contributing](./docs/CONTRIBUTING.md)
+**Quick links:** [Index](./docs/index.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/troubleshooting.md) | [Contributing](./docs/CONTRIBUTING.md)
