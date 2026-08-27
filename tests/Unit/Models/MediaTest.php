@@ -329,6 +329,7 @@ describe('Media model (database)', function (): void {
 
         expect($media->id)->toBeGreaterThan(0);
     });
+// @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
 })->group('media-db');
 
 it('media has casts', function (): void {
