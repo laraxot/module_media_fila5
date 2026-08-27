@@ -6,12 +6,14 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
+use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {
-        expect(new MediaConvert)->toBeInstanceOf(BaseModel::class);
+        Assert::assertInstanceOf(BaseModel::class, new MediaConvert);
     });
 
     it('has correct fillable fields', function (): void {

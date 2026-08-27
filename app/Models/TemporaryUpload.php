@@ -7,6 +7,7 @@ namespace Modules\Media\Models;
 use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
@@ -26,7 +27,7 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\Media\Models\TemporaryUpload.
  *
- * @property int $id
+ * @property string $id
  * @property string $session_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -71,11 +72,14 @@ use Webmozart\Assert\Assert;
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
-    /** @phpstan-use HasXotFactory<TemporaryUploadFactory> */
-    use HasXotFactory;
+    use HasUuids;
 
+    /** @use HasXotFactory<TemporaryUploadFactory> */
+    use HasXotFactory;
     use InteractsWithMedia;
     use MassPrunable;
+
+    public $incrementing = false;
 
     public static ?Closure $manipulatePreview = null;
 

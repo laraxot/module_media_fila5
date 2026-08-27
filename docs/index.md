@@ -1,33 +1,24 @@
----
-title: "Indice della Documentazione - Modulo Media"
-module: "Media"
-type: concept
-tags: [index]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "index"
-related:
-  - "./webm.md"
----
-# Indice della Documentazione - Modulo Media
+# Media Module Documentation
 
-## Panoramica
-Questo documento serve come indice centrale per il modulo Media, fornendo una guida per la gestione dei contenuti multimediali all'interno di un'applicazione Laravel. Il modulo Media gestisce vari tipi di file multimediali come immagini, video, documenti e audio in modo modulare e riutilizzabile.
+**Last Update**: Feb 2026
+**Status**: Active Development
 
-## Principi Chiave
-1. **Modularità**: Il modulo Media è progettato per essere riutilizzabile in diversi progetti, mantenendo funzionalità generiche
-2. **Estensibilità**: Consente personalizzazione e aggiunta di nuovi tipi di media senza alterare il codice principale
-3. **Affidabilità**: Garantisce la gestione sicura e efficiente dei file multimediali attraverso gestione robusta degli errori e logging
+## Quick Start
 
-## Funzionalità Principali
-- **Gestione File Multi-formato**: Supporto per immagini, video, documenti e audio
-- **Upload Avanzato**: Funzionalità di drag-and-drop e upload multiplo
-- **Ottimizzazione Media**: Compressione e ottimizzazione automatica dei file
-- **Conversione Video**: Sistema di conversione video con supporto per diversi formati
-- **Streaming Video**: Funzionalità di streaming video ottimizzata
-- **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
-- **Integrazione CDN**: Supporto per Content Delivery Network
-- **Watermark Automatico**: Applicazione automatica di watermark sui media
+- [README.md](./README.md) - Panoramica modulo
+
+## Core Features
+
+- **Multi-format Files**: Immagini, video, documenti, audio
+- **Upload**: Drag-and-drop, multi-upload
+- **Media Library**: Gestione file (spatie/laravel-medialibrary)
+- **Image Processing**: Ottimizzazione immagini (intervention/image)
+- **Video Conversion**: Conversione video (FFmpeg)
+- **CDN Integration**: Integrazione CDN
+
+## Standards
+
+Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
 
 ## Collegamenti Correlati
 - [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
@@ -40,7 +31,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](README.md) - Panoramica generale del modulo
+- [README](./readme.md) - Panoramica generale del modulo
 - [Architettura](./architecture/readme.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
@@ -165,3 +156,14 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
+---
+
+<!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
+
+# Documentation Index
+
+Modulo: Media
+
+## File disponibili
+
+<!-- auto-generato: elencare i file .md presenti -->
