@@ -9,11 +9,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateTemporaryUploadsTable.
  */
-<<<<<<< .merge_file_aempNx
 return new class() extends XotBaseMigration
-=======
-return new class extends XotBaseMigration
->>>>>>> .merge_file_48HEuv
 {
     protected ?string $model_class = TemporaryUpload::class;
 

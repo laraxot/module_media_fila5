@@ -28,24 +28,16 @@ it('executes save attachments successfully', function (): void {
     $action = new SaveAttachmentsAction();
 
     /** @var MockInterface&HasMedia $record */
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record = $this->makeHasMediaRecordMock();
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $media = $this->makeTestMock(Media::class);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder = $this->makeTestMock(FileAdder::class);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder->method('usingFileName')->willReturnSelf();
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('addMedia')->andReturn($fileAdder);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('update')->andReturn(true);
 
     $attachments = ['invoice', 'contract'];
@@ -67,9 +59,7 @@ it('handles empty attachments', function (): void {
     $action = new SaveAttachmentsAction();
 
     /** @var MockInterface&HasMedia $record */
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record = $this->makeHasMediaRecordMock();
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('update')->never();
 
     $action->execute($record, [], [], 'attachments');
@@ -79,9 +69,7 @@ it('skips nonexistent files', function (): void {
     $action = new SaveAttachmentsAction();
 
     /** @var MockInterface&HasMedia $record */
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record = $this->makeHasMediaRecordMock();
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('update')->never();
 
     $attachments = ['invoice'];
@@ -96,9 +84,7 @@ it('handles storage errors gracefully', function (): void {
     $action = new SaveAttachmentsAction();
 
     /** @var MockInterface&HasMedia $record */
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record = $this->makeHasMediaRecordMock();
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
 
     $attachments = ['invoice'];
@@ -116,24 +102,16 @@ it('uses correct disk', function (): void {
     $action = new SaveAttachmentsAction();
 
     /** @var MockInterface&HasMedia $record */
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record = $this->makeHasMediaRecordMock();
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $media = $this->makeTestMock(Media::class);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder = $this->makeTestMock(FileAdder::class);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder->method('usingFileName')->willReturnSelf();
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('addMedia')->andReturn($fileAdder);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('update')->andReturn(true);
 
     $attachments = ['invoice'];
@@ -153,24 +131,16 @@ it('cleans up temp files', function (): void {
     $action = new SaveAttachmentsAction();
 
     /** @var MockInterface&HasMedia $record */
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record = $this->makeHasMediaRecordMock();
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $media = $this->makeTestMock(Media::class);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder = $this->makeTestMock(FileAdder::class);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder->method('usingFileName')->willReturnSelf();
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('addMedia')->andReturn($fileAdder);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('update')->andReturn(true);
 
     $attachments = ['invoice'];
@@ -187,24 +157,16 @@ it('handles multiple attachments', function (): void {
     $action = new SaveAttachmentsAction();
 
     /** @var MockInterface&HasMedia $record */
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record = $this->makeHasMediaRecordMock();
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $media = $this->makeTestMock(Media::class);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder = $this->makeTestMock(FileAdder::class);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder->method('usingFileName')->willReturnSelf();
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('addMedia')->andReturn($fileAdder);
-    // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
     $record->shouldReceive('update')->andReturn(true);
 
     $attachments = ['invoice', 'contract', 'receipt'];
