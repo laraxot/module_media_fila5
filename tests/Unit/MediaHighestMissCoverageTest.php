@@ -60,17 +60,17 @@ function mediaTablePart(object $page, string $method): array
 }
 
 describe('Media highest-miss coverage', function (): void {
-    test('resources expose model pages and legacy form schema', function (): void {
+    test('resources expose model pages and form schema', function (): void {
         Assert::assertSame(Media::class, MediaResource::getModel());
         $mediaPages = MediaResource::getPages();
         Assert::assertArrayHasKey('index', $mediaPages);
         Assert::assertArrayHasKey('view', $mediaPages);
         Assert::assertArrayHasKey('convert', $mediaPages);
-        Assert::assertArrayHasKey('file', MediaResource::getFormSchemaOld());
+        Assert::assertArrayHasKey('file', MediaResource::getFormSchema());
 
         Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
         Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
-        Assert::assertArrayHasKey('format', MediaConvertResource::getFormSchemaOld());
+        Assert::assertArrayHasKey('format', MediaConvertResource::getFormSchema());
 
         Assert::assertSame(TemporaryUpload::class, TemporaryUploadResource::getModel());
         Assert::assertNotEmpty(TemporaryUploadResource::getPages());
@@ -224,7 +224,6 @@ XML;
         Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
 
         Storage::fake('local');
-        // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
         $this->artisan('media:convert-video', ['disk' => 'local', 'file' => 'missing.mp4']);
     });
 

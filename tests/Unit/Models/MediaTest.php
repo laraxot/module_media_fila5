@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
+use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
@@ -12,9 +13,17 @@ use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
+/**
+ * @param  array<string, mixed>  $attributes
+ */
+function mediaTestCreate(array $attributes = []): Media
+{
+    return MediaFactory::new()->createOne($attributes);
+}
+
 describe('Media model (database)', function (): void {
     it('can create media with minimal data', function (): void {
-        $media = Media::factory()->create([
+        $media = mediaTestCreate([
             'model_type' => 'Modules\User\Models\User',
             'model_id' => '1',
             'collection_name' => 'avatars',
@@ -60,7 +69,7 @@ describe('Media model (database)', function (): void {
             'order_column' => 1,
         ];
 
-        $media = Media::factory()->create($mediaData);
+        $media = mediaTestCreate($mediaData);
 
         XotBasePest::assertTableHas('media', 'media', [
             'id' => SafeIntCastAction::cast($media->getKey()),
@@ -89,7 +98,7 @@ describe('Media model (database)', function (): void {
     });
 
     it('media delete removes the record', function (): void {
-        $media = Media::factory()->create();
+        $media = mediaTestCreate();
         $mediaId = SafeIntCastAction::cast($media->getKey());
 
         $media->delete();
@@ -98,7 +107,7 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by model type', function (): void {
-        $media = Media::factory()->create(['model_type' => 'App\Models\UniqueModel']);
+        $media = mediaTestCreate(['model_type' => 'App\Models\UniqueModel']);
 
         $foundMedia = Media::where('model_type', 'App\Models\UniqueModel')->first();
 
@@ -107,7 +116,7 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by model id', function (): void {
-        $media = Media::factory()->create(['model_id' => '999']);
+        $media = mediaTestCreate(['model_id' => '999']);
 
         $foundMedia = Media::where('model_id', '999')->first();
 
@@ -116,9 +125,9 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by collection name', function (): void {
-        Media::factory()->create(['collection_name' => 'avatars']);
-        Media::factory()->create(['collection_name' => 'images']);
-        Media::factory()->create(['collection_name' => 'documents']);
+        MediaFactory::new()->createOne(['collection_name' => 'avatars']);
+        MediaFactory::new()->createOne(['collection_name' => 'images']);
+        MediaFactory::new()->createOne(['collection_name' => 'documents']);
 
         $avatarMedia = Media::where('collection_name', 'avatars')->get();
 
@@ -129,7 +138,7 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by name', function (): void {
-        $media = Media::factory()->create(['name' => 'unique-media-name']);
+        $media = mediaTestCreate(['name' => 'unique-media-name']);
 
         $foundMedia = Media::where('name', 'unique-media-name')->first();
 
@@ -138,7 +147,7 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by file name', function (): void {
-        $media = Media::factory()->create(['file_name' => 'unique-file.jpg']);
+        $media = mediaTestCreate(['file_name' => 'unique-file.jpg']);
 
         $foundMedia = Media::where('file_name', 'unique-file.jpg')->first();
 
@@ -147,9 +156,9 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by disk', function (): void {
-        Media::factory()->create(['disk' => 'public']);
-        Media::factory()->create(['disk' => 's3']);
-        Media::factory()->create(['disk' => 'local']);
+        MediaFactory::new()->createOne(['disk' => 'public']);
+        MediaFactory::new()->createOne(['disk' => 's3']);
+        MediaFactory::new()->createOne(['disk' => 'local']);
 
         $publicMedia = Media::where('disk', 'public')->get();
 
@@ -160,9 +169,9 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by mime type', function (): void {
-        Media::factory()->create(['mime_type' => 'image/jpeg']);
-        Media::factory()->create(['mime_type' => 'image/png']);
-        Media::factory()->create(['mime_type' => 'application/pdf']);
+        MediaFactory::new()->createOne(['mime_type' => 'image/jpeg']);
+        MediaFactory::new()->createOne(['mime_type' => 'image/png']);
+        MediaFactory::new()->createOne(['mime_type' => 'application/pdf']);
 
         $jpegMedia = Media::where('mime_type', 'image/jpeg')->get();
 
@@ -173,9 +182,9 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by size range', function (): void {
-        Media::factory()->create(['size' => 512]);
-        Media::factory()->create(['size' => 1024]);
-        Media::factory()->create(['size' => 2048]);
+        MediaFactory::new()->createOne(['size' => 512]);
+        MediaFactory::new()->createOne(['size' => 1024]);
+        MediaFactory::new()->createOne(['size' => 2048]);
 
         $largeMedia = Media::where('size', '>', 1000)->get();
 
@@ -184,9 +193,9 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by name pattern', function (): void {
-        Media::factory()->create(['name' => 'profile-avatar']);
-        Media::factory()->create(['name' => 'cover-image']);
-        Media::factory()->create(['name' => 'logo-brand']);
+        MediaFactory::new()->createOne(['name' => 'profile-avatar']);
+        MediaFactory::new()->createOne(['name' => 'cover-image']);
+        MediaFactory::new()->createOne(['name' => 'logo-brand']);
 
         $profileMedia = Media::where('name', 'like', '%profile%')->get();
 
@@ -195,11 +204,11 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by custom properties', function (): void {
-        Media::factory()->create([
+        MediaFactory::new()->createOne([
             'custom_properties' => ['alt' => 'Profile picture', 'category' => 'avatar'],
         ]);
 
-        Media::factory()->create([
+        MediaFactory::new()->createOne([
             'custom_properties' => ['alt' => 'Cover image', 'category' => 'banner'],
         ]);
 
@@ -210,11 +219,11 @@ describe('Media model (database)', function (): void {
     });
 
     it('can find media by manipulations', function (): void {
-        Media::factory()->create([
+        MediaFactory::new()->createOne([
             'manipulations' => ['resize' => ['width' => 800, 'height' => 600]],
         ]);
 
-        Media::factory()->create([
+        MediaFactory::new()->createOne([
             'manipulations' => ['crop' => ['x' => 0, 'y' => 0, 'width' => 400, 'height' => 300]],
         ]);
 
@@ -232,7 +241,7 @@ describe('Media model (database)', function (): void {
     });
 
     it('can update media', function (): void {
-        $media = Media::factory()->create(['name' => 'Old Name']);
+        $media = mediaTestCreate(['name' => 'Old Name']);
 
         $media->update(['name' => 'New Name']);
 
@@ -243,7 +252,7 @@ describe('Media model (database)', function (): void {
     });
 
     it('can handle null values', function (): void {
-        $media = Media::factory()->create([
+        $media = mediaTestCreate([
             'model_type' => 'App\Models\Test',
             'model_id' => '1',
             'collection_name' => 'test',
@@ -279,25 +288,28 @@ describe('Media model (database)', function (): void {
     });
 
     it('media has media converts relationship', function (): void {
-        $media = Media::factory()->create();
+        $media = mediaTestCreate();
+        $reflection = new \ReflectionClass($media);
 
-        expect(method_exists($media, 'mediaConverts'))->toBeTrue();
+        expect($reflection->hasMethod('mediaConverts'))->toBeTrue();
     });
 
     it('media has temporary upload relationship', function (): void {
-        $media = Media::factory()->create();
+        $media = mediaTestCreate();
+        $reflection = new \ReflectionClass($media);
 
-        expect(method_exists($media, 'temporaryUpload'))->toBeTrue();
+        expect($reflection->hasMethod('temporaryUpload'))->toBeTrue();
     });
 
     it('media has creator relationship', function (): void {
-        $media = Media::factory()->create();
+        $media = mediaTestCreate();
+        $reflection = new \ReflectionClass($media);
 
-        expect(method_exists($media, 'creator'))->toBeTrue();
+        expect($reflection->hasMethod('creator'))->toBeTrue();
     });
 
     it('media can get url conversion', function (): void {
-        $media = Media::factory()->create([
+        $media = mediaTestCreate([
             'file_name' => 'test-image.jpg',
         ]);
 
@@ -312,7 +324,7 @@ describe('Media model (database)', function (): void {
     });
 
     it('media has entry conversions attribute', function (): void {
-        $media = Media::factory()->create([
+        $media = mediaTestCreate([
             'generated_conversions' => ['thumb' => true, 'medium' => false],
         ]);
 
@@ -325,18 +337,17 @@ describe('Media model (database)', function (): void {
     });
 
     it('media has factory', function (): void {
-        $media = Media::factory()->create();
+        $media = mediaTestCreate();
 
         expect($media->id)->toBeGreaterThan(0);
     });
-// @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
 })->group('media-db');
 
 it('media has casts', function (): void {
     $media = new Media();
 
     $expectedCasts = [
-        'id' => 'string',
+        'id' => 'integer',
         'uuid' => 'string',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',

@@ -39,11 +39,7 @@ class ConvertVideoByMediaConvertAction
         }
 
         // Instanziamo il formato prima di usarlo
-<<<<<<< .merge_file_EBG9iu
         $formatInstance = new $format();
-=======
-        $formatInstance = new $format;
->>>>>>> .merge_file_K4cDN5
 
         $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
