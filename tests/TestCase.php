@@ -261,16 +261,13 @@ abstract class TestCase extends XotBaseTestCase
         return $mock;
     }
 
-    /**
-     * Mockery::shouldReceive() con un singolo nome di metodo restituisce a runtime
-     * una Mockery\Expectation concreta, ma la firma nativa dichiara l'unione
-     * ExpectationInterface|Expectation|HigherOrderMessage: questo helper restringe
-     * il tipo in un punto solo cosi' with()/once()/andReturnUsing() restano disponibili.
-     */
     public static function mockExpectation(MockInterface $mock, string $method): Expectation
     {
-        /** @var Expectation $expectation */
-        $expectation = $mock->shouldReceive($method);
+        $mock->shouldReceive($method);
+        $director = $mock->mockery_getExpectationsFor($method);
+        Assert::assertNotNull($director);
+        $expectation = $director->getExpectations()[0] ?? null;
+        Assert::assertInstanceOf(Expectation::class, $expectation);
 
         return $expectation;
     }
