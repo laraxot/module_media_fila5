@@ -116,7 +116,6 @@ describe('Media Business Logic', function () {
 
         foreach (['media_id', 'original_format', 'target_format', 'status'] as $requiredColumn) {
             if (! in_array($requiredColumn, $convertColumns, true)) {
-                // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
                 $this->skipTest('media_converts table is missing required columns for this test in this install.');
             }
         }
@@ -292,7 +291,6 @@ describe('Media Business Logic', function () {
         $convertColumns = Schema::connection('media')->getColumnListing('media_converts');
 
         if (! in_array('status', $convertColumns, true) || ! in_array('media_id', $convertColumns, true)) {
-            // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
             $this->skipTest('media_converts table is missing required columns for this test in this install.');
         }
 
@@ -330,7 +328,6 @@ describe('Media Business Logic', function () {
 
         $columns = Schema::connection('media')->getColumnListing('media');
         if (! in_array('user_id', $columns, true) || ! in_array('is_public', $columns, true)) {
-            // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
             $this->skipTest('This install does not have user_id/is_public columns on media table.');
         }
 
@@ -338,20 +335,17 @@ describe('Media Business Logic', function () {
             'user_id' => $owner->id,
             'is_public' => false,
         ]);
+        $mediaUserId = $media->getAttribute('user_id');
 
-        expect($media->user_id)
-            ->toBe($owner->id)
-            ->and($media->getAttribute('is_public'))
-            ->toBeFalse()
-            ->and($media->user_id)
-            ->not->toBe($otherUser->id);
+        expect($mediaUserId)->toBe($owner->id);
+        expect($media->getAttribute('is_public'))->toBeFalse();
+        expect($mediaUserId)->not->toBe($otherUser->id);
     });
 
     it('can handle media deletion', function (): void {
         $columns = Schema::connection('media')->getColumnListing('media');
 
         if (in_array('deleted_at', $columns, true)) {
-            // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
             $this->skipTest('This install has deleted_at on media table; deletion semantics are install-specific.');
         }
 
@@ -398,7 +392,6 @@ describe('Media Business Logic', function () {
 
         $validPayload = $makePayload(1024 * 1024);
         if ($validPayload === []) {
-            // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
             $this->skipTest('Unable to build minimal payload for media table in this install.');
         }
 
@@ -441,7 +434,6 @@ describe('Media Business Logic', function () {
 
         $mediaColumns = Schema::connection('media')->getColumnListing('media');
         if (! in_array('user_id', $mediaColumns, true)) {
-            // @phpstan-ignore-next-line method.notFound, method.nonObject (Pest closure $this binds to a generic stub; project TestCase members not visible to PHPStan statically)
             $this->skipTest('This install does not have user_id column on media table.');
         }
 

@@ -24,11 +24,7 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
-<<<<<<< .merge_file_LXVy2a
         $manager = new InterventionImageManager(new GdDriver());
-=======
-        $manager = new InterventionImageManager(new GdDriver);
->>>>>>> .merge_file_Xx0yxT
 
         $image1 = $manager->decodePath($path1);
         $image2 = $manager->decodePath($path2);
@@ -86,11 +82,7 @@ class Merge
             }
         }
 
-<<<<<<< .merge_file_LXVy2a
         $manager = new InterventionImageManager(new GdDriver());
-=======
-        $manager = new InterventionImageManager(new GdDriver);
->>>>>>> .merge_file_Xx0yxT
 
         /** @var list<ImageInterface> $images */
         $images = [];
