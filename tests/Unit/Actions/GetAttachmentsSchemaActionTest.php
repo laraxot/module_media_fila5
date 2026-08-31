@@ -9,7 +9,11 @@ use Modules\Media\Actions\GetAttachmentsSchemaAction;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< HEAD
 uses(TestCase::class)->group('no-media-db');
+=======
+uses(\Modules\Media\Tests\TestCase::class);
+>>>>>>> 1098966f (.)
 
 /**
  * Test that the action returns attachment schema correctly.

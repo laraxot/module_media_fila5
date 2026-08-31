@@ -14,7 +14,11 @@ use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 
+<<<<<<< HEAD
 uses(TestCase::class)->group('no-media-db');
+=======
+uses(\Modules\Media\Tests\TestCase::class);
+>>>>>>> 1098966f (.)
 
 beforeEach(function (): void {
     Storage::fake('attachments');

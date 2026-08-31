@@ -9,7 +9,11 @@ use Modules\Media\Models\BaseModel;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< HEAD
 uses(TestCase::class)->group('no-media-db');
+=======
+uses(\Modules\Media\Tests\TestCase::class);
+>>>>>>> 1098966f (.)
 
 if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     function makeMediaTestBaseModel(): BaseModel
