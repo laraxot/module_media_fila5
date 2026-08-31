@@ -8,9 +8,13 @@ use Modules\Media\Actions\AttachMediaAction;
 use Modules\Media\Tests\TestCase;
 use Spatie\QueueableAction\QueueableAction;
 
+<<<<<<< HEAD
 use function Safe\class_uses;
 
 uses(TestCase::class)->group('no-media-db');
+=======
+uses(\Modules\Media\Tests\TestCase::class);
+>>>>>>> 1098966f (.)
 
 describe('AttachMediaAction', function () {
     it('uses QueueableAction trait', function (): void {
