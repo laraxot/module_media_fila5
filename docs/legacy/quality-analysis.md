@@ -1,6 +1,7 @@
 ---
 module: theme
-topic: quality-analysis-2025-11-11
+topic: quality-analysis
+created_at: '2025-11-11'
 canonical: ../../../../Themes/docs/shared-components/quality-analysis-.md
 ---
 
