@@ -23,7 +23,7 @@ related:
 - [Workstreams](03-workstreams.md)
 - [Milestones](04-milestones.md)
 - [Risks](05-risks.md)
-- [Chaos Readiness 2026-03-02](chaos-readiness-2026-03-02.md)
+- [Chaos Readiness](chaos-readiness.md)
 
 ## Metriche rapide
 
