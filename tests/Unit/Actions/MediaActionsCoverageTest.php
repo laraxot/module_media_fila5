@@ -22,11 +22,7 @@ use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
-<<<<<<< HEAD
-uses(TestCase::class)->group('no-media-db');
-=======
-uses(\Modules\Media\Tests\TestCase::class);
->>>>>>> 1098966f (.)
+uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
 
 describe('Media Actions Coverage', function () {
     describe('Image Merge Action', function () {
