@@ -23,19 +23,19 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
  * @property-read User|null $creator
+ * @property-read \Modules\WorkOrder\Models\Profile|null $deleter
  * @property-read mixed $extension
- * @property-read array<int, array{name: string, generated: bool, src: string}> $entry_conversions
+ * @property-read \Modules\Media\Models\array<int, array{name: $entry_conversions
  * @property-read string $path
  * @property-read mixed $human_readable_size
- * @property-read EloquentCollection<int, MediaConvert> $mediaConverts
+ * @property-read EloquentCollection<int, \Modules\Media\Models\MediaConvert> $mediaConverts
  * @property-read int|null $media_converts_count
- * @property-read Model|Eloquent $model
+ * @property-read Model|\Eloquent $model
  * @property-read mixed $original_url
  * @property-read mixed $preview_url
- * @property-read TemporaryUpload|null $temporaryUpload
+ * @property-read \Modules\Media\Models\TemporaryUpload|null $temporaryUpload
  * @property-read mixed $type
- * @property-read ProfileContract|null $updater
- *
+ * @property-read \Modules\WorkOrder\Models\Profile|null $updater
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static \Modules\Media\Database\Factories\MediaFactory factory($count = null, $state = [])
  * @method static MediaCollection<int, static> get($columns = ['*'])
@@ -43,54 +43,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder<static>|Media newQuery()
  * @method static Builder<static>|Media ordered()
  * @method static Builder<static>|Media query()
- *
- * @property int $id
- * @property string $model_type
- * @property string|null $model_id
- * @property string|null $uuid
- * @property string $collection_name
- * @property string $name
- * @property string $file_name
- * @property string|null $mime_type
- * @property string $disk
- * @property string|null $conversions_disk
- * @property int $size
- * @property array<array-key, mixed> $manipulations
- * @property array<array-key, mixed> $custom_properties
- * @property array<array-key, mixed> $generated_conversions
- * @property array<array-key, mixed> $responsive_images
- * @property int|null $order_column
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- * @property int|string|null $user_id
- *
- * @method static Builder<static>|Media whereCollectionName($value)
- * @method static Builder<static>|Media whereConversionsDisk($value)
- * @method static Builder<static>|Media whereCreatedAt($value)
- * @method static Builder<static>|Media whereCreatedBy($value)
- * @method static Builder<static>|Media whereCustomProperties($value)
- * @method static Builder<static>|Media whereDeletedAt($value)
- * @method static Builder<static>|Media whereDeletedBy($value)
- * @method static Builder<static>|Media whereDisk($value)
- * @method static Builder<static>|Media whereFileName($value)
- * @method static Builder<static>|Media whereGeneratedConversions($value)
- * @method static Builder<static>|Media whereId($value)
- * @method static Builder<static>|Media whereManipulations($value)
- * @method static Builder<static>|Media whereMimeType($value)
- * @method static Builder<static>|Media whereModelId($value)
- * @method static Builder<static>|Media whereModelType($value)
- * @method static Builder<static>|Media whereName($value)
- * @method static Builder<static>|Media whereOrderColumn($value)
- * @method static Builder<static>|Media whereResponsiveImages($value)
- * @method static Builder<static>|Media whereSize($value)
- * @method static Builder<static>|Media whereUpdatedAt($value)
- * @method static Builder<static>|Media whereUpdatedBy($value)
- * @method static Builder<static>|Media whereUuid($value)
- *
  * @mixin Eloquent
  */
 class Media extends SpatieMedia

@@ -26,50 +26,20 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\Media\Models\TemporaryUpload.
  *
- * @property-read ProfileContract|null $creator
+ * @property-read \Modules\WorkOrder\Models\Profile|null $creator
+ * @property-read \Modules\WorkOrder\Models\Profile|null $deleter
  * @property-read MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property-read int|null $media_count
- * @property-read ProfileContract|null $updater
- *
+ * @property-read \Modules\WorkOrder\Models\Profile|null $updater
  * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
  * @method static Builder<static>|TemporaryUpload newModelQuery()
  * @method static Builder<static>|TemporaryUpload newQuery()
  * @method static Builder<static>|TemporaryUpload query()
- *
- * @property string $id
- * @property string $session_id
- * @property string|null $user_id
- * @property string $file_name
- * @property int|null $file_size
- * @property string|null $mime_type
- * @property string $status
- * @property Carbon|null $created_at
- * @property Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property Carbon|null $deleted_at
- * @property string|null $deleted_by
- *
- * @method static Builder<static>|TemporaryUpload whereCreatedAt($value)
- * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
- * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
- * @method static Builder<static>|TemporaryUpload whereDeletedBy($value)
- * @method static Builder<static>|TemporaryUpload whereFileName($value)
- * @method static Builder<static>|TemporaryUpload whereFileSize($value)
- * @method static Builder<static>|TemporaryUpload whereId($value)
- * @method static Builder<static>|TemporaryUpload whereMimeType($value)
- * @method static Builder<static>|TemporaryUpload whereSessionId($value)
- * @method static Builder<static>|TemporaryUpload whereStatus($value)
- * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
- * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
- * @method static Builder<static>|TemporaryUpload whereUserId($value)
- *
  * @mixin \Eloquent
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
     use HasUuids;
-
     /** @use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory> */
     use HasXotFactory;
     use InteractsWithMedia;
