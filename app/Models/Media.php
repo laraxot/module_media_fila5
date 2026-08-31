@@ -22,28 +22,28 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
- * @property-read User|null $creator
+ * @property-read \Modules\User\Models\User|null $creator
  * @property-read \Modules\WorkOrder\Models\Profile|null $deleter
  * @property-read mixed $extension
  * @property-read \Modules\Media\Models\array<int, array{name: $entry_conversions
  * @property-read string $path
  * @property-read mixed $human_readable_size
- * @property-read EloquentCollection<int, \Modules\Media\Models\MediaConvert> $mediaConverts
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Media\Models\MediaConvert> $mediaConverts
  * @property-read int|null $media_converts_count
- * @property-read Model|\Eloquent $model
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $model
  * @property-read mixed $original_url
  * @property-read mixed $preview_url
  * @property-read \Modules\Media\Models\TemporaryUpload|null $temporaryUpload
  * @property-read mixed $type
  * @property-read \Modules\WorkOrder\Models\Profile|null $updater
- * @method static MediaCollection<int, static> all($columns = ['*'])
+ * @method static \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, static> all($columns = ['*'])
  * @method static \Modules\Media\Database\Factories\MediaFactory factory($count = null, $state = [])
- * @method static MediaCollection<int, static> get($columns = ['*'])
- * @method static Builder<static>|Media newModelQuery()
- * @method static Builder<static>|Media newQuery()
- * @method static Builder<static>|Media ordered()
- * @method static Builder<static>|Media query()
- * @mixin Eloquent
+ * @method static \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, static> get($columns = ['*'])
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\Media newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\Media newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\Media ordered()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\Media query()
+ * @mixin \Eloquent
  */
 class Media extends SpatieMedia
 {

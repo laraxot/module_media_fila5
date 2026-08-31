@@ -22,9 +22,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read \Modules\Media\Models\Media|null $media
  * @property-read \Modules\WorkOrder\Models\Profile|null $updater
  * @method static \Modules\Media\Database\Factories\MediaConvertFactory factory($count = null, $state = [])
- * @method static Builder<static>|MediaConvert newModelQuery()
- * @method static Builder<static>|MediaConvert newQuery()
- * @method static Builder<static>|MediaConvert query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\MediaConvert newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\MediaConvert newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\MediaConvert query()
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel

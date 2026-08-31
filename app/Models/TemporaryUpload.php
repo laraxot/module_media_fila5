@@ -28,13 +28,13 @@ use Webmozart\Assert\Assert;
  *
  * @property-read \Modules\WorkOrder\Models\Profile|null $creator
  * @property-read \Modules\WorkOrder\Models\Profile|null $deleter
- * @property-read MediaCollection<int, \Modules\Media\Models\Media> $media
+ * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property-read int|null $media_count
  * @property-read \Modules\WorkOrder\Models\Profile|null $updater
  * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
- * @method static Builder<static>|TemporaryUpload newModelQuery()
- * @method static Builder<static>|TemporaryUpload newQuery()
- * @method static Builder<static>|TemporaryUpload query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\TemporaryUpload newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\TemporaryUpload newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|\Modules\Media\Models\TemporaryUpload query()
  * @mixin \Eloquent
  */
 class TemporaryUpload extends BaseModel implements HasMedia
