@@ -27,10 +27,10 @@ rifare e contestare.
 | PHPInsights — Complexity | 100.0 % |
 | PHPInsights — Architecture | 100.0 % |
 | PHPInsights — Style | 90.1 % |
-| File `.md` sotto `docs/` | 449 |
+| File `.md` sotto `docs/` | 450 |
 | `TODO`/`FIXME`/`HACK` | 0 |
 | Test con casi che non girano (senza suffisso `Test.php`) | 0 |
-| Collisioni di case nel codice | 1 |
+| Collisioni di case nel codice | 0 |
 | Collisioni di case nei docs | 0 |
 | Marker di conflitto | 0 |
 | File `.lock` committati | 0 |
@@ -43,15 +43,10 @@ da `ignoreErrors` e non vengono contate da nessun gate.
 
 ## Cosa non va
 
-### 1 collisioni di case nel codice
+Nessuno dei controlli strutturali di questo audit segnala qualcosa.
 
-Due percorsi che differiscono solo per maiuscole convivono su Linux e si
-fondono su macOS e Windows. Quando sono file di test, uno dei due non viene
-nemmeno raccolto: due file con lo stesso basename generano la stessa classe.
-
-Percorsi coinvolti:
-
-- `tests/fixtures`
+Non significa che sia perfetto: significa che i difetti che questo audit sa
+misurare non ci sono. Restano aperte le voci in "Cosa questa misura non vede".
 
 ## Coverage
 
