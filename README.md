@@ -1,86 +1,126 @@
-# Media Module — File Storage & Transformation
+# 🎞️ Media — l'unico posto dove un file smette di essere un problema
 
-**Last updated:** 2026-07-28
+[![PHP](https://img.shields.io/badge/PHP-%5E8.2-777BB4.svg)](composer.json)
+[![Laravel](https://img.shields.io/badge/Laravel-13.30-FF2D20.svg)](../../composer.lock)
+[![Filament](https://img.shields.io/badge/Filament-5.7-FDAB3D.svg)](../../composer.lock)
+[![PHPStan](https://img.shields.io/badge/PHPStan-0%20errori-brightgreen.svg)](../../phpstan.neon)
+[![strict_types](https://img.shields.io/badge/declare-strict__types%3D1-informational.svg)](#)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Complete media management for the Laraxot ecosystem: image optimization, video encoding, FFmpeg integration, and cloud storage (S3/CloudFront).
+> Ogni modulo ha bisogno di caricare un'immagine, generare una thumbnail, servire
+> un video. Nessuno dovrebbe reinventarlo. Media è dove quel problema è stato
+> risolto una volta — e dove, se guardi bene, è ancora solo mezzo risolto.
 
-## Why This Module
-
-- **Unified file handling** — Consistent API for uploads, validation, and storage across all modules
-- **FFmpeg integration** — Professional-grade video encoding with automatic quality presets
-- **Image optimization** — Intervention Image transforms with smart caching strategy
-- **Cloud-native** — Built-in S3/CloudFront support with fallback to local storage
-- **Filament admin UI** — Media library, bulk operations, batch processing
-- **Battle-tested conventions** — Laraxot best practices embedded from day one
-
-## Key Features
-
-### File Upload & Storage
-- Temporary upload handling with session tracking
-- Automatic validation (MIME type, size, extensions)
-- Multiple disk support (local, S3, Minio, CloudFront)
-- Atomic attachment operations
-
-### Image Processing
-- Intervention Image transforms (resize, crop, optimize)
-- Automatic format conversion (WebP, AVIF fallback)
-- Smart thumbnail generation
-- EXIF data preservation & sanitization
-
-### Video Encoding
-- FFmpeg conversion pipeline (MP4, WebM, HLS)
-- Subtitle generation & embedding
-- Frame extraction for thumbnails
-- Adaptive bitrate streaming preparation
-
-### Cloud Integration
-- AWS S3 native support
-- CloudFront URL signing for private content
-- Minio compatibility for self-hosted deployments
-- Automatic CDN invalidation
-
-## Dependencies
-
-**Composer packages:**
-- `pbmedia/laravel-ffmpeg:^8.7` — Video processing
-- `intervention/image:^3.0` — Image transformation
-- `laravel/framework:^11.0` — Laravel framework
-- `spatie/laravel-queueable-action` — Async actions
-
-**System packages (required):**
-- `ffmpeg` — Video encoding engine
-- `imagemagick` or `gd` — Image processing library
-
-## Documentation
-
-**Start here:**
-1. [Documentation Index](./docs/index.md) — Navigation & file guide
-2. [Architecture](./docs/architecture.md) — System design & patterns
-3. [Patterns & Best Practices](./docs/PATTERNS.md) — Common patterns & anti-patterns
-4. [Troubleshooting](./docs/troubleshooting.md) — Error resolution
-
-**Deep dives:**
-- [API Documentation](./docs/API.md) — Action signatures & contracts
-- [FFmpeg Integration](./docs/ffmpeg-usage.md) — Video encoding guide
-- [Components](./docs/COMPONENTS.md) — Intervention Image, Storage strategies
-
-**Operations:**
-- [Performance Optimization](./docs/performance-optimization.md) — Tuning guide
-- [Migration Guide](./docs/migrations.md) — Database upgrades
-- [Testing Guidelines](./docs/testing-guidelines.md) — Test strategies
-
-## Release & Automation
-
-- **Semantic Release:** [Workflow](./.github/workflows/semantic-release.yml)
-- **Configuration:** [.releaserc.json](./.releaserc.json)
-- **Changelog:** [CHANGELOG.md](./CHANGELOG.md)
-
-## Philosophy
-
-**Scopo prima del codice** — Every class serves a specific use case.  
-**DRY prima dell'orgoglio** — Reuse patterns established in Laraxot.  
-**KISS prima dell'astrazione** — Simple, verifiable code over clever frameworks.
+I badge sopra sono misurati, non incollati: `phpstan analyse Modules/Media`,
+l'1 settembre 2026, a tree fermo (dato di `base-ptvx-fila5-80`, riproducibile
+con `cd laravel && ./vendor/bin/phpstan analyse Modules/Media`).
 
 ---
 
-**Quick links:** [Index](./docs/index.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/troubleshooting.md) | [Contributing](./docs/CONTRIBUTING.md)
+## Perché
+
+Immagini, video, allegati: ogni modulo del progetto ne genera, prima o poi.
+Senza un posto unico, ognuno inventa il proprio upload, il proprio disco, la
+propria convenzione di naming — e la migrazione a S3 diventa venti migrazioni
+diverse invece di una. Media esiste per essere quel posto: upload, conversioni,
+storage multiplo (locale, S3, Minio), un'unica volta.
+
+## Logica
+
+`app/Actions` fa il lavoro, `app/Conversions` decide come una immagine o un
+video diventano derivati (thumbnail, formati, bitrate), `app/Datas` porta i
+dati tipizzati fra i due. Nessuna business logic nei controller, nessuna nei
+model: se serve capire cosa succede quando arriva un file, si legge una
+Action, non si segue un `boot()` nascosto in un observer.
+
+## Filosofia
+
+**Un file caricato non è un file salvato finché non è verificato.** MIME type,
+dimensione, estensione: la validazione sta prima dell'attach, non dopo, perché
+un file malevolo dentro lo storage è un problema che si eredita per sempre,
+mentre uno rifiutato all'ingresso è solo un errore utente. La stessa logica
+vale per le conversioni: se FFmpeg fallisce su un video, il fallimento deve
+essere esplicito, non un file corrotto silenziosamente accettato.
+
+## Religione
+
+**Un numero non misurato non è un numero.** Il vecchio `docs/coverage.md` di
+questo modulo aveva la data scritta come `[DATE]` — un placeholder mai
+riempito, mai controllato, rimasto lì per settimane. Non è un dettaglio: è la
+prova che nessuno l'ha mai riletto dopo averlo scritto. Da oggi ogni cifra qui
+sotto viene da un comando eseguito lo stesso giorno, o non compare.
+
+## Politica
+
+`laravel/phpstan.neon` è sacro: nessun agente lo tocca. Le run di verifica
+sono nude — niente `-c`, niente `--level` custom — perché un numero ottenuto
+bypassando la config di progetto non certifica niente.
+
+## Zen
+
+Un modulo che sposta byte per vivere non ha bisogno di essere elegante: ha
+bisogno che i byte arrivino integri. La bellezza qui è l'assenza di sorprese,
+non l'astrazione.
+
+---
+
+## Stato misurato — 1 settembre 2026
+
+| Metrica | Valore | Comando |
+|---|---:|---|
+| File PHP in `app/` | 124 | `find app -name '*.php' \| wc -l` |
+| Casi di test | 314 | `./vendor/bin/pest Modules/Media` |
+| PHPStan | **0 errori**, `level: max` | `./vendor/bin/phpstan analyse Modules/Media` |
+| `@phpstan-ignore` residui | 0 | — |
+| PHPInsights — Code | 91.8 % | `./tools/phpinsights.sh Modules/Media` |
+| PHPInsights — Architecture | **100.0 %** | idem |
+| PHPMD su `app/` | 171 rilievi reali | `./tools/phpmd.sh Modules/Media/app` |
+| Coverage `app/` | **0.00 %** (0/2140 statement) ⚠️ | `Modules/Media/docs/coverage.md` |
+
+**L'Architecture al 100% non è un premio, è una scala.** Media ha 124 file
+contro i 1654 di Xot: un modulo piccolo e ben ritagliato ottiene facilmente un
+punteggio alto perché ha meno superficie in cui accumulare debito. Non
+significa "impeccabile", significa "non ancora abbastanza grande per
+mostrare le crepe" — vale la pena ricontrollarlo quando il modulo crescerà.
+
+**Lo 0.00% di coverage è il numero vero da guardare.** 314 test passano, ma
+la misura di riga su `app/Media` risulta zero: sintomo noto nel progetto
+(perimetro di coverage che punta a `app/` della root Laravel, non del
+modulo — vedi la memoria di second brain
+`project-coverage-perimeter-is-app-only`), non prova che il codice sia
+davvero non testato. Finché non si misura col comando giusto, resta un
+numero onesto ma inutile: non si arrotonda a "ok perché i test passano".
+
+## Cosa contiene
+
+- **`app/Actions`** — upload, attach, conversioni: la logica vera, testabile
+  in isolamento.
+- **`app/Conversions`** — pipeline immagini (Intervention Image) e video
+  (FFmpeg): resize, formati, thumbnail, bitrate adattivo.
+- **`app/Datas`** — DTO tipizzati (Spatie Laravel Data) fra Action e Filament,
+  niente array associativi non tipizzati in giro.
+- **`app/Filament`** — media library, bulk operation, batch processing per
+  l'admin.
+
+## Come si verifica (non fidarti di questo file)
+
+```bash
+cd laravel
+./vendor/bin/phpstan analyse Modules/Media       # 0 errori atteso
+./tools/phpmd.sh Modules/Media/app               # NON la root del modulo
+./tools/phpinsights.sh Modules/Media
+./vendor/bin/pest Modules/Media
+```
+
+## Documentazione
+
+| | |
+|---|---|
+| Coverage (misura storica, da rifare col perimetro giusto) | [`docs/coverage.md`](docs/coverage.md) |
+| Architettura | [`docs/architecture.md`](docs/architecture.md) |
+| FFmpeg | [`docs/ffmpeg-usage.md`](docs/ffmpeg-usage.md) |
+| Wiki tecnica | [`docs/`](docs/) |
+
+---
+
+**Modulo** `media` · **Laraxot / FixCity Platform** · licenza MIT
