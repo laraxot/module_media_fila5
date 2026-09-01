@@ -7,26 +7,30 @@ use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
- * Migrazione per aggiungere colonne alla tabella temporary_uploads.
+ * Owner migration TemporaryUpload.
  *
- * Colonne aggiunte:
- * - user_id: UUID dell'utente che ha fatto l'upload
- * - file_name: nome del file
- * - file_size: dimensione in byte
- * - mime_type: tipo MIME del file
- * - status: stato dell'upload (uploading, completed, failed)
+ * tableCreate da storico 2023_01_01_000000; tableUpdate idempotente per DB già migrati.
  *
- * @see docs/database/migrations.md
+ * @see bashscripts/docs/prompts/09-migrations-forward-only.md
  */
 return new class extends XotBaseMigration
 {
     protected ?string $model_class = TemporaryUpload::class;
 
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
+        // -- CREATE --
+        $this->tableCreate(function (Blueprint $table): void {
+            $table->uuid('id')->primary();
+            $table->string('session_id');
+            $table->uuid('user_id')->nullable();
+            $table->string('file_name');
+            $table->integer('file_size')->nullable();
+            $table->string('mime_type')->nullable();
+            $table->string('status')->default('uploading');
+        });
+
+        // -- UPDATE --
         $this->tableUpdate(function (Blueprint $table): void {
             if (! $this->hasColumn('user_id')) {
                 $table->uuid('user_id')->nullable();
@@ -43,6 +47,11 @@ return new class extends XotBaseMigration
             if (! $this->hasColumn('status')) {
                 $table->string('status')->default('uploading');
             }
+
+            $this->updateTimestamps(
+                table: $table,
+                hasSoftDeletes: true,
+            );
         });
     }
 };
