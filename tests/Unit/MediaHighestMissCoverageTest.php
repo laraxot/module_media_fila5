@@ -35,7 +35,7 @@ use ReflectionMethod;
 use function Safe\file_put_contents;
 use function Safe\unlink;
 
-uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
+uses(TestCase::class)->group('no-media-db');
 
 /**
  * Invoca un metodo di configurazione tabellare del modulo e ne verifica il contratto.
@@ -77,11 +77,11 @@ describe('Media highest-miss coverage', function (): void {
     });
 
     test('list pages expose table columns and row actions', function (): void {
-        $mediaColumns = mediaTablePart(new ListMedia(), 'getTableColumns');
+        $mediaColumns = mediaTablePart(new ListMedia, 'getTableColumns');
         Assert::assertArrayHasKey('file_name', $mediaColumns);
-        Assert::assertArrayHasKey('view', mediaTablePart(new ListMedia(), 'getTableActions'));
+        Assert::assertArrayHasKey('view', mediaTablePart(new ListMedia, 'getTableActions'));
 
-        $convertColumns = mediaTablePart(new ListMediaConverts(), 'getTableColumns');
+        $convertColumns = mediaTablePart(new ListMediaConverts, 'getTableColumns');
         Assert::assertNotEmpty($convertColumns);
     });
 
@@ -103,7 +103,7 @@ describe('Media highest-miss coverage', function (): void {
     });
 
     test('models expose table fillable and in-memory accessors', function (): void {
-        $upload = new TemporaryUpload();
+        $upload = new TemporaryUpload;
         Assert::assertIsString($upload->getTable());
         TemporaryUpload::$disk = 'local';
         $disk = (new ReflectionClass($upload))->getMethod('getDiskName');
@@ -113,14 +113,14 @@ describe('Media highest-miss coverage', function (): void {
         config(['media-library.generate_thumbnails_for_temporary_uploads' => false]);
         $upload->registerMediaConversions();
 
-        $convert = new MediaConvert();
+        $convert = new MediaConvert;
         $convert->setRelation('media', null);
         Assert::assertContains('format', $convert->getFillable());
         Assert::assertNull($convert->disk);
         Assert::assertNull($convert->file);
         Assert::assertNull($convert->converted_file);
 
-        $media = new Media();
+        $media = new Media;
         Assert::assertIsString($media->getTable());
     });
 
@@ -176,7 +176,7 @@ XML;
 
     test('direct S3 upload request declares validation rules', function (): void {
         try {
-            $rules = (new CreateTemporaryUploadFromDirectS3UploadRequest())->rules();
+            $rules = (new CreateTemporaryUploadFromDirectS3UploadRequest)->rules();
             Assert::assertArrayHasKey('key', $rules);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());
@@ -254,7 +254,7 @@ XML;
     });
 
     test('Media model exposes relations and casts without database', function (): void {
-        $media = new Media();
+        $media = new Media;
         $media->id = 1;
         Assert::assertIsArray($media->getCasts());
         Assert::assertInstanceOf(BelongsTo::class, $media->temporaryUpload());
