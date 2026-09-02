@@ -29,7 +29,7 @@ abstract class HasMediaTestStub implements HasMedia
     }
 
     /**
-     * @return MorphMany<Media, \Illuminate\Database\Eloquent\Model>
+     * @return MorphMany<Media, Model>
      */
     public function media(): MorphMany
     {

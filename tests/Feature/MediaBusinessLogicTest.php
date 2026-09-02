@@ -16,7 +16,7 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
 use Modules\Xot\Tests\XotBasePest;
 
-uses(TestCase::class);
+uses(\Modules\Media\Tests\TestCase::class);
 
 describe('Media Business Logic', function () {
     beforeEach(function (): void {
@@ -335,13 +335,11 @@ describe('Media Business Logic', function () {
             'user_id' => $owner->id,
             'is_public' => false,
         ]);
+        $mediaUserId = $media->getAttribute('user_id');
 
-        expect($media->user_id)
-            ->toBe($owner->id)
-            ->and($media->getAttribute('is_public'))
-            ->toBeFalse()
-            ->and($media->user_id)
-            ->not->toBe($otherUser->id);
+        expect($mediaUserId)->toBe($owner->id);
+        expect($media->getAttribute('is_public'))->toBeFalse();
+        expect($mediaUserId)->not->toBe($otherUser->id);
     });
 
     it('can handle media deletion', function (): void {
