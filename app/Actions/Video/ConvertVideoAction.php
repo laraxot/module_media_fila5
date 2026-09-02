@@ -28,13 +28,13 @@ class ConvertVideoAction
 
         $exportedMedia = $openedMedia->export();
 
-        $format = new X264();
+        $format = new X264;
         $format->setKiloBitrate(1000);
 
         $exportedMedia->toDisk($disk_mp4);
         $exportedMedia->inFormat($format);
         $exportedMedia->save($file_new);
-        $format = new X264();
+        $format = new X264;
         $formattedMedia = MediaExporterResolver::from(
             $exportedMedia->toDisk($disk_mp4)
         )->inFormat($format);

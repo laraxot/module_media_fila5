@@ -24,7 +24,7 @@ use function Safe\mkdir;
 use function Safe\rmdir;
 use function Safe\unlink;
 
-uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
+uses(TestCase::class)->group('no-media-db');
 
 afterEach(function (): void {
     Mockery::close();
@@ -132,7 +132,7 @@ describe('Media coverage 100 — remaining sweep', function (): void {
 
     test('TemporaryUpload session disk accessors offline', function (): void {
         TemporaryUpload::$disk = 'local';
-        $upload = new TemporaryUpload();
+        $upload = new TemporaryUpload;
         $upload->forceFill([
             'session_id' => 'sess-1',
             'uuid' => 'uuid-1',
