@@ -9,11 +9,11 @@ use Modules\Media\Models\TemporaryUpload;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class)->group('no-media-db');
+uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-        Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload);
+        Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload());
     });
 
     it('uses HasXotFactory trait', function (): void {
@@ -35,13 +35,13 @@ describe('TemporaryUpload Model', function (): void {
     });
 
     it('has media connection', function (): void {
-        $upload = new TemporaryUpload;
+        $upload = new TemporaryUpload();
 
         expect($upload->getConnectionName())->toBe('media');
     });
 
     it('has empty guarded array', function (): void {
-        $upload = new TemporaryUpload;
+        $upload = new TemporaryUpload();
 
         expect($upload->getGuarded())->toBe([]);
     });
