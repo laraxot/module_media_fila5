@@ -6,15 +6,19 @@ namespace Modules\Media\Tests\Unit;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Media\Filament\Actions\AddAttachmentAction;
 use Modules\Media\Filament\Actions\Table\ConvertAction;
+use Modules\Media\Filament\Infolists\VideoEntry;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Http\Requests\CreateTemporaryUploadFromDirectS3UploadRequest;
 use Modules\Media\Models\Media;
@@ -23,6 +27,7 @@ use Modules\Media\Models\TemporaryUpload;
 use Modules\Media\Services\SubtitleService;
 use Modules\Media\Services\VideoStream;
 use Modules\Media\Tests\TestCase;
+use Modules\Media\View\Components\VideoPlayer;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionMethod;
@@ -30,7 +35,7 @@ use ReflectionMethod;
 use function Safe\file_put_contents;
 use function Safe\unlink;
 
-uses(TestCase::class)->group('no-media-db');
+uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
 
 /**
  * Invoca un metodo di configurazione tabellare del modulo e ne verifica il contratto.
@@ -55,17 +60,17 @@ function mediaTablePart(object $page, string $method): array
 }
 
 describe('Media highest-miss coverage', function (): void {
-    test('resources expose model pages and legacy form schema', function (): void {
+    test('resources expose model pages and form schema', function (): void {
         Assert::assertSame(Media::class, MediaResource::getModel());
         $mediaPages = MediaResource::getPages();
         Assert::assertArrayHasKey('index', $mediaPages);
         Assert::assertArrayHasKey('view', $mediaPages);
         Assert::assertArrayHasKey('convert', $mediaPages);
-        Assert::assertArrayHasKey('file', MediaResource::getFormSchemaOld());
+        Assert::assertArrayHasKey('file', MediaResource::getFormSchema());
 
         Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
         Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
-        Assert::assertArrayHasKey('format', MediaConvertResource::getFormSchemaOld());
+        Assert::assertArrayHasKey('format', MediaConvertResource::getFormSchema());
 
         Assert::assertSame(TemporaryUpload::class, TemporaryUploadResource::getModel());
         Assert::assertNotEmpty(TemporaryUploadResource::getPages());
@@ -90,7 +95,7 @@ describe('Media highest-miss coverage', function (): void {
 
         $owner = \Mockery::mock(Model::class);
         $livewire = \Mockery::mock(RelationManager::class);
-        $livewire->shouldReceive('getOwnerRecord')->andReturn($owner);
+        TestCase::mockExpectation($livewire, 'getOwnerRecord')->andReturn($owner);
         Assert::assertInstanceOf(RelationManager::class, $livewire);
         expect(function () use ($livewire): void {
             AddAttachmentAction::formHandlerCallback($livewire, ['file' => 'demo.txt']);
@@ -204,7 +209,7 @@ XML;
         Assert::assertStringContainsString('hello', $service->getContent());
 
         $model = \Mockery::mock(Model::class);
-        $model->shouldReceive('update')->once()->andReturnSelf();
+        TestCase::mockExpectation($model, 'update')->once()->andReturnSelf();
         Assert::assertInstanceOf(Model::class, $model);
         $service->setModel($model);
         Assert::assertSame($model, $service->getModel());
@@ -215,7 +220,7 @@ XML;
     });
 
     test('ViewMedia infolist schema and convert command missing file', function (): void {
-        $page = (new ReflectionClass(\Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia::class))->newInstanceWithoutConstructor();
+        $page = (new ReflectionClass(ViewMedia::class))->newInstanceWithoutConstructor();
         Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
 
         Storage::fake('local');
@@ -223,13 +228,13 @@ XML;
     });
 
     test('VideoPlayer instantiates with explicit driver', function (): void {
-        $player = new \Modules\Media\View\Components\VideoPlayer('clip.mp4', 0, 'html5');
+        $player = new VideoPlayer('clip.mp4', 0, 'html5');
         Assert::assertSame('html5', $player->driver);
     });
 
     test('VideoEntry fluent API and Media conversion urls', function (): void {
         Storage::fake('public');
-        $entry = \Modules\Media\Filament\Infolists\VideoEntry::make('video')
+        $entry = VideoEntry::make('video')
             ->disk('public')
             ->height(120)
             ->width(240)
@@ -249,10 +254,10 @@ XML;
     });
 
     test('Media model exposes relations and casts without database', function (): void {
-        $media = new \Modules\Media\Models\Media();
+        $media = new Media();
         $media->id = 1;
         Assert::assertIsArray($media->getCasts());
-        Assert::assertInstanceOf(\Illuminate\Database\Eloquent\Relations\BelongsTo::class, $media->temporaryUpload());
-        Assert::assertInstanceOf(\Illuminate\Database\Eloquent\Relations\HasMany::class, $media->mediaConverts());
+        Assert::assertInstanceOf(BelongsTo::class, $media->temporaryUpload());
+        Assert::assertInstanceOf(HasMany::class, $media->mediaConverts());
     });
 });

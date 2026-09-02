@@ -15,7 +15,7 @@ use Modules\Media\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class)->group('no-media-db');
+uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
 
 /**
  * @param  list<string>  $permissions
@@ -26,9 +26,9 @@ function mediaBehaviorUser(array $permissions = [], array $roles = []): UserCont
 {
     /** @var Mockery\MockInterface&UserContract $user */
     $user = Mockery::mock(UserContract::class);
-    $user->shouldReceive('hasPermissionTo')
+    TestCase::mockExpectation($user, 'hasPermissionTo')
         ->andReturnUsing(static fn (string $permission): bool => in_array($permission, $permissions, true));
-    $user->shouldReceive('hasRole')
+    TestCase::mockExpectation($user, 'hasRole')
         ->andReturnUsing(static function (array|string $richiesti) use ($roles): bool {
             /** @var list<string> $normalizzati */
             $normalizzati = is_array($richiesti) ? $richiesti : [$richiesti];
