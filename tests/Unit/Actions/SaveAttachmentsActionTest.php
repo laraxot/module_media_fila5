@@ -7,14 +7,14 @@ namespace Modules\Media\Tests\Unit\Actions;
 use Exception;
 use Illuminate\Support\Facades\Storage;
 use Mockery;
+use Mockery\MockInterface;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
-use PHPUnit\Framework\MockObject\MockObject;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 
-uses(TestCase::class)->group('no-media-db');
+uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
 
 beforeEach(function (): void {
     Storage::fake('attachments');
@@ -25,9 +25,9 @@ afterEach(function (): void {
 });
 
 it('executes save attachments successfully', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
-    /** @var \Mockery\MockInterface&HasMedia $record */
+    /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
 
     $media = $this->makeTestMock(Media::class);
@@ -56,9 +56,9 @@ it('executes save attachments successfully', function (): void {
 });
 
 it('handles empty attachments', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
-    /** @var \Mockery\MockInterface&HasMedia $record */
+    /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
     $record->shouldReceive('update')->never();
 
@@ -66,9 +66,9 @@ it('handles empty attachments', function (): void {
 });
 
 it('skips nonexistent files', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
-    /** @var \Mockery\MockInterface&HasMedia $record */
+    /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
     $record->shouldReceive('update')->never();
 
@@ -81,9 +81,9 @@ it('skips nonexistent files', function (): void {
 });
 
 it('handles storage errors gracefully', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
-    /** @var \Mockery\MockInterface&HasMedia $record */
+    /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
     $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
 
@@ -99,9 +99,9 @@ it('handles storage errors gracefully', function (): void {
 });
 
 it('uses correct disk', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
-    /** @var \Mockery\MockInterface&HasMedia $record */
+    /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
 
     $media = $this->makeTestMock(Media::class);
@@ -128,9 +128,9 @@ it('uses correct disk', function (): void {
 });
 
 it('cleans up temp files', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
-    /** @var \Mockery\MockInterface&HasMedia $record */
+    /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
 
     $media = $this->makeTestMock(Media::class);
@@ -154,9 +154,9 @@ it('cleans up temp files', function (): void {
 });
 
 it('handles multiple attachments', function (): void {
-    $action = new SaveAttachmentsAction;
+    $action = new SaveAttachmentsAction();
 
-    /** @var \Mockery\MockInterface&HasMedia $record */
+    /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
 
     $media = $this->makeTestMock(Media::class);

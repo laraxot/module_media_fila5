@@ -9,12 +9,12 @@ use Modules\Media\Models\BaseModel;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class)->group('no-media-db');
+uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
 
 if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     function makeMediaTestBaseModel(): BaseModel
     {
-        return new class extends BaseModel
+        return new class() extends BaseModel
         {
             protected $table = 'test_media_table';
         };
