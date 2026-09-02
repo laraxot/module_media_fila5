@@ -1,6 +1,6 @@
 # 🎞️ Media — l'unico posto dove un file smette di essere un problema
 
-[![PHP](https://img.shields.io/badge/PHP-%5E8.2-777BB4.svg)](composer.json)
+[![PHP](https://img.shields.io/badge/PHP-%5E8.3-777BB4.svg)](composer.json)
 [![Laravel](https://img.shields.io/badge/Laravel-13.30-FF2D20.svg)](../../composer.lock)
 [![Filament](https://img.shields.io/badge/Filament-5.7-FDAB3D.svg)](../../composer.lock)
 [![PHPStan](https://img.shields.io/badge/PHPStan-0%20errori-brightgreen.svg)](../../phpstan.neon)
@@ -14,6 +14,25 @@
 I badge sopra sono misurati, non incollati: `phpstan analyse Modules/Media`,
 l'1 settembre 2026, a tree fermo (dato di `base-ptvx-fila5-80`, riproducibile
 con `cd laravel && ./vendor/bin/phpstan analyse Modules/Media`).
+
+---
+
+## Scopo e confini
+
+Media custodisce il **percorso di un file**, dall'upload temporaneo alla consegna: dove si
+posa, in quale formato si converte, con quale URL si serve. È l'unico dei tre servizi
+trasversali che possiede uno schema, e lo possiede bene: 3 modelli, 3 migrazioni, una per
+modello, tutte sulla connection `media`. Sette moduli lo consumano, quasi sempre per
+composizione (`InteractsWithMedia`, `SpatieMediaLibraryFileUpload`) più che per import.
+
+Il confine da non superare: **Media non sa cosa trasporta.** Allegato di scheda, avatar e
+video di formazione sono lo stesso oggetto polimorfico; chi può vederli lo decide il
+modulo proprietario del `model_type`. Da guardare oggi: `Storage::disk('public_html')` in
+`GetVideoFrameContentAction:47` punta a un disco non dichiarato in `filesystems.php` (il
+fallback dell'errore è l'errore), `SubtitleService` esiste identico in `app/Services/` e
+`app/Actions/Stream/`, e 21 delle 49 Action sono diagnostica AWS.
+
+Scopo esteso, misure e mosse: [docs/scopo.md](docs/scopo.md).
 
 ---
 
@@ -124,3 +143,10 @@ cd laravel
 ---
 
 **Modulo** `media` · **Laraxot / FixCity Platform** · licenza MIT
+
+---
+
+## Scopo del modulo
+
+Perche' esiste, come raggiungere meglio il suo scopo e cosa **non** gli appartiene:
+[`docs/purpose.md`](./docs/purpose.md).
