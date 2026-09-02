@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use Mockery;
+use Mockery\Expectation;
 use Mockery\MockInterface;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
@@ -258,6 +259,17 @@ abstract class TestCase extends XotBaseTestCase
         $mock = Mockery::mock(HasMedia::class);
 
         return $mock;
+    }
+
+    public static function mockExpectation(MockInterface $mock, string $method): Expectation
+    {
+        $mock->shouldReceive($method);
+        $director = $mock->mockery_getExpectationsFor($method);
+        Assert::assertNotNull($director);
+        $expectation = $director->getExpectations()[0] ?? null;
+        Assert::assertInstanceOf(Expectation::class, $expectation);
+
+        return $expectation;
     }
 
     /**
