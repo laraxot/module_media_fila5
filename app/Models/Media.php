@@ -8,11 +8,12 @@ use Eloquent;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
+use Modules\Media\Database\Factories\MediaFactory;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Datas\XotData;
@@ -95,12 +96,9 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
-<<<<<<< .merge_file_7JXa8b
-    /** @use HasXotFactory<Media> */
-=======
-    /** @use HasXotFactory<\Modules\Media\Database\Factories\MediaFactory> */
->>>>>>> .merge_file_26hNKa
+    /** @phpstan-ignore generics.notGeneric */
     use HasXotFactory;
+
     use Updater;
 
     /** @var string */

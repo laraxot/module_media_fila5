@@ -11,7 +11,7 @@ use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class);
 
 /**
  * @param  array<string, mixed>  $attributes
@@ -344,7 +344,7 @@ describe('Media model (database)', function (): void {
 });
 
 it('media has casts', function (): void {
-    $media = new Media();
+    $media = new Media;
 
     $expectedCasts = [
         'id' => 'integer',

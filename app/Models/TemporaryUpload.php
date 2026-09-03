@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
+use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;
@@ -69,13 +70,11 @@ use Webmozart\Assert\Assert;
 class TemporaryUpload extends BaseModel implements HasMedia
 {
     use HasUuids;
-<<<<<<< .merge_file_mL4NOY
 
-    /** @use HasXotFactory<TemporaryUpload> */
-=======
-    /** @use HasXotFactory<\Modules\Media\Database\Factories\TemporaryUploadFactory> */
->>>>>>> .merge_file_1rrtVX
+    /** @phpstan-ignore generics.notGeneric */
+    /** @phpstan-ignore generics.notGeneric */
     use HasXotFactory;
+
     use InteractsWithMedia;
     use MassPrunable;
 

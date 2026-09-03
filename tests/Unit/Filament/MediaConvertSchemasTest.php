@@ -25,7 +25,7 @@ use PHPUnit\Framework\Assert;
  * proposito, sono l'unico punto che tocca il database.
  */
 
-uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
+uses(TestCase::class)->group('no-media-db');
 
 test('the form exposes one component per conversion parameter', function (): void {
     $schema = MediaConvertForm::getFormSchema();
@@ -65,7 +65,7 @@ test('the video codec offers both vp9 and vp8', function (): void {
 });
 
 test('the table lists the identifier and both timestamps', function (): void {
-    $columns = (new MediaConvertsTable())->getTableColumns();
+    $columns = (new MediaConvertsTable)->getTableColumns();
 
     Assert::assertSame(['id', 'created_at', 'updated_at'], array_keys($columns));
 
@@ -76,7 +76,10 @@ test('the table lists the identifier and both timestamps', function (): void {
 });
 
 test('the table offers view, edit and convert row actions', function (): void {
-    $actions = (new MediaConvertsTable())->getTableActions();
+    // Reflection: il contratto sotto test e' quello del modulo, non il prototipo
+    // deprecato ereditato da HasXotTable (`@deprecated override the table() method`).
+    $actions = (new \ReflectionMethod(MediaConvertsTable::class, 'getTableActions'))->invoke(new MediaConvertsTable);
+    Assert::assertIsArray($actions);
 
     Assert::assertCount(3, $actions);
     Assert::assertArrayHasKey('view', $actions);
@@ -89,7 +92,7 @@ test('the table offers view, edit and convert row actions', function (): void {
 });
 
 test('the table exposes bulk actions keyed by name', function (): void {
-    $bulk = (new MediaConvertsTable())->getTableBulkActions();
+    $bulk = (new MediaConvertsTable)->getTableBulkActions();
 
     Assert::assertNotSame([], $bulk);
     Assert::assertArrayHasKey('delete', $bulk);
