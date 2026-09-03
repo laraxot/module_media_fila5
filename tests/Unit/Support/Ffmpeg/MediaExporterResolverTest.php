@@ -10,7 +10,7 @@ use PHPUnit\Framework\Assert;
 use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use RuntimeException;
 
-uses(\Modules\Media\Tests\TestCase::class)->group('no-media-db');
+uses(TestCase::class)->group('no-media-db');
 
 describe('MediaExporterResolver', function (): void {
     it('returns the value unchanged when it is already a MediaExporter', function (): void {
@@ -30,7 +30,7 @@ describe('MediaExporterResolver', function (): void {
 
     it('names the received type in the error message for an object', function (): void {
         try {
-            MediaExporterResolver::from(new \stdClass());
+            MediaExporterResolver::from(new \stdClass);
             Assert::fail('Expected RuntimeException was not thrown.');
         } catch (RuntimeException $exception) {
             Assert::assertStringContainsString('stdClass', $exception->getMessage());
