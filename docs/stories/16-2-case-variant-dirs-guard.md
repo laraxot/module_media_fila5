@@ -6,7 +6,7 @@ description: "Due directory sorelle che differiscono solo per case producono cla
 document_type: story
 category: bmad
 scope: module:Media
-status: ready-for-dev
+status: review
 version: 1.0.0
 language: it-IT
 ecosystem: Laraxot
@@ -63,27 +63,40 @@ laravel/Modules/Media/tests/feature
 
 ### Parte 1 — il guard
 
-- [ ] Esiste `bashscripts/tools/check-case-variant-dirs.sh`
-- [ ] Cerca sotto `laravel/Modules` e `laravel/Themes` le directory sorelle
+- [x] Esiste `bashscripts/tools/check-case-variant-dirs.sh`
+- [x] Cerca sotto `laravel/Modules` e `laravel/Themes` le directory sorelle
       (stesso genitore) i cui nomi coincidono a meno del case
-- [ ] Esce con codice diverso da zero elencando **ogni** coppia trovata, con
+- [x] Esce con codice diverso da zero elencando **ogni** coppia trovata, con
       path completo di entrambe
-- [ ] Esclude `vendor`, `node_modules`, `.git`
-- [ ] Segue le convenzioni degli altri guard in `bashscripts/tools/`
+- [x] Esclude `vendor`, `node_modules`, `.git`
+- [x] Segue le convenzioni degli altri guard in `bashscripts/tools/`
       (`set -uo pipefail`, `cd` relativo a `BASH_SOURCE`, commento iniziale con
       motivazione e riferimento alla regola canonica)
-- [ ] E' invocato dal workflow della Story 16.1
+- [ ] E' invocato dal workflow della Story 16.1 — **non fatto**: nessuna
+      Story 16.1 trovata sotto `Modules/Media/docs/stories/`, nessun workflow
+      GitHub Actions esistente da modificare in questa sessione. Il guard
+      esiste e funziona standalone (`bash bashscripts/tools/check-case-variant-dirs.sh`),
+      il wiring in CI resta un follow-up separato.
 
 ### Parte 2 — la bonifica
 
-- [ ] `Modules/Media/tests/feature` e `Modules/Media/tests/Feature` sono
-      consolidate in una sola directory
-- [ ] Il consolidamento **confronta file per file prima di unire**: le coppie
+- [x] `Modules/Media/tests/feature` e `Modules/Media/tests/Feature` sono
+      consolidate in una sola directory (rimossa `tests/feature/`, confermata
+      superata dal confronto riga per riga con `tests/Feature/`: usa funzioni
+      helper inesistenti — `assertMediaTableHas`, `mediaTableColumns`,
+      `mediaPayloadSet` — che PHPStan segnalava come `function.notFound`;
+      `Feature/` le sostituisce con `XotBasePest::assertTableHas()` /
+      `TestCase::mediaTableColumns()`, gia' corrette)
+- [x] Il consolidamento **confronta file per file prima di unire**: le coppie
       omonime possono essere divergenti, non si assume che una sia copia
-      dell'altra
-- [ ] `./vendor/bin/phpstan analyse` resta `[OK] No errors`
-- [ ] Il numero di file analizzati **non cala oltre i file effettivamente
-      rimossi**: il conteggio va annotato prima e dopo
+      dell'altra — diff completo eseguito, nessun contenuto unico perso
+- [x] `./vendor/bin/phpstan analyse` resta `[OK] No errors` (confermato
+      2026-09-03, dopo aver risolto anche gli altri 6 errori trovati nello
+      stesso giro: 2 ignore stale in `Media.php`/`TemporaryUpload.php`, 4 in
+      `Modules/User/app/View/Pages/ProfileEditVoltComponent.php` — vedi nota)
+- [x] Il numero di file analizzati **non cala oltre i file effettivamente
+      rimossi**: 8627 -> 8626, esattamente -1 (il solo `MediaBusinessLogicTest.php`
+      duplicato; `.gitkeep` non e' analizzato)
 
 ## Il controllo che conta davvero
 
@@ -109,6 +122,19 @@ modificato il 2026-08-06 (sostituzione dei cast `(int)` con
 `SafeIntCastAction::cast()`). Se `Feature/` contiene un omonimo, e' quasi
 certo che sia la versione **vecchia**: il confronto va fatto sul contenuto,
 non sulla data.
+
+## Trovato dal guard, fuori scope di questa story
+
+Il guard, eseguito la prima volta sul monorepo intero (2026-09-03), ha trovato
+**26 altre coppie** di directory case-variant oltre a quella di questa story —
+incluso `Modules/Media/tests/Fixtures` / `tests/fixtures` (menzionata nel
+titolo ma non nelle AC, quindi non toccata qui) e coppie potenzialmente piu'
+gravi come `Modules/Cms/app/Config` / `app/config`, `Modules/Job/app/entities`
+/ `app/Entities`, `Modules/Xot/resources/views/components` / `Components`.
+Nessuna toccata in questa story (scope: solo `Media/tests/Feature`+`feature`).
+Elenco completo riproducibile con `bash bashscripts/tools/check-case-variant-dirs.sh`
+(exit 1, stampa ogni coppia) — da aprire come story separata per modulo,
+verificando ciascuna col confronto file-per-file come qui, non assumendo.
 
 ## Regola canonica
 
