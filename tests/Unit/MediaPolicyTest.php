@@ -26,11 +26,11 @@ function mediaFakeUser(array $permissions = [], array $roles = []): UserContract
 {
     /** @var Mockery\MockInterface&UserContract $user */
     $user = Mockery::mock(UserContract::class);
-    $user->shouldReceive('hasPermissionTo')
+    TestCase::mockExpectation($user, 'hasPermissionTo')
         ->andReturnUsing(static function (string $permission) use ($permissions): bool {
             return in_array($permission, $permissions, true);
         });
-    $user->shouldReceive('hasRole')
+    TestCase::mockExpectation($user, 'hasRole')
         ->andReturnUsing(static function (array|string $richiesti) use ($roles): bool {
             /** @var list<string> $normalizzati */
             $normalizzati = is_array($richiesti) ? $richiesti : [$richiesti];

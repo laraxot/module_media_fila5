@@ -1,23 +1,5 @@
 # Media Module Documentation
 
-# Indice della Documentazione - Modulo Media
-
-**Last Update**: Feb 2026
-**Status**: Active Development
-
-## Quick Start
-
-## Funzionalità Principali
-- **Gestione File Multi-formato**: Supporto per immagini, video, documenti e audio
-- **Upload Avanzato**: Funzionalità di drag-and-drop e upload multiplo
-- **Ottimizzazione Media**: Compressione e ottimizzazione automatica dei file
-- **Conversione Video**: Sistema di conversione video con supporto per diversi formati
-- **Streaming Video**: Funzionalità di streaming video ottimizzata
-- **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
-- **Integrazione CDN**: Supporto per Content Delivery Network
-- **Watermark Automatico**: Applicazione automatica di watermark sui media
-# Media Module Documentation
-
 **Last Update**: Feb 2026
 **Status**: Active Development
 
@@ -174,3 +156,14 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
+---
+
+<!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
+
+# Documentation Index
+
+Modulo: Media
+
+## File disponibili
+
+<!-- auto-generato: elencare i file .md presenti -->

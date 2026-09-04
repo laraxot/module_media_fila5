@@ -33,7 +33,7 @@ class GetAttachmentsSchemaAction
                 ->downloadable(true)
                 ->reorderable(false)
                 ->multiple(false)
-                ->afterStateUpdated(function ($state, Set $set) use ($attachment): void {
+                ->afterStateUpdated(function (mixed $state, Set $set) use ($attachment): void {
                     if (! $state) {
                         return;
                     }
