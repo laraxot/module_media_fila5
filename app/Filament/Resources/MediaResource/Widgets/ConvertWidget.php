@@ -28,9 +28,16 @@ class ConvertWidget extends XotBaseWidget
 
     public float $rate = 0.0;
 
-    protected string $view = 'media::filament.widgets.convert';
-
     protected static string $resource = MediaResource::class;
+
+    public function __construct()
+    {
+        /** @var view-string $viewPath */
+        $viewPath = 'media::filament.widgets.convert';
+        $this->view = $viewPath;
+
+        parent::__construct();
+    }
 
     public function getFormSchema(): array
     {

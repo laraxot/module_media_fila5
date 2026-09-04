@@ -85,7 +85,7 @@ class MediaTable extends XotBaseResourceTable
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
-                ->url(function (mixed $record): string {
+                ->url(static function (Media $record): string {
                     Assert::string($res = MediaResource::getUrl('convert', ['record' => $record]));
 
                     return $res;

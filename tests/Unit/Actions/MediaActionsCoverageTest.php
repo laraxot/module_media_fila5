@@ -19,17 +19,15 @@ use Modules\Media\Actions\Video\GetVideoDurationAction;
 use Modules\Media\Actions\Video\GetVideoFrameContentAction;
 use Modules\Media\Actions\Video\GetVideoScreenshotAction;
 use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 describe('Media Actions Coverage', function () {
     describe('Image Merge Action', function () {
         it('can be instantiated', function (): void {
-            // `new ImageMerge()` restituisce per costruzione un ImageMerge: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(ImageMerge::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(ImageMerge::class, new ImageMerge);
         });
 
         it('has handle method', function (): void {
@@ -41,26 +39,21 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(ImageMerge::class);
+            TestCase::assertMediaUsesQueueableAction(ImageMerge::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(ImageMerge::class);
+            TestCase::assertMediaDeclaresStrictTypes(ImageMerge::class);
         });
     });
 
     describe('SvgExistsAction', function () {
         it('can be instantiated', function (): void {
-            // `new SvgExistsAction()` restituisce per costruzione un SvgExistsAction: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(SvgExistsAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(SvgExistsAction::class, new SvgExistsAction);
         });
 
         it('can be resolved from container', function (): void {
-            // Il fatto che conta e' che il container sappia costruirla senza
-            // sollevare: il tipo di ritorno di `app()` e' gia' noto staticamente.
-            expect(static fn (): SvgExistsAction => app(SvgExistsAction::class))->not->toThrow(\Throwable::class);
+            Assert::assertInstanceOf(SvgExistsAction::class, app(SvgExistsAction::class));
         });
 
         it('has execute method', function (): void {
@@ -68,22 +61,17 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(SvgExistsAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(SvgExistsAction::class);
         });
     });
 
     describe('ConvertVideoAction', function () {
         it('can be instantiated', function (): void {
-            // `new ConvertVideoAction()` restituisce per costruzione un ConvertVideoAction: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(ConvertVideoAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(ConvertVideoAction::class, new ConvertVideoAction);
         });
 
         it('can be resolved from container', function (): void {
-            // Il fatto che conta e' che il container sappia costruirla senza
-            // sollevare: il tipo di ritorno di `app()` e' gia' noto staticamente.
-            expect(static fn (): ConvertVideoAction => app(ConvertVideoAction::class))->not->toThrow(\Throwable::class);
+            Assert::assertInstanceOf(ConvertVideoAction::class, app(ConvertVideoAction::class));
         });
 
         it('has execute method', function (): void {
@@ -91,20 +79,17 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(ConvertVideoAction::class);
+            TestCase::assertMediaUsesQueueableAction(ConvertVideoAction::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(ConvertVideoAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(ConvertVideoAction::class);
         });
     });
 
     describe('ConvertVideoByConvertDataAction', function () {
         it('can be instantiated', function (): void {
-            // `new ConvertVideoByConvertDataAction()` restituisce per costruzione un ConvertVideoByConvertDataAction: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(ConvertVideoByConvertDataAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(ConvertVideoByConvertDataAction::class, new ConvertVideoByConvertDataAction);
         });
 
         it('has execute method', function (): void {
@@ -112,20 +97,17 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(ConvertVideoByConvertDataAction::class);
+            TestCase::assertMediaUsesQueueableAction(ConvertVideoByConvertDataAction::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(ConvertVideoByConvertDataAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(ConvertVideoByConvertDataAction::class);
         });
     });
 
     describe('ConvertVideoByMediaConvertAction', function () {
         it('can be instantiated', function (): void {
-            // `new ConvertVideoByMediaConvertAction()` restituisce per costruzione un ConvertVideoByMediaConvertAction: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(ConvertVideoByMediaConvertAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(ConvertVideoByMediaConvertAction::class, new ConvertVideoByMediaConvertAction);
         });
 
         it('has execute method', function (): void {
@@ -133,20 +115,17 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(ConvertVideoByMediaConvertAction::class);
+            TestCase::assertMediaUsesQueueableAction(ConvertVideoByMediaConvertAction::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(ConvertVideoByMediaConvertAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(ConvertVideoByMediaConvertAction::class);
         });
     });
 
     describe('GetVideoScreenshotAction', function () {
         it('can be instantiated', function (): void {
-            // `new GetVideoScreenshotAction()` restituisce per costruzione un GetVideoScreenshotAction: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(GetVideoScreenshotAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(GetVideoScreenshotAction::class, new GetVideoScreenshotAction);
         });
 
         it('has backoff property', function (): void {
@@ -154,20 +133,17 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(GetVideoScreenshotAction::class);
+            TestCase::assertMediaUsesQueueableAction(GetVideoScreenshotAction::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(GetVideoScreenshotAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(GetVideoScreenshotAction::class);
         });
     });
 
     describe('GetVideoFrameContentAction', function () {
         it('can be instantiated', function (): void {
-            // `new GetVideoFrameContentAction()` restituisce per costruzione un GetVideoFrameContentAction: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(GetVideoFrameContentAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(GetVideoFrameContentAction::class, new GetVideoFrameContentAction);
         });
 
         it('has execute method', function (): void {
@@ -175,20 +151,17 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(GetVideoFrameContentAction::class);
+            TestCase::assertMediaUsesQueueableAction(GetVideoFrameContentAction::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(GetVideoFrameContentAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(GetVideoFrameContentAction::class);
         });
     });
 
     describe('GetVideoDurationAction', function () {
         it('can be instantiated', function (): void {
-            // `new GetVideoDurationAction()` restituisce per costruzione un GetVideoDurationAction: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(GetVideoDurationAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(GetVideoDurationAction::class, new GetVideoDurationAction);
         });
 
         it('has execute method', function (): void {
@@ -196,11 +169,11 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(GetVideoDurationAction::class);
+            TestCase::assertMediaUsesQueueableAction(GetVideoDurationAction::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(GetVideoDurationAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(GetVideoDurationAction::class);
         });
     });
 
@@ -214,7 +187,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(UploadFileAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(UploadFileAction::class);
         });
     });
 
@@ -228,7 +201,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(DeleteFileAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(DeleteFileAction::class);
         });
     });
 
@@ -242,7 +215,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(GetFileInfoAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(GetFileInfoAction::class);
         });
     });
 
@@ -256,7 +229,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(CheckFileExistsAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(CheckFileExistsAction::class);
         });
     });
 
@@ -266,11 +239,11 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(BaseS3Action::class);
+            TestCase::assertMediaUsesQueueableAction(BaseS3Action::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(BaseS3Action::class);
+            TestCase::assertMediaDeclaresStrictTypes(BaseS3Action::class);
         });
 
         it('has s3Client property', function (): void {
@@ -288,10 +261,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetCloudFrontSignedUrlAction', function () {
         it('can be instantiated', function (): void {
-            // `new GetCloudFrontSignedUrlAction()` restituisce per costruzione un GetCloudFrontSignedUrlAction: cio' che il test
-            // puo' verificare e' che il costruttore non abbia parametri obbligatori.
-            expect((new ReflectionClass(GetCloudFrontSignedUrlAction::class))->getConstructor()?->getNumberOfRequiredParameters() ?? 0)
-                ->toBe(0);
+            Assert::assertInstanceOf(GetCloudFrontSignedUrlAction::class, new GetCloudFrontSignedUrlAction);
         });
 
         it('has execute method', function (): void {
@@ -299,11 +269,11 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            assertMediaUsesQueueableAction(GetCloudFrontSignedUrlAction::class);
+            TestCase::assertMediaUsesQueueableAction(GetCloudFrontSignedUrlAction::class);
         });
 
         it('uses strict types', function (): void {
-            assertMediaDeclaresStrictTypes(GetCloudFrontSignedUrlAction::class);
+            TestCase::assertMediaDeclaresStrictTypes(GetCloudFrontSignedUrlAction::class);
         });
     });
 });

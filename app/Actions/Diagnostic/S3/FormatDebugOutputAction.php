@@ -24,6 +24,9 @@ class FormatDebugOutputAction
 
         $output = [];
         foreach ($debugResults as $result) {
+            if (! is_array($result)) {
+                continue;
+            }
             $block = $this->formatResultBlock($result);
             if ($block !== []) {
                 array_push($output, ...$block);
@@ -34,11 +37,12 @@ class FormatDebugOutputAction
     }
 
     /**
+     * @param  array<int|string, mixed>  $result
      * @return list<string>
      */
-    private function formatResultBlock(mixed $result): array
+    private function formatResultBlock(array $result): array
     {
-        if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
+        if (! isset($result['title'], $result['status'], $result['data'])) {
             return [];
         }
 
@@ -60,7 +64,7 @@ class FormatDebugOutputAction
     }
 
     /**
-     * @param  array<mixed, mixed>  $data
+     * @param  array<int|string, mixed>  $data
      * @return list<string>
      */
     private function formatDataLines(array $data): array

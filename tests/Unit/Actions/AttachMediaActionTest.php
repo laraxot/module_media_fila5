@@ -10,14 +10,11 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 describe('AttachMediaAction', function () {
-    // Prima c'erano tre test per lo stesso fatto e nessuno lo verificava:
-    // `trait_exists()` guarda il vendor, non l'action; `toBeInstanceOf` e
-    // `not()->toBeNull()` su `new AttachMediaAction()` sono veri per costruzione.
     it('uses QueueableAction trait', function (): void {
-        expect(class_uses(AttachMediaAction::class))
-            ->toHaveKey(QueueableAction::class);
+        expect(trait_exists(QueueableAction::class))->toBeTrue();
+        expect(class_uses(AttachMediaAction::class))->toContain(QueueableAction::class);
     });
 });

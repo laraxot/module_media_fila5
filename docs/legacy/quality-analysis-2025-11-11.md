@@ -207,5 +207,3 @@ The **Media module** is in **excellent condition** with PHPStan Level 10 complia
 
 **Documentation**: Comprehensive (63 docs files)
 **Test Coverage**: Integration tests available
-
-See canonical documentation: ../../../../Themes/docs/shared-components/quality-analysis-.md

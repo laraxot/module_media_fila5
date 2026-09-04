@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Filament;
 
-use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Filament\Tables\Columns\CloudFrontIconMediaColumn;
 use Modules\Media\Filament\Tables\Columns\IconMediaColumn;
+use Modules\Media\Tests\Fixtures\MediaColumnFileStub;
+use Modules\Media\Tests\Fixtures\MediaColumnPlainRecordStub;
+use Modules\Media\Tests\Fixtures\MediaColumnRecordStub;
 use Modules\Media\Tests\TestCase;
 use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn;
 use PHPUnit\Framework\Assert;
@@ -14,7 +16,7 @@ use PHPUnit\Framework\Assert;
 /*
  * Le due colonne icona degli allegati. `setUp()` di Filament registra closure per
  * default/color/tooltip: qui si verificano su record finti, senza toccare il
- * database — un record che non espone `getFirstMedia()` deve degradare, non
+ * database - un record che non espone `getFirstMedia()` deve degradare, non
  * esplodere.
  *
  * NB (ridondanza): IconMediaColumn e CloudFrontIconMediaColumn condividono
@@ -25,49 +27,6 @@ use PHPUnit\Framework\Assert;
  * I doppi sono classi nominate e non anonime: PDepend, e quindi PHPMD, non sa
  * visitare una classe anonima dichiarata dentro una funzione ed esce in errore.
  */
-
-/**
- * Record con capacita' media. Non viene mai salvato ne' interrogato.
- */
-class MediaColumnRecordStub extends Model
-{
-    public ?object $fakeMedia = null;
-
-    /**
-     * La firma replica quella di Spatie: le closure della colonna passano il nome
-     * della collection, questo doppio restituisce sempre lo stesso media.
-     */
-    public function getFirstMedia(string $collection = 'default'): ?object
-    {
-        unset($collection);
-
-        return $this->fakeMedia;
-    }
-}
-
-/**
- * Record privo di capacita' media, per il ramo di degrado.
- */
-class MediaColumnPlainRecordStub extends Model {}
-
-/**
- * Media finto: alla colonna serve solo `file_name`.
- */
-class MediaColumnFileStub
-{
-    /**
-     * Il nome della proprieta' e' imposto da Spatie: le closure della colonna
-     * leggono `$media->file_name`. Non e' camelCase e non puo' esserlo.
-     *
-     * @SuppressWarnings("PHPMD.CamelCasePropertyName")
-     */
-    public string $file_name;
-
-    public function __construct(string $fileName)
-    {
-        $this->file_name = $fileName;
-    }
-}
 
 uses(TestCase::class)->group('no-media-db');
 
