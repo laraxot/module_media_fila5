@@ -96,7 +96,7 @@ class ListMedia extends XotBaseListRecords
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
-                ->url(function (mixed $record): string {
+                ->url(static function (mixed $record): string {
                     Assert::string($res = static::$resource::getUrl('convert', ['record' => $record]));
 
                     return $res;

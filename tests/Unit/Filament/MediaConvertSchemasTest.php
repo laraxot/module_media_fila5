@@ -76,7 +76,10 @@ test('the table lists the identifier and both timestamps', function (): void {
 });
 
 test('the table offers view, edit and convert row actions', function (): void {
-    $actions = (new MediaConvertsTable)->getTableActions(); // @phpstan-ignore method.deprecated (hook di progetto: la deprecazione e ereditata per nome dal prototipo Filament 5, il codice eseguito e il nostro — story 16.12)
+    // Reflection: il contratto sotto test e' quello del modulo, non il prototipo
+    // deprecato ereditato da HasXotTable (`@deprecated override the table() method`).
+    $actions = (new \ReflectionMethod(MediaConvertsTable::class, 'getTableActions'))->invoke(new MediaConvertsTable);
+    Assert::assertIsArray($actions);
 
     Assert::assertCount(3, $actions);
     Assert::assertArrayHasKey('view', $actions);
