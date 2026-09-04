@@ -7,12 +7,13 @@ namespace Modules\Media\Tests\Unit\Models;
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-        expect((new \ReflectionClass(TemporaryUpload::class))->isSubclassOf(BaseModel::class))->toBeTrue();
+        Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload);
     });
 
     it('uses HasXotFactory trait', function (): void {

@@ -23,7 +23,7 @@ class MediaConvertResource extends XotBaseResource
      *
      * @return array<string, Component>
      */
-    public static function getFormSchemaOld(): array
+    public static function getFormSchema(): array
     {
         return [
             'format' => Radio::make('format')

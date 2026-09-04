@@ -260,9 +260,6 @@ private function getSolutionForError(?string $errorCode): string
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 - [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)
 
-module: theme
-topic: s3test_corrections
-canonical: ../../../../Themes/docs/shared-components/s3test_corrections.md
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/s3test_corrections.md

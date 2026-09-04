@@ -55,10 +55,10 @@ function mediaFileExtensionFailures(FileExtensionRule $rule, mixed $value): arra
 
 describe('Media gap closer — statement coverage', function (): void {
     test('TemporaryUploadPathGenerator builds paths from in-memory media', function (): void {
-        $media = new Media();
+        $media = new Media;
         $media->id = 7;
         $media->uuid = '550e8400-e29b-41d4-a716-446655440000';
-        $gen = new TemporaryUploadPathGenerator();
+        $gen = new TemporaryUploadPathGenerator;
         Assert::assertStringContainsString('tmp/', $gen->getPath($media));
         Assert::assertStringContainsString(md5($media->id.$media->uuid.'conversion'), $gen->getPathForConversions($media));
         Assert::assertStringContainsString(md5($media->id.$media->uuid.'responsive'), $gen->getPathForResponsiveImages($media));
@@ -86,7 +86,7 @@ describe('Media gap closer — statement coverage', function (): void {
             Assert::assertNotSame('', $e->getMessage());
         }
 
-        $controller = new ConvertController();
+        $controller = new ConvertController;
         Assert::assertInstanceOf(ConvertController::class, $controller);
     });
 
