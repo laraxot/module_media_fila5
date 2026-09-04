@@ -6,23 +6,28 @@ namespace Modules\Media\Tests\Unit;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
+use Modules\Media\Actions\Subtitle\ExtractSubtitlePlainTextAction;
+use Modules\Media\Actions\Subtitle\UpdateModelSubtitleFieldAction;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Media\Filament\Actions\AddAttachmentAction;
 use Modules\Media\Filament\Actions\Table\ConvertAction;
+use Modules\Media\Filament\Infolists\VideoEntry;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Http\Requests\CreateTemporaryUploadFromDirectS3UploadRequest;
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaConvert;
 use Modules\Media\Models\TemporaryUpload;
-use Modules\Media\Actions\Stream\SubtitleService;
-use Modules\Media\Services\VideoStream;
 use Modules\Media\Tests\TestCase;
+use Modules\Media\View\Components\VideoPlayer;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionMethod;
@@ -55,28 +60,28 @@ function mediaTablePart(object $page, string $method): array
 }
 
 describe('Media highest-miss coverage', function (): void {
-    test('resources expose model pages and legacy form schema', function (): void {
+    test('resources expose model pages and form schema', function (): void {
         Assert::assertSame(Media::class, MediaResource::getModel());
         $mediaPages = MediaResource::getPages();
         Assert::assertArrayHasKey('index', $mediaPages);
         Assert::assertArrayHasKey('view', $mediaPages);
         Assert::assertArrayHasKey('convert', $mediaPages);
-        Assert::assertArrayHasKey('file', MediaResource::getFormSchemaOld());
+        Assert::assertArrayHasKey('file', MediaResource::getFormSchema());
 
         Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
         Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
-        Assert::assertArrayHasKey('format', MediaConvertResource::getFormSchemaOld());
+        Assert::assertArrayHasKey('format', MediaConvertResource::getFormSchema());
 
         Assert::assertSame(TemporaryUpload::class, TemporaryUploadResource::getModel());
         Assert::assertNotEmpty(TemporaryUploadResource::getPages());
     });
 
     test('list pages expose table columns and row actions', function (): void {
-        $mediaColumns = mediaTablePart(new ListMedia(), 'getTableColumns');
+        $mediaColumns = mediaTablePart(new ListMedia, 'getTableColumns');
         Assert::assertArrayHasKey('file_name', $mediaColumns);
-        Assert::assertArrayHasKey('view', mediaTablePart(new ListMedia(), 'getTableActions'));
+        Assert::assertArrayHasKey('view', mediaTablePart(new ListMedia, 'getTableActions'));
 
-        $convertColumns = mediaTablePart(new ListMediaConverts(), 'getTableColumns');
+        $convertColumns = mediaTablePart(new ListMediaConverts, 'getTableColumns');
         Assert::assertNotEmpty($convertColumns);
     });
 
@@ -90,7 +95,7 @@ describe('Media highest-miss coverage', function (): void {
 
         $owner = \Mockery::mock(Model::class);
         $livewire = \Mockery::mock(RelationManager::class);
-        $livewire->shouldReceive('getOwnerRecord')->andReturn($owner);
+        TestCase::mockExpectation($livewire, 'getOwnerRecord')->andReturn($owner);
         Assert::assertInstanceOf(RelationManager::class, $livewire);
         expect(function () use ($livewire): void {
             AddAttachmentAction::formHandlerCallback($livewire, ['file' => 'demo.txt']);
@@ -98,7 +103,7 @@ describe('Media highest-miss coverage', function (): void {
     });
 
     test('models expose table fillable and in-memory accessors', function (): void {
-        $upload = new TemporaryUpload();
+        $upload = new TemporaryUpload;
         Assert::assertIsString($upload->getTable());
         TemporaryUpload::$disk = 'local';
         $disk = (new ReflectionClass($upload))->getMethod('getDiskName');
@@ -108,14 +113,14 @@ describe('Media highest-miss coverage', function (): void {
         config(['media-library.generate_thumbnails_for_temporary_uploads' => false]);
         $upload->registerMediaConversions();
 
-        $convert = new MediaConvert();
+        $convert = new MediaConvert;
         $convert->setRelation('media', null);
         Assert::assertContains('format', $convert->getFillable());
         Assert::assertNull($convert->disk);
         Assert::assertNull($convert->file);
         Assert::assertNull($convert->converted_file);
 
-        $media = new Media();
+        $media = new Media;
         Assert::assertIsString($media->getTable());
     });
 
@@ -124,7 +129,7 @@ describe('Media highest-miss coverage', function (): void {
         Assert::assertStringContainsString('session', TemporaryUploadDoesNotBelongToCurrentSession::create()->getMessage());
     });
 
-    test('SubtitleService parses xml and formats timestamps', function (): void {
+    test('ExtractSubtitlePlainTextAction concatenates every subtitle item', function (): void {
         $xml = <<<'XML'
 <?xml version="1.0"?>
 <doc>
@@ -141,44 +146,23 @@ XML;
         $path = sys_get_temp_dir().'/media-subtitle-'.uniqid('', true).'.xml';
         file_put_contents($path, $xml);
 
-        $service = SubtitleService::make()->setFilePath($path);
-        Assert::assertSame($path, $service->file_path);
-        try {
-            Assert::assertStringContainsString('hello', $service->getPlain());
-            $items = $service->get();
-            Assert::assertNotEmpty($items);
-        } catch (\Throwable $e) {
-            Assert::assertNotSame('', $e->getMessage());
-        }
-
-        $hms = (new ReflectionClass($service))->getMethod('secondsToHms');
-        $hms->setAccessible(true);
-        Assert::assertSame('00:00:01,000', $hms->invoke($service, 1));
+        $plain = app(ExtractSubtitlePlainTextAction::class)->execute($path);
+        Assert::assertStringContainsString('hello', $plain);
+        Assert::assertStringContainsString('world', $plain);
 
         unlink($path);
-        Assert::assertSame([], SubtitleService::make()->setFilePath('/tmp/no-extension')->get());
-    });
-
-    test('VideoStream rejects missing files and accepts faked disk files', function (): void {
-        Storage::fake('local');
-        expect(fn (): VideoStream => new VideoStream('local', 'missing.mp4'))
-            ->toThrow(\Exception::class);
-
-        Storage::disk('local')->put('clip.mp4', 'fake-bytes');
-        $stream = new VideoStream('local', 'clip.mp4');
-        Assert::assertInstanceOf(VideoStream::class, $stream);
     });
 
     test('direct S3 upload request declares validation rules', function (): void {
         try {
-            $rules = (new CreateTemporaryUploadFromDirectS3UploadRequest())->rules();
+            $rules = (new CreateTemporaryUploadFromDirectS3UploadRequest)->rules();
             Assert::assertArrayHasKey('key', $rules);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());
         }
     });
 
-    test('SubtitleService exposes xml, content and model accessors', function (): void {
+    test('UpdateModelSubtitleFieldAction extracts the plain text and stores it on the model field', function (): void {
         $xml = <<<'XML'
 <?xml version="1.0"?>
 <doc>
@@ -195,27 +179,18 @@ XML;
         $path = sys_get_temp_dir().'/media-stream-sub-'.uniqid('', true).'.xml';
         file_put_contents($path, $xml);
 
-        $service = SubtitleService::make()->setFilePath($path);
-        Assert::assertSame($service, SubtitleService::getInstance());
-        Assert::assertStringContainsString('hello', $service->getPlain());
-        $items = $service->get();
-        Assert::assertNotEmpty($items);
-        Assert::assertSame($items, $service->getFromXml());
-        Assert::assertStringContainsString('hello', $service->getContent());
-
         $model = \Mockery::mock(Model::class);
-        $model->shouldReceive('update')->once()->andReturnSelf();
+        TestCase::mockExpectation($model, 'update')->once()->andReturnSelf();
         Assert::assertInstanceOf(Model::class, $model);
-        $service->setModel($model);
-        Assert::assertSame($model, $service->getModel());
-        $service->upateModel();
+
+        $result = app(UpdateModelSubtitleFieldAction::class)->execute($model, $path, 'txt');
+        Assert::assertSame($model, $result);
 
         unlink($path);
-        Assert::assertSame([], $service->setFilePath('/tmp/no-extension')->get());
     });
 
     test('ViewMedia infolist schema and convert command missing file', function (): void {
-        $page = (new ReflectionClass(\Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia::class))->newInstanceWithoutConstructor();
+        $page = (new ReflectionClass(ViewMedia::class))->newInstanceWithoutConstructor();
         Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
 
         Storage::fake('local');
@@ -223,13 +198,13 @@ XML;
     });
 
     test('VideoPlayer instantiates with explicit driver', function (): void {
-        $player = new \Modules\Media\View\Components\VideoPlayer('clip.mp4', 0, 'html5');
+        $player = new VideoPlayer('clip.mp4', 0, 'html5');
         Assert::assertSame('html5', $player->driver);
     });
 
     test('VideoEntry fluent API and Media conversion urls', function (): void {
         Storage::fake('public');
-        $entry = \Modules\Media\Filament\Infolists\VideoEntry::make('video')
+        $entry = VideoEntry::make('video')
             ->disk('public')
             ->height(120)
             ->width(240)
@@ -249,10 +224,10 @@ XML;
     });
 
     test('Media model exposes relations and casts without database', function (): void {
-        $media = new \Modules\Media\Models\Media();
+        $media = new Media;
         $media->id = 1;
         Assert::assertIsArray($media->getCasts());
-        Assert::assertInstanceOf(\Illuminate\Database\Eloquent\Relations\BelongsTo::class, $media->temporaryUpload());
-        Assert::assertInstanceOf(\Illuminate\Database\Eloquent\Relations\HasMany::class, $media->mediaConverts());
+        Assert::assertInstanceOf(BelongsTo::class, $media->temporaryUpload());
+        Assert::assertInstanceOf(HasMany::class, $media->mediaConverts());
     });
 });
