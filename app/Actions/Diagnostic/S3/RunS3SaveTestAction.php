@@ -14,7 +14,7 @@ class RunS3SaveTestAction
     use QueueableAction;
 
     /**
-     * @return array<string, mixed>
+     * @return array{test_file: array{path: string, cloudfront_url: string, temporary_url: string}, uploaded_file: array{path: string, cloudfront_url: string, temporary_url: string}|null}
      */
     public function execute(?string $attachmentPath, string $testFilePrefix = 'test-upload-'): array
     {
