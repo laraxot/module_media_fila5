@@ -22,7 +22,7 @@ class ParseSubtitleXmlAction
     use QueueableAction;
 
     /**
-     * @return array<int, array<string, float|int|string|mixed>>
+     * @return array<int, array{sentence_i: int, item_i: int, start: int|float, end: int|float, time: string, text: string}>
      */
     public function execute(string $filePath): array
     {
@@ -38,7 +38,7 @@ class ParseSubtitleXmlAction
     }
 
     /**
-     * @return array<int, array<string, float|int|string|mixed>>
+     * @return array<int, array{sentence_i: int, item_i: int, start: int|float, end: int|float, time: string, text: string}>
      */
     private function getFromXml(string $filePath): array
     {
