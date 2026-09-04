@@ -1,25 +1,14 @@
 ---
-module: theme
-topic: __stream
-canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
----
-# __stream
-
-See canonical documentation: ../../../../Themes/docs/shared-components/.gitkeep-Modules
-title: "__stream"
+title: "Stream"
 module: "Media"
 type: concept
-tags: [, stream]
+tags: [stream]
 created: 2026-07-14
 updated: 2026-07-14
-qmd: " stream"
+qmd: "stream"
 related:
   - "./webm.md"
 ---
-# __stream
-
-<!-- Contenuto migrato da _docs/__stream.txt -->
-
 https://laravel-news.com/temporary-directory
 
 
