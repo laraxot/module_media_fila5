@@ -129,13 +129,11 @@ class Media extends SpatieMedia
     /**
      * Relazione con il creatore del media.
      *
-     * @return BelongsTo<Model, self>
-     *
-     * @phpstan-return BelongsTo<Model, $this>
+     * @return BelongsTo<User, $this>
      */
     public function creator(): BelongsTo
     {
-        /** @var class-string<Model> $userClass */
+        /** @var class-string<User> $userClass */
         $userClass = XotData::make()->getUserClass();
 
         return $this->belongsTo($userClass, 'created_by');
