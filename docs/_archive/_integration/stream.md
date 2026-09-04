@@ -1,17 +1,20 @@
 ---
-title: 'Stream'
-module: Media
-type: reference
-slug: stream
-description: 'https://laravel-news.com/temporary-directory'
-tags: [migrato-da-txt, media]
-converted_from: __stream.txt
-created: 2026-08-24
-updated: 2026-08-24
+title: "__stream"
+module: "Media"
+type: concept
+tags: [stream]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "stream"
+related:
+  - "./webm.md"
 ---
 
-https://laravel-news.com/temporary-directory
+# __stream
 
+<!-- Contenuto migrato da _docs/__stream.txt -->
+
+https://laravel-news.com/temporary-directory
 
 -----------------------------------------------
 
