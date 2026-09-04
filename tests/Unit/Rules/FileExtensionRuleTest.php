@@ -28,8 +28,8 @@ describe('FileExtensionRule', function (): void {
     it('lowercases the extensions given to the constructor', function (): void {
         $rule = new FileExtensionRule(['PDF', 'Jpg']);
 
-        Assert::assertStringContainsString('pdf', (string) $rule->message());
-        Assert::assertStringContainsString('jpg', (string) $rule->message());
+        Assert::assertStringContainsString('pdf', $rule->message());
+        Assert::assertStringContainsString('jpg', $rule->message());
     });
 
     it('fails when the value is not an uploaded file', function (): void {
@@ -64,8 +64,8 @@ describe('FileExtensionRule', function (): void {
 
         $message = $rule->message();
 
-        Assert::assertStringContainsString('pdf', (string) $message);
-        Assert::assertStringContainsString('doc', (string) $message);
+        Assert::assertStringContainsString('pdf', $message);
+        Assert::assertStringContainsString('doc', $message);
     });
 
     it('builds a message even when no extension is allowed', function (): void {

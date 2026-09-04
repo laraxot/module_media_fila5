@@ -249,14 +249,20 @@ class S3Test extends XotBasePage
 
         // Generate CloudFront signed URL for attachment
         $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
-        dddx([
-            'signedurl' => $signedUrl,
-            'filePath' => $filePath,
-            'url2' => Storage::disk('s3')->url(SafeStringCastAction::cast($filePath)),
-            'url3' => Storage::disk('s3')->temporaryUrl(SafeStringCastAction::cast($filePath), now()->addMinutes(5)),
-        ]);
-        $this->debugResults = [];
+        $this->debugResults['cloudfront_signed_url'] = [
+            'title' => 'CloudFront signed URL',
+            'status' => 'info',
+            'data' => ['url' => $signedUrl],
+        ];
         $this->updateDebugOutput();
+        Log::info('S3 Test CloudFront signed URL', [
+            'attachment_path' => $filePath,
+            'signed_url' => $signedUrl,
+        ]);
+        Notification::make()
+            ->title(__('media::s3test.notifications.config_debugged'))
+            ->success()
+            ->send();
     }
 
     /**
