@@ -4,7 +4,7 @@ module: "Media"
 type: concept
 tags: [coverage]
 created: 2026-07-14
-updated: 2026-07-14
+updated: 2026-09-04
 qmd: "coverage"
 related:
   - "./webm.md"
@@ -224,3 +224,64 @@ esattamente lo stesso tipo di modifica che stavo per fare (`mixed $state` gia'
 aggiunto in `GetAttachmentsSchemaAction.php`). Non toccati, non committati da
 me. Segnalazione incrociata lasciata per il coordinatore in
 `docs/chat/` (fuori dal mio scope diretto per istruzione esplicita).
+
+## 2026-09-04 — app/Services → QueueableAction (no-services-rule)
+
+Story completa: `docs/stories/media-services-to-actions.story.md`.
+
+`Modules/Media/app/Services/` conteneva 2 file (`SubtitleService.php`,
+`VideoStream.php`, piu' 2 `.bak` orfani). Alla lettura, la conversione Kind A
+pesante risultava **gia' fatta da una sessione precedente** (commit
+`d0d8a784`, `0593e8c4`, `0407edcb` gia' in `git log`):
+
+- `VideoStream` → `Modules\Media\Actions\Stream\StreamVideoAction`
+  (`execute(string $disk, string $path, ?Media $media = null): void`,
+  `QueueableAction`).
+- `SubtitleService::getFromXml`/`get` → `Modules\Media\Actions\Subtitle\ParseSubtitleXmlAction`
+- `SubtitleService::getPlain` → `Modules\Media\Actions\Subtitle\ExtractSubtitlePlainTextAction`
+- `SubtitleService::upateModel` → `Modules\Media\Actions\Subtitle\UpdateModelSubtitleFieldAction`
+  (compone `ExtractSubtitlePlainTextAction` via `app(...)->execute()`)
+
+Restava pero' un duplicato residuo non convertito,
+`app/Actions/Stream/SubtitleService.php` — copia letterale del vecchio
+Service, senza `execute()` ne' `QueueableAction`, piazzata sotto `Actions/`
+per errore da chi ha fatto la migrazione precedente — e le classi Service
+originali erano ancora presenti, referenziate solo da 3 blocchi di test
+dentro lo stesso modulo (nessun caller di produzione, nessun altro modulo).
+
+**Fatto in questa sessione**:
+- Cancellati `app/Services/SubtitleService.php`, `app/Services/VideoStream.php`,
+  i 2 `.bak`, e il duplicato `app/Actions/Stream/SubtitleService.php`.
+  Rimossa la directory `app/Services/`.
+- Aggiornati i 3 test che referenziavano ancora le classi Service in
+  `tests/Unit/MediaHighestMissCoverageTest.php` (2 rimpiazzati con test reali
+  su `ExtractSubtitlePlainTextAction` e `UpdateModelSubtitleFieldAction`,
+  prima privi di copertura dedicata; 1 rimosso perche' duplicato di una
+  copertura gia' presente altrove su `StreamVideoAction`) e in
+  `tests/Unit/MediaCoverage100RemainingTest.php` (1 test adattato per usare
+  solo `StreamVideoAction`, rimossa l'istanza diretta di `VideoStream`).
+
+**PHPStan**: baseline vera (`phpstan clear-result-cache` +
+`analyse Modules/Media --no-progress --error-format=table`) → `[OK] No
+errors` prima e dopo, nessuna regressione.
+
+**PHPMD**: scoped sui 2 file di test toccati → nessun warning. Sull'intero
+modulo va in crash (noto, pre-esistente, vedi memoria
+`quality-tooling-real-commands`).
+
+**Pest**: `./vendor/bin/pest Modules/Media/tests -c Modules/Media/phpunit.xml
+--no-coverage` → 288 passed, 6 failed, 1 risky, 4 skipped. I 6 fallimenti
+sono tutti su `Models/MediaModelTest.php`, `Models/MediaTest.php` e
+`MediaFilamentAndActionsTest.php` — cast del model `Media`
+(`id`/`uuid`/`user_id`) e conteggi di query DB, nessuno di questi file
+toccato in questa story, nessuna relazione con `SubtitleService`/
+`VideoStream`/`StreamVideoAction`/Actions `Subtitle/*`. Rilancio mirato dei
+soli file toccati/collegati (`MediaHighestMissCoverageTest.php`,
+`MediaCoverage100RemainingTest.php`, `Actions/Subtitle/ParseSubtitleXmlActionTest.php`,
+`MediaGapAttackCoverageTest.php`) → 24 passed, 0 failed.
+
+**Nessuna collisione nuova rilevata durante questa story** oltre a quella
+gia' documentata sopra (2026-09-04, mixed-type-reduction): i file toccati qui
+(`app/Services/*`, il duplicato in `app/Actions/Stream/SubtitleService.php`,
+i 2 test) non risultavano nella lista dei 124 file gia' sporchi al momento
+dell'inizio di questa story specifica.
