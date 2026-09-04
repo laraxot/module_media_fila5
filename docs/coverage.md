@@ -285,3 +285,103 @@ gia' documentata sopra (2026-09-04, mixed-type-reduction): i file toccati qui
 (`app/Services/*`, il duplicato in `app/Actions/Stream/SubtitleService.php`,
 i 2 test) non risultavano nella lista dei 124 file gia' sporchi al momento
 dell'inizio di questa story specifica.
+
+## 2026-09-04 — quality-gate closure (phpmd + pest + coverage baseline)
+
+Story: `docs/stories/media-quality-gate-2026-09-04.story.md`. Lock preso su
+`laravel/Modules/Media` (`quality-gate-2026-09-04`).
+
+**PHPStan**: baseline vera (`clear-result-cache` + `analyse Modules/Media
+--no-progress --error-format=table`) → `[OK] No errors` prima e dopo i 3 fix
+sotto. Nessuna regressione.
+
+**PHPMD** (`./tools/phpmd.sh Modules/Media/app text ../docs/phpmd.ruleset.xml`,
+i 3 argomenti obbligatori): **163 → 158 finding** (163 sono finding reali sul
+`text` output, non un crash — la nota precedente sul crash
+`visitAnonymousClass` non si e' ripresentata su questo giro scoped ad `app/`).
+5 fix reali applicati:
+- `app/Filament/Actions/Table/ConvertAction.php` — `MissingImport`: la
+  `\RuntimeException` lanciata (gia' presente, non mia, sostituiva un vecchio
+  `dddx()` di debug per lavoro di un'altra sessione non ancora committato)
+  usava il leading-backslash invece dell'import; aggiunto `use
+  RuntimeException;` e tolto il backslash.
+- `app/Filament/Clusters/Test/Pages/AwsTest.php` — 3x `UnusedLocalVariable`:
+  `$result = $s3->headBucket(...)` / `listObjectsV2(...)` / `getObject(...)`
+  nei metodi diagnostici `test_s3_connection`/`test_s3_permissions`/
+  `test_s3_file_operations`; il valore non veniva mai letto (la chiamata
+  serve solo a far esplodere `AwsException` in caso di errore). Rimossa
+  l'assegnazione, mantenuta la chiamata per l'effetto collaterale.
+- `app/Models/Policies/MediaBasePolicy.php` — `UnusedLocalVariable`:
+  `$xotData = XotData::make()` in `before()` non veniva mai usato (nessun
+  riferimento a `$xotData` nel corpo). `XotData::make()` e' un singleton
+  cacheato senza side-effect utile qui; rimossa riga e `use` inutilizzato.
+
+**Non toccato** (documentato, non fixato — fuori dal minimal-impact di
+questo giro):
+- 15x `ShortVariable $s3` (AWS SDK client, nome idiomatico, non un vero
+  problema di leggibilita').
+- ~40x `CamelCase*Name` su chiavi snake_case che rispecchiano config/DB
+  (`disk_mp4`, `file_new`, `codec_video`, ecc.) o la convenzione repo-wide
+  del prefisso `_` per parametri Policy volutamente inutilizzati (`$_ability`,
+  `$_media`, ecc. — verificato: stesso pattern in `Modules/User`, `Notify`,
+  20+ file, non un difetto locale di Media).
+- `ExcessiveClassComplexity`/`CouplingBetweenObjects`/`TooManyFields` su
+  `S3Test.php` (825 righe), `VideoEntry.php` (446 righe,
+  gia' annotato in testa al file con un commento che riconosce i finding come
+  accettati) — refactor reale, fuori scope minimal-impact.
+- Duplicazione reale confermata:
+  `app/Filament/Actions/AddAttachmentAction.php` e
+  `app/Filament/Resources/HasMediaResource/Actions/AddAttachmentAction.php`
+  sono quasi identiche (stesso corpo, blocchi commentati diversi), usate da
+  due `RelationManager` diversi. Consolidamento fuori scope (decisione di
+  ownership, non un fix minimale).
+- `README.md` del modulo contiene 3 blocchi di marker di merge reali
+  (`<<<<<<< .merge_file_...`) nel working tree **non committato da me**
+  (`git status` lo segna `M`, `HEAD` e' pulito) — non toccato, non mio,
+  segnalato come bloccante.
+
+**PHPInsights**: non eseguibile — `vendor/bin/phpinsights` assente dal
+progetto (rimosso, incompatibile con Pest 5, vedi second brain
+`pest5-incompatibile-con-phpinsights`). Nessun punteggio prima/dopo
+misurabile.
+
+**Pest** (`./vendor/bin/pest -c Modules/Media/phpunit.xml --no-coverage`):
+ambiente sotto carico pesante (piu' sessioni concorrenti in questo momento
+lanciano pest su Activity/AI e altri moduli, un'altra sessione ha
+`Modules/Xot/app/Actions/Blade/RegisterBladeComponentsAction.php` modificato
+e non committato). Prima run: bootstrap crash immediato e ripetuto su
+qualunque test, anche uno mai toccato (`FileExtensionRuleTest.php`, isolato
+per verifica) — `Typed property
+Modules\Xot\Datas\ComponentFileData::$name must not be accessed before
+initialization`. Root cause verificata: `Modules/Xot/app/View/Components/
+_components.json` (committato in Xot, non mio) usa ancora lo schema legacy
+(`class_name`/`comp_name`/`comp_ns`) invece di quello attuale
+(`name`/`class`/`ns`) — stesso bug gia' documentato in
+`docs/chat/xot-blade-component-bootstrap-crash-wip.md` per un file di Cms
+gia' corretto, ma qui e' un'istanza diversa dentro Xot stesso, non ancora
+corretta. Fuori dal lock/scope di questo task (modulo Xot, non Media); non
+toccato.
+
+Retry (il bug e' intermittente, dipende dallo stato del file dell'altra
+sessione al momento esatto del comando): **run completo riuscito** →
+**269 passed, 29 failed, 1 risky, 1162 assertions**, 260.88s. Verificato che
+i 29 fallimenti non sono legati ai 3 file toccati in questa sessione (nessuna
+occorrenza di `ConvertAction`/`AwsTest`/`MediaBasePolicy` tra i fallimenti);
+esempi concreti osservati in un secondo run parziale:
+`MediaBusinessLogicTest → it can track media usage statistics`,
+`MediaFilamentAndActionsTest → GenerateTemporaryUploadPathAction costruisce
+path distinti per purpose` — entrambi pre-esistenti, in file mai toccati qui.
+Non tentato un fix "alla cieca" dell'ambiente (istruzione esplicita del
+task).
+
+**Coverage**: non ri-misurato con `--coverage` in questa sessione (ogni run
+completo richiede 4-5 minuti sotto il carico attuale, gia' investiti 2 run
+per ottenere numeri Pest affidabili). Nessun codice morto reale rimosso in
+`app/` che avrebbe spostato la % in modo misurabile (i 3 fix sono rimozione
+di variabili locali inutilizzate, non branch/metodi interi). Baseline
+storica sopra (0.00% su `Modules/Media/app`, dicembre-luglio) resta l'ultimo
+numero misurato con `--coverage-clover`; non ri-eseguito per non aggiungere
+un terzo run da 4+ minuti in un ambiente gia' sotto stress con dati che non
+sarebbero comunque comparabili (run precedente piu' vicino, 2026-09-04
+mixed-type-reduction, riporta 288 passed/6 failed senza numero di coverage
+esplicito).
