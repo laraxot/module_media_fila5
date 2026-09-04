@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
+use Filament\Schemas\Components\Component;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Override;
@@ -14,7 +15,7 @@ class ConvertMedia extends XotBaseViewRecord
 
     #[Override]
     /**
-     * @return array<string, mixed>
+     * @return array<string, Component>
      */
     public function getInfolistSchema(): array
     {
