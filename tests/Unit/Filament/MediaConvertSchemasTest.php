@@ -76,14 +76,11 @@ test('the table lists the identifier and both timestamps', function (): void {
 });
 
 test('the table offers view, edit and convert row actions', function (): void {
-    // TODO: getTableActions() deprecated in Filament 5 — update to table() API
-    // $actions = (new MediaConvertsTable())->getTableActions();
-    // Assert::assertCount(3, $actions);
-    // Assert::assertArrayHasKey('view', $actions);
-    // Assert::assertInstanceOf(ViewAction::class, $actions['view']);
-    // Assert::assertArrayHasKey('edit', $actions);
+    $actions = (new MediaConvertsTable())->getTableActions();
+    Assert::assertCount(3, $actions);
+    Assert::assertArrayHasKey('view', $actions);
+    Assert::assertArrayHasKey('edit', $actions);
 
-    $this->assertTrue(true); // placeholder
     Assert::assertInstanceOf(EditAction::class, $actions['edit']);
     Assert::assertArrayHasKey('convert', $actions);
     Assert::assertInstanceOf(Action::class, $actions['convert']);
