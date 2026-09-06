@@ -71,14 +71,6 @@ class MediaTable extends XotBaseResourceTable
     /**
      * @return array<string, Action|ActionGroup>
      */
-    public function getTableActions(): array
-    {
-        return $this->getTableActionsData();
-    }
-
-    /**
-     * @return array<string, Action|ActionGroup>
-     */
     private function getTableActionsData(): array
     {
         return [
