@@ -12,6 +12,7 @@ use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
@@ -20,6 +21,15 @@ use Webmozart\Assert\Assert;
 
 class MediaTable extends XotBaseResourceTable
 {
+    public function table(Table $table): Table
+    {
+        return $table
+            ->columns($this->getTableColumns())
+            ->filters($this->getTableFilters())
+            ->actions($this->getTableActionsData())
+            ->bulkActions($this->getTableBulkActionsData());
+    }
+
     /**
      * @return array<string, Column>
      */
@@ -63,6 +73,14 @@ class MediaTable extends XotBaseResourceTable
      */
     public function getTableActions(): array
     {
+        return $this->getTableActionsData();
+    }
+
+    /**
+     * @return array<string, Action|ActionGroup>
+     */
+    private function getTableActionsData(): array
+    {
         return [
             'view' => ViewAction::make(),
             'view_attachment' => Action::make('view_attachment')
@@ -91,6 +109,13 @@ class MediaTable extends XotBaseResourceTable
                     return $res;
                 })
                 ->openUrlInNewTab(true),
+        ];
+    }
+
+    private function getTableBulkActionsData(): array
+    {
+        return [
+            'delete' => DeleteAction::make(),
         ];
     }
 }
