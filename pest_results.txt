@@ -1,0 +1,45 @@
+
+  [30;43;1m WARN [39;49;22m[39m Modules\Media\tests\Feature\MediaBusinessLogicTest[39m
+  [32;1m✓[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can create media from temporary upload[39m[90m    [39m [90m1.08s[39m  
+  [33;1m-[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can convert media to different formats[39m[90m [39m[33m→[39m[90m… [39m [90m0.33s[39m  
+  [32;1m✓[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can track temporary upload lifecycle[39m[90m      [39m [90m0.58s[39m  
+  [32;1m✓[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can manage media collections[39m[90m              [39m [90m0.44s[39m  
+  [32;1m✓[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can validate media file types[39m[90m             [39m [90m0.39s[39m  
+  [33;1m-[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can track media conversion status[39m[90m [39m[33m→ media[39m[90m…[39m [90m0.38s[39m  
+  [33;1m-[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can manage media permissions[39m[90m [39m[33m→ This insta[39m[90m…[39m [90m0.63s[39m  
+  [33;1m-[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can handle media deletion[39m[90m [39m[33m→ This install[39m[90m… [39m [90m0.24s[39m  
+  [32;1m✓[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can generate media urls[39m[90m                   [39m [90m0.31s[39m  
+  [32;1m✓[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can validate file size limits[39m[90m             [39m [90m0.60s[39m  
+  [33;1m-[39;22m[90m [39m[37mMedia Business Logic[39m[90m → it can track media usage statistics[39m[90m [39m[33m→ This i[39m[90m…[39m [90m0.64s[39m  
+
+  [30;42;1m PASS [39;49;22m[39m Modules\Media\tests\Filament\Resources\MediaConvertResourceTest[39m
+  [32;1m✓[39;22m[90m [39m[90mget form schema returns expected components[39m[90m                         [39m [90m0.45s[39m  
+
+  [30;42;1m PASS [39;49;22m[39m Modules\Media\tests\Unit\Actions\AttachMediaActionTest[39m
+  [32;1m✓[39;22m[90m [39m[37mAttachMediaAction[39m[90m → it uses QueueableAction trait[39m[90m                   [39m [90m0.68s[39m  
+
+  [30;42;1m PASS [39;49;22m[39m Modules\Media\tests\Unit\Actions\Diagnostic\FormatDebugOutputActionTest[39m
+  [32;1m✓[39;22m[90m [39m[90mempty results fall back to the given message[39m[90m                        [39m [90m0.90s[39m  
+  [32;1m✓[39;22m[90m [39m[90ma well formed result renders title, status and data lines[39m[90m           [39m [90m0.76s[39m  
+  [32;1m✓[39;22m[90m [39m[90mnested array values are rendered as pretty printed json[39m[90m             [39m [90m0.77s[39m  
+  [32;1m✓[39;22m[90m [39m[90mentries that are not arrays or lack the required keys are skipped[39m[90m   [39m [90m1.01s[39m  
+  [32;1m✓[39;22m[90m [39m[90mseveral results are separated by their own rule line[39m[90m                [39m [90m0.92s[39m  
+
+  [30;42;1m PASS [39;49;22m[39m Modules\Media\tests\Unit\Actions\GetAttachmentsSchemaActionTest[39m
+  [32;1m✓[39;22m[90m [39m[90mit returns attachment schema[39m[90m                                        [39m [90m0.88s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct names[39m[90m                                                [39m [90m1.03s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct validation[39m[90m                                           [39m [90m0.88s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct storage[39m[90m                                              [39m [90m0.78s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct directory[39m[90m                                            [39m [90m1.54s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct visibility[39m[90m                                           [39m [90m0.96s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct max size[39m[90m                                             [39m [90m0.77s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct multiple setting[39m[90m                                     [39m [90m1.50s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct preview setting[39m[90m                                      [39m [90m0.93s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct download setting[39m[90m                                     [39m [90m0.58s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct remove setting[39m[90m                                       [39m [90m0.60s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct reorder setting[39m[90m                                      [39m [90m0.60s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct labels[39m[90m                                               [39m [90m0.55s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct append setting[39m[90m                                       [39m [90m0.56s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct panel[39m[90m                                                [39m [90m0.54s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct help text[39m[90m                                            [39m [90m0.72s[39m  
+  [32;1m✓[39;22m[90m [39m[90mit has correct placeholder[39m[90m                                          [39m [90m0.53s[39m  
