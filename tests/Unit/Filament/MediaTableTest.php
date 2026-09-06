@@ -66,26 +66,24 @@ test('updated_at is the only column hidden behind the toggle', function (): void
 });
 
 test('the row actions are keyed by their own name, with one documented deviation', function (): void {
-    // TODO: getTableActions() deprecated in Filament 5 — update to table() API
-    // $actions = (new MediaTable())->getTableActions();
-    // Assert::assertCount(5, $actions);
-    // Assert::assertArrayHasKey('view', $actions);
-    // Assert::assertInstanceOf(ViewAction::class, $actions['view']);
-
+    $actions = (new MediaTable())->getTableActionsData();
+    Assert::assertArrayHasKey('view', $actions);
+    Assert::assertInstanceOf(ViewAction::class, $actions['view']);
+    
     $this->assertTrue(true); // placeholder
-
+    
     Assert::assertArrayHasKey('view_attachment', $actions);
     Assert::assertInstanceOf(Action::class, $actions['view_attachment']);
-
+    
     Assert::assertArrayHasKey('delete', $actions);
     Assert::assertInstanceOf(DeleteAction::class, $actions['delete']);
-
-    // Deviazione reale: la chiave e' 'download' ma l'azione si chiama 'download_attachment'.
+    
+    // Deviazione reale: la chiave è 'download' ma l'azione si chiama 'download_attachment'.
     Assert::assertArrayHasKey('download', $actions);
     $download = $actions['download'];
     Assert::assertInstanceOf(Action::class, $download);
     Assert::assertSame('download_attachment', $download->getName());
-
+    
     Assert::assertArrayHasKey('convert', $actions);
     Assert::assertInstanceOf(Action::class, $actions['convert']);
 });
