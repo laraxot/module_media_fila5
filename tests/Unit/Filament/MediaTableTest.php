@@ -66,7 +66,7 @@ test('updated_at is the only column hidden behind the toggle', function (): void
 });
 
 test('the row actions are keyed by their own name, with one documented deviation', function (): void {
-    $actions = (new MediaTable())->getTableActionsData();
+    $actions = (new MediaTable())->getTableActions();
     Assert::assertArrayHasKey('view', $actions);
     Assert::assertInstanceOf(ViewAction::class, $actions['view']);
     
