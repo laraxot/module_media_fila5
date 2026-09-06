@@ -26,8 +26,8 @@ class MediaTable extends XotBaseResourceTable
         return $table
             ->columns($this->getTableColumns())
             ->filters($this->getTableFilters())
-            ->actions($this->getTableActionsData())
-            ->bulkActions($this->getTableBulkActionsData());
+            ->recordActions($this->getTableActionsData())
+            ->toolbarActions($this->getTableBulkActionsData());
     }
 
     /**
@@ -112,6 +112,9 @@ class MediaTable extends XotBaseResourceTable
         ];
     }
 
+    /**
+     * @return array<string, Action|ActionGroup>
+     */
     private function getTableBulkActionsData(): array
     {
         return [
