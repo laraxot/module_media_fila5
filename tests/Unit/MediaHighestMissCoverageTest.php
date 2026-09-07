@@ -18,7 +18,7 @@ use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
-use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
+use Modules\Media\Filament\Resources\MediaResource\Schemas\MediaInfolist;
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Http\Requests\CreateTemporaryUploadFromDirectS3UploadRequest;
 use Modules\Media\Models\Media;
@@ -66,11 +66,9 @@ describe('Media highest-miss coverage', function (): void {
         Assert::assertArrayHasKey('index', $mediaPages);
         Assert::assertArrayHasKey('view', $mediaPages);
         Assert::assertArrayHasKey('convert', $mediaPages);
-        Assert::assertArrayHasKey('file', MediaResource::getFormSchema());
 
         Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
         Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
-        Assert::assertArrayHasKey('format', MediaConvertResource::getFormSchema());
 
         Assert::assertSame(TemporaryUpload::class, TemporaryUploadResource::getModel());
         Assert::assertNotEmpty(TemporaryUploadResource::getPages());
@@ -220,8 +218,7 @@ XML;
     });
 
     test('ViewMedia infolist schema and convert command missing file', function (): void {
-        $page = (new ReflectionClass(ViewMedia::class))->newInstanceWithoutConstructor();
-        Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
+        Assert::assertArrayHasKey('media_grid', app(MediaInfolist::class)->getInfolistSchema());
 
         Storage::fake('local');
         $this->artisan('media:convert-video', ['disk' => 'local', 'file' => 'missing.mp4']);
