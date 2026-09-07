@@ -28,7 +28,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('the form exposes one component per conversion parameter', function (): void {
-    $schema = MediaConvertForm::getFormSchema();
+    $schema = app(MediaConvertForm::class)->getFormSchema();
 
     Assert::assertSame(
         ['format', 'codec_video', 'codec_audio', 'preset', 'bitrate', 'width', 'height', 'threads', 'speed'],
@@ -43,7 +43,7 @@ test('the form exposes one component per conversion parameter', function (): voi
 });
 
 test('codec and preset are radio choices, sizes are text inputs', function (): void {
-    $schema = MediaConvertForm::getFormSchema();
+    $schema = app(MediaConvertForm::class)->getFormSchema();
 
     foreach (['format', 'codec_video', 'codec_audio', 'preset'] as $key) {
         Assert::assertInstanceOf(Radio::class, $schema[$key]);
@@ -55,7 +55,7 @@ test('codec and preset are radio choices, sizes are text inputs', function (): v
 });
 
 test('the video codec offers both vp9 and vp8', function (): void {
-    $codec = MediaConvertForm::getFormSchema()['codec_video'];
+    $codec = app(MediaConvertForm::class)->getFormSchema()['codec_video'];
     Assert::assertInstanceOf(Radio::class, $codec);
 
     Assert::assertSame(
