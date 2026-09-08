@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 return [
+<<<<<<< HEAD
     'navigation' => ['label' => 'temporary upload', 'group' => 'temporary upload', 'icon' => 'temporary upload', 'sort' => 96],
     'label' => 'Temporary Upload',
     'plural_label' => 'Temporary Upload (Plurale)',
@@ -22,5 +23,12 @@ return [
         'createAnother' => ['label' => 'createAnother', 'icon' => 'createAnother', 'tooltip' => 'createAnother'],
         'save' => ['label' => 'save', 'icon' => 'save', 'tooltip' => 'save'],
         'view' => ['label' => 'view', 'icon' => 'view', 'tooltip' => 'view'],
+=======
+    'navigation' => [
+        'label' => 'temporary upload',
+        'group' => 'temporary upload',
+        'icon' => 'temporary upload',
+        'sort' => 96,
+>>>>>>> 4e14511d (.)
     ],
 ];

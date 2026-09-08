@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 !.env.example
 # ==============================================
@@ -50,6 +51,18 @@ docs/workbench
 scripts
 test-results
 tests/.claude-audit
+=======
+# ==============================================
+# LARAXOT MODULE MEDIA - .GITIGNORE
+# ==============================================
+# Modulo Media Laraxot - Template standardizzato
+# Ultimo aggiornamento: 2025-01-06
+# ==============================================
+
+# ==============================================
+# DEPENDENCIES & PACKAGES
+# ==============================================
+>>>>>>> 4e14511d (.)
 vendor/
 /vendor/
 node_modules/
@@ -59,12 +72,20 @@ package-lock.json
 yarn.lock
 yarn-error.log
 composer.lock
+<<<<<<< HEAD
+=======
+
+# ==============================================
+# BUILD & COMPILED FILES
+# ==============================================
+>>>>>>> 4e14511d (.)
 /build
 /build/
 build/
 dist/
 docs/cache/
 cache/
+<<<<<<< HEAD
 *.cache
 *.exe
 *.fila2
@@ -80,20 +101,51 @@ cache/
 *.swo
 *.swp
 *.tmp
+=======
+
+# ==============================================
+# CACHE & TEMPORARY FILES
+# ==============================================
+*.cache
+*.lock
+*.phar
+*.jar
+*.tmp
+*.swp
+*.swo
+*.stackdump
+*.exe
+>>>>>>> 4e14511d (.)
 *:Zone.Identifier
 v8-compile-cache-*
 .php-cs-fixer.cache
 .phpunit.result.cache
+<<<<<<< HEAD
 error_log
 
 # ==============================================
 # LOG FILES
 *.log
+=======
+
+# ==============================================
+# LOG FILES
+# ==============================================
+*.log
+error_log
+>>>>>>> 4e14511d (.)
 npm-debug.log*
 npm-debug.log
 yarn-error.log*
 lerna-debug.log*
+<<<<<<< HEAD
 # LARAVEL SPECIFIC
+=======
+
+# ==============================================
+# LARAVEL SPECIFIC
+# ==============================================
+>>>>>>> 4e14511d (.)
 bootstrap/compiled.php
 app/storage/
 public/storage
@@ -104,12 +156,20 @@ storage/*.key
 .env
 .env.*
 !.env.example
+<<<<<<< HEAD
 # ENVIRONMENT & CONFIGURATION
+=======
+
+# ==============================================
+# ENVIRONMENT & CONFIGURATION
+# ==============================================
+>>>>>>> 4e14511d (.)
 Homestead.yaml
 Homestead.json
 /.vagrant
 /.idea
 .phpintel
+<<<<<<< HEAD
 # GIT SPECIFIC
 .git-rewrite/
 .git-rewrite
@@ -123,11 +183,30 @@ Homestead.json
 ._*
 .circleci
 .claude-audit
+=======
+
+# ==============================================
+# GIT SPECIFIC
+# ==============================================
+.git-rewrite/
+.git-rewrite
+.git-blame-ignore-revs
+
+# ==============================================
+# SYSTEM FILES
+# ==============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+>>>>>>> 4e14511d (.)
 ehthumbs.db
 Thumbs.db
 
 # ==============================================
 # BACKUP FILES
+<<<<<<< HEAD
 # GIT SPECIFIC
 .git-rewrite/
 .git-rewrite
@@ -138,11 +217,15 @@ Thumbs.db
 ._*
 .Spotlight-V100
 .Trashes
+=======
+# ==============================================
+>>>>>>> 4e14511d (.)
 *.old
 *.old1
 *.old2
 *.backup
 *.backup.*
+<<<<<<< HEAD
 *.backup-*
 *.backup_*
 *.bak
@@ -208,10 +291,33 @@ docs/archive/**
 .windsurf/
 .cursor/
 .phpstorm.meta.php
+=======
+*.bak
+*.bakcup
+*.new
+
+# ==============================================
+# DEVELOPMENT TOOLS
+# ==============================================
+.windsurf/
+.cursor/
+.phpstorm.meta.php
+
+# ==============================================
+# DOCUMENTATION CACHE
+# ==============================================
+docs/phpstan/
+docs/cache/
+
+# ==============================================
+# OLD DIRECTORIES (LEGACY CLEANUP)
+# ==============================================
+>>>>>>> 4e14511d (.)
 resources/views/Components_old/
 resources/views/Components_old
 database/Migrations_old/
 database/Migrations_old
+<<<<<<< HEAD
 database/Migrations_old/
 database/Seeders_old
 database/Seeders_old/
@@ -291,6 +397,8 @@ phpmd*
 .opencode
 phpstan*-*
 phpmd*.*
+=======
+>>>>>>> 4e14511d (.)
 database/Seeders_old/
 database/Seeders_old
 database/Factories_old/
@@ -298,24 +406,52 @@ database/Factories_old
 database/Factories_
 database_old/
 database_old
+<<<<<<< HEAD
 # MODULE SPECIFIC - MEDIA
 # File di configurazione locale
 config/local.php
 config/development.php
+=======
+
+# ==============================================
+# MODULE SPECIFIC - MEDIA
+# ==============================================
+# File di configurazione locale
+config/local.php
+config/development.php
+
+>>>>>>> 4e14511d (.)
 # File media temporanei
 media/temp/
 media/uploads/temp/
 media/thumbnails/temp/
+<<<<<<< HEAD
 # Cache media
 storage/media/
 storage/thumbnails/
 # File di test media
 media_test_data.json
 test_media_files/
+=======
+
+# Cache media
+storage/media/
+storage/thumbnails/
+
+# File di test media
+media_test_data.json
+test_media_files/
+
+# ==============================================
+# END OF MEDIA .GITIGNORE
+# ==============================================
+
+>>>>>>> 4e14511d (.)
 # 🚫 File specifici del progetto
 *.fila2
 laravel
 public_html
+<<<<<<< HEAD
 lang/lang/
 agentdb.rvf
 .vscode/
@@ -327,3 +463,5 @@ tests/AuditCoverage
 .windsurf/
 tests/AuditCoverage/
 graphify-out
+=======
+>>>>>>> 4e14511d (.)

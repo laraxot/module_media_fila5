@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 4e14511d (.)
 return array (
   'sections' => 
   array (
@@ -11,6 +14,7 @@ return array (
       'heading' => 'empty',
     ),
   ),
+<<<<<<< HEAD
   'navigation' => 
   array (
     'label' => 'Missing Navigation Label',
@@ -27,4 +31,6 @@ return array (
   'actions' => 
   array (
   ),
+=======
+>>>>>>> 4e14511d (.)
 );
