@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources;
 
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Radio;
-use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\PageRegistration;
-use Filament\Schemas\Components\Component;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
@@ -23,39 +19,12 @@ class MediaResource extends XotBaseResource
     protected static ?string $model = Media::class;
 
     /**
-     * Schema legacy del form: la sorgente di verità è MediaForm::getFormSchema().
+     * Elenco esplicito delle pagine: `parent::getPages()` dichiara un
+     * `array<string, PageRegistration>` generico (le chiavi sono risolte
+     * per convenzione a runtime), quindi PHPStan non può restringere lo
+     * spread a questo shape fisso. Le pagine sono elencate qui in modo
+     * esplicito perché lo shape sia verificabile staticamente.
      *
-     * @return array<string, Component>
-     */
-    public function getFormSchema(): array
-    {
-        return [
-            'file' => FileUpload::make('file')
-                ->hint(static::trans('fields.file_hint'))
-                ->storeFileNamesIn('original_file_name')
-                ->visibility('private')
-                ->required()
-                ->columnSpanFull(),
-            'attachment_type' => Radio::make('attachment_type'),
-            'name' => TextInput::make('name')
-                ->translateLabel()
-                ->hint(static::trans('fields.name.hint'))
-                ->autocomplete(false)
-                ->maxLength(255)
-                ->columnSpanFull(),
-        ];
-    }
-
-    /**
-     * @psalm-return array<never, never>
-     */
-    #[Override]
-    public static function getRelations(): array
-    {
-        return [];
-    }
-
-    /**
      * @return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration, view: PageRegistration, convert: PageRegistration}
      */
     #[Override]
