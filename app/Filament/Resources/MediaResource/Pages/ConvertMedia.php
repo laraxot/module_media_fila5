@@ -13,9 +13,12 @@ class ConvertMedia extends XotBaseViewRecord
     protected static string $resource = MediaResource::class;
 
     #[Override]
+<<<<<<< HEAD
     /**
      * @return array<string, mixed>
      */
+=======
+>>>>>>> 4e14511d (.)
     public function getInfolistSchema(): array
     {
         return [

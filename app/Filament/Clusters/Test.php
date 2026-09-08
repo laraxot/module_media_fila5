@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Clusters;
 
+<<<<<<< HEAD
 use Modules\Xot\Filament\Clusters\XotBaseCluster;
 
 /**
@@ -14,4 +15,14 @@ use Modules\Xot\Filament\Clusters\XotBaseCluster;
 class Test extends XotBaseCluster
 {
     protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-squares-2x2';
+=======
+use Filament\Clusters\Cluster;
+
+class Test extends Cluster
+{
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-squares-2x2';
+
+    // protected static ?string $navigationParentItem = 'Notifications';
+    // protected static ?string $navigationGroup = 'Settings';
+>>>>>>> 4e14511d (.)
 }

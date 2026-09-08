@@ -17,6 +17,7 @@ return [
         'icon' => 'media-main-animated',
     ],
     'fields' => [
+<<<<<<< HEAD
         'name' => [
             'label' => 'Name',
             'tooltip' => '',
@@ -98,6 +99,26 @@ return [
             'helper_text' => '',
             'description' => '',
         ],
+=======
+        'name' => 'Name',
+        'guard_name' => 'Guard',
+        'collection_name' => 'Collection',
+        'filename' => 'Filename',
+        'mime_type' => 'Type',
+        'human_readable_size' => 'Size',
+        'permissions' => 'Permissions',
+        'updated_at' => 'Updated at',
+        'first_name' => 'First Name',
+        'last_name' => 'Last Name',
+        'select_all' => [
+            'name' => 'Select All',
+            'message' => '',
+        ],
+        'creator' => [
+            'name' => 'Creator',
+        ],
+        'uploaded_at' => 'Uploaded at',
+>>>>>>> 4e14511d (.)
     ],
     'actions' => [
         'import' => [
@@ -113,6 +134,9 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'label' => 'Missing Label',
     'plural_label' => 'Missing Plural label',
+=======
+>>>>>>> 4e14511d (.)
 ];

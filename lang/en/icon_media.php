@@ -10,7 +10,10 @@ return [
             'help' => 'Modify the current state of the element',
             'description' => 'Action to change the state',
             'helper_text' => '',
+<<<<<<< HEAD
             'tooltip' => '',
+=======
+>>>>>>> 4e14511d (.)
         ],
         'state' => [
             'label' => 'State',
@@ -18,7 +21,10 @@ return [
             'help' => 'Current state of the element',
             'description' => 'Current system state',
             'helper_text' => '',
+<<<<<<< HEAD
             'tooltip' => '',
+=======
+>>>>>>> 4e14511d (.)
         ],
         'message' => [
             'label' => 'Message',
@@ -26,6 +32,7 @@ return [
             'help' => 'Informative message for the user',
             'description' => 'Message text',
             'helper_text' => '',
+<<<<<<< HEAD
             'tooltip' => '',
         ],
     ],
@@ -40,4 +47,8 @@ return [
     'plural_label' => 'Missing Plural label',
     'actions' => [
     ],
+=======
+        ],
+    ],
+>>>>>>> 4e14511d (.)
 ];

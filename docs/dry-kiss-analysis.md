@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "🐄 DRY & KISS Analysis - Media"
 module: "Media"
@@ -12,6 +13,11 @@ related:
 # 🐄 DRY & KISS Analysis - Media
 
 **Data:** [DATE] | **Status:** ✅
+=======
+# 🐄 DRY & KISS Analysis - Media
+
+**Data:** 2025-10-15 | **Status:** ✅
+>>>>>>> 4e14511d (.)
 
 ## 📊 Struttura
 Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83
@@ -32,3 +38,7 @@ Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83
 Resources refactoring (2 giorni)
 
 **Status:** 🟢 BUONO
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4e14511d (.)
