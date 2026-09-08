@@ -2,18 +2,29 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 namespace Modules\Media\Tests\Filament\Resources;
 
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Tests\TestCase;
+=======
+use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\TextInput;
+use Modules\Media\Filament\Resources\MediaConvertResource;
+use Tests\TestCase;
+>>>>>>> 4e14511d (.)
 
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
     $form = MediaConvertResource::getFormSchema();
 
+<<<<<<< HEAD
+=======
+    expect($form)->toBeArray();
+>>>>>>> 4e14511d (.)
     expect($form)->not->toBeEmpty();
 
     $componentClasses = array_map(get_class(...), $form);

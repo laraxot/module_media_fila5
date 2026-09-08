@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Cyclomatic Complexity Report - Module: Media"
 module: "Media"
@@ -11,6 +12,11 @@ related:
 ---
 # Cyclomatic Complexity Report - Module: Media
 
+=======
+# Cyclomatic Complexity Report - Module: Media
+
+**Generated:** 2025-10-01 19:44:11  
+>>>>>>> 4e14511d (.)
 **Analyzer:** Super Mucca 🐮
 
 ---
@@ -31,7 +37,11 @@ related:
 
 ### What is Cyclomatic Complexity?
 
+<<<<<<< HEAD
 La complessità ciclomatica è una metrica del software che misura la complessità di un programma.
+=======
+La complessità ciclomatica è una metrica del software che misura la complessità di un programma. 
+>>>>>>> 4e14511d (.)
 Viene calcolata contando il numero di percorsi di esecuzione indipendenti attraverso il codice sorgente.
 
 ### Interpretation Guidelines

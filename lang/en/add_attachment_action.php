@@ -6,6 +6,7 @@ return [
     'title' => 'Attachments',
     'label' => 'Upload attachment',
     'fields' => [
+<<<<<<< HEAD
         'file' => [
             'label' => 'file',
             'tooltip' => '',
@@ -40,5 +41,11 @@ return [
     ],
     'plural_label' => 'Missing Plural label',
     'actions' => [
+=======
+        'file' => 'file',
+        'file_hint' => '',
+        'name' => 'Name',
+        'name_hint' => 'file name',
+>>>>>>> 4e14511d (.)
     ],
 ];
