@@ -82,7 +82,7 @@ abstract class TestCase extends XotBaseTestCase
 
     protected function setUp(): void
     {
-        $this->prepareSharedFixcitySqliteForTesting();
+        $this->prepareSharedSqliteForTesting();
 
         parent::setUp();
 
@@ -146,7 +146,7 @@ abstract class TestCase extends XotBaseTestCase
     /**
      * Lo sqlite condiviso non contiene per forza le tabelle del modulo Media:
      * i test che toccano il DB vanno saltati, non falliti.
-     * fixcity_data.sqlite = ambiente offline anche se `media` esiste.
+     * sqlite condiviso = ambiente offline anche se `media` esiste.
      */
     public static function mediaDbUnavailable(): bool
     {
@@ -154,7 +154,7 @@ abstract class TestCase extends XotBaseTestCase
             $connection = DB::connection('media');
             $connection->getPdo();
             $database = (string) $connection->getDatabaseName();
-            if (str_contains($database, 'fixcity_data.sqlite')) {
+            if (str_contains($database, basename(self::sharedSqlitePath()))) {
                 return true;
             }
 
