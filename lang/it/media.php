@@ -8,12 +8,20 @@ return [
     'navigation' => [
         'name' => 'Media',
         'plural' => 'Media',
+<<<<<<< HEAD
         'group' => ['name' => 'Sistema', 'description' => 'Gestione dei file multimediali'],
+=======
+        'group' => [
+            'name' => 'Sistema',
+            'description' => 'Gestione dei file multimediali',
+        ],
+>>>>>>> 4e14511d (.)
         'label' => 'media',
         'sort' => 20,
         'icon' => 'media-main-animated',
     ],
     'fields' => [
+<<<<<<< HEAD
         'name' => ['label' => 'Nome', 'tooltip' => '', 'helper_text' => '', 'description' => '', 'placeholder' => 'name'],
         'guard_name' => ['label' => 'Guard', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'collection_name' => ['label' => 'Collezione', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
@@ -64,5 +72,42 @@ return [
     'plural_label' => 'Media (Plurale)',
     'sections' => [
         'empty' => ['label' => 'empty', 'heading' => 'empty'],
+=======
+        'name' => 'Nome',
+        'guard_name' => 'Guard',
+        'collection_name' => 'Collezione',
+        'filename' => 'Nome File',
+        'mime_type' => 'Tipo',
+        'human_readable_size' => 'Dimensione',
+        'permissions' => 'Permessi',
+        'updated_at' => 'Aggiornato il',
+        'first_name' => 'Nome',
+        'last_name' => 'Cognome',
+        'select_all' => [
+            'name' => 'Seleziona Tutti',
+            'message' => '',
+        ],
+        'creator' => [
+            'name' => 'Creatore',
+        ],
+        'uploaded_at' => 'Caricato il',
+    ],
+    'actions' => [
+        'import' => [
+            'fields' => [
+                'import_file' => 'Seleziona un file XLS o CSV da caricare',
+            ],
+        ],
+        'export' => [
+            'filename_prefix' => 'Aree al',
+            'columns' => [
+                'name' => 'Nome area',
+                'parent_name' => 'Nome area livello superiore',
+            ],
+        ],
+    ],
+    'model' => [
+        'label' => 'media.model',
+>>>>>>> 4e14511d (.)
     ],
 ];

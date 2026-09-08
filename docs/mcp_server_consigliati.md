@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Server MCP consigliati per il modulo Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "mcp server consigliati"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 4e14511d (.)
 # Server MCP consigliati per il modulo Media
 
 ## Scopo del modulo
@@ -33,4 +36,8 @@ Gestione, manipolazione e automazione di file e media.
 ```
 
 **Nota:**
+<<<<<<< HEAD
 Aggiungi solo i server che realmente ti servono per il tuo workflow.
+=======
+Aggiungi solo i server che realmente ti servono per il tuo workflow. 
+>>>>>>> 4e14511d (.)
