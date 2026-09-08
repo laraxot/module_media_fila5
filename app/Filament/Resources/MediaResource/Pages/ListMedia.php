@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
+<<<<<<< HEAD
 use RuntimeException;
+=======
+>>>>>>> 9b998103 (.)
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
@@ -17,6 +20,10 @@ use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Override;
+<<<<<<< HEAD
+=======
+use RuntimeException;
+>>>>>>> 9b998103 (.)
 use Webmozart\Assert\Assert;
 
 class ListMedia extends XotBaseListRecords
@@ -81,20 +88,35 @@ class ListMedia extends XotBaseListRecords
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
+<<<<<<< HEAD
                 ->action(static function ($record) {
+=======
+                ->action(static function (mixed $record) {
+>>>>>>> 9b998103 (.)
                     // PHPStan Level 10: isset() per Eloquent magic property
                     if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
                         throw new RuntimeException('Invalid record for download');
                     }
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
+<<<<<<< HEAD
 
                     return response()->download($filePath, (string) $record->file_name);
+=======
+                    $fileName = $record->file_name;
+                    Assert::string($fileName);
+
+                    return response()->download($filePath, $fileName);
+>>>>>>> 9b998103 (.)
                 }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
+<<<<<<< HEAD
                 ->url(function ($record): string {
+=======
+                ->url(static function (mixed $record): string {
+>>>>>>> 9b998103 (.)
                     Assert::string($res = static::$resource::getUrl('convert', ['record' => $record]));
 
                     return $res;

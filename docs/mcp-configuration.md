@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "MCP Server Configuration - Media Module"
+module: "Media"
+type: concept
+tags: [mcp, configuration]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "mcp configuration"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # MCP Server Configuration - Media Module
 
 
@@ -36,14 +50,22 @@ The Media module's MCP configuration enables AI assistants to interact with:
     },
     "filesystem": {
       "command": "npx",
+<<<<<<< HEAD
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_laravelpizza/laravel"],
+=======
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/var/www/_bases/base_<nome progetto>/laravel"],
+>>>>>>> 9b998103 (.)
       "description": "Access to Media module files"
     },
     "database": {
       "command": "npx",
       "args": ["-y", "@bytebase/dbhub"],
       "env": {
+<<<<<<< HEAD
         "DATABASE_URL": "sqlite:///var/www/_bases/base_laravelpizza/laravel/database/database.sqlite"
+=======
+        "DATABASE_URL": "sqlite:///var/www/_bases/base_<nome progetto>/laravel/database/database.sqlite"
+>>>>>>> 9b998103 (.)
       },
       "description": "SQLite database queries"
     }
@@ -58,7 +80,11 @@ The Media module's MCP configuration enables AI assistants to interact with:
 ### Asana Integration
 ```bash
 # Create task
+<<<<<<< HEAD
 "Create task in 'LaravelPizza - Media Module' project: 'Increase test coverage to 90%'"
+=======
+"Create task in '<nome progetto> - Media Module' project: 'Increase test coverage to 90%'"
+>>>>>>> 9b998103 (.)
 
 # Update status
 "Update task 'Reduce PHPStan suppressions' status to 'In Progress'"
@@ -111,9 +137,15 @@ The Media module's MCP configuration enables AI assistants to interact with:
 
 ## 📚 Related Documentation
 
+<<<<<<< HEAD
 - [Asana MCP Configuration](../../../docs/mcp-asana-configuration.md)
 - [ClickUp MCP Configuration](../../../docs/mcp-clickup-configuration.md)
 - [Redmine MCP Configuration](../../../docs/mcp-redmine-configuration.md)
+=======
+- [Asana MCP Configuration](../../../../docs/mcp-asana-configuration.md)
+- [ClickUp MCP Configuration](../../../../docs/mcp-clickup-configuration.md)
+- [Redmine MCP Configuration](../../../../docs/mcp-redmine-configuration.md)
+>>>>>>> 9b998103 (.)
 - [Media Module Roadmap](./roadmap-[date].md)
 
 ---
@@ -128,4 +160,8 @@ The Media module's MCP configuration enables AI assistants to interact with:
 
 **Module**: Media (File & Asset Management)
 **MCP Version**: 2.0.0
+<<<<<<< HEAD
 **Last Review**: 31 Gennaio 2026
+=======
+**Last Review**: 31 Gennaio 2026
+>>>>>>> 9b998103 (.)

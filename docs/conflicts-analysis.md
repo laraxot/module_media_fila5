@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Analisi Conflitti - README.md"
+module: "Media"
+type: concept
+tags: [conflicts, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflicts analysis"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Analisi Conflitti - README.md
 
 ## Obiettivi Funzionali

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Risoluzione dei Conflitti Git nel Modulo Media"
+module: "Media"
+type: concept
+tags: [conflitti, merge, risolti]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflitti merge risolti"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Risoluzione dei Conflitti Git nel Modulo Media
 
 ## Panoramica
@@ -8,14 +22,24 @@ Questo documento descrive i conflitti di merge Git risolti nel modulo Media e fo
 
 Per una panoramica generale sulla risoluzione dei conflitti Git nel progetto, consultare:
 
+<<<<<<< HEAD
 - [Risoluzione Conflitti Git](../../../../docs/risoluzione_conflitti_git.md)
 - [Report completo di intervento](../../../../docs/logs/conflict_resolution_report.md)
 - [Gestione Git con Script Bash](../../../../docs/bashscripts/gestione_git.md)
+=======
+- [Risoluzione Conflitti Git](../../../../../docs/risoluzione_conflitti_git.md)
+- [Report completo di intervento](../../../../../docs/logs/conflict_resolution_report.md)
+- [Gestione Git con Script Bash](../../../../../docs/bashscripts/gestione_git.md)
+>>>>>>> 9b998103 (.)
 
 ## Collegamenti alle Risoluzioni Specifiche
 
 - [Risoluzione conflitto VideoEntry](./risoluzione_conflitti_video_entry.md)
+<<<<<<< HEAD
 - [Risoluzione conflitto MediaConvertResource](../../../../docs/media_convert_resource_conflict.md)
+=======
+- [Risoluzione conflitto MediaConvertResource](../../../../../docs/media_convert_resource_conflict.md)
+>>>>>>> 9b998103 (.)
 
 ## File Risolti
 
@@ -112,7 +136,11 @@ public function getFileAttribute(?string $value): ?string
 
 **Decisione architetturale**: È stata adottata la versione che utilizza `tap($this->model)->update($up)`, eliminando linee ridondanti e mantenendo lo stile coerente. Questa scelta garantisce che l'oggetto model sia sempre aggiornato e pronto per un utilizzo successivo.
 
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> 9b998103 (.)
 
 ---
 
@@ -162,7 +190,11 @@ public function getFromXml($xmlFile)
 
 **Decisione architetturale**: È stata adottata la versione che mantiene gli import ordinati e privi di duplicazioni, eliminando linee vuote inutili e assicurando che la logica del metodo sia compatta e leggibile. Nessuna modifica funzionale è stata introdotta, ma solo miglioramenti di stile e mantenibilità.
 
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> 9b998103 (.)
 
 ---
 
@@ -176,7 +208,11 @@ Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare 
 
 **Decisione architetturale**: È stata adottata la versione che utilizza `Storage::disk($disk_mp4)->path($file_new)` per mantenere coerenza con le altre azioni di conversione e per evitare la generazione di URL quando non necessaria.
 
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> 9b998103 (.)
 
 ### 7. VideoStream.php
 
@@ -222,7 +258,11 @@ protected static ?string $navigationIcon = 'fas-photo-film';
 /**
  * @return array<string, \Filament\Forms\Components\Component>
  */
+<<<<<<< HEAD
 public static function getFormSchema(): array
+=======
+public function getFormSchema(): array
+>>>>>>> 9b998103 (.)
 {
     return [
         FileUpload::make('file')
@@ -282,7 +322,11 @@ protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
  * Restituisce lo schema del form per la risorsa MediaConvert.
  * @return array<int, \Filament\Forms\Components\Component>
  */
+<<<<<<< HEAD
 public static function getFormSchema(): array
+=======
+public function getFormSchema(): array
+>>>>>>> 9b998103 (.)
 {
     return [
         Radio::make('format')
@@ -304,7 +348,11 @@ public static function getFormSchema(): array
 }
 ```
 
+<<<<<<< HEAD
 Per dettagli completi sulla risoluzione di MediaConvertResource, vedere [documentazione dedicata](../../../../docs/media_convert_resource_conflict.md).
+=======
+Per dettagli completi sulla risoluzione di MediaConvertResource, vedere [documentazione dedicata](../../../../../docs/media_convert_resource_conflict.md).
+>>>>>>> 9b998103 (.)
 
 ### 11. Merge.php
 
@@ -314,7 +362,11 @@ Per dettagli completi sulla risoluzione di MediaConvertResource, vedere [documen
 
 **Decisione architetturale**: È stata adottata la versione che utilizza il driver Gd di Intervention Image, con gestione esplicita delle dimensioni della canvas e posizionamento progressivo delle immagini. La soluzione mantiene la compatibilità con l'ecosistema Laravel e assicura la massima chiarezza del flusso di composizione.
 
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> 9b998103 (.)
 
 ---
 
@@ -324,7 +376,11 @@ Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare 
 
 **Decisione architetturale**: È stata adottata la versione che utilizza il driver Gd di Intervention Image, con gestione esplicita delle dimensioni della canvas e posizionamento progressivo delle immagini. La soluzione mantiene la compatibilità con l'ecosistema Laravel e assicura la massima chiarezza del flusso di composizione.
 
+<<<<<<< HEAD
 Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../docs/risoluzione_conflitti_git.md).
+=======
+Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare riferimento alla [documentazione centrale](../../../../../docs/risoluzione_conflitti_git.md).
+>>>>>>> 9b998103 (.)
 
 ### 12. VideoEntry.php
 

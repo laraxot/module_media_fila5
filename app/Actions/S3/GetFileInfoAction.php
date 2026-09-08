@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\S3;
 
 use Aws\S3\Exception\S3Exception;
+<<<<<<< HEAD
+=======
+use Webmozart\Assert\Assert;
+>>>>>>> 9b998103 (.)
 
 class GetFileInfoAction extends BaseS3Action
 {
@@ -22,9 +26,17 @@ class GetFileInfoAction extends BaseS3Action
             ]);
 
             $metadata = $result['@metadata'] ?? [];
+<<<<<<< HEAD
             $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
                 ? ((string) $metadata['effectiveUri'])
                 : null;
+=======
+            $effectiveUri = null;
+            if (is_array($metadata) && isset($metadata['effectiveUri'])) {
+                Assert::string($metadata['effectiveUri']);
+                $effectiveUri = $metadata['effectiveUri'];
+            }
+>>>>>>> 9b998103 (.)
 
             $fileInfo = [
                 'exists' => true,

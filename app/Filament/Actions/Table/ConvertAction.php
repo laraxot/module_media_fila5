@@ -10,10 +10,17 @@ namespace Modules\Media\Filament\Actions\Table;
 
 // Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
 // use Filament\Actions\Action;
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Forms\Components\Radio;
 
 class ConvertAction extends Action
+=======
+use Filament\Forms\Components\Radio;
+use Modules\Xot\Filament\Actions\XotBaseAction;
+
+class ConvertAction extends XotBaseAction
+>>>>>>> 9b998103 (.)
 {
     protected function setUp(): void
     {
@@ -31,7 +38,13 @@ class ConvertAction extends Action
                     ->inline()
                     ->inlineLabel(false),
             ])
+<<<<<<< HEAD
             ->action(dddx(...));
+=======
+            ->action(static function (): void {
+                throw new \RuntimeException('Removed debug dddx');
+            });
+>>>>>>> 9b998103 (.)
 
         // ->requiresConfirmation()
     }

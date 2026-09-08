@@ -1,11 +1,31 @@
+<<<<<<< HEAD
+=======
+---
+title: "Pacchetti del Modulo Media"
+module: "Media"
+type: concept
+tags: [packages]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "packages"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Pacchetti del Modulo Media
 
 ## Pacchetti Utilizzati
 
 ### Core
+<<<<<<< HEAD
 - [laraxot/module_xot_fila3](../xot/docs/packages.md) - Modulo base per funzionalità comuni
 - [laraxot/module_ui](../ui/docs/packages.md) - Componenti UI e temi
 - [laraxot/module_tenant_fila3](../tenant/docs/packages.md) - Gestione multi-tenant
+=======
+- [laraxot/module_xot_fila5](../xot/docs/packages.md) - Modulo base per funzionalità comuni
+- [laraxot/module_ui](../ui/docs/packages.md) - Componenti UI e temi
+- [laraxot/module_tenant_fila5](../tenant/docs/packages.md) - Gestione multi-tenant
+>>>>>>> 9b998103 (.)
 
 ### Media
 - [spatie/laravel-medialibrary](https://github.com/spatie/laravel-medialibrary)

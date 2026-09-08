@@ -14,8 +14,15 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Actions;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Section;
 use Modules\Media\Filament\Clusters\Test;
+=======
+use Filament\Schemas\Components\Component;
+use Filament\Schemas\Components\Section;
+use Modules\Media\Filament\Clusters\Test;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+>>>>>>> 9b998103 (.)
 use Modules\Xot\Filament\Pages\XotBasePage;
 
 use function Safe\json_encode;
@@ -24,14 +31,26 @@ class AwsTest extends XotBasePage
 {
     protected static ?string $cluster = Test::class;
 
+<<<<<<< HEAD
+=======
+    /** @var array<string, mixed> */
+>>>>>>> 9b998103 (.)
     public array $testResults = [];
 
     public string $activeTab = 's3';
 
+<<<<<<< HEAD
     private const DEFAULT_REGION = 'eu-west-1';
 
     private const KEY_PREVIEW_LENGTH = 8;
 
+=======
+    private const string DEFAULT_REGION = 'eu-west-1';
+
+    private const int KEY_PREVIEW_LENGTH = 8;
+
+    /** @var array<string, string> */
+>>>>>>> 9b998103 (.)
     public array $connectionTests = [
         's3' => 'Test S3 Connection',
         'cloudfront' => 'Test CloudFront',
@@ -39,6 +58,12 @@ class AwsTest extends XotBasePage
         'full' => 'Full Diagnostic',
     ];
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return array<int, Component>
+     */
+>>>>>>> 9b998103 (.)
     protected function getS3TestSchema(): array
     {
         return [
@@ -67,6 +92,12 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return array<int, Component>
+     */
+>>>>>>> 9b998103 (.)
     protected function getCloudFrontTestSchema(): array
     {
         return [
@@ -85,11 +116,21 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return array<int, Component>
+     */
+>>>>>>> 9b998103 (.)
     protected function getIamTestSchema(): array
     {
         return [
             Section::make('IAM Permissions Test')->schema([
+<<<<<<< HEAD
                 TextInput::make('iam_user')->default(env('AWS_ACCESS_KEY_ID')),
+=======
+                TextInput::make('iam_user')->default(config('filesystems.disks.s3.key')),
+>>>>>>> 9b998103 (.)
                 Actions::make([
                     Action::make('test_iam_credentials')->action('testIamCredentials'),
                     Action::make('test_iam_policies')->color('warning')->action('testIamPolicies'),
@@ -103,6 +144,12 @@ class AwsTest extends XotBasePage
         ];
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return array<int, Component>
+     */
+>>>>>>> 9b998103 (.)
     protected function getDiagnosticsSchema(): array
     {
         return [
@@ -228,10 +275,20 @@ class AwsTest extends XotBasePage
     }
 
     /* Helper Methods */
+<<<<<<< HEAD
     protected function getAwsConfig(): array
     {
         return [
             'AWS_ACCESS_KEY_ID' => substr((string) config('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH).'...',
+=======
+    /**
+     * @return array<string, mixed>
+     */
+    protected function getAwsConfig(): array
+    {
+        return [
+            'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, self::KEY_PREVIEW_LENGTH).'...',
+>>>>>>> 9b998103 (.)
             'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
             'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
             'CLOUDFRONT_URL' => config('filesystems.cloudfront.url'),

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Risoluzione Conflitto in VideoEntry"
+module: "Media"
+type: concept
+tags: [risoluzione, conflitti, video, entry]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "risoluzione conflitti video entry"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Risoluzione Conflitto in VideoEntry
 
 ## Panoramica
@@ -68,11 +82,20 @@ public function getHeight(): ?string
 
 La soluzione è stata verificata con:
 
+<<<<<<< HEAD
 1. **Analisi statica**: PHPStan livello 9 
+=======
+1. **Analisi statica**: PHPStan livello 9
+>>>>>>> 9b998103 (.)
 2. **Test visivi**: Verifica del corretto rendering dei video nel pannello di amministrazione
 3. **Validazione tipi**: Verifica che tutte le conversioni di tipo siano sicure e non generino errori
 
 ## Collegamenti Bidirezionali
 
+<<<<<<< HEAD
 - [Documentazione principale risoluzione conflitti git](../../../../docs/risoluzione_conflitti_git.md)
 - [Documentazione dettagliata VideoEntry](../../../../docs/video_entry_conflict.md) 
+=======
+- [Documentazione principale risoluzione conflitti git](../../../../../docs/risoluzione_conflitti_git.md)
+- [Documentazione dettagliata VideoEntry](../../../../../docs/video_entry_conflict.md)
+>>>>>>> 9b998103 (.)

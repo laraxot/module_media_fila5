@@ -26,6 +26,7 @@ class TemporaryUploadResource extends XotBaseResource
     protected static ?string $model = TemporaryUpload::class;
 
     /**
+<<<<<<< HEAD
      * @return array<string, Component>
      */
     #[Override]
@@ -43,6 +44,8 @@ class TemporaryUploadResource extends XotBaseResource
     }
 
     /**
+=======
+>>>>>>> 9b998103 (.)
      * @psalm-return array<never, never>
      */
     #[Override]

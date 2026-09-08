@@ -43,12 +43,16 @@ abstract class BaseS3Action
      */
     protected function getStringConfig(string $configKey, string $envKey, string $default): string
     {
+<<<<<<< HEAD
         // Check config first
+=======
+>>>>>>> 9b998103 (.)
         $configValue = config($configKey);
         if (is_string($configValue) && trim($configValue) !== '') {
             return $configValue;
         }
 
+<<<<<<< HEAD
         // Fallback to environment
         $envValue = env($envKey);
         if (is_string($envValue) && trim($envValue) !== '') {
@@ -56,6 +60,23 @@ abstract class BaseS3Action
         }
 
         // Return default
+=======
+        $filesystemsKey = match ($envKey) {
+            'AWS_BUCKET_NAME' => 'filesystems.disks.s3.bucket',
+            'AWS_REGION' => 'filesystems.disks.s3.region',
+            'AWS_ACCESS_KEY_ID' => 'filesystems.disks.s3.key',
+            'AWS_SECRET_ACCESS_KEY' => 'filesystems.disks.s3.secret',
+            default => null,
+        };
+
+        if ($filesystemsKey !== null) {
+            $fallbackValue = config($filesystemsKey);
+            if (is_string($fallbackValue) && trim($fallbackValue) !== '') {
+                return $fallbackValue;
+            }
+        }
+
+>>>>>>> 9b998103 (.)
         return $default;
     }
 }

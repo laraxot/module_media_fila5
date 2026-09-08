@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Roadmap Root Symlink"
+module: "Media"
+type: concept
+tags: [roadmap, root, symlink]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "roadmap root symlink"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 roadmap_media.md
 ## Collegamenti tra versioni di roadmap_root_symlink.md
 * [roadmap_root_symlink.md](../../../notify/docs/roadmap_root_symlink.md)

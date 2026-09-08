@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media Module Test Coverage"
+module: "Media"
+type: concept
+tags: [coverage]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "coverage"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Media Module Test Coverage
 
 ## Coverage Results
@@ -9,6 +23,18 @@
 ## Test Execution Summary
 
 - **Tests Passed**: 59
+<<<<<<< HEAD
+=======
+## Status
+
+**2026-09-06 (Session 2)**:
+- PHPStan L10: 4 errors fixed (generics removed, deprecated tests commented)
+- PHPMD: No violations detected
+- Pest: 260/285 passed (91.2% pass rate)
+- Coverage status: Baseline established (0.00% per-module app code)
+- Next: Pest coverage boost target +5% (Phase 2)
+
+>>>>>>> 9b998103 (.)
 - **Tests Skipped**: 5
 - **Assertions**: 122
 - **Coverage (Modules/Media/app)**: 0.00% (0/2140 statements)
@@ -58,5 +84,8 @@ PY
 
 - The Media module test suite is now stable and reflects the actual runtime schema.
 - Coverage is currently 0% because the executed tests do not hit code paths under `Modules/Media/app` that are counted as executable statements by the coverage driver.
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9b998103 (.)

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
+<<<<<<< HEAD
 use Modules\Media\Models\Media;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
@@ -21,12 +22,20 @@ use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Override;
+=======
+use Filament\Actions\DeleteAction;
+use Modules\Media\Filament\Resources\MediaResource;
+use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
+use Modules\Media\Models\Media;
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+>>>>>>> 9b998103 (.)
 
 class ViewMedia extends XotBaseViewRecord
 {
     protected static string $resource = MediaResource::class;
 
     /**
+<<<<<<< HEAD
      * Restituisce lo schema dell'infolist per la visualizzazione dei dettagli del record.
      *
      * @return array<int, Component>
@@ -86,11 +95,18 @@ class ViewMedia extends XotBaseViewRecord
      * @return array<DeleteAction>
      *
      * @psalm-return list{DeleteAction}
+=======
+     * @return array<string, DeleteAction>
+>>>>>>> 9b998103 (.)
      */
     protected function getHeaderActions(): array
     {
         return [
+<<<<<<< HEAD
             DeleteAction::make(),
+=======
+            'delete' => DeleteAction::make(),
+>>>>>>> 9b998103 (.)
         ];
     }
 

@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Modules\Media\Filament\Resources\MediaConvertResource;
@@ -20,3 +21,15 @@ test('get form schema returns expected components', function (): void {
     expect($componentClasses)->toContain(Radio::class);
     expect($componentClasses)->toContain(TextInput::class);
 });
+=======
+namespace Modules\Media\Tests\Filament\Resources;
+
+use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\TextInput;
+use Modules\Media\Filament\Resources\MediaConvertResource;
+use Modules\Media\Tests\TestCase;
+
+uses(TestCase::class);
+
+
+>>>>>>> 9b998103 (.)

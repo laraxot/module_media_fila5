@@ -13,6 +13,7 @@ return [
         ],
     ],
     'fields' => [
+<<<<<<< HEAD
         'file' => 'file',
         'file_hint' => 'Carica un allegato',
         'name' => [
@@ -34,16 +35,116 @@ return [
         'select_all' => [
             'name' => 'Seleziona Tutti',
             'message' => '',
+=======
+        'file' => [
+            'label' => 'file',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'file_hint' => [
+            'label' => 'Carica un allegato',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'guard_name' => [
+            'label' => 'Guard',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'collection_name' => [
+            'label' => 'Collezione',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'filename' => [
+            'label' => 'Nome File',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'mime_type' => [
+            'label' => 'Tipo',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'human_readable_size' => [
+            'label' => 'Dimensione',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'permissions' => [
+            'label' => 'Permessi',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'updated_at' => [
+            'label' => 'Aggiornato il',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'first_name' => [
+            'label' => 'Nome',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'last_name' => [
+            'label' => 'Cognome',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'select_all' => [
+            'name' => 'Seleziona Tutti',
+            'message' => '',
+            'label' => '',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+>>>>>>> 9b998103 (.)
         ],
         'creator' => [
             'name' => 'Creatore',
             'full_name' => [
                 'label' => 'Creatore',
             ],
+<<<<<<< HEAD
         ],
         'uploaded_at' => 'Aggiornato il',
         'created_at' => [
             'label' => 'Caricato il',
+=======
+            'label' => '',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'uploaded_at' => [
+            'label' => 'Aggiornato il',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'created_at' => [
+            'label' => 'Caricato il',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+>>>>>>> 9b998103 (.)
         ],
     ],
     'actions' => [
@@ -60,4 +161,9 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
+=======
+    'label' => 'Attachment',
+    'plural_label' => 'Attachment (Plurale)',
+>>>>>>> 9b998103 (.)
 ];

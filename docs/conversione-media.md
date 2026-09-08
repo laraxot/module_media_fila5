@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Conversione Media"
+module: "Media"
+type: concept
+tags: [conversione, media]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conversione media"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Conversione Media
 
 ## Risorse Utili

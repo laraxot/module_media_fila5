@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions;
 
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
@@ -36,6 +37,38 @@ class GetAttachmentsSchemaAction
                 ->previewable(false)
                 // ->saveUploadedFiles()
                 ->afterStateUpdated(function ($state, Set $set) use ($attachment, $sessionDir, $disk): void {
+=======
+use Filament\Forms\Components\FileUpload;
+use Filament\Schemas\Components\Utilities\Set;
+use Illuminate\Support\Arr;
+use Webmozart\Assert\Assert;
+
+class GetAttachmentsSchemaAction
+{
+    /**
+     * @param  array<string|int, string>  $attachments
+     * @return array<int, FileUpload>
+     */
+    public function execute(array $attachments, string $disk = 'attachments'): array
+    {
+        $form = [];
+
+        foreach ($attachments as $attachment) {
+            $attachmentStr = (string) $attachment;
+            $fileUpload = FileUpload::make($attachmentStr)
+                ->directory('temp')
+                ->disk($disk)
+                ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
+                ->maxSize(10 * 1024)
+                ->visibility('public')
+                ->preserveFilenames()
+                ->required()
+                ->previewable(true)
+                ->downloadable(true)
+                ->reorderable(false)
+                ->multiple(false)
+                ->afterStateUpdated(function (mixed $state, Set $set) use ($attachment): void {
+>>>>>>> 9b998103 (.)
                     if (! $state) {
                         return;
                     }
@@ -44,6 +77,7 @@ class GetAttachmentsSchemaAction
                     $sessionFiles = [];
 
                     foreach ($state as $file) {
+<<<<<<< HEAD
                         if ($file instanceof TemporaryUploadedFile) {
                             // Salva direttamente nella directory di sessione
                             $fileName = time().'_'.$file->getClientOriginalName();
@@ -59,6 +93,16 @@ class GetAttachmentsSchemaAction
                     Assert::string($attachment, 'Attachment must be string');
                     $set($attachment, $sessionFiles);
                 });
+=======
+                        $sessionFiles[] = $file;
+                    }
+
+                    Assert::string($attachment, 'Attachment must be string');
+                    $set($attachment, $sessionFiles);
+                });
+
+            $form[] = $fileUpload;
+>>>>>>> 9b998103 (.)
         }
 
         return $form;

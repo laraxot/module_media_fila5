@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "FileUpload foreach Error Fix - Internal Server Error"
+module: "Media"
+type: concept
+tags: [fileupload, foreach, error, fix]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "fileupload foreach error fix"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # FileUpload foreach Error Fix - Internal Server Error
 
 ## Problema Identificato
@@ -201,6 +215,9 @@ public function getFormFill(): array
 - [Modules/Xot/docs/fileupload-components.md](../laravel/modules/xot/docs/fileupload-components.md)
 - [Modules/User/docs/registration-widget.md](../laravel/modules/user/docs/registration-widget.md)
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: [DATE]*
+=======
+>>>>>>> 9b998103 (.)
 *Autore: AI Assistant*
 *Versione: 1.0*

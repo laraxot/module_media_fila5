@@ -1,6 +1,23 @@
+<<<<<<< HEAD
 # 🐄 DRY & KISS Analysis - Media
 
 **Data:** 2025-10-15 | **Status:** ✅
+=======
+---
+title: "🐄 DRY & KISS Analysis - Media"
+module: "Media"
+type: concept
+tags: [dry, kiss, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "dry kiss analysis"
+related:
+  - "./webm.md"
+---
+# 🐄 DRY & KISS Analysis - Media
+
+**Data:** [DATE] | **Status:** ✅
+>>>>>>> 9b998103 (.)
 
 ## 📊 Struttura
 Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83
@@ -21,4 +38,7 @@ Models: 8 | Resources: 3 | Services: 2 | Actions: 17 | Docs: 83
 Resources refactoring (2 giorni)
 
 **Status:** 🟢 BUONO
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9b998103 (.)

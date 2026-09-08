@@ -64,11 +64,21 @@ return [
             'label' => 'Anhang',
             'placeholder' => 'Wählen Sie eine Datei zum Anhängen',
             'helper_text' => 'Testdatei zur Überprüfung der S3-Operationen',
+<<<<<<< HEAD
+=======
+            'tooltip' => '',
+            'description' => '',
+>>>>>>> 9b998103 (.)
         ],
         'debug_output' => [
             'label' => 'Debug-Ausgabe',
             'placeholder' => 'Testergebnisse werden hier angezeigt',
             'helper_text' => 'Detaillierte Ausgabe der ausgeführten Tests',
+<<<<<<< HEAD
+=======
+            'tooltip' => '',
+            'description' => '',
+>>>>>>> 9b998103 (.)
         ],
     ],
     'messages' => [
@@ -97,4 +107,16 @@ return [
         'check_cloudfront_config' => 'Überprüfen Sie die CloudFront-Konfiguration',
         'contact_admin' => 'Kontaktieren Sie den Systemadministrator',
     ],
+<<<<<<< HEAD
+=======
+    'navigation' => [
+        'label' => 'Missing Navigation Label',
+        'plural_label' => 'Missing Navigation Plural Label',
+        'group' => 'Missing Group',
+        'icon' => 'heroicon-o-puzzle-piece',
+        'sort' => 100,
+    ],
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+>>>>>>> 9b998103 (.)
 ];

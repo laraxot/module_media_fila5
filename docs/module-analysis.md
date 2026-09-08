@@ -1,10 +1,28 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media Module - Comprehensive Analysis"
+module: "Media"
+type: concept
+tags: [module, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "module analysis"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Media Module - Comprehensive Analysis
 
 ## Module Overview
 **Module Name**: Media  
 **Type**: Media Management Module  
 **Status**: ✅ Active  
+<<<<<<< HEAD
 **Framework**: Laravel 12.x + Filament 4.x  
+=======
+**Framework**: Laravel 13.x + Filament 4.x  
+>>>>>>> 9b998103 (.)
 **Library Integration**: Spatie Media Library  
 **Language**: Multi-language (IT/EN/DE)  
 
@@ -60,7 +78,12 @@ The Media module provides comprehensive media file management:
 ## Integration with Other Modules
 - **Cms**: Content asset management
 - **User**: User profile images
+<<<<<<< HEAD
 - **Quaeris**: Report and chart images
+=======
+- **healthcare_app**: Report and chart images
+- **ModuloEsempio**: Report and chart images
+>>>>>>> 9b998103 (.)
 - **Xot**: Base media functionality
 - **Filament**: Media management interface
 
@@ -91,4 +114,8 @@ The Media module provides comprehensive media file management:
 - Bulk operations
 - Advanced search
 - Metadata management
+<<<<<<< HEAD
 - Performance optimization
+=======
+- Performance optimization
+>>>>>>> 9b998103 (.)

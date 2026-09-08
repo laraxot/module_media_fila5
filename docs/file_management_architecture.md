@@ -1031,7 +1031,11 @@ class MediaAnalyticsService
 }
 ```
 
+<<<<<<< HEAD
 ## 🚀 Modern Laravel 12 + PHP 8.3 Optimizations
+=======
+## 🚀 Modern Laravel 13 + PHP 8.3 Optimizations
+>>>>>>> 9b998103 (.)
 
 ### Enhanced Type Safety & Enums
 ```php
@@ -1143,4 +1147,9 @@ readonly class ConversionConfiguration
 - **User Satisfaction**: >95% upload success rate
 - **System Performance**: <2GB memory usage per worker
 
+<<<<<<< HEAD
 Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+=======
+Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+>>>>>>> 9b998103 (.)

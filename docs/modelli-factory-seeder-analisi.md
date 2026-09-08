@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Analisi Modelli, Factory e Seeder - Modulo Media"
+module: "Media"
+type: concept
+tags: [modelli, factory, seeder, analisi]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "modelli factory seeder analisi"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 
 # Analisi Modelli, Factory e Seeder - Modulo Media
 
@@ -33,7 +47,11 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 - **Versioning**: Gestione versioni multiple file
 
 **Relazioni Business Logic**:
+<<<<<<< HEAD
 - **<nome progetto>**: Documenti pazienti, referti medici, immagini profilo
+=======
+- **Dominio sanitario**: Documenti pazienti, referti medici, immagini profilo
+>>>>>>> 9b998103 (.)
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
 - **Notify**: Allegati notifiche email
@@ -196,10 +214,17 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 - [Performance Optimization](./performance_optimization.md)
 
 ### Moduli Collegati
+<<<<<<< HEAD
 - [<nome progetto> Module](../../<nome progetto>/docs/modelli_factory_seeder_analisi.md) - Documenti medici
 - [User Module](../../user/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
 - [Notify Module](../../notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
+=======
+- Modulo sanitario legacy - Documenti medici
+- [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
+- [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
+- [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche
+>>>>>>> 9b998103 (.)
 
 ### Librerie e Servizi
 - [Intervention Image](http://image.intervention.io/) - Image processing

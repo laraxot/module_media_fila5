@@ -9,7 +9,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use SimpleXMLElement;
+<<<<<<< HEAD
 use Webmozart\Assert\Assert;
+=======
+>>>>>>> 9b998103 (.)
 
 use function Safe\file_put_contents;
 use function Safe\fopen;
@@ -18,6 +21,11 @@ use function Safe\simplexml_load_string;
 
 /**
  * SubtitleService.
+<<<<<<< HEAD
+=======
+ *
+ * @phpstan-type SubtitleItem array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}
+>>>>>>> 9b998103 (.)
  */
 class SubtitleService
 {
@@ -28,6 +36,10 @@ class SubtitleService
 
     public string $field_name = 'txt';
 
+<<<<<<< HEAD
+=======
+    /** @var list<SubtitleItem> */
+>>>>>>> 9b998103 (.)
     public array $subtitles = [];
 
     public Model $model;
@@ -40,7 +52,11 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
+<<<<<<< HEAD
             self::$instance = new self;
+=======
+            self::$instance = new self();
+>>>>>>> 9b998103 (.)
         }
 
         return self::$instance;
@@ -100,7 +116,13 @@ class SubtitleService
     }
 
     /**
+<<<<<<< HEAD
      * restituisce i sottotitoli, dal file ..
+=======
+     * Restituisce i sottotitoli dal file.
+     *
+     * @return list<SubtitleItem>
+>>>>>>> 9b998103 (.)
      */
     public function get(): array
     {
@@ -109,11 +131,18 @@ class SubtitleService
             return [];
         }
 
+<<<<<<< HEAD
         $func = 'getFrom'.Str::studly($info['extension']);
 
         Assert::isArray($res = $this->{$func}());
 
         return $res;
+=======
+        return match (Str::lower($info['extension'])) {
+            'xml' => $this->getFromXml(),
+            default => [],
+        };
+>>>>>>> 9b998103 (.)
     }
 
     /**
@@ -127,9 +156,13 @@ class SubtitleService
     }
 
     /**
+<<<<<<< HEAD
      * @return array<int, array<string, float|int|string|mixed>>
      *
      * @psalm-return list{0?: array{sentence_i: int<0, max>, item_i: int<0, max>, start: float|int, end: float|int, time: string, text: mixed},...}
+=======
+     * @return list<SubtitleItem>
+>>>>>>> 9b998103 (.)
      */
     public function getFromXml(): array
     {
@@ -158,8 +191,13 @@ class SubtitleService
                     'item_i' => $item_i,
                     'start' => $start,
                     'end' => $end,
+<<<<<<< HEAD
                     'time' => secondsToHms($start).','.secondsToHms($end),
                     'text' => $item->__toString(),
+=======
+                    'time' => $this->secondsToHms($start).','.$this->secondsToHms($end),
+                    'text' => (string) $item,
+>>>>>>> 9b998103 (.)
                 ];
                 $data[] = $tmp;
                 $item_i++;
@@ -202,4 +240,18 @@ class SubtitleService
 
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
     }
+<<<<<<< HEAD
+=======
+
+    private function secondsToHms(int|float $seconds): string
+    {
+        $totalMs = (int) round($seconds * 1000);
+        $hours = intdiv($totalMs, 3_600_000);
+        $minutes = intdiv($totalMs % 3_600_000, 60_000);
+        $secs = intdiv($totalMs % 60_000, 1000);
+        $ms = $totalMs % 1000;
+
+        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
+    }
+>>>>>>> 9b998103 (.)
 }

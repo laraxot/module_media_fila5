@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Media Module - Testing Guidelines"
+module: "Media"
+type: how-to
+tags: [testing, guidelines]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "testing guidelines"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Media Module - Testing Guidelines
 
 ## Testing Framework Requirements

@@ -244,4 +244,8 @@ The Media module needs a robust media management system for handling images, vid
 ---
 
 **Status**: Pending
+<<<<<<< HEAD
 **Assignee**: TBD
+=======
+**Assignee**: TBD
+>>>>>>> 9b998103 (.)

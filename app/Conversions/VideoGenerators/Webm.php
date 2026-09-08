@@ -47,6 +47,12 @@ class Webm extends ImageGenerator
         return true;
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return Collection<int, string>
+     */
+>>>>>>> 9b998103 (.)
     public function supportedExtensions(): Collection
     {
         return collect([
@@ -56,6 +62,12 @@ class Webm extends ImageGenerator
         ]);
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @return Collection<int, string>
+     */
+>>>>>>> 9b998103 (.)
     public function supportedMimeTypes(): Collection
     {
         return collect([

@@ -1,11 +1,31 @@
+<<<<<<< HEAD
 # 📚 **Indice Documentazione Modulo Media**
 
 **Last Update**: 31 Gennaio 2026
+=======
+---
+title: "📚 **Indice Documentazione Modulo Media**"
+module: "Media"
+type: concept
+tags: [00, index]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "00 index"
+related:
+  - "./webm.md"
+---
+# 📚 **Indice Documentazione Modulo Media**
+
+>>>>>>> 9b998103 (.)
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
+<<<<<<< HEAD
 1. [README.md](./readme.md) - Panoramica completa, Upload e Processing.
+=======
+1. [README.md](README.md) - Panoramica completa, Upload e Processing.
+>>>>>>> 9b998103 (.)
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 
@@ -28,6 +48,14 @@
 - 🔬 **[Testing Guidelines](./testing.md)** - Strategie per testare upload e stream.
 - 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
 
+<<<<<<< HEAD
+=======
+## 📦 **Pacchetti Composer**
+- [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
+- `pbmedia/laravel-ffmpeg` - Elaborazione video
+- `intervention/image` - Elaborazione immagini
+
+>>>>>>> 9b998103 (.)
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
@@ -35,3 +63,45 @@
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
+<<<<<<< HEAD
+=======
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)
+
+---
+
+<!-- Merged from 00-INDEX.md, which collided with this file on case-insensitive filesystems. -->
+
+# 📚 MEDIA Module - Documentation Index
+
+**Path**: `laravel/Modules/Media/docs/`  
+**Modulo**: @Modules/Media
+
+## 📄 Documenti
+
+### Product
+| File | Scopo |
+|------|-------|
+| PRD.md | Product Requirements |
+| PRODUCT_ROADMAP.md | Roadmap |
+| PRODUCT_STRATEGY.md | Strategy |
+| PRODUCT_LAUNCH_PLAN.md | Launch Plan |
+
+### Development
+| File | Scopo |
+|------|-------|
+| GSD_WORKFLOW.md | GSD Workflow |
+| SPRINT_PLANNING.md | Sprint Planning |
+| USER_RESEARCH.md | User Research |
+
+## 🔗 Riferimenti
+
+- [Xot Module](../Xot/docs/00-index.md) - Base classes
+- [AGENTS.md](../../../../AGENTS.md) - Project guidelines
+
+---
+
+**Ultimo Aggiornamento**: 2026-03-24
+>>>>>>> 9b998103 (.)

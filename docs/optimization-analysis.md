@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Analisi di Ottimizzazione - Modulo Media"
+module: "Media"
+type: concept
+tags: [optimization, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "optimization analysis"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Analisi di Ottimizzazione - Modulo Media
 
 ## 🎯 Principi Applicati: DRY + KISS + SOLID + ROBUST + Laraxot

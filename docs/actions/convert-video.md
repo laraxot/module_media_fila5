@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "ConvertVideoByConvertDataAction"
+module: "Media"
+type: concept
+tags: [convert, video]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "convert video"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # ConvertVideoByConvertDataAction
 
 ## Panoramica

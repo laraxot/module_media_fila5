@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Task: Ridurre Suppressioni PHPStan Inline - Media"
+module: "Media"
+type: concept
+tags: [task, ridurre, phpstan, suppressioni]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "task ridurre phpstan suppressioni"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Task: Ridurre Suppressioni PHPStan Inline - Media
 
 **Modulo**: Media

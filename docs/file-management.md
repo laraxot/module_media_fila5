@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Gestione dei File in <nome progetto>"
+module: "Media"
+type: concept
+tags: [file, management]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "file management"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Gestione dei File in <nome progetto>
 
 ## Panoramica

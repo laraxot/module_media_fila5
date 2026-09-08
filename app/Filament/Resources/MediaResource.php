@@ -23,6 +23,7 @@ class MediaResource extends XotBaseResource
     protected static ?string $model = Media::class;
 
     /**
+<<<<<<< HEAD
      * @return array<string, Component>
      */
     #[Override]
@@ -46,6 +47,8 @@ class MediaResource extends XotBaseResource
     }
 
     /**
+=======
+>>>>>>> 9b998103 (.)
      * @psalm-return array<never, never>
      */
     #[Override]
@@ -55,9 +58,13 @@ class MediaResource extends XotBaseResource
     }
 
     /**
+<<<<<<< HEAD
      * @return array<PageRegistration>
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
+=======
+     * @return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration, view: PageRegistration, convert: PageRegistration}
+>>>>>>> 9b998103 (.)
      */
     #[Override]
     public static function getPages(): array

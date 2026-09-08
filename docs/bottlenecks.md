@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Colli di Bottiglia e Soluzioni - Modulo Media"
+module: "Media"
+type: concept
+tags: [bottlenecks]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "bottlenecks"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Colli di Bottiglia e Soluzioni - Modulo Media
 
 ## Panoramica
@@ -815,7 +829,11 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 
 ## Collegamenti
 - [Roadmap Principale](./roadmap.md)
+<<<<<<< HEAD
 - [Sintesi Colli di Bottiglia](../../docs/performance_bottlenecks.md)
+=======
+- [Sintesi Colli di Bottiglia](../../../docs/performance_bottlenecks.md)
+>>>>>>> 9b998103 (.)
 - [Best Practices](../xot/docs/best-practices.md)
 - [Struttura Moduli](../xot/docs/module_structure.md)
 

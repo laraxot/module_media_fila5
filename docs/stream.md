@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Stream"
+module: "Media"
+type: concept
+tags: [stream]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "stream"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 https://laravel-news.com/temporary-directory
 
 
@@ -20,4 +34,8 @@ Http::sink($tmpPath)->throw()->get($videoUrl->toString());
 // Cleanup the temporary file
 $tmpFile->delete();
 
+<<<<<<< HEAD
 ----------------------------------------------------------------------------
+=======
+----------------------------------------------------------------------------
+>>>>>>> 9b998103 (.)

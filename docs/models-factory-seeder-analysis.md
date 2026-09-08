@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "Analisi Modelli, Factory e Seeder - Modulo Media"
+module: "Media"
+type: concept
+tags: [models, factory, seeder, analysis]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "models factory seeder analysis"
+related:
+  - "./webm.md"
+---
+>>>>>>> 9b998103 (.)
 # Analisi Modelli, Factory e Seeder - Modulo Media
 
 ## Riepilogo Modelli
@@ -31,4 +45,7 @@
 ## Stato Generale: ✅ COMPLETO
 
 ---
+<<<<<<< HEAD
 *Ultimo aggiornamento: [DATE]*
+=======
+>>>>>>> 9b998103 (.)

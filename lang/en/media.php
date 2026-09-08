@@ -17,6 +17,7 @@ return [
         'icon' => 'media-main-animated',
     ],
     'fields' => [
+<<<<<<< HEAD
         'name' => 'Name',
         'guard_name' => 'Guard',
         'collection_name' => 'Collection',
@@ -35,6 +36,89 @@ return [
             'name' => 'Creator',
         ],
         'uploaded_at' => 'Uploaded at',
+=======
+        'name' => [
+            'label' => 'Name',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'guard_name' => [
+            'label' => 'Guard',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'collection_name' => [
+            'label' => 'Collection',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'filename' => [
+            'label' => 'Filename',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'mime_type' => [
+            'label' => 'Type',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'human_readable_size' => [
+            'label' => 'Size',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'permissions' => [
+            'label' => 'Permissions',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'updated_at' => [
+            'label' => 'Updated at',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'first_name' => [
+            'label' => 'First Name',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'last_name' => [
+            'label' => 'Last Name',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'select_all' => [
+            'name' => 'Select All',
+            'message' => '',
+            'label' => '',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'creator' => [
+            'name' => 'Creator',
+            'label' => '',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+        'uploaded_at' => [
+            'label' => 'Uploaded at',
+            'tooltip' => '',
+            'helper_text' => '',
+            'description' => '',
+        ],
+>>>>>>> 9b998103 (.)
     ],
     'actions' => [
         'import' => [
@@ -50,4 +134,9 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
+=======
+    'label' => 'Missing Label',
+    'plural_label' => 'Missing Plural label',
+>>>>>>> 9b998103 (.)
 ];

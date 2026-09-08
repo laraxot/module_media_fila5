@@ -19,6 +19,11 @@ class MediaConvertFactory extends Factory
 
     /**
      * Define the model's default state.
+<<<<<<< HEAD
+=======
+     *
+     * @return array<string, mixed>
+>>>>>>> 9b998103 (.)
      */
     public function definition(): array
     {
