@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Regole di Naming per File"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "file naming rules"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 4e14511d (.)
 # Regole di Naming per File
 
 ## 🎯 Regola Fondamentale: NO Duplicati Case-Insensitive

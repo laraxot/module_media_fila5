@@ -11,6 +11,7 @@ namespace Modules\Media\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+<<<<<<< HEAD
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -28,6 +29,14 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string $id
  * @property int $media_id
  * @property string|null $format
+=======
+use Modules\Media\Database\Factories\MediaConvertFactory;
+use Modules\Xot\Contracts\ProfileContract;
+
+/**
+ * @property int $id
+ * @property int $media_id
+>>>>>>> 4e14511d (.)
  * @property string|null $codec_video
  * @property string|null $codec_audio
  * @property string|null $preset
@@ -36,16 +45,24 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property int|null $height
  * @property int|null $threads
  * @property int|null $speed
+<<<<<<< HEAD
  * @property numeric|null $percentage
  * @property numeric|null $remaining
  * @property numeric|null $rate
  * @property numeric|null $execution_time
+=======
+ * @property string|null $percentage
+ * @property string|null $remaining
+ * @property string|null $rate
+ * @property string|null $execution_time
+>>>>>>> 4e14511d (.)
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+<<<<<<< HEAD
  *
  * @method static Builder<static>|MediaConvert whereBitrate($value)
  * @method static Builder<static>|MediaConvert whereCodecAudio($value)
@@ -69,6 +86,44 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|MediaConvert whereUpdatedBy($value)
  * @method static Builder<static>|MediaConvert whereWidth($value)
  *
+=======
+ * @property string|null $format
+ * @property string|null $converted_file
+ * @property string|null $disk
+ * @property string|null $file
+ * @property Media|null $media
+ *
+ * @method static MediaConvertFactory factory($count = null, $state = [])
+ * @method static Builder|MediaConvert newModelQuery()
+ * @method static Builder|MediaConvert newQuery()
+ * @method static Builder|MediaConvert query()
+ * @method static Builder|MediaConvert whereBitrate($value)
+ * @method static Builder|MediaConvert whereCodecAudio($value)
+ * @method static Builder|MediaConvert whereCodecVideo($value)
+ * @method static Builder|MediaConvert whereCreatedAt($value)
+ * @method static Builder|MediaConvert whereCreatedBy($value)
+ * @method static Builder|MediaConvert whereDeletedAt($value)
+ * @method static Builder|MediaConvert whereDeletedBy($value)
+ * @method static Builder|MediaConvert whereExecutionTime($value)
+ * @method static Builder|MediaConvert whereFormat($value)
+ * @method static Builder|MediaConvert whereHeight($value)
+ * @method static Builder|MediaConvert whereId($value)
+ * @method static Builder|MediaConvert whereMediaId($value)
+ * @method static Builder|MediaConvert wherePercentage($value)
+ * @method static Builder|MediaConvert wherePreset($value)
+ * @method static Builder|MediaConvert whereRate($value)
+ * @method static Builder|MediaConvert whereRemaining($value)
+ * @method static Builder|MediaConvert whereSpeed($value)
+ * @method static Builder|MediaConvert whereThreads($value)
+ * @method static Builder|MediaConvert whereUpdatedAt($value)
+ * @method static Builder|MediaConvert whereUpdatedBy($value)
+ * @method static Builder|MediaConvert whereWidth($value)
+ *
+ * @property-read ProfileContract|null $creator
+ * @property-read ProfileContract|null $updater
+ *
+ * @mixin IdeHelperMediaConvert
+>>>>>>> 4e14511d (.)
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel
@@ -91,9 +146,12 @@ class MediaConvert extends BaseModel
         'execution_time',
     ];
 
+<<<<<<< HEAD
     /**
      * @return BelongsTo<Media, $this>
      */
+=======
+>>>>>>> 4e14511d (.)
     public function media(): BelongsTo
     {
         return $this->belongsTo(Media::class);

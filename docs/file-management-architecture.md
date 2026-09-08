@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Media Module - File Management Architecture"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "file management architecture"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> 4e14511d (.)
 # Media Module - File Management Architecture
 
 ## 🎯 Module Overview
@@ -1154,6 +1157,7 @@ readonly class ConversionConfiguration
 - **User Satisfaction**: >95% upload success rate
 - **System Performance**: <2GB memory usage per worker
 
+<<<<<<< HEAD
 Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
 
 ---
@@ -2317,3 +2321,6 @@ readonly class ConversionConfiguration
 - **System Performance**: <2GB memory usage per worker
 
 Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+=======
+Il modulo Media rappresenta un componente critico per user experience e richiede particolare attenzione per security, performance e scalabilità, specialmente con grandi volumi di file e traffico elevato.
+>>>>>>> 4e14511d (.)
