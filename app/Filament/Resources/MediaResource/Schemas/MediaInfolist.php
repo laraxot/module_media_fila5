@@ -15,19 +15,21 @@ use Filament\Schemas\Components\Section;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Filament\Infolists\VideoEntry;
 use Modules\Media\Filament\Resources\MediaConvertResource;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceInfolist;
 
 class MediaInfolist extends XotBaseResourceInfolist
 {
     /**
-     * Schema condiviso da tutte le view page di MediaResource (es. {@see \Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia},
-     * {@see \Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia}): preview + azione convert
+     * Schema condiviso da tutte le view page di MediaResource (es. {@see ViewMedia},
+     * {@see ConvertMedia}): preview + azione convert
      * + dettagli tecnici, cosi' nessun campo gia' esposto in precedenza va perso.
      *
      * @return array<string, Component>
      */
-    public static function getInfolistSchema(): array
+    public function getInfolistSchema(): array
     {
         return [
             'media_grid' => Grid::make(2)
