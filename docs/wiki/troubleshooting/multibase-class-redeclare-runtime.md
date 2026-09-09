@@ -11,13 +11,13 @@ related:
   - ../../README.md
 ---
 
-# FatalError: Cannot redeclare class (path mix `base_*_fila5`)
+# FatalError: Cannot redeclare class (path mix `<repo progetto>`)
 
 ## Sintomo
 
 Messaggio tipo:
 
-`Cannot redeclare class Modules\Media\Filament\Resources\HasMediaResource\Schemas\HasMediaForm (previously declared in /var/www/_bases/base_ptvx_fila5/laravel/Modules/Media/...)`
+`Cannot redeclare class Modules\Media\Filament\Resources\HasMediaResource\Schemas\HasMediaForm (previously declared in /var/www/_bases/<repo progetto>/laravel/Modules/Media/...)`
 
  mentre la seconda segnatura punta a un altro albero sotto `_bases/` o a un path relativo del progetto «corrente». Spesso compare durante `@php artisan optimize` o `composer run go`.
 
