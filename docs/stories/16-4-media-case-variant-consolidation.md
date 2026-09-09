@@ -102,7 +102,7 @@ isolamento con `DatabaseTransactions` sulle repliche MySQL `*_test`. Vedi
 
 ## GitHub (tracciamento)
 
-Repository letto da frontmatter `github.repository` o `git remote -v` (se assente: repo root **`laraxot/base_quaeris_fila5`**): **`laraxot/module_media_fila5`**.
+Repository letto da frontmatter `github.repository` o `git remote -v` (se assente: repo root **`laraxot/<repo progetto>`**): **`laraxot/module_media_fila5`**.
 
 | Risorsa | Stato | Link |
 |---|---|---|

@@ -220,7 +220,7 @@ $conversion->disk = $original->disk;
 
 ---
 
-## IV. SCOPO — Role in FixCity
+## IV. SCOPO — Role in <nome progetto>
 
 Media is infrastructure for proof.
 
@@ -231,7 +231,7 @@ Media is infrastructure for proof.
 
 Media does not decide *meaning*. It is the custodian of *evidence*. The User module decides if you can see a document; the Media module ensures the document is accessible, in the right format, and hasn't been lost.
 
-In FixCity, Media is:
+In <nome progetto>, Media is:
 - **Not a gallery** (that's UI/CMS concern)
 - **Not an archive** (that's Compliance/Legal concern)
 - **Is the plumbing** that lets those concerns work
