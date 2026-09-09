@@ -1,15 +1,12 @@
 # Media Module — File Storage & Transformation
 
-<<<<<<< .merge_file_tSyQIG
 [![PHP](https://img.shields.io/badge/PHP-%5E8.3-777BB4.svg)](composer.json)
 [![Laravel](https://img.shields.io/badge/Laravel-13.30-FF2D20.svg)](../../composer.lock)
 [![Filament](https://img.shields.io/badge/Filament-5.7-FDAB3D.svg)](../../composer.lock)
 [![PHPStan](https://img.shields.io/badge/PHPStan-0%20errori-brightgreen.svg)](../../phpstan.neon)
 [![strict_types](https://img.shields.io/badge/declare-strict__types%3D1-informational.svg)](#)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-=======
 **Last updated:** 2026-07-28
->>>>>>> .merge_file_sGli4e
 
 Complete media management for the Laraxot ecosystem: image optimization, video encoding, FFmpeg integration, and cloud storage (S3/CloudFront).
 
@@ -22,7 +19,6 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 - **Filament admin UI** — Media library, bulk operations, batch processing
 - **Battle-tested conventions** — Laraxot best practices embedded from day one
 
-<<<<<<< .merge_file_tSyQIG
 ## Scopo e confini
 
 Media custodisce il **percorso di un file**, dall'upload temporaneo alla consegna: dove si
@@ -43,9 +39,7 @@ Scopo esteso, misure e mosse: [docs/scopo.md](docs/scopo.md).
 ---
 
 ## Perché
-=======
 ## Key Features
->>>>>>> .merge_file_sGli4e
 
 ### File Upload & Storage
 - Temporary upload handling with session tracking
@@ -115,8 +109,7 @@ Scopo esteso, misure e mosse: [docs/scopo.md](docs/scopo.md).
 
 ---
 
-<<<<<<< .merge_file_tSyQIG
-**Modulo** `media` · **Laraxot / FixCity Platform** · licenza MIT
+**Modulo** `media` · **Laraxot / <nome progetto> Platform** · licenza MIT
 
 ---
 
@@ -124,6 +117,4 @@ Scopo esteso, misure e mosse: [docs/scopo.md](docs/scopo.md).
 
 Perche' esiste, come raggiungere meglio il suo scopo e cosa **non** gli appartiene:
 [`docs/purpose.md`](./docs/purpose.md).
-=======
 **Quick links:** [Index](./docs/index.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/troubleshooting.md) | [Contributing](./docs/CONTRIBUTING.md)
->>>>>>> .merge_file_sGli4e
