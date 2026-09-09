@@ -13,7 +13,7 @@ tags: [filament, autoload, media, php]
 
 ```
 Cannot redeclare class Modules\Media\app\Filament\Resources\HasMediaResource\Schemas\HasMediaForm
-(previously declared in /var/www/_bases/base_ptvx_fila5/laravel/Modules/Media/...)
+(previously declared in /var/www/_bases/<repo progetto>/laravel/Modules/Media/...)
 ```
 
 Spesso durante `composer run go` o `php artisan optimize`.
@@ -36,7 +36,7 @@ php8.4 "$(command -v composer)" dump-autoload -o
 php8.4 artisan optimize
 ```
 
-Non eseguire `composer`/`artisan` da `base_ptvx_fila5` nella stessa shell se stai lavorando su progetto legacy.
+Non eseguire `composer`/`artisan` da `<repo progetto>` nella stessa shell se stai lavorando su progetto legacy.
 
 ## Verifica namespace nel file
 
