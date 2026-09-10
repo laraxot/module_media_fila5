@@ -20,9 +20,11 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read string|null $file
  * @property-read Media|null $media
  * @property-read ProfileContract|null $updater
+ *
  * @method static Builder<static>|MediaConvert newModelQuery()
  * @method static Builder<static>|MediaConvert newQuery()
  * @method static Builder<static>|MediaConvert query()
+ *
  * @property string $id
  * @property int $media_id
  * @property string|null $format
@@ -44,6 +46,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static Builder<static>|MediaConvert whereBitrate($value)
  * @method static Builder<static>|MediaConvert whereCodecAudio($value)
  * @method static Builder<static>|MediaConvert whereCodecVideo($value)
@@ -65,7 +68,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static>|MediaConvert whereUpdatedAt($value)
  * @method static Builder<static>|MediaConvert whereUpdatedBy($value)
  * @method static Builder<static>|MediaConvert whereWidth($value)
- * @property-read \Modules\Quaeris\Models\Profile|null $deleter
+ *
  * @mixin \Eloquent
  */
 class MediaConvert extends BaseModel

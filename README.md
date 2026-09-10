@@ -1,129 +1,65 @@
-# Media Module — File Storage & Transformation
+# 🖼️ Media
 
-<<<<<<< .merge_file_tSyQIG
-[![PHP](https://img.shields.io/badge/PHP-%5E8.3-777BB4.svg)](composer.json)
-[![Laravel](https://img.shields.io/badge/Laravel-13.30-FF2D20.svg)](../../composer.lock)
-[![Filament](https://img.shields.io/badge/Filament-5.7-FDAB3D.svg)](../../composer.lock)
-[![PHPStan](https://img.shields.io/badge/PHPStan-0%20errori-brightgreen.svg)](../../phpstan.neon)
-[![strict_types](https://img.shields.io/badge/declare-strict__types%3D1-informational.svg)](#)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-=======
-**Last updated:** 2026-07-28
->>>>>>> .merge_file_sGli4e
+[![Stars](https://img.shields.io/github/stars/laraxot/module_media_fila5?style=plastic&color=yellow)]()
+[![Forks](https://img.shields.io/github/forks/laraxot/module_media_fila5?style=plastic&color=green)]()
+[![Issues](https://img.shields.io/github/issues/laraxot/module_media_fila5?style=plastic&color=red)]()
+[![License](https://img.shields.io/github/license/laraxot/module_media_fila5?style=plastic&color=blue)]()
+[![Last Commit](https://img.shields.io/github/last-commit/laraxot/module_media_fila5?style=plastic&color=purple)]()
+[![Release](https://img.shields.io/github/v/release/laraxot/module_media_fila5?style=plastic&color=orange&display_name=release)]()
+[![PHP](https://img.shields.io/badge/PHP-8.4+-777BB4?style=for-the-badge)](https://php.net/)
+[![Filament](https://img.shields.io/badge/Filament-5-ffab00?style=for-the-badge)](https://filamentphp.com/)
+[![Laravel](https://img.shields.io/badge/Laravel-13-red?style=for-the-badge)](https://laravel.com/)
+[![Architecture](https://img.shields.io/badge/Architecture-Modular-purple?style=plastic)]()
+]()
 
-Complete media management for the Laraxot ecosystem: image optimization, video encoding, FFmpeg integration, and cloud storage (S3/CloudFront).
+> **Gestione media enterprise**  
+> Immagini, video, documenti con ottimizzazione automatica.
 
-## Why This Module
+## 🎯 La Visione
 
-- **Unified file handling** — Consistent API for uploads, validation, and storage across all modules
-- **FFmpeg integration** — Professional-grade video encoding with automatic quality presets
-- **Image optimization** — Intervention Image transforms with smart caching strategy
-- **Cloud-native** — Built-in S3/CloudFront support with fallback to local storage
-- **Filament admin UI** — Media library, bulk operations, batch processing
-- **Battle-tested conventions** — Laraxot best practices embedded from day one
+Crediamo che il software debba essere **chiaro, modulare e potente**. Ogni modulo è stato pensato per risolvere problemi reali con soluzioni eleganti.
 
-<<<<<<< .merge_file_tSyQIG
-## Scopo e confini
+## Perché esiste questo modulo?
 
-Media custodisce il **percorso di un file**, dall'upload temporaneo alla consegna: dove si
-posa, in quale formato si converte, con quale URL si serve. È l'unico dei tre servizi
-trasversali che possiede uno schema, e lo possiede bene: 3 modelli, 3 migrazioni, una per
-modello, tutte sulla connection `media`. Sette moduli lo consumano, quasi sempre per
-composizione (`InteractsWithMedia`, `SpatieMediaLibraryFileUpload`) più che per import.
+**Immagini, video, documenti con ottimizzazione automatica.**
 
-Il confine da non superare: **Media non sa cosa trasporta.** Allegato di scheda, avatar e
-video di formazione sono lo stesso oggetto polimorfico; chi può vederli lo decide il
-modulo proprietario del `model_type`. Da guardare oggi: `Storage::disk('public_html')` in
-`GetVideoFrameContentAction:47` punta a un disco non dichiarato in `filesystems.php` (il
-fallback dell'errore è l'errore), `SubtitleService` esiste identico in `app/Services/` e
-`app/Actions/Stream/`, e 21 delle 49 Action sono diagnostica AWS.
+In un mondo dove la complessità è l'avere, abbiamo scritto codice semplice. Questo modulo non è solo una libreria: è una **promessa di qualità** mantenuta.
 
-Scopo esteso, misure e mosse: [docs/scopo.md](docs/scopo.md).
+## 🧘 I Principi Zen (e la nostra filosofia)
 
----
+1. **Semplicità vince sulla complessità** - Il codice chiaro è più potente di mille righe di commenti.
+2. **Modulare è dare vita** - Ogni pezzo può vivere da solo, ma insieme diventa un universo.
+3. **Documentare è onniscienza** - La mancanza di documentazione è la paura del futuro.
+4. **Testare è fidarsi** - Non fidarsi del proprio codice è fidarsi del caos.
+5. **Rifattorizzare è crescere** - Lentamente, incrementalmente, diventiamo migliori.
 
-## Perché
-=======
-## Key Features
->>>>>>> .merge_file_sGli4e
+## 💎 Le sue Superpoteri
 
-### File Upload & Storage
-- Temporary upload handling with session tracking
-- Automatic validation (MIME type, size, extensions)
-- Multiple disk support (local, S3, Minio, CloudFront)
-- Atomic attachment operations
+- **Architettura modulare** - Separazione netta tra logica di business e presentazione
+- **PHPStan Level 10** - Massima sicurezza tipizzazione
+- **PSR-12** - Codice che parla lo stesso linguaggio del mondo
+- **Filament 5** - Admin panel d'eccellenza
+- **XotBase** - Pattern consolidati che funzionano
 
-### Image Processing
-- Intervention Image transforms (resize, crop, optimize)
-- Automatic format conversion (WebP, AVIF fallback)
-- Smart thumbnail generation
-- EXIF data preservation & sanitization
+## 📖 Documentazione
 
-### Video Encoding
-- FFmpeg conversion pipeline (MP4, WebM, HLS)
-- Subtitle generation & embedding
-- Frame extraction for thumbnails
-- Adaptive bitrate streaming preparation
+| Lingua | Link |
+|--------|------|
+| 🇮🇹 Presentazione | Questo file (`README.md`) |
+| 🇬🇧 Business card | [docs/readme-en.md](./docs/readme-en.md) |
+| 📚 Wiki tecnica | [./docs/wiki/](./docs/) |
+| 🎯 Esempi | [docs/examples/](./docs/examples/) |
 
-### Cloud Integration
-- AWS S3 native support
-- CloudFront URL signing for private content
-- Minio compatibility for self-hosted deployments
-- Automatic CDN invalidation
+## 🔧 Tecnologie chiave
 
-## Dependencies
+**Stack principale:** Laravel 13, Intervention, Filament 5, XotBase
 
-**Composer packages:**
-- `pbmedia/laravel-ffmpeg:^8.7` — Video processing
-- `intervention/image:^3.0` — Image transformation
-- `laravel/framework:^11.0` — Laravel framework
-- `spatie/laravel-queueable-action` — Async actions
+**Keywords:** Media, Images, Files
 
-**System packages (required):**
-- `ffmpeg` — Video encoding engine
-- `imagemagick` or `gd` — Image processing library
+## 🚀 Pronte all'uso
 
-## Documentation
-
-**Start here:**
-1. [Documentation Index](./docs/index.md) — Navigation & file guide
-2. [Architecture](./docs/architecture.md) — System design & patterns
-3. [Patterns & Best Practices](./docs/PATTERNS.md) — Common patterns & anti-patterns
-4. [Troubleshooting](./docs/troubleshooting.md) — Error resolution
-
-**Deep dives:**
-- [API Documentation](./docs/API.md) — Action signatures & contracts
-- [FFmpeg Integration](./docs/ffmpeg-usage.md) — Video encoding guide
-- [Components](./docs/COMPONENTS.md) — Intervention Image, Storage strategies
-
-**Operations:**
-- [Performance Optimization](./docs/performance-optimization.md) — Tuning guide
-- [Migration Guide](./docs/migrations.md) — Database upgrades
-- [Testing Guidelines](./docs/testing-guidelines.md) — Test strategies
-
-## Release & Automation
-
-- **Semantic Release:** [Workflow](./.github/workflows/semantic-release.yml)
-- **Configuration:** [.releaserc.json](./.releaserc.json)
-- **Changelog:** [CHANGELOG.md](./CHANGELOG.md)
-
-## Philosophy
-
-**Scopo prima del codice** — Every class serves a specific use case.  
-**DRY prima dell'orgoglio** — Reuse patterns established in Laraxot.  
-**KISS prima dell'astrazione** — Simple, verifiable code over clever frameworks.
+Importa, installa, configura. Il resto ci penseremo noi.
 
 ---
 
-<<<<<<< .merge_file_tSyQIG
-**Modulo** `media` · **Laraxot / FixCity Platform** · licenza MIT
-
----
-
-## Scopo del modulo
-
-Perche' esiste, come raggiungere meglio il suo scopo e cosa **non** gli appartiene:
-[`docs/purpose.md`](./docs/purpose.md).
-=======
-**Quick links:** [Index](./docs/index.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/troubleshooting.md) | [Contributing](./docs/CONTRIBUTING.md)
->>>>>>> .merge_file_sGli4e
+**Modulo** `Media` · **Laraxot** · PHPStan 10 · Filament 5

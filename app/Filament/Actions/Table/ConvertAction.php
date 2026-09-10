@@ -12,7 +12,6 @@ namespace Modules\Media\Filament\Actions\Table;
 // use Filament\Actions\Action;
 use Filament\Forms\Components\Radio;
 use Modules\Xot\Filament\Actions\XotBaseAction;
-use RuntimeException;
 
 class ConvertAction extends XotBaseAction
 {
@@ -33,7 +32,7 @@ class ConvertAction extends XotBaseAction
                     ->inlineLabel(false),
             ])
             ->action(static function (): void {
-                throw new RuntimeException('Removed debug dddx');
+                throw new \RuntimeException('Removed debug dddx');
             });
 
         // ->requiresConfirmation()

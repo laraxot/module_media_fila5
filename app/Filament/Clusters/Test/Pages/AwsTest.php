@@ -152,7 +152,7 @@ class AwsTest extends XotBasePage
                 ],
             ]);
 
-            $s3->headBucket([
+            $result = $s3->headBucket([
                 'Bucket' => config('filesystems.disks.s3.bucket'),
             ]);
 
@@ -287,7 +287,7 @@ class AwsTest extends XotBasePage
             ]);
 
             // Test list objects permission
-            $s3->listObjectsV2([
+            $result = $s3->listObjectsV2([
                 'Bucket' => config('filesystems.disks.s3.bucket'),
                 'MaxKeys' => 1,
             ]);
@@ -347,7 +347,7 @@ class AwsTest extends XotBasePage
             ]);
 
             // Test get operation
-            $s3->getObject([
+            $result = $s3->getObject([
                 'Bucket' => config('filesystems.disks.s3.bucket'),
                 'Key' => $testFileName,
             ]);

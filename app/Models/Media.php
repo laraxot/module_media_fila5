@@ -36,6 +36,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property-read TemporaryUpload|null $temporaryUpload
  * @property-read mixed $type
  * @property-read ProfileContract|null $updater
+ *
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static \Modules\Media\Database\Factories\MediaFactory factory($count = null, $state = [])
  * @method static MediaCollection<int, static> get($columns = ['*'])
@@ -43,6 +44,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder<static>|Media newQuery()
  * @method static Builder<static>|Media ordered()
  * @method static Builder<static>|Media query()
+ *
  * @property int $id
  * @property string $model_type
  * @property string|null $model_id
@@ -66,6 +68,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
  * @property int|string|null $user_id
+ *
  * @method static Builder<static>|Media whereCollectionName($value)
  * @method static Builder<static>|Media whereConversionsDisk($value)
  * @method static Builder<static>|Media whereCreatedAt($value)
@@ -88,8 +91,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder<static>|Media whereUpdatedAt($value)
  * @method static Builder<static>|Media whereUpdatedBy($value)
  * @method static Builder<static>|Media whereUuid($value)
- * @property-read \Modules\Quaeris\Models\Profile|null $deleter
- * @method static Builder<static>|Media whereUserId($value)
+ *
  * @mixin Eloquent
  */
 class Media extends SpatieMedia

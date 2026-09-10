@@ -15,7 +15,6 @@ use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Models\Traits\HasXotFactory;
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
@@ -31,10 +30,12 @@ use Webmozart\Assert\Assert;
  * @property-read MediaCollection<int, \Modules\Media\Models\Media> $media
  * @property-read int|null $media_count
  * @property-read ProfileContract|null $updater
+ *
  * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
  * @method static Builder<static>|TemporaryUpload newModelQuery()
  * @method static Builder<static>|TemporaryUpload newQuery()
  * @method static Builder<static>|TemporaryUpload query()
+ *
  * @property string $id
  * @property string $session_id
  * @property string|null $user_id
@@ -48,6 +49,7 @@ use Webmozart\Assert\Assert;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
+ *
  * @method static Builder<static>|TemporaryUpload whereCreatedAt($value)
  * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
@@ -61,14 +63,13 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
  * @method static Builder<static>|TemporaryUpload whereUpdatedBy($value)
  * @method static Builder<static>|TemporaryUpload whereUserId($value)
- * @property-read \Modules\Quaeris\Models\Profile|null $deleter
+ *
  * @mixin \Eloquent
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
     use HasUuids;
 
-    use HasXotFactory;
 
     use InteractsWithMedia;
     use MassPrunable;
