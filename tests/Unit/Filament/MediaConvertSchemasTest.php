@@ -69,6 +69,7 @@ test('the table lists the identifier and both timestamps', function (): void {
     Assert::assertSame(['id', 'created_at', 'updated_at'], array_keys($columns));
 
     foreach ($columns as $key => $column) {
+        /** @var \Filament\Tables\Columns\TextColumn $column */
         Assert::assertInstanceOf(TextColumn::class, $column);
         Assert::assertSame($key, $column->getName());
     }
