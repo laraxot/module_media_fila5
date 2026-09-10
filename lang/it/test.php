@@ -3,5 +3,5 @@
 declare(strict_types=1);
 
 return [
-    'navigation' => ['label' => 'test.navigation', 'group' => 'test.navigation', 'icon' => 'test.navigation', 'sort' => 85],
+    'navigation' => ['label' => 'Test', 'group' => 'Test', 'icon' => 'Test', 'sort' => 85],
 ];
