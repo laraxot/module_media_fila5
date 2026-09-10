@@ -13,25 +13,33 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
+use Override;
 
 class TemporaryUploadsTable extends XotBaseResourceTable
 {
-    /**
-     * @return array<string, Column>
-     * @return array<string, Column>
+   /**
+     * @return array<string, TextColumn>
      */
+    #[Override]
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->searchable()->sortable(),
-            'created_at' => TextColumn::make('created_at')->dateTime(),
-            'updated_at' => TextColumn::make('updated_at')->dateTime(),
+            'folder' => TextColumn::make('folder')
+                ->searchable()
+                ->sortable()
+                ->wrap(),
+            'filename' => TextColumn::make('filename')
+                ->searchable()
+                ->sortable()
+                ->wrap(),
+            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
         ];
     }
 
     /**
      * @return array<string, SelectFilter>
      */
+    #[Override]
     public function getTableFilters(): array
     {
         return [
@@ -45,6 +53,7 @@ class TemporaryUploadsTable extends XotBaseResourceTable
     /**
      * @return array<string, ViewAction|EditAction|DeleteAction>
      */
+    #[Override]
     public function getTableActions(): array
     {
         return [
@@ -57,6 +66,7 @@ class TemporaryUploadsTable extends XotBaseResourceTable
     /**
      * @return array<string, DeleteBulkAction>
      */
+    #[Override]
     public function getTableBulkActions(): array
     {
         return [
