@@ -14,7 +14,6 @@ use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
-use Filament\Tables\Table;
 use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
@@ -23,9 +22,8 @@ use Spatie\QueueableAction\ActionJob;
 
 class MediaConvertsTable extends XotBaseResourceTable
 {
-  
     /**
-     * @return array<string, \Filament\Tables\Columns\Column>
+     * @return array<string, Column>
      */
     public function getTableColumns(): array
     {
@@ -33,17 +31,17 @@ class MediaConvertsTable extends XotBaseResourceTable
             'id' => TextColumn::make('id')->sortable(),
             'media.file_name' => TextColumn::make('media.file_name')->sortable(),
             'format' => TextColumn::make('format')->searchable(),
-            'codec_video' => TextColumn::make('codec_video')->searchable(),
-            'codec_audio' => TextColumn::make('codec_audio')->searchable(),
-            'preset' => TextColumn::make('preset')->searchable(),
-            'bitrate' => TextColumn::make('bitrate'),
+            'codec_video' => TextColumn::make('codec_video')->searchable()->toggleable(isToggledHiddenByDefault: true),
+            'codec_audio' => TextColumn::make('codec_audio')->searchable()->toggleable(isToggledHiddenByDefault: true),
+            'preset' => TextColumn::make('preset')->searchable()->toggleable(isToggledHiddenByDefault: true),
+            'bitrate' => TextColumn::make('bitrate')->toggleable(isToggledHiddenByDefault: true),
             'width' => TextColumn::make('width')->numeric(),
             'height' => TextColumn::make('height')->numeric(),
-            'threads' => TextColumn::make('threads')->numeric(),
-            'speed' => TextColumn::make('speed')->numeric(),
-            'percentage' => TextColumn::make('percentage')->numeric(),
+            'threads' => TextColumn::make('threads')->numeric()->toggleable(isToggledHiddenByDefault: true),
+            'speed' => TextColumn::make('speed')->numeric()->toggleable(isToggledHiddenByDefault: true),
+            'percentage' => TextColumn::make('percentage')->numeric()->suffix('%')->sortable(),
             'remaining' => TextColumn::make('remaining')->numeric(),
-            'rate' => TextColumn::make('rate')->numeric(),
+            'rate' => TextColumn::make('rate')->numeric()->toggleable(isToggledHiddenByDefault: true),
             'execution_time' => TextColumn::make('execution_time')->numeric(),
         ];
     }
@@ -101,10 +99,7 @@ class MediaConvertsTable extends XotBaseResourceTable
         ];
     }
 
-   
-
     /**
      * @return array<string, Action|ActionGroup>
      */
-
 }

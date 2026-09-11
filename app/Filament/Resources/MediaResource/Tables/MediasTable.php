@@ -4,42 +4,43 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Tables;
 
-use Filament\Tables\Columns\Column;
-use Filament\Tables\Columns\TextColumn;
-use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ViewAction;
-use Filament\Tables;
+use Filament\Tables\Columns\Column;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
-use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Override;
 use RuntimeException;
 use Webmozart\Assert\Assert;
 
 class MediasTable extends XotBaseResourceTable
 {
+    /**
+     * @return array<string, Column>
+     */
     #[Override]
     public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->sortable()->searchable(),
-            'model_type' => TextColumn::make('model_type')->searchable(),
-            'model_id' => TextColumn::make('model_id')->searchable(),
+            'model_type' => TextColumn::make('model_type')->searchable()->toggleable(isToggledHiddenByDefault: true),
+            'model_id' => TextColumn::make('model_id')->searchable()->toggleable(isToggledHiddenByDefault: true),
             'collection_name' => TextColumn::make('collection_name')->searchable(),
             'name' => TextColumn::make('name')->searchable(),
             'file_name' => TextColumn::make('file_name')->searchable(),
             'mime_type' => TextColumn::make('mime_type')->searchable(),
-            'disk' => TextColumn::make('disk')->searchable(),
+            'disk' => TextColumn::make('disk')->searchable()->toggleable(isToggledHiddenByDefault: true),
             'size' => TextColumn::make('size')->formatStateUsing(fn (string $state): string => number_format(
                 ((int) $state) / 1024,
                 2,
             ).' KB'),
-            'created_at' => TextColumn::make('created_at')->dateTime(),
+            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
         ];
     }
 

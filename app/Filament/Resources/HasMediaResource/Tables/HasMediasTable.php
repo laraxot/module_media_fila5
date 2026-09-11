@@ -11,13 +11,13 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 class HasMediasTable extends XotBaseResourceTable
 {
     /**
-     * @return array<int|string, Column>
+     * @return array<string, Column>
      */
     public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->sortable(),
-            'name' => TextColumn::make('name')->searchable(),
+            'name' => TextColumn::make('name')->searchable()->wrap(),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
         ];
     }

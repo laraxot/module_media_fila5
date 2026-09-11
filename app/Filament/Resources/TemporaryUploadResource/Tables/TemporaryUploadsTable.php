@@ -17,21 +17,17 @@ use Override;
 
 class TemporaryUploadsTable extends XotBaseResourceTable
 {
-   /**
-     * @return array<string, TextColumn>
+    /**
+     * @return array<string, Column>
      */
     #[Override]
     public function getTableColumns(): array
     {
         return [
-            'folder' => TextColumn::make('folder')
-                ->searchable()
-                ->sortable()
-                ->wrap(),
-            'filename' => TextColumn::make('filename')
-                ->searchable()
-                ->sortable()
-                ->wrap(),
+            'file_name' => TextColumn::make('file_name')->searchable()->sortable()->wrap(),
+            'mime_type' => TextColumn::make('mime_type')->searchable()->sortable()->badge(),
+            'file_size' => TextColumn::make('file_size')->numeric()->sortable()->suffix(' B'),
+            'status' => TextColumn::make('status')->searchable()->sortable()->badge(),
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
         ];
     }
@@ -43,9 +39,9 @@ class TemporaryUploadsTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
-            'folder' => SelectFilter::make('folder')->options(TemporaryUpload::distinct()->pluck(
-                'folder',
-                'folder',
+            'status' => SelectFilter::make('status')->options(TemporaryUpload::distinct()->pluck(
+                'status',
+                'status',
             )->toArray(...)),
         ];
     }
