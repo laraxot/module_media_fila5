@@ -10,9 +10,7 @@ use Mockery;
 use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
 use Modules\Media\Actions\GenerateTemporaryUploadPathAction;
 use Modules\Media\Filament\Resources\HasMediaResource\Schemas\HasMediaForm;
-use Modules\Media\Filament\Resources\HasMediaResource\Tables\HasMediasTable;
 use Modules\Media\Filament\Resources\MediaResource\Schemas\MediaForm;
-use Modules\Media\Filament\Resources\MediaResource\Tables\MediasTable;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Schemas\TemporaryUploadForm;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Tables\TemporaryUploadsTable;
 use Modules\Media\Models\Media;
@@ -46,14 +44,12 @@ test('HasMediaForm espone una section con name', function (): void {
     Assert::assertNotSame([], $schema);
 });
 
-test('MediasTable e TemporaryUploadsTable espongono colonne indicizzate', function (): void {
-    foreach ([new MediasTable(), new TemporaryUploadsTable(), new HasMediasTable()] as $tabella) {
-        $colonne = $tabella->getTableColumns();
-        Assert::assertNotEmpty($colonne);
-        Assert::assertContainsOnlyInstancesOf(Column::class, $colonne);
-        foreach (array_keys($colonne) as $chiave) {
-            Assert::assertIsString($chiave);
-        }
+test('TemporaryUploadsTable espone colonne indicizzate', function (): void {
+    $colonne = (new TemporaryUploadsTable())->getTableColumns();
+    Assert::assertNotEmpty($colonne);
+    Assert::assertContainsOnlyInstancesOf(Column::class, $colonne);
+    foreach (array_keys($colonne) as $chiave) {
+        Assert::assertIsString($chiave);
     }
 });
 

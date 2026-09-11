@@ -17,11 +17,12 @@ blocked_by: []
 blocks: []
 supersedes: []
 owned_scope:
-  - "app/Filament/Resources/HasMediaResource/Tables/HasMediasTable.php"
+  - "app/Filament/Resources/HasMediaResource/Tables/HasMediasTable.php (deleted 2026-09-11, see Follow-up)"
   - "app/Filament/Resources/MediaConvertResource/Tables/MediaConvertsTable.php"
-  - "app/Filament/Resources/MediaResource/Tables/MediasTable.php"
+  - "app/Filament/Resources/MediaResource/Tables/MediasTable.php (deleted 2026-09-11, see Follow-up)"
   - "app/Filament/Resources/MediaResource/Tables/MediaTable.php"
   - "app/Filament/Resources/TemporaryUploadResource/Tables/TemporaryUploadsTable.php"
+  - "tests/Unit/MediaFilamentAndActionsTest.php"
 related:
   - "app/Filament/Resources/MediaResource.php"
   - "app/Filament/Resources/MediaConvertResource.php"
@@ -163,3 +164,87 @@ Claude Sonnet 5
 - `app/Filament/Resources/MediaResource/Tables/MediasTable.php` (modificato: sortable() su size)
 - `app/Filament/Resources/MediaResource/Tables/MediaTable.php` (nessuna modifica in questo giro, gia' a posto)
 - `app/Filament/Resources/TemporaryUploadResource/Tables/TemporaryUploadsTable.php` (nessuna modifica in questo giro, gia' a posto)
+
+## Follow-up (2026-09-11) — cancellazione del dead code segnalato
+
+Riferimento: `docs/stories/xotbaseresourcetable-dead-code-duplicate-table-classes-followup.story.md`
+(root del monorepo, sincronizzato dall'orchestratore — non modificato da qui),
+righe Media. Le due classi segnalate sopra come "dead code, non toccato" sono
+state riverificate in modo indipendente e cancellate:
+
+### 1. `HasMediaResource/Tables/HasMediasTable.php` — CANCELLATO
+
+Verifiche eseguite (oltre a quelle gia' in questa story):
+
+- `grep -rn "HasMediaResource" laravel` (tutto il monorepo): nessuna classe
+  `class HasMediaResource extends ...` esiste da nessuna parte. La cartella
+  `HasMediaResource/` contiene solo sottocartelle (`Actions/`, `Pages/`
+  vuota, `RelationManagers/`, `Schemas/`, e la `Tables/` ora rimossa) — mai
+  una Resource. Nessuna Resource puo' quindi mai chiamare
+  `HasMediaResource::getTableClass()`.
+- `grep -rn "HasMediasTable\b" laravel`: prima della cancellazione, l'unico
+  riferimento fuori dalla propria dichiarazione era
+  `tests/Unit/MediaFilamentAndActionsTest.php` (istanziazione diretta in un
+  test, non una risoluzione a runtime via convenzione).
+- `git log --follow -- app/Filament/Resources/HasMediaResource/Tables/HasMediasTable.php`:
+  4 commit, tutti del 2026-09-10/11 (creazione + audit `$model` di questa
+  stessa story). Nessun segnale di refactor a meta' in corso.
+- La cartella `HasMediaResource/Tables/` e' stata rimossa (era vuota dopo la
+  cancellazione del file). La cartella `HasMediaResource/` **non** e' stata
+  rimossa: contiene `Actions/AddAttachmentAction.php`,
+  `RelationManagers/MediaRelationManager.php`,
+  `Schemas/HasMediaForm.php` e `Schemas/HasMediaInfolist.php`, tutti vivi
+  (usati o referenziati da test reali) — non nel perimetro di questo task.
+
+Azione: cancellato `HasMediasTable.php`; aggiornato
+`tests/Unit/MediaFilamentAndActionsTest.php` rimuovendo l'istanziazione
+diretta e l'import (il test residuo copre solo `TemporaryUploadsTable`,
+rinominato di conseguenza).
+
+### 2. `MediaResource/Tables/MediasTable.php` — CANCELLATO
+
+Verifiche eseguite:
+
+- `Str::plural('Media')` confermato via tinker: restituisce `'Media'`
+  (invariato). `XotBaseResource::getTableClass()` calcola
+  `$name = Str::plural(class_basename(getModel()))` e cerca
+  `{Resource}\Tables\{$name}Table`, quindi per `MediaResource` (model
+  `Media`) risolve sempre a `MediaResource\Tables\MediaTable` (esiste, la
+  classe con `$name = 'Media'` + `'Table'`), mai a `MediasTable`.
+- `MediaResource.php` verificato: non fa `override` di `table()`, quindi
+  usa il default di `XotBaseResource` — nessuna scorciatoia che potrebbe
+  far risolvere `MediasTable` per altra via.
+- `grep -rn "MediasTable\b" laravel`: solo la propria dichiarazione di
+  classe + l'istanziazione diretta nel test (rimossa in questo giro).
+- Confronto riga per riga con `MediaTable.php` (la classe viva): `MediaTable`
+  espone **piu'** colonne (`order_column`, `updated_at`, assenti in
+  `MediasTable`), rende sortable `model_type`/`model_id` (in `MediasTable`
+  restano solo searchable), e ha in piu' `getTableBulkActions()` (bulk
+  delete) che `MediasTable` non ha affatto. L'azione `download` in
+  `MediaTable` e' gia' tipizzata `Media $record` con ritorno
+  `BinaryFileResponse`, piu' pulita della versione difensiva
+  `mixed $record` + `RuntimeException` di `MediasTable`. L'unica differenza
+  a favore di `MediasTable` e' cosmetica: formatta `size` in KB
+  (`number_format($state / 1024, 2).' KB'`) invece che in byte grezzi con
+  suffisso `' B'`. Non e' logica di business mancante, solo una preferenza
+  di formattazione — **non migrata** per restare nel perimetro del task
+  (cancellazione dead code) senza toccare la formattazione della classe
+  viva senza un mandato esplicito. Annotato qui come possibile follow-up UX
+  separato, se qualcuno lo vuole.
+- `MediaTable.php` ha gia' copertura test dedicata e superiore in
+  `tests/Unit/Filament/MediaTableTest.php` (4 test su colonne, ordine,
+  searchable, toggle) — la cancellazione di `MediasTable.php` non riduce la
+  copertura reale della classe viva.
+
+Azione: cancellato `MediasTable.php`; stesso aggiornamento del test di cui
+sopra.
+
+### Verifica finale
+
+- `cd laravel && vendor/bin/phpstan analyse Modules/Media --no-progress`
+- `cd laravel/Modules/Media && bash ../../../tools/phpmd.sh Media` (o script
+  equivalente)
+- `cd laravel && vendor/bin/pest Modules/Media`
+- `docs/coverage.md` aggiornato con numeri reali della run.
+
+Risultati riportati nel commit di questo follow-up.
