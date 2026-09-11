@@ -22,6 +22,39 @@ related:
 - **Tests Passed**: 59
 ## Status
 
+**2026-09-11 (dead code follow-up — HasMediasTable/MediasTable removal)**:
+- Contesto: `docs/stories/xotbaseresourcetable-model-audit-media-batch.story.md`,
+  sezione "Follow-up (2026-09-11)". Cancellati due `*Table extends
+  XotBaseResourceTable` mai risolti a runtime per convenzione (`HasMediasTable`
+  — nessuna `HasMediaResource` esiste; `MediasTable` — `Str::plural('Media')`
+  resta `'Media'`, la classe viva e' `MediaTable.php`). Aggiornato
+  `tests/Unit/MediaFilamentAndActionsTest.php` di conseguenza.
+- PHPStan: `vendor/bin/phpstan analyse Modules/Media --no-progress` → **[OK] No errors**.
+- PHPMD: `./tools/phpmd.sh Modules/Media/app text Modules/Media/phpmd.ruleset.xml`
+  → findings pre-esistenti non correlati a questo diff (nessuno sui file
+  toccati/cancellati); debito noto (`CamelCaseVariableName`,
+  `CyclomaticComplexity`, ecc.) in `Actions/Subtitle`, `Actions/Video`,
+  `HasMediaResource/Actions/AddAttachmentAction.php`.
+- Pest (`XDEBUG_MODE=coverage vendor/bin/pest Modules/Media`, doppia run per
+  escludere flakiness): **282 passed, 8 failed, 3 risky, 4 skipped (1073
+  assertions)**, stabile su due run consecutive. Gli 8 fallimenti sono
+  **pre-esistenti e non correlati** a questo diff (nessuno tocca
+  `HasMediasTable`, `MediasTable` o i file modificati): `MediaConvertSchemasTest`
+  (colonne `MediaConvertsTable` non allineate all'assert), `MediaFilamentAndActionsTest`
+  → `GenerateTemporaryUploadPathAction` (`Assert::string($media->getKey())`
+  riceve un intero), `MediaHighestMissCoverageTest` (chiave `file_name`
+  mancante in un assert), `Models\MediaModelTest`/`Models\MediaTest` (cast e
+  fixture DB). Il test toccato in questo giro
+  (`TemporaryUploadsTable espone colonne indicizzate`) passa.
+- Coverage per-modulo (Clover, `Modules/Media/app`, sola lettura):
+  **57.56% (1698/2950 statement)** — il numero storico "0.00%" sotto era
+  stale/non ricalcolato, non un regresso di questo diff.
+- Nota race multi-agente: durante la prima run e' apparso un fallimento a
+  cascata (`Class NotificationLogResource\Pages\ListNotificationLogs not
+  found`, dal modulo Notify, in editing concorrente nello stesso worktree
+  condiviso) su ~30 test; scomparso alla run successiva a distanza di
+  minuti. Non e' un problema del modulo Media.
+
 **2026-09-06 (Session 2)**:
 - PHPStan L10: 4 errors fixed (generics removed, deprecated tests commented)
 - PHPMD: No violations detected
