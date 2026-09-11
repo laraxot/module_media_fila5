@@ -18,6 +18,11 @@ use Override;
 class TemporaryUploadsTable extends XotBaseResourceTable
 {
     /**
+     * @var class-string<TemporaryUpload>
+     */
+    protected static string $model = TemporaryUpload::class;
+
+    /**
      * @return array<string, Column>
      */
     #[Override]
