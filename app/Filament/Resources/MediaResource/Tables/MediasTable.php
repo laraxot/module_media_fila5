@@ -22,6 +22,11 @@ use Webmozart\Assert\Assert;
 class MediasTable extends XotBaseResourceTable
 {
     /**
+     * @var class-string<Media>
+     */
+    protected static string $model = Media::class;
+
+    /**
      * @return array<string, Column>
      */
     #[Override]
@@ -36,7 +41,7 @@ class MediasTable extends XotBaseResourceTable
             'file_name' => TextColumn::make('file_name')->searchable(),
             'mime_type' => TextColumn::make('mime_type')->searchable(),
             'disk' => TextColumn::make('disk')->searchable()->toggleable(isToggledHiddenByDefault: true),
-            'size' => TextColumn::make('size')->formatStateUsing(fn (string $state): string => number_format(
+            'size' => TextColumn::make('size')->sortable()->formatStateUsing(fn (string $state): string => number_format(
                 ((int) $state) / 1024,
                 2,
             ).' KB'),

@@ -23,6 +23,11 @@ use Spatie\QueueableAction\ActionJob;
 class MediaConvertsTable extends XotBaseResourceTable
 {
     /**
+     * @var class-string<MediaConvert>
+     */
+    protected static string $model = MediaConvert::class;
+
+    /**
      * @return array<string, Column>
      */
     public function getTableColumns(): array
@@ -30,19 +35,19 @@ class MediaConvertsTable extends XotBaseResourceTable
         return [
             'id' => TextColumn::make('id')->sortable(),
             'media.file_name' => TextColumn::make('media.file_name')->sortable(),
-            'format' => TextColumn::make('format')->searchable(),
-            'codec_video' => TextColumn::make('codec_video')->searchable()->toggleable(isToggledHiddenByDefault: true),
-            'codec_audio' => TextColumn::make('codec_audio')->searchable()->toggleable(isToggledHiddenByDefault: true),
-            'preset' => TextColumn::make('preset')->searchable()->toggleable(isToggledHiddenByDefault: true),
-            'bitrate' => TextColumn::make('bitrate')->toggleable(isToggledHiddenByDefault: true),
-            'width' => TextColumn::make('width')->numeric(),
-            'height' => TextColumn::make('height')->numeric(),
-            'threads' => TextColumn::make('threads')->numeric()->toggleable(isToggledHiddenByDefault: true),
-            'speed' => TextColumn::make('speed')->numeric()->toggleable(isToggledHiddenByDefault: true),
+            'format' => TextColumn::make('format')->searchable()->sortable(),
+            'codec_video' => TextColumn::make('codec_video')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+            'codec_audio' => TextColumn::make('codec_audio')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+            'preset' => TextColumn::make('preset')->searchable()->sortable()->toggleable(isToggledHiddenByDefault: true),
+            'bitrate' => TextColumn::make('bitrate')->sortable()->toggleable(isToggledHiddenByDefault: true),
+            'width' => TextColumn::make('width')->numeric()->sortable(),
+            'height' => TextColumn::make('height')->numeric()->sortable(),
+            'threads' => TextColumn::make('threads')->numeric()->sortable()->toggleable(isToggledHiddenByDefault: true),
+            'speed' => TextColumn::make('speed')->numeric()->sortable()->toggleable(isToggledHiddenByDefault: true),
             'percentage' => TextColumn::make('percentage')->numeric()->suffix('%')->sortable(),
-            'remaining' => TextColumn::make('remaining')->numeric(),
-            'rate' => TextColumn::make('rate')->numeric()->toggleable(isToggledHiddenByDefault: true),
-            'execution_time' => TextColumn::make('execution_time')->numeric(),
+            'remaining' => TextColumn::make('remaining')->numeric()->sortable(),
+            'rate' => TextColumn::make('rate')->numeric()->sortable()->toggleable(isToggledHiddenByDefault: true),
+            'execution_time' => TextColumn::make('execution_time')->numeric()->sortable(),
         ];
     }
 
