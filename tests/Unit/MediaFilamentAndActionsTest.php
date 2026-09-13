@@ -24,11 +24,7 @@ use RuntimeException;
 uses(TestCase::class)->group('no-media-db');
 
 test('MediaForm espone i campi anagrafici del media', function (): void {
-<<<<<<< HEAD
     $schema = (new MediaForm())->getFormSchema();
-=======
-    $schema = MediaForm::getFormSchema();
->>>>>>> laraxot/dev
 
     Assert::assertSame(
         ['name', 'file_name', 'mime_type', 'disk', 'size', 'collection_name'],
@@ -40,20 +36,12 @@ test('MediaForm espone i campi anagrafici del media', function (): void {
 test('TemporaryUploadForm espone file folder e expires_at', function (): void {
     Assert::assertSame(
         ['file', 'folder', 'expires_at'],
-<<<<<<< HEAD
         array_keys((new TemporaryUploadForm())->getFormSchema()),
-=======
-        array_keys(TemporaryUploadForm::getFormSchema()),
->>>>>>> laraxot/dev
     );
 });
 
 test('HasMediaForm espone una section con name', function (): void {
-<<<<<<< HEAD
     $schema = (new HasMediaForm())->getFormSchema();
-=======
-    $schema = HasMediaForm::getFormSchema();
->>>>>>> laraxot/dev
 
     Assert::assertNotSame([], $schema);
 });

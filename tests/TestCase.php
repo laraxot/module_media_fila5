@@ -83,11 +83,7 @@ abstract class TestCase extends XotBaseTestCase
 
     protected function setUp(): void
     {
-<<<<<<< HEAD
         $this->prepareSharedSqliteForTesting();
-=======
-        $this->prepareSharedFixcitySqliteForTesting();
->>>>>>> laraxot/dev
 
         parent::setUp();
 
