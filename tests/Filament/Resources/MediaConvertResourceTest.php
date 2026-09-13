@@ -12,7 +12,7 @@ use Modules\Media\Tests\TestCase;
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
-    $form = MediaConvertResource::getFormSchema();
+    $form = (new \Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm())->getFormSchema();
 
     expect($form)->not->toBeEmpty();
 

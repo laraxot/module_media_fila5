@@ -66,11 +66,11 @@ describe('Media highest-miss coverage', function (): void {
         Assert::assertArrayHasKey('index', $mediaPages);
         Assert::assertArrayHasKey('view', $mediaPages);
         Assert::assertArrayHasKey('convert', $mediaPages);
-        Assert::assertArrayHasKey('file', MediaResource::getFormSchema());
+        Assert::assertArrayHasKey('file', (new \Modules\Media\Filament\Resources\MediaResource\Schemas\MediaForm())->getFormSchema());
 
         Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
         Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
-        Assert::assertArrayHasKey('format', MediaConvertResource::getFormSchema());
+        Assert::assertArrayHasKey('format', (new \Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm())->getFormSchema());
 
         Assert::assertSame(TemporaryUpload::class, TemporaryUploadResource::getModel());
         Assert::assertNotEmpty(TemporaryUploadResource::getPages());
