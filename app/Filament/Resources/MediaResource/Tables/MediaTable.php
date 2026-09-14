@@ -94,8 +94,11 @@ class MediaTable extends XotBaseResourceTable
         ];
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 
     /**
      * @return array<string, Action|ActionGroup>
@@ -108,5 +111,8 @@ class MediaTable extends XotBaseResourceTable
     }
 =======
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 }

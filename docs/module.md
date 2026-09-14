@@ -1,5 +1,6 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Modulo Media - Gestione File Multimediali"
 module: "Media"
 type: concept
@@ -360,6 +361,8 @@ $share = SharingService::create($media, [
 **Versione**: v2.1.0-beta  
 **Stato**: Production Ready with AI Enhancement Roadmap
 =======
+=======
+>>>>>>> laraxot/dev
 title: "Media Module — Doctrine"
 type: doctrine
 tags: [media, image, video, module-doctrine]
@@ -433,4 +436,7 @@ Media è sufficientemente specializzato per giustificare un modulo dedicato. Ela
 4. **Image optimization AI**: compressione intelligente
 5. **360° media**: supporto per contenuti immersivi
 6. **Live streaming**: broadcasting live
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

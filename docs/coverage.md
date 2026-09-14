@@ -21,7 +21,10 @@ related:
 
 - **Tests Passed**: 59
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
 ## Status
 
 **2026-09-06 (Session 2)**:
@@ -31,6 +34,9 @@ related:
 - Coverage status: Baseline established (0.00% per-module app code)
 - Next: Pest coverage boost target +5% (Phase 2)
 
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 - **Tests Skipped**: 5
 - **Assertions**: 122

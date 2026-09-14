@@ -154,13 +154,19 @@ class AwsTest extends XotBasePage
 
             $result = $s3->headBucket([
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Bucket' => $this->getS3Bucket(),
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
                 'Bucket' => config('filesystems.disks.s3.bucket'),
 =======
                 'Bucket' => $this->getS3Bucket(),
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
             ]);
 
@@ -302,13 +308,19 @@ class AwsTest extends XotBasePage
             // Test list objects permission
             $result = $s3->listObjectsV2([
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Bucket' => $this->getS3Bucket(),
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
                 'Bucket' => config('filesystems.disks.s3.bucket'),
 =======
                 'Bucket' => $this->getS3Bucket(),
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
                 'MaxKeys' => 1,
             ]);
@@ -370,13 +382,19 @@ class AwsTest extends XotBasePage
             // Test get operation
             $result = $s3->getObject([
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'Bucket' => $this->getS3Bucket(),
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
                 'Bucket' => config('filesystems.disks.s3.bucket'),
 =======
                 'Bucket' => $this->getS3Bucket(),
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
                 'Key' => $testFileName,
             ]);

@@ -24,7 +24,11 @@ Technical implementation details for the Media module.
 
 ## Dependencies
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Laravel 12.x
+=======
+- Laravel 13.x
+>>>>>>> laraxot/dev
 =======
 - Laravel 13.x
 >>>>>>> laraxot/dev

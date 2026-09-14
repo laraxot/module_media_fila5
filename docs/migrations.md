@@ -1,8 +1,11 @@
 # Media Module Migrations
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 ## Dati sacri
 
 Migrazioni **additive** solo: `php artisan migrate` senza `--force`.
@@ -14,6 +17,9 @@ Config root: `laravel/config/media.php` deve essere un **file** (non directory `
 
 =======
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 ## Overview
 

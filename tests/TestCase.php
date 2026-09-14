@@ -25,9 +25,15 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\file_get_contents;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\User\Models\User;
 =======
 <<<<<<< HEAD
+=======
+use Modules\User\Models\User;
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
+=======
 =======
 use Modules\User\Models\User;
 >>>>>>> laraxot/dev
@@ -91,13 +97,19 @@ abstract class TestCase extends XotBaseTestCase
     protected function setUp(): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->prepareSharedSqliteForTesting();
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
         
 =======
         $this->prepareSharedSqliteForTesting();
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
         parent::setUp();

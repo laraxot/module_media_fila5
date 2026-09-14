@@ -15,7 +15,10 @@ return [
         'disk' => ['label' => 'disk'],
         'size' => ['label' => 'size'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> laraxot/dev
         'url' => ['label' => 'url'],
         'human_readable_size' => ['label' => 'human_readable_size'],
         'created_at' => ['label' => 'created_at'],
@@ -27,6 +30,9 @@ return [
     ],
     'actions' => [
         'convert' => ['label' => 'convert', 'icon' => 'convert', 'tooltip' => 'convert'],
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     ],
 ];
