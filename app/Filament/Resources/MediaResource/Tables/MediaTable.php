@@ -93,12 +93,6 @@ class MediaTable extends XotBaseResourceTable
                 ->openUrlInNewTab(true),
         ];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
 
     /**
      * @return array<string, Action|ActionGroup>
@@ -109,10 +103,4 @@ class MediaTable extends XotBaseResourceTable
             'delete' => DeleteAction::make(),
         ];
     }
-=======
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 }
