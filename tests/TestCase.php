@@ -24,6 +24,10 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\file_get_contents;
+<<<<<<< HEAD
+=======
+use Modules\User\Models\User;
+>>>>>>> laraxot/dev
 
 /**
  * Base test case for Media module.
@@ -82,7 +86,11 @@ abstract class TestCase extends XotBaseTestCase
 
     protected function setUp(): void
     {
+<<<<<<< HEAD
         
+=======
+        $this->prepareSharedSqliteForTesting();
+>>>>>>> laraxot/dev
 
         parent::setUp();
 

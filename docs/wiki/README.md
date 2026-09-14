@@ -11,7 +11,12 @@
 
 > **Core module for the FixCity Platform.**
 
+<<<<<<< HEAD
 ## Perché esiste
+=======
+Use qmd to serve or convert these documents (https://github.com/tobi/qmd).
+# LLM Wiki
+>>>>>>> laraxot/dev
 
 Core module for the FixCity Platform.
 

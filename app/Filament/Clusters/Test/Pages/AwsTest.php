@@ -153,14 +153,18 @@ class AwsTest extends XotBasePage
             ]);
 
             $result = $s3->headBucket([
+<<<<<<< HEAD
                 'Bucket' => config('filesystems.disks.s3.bucket'),
+=======
+                'Bucket' => $this->getS3Bucket(),
+>>>>>>> laraxot/dev
             ]);
 
             $this->testResults['s3'] = [
                 'status' => 'success',
                 'message' => 'Successfully connected to S3 bucket',
                 'details' => [
-                    'Bucket' => config('filesystems.disks.s3.bucket'),
+                    'Bucket' => $this->getS3Bucket(),
                     'Region' => config('filesystems.disks.s3.region'),
                 ],
             ];
@@ -252,10 +256,15 @@ class AwsTest extends XotBasePage
         return [
             'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, self::KEY_PREVIEW_LENGTH).'...',
             'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
-            'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
+            'AWS_BUCKET' => $this->getS3Bucket(),
             'CLOUDFRONT_URL' => config('filesystems.cloudfront.url'),
             'CLOUDFRONT_KEY_PAIR_ID' => config('filesystems.cloudfront.key_pair_id'),
         ];
+    }
+
+    private function getS3Bucket(): string
+    {
+        return SafeStringCastAction::cast(config('filesystems.disks.s3.bucket', ''));
     }
 
     protected function getS3Solution(?string $errorCode): string
@@ -288,7 +297,11 @@ class AwsTest extends XotBasePage
 
             // Test list objects permission
             $result = $s3->listObjectsV2([
+<<<<<<< HEAD
                 'Bucket' => config('filesystems.disks.s3.bucket'),
+=======
+                'Bucket' => $this->getS3Bucket(),
+>>>>>>> laraxot/dev
                 'MaxKeys' => 1,
             ]);
 
@@ -297,7 +310,7 @@ class AwsTest extends XotBasePage
                 'message' => 'S3 permissions verified successfully',
                 'details' => [
                     'ListObjects' => 'OK',
-                    'Bucket' => config('filesystems.disks.s3.bucket'),
+                    'Bucket' => $this->getS3Bucket(),
                 ],
             ];
 
@@ -340,7 +353,7 @@ class AwsTest extends XotBasePage
 
             // Test put operation
             $s3->putObject([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+                'Bucket' => $this->getS3Bucket(),
                 'Key' => $testFileName,
                 'Body' => $testContent,
                 'ContentType' => 'text/plain',
@@ -348,13 +361,17 @@ class AwsTest extends XotBasePage
 
             // Test get operation
             $result = $s3->getObject([
+<<<<<<< HEAD
                 'Bucket' => config('filesystems.disks.s3.bucket'),
+=======
+                'Bucket' => $this->getS3Bucket(),
+>>>>>>> laraxot/dev
                 'Key' => $testFileName,
             ]);
 
             // Clean up - delete test file
             $s3->deleteObject([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+                'Bucket' => $this->getS3Bucket(),
                 'Key' => $testFileName,
             ]);
 
@@ -495,12 +512,12 @@ class AwsTest extends XotBasePage
 
             // Test bucket access
             $s3->headBucket([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+                'Bucket' => $this->getS3Bucket(),
             ]);
 
             // Test list objects
             $s3->listObjectsV2([
-                'Bucket' => config('filesystems.disks.s3.bucket'),
+                'Bucket' => $this->getS3Bucket(),
                 'MaxKeys' => 1,
             ]);
 
