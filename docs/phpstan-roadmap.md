@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "PHPStan Roadmap - Media Module"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "phpstan roadmap"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 3cd61a43 (.)
 # PHPStan Roadmap - Media Module
 
 > **Date**: [DATE]

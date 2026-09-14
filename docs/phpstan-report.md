@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
 ---
 title: "Report PHPStan - Modulo Media"
 module: "Media"
@@ -13,11 +9,6 @@ qmd: "phpstan report"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
-=======
->>>>>>> 3cd61a43 (.)
-=======
->>>>>>> laraxot/dev
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale

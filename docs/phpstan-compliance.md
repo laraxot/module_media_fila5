@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "PHPStan Compliance - Media Module"
 module: "Media"
@@ -10,16 +9,10 @@ qmd: "phpstan compliance"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 4e14511d (.)
 # PHPStan Compliance - Media Module
 
 ## Status: ✅ FULLY COMPLIANT
 
-<<<<<<< HEAD
-=======
-**Analysis Date:** September 22, 2025
->>>>>>> 4e14511d (.)
 **PHPStan Level:** 9 (Maximum)
 **Files Analyzed:** 114
 **Errors Found:** 0
@@ -66,8 +59,4 @@ The module adheres to:
 - Strict type declarations
 - Comprehensive type hints
 - Media handling best practices
-<<<<<<< HEAD
 - Modern PHP 8.2+ feature usage
-=======
-- Modern PHP 8.2+ feature usage
->>>>>>> 4e14511d (.)
