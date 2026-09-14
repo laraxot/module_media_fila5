@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Phpstan Level10 Fixes Root Symlink"
 module: "Media"
@@ -11,6 +10,3 @@ related:
   - "./webm.md"
 ---
 PHPSTAN_LEVEL10_FIXES_media.md
-=======
-PHPSTAN_LEVEL10_FIXES_media.md
->>>>>>> 4e14511d (.)

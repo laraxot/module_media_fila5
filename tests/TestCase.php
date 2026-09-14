@@ -25,8 +25,6 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\file_get_contents;
 use Modules\User\Models\User;
-use Modules\User\Models\User;
-use Modules\User\Models\User;
 
 /**
  * Base test case for Media module.
@@ -85,8 +83,6 @@ abstract class TestCase extends XotBaseTestCase
 
     protected function setUp(): void
     {
-        $this->prepareSharedSqliteForTesting();
-        
         $this->prepareSharedSqliteForTesting();
 
         parent::setUp();

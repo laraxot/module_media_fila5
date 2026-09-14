@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media Module - PHPStan Level 10 Errors Resolution Roadmap"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "phpstan errors resolution roadmap"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 3cd61a43 (.)
 # Media Module - PHPStan Level 10 Errors Resolution Roadmap
 
 ## 📊 Stato Attuale

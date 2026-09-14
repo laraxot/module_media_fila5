@@ -154,8 +154,6 @@ class AwsTest extends XotBasePage
 
             $result = $s3->headBucket([
                 'Bucket' => $this->getS3Bucket(),
-                'Bucket' => config('filesystems.disks.s3.bucket'),
-                'Bucket' => $this->getS3Bucket(),
             ]);
 
             $this->testResults['s3'] = [
@@ -296,8 +294,6 @@ class AwsTest extends XotBasePage
             // Test list objects permission
             $result = $s3->listObjectsV2([
                 'Bucket' => $this->getS3Bucket(),
-                'Bucket' => config('filesystems.disks.s3.bucket'),
-                'Bucket' => $this->getS3Bucket(),
                 'MaxKeys' => 1,
             ]);
 
@@ -357,8 +353,6 @@ class AwsTest extends XotBasePage
 
             // Test get operation
             $result = $s3->getObject([
-                'Bucket' => $this->getS3Bucket(),
-                'Bucket' => config('filesystems.disks.s3.bucket'),
                 'Bucket' => $this->getS3Bucket(),
                 'Key' => $testFileName,
             ]);
