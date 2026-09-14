@@ -19,13 +19,19 @@ use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConvert
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 use Modules\Media\Filament\Resources\MediaResource\Schemas\MediaInfolist;
 =======
 use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Http\Requests\CreateTemporaryUploadFromDirectS3UploadRequest;
@@ -75,11 +81,17 @@ describe('Media highest-miss coverage', function (): void {
         Assert::assertArrayHasKey('view', $mediaPages);
         Assert::assertArrayHasKey('convert', $mediaPages);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 
         Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
         Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
         Assert::assertArrayHasKey('file', (new \Modules\Media\Filament\Resources\MediaResource\Schemas\MediaForm())->getFormSchema());
@@ -88,6 +100,9 @@ describe('Media highest-miss coverage', function (): void {
         Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
         Assert::assertArrayHasKey('format', (new \Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm())->getFormSchema());
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
@@ -241,15 +256,21 @@ XML;
 
     test('ViewMedia infolist schema and convert command missing file', function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $page = (new ReflectionClass(ViewMedia::class))->newInstanceWithoutConstructor();
         Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
         Assert::assertArrayHasKey('media_grid', app(MediaInfolist::class)->getInfolistSchema());
 =======
         $page = (new ReflectionClass(ViewMedia::class))->newInstanceWithoutConstructor();
         Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
         Storage::fake('local');

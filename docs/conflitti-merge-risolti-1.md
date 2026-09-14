@@ -234,7 +234,11 @@ protected static ?string $navigationIcon = 'fas-photo-film';
  * @return array<string, \Filament\Forms\Components\Component>
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 public static function getFormSchema(): array
+=======
+public function getFormSchema(): array
+>>>>>>> laraxot/dev
 =======
 public function getFormSchema(): array
 >>>>>>> laraxot/dev
@@ -298,7 +302,11 @@ protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
  * @return array<int, \Filament\Forms\Components\Component>
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 public static function getFormSchema(): array
+=======
+public function getFormSchema(): array
+>>>>>>> laraxot/dev
 =======
 public function getFormSchema(): array
 >>>>>>> laraxot/dev

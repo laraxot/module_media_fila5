@@ -12,6 +12,7 @@ use Modules\Media\Tests\TestCase;
 uses(TestCase::class);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 test('get form schema returns expected components', function (): void {
     $form = (new \Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm())->getFormSchema();
 
@@ -25,8 +26,13 @@ test('get form schema returns expected components', function (): void {
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> laraxot/dev
+=======
 test('get form schema returns expected components', function (): void {
     $form = (new \Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm())->getFormSchema();
 >>>>>>> laraxot/dev
 
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

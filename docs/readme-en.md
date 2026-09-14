@@ -13,7 +13,11 @@ related:
 
 [![Domain-Media](https://img.shields.io/badge/Domain-Media%20Library-AD1457.svg)](#)
 <<<<<<< HEAD
+<<<<<<< HEAD
 [![Laravel 12](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+=======
+[![Laravel 13](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
+>>>>>>> laraxot/dev
 =======
 [![Laravel 13](https://img.shields.io/badge/Laravel-12-red.svg)](https://laravel.com/)
 >>>>>>> laraxot/dev

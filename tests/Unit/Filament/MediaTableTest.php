@@ -66,8 +66,11 @@ test('updated_at is the only column hidden behind the toggle', function (): void
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 // Deprecated: getTableActions() moved to Resource.table() in Filament 5
 // test('the row actions are keyed by their own name, with one documented deviation', function (): void {
 //     $actions = (new MediaTable())->getTableActions();
@@ -87,4 +90,7 @@ test('updated_at is the only column hidden behind the toggle', function (): void
 // });
 =======
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

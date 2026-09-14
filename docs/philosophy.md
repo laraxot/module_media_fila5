@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Media Module: Philosophy, Purpose, and Design Principles"
 module: "Media"
@@ -66,6 +67,8 @@ The `Media` module, as the guardian of digital assets, can significantly benefit
 
 By leveraging these MCPs, the `Media` module can ensure its critical role in managing digital assets is more efficient, verifiable, and transparent, ultimately contributing to a richer and more engaging application experience.
 =======
+=======
+>>>>>>> laraxot/dev
 # Media module philosophy
 
 ## Zen: Media is a pipeline, not a blob
@@ -284,4 +287,7 @@ TemporaryUpload::where('created_at', '<', now()->subDay())->delete();
 **Module owner:** Media team  
 **Last updated:** 2026-09-06  
 **Documented via:** Direct code analysis (Models, Actions, Datas, integrations)
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

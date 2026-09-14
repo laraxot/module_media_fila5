@@ -31,13 +31,19 @@ test('a path without extension yields no rows', function (): void {
 test('every item becomes a row with normalised timings', function (): void {
     $rows = (new ParseSubtitleXmlAction())->execute(
 <<<<<<< HEAD
+<<<<<<< HEAD
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
         dirname(__DIR__, 3).'/fixtures/subtitle.xml',
 =======
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     );
 
@@ -62,13 +68,19 @@ test('every item becomes a row with normalised timings', function (): void {
 test('timecodes carry hours, minutes and milliseconds', function (): void {
     $rows = (new ParseSubtitleXmlAction())->execute(
 <<<<<<< HEAD
+<<<<<<< HEAD
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
         dirname(__DIR__, 3).'/fixtures/subtitle.xml',
 =======
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     );
 

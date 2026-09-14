@@ -16,7 +16,11 @@ related:
 **Type**: Media Management Module  
 **Status**: ✅ Active  
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Framework**: Laravel 12.x + Filament 4.x  
+=======
+**Framework**: Laravel 13.x + Filament 4.x  
+>>>>>>> laraxot/dev
 =======
 **Framework**: Laravel 13.x + Filament 4.x  
 >>>>>>> laraxot/dev

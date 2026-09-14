@@ -46,7 +46,11 @@ class AddAttachmentAction extends XotBaseAction
      * @return array<int, Radio|TextInput|BaseFileUpload|FileUpload>
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public static function getFormSchema(bool $asset = true): array
+=======
+    public function getFormSchema(bool $asset = true): array
+>>>>>>> laraxot/dev
 =======
     public function getFormSchema(bool $asset = true): array
 >>>>>>> laraxot/dev

@@ -14,11 +14,14 @@ use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Tests\XotBasePest;
 use Modules\User\Models\User;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 use Modules\User\Models\User;
 use Modules\Xot\Tests\XotBasePest;
 =======
@@ -26,6 +29,9 @@ use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Tests\XotBasePest;
 use Modules\User\Models\User;
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
 uses(TestCase::class);
