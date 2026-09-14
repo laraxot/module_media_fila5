@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Correzioni PHPStan Livello 7 - Modulo Media"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "phpstan fixes"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 4e14511d (.)
 # Correzioni PHPStan Livello 7 - Modulo Media
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Media e le relative soluzioni implementate.
@@ -45,7 +42,6 @@ while (! feof($this->stream) && $this->start <= $this->end) {
 }
 ```
 
-<<<<<<< HEAD
 Questo controllo garantisce che `fread()` venga chiamato solo con un valore positivo per il parametro `$length`, evitando anche potenziali loop infiniti nel caso in cui `$bytesToRead` fosse zero o negativo.
 
 ### 2. Correzione in ViewMedia.php (getHeaderActions() Return Type)
@@ -106,9 +102,3 @@ protected function getHeaderActions(): array
 Dettaglio: [wiki/troubleshooting/phpstan-fixes.md](./wiki/troubleshooting/phpstan-fixes.md) · handoff [docs/chat/phpstan-media-session3-findings.md](../../../docs/chat/phpstan-media-session3-findings.md)
 
 *ultimo aggiornamento: 2026-07-15*
-<<<<<<< HEAD
-=======
-Questo controllo garantisce che `fread()` venga chiamato solo con un valore positivo per il parametro `$length`, evitando anche potenziali loop infiniti nel caso in cui `$bytesToRead` fosse zero o negativo. 
->>>>>>> 4e14511d (.)
-=======
->>>>>>> laraxot/dev

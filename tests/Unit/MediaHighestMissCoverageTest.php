@@ -19,8 +19,6 @@ use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConvert
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
-use Modules\Media\Filament\Resources\MediaResource\Schemas\MediaInfolist;
-use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Http\Requests\CreateTemporaryUploadFromDirectS3UploadRequest;
 use Modules\Media\Models\Media;
@@ -68,9 +66,6 @@ describe('Media highest-miss coverage', function (): void {
         Assert::assertArrayHasKey('index', $mediaPages);
         Assert::assertArrayHasKey('view', $mediaPages);
         Assert::assertArrayHasKey('convert', $mediaPages);
-
-        Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
-        Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
         Assert::assertArrayHasKey('file', (new \Modules\Media\Filament\Resources\MediaResource\Schemas\MediaForm())->getFormSchema());
 
         Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
@@ -225,9 +220,6 @@ XML;
     });
 
     test('ViewMedia infolist schema and convert command missing file', function (): void {
-        $page = (new ReflectionClass(ViewMedia::class))->newInstanceWithoutConstructor();
-        Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
-        Assert::assertArrayHasKey('media_grid', app(MediaInfolist::class)->getInfolistSchema());
         $page = (new ReflectionClass(ViewMedia::class))->newInstanceWithoutConstructor();
         Assert::assertArrayHasKey('media_grid', mediaTablePart($page, 'getInfolistSchema'));
 

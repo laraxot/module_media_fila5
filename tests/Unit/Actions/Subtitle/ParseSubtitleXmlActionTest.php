@@ -31,8 +31,6 @@ test('a path without extension yields no rows', function (): void {
 test('every item becomes a row with normalised timings', function (): void {
     $rows = (new ParseSubtitleXmlAction())->execute(
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
-        dirname(__DIR__, 3).'/fixtures/subtitle.xml',
-        dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
     );
 
     Assert::assertCount(3, $rows);
@@ -55,8 +53,6 @@ test('every item becomes a row with normalised timings', function (): void {
 
 test('timecodes carry hours, minutes and milliseconds', function (): void {
     $rows = (new ParseSubtitleXmlAction())->execute(
-        dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
-        dirname(__DIR__, 3).'/fixtures/subtitle.xml',
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
     );
 
