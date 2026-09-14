@@ -23,14 +23,20 @@ class MediaResource extends XotBaseResource
     protected static ?string $model = Media::class;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> laraxot/dev
+=======
     
 
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     /**
      * @psalm-return array<never, never>

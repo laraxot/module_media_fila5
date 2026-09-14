@@ -273,7 +273,11 @@ protected function createApplication()
 ### External Resources
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - [Laravel 12.x Testing Documentation](https://laravel.com/docs/12.x/testing)
+=======
+- [Laravel 13.x Testing Documentation](https://laravel.com/docs/12.x/testing)
+>>>>>>> laraxot/dev
 =======
 - [Laravel 13.x Testing Documentation](https://laravel.com/docs/12.x/testing)
 >>>>>>> laraxot/dev

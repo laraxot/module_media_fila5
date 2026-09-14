@@ -1032,7 +1032,11 @@ class MediaAnalyticsService
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 🚀 Modern Laravel 12 + PHP 8.3 Optimizations
+=======
+## 🚀 Modern Laravel 13 + PHP 8.3 Optimizations
+>>>>>>> laraxot/dev
 =======
 ## 🚀 Modern Laravel 13 + PHP 8.3 Optimizations
 >>>>>>> laraxot/dev

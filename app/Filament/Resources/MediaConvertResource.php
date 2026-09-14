@@ -19,14 +19,20 @@ class MediaConvertResource extends XotBaseResource
     protected static ?string $model = MediaConvert::class;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> laraxot/dev
+=======
     
 
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     /**
      * @return array<string, mixed>

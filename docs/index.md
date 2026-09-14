@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Media Module - Documentation Index
 
 Ultimo audit indice: 2026-09-03. File `.md` totali sotto `docs/`: 479 (256 nella radice, il resto in sottocartelle).
@@ -672,6 +673,8 @@ File che vivono in una cartella "viva" ma sono varianti maiuscole/duplicate di u
 
 Questo indice va aggiornato quando si aggiungono nuovi documenti. Non rinominare ne' cancellare file per "far quadrare" l'indice: aggiungere alla sezione pertinente o a "Storico / da consolidare".
 =======
+=======
+>>>>>>> laraxot/dev
 # Media Module Documentation
 
 **Last Update**: Feb 2026
@@ -841,4 +844,7 @@ Modulo: Media
 ## File disponibili
 
 <!-- auto-generato: elencare i file .md presenti -->
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
