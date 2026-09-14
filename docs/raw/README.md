@@ -9,6 +9,7 @@
 [![Architecture](https://img.shields.io/badge/Architecture-Modular-purple?style=for-the-badge)](https://martinfowler.com/articles/paradigm-shifts.html)]()
 ]()
 
+<<<<<<< HEAD
 > **Core module for the FixCity Platform.**
 
 ## Perché esiste
@@ -32,3 +33,10 @@ Core module for the FixCity Platform.
 ---
 
 **Modulo** `Media` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+=======
+Rules:
+- keep raw captures close to the original source;
+- prefer Markdown when possible;
+- do not rewrite raw material to make it look cleaner;
+- promote stable knowledge into `../wiki/`.
+>>>>>>> laraxot/dev

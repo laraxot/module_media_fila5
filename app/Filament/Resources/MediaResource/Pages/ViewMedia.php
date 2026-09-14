@@ -13,6 +13,11 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 class ViewMedia extends XotBaseViewRecord
 {
     protected static string $resource = MediaResource::class;
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> laraxot/dev
 
     /**
      * @return array<string, DeleteAction>

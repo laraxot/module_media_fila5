@@ -25,10 +25,14 @@ class TemporaryUploadResource extends XotBaseResource
 {
     protected static ?string $model = TemporaryUpload::class;
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> laraxot/dev
     /**
      * @psalm-return array<never, never>
      */
-    #[Override]
     public static function getRelations(): array
     {
         return [];
@@ -39,7 +43,6 @@ class TemporaryUploadResource extends XotBaseResource
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
-    #[Override]
     public static function getPages(): array
     {
         return [
