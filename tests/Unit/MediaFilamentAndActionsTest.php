@@ -25,13 +25,19 @@ uses(TestCase::class)->group('no-media-db');
 
 test('MediaForm espone i campi anagrafici del media', function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $schema = (new MediaForm())->getFormSchema();
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
     $schema = app(MediaForm::class)->getFormSchema();
 =======
     $schema = (new MediaForm())->getFormSchema();
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
     Assert::assertSame(
@@ -45,26 +51,38 @@ test('TemporaryUploadForm espone file folder e expires_at', function (): void {
     Assert::assertSame(
         ['file', 'folder', 'expires_at'],
 <<<<<<< HEAD
+<<<<<<< HEAD
         array_keys((new TemporaryUploadForm())->getFormSchema()),
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
         array_keys(app(TemporaryUploadForm::class)->getFormSchema()),
 =======
         array_keys((new TemporaryUploadForm())->getFormSchema()),
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     );
 });
 
 test('HasMediaForm espone una section con name', function (): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
     $schema = (new HasMediaForm())->getFormSchema();
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
     $schema = app(HasMediaForm::class)->getFormSchema();
 =======
     $schema = (new HasMediaForm())->getFormSchema();
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
     Assert::assertNotSame([], $schema);

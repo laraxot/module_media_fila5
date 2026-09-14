@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: html2pdf — documentazione canonica
 type: reference
@@ -24,6 +25,8 @@ Negli altri moduli `docs/html2pdf/*.md` sono **stub** che puntano qui.
 
 Aggiornare solo questi file; rieseguire dedup se compaiono nuove copie: [module-docs-deduplication](../../../../../docs/wiki/how-to/module-docs-deduplication.md).
 =======
+=======
+>>>>>>> laraxot/dev
 # Media
 
 [![Module](https://img.shields.io/badge/Module-Media-8B0000.svg)]()
@@ -58,4 +61,7 @@ Core module for the FixCity Platform.
 ---
 
 **Modulo** `Media` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev

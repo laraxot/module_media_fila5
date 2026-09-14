@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 # 🖼️ Media
 
 [![Stars](https://img.shields.io/github/stars/laraxot/module_media_fila5?style=plastic&color=yellow)]()
@@ -67,6 +70,9 @@ Importa, installa, configura. Il resto ci penseremo noi.
 
 **Modulo** `Media` · **Laraxot** · PHPStan 10 · Filament 5
 =======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 ---
 id: module-media-readme
@@ -131,6 +137,9 @@ Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, an
 
 **Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

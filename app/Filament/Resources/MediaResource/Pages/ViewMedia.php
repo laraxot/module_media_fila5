@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Infolists\Components\ImageEntry;
@@ -20,12 +21,18 @@ use Modules\Media\Filament\Resources\MediaConvertResource;
 =======
 use Filament\Actions\DeleteAction;
 >>>>>>> laraxot/dev
+=======
+use Filament\Actions\DeleteAction;
+>>>>>>> laraxot/dev
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Override;
+=======
+>>>>>>> laraxot/dev
 =======
 >>>>>>> laraxot/dev
 
@@ -33,14 +40,20 @@ class ViewMedia extends XotBaseViewRecord
 {
     protected static string $resource = MediaResource::class;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> laraxot/dev
+=======
 
     
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 
     /**

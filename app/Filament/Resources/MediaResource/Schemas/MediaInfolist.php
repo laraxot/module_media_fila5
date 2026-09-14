@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\MediaResource\Schemas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Component;
 =======
+=======
+>>>>>>> laraxot/dev
 use Filament\Actions\Action;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\RepeatableEntry;
@@ -20,6 +23,9 @@ use Modules\Media\Datas\ConvertData;
 use Modules\Media\Filament\Infolists\VideoEntry;
 use Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm;
 use Modules\Media\Models\Media;
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceInfolist;
 
@@ -32,6 +38,7 @@ class MediaInfolist extends XotBaseResourceInfolist
     {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'id' => TextEntry::make('id'),
             'model_type' => TextEntry::make('model_type'),
             'model_id' => TextEntry::make('model_id'),
@@ -43,6 +50,8 @@ class MediaInfolist extends XotBaseResourceInfolist
             'disk' => TextEntry::make('disk'),
             'size' => TextEntry::make('size'),
 =======
+=======
+>>>>>>> laraxot/dev
             'media_grid' => Grid::make(2)
                 ->schema([
                     'media_preview' => Section::make()->schema([
@@ -94,6 +103,9 @@ class MediaInfolist extends XotBaseResourceInfolist
                     'src_image' => ImageEntry::make('src'),
                 ])
                 ->columns(4),
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
         ];
     }

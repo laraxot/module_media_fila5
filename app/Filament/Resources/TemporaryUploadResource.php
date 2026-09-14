@@ -26,14 +26,20 @@ class TemporaryUploadResource extends XotBaseResource
     protected static ?string $model = TemporaryUpload::class;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> laraxot/dev
+=======
     
 
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
+=======
 >>>>>>> laraxot/dev
     /**
      * @psalm-return array<never, never>
