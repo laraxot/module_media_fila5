@@ -9,10 +9,15 @@
 [![Architecture](https://img.shields.io/badge/Architecture-Modular-purple?style=for-the-badge)](https://martinfowler.com/articles/paradigm-shifts.html)]()
 ]()
 
+<<<<<<< HEAD
 > **Core module for the FixCity Platform.**
+=======
+## File Canonici
+>>>>>>> laraxot/dev
 
 ## Perché esiste
 
+<<<<<<< HEAD
 Core module for the FixCity Platform.
 
 ## Superpoteri
@@ -32,3 +37,20 @@ Core module for the FixCity Platform.
 ---
 
 **Modulo** `Media` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5
+=======
+## Scopo Modulo
+
+- Memorizzazione, elaborazione, distribuzione file multimediali
+- Supporto multi-format (immagini, video, documenti, audio)
+- Integrazione CDN e streaming video
+- Isolamento tenant
+- Conversione automatica (FFmpeg, immagini)
+
+## Linkage
+
+- Dipende da: Xot (base), Tenant, User, UI
+- Utilizzato da: temi e moduli applicativi
+- Standard di documentazione: vedi `/docs/` root
+
+Per dettagli architetturali, vedi **architecture.md**.
+>>>>>>> laraxot/dev
