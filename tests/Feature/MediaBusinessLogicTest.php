@@ -16,11 +16,6 @@ use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Tests\XotBasePest;
 use Modules\User\Models\User;
-use Modules\User\Models\User;
-use Modules\Xot\Tests\XotBasePest;
-use Modules\Xot\Contracts\UserContract;
-use Modules\Xot\Tests\XotBasePest;
-use Modules\User\Models\User;
 
 uses(TestCase::class);
 

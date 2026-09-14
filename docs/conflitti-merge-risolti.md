@@ -233,15 +233,7 @@ protected static ?string $navigationIcon = 'fas-photo-film';
 /**
  * @return array<string, \Filament\Forms\Components\Component>
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 public static function getFormSchema(): array
-=======
-public function getFormSchema(): array
->>>>>>> laraxot/dev
-=======
-public function getFormSchema(): array
->>>>>>> laraxot/dev
 {
     return [
         FileUpload::make('file')
@@ -301,15 +293,7 @@ protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
  * Restituisce lo schema del form per la risorsa MediaConvert.
  * @return array<int, \Filament\Forms\Components\Component>
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 public static function getFormSchema(): array
-=======
-public function getFormSchema(): array
->>>>>>> laraxot/dev
-=======
-public function getFormSchema(): array
->>>>>>> laraxot/dev
 {
     return [
         Radio::make('format')

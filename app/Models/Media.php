@@ -13,12 +13,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
-use Modules\Media\Database\Factories\MediaFactory;
-use Modules\User\Models\User;
-use Modules\Xot\Contracts\ProfileContract;
-use Modules\Media\Database\Factories\MediaFactory;
-use Modules\User\Models\User;
-use Modules\Xot\Contracts\ProfileContract;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
@@ -29,9 +23,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
- * @property-read User|null $creator
- * @property-read User|null $creator
- * @property-read \Modules\User\Models\User|null $creator
  * @property-read \Modules\User\Models\User|null $creator
  * @property-read mixed $extension
  * @property-read array<int, array{name: string, generated: bool, src: string}> $entry_conversions
@@ -105,11 +96,6 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
-    /** @phpstan-ignore generics.notGeneric */
-    /** @use HasXotFactory<Factory<static>> */
-    use HasXotFactory;
-
-    use HasXotFactory;
     use HasXotFactory;
     use Updater;
 
@@ -143,13 +129,6 @@ class Media extends SpatieMedia
     /**
      * Relazione con il creatore del media.
      *
-     * @return BelongsTo<Model, self>
-     *
-     * @phpstan-return BelongsTo<Model, $this>
-     */
-    public function creator(): BelongsTo
-    {
-        /** @var class-string<Model> $userClass */
      * @return BelongsTo<User, $this>
      */
     public function creator(): BelongsTo

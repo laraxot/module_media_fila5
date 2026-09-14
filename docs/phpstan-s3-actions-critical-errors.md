@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "PHPStan S3 Actions Critical Errors Analysis"
 module: "Media"
@@ -10,8 +9,6 @@ qmd: "phpstan s3 actions critical errors"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> 3cd61a43 (.)
 # PHPStan S3 Actions Critical Errors Analysis
 
 ## Errori Critici Identificati nel Modulo Media
@@ -183,19 +180,10 @@ $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
 - ✅ Refactoring facilitato
 - ✅ Team productivity incrementata
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
 ## Campagna 5.10 (mixed)
 
 `FormatDebugOutputAction::formatResultBlock` è `array` dopo `is_array` nel loop: i blocchi debug hanno forma, non sono opachi. `formatDataLine(mixed $value)` resta mixed (dump diagnostico). `TestCloudFrontConnectionAction::incompleteConfiguration` prende tre `bool` (manca/c’è): `config()` resta mixed al call site, la firma no.
 
-<<<<<<< HEAD
-=======
->>>>>>> 3cd61a43 (.)
-=======
->>>>>>> laraxot/dev
 ## Lesson Learned
 
 1. **Config/Env Type Safety è Critica**: Sempre validare tipi prima del cast
@@ -203,8 +191,4 @@ $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
 3. **Safe Functions**: Import e utilizzo devono essere consistenti
 4. **Documentation**: Critical per mantenere consistenza nel team
 
-<<<<<<< HEAD
-=======
-*Ultimo aggiornamento: gennaio 2025*
->>>>>>> 3cd61a43 (.)
 *Status: COMPLETATO CON SUCCESSO - TUTTI GLI ERRORI RISOLTI*
