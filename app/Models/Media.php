@@ -13,27 +13,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
-<<<<<<< HEAD
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
-=======
-=======
->>>>>>> laraxot/dev
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Contracts\UserContract;
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
@@ -41,20 +29,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
-<<<<<<< HEAD
  * @property-read User|null $creator
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
  * @property-read User|null $creator
-=======
  * @property-read \Modules\User\Models\User|null $creator
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
-=======
  * @property-read \Modules\User\Models\User|null $creator
->>>>>>> laraxot/dev
->>>>>>> laraxot/dev
  * @property-read mixed $extension
  * @property-read array<int, array{name: string, generated: bool, src: string}> $entry_conversions
  * @property-read string $path
@@ -127,18 +105,12 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  */
 class Media extends SpatieMedia
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /** @phpstan-ignore generics.notGeneric */
     /** @use HasXotFactory<Factory<static>> */
     use HasXotFactory;
 
-=======
     use HasXotFactory;
->>>>>>> laraxot/dev
-=======
     use HasXotFactory;
->>>>>>> laraxot/dev
     use Updater;
 
     /** @var string */
@@ -171,8 +143,6 @@ class Media extends SpatieMedia
     /**
      * Relazione con il creatore del media.
      *
-<<<<<<< HEAD
-<<<<<<< HEAD
      * @return BelongsTo<Model, self>
      *
      * @phpstan-return BelongsTo<Model, $this>
@@ -180,18 +150,11 @@ class Media extends SpatieMedia
     public function creator(): BelongsTo
     {
         /** @var class-string<Model> $userClass */
-=======
-=======
->>>>>>> laraxot/dev
      * @return BelongsTo<User, $this>
      */
     public function creator(): BelongsTo
     {
         /** @var class-string<User> $userClass */
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
         $userClass = XotData::make()->getUserClass();
 
         return $this->belongsTo($userClass, 'created_by');

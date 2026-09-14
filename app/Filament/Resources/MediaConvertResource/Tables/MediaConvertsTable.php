@@ -14,14 +14,8 @@ use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 use Filament\Tables\Table;
->>>>>>> laraxot/dev
-=======
 use Filament\Tables\Table;
->>>>>>> laraxot/dev
 use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
@@ -30,13 +24,8 @@ use Spatie\QueueableAction\ActionJob;
 
 class MediaConvertsTable extends XotBaseResourceTable
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /**
      * @return array<string, Column>
-=======
-=======
->>>>>>> laraxot/dev
     public function table(Table $table): Table
     {
         return $table
@@ -47,14 +36,7 @@ class MediaConvertsTable extends XotBaseResourceTable
     }
 
     /**
-<<<<<<< HEAD
-=======
      * @return array<string, Column>
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
      * @return array<string, Column>
      */
     public function getTableColumns(): array
@@ -90,15 +72,9 @@ class MediaConvertsTable extends XotBaseResourceTable
     /**
      * @return array<string, Action|ActionGroup>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getTableActions(): array
-=======
     private function getTableActionsData(): array
->>>>>>> laraxot/dev
-=======
     private function getTableActionsData(): array
->>>>>>> laraxot/dev
     {
         return [
             'view' => ViewAction::make(),
@@ -109,24 +85,12 @@ class MediaConvertsTable extends XotBaseResourceTable
                     'file' => $record->file,
                     'disk' => $record->disk,
                 ]);
-<<<<<<< HEAD
-<<<<<<< HEAD
                 // `QueueableAction::onQueue()` restituisce una classe anonima non tipizzata:
                 // PHPStan la vede `mixed` e ogni chiamata su di essa e' un errore. Il job
                 // che quel proxy costruisce e' pubblico, quindi lo si accoda direttamente.
-=======
-<<<<<<< HEAD
-=======
->>>>>>> laraxot/dev
-=======
                 // `QueueableAction::onQueue()` restituisce una classe anonima non tipizzata:
                 // PHPStan la vede `mixed` e ogni chiamata su di essa e' un errore. Il job
                 // che quel proxy costruisce e' pubblico, quindi lo si accoda direttamente.
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
                 dispatch(new ActionJob(app(ConvertVideoByMediaConvertAction::class), [$data, $record]));
             }),
         ];
@@ -135,15 +99,9 @@ class MediaConvertsTable extends XotBaseResourceTable
     /**
      * @return array<string, BulkAction>
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getTableBulkActions(): array
-=======
     private function getTableBulkActionsData(): array
->>>>>>> laraxot/dev
-=======
     private function getTableBulkActionsData(): array
->>>>>>> laraxot/dev
     {
         return [
             'delete' => DeleteBulkAction::make(),
