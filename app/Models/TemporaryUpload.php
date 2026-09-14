@@ -8,8 +8,6 @@ use Closure;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
@@ -19,19 +17,12 @@ use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Models\Traits\HasXotFactory;
-=======
-=======
->>>>>>> laraxot/dev
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
 use Spatie\Image\Enums\Fit;
 use Spatie\MediaLibrary\Conversions\Conversion;
 use Spatie\MediaLibrary\HasMedia;
@@ -86,27 +77,15 @@ use Webmozart\Assert\Assert;
 class TemporaryUpload extends BaseModel implements HasMedia
 {
     use HasUuids;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     /** @phpstan-ignore generics.notGeneric */
     /** @phpstan-ignore generics.notGeneric */
     /** @use HasXotFactory<Factory<static>> */
     use HasXotFactory;
 
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> laraxot/dev
 
-=======
     use HasXotFactory;
->>>>>>> laraxot/dev
-<<<<<<< HEAD
->>>>>>> laraxot/dev
-=======
->>>>>>> laraxot/dev
     use InteractsWithMedia;
     use MassPrunable;
 
