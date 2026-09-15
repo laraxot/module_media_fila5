@@ -7,21 +7,21 @@ return [
         'invoice' => [
             'label' => 'invoice',
             'placeholder' => 'invoice',
-            'helper_text' => 'invoice',
+            'helper_text' => '',
             'description' => 'invoice',
             'tooltip' => '',
         ],
         'contract' => [
             'label' => 'contract',
             'placeholder' => 'contract',
-            'helper_text' => 'contract',
+            'helper_text' => '',
             'description' => 'contract',
             'tooltip' => '',
         ],
         'receipt' => [
             'label' => 'receipt',
             'placeholder' => 'receipt',
-            'helper_text' => 'receipt',
+            'helper_text' => '',
             'description' => 'receipt',
             'tooltip' => '',
         ],
@@ -37,7 +37,7 @@ return [
         ],
         'label' => 'Attachments Schema Action Test',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => [
