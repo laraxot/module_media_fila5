@@ -27,11 +27,7 @@ uses(TestCase::class)->group('no-media-db');
 describe('Media Actions Coverage', function () {
     describe('Image Merge Action', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(ImageMerge::class, new ImageMerge);
-=======
             Assert::assertInstanceOf(ImageMerge::class, new ImageMerge());
->>>>>>> laraxot/dev
         });
 
         it('has handle method', function (): void {
@@ -53,11 +49,7 @@ describe('Media Actions Coverage', function () {
 
     describe('SvgExistsAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(SvgExistsAction::class, new SvgExistsAction);
-=======
             Assert::assertInstanceOf(SvgExistsAction::class, new SvgExistsAction());
->>>>>>> laraxot/dev
         });
 
         it('can be resolved from container', function (): void {
@@ -75,11 +67,7 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(ConvertVideoAction::class, new ConvertVideoAction);
-=======
             Assert::assertInstanceOf(ConvertVideoAction::class, new ConvertVideoAction());
->>>>>>> laraxot/dev
         });
 
         it('can be resolved from container', function (): void {
@@ -101,11 +89,7 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByConvertDataAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(ConvertVideoByConvertDataAction::class, new ConvertVideoByConvertDataAction);
-=======
             Assert::assertInstanceOf(ConvertVideoByConvertDataAction::class, new ConvertVideoByConvertDataAction());
->>>>>>> laraxot/dev
         });
 
         it('has execute method', function (): void {
@@ -123,11 +107,7 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByMediaConvertAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(ConvertVideoByMediaConvertAction::class, new ConvertVideoByMediaConvertAction);
-=======
             Assert::assertInstanceOf(ConvertVideoByMediaConvertAction::class, new ConvertVideoByMediaConvertAction());
->>>>>>> laraxot/dev
         });
 
         it('has execute method', function (): void {
@@ -145,11 +125,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoScreenshotAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(GetVideoScreenshotAction::class, new GetVideoScreenshotAction);
-=======
             Assert::assertInstanceOf(GetVideoScreenshotAction::class, new GetVideoScreenshotAction());
->>>>>>> laraxot/dev
         });
 
         it('has backoff property', function (): void {
@@ -167,11 +143,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoFrameContentAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(GetVideoFrameContentAction::class, new GetVideoFrameContentAction);
-=======
             Assert::assertInstanceOf(GetVideoFrameContentAction::class, new GetVideoFrameContentAction());
->>>>>>> laraxot/dev
         });
 
         it('has execute method', function (): void {
@@ -189,11 +161,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoDurationAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(GetVideoDurationAction::class, new GetVideoDurationAction);
-=======
             Assert::assertInstanceOf(GetVideoDurationAction::class, new GetVideoDurationAction());
->>>>>>> laraxot/dev
         });
 
         it('has execute method', function (): void {
@@ -293,11 +261,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetCloudFrontSignedUrlAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
-            Assert::assertInstanceOf(GetCloudFrontSignedUrlAction::class, new GetCloudFrontSignedUrlAction);
-=======
             Assert::assertInstanceOf(GetCloudFrontSignedUrlAction::class, new GetCloudFrontSignedUrlAction());
->>>>>>> laraxot/dev
         });
 
         it('has execute method', function (): void {
