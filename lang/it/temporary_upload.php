@@ -10,15 +10,9 @@ return [
         'id' => ['label' => 'Identificativo', 'tooltip' => 'Identificativo univoco del record', 'helper_text' => '', 'description' => ''],
         'created_at' => ['label' => 'Data Creazione', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'updated_at' => ['label' => 'Ultima Modifica', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
-<<<<<<< HEAD
-        'file' => ['label' => 'file', 'helper_text' => '', 'description' => 'file', 'placeholder' => 'file'],
-        'folder' => ['label' => 'folder', 'helper_text' => '', 'description' => 'folder', 'placeholder' => 'folder'],
-        'expires_at' => ['label' => 'expires_at', 'helper_text' => '', 'description' => 'expires_at', 'placeholder' => 'expires_at'],
-=======
         'file' => ['label' => 'file', 'helper_text' => 'file', 'description' => 'file', 'placeholder' => 'file'],
         'folder' => ['label' => 'folder', 'helper_text' => 'folder', 'description' => 'folder', 'placeholder' => 'folder'],
         'expires_at' => ['label' => 'expires_at', 'helper_text' => 'expires_at', 'description' => 'expires_at', 'placeholder' => 'expires_at'],
->>>>>>> laraxot/dev
         'filename' => ['label' => 'filename'],
     ],
     'actions' => [

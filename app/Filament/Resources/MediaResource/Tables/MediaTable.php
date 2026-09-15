@@ -26,21 +26,6 @@ class MediaTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-<<<<<<< HEAD
-            'id' => TextColumn::make('id')->sortable()->searchable(),
-            'model_type' => TextColumn::make('model_type')->searchable()->sortable(),
-            'model_id' => TextColumn::make('model_id')->searchable()->sortable(),
-            'collection_name' => TextColumn::make('collection_name')->searchable()->sortable(),
-            'name' => TextColumn::make('name')->searchable()->sortable(),
-            'file_name' => TextColumn::make('file_name')->searchable()->sortable(),
-            'mime_type' => TextColumn::make('mime_type')->searchable()->sortable(),
-            'disk' => TextColumn::make('disk')->sortable(),
-            'size' => TextColumn::make('size')->sortable()->formatStateUsing(fn (string $state): string => number_format(
-                ((int) $state) / 1024,
-                2,
-            ).' KB'),
-            'order_column' => TextColumn::make('order_column')->sortable(),
-=======
             'id' => TextColumn::make('id')->sortable(),
             'name' => TextColumn::make('name')->searchable()->sortable(),
             'file_name' => TextColumn::make('file_name')->searchable()->sortable(),
@@ -51,7 +36,6 @@ class MediaTable extends XotBaseResourceTable
             'order_column' => TextColumn::make('order_column')->sortable(),
             'model_type' => TextColumn::make('model_type')->searchable()->sortable(),
             'model_id' => TextColumn::make('model_id')->searchable()->sortable(),
->>>>>>> laraxot/dev
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
             'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
         ];
@@ -101,11 +85,7 @@ class MediaTable extends XotBaseResourceTable
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
-<<<<<<< HEAD
-                ->url(static function (Media $record): string {
-=======
                 ->url(static function (mixed $record): string {
->>>>>>> laraxot/dev
                     Assert::string($res = MediaResource::getUrl('convert', ['record' => $record]));
 
                     return $res;

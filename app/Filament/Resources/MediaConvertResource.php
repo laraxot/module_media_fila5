@@ -4,10 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources;
 
-<<<<<<< HEAD
-use Modules\Media\Models\MediaConvert;
-use Modules\Xot\Filament\Resources\XotBaseResource;
-=======
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Component;
@@ -17,13 +13,10 @@ use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConvert
 use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
->>>>>>> laraxot/dev
 
 class MediaConvertResource extends XotBaseResource
 {
     protected static ?string $model = MediaConvert::class;
-<<<<<<< HEAD
-=======
 
     
 
@@ -46,5 +39,4 @@ class MediaConvertResource extends XotBaseResource
             'edit' => EditMediaConvert::route('/{record}/edit'),
         ];
     }
->>>>>>> laraxot/dev
 }

@@ -9,11 +9,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateTemporaryUploadsTable.
  */
-<<<<<<< HEAD
-return new class extends XotBaseMigration
-=======
 return new class() extends XotBaseMigration
->>>>>>> laraxot/dev
 {
     protected ?string $model_class = TemporaryUpload::class;
 

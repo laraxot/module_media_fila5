@@ -14,11 +14,7 @@ uses(TestCase::class)->group('no-media-db');
 if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     function makeMediaTestBaseModel(): BaseModel
     {
-<<<<<<< HEAD
-        return new class extends BaseModel
-=======
         return new class() extends BaseModel
->>>>>>> laraxot/dev
         {
             protected $table = 'test_media_table';
         };

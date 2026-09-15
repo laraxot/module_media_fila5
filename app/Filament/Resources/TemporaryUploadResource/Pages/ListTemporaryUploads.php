@@ -8,10 +8,7 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
-<<<<<<< HEAD
-=======
 use Filament\Tables\Columns\TextColumn;
->>>>>>> laraxot/dev
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Models\TemporaryUpload;
@@ -23,11 +20,6 @@ class ListTemporaryUploads extends XotBaseListRecords
     protected static string $resource = TemporaryUploadResource::class;
 
     /**
-<<<<<<< HEAD
-     * @return array<string, SelectFilter>
-     */
-    #[Override]
-=======
      * @return array<string, TextColumn>
      */
     
@@ -35,7 +27,6 @@ class ListTemporaryUploads extends XotBaseListRecords
     /**
      * @return array<string, SelectFilter>
      */
->>>>>>> laraxot/dev
     public function getTableFilters(): array
     {
         return [
@@ -49,10 +40,6 @@ class ListTemporaryUploads extends XotBaseListRecords
     /**
      * @return array<string, ViewAction|EditAction|DeleteAction>
      */
-<<<<<<< HEAD
-    #[Override]
-=======
->>>>>>> laraxot/dev
     public function getTableActions(): array
     {
         return [
@@ -65,10 +52,6 @@ class ListTemporaryUploads extends XotBaseListRecords
     /**
      * @return array<string, DeleteBulkAction>
      */
-<<<<<<< HEAD
-    #[Override]
-=======
->>>>>>> laraxot/dev
     public function getTableBulkActions(): array
     {
         return [
