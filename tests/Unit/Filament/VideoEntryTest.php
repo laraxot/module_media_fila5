@@ -17,7 +17,6 @@ use PHPUnit\Framework\Assert;
  * della lettura: i test coprono entrambe le forme.
  */
 
-/** @phpstan-ignore-next-line method.nonObject, function.void (Pest uses()->group() chain: pest-plugin-phpstan extension is disabled in root phpstan.neon, so PHPStan does not know uses() returns a bindable TestCase call) */
 uses(TestCase::class)->group('no-media-db');
 
 test('every setter returns the same instance so the calls can be chained', function (): void {
