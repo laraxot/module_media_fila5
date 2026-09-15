@@ -69,11 +69,7 @@ describe('FileExtensionRule', function (): void {
     });
 
     it('builds a message even when no extension is allowed', function (): void {
-<<<<<<< HEAD
-        $rule = new FileExtensionRule;
-=======
         $rule = new FileExtensionRule();
->>>>>>> laraxot/dev
 
         Assert::assertNotSame('', $rule->message());
     });

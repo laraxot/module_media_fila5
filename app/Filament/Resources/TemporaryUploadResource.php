@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources;
 
-<<<<<<< HEAD
-// use Modules\Media\Filament\Resources\TemporaryUploadResource\RelationManagers;
-// use Filament\Forms;
-use Modules\Media\Models\TemporaryUpload;
-use Modules\Xot\Filament\Resources\XotBaseResource;
-=======
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
@@ -23,7 +17,6 @@ use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\ListTemporary
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Filament\Resources\XotBaseResource;
 use Override;
->>>>>>> laraxot/dev
 
 // use Illuminate\Database\Eloquent\Builder;
 // use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -31,8 +24,6 @@ use Override;
 class TemporaryUploadResource extends XotBaseResource
 {
     protected static ?string $model = TemporaryUpload::class;
-<<<<<<< HEAD
-=======
 
     
 
@@ -57,5 +48,4 @@ class TemporaryUploadResource extends XotBaseResource
             'edit' => EditTemporaryUpload::route('/{record}/edit'),
         ];
     }
->>>>>>> laraxot/dev
 }

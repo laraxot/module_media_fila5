@@ -31,10 +31,6 @@ class MediaRelationManager extends XotBaseRelationManager
     /**
      * @return array<string, XotBaseAction|XotBaseActionGroup>
      */
-<<<<<<< HEAD
-    #[Override]
-=======
->>>>>>> laraxot/dev
     public function getTableHeaderActions(): array
     {
         return [
