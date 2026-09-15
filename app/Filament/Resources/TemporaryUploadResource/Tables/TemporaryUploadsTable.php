@@ -18,12 +18,20 @@ class TemporaryUploadsTable extends XotBaseResourceTable
 {
     /**
      * @return array<string, Column>
+<<<<<<< HEAD
+=======
+     * @return array<string, Column>
+>>>>>>> laraxot/dev
      */
     public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
+<<<<<<< HEAD
             'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
+=======
+            'created_at' => TextColumn::make('created_at')->dateTime(),
+>>>>>>> laraxot/dev
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];
     }

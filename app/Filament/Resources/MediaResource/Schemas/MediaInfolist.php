@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Schemas;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\RepeatableEntry;
@@ -18,20 +19,28 @@ use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 use Modules\Media\Models\Media;
+=======
+use Filament\Infolists\Components\TextEntry;
+use Filament\Schemas\Components\Component;
+>>>>>>> laraxot/dev
 use Modules\Xot\Filament\Resources\Schemas\XotBaseResourceInfolist;
 
 class MediaInfolist extends XotBaseResourceInfolist
 {
     /**
+<<<<<<< HEAD
      * Schema condiviso da tutte le view page di MediaResource (es. {@see ViewMedia},
      * {@see ConvertMedia}): preview + azione convert
      * + dettagli tecnici, cosi' nessun campo gia' esposto in precedenza va perso.
      *
+=======
+>>>>>>> laraxot/dev
      * @return array<string, Component>
      */
     public function getInfolistSchema(): array
     {
         return [
+<<<<<<< HEAD
             'media_grid' => Grid::make(2)
                 ->schema([
                     'media_preview' => Section::make()->schema([
@@ -87,6 +96,18 @@ class MediaInfolist extends XotBaseResourceInfolist
                     'size' => TextEntry::make('size'),
                 ])
                 ->columns(3),
+=======
+            'id' => TextEntry::make('id'),
+            'model_type' => TextEntry::make('model_type'),
+            'model_id' => TextEntry::make('model_id'),
+            'uuid' => TextEntry::make('uuid'),
+            'collection_name' => TextEntry::make('collection_name'),
+            'name' => TextEntry::make('name'),
+            'file_name' => TextEntry::make('file_name'),
+            'mime_type' => TextEntry::make('mime_type'),
+            'disk' => TextEntry::make('disk'),
+            'size' => TextEntry::make('size'),
+>>>>>>> laraxot/dev
         ];
     }
 }

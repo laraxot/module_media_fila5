@@ -15,7 +15,11 @@ related:
 **Module Name**: Media  
 **Type**: Media Management Module  
 **Status**: ✅ Active  
+<<<<<<< HEAD
 **Framework**: Laravel 13.x + Filament 5.x  
+=======
+**Framework**: Laravel 12.x + Filament 4.x  
+>>>>>>> laraxot/dev
 **Library Integration**: Spatie Media Library  
 **Language**: Multi-language (IT/EN/DE)  
 
@@ -81,7 +85,11 @@ The Media module provides comprehensive media file management:
 - Spatie/laravel-medialibrary package
 - Image processing libraries
 - Storage systems (local/S3)
+<<<<<<< HEAD
 - Filament 5.x (management interface)
+=======
+- Filament 4.x (management interface)
+>>>>>>> laraxot/dev
 
 ## Key Metrics
 | Aspect | Status | Details |

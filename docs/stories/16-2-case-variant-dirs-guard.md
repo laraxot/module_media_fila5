@@ -116,7 +116,11 @@ non sulla data.
 
 ## GitHub (tracciamento)
 
+<<<<<<< HEAD
 Repository letto da frontmatter `github.repository` o `git remote -v` (se assente: repo root **`laraxot/<repo progetto>`**): **`laraxot/module_media_fila5`**.
+=======
+Repository letto da frontmatter `github.repository` o `git remote -v` (se assente: repo root **`laraxot/base_quaeris_fila5`**): **`laraxot/module_media_fila5`**.
+>>>>>>> laraxot/dev
 
 | Risorsa | Stato | Link |
 |---|---|---|

@@ -30,7 +30,11 @@ describe('MediaExporterResolver', function (): void {
 
     it('names the received type in the error message for an object', function (): void {
         try {
+<<<<<<< HEAD
             MediaExporterResolver::from(new \stdClass);
+=======
+            MediaExporterResolver::from(new \stdClass());
+>>>>>>> laraxot/dev
             Assert::fail('Expected RuntimeException was not thrown.');
         } catch (RuntimeException $exception) {
             Assert::assertStringContainsString('stdClass', $exception->getMessage());

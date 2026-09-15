@@ -220,7 +220,11 @@ $conversion->disk = $original->disk;
 
 ---
 
+<<<<<<< HEAD
 ## IV. SCOPO — Role in <nome progetto>
+=======
+## IV. SCOPO — Role in FixCity
+>>>>>>> laraxot/dev
 
 Media is infrastructure for proof.
 
@@ -231,7 +235,11 @@ Media is infrastructure for proof.
 
 Media does not decide *meaning*. It is the custodian of *evidence*. The User module decides if you can see a document; the Media module ensures the document is accessible, in the right format, and hasn't been lost.
 
+<<<<<<< HEAD
 In <nome progetto>, Media is:
+=======
+In FixCity, Media is:
+>>>>>>> laraxot/dev
 - **Not a gallery** (that's UI/CMS concern)
 - **Not an archive** (that's Compliance/Legal concern)
 - **Is the plumbing** that lets those concerns work
