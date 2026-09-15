@@ -1,17 +1,5 @@
 # Media Module Migrations
 
-<<<<<<< HEAD
-## Dati sacri
-
-Migrazioni **additive** solo: `php artisan migrate` senza `--force`.
-Vietati: `migrate:fresh`, `migrate:refresh`, `db:wipe`, `RefreshDatabase` nei test.
-
-Canon: [data-sacred-no-destructive-db.md](../../../../docs/wiki/rules/data-sacred-no-destructive-db.md).
-
-Config root: `laravel/config/media.php` deve essere un **file** (non directory `media.php/`) — vedi [ide-helper-models-governance.md](../../Xot/docs/ide-helper-models-governance.md).
-
-=======
->>>>>>> laraxot/dev
 ## Overview
 
 The Media module manages file storage, conversion, and temporary uploads. All migrations follow the `XotBaseMigration` pattern with explicit model-to-migration parity.
