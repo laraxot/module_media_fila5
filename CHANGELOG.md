@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## [0.0.3-dev.12](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.11...v0.0.3-dev.12) (2026-08-24)
 
 ### Bug Fixes
@@ -11,6 +12,8 @@
 
 * resolve nested git conflict markers in Media module ([e0935b2](https://github.com/laraxot/module_media_fila5/commit/e0935b222be41e3a8f6327812c390644368c2cfe))
 
+=======
+>>>>>>> laraxot/dev
 # Changelog
 
 Tutte le variazioni importanti di Media saranno generate automaticamente da semantic-release.

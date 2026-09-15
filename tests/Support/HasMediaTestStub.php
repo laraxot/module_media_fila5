@@ -57,7 +57,7 @@ abstract class HasMediaTestStub implements HasMedia
      */
     public function getMedia(string $collectionName = 'default', callable|array $filters = []): Collection
     {
-        return new Collection();
+        return new Collection;
     }
 
     public function clearMediaCollection(string $collectionName = 'default'): HasMedia
