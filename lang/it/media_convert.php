@@ -7,17 +7,6 @@ return [
     'fields' => [
         'applyFilters' => ['label' => 'applyFilters', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'toggleColumns' => ['label' => 'toggleColumns', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
-<<<<<<< HEAD
-        'format' => ['label' => 'format', 'placeholder' => 'format', 'helper_text' => '', 'description' => 'format', 'tooltip' => ''],
-        'codec_video' => ['label' => 'codec_video', 'placeholder' => 'codec_video', 'helper_text' => '', 'description' => 'codec_video', 'tooltip' => ''],
-        'codec_audio' => ['label' => 'codec_audio', 'placeholder' => 'codec_audio', 'helper_text' => '', 'description' => 'codec_audio', 'tooltip' => ''],
-        'preset' => ['label' => 'preset', 'placeholder' => 'preset', 'helper_text' => '', 'description' => 'preset', 'tooltip' => ''],
-        'bitrate' => ['label' => 'bitrate', 'placeholder' => 'bitrate', 'helper_text' => '', 'description' => 'bitrate', 'tooltip' => ''],
-        'width' => ['label' => 'width', 'placeholder' => 'width', 'helper_text' => '', 'description' => 'width', 'tooltip' => ''],
-        'height' => ['label' => 'height', 'placeholder' => 'height', 'helper_text' => '', 'description' => 'height', 'tooltip' => ''],
-        'threads' => ['label' => 'threads', 'placeholder' => 'threads', 'helper_text' => '', 'description' => 'threads', 'tooltip' => ''],
-        'speed' => ['label' => 'speed', 'placeholder' => 'speed', 'helper_text' => '', 'description' => 'speed', 'tooltip' => ''],
-=======
         'format' => ['label' => 'format', 'placeholder' => 'format', 'helper_text' => 'format', 'description' => 'format', 'tooltip' => ''],
         'codec_video' => ['label' => 'codec_video', 'placeholder' => 'codec_video', 'helper_text' => 'codec_video', 'description' => 'codec_video', 'tooltip' => ''],
         'codec_audio' => ['label' => 'codec_audio', 'placeholder' => 'codec_audio', 'helper_text' => 'codec_audio', 'description' => 'codec_audio', 'tooltip' => ''],
@@ -27,7 +16,6 @@ return [
         'height' => ['label' => 'height', 'placeholder' => 'height', 'helper_text' => 'height', 'description' => 'height', 'tooltip' => ''],
         'threads' => ['label' => 'threads', 'placeholder' => 'threads', 'helper_text' => 'threads', 'description' => 'threads', 'tooltip' => ''],
         'speed' => ['label' => 'speed', 'placeholder' => 'speed', 'helper_text' => 'speed', 'description' => 'speed', 'tooltip' => ''],
->>>>>>> laraxot/dev
         'id' => ['label' => 'id'],
         'media' => [
             'file_name' => ['label' => 'media.file_name'],

@@ -39,11 +39,7 @@ class ConvertVideoByMediaConvertAction
         }
 
         // Instanziamo il formato prima di usarlo
-<<<<<<< HEAD
-        $formatInstance = new $format;
-=======
         $formatInstance = new $format();
->>>>>>> laraxot/dev
 
         $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)
