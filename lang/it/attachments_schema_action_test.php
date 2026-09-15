@@ -7,33 +7,21 @@ return [
         'invoice' => [
             'label' => 'invoice',
             'placeholder' => 'invoice',
-<<<<<<< HEAD
-            'helper_text' => '',
-=======
             'helper_text' => 'invoice',
->>>>>>> laraxot/dev
             'description' => 'invoice',
             'tooltip' => '',
         ],
         'contract' => [
             'label' => 'contract',
             'placeholder' => 'contract',
-<<<<<<< HEAD
-            'helper_text' => '',
-=======
             'helper_text' => 'contract',
->>>>>>> laraxot/dev
             'description' => 'contract',
             'tooltip' => '',
         ],
         'receipt' => [
             'label' => 'receipt',
             'placeholder' => 'receipt',
-<<<<<<< HEAD
-            'helper_text' => '',
-=======
             'helper_text' => 'receipt',
->>>>>>> laraxot/dev
             'description' => 'receipt',
             'tooltip' => '',
         ],

@@ -10,11 +10,8 @@ use Filament\Actions\BulkAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
-<<<<<<< HEAD
-=======
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
->>>>>>> laraxot/dev
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Job\Filament\Widgets\ClockWidget;
@@ -31,11 +28,6 @@ class ListMediaConverts extends XotBaseListRecords
     protected static string $resource = MediaConvertResource::class;
 
     /**
-<<<<<<< HEAD
-     * @return array<string, BaseFilter>
-     */
-    #[Override]
-=======
      * @return array<string, Tables\Columns\Column>
      */
     
@@ -43,7 +35,6 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, BaseFilter>
      */
->>>>>>> laraxot/dev
     public function getTableFilters(): array
     {
         return [
@@ -65,10 +56,6 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, Action|ActionGroup>
      */
-<<<<<<< HEAD
-    #[Override]
-=======
->>>>>>> laraxot/dev
     public function getTableActions(): array
     {
         return [
@@ -91,10 +78,6 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, BulkAction>
      */
-<<<<<<< HEAD
-    #[Override]
-=======
->>>>>>> laraxot/dev
     public function getTableBulkActions(): array
     {
         return [
