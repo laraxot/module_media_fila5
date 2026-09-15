@@ -17,20 +17,33 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('a non xml extension yields no rows', function (): void {
+<<<<<<< HEAD
     $rows = (new ParseSubtitleXmlAction)->execute(__DIR__.'/sottotitoli.srt');
+=======
+    $rows = (new ParseSubtitleXmlAction())->execute(__DIR__.'/sottotitoli.srt');
+>>>>>>> laraxot/dev
 
     Assert::assertSame([], $rows);
 });
 
 test('a path without extension yields no rows', function (): void {
+<<<<<<< HEAD
     $rows = (new ParseSubtitleXmlAction)->execute('/tmp/senza-estensione');
+=======
+    $rows = (new ParseSubtitleXmlAction())->execute('/tmp/senza-estensione');
+>>>>>>> laraxot/dev
 
     Assert::assertSame([], $rows);
 });
 
 test('every item becomes a row with normalised timings', function (): void {
+<<<<<<< HEAD
     $rows = (new ParseSubtitleXmlAction)->execute(
         dirname(__DIR__, 3).'/fixtures/subtitle.xml',
+=======
+    $rows = (new ParseSubtitleXmlAction())->execute(
+        dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
+>>>>>>> laraxot/dev
     );
 
     Assert::assertCount(3, $rows);
@@ -52,8 +65,13 @@ test('every item becomes a row with normalised timings', function (): void {
 });
 
 test('timecodes carry hours, minutes and milliseconds', function (): void {
+<<<<<<< HEAD
     $rows = (new ParseSubtitleXmlAction)->execute(
         dirname(__DIR__, 3).'/fixtures/subtitle.xml',
+=======
+    $rows = (new ParseSubtitleXmlAction())->execute(
+        dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
+>>>>>>> laraxot/dev
     );
 
     // 3_723_456 ms = 1h 02m 03s 456ms

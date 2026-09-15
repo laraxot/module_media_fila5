@@ -12,7 +12,11 @@ use Modules\Media\Tests\TestCase;
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
+<<<<<<< HEAD
     $form = app(MediaConvertResource::class)->getFormSchema();
+=======
+    $form = (new \Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm())->getFormSchema();
+>>>>>>> laraxot/dev
 
     expect($form)->not->toBeEmpty();
 
