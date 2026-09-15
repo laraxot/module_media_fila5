@@ -77,7 +77,10 @@ class S3Test extends XotBasePage
      *
      * @return array<Action>
      */
+<<<<<<< HEAD
     #[Override]
+=======
+>>>>>>> laraxot/dev
     protected function getFormActions(): array
     {
         return [
@@ -279,7 +282,11 @@ class S3Test extends XotBasePage
                 'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, 8).'...',
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
+<<<<<<< HEAD
                 'AWS_BUCKET' => config('filesystems.disks.s3.bucket'),
+=======
+                'AWS_BUCKET' => $this->getS3Bucket(),
+>>>>>>> laraxot/dev
                 'AWS_USE_PATH_STYLE_ENDPOINT' => config('filesystems.disks.s3.use_path_style_endpoint', 'false'),
                 'CLOUDFRONT_BASE_URL' => config('services.cloudfront.base_url'),
                 'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id'),
@@ -331,6 +338,14 @@ class S3Test extends XotBasePage
         }
     }
 
+<<<<<<< HEAD
+=======
+    private function getS3Bucket(): string
+    {
+        return SafeStringCastAction::cast(config('filesystems.disks.s3.bucket', ''));
+    }
+
+>>>>>>> laraxot/dev
     /**
      * Test S3 connection details.
      *
@@ -349,10 +364,17 @@ class S3Test extends XotBasePage
             ]);
 
             // Test bucket accessibility
+<<<<<<< HEAD
             $s3->headBucket(['Bucket' => config('filesystems.disks.s3.bucket')]);
 
             // Get bucket region
             $location = $s3->getBucketLocation(['Bucket' => config('filesystems.disks.s3.bucket')]);
+=======
+            $s3->headBucket(['Bucket' => $this->getS3Bucket()]);
+
+            // Get bucket region
+            $location = $s3->getBucketLocation(['Bucket' => $this->getS3Bucket()]);
+>>>>>>> laraxot/dev
             $bucketRegion = $location['LocationConstraint'] ?: 'us-east-1';
 
             $regionMatch = $bucketRegion === config('filesystems.disks.s3.region');
@@ -404,7 +426,11 @@ class S3Test extends XotBasePage
                 ],
             ]);
 
+<<<<<<< HEAD
             $bucket = config('filesystems.disks.s3.bucket');
+=======
+            $bucket = $this->getS3Bucket();
+>>>>>>> laraxot/dev
             $testKey = self::PERMISSION_TEST_PREFIX.time().'.txt';
 
             // Test ListBucket
@@ -472,7 +498,11 @@ class S3Test extends XotBasePage
                 ],
             ]);
 
+<<<<<<< HEAD
             $policy = $s3->getBucketPolicy(['Bucket' => config('filesystems.disks.s3.bucket')]);
+=======
+            $policy = $s3->getBucketPolicy(['Bucket' => $this->getS3Bucket()]);
+>>>>>>> laraxot/dev
 
             return [
                 'title' => '📜 Bucket Policy',

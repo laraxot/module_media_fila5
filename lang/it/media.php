@@ -35,8 +35,13 @@ return [
         'model_type' => ['label' => 'model_type'],
         'model_id' => ['label' => 'model_id'],
         'created_at' => ['label' => 'created_at'],
+<<<<<<< HEAD
         'file' => ['label' => 'file', 'helper_text' => '', 'description' => 'file', 'placeholder' => 'file'],
         'attachment_type' => ['label' => 'attachment_type', 'helper_text' => '', 'description' => 'attachment_type', 'placeholder' => 'attachment_type'],
+=======
+        'file' => ['label' => 'file', 'helper_text' => 'file', 'description' => 'file', 'placeholder' => 'file'],
+        'attachment_type' => ['label' => 'attachment_type', 'helper_text' => 'attachment_type', 'description' => 'attachment_type', 'placeholder' => 'attachment_type'],
+>>>>>>> laraxot/dev
         'url' => ['label' => 'url'],
         'entry_conversions' => ['label' => 'entry_conversions'],
         'src' => ['label' => 'src'],

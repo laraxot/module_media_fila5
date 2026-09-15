@@ -13,8 +13,14 @@ use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
+<<<<<<< HEAD
 use Modules\User\Models\User;
 use Modules\Xot\Tests\XotBasePest;
+=======
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Tests\XotBasePest;
+use Modules\User\Models\User;
+>>>>>>> laraxot/dev
 
 uses(TestCase::class);
 

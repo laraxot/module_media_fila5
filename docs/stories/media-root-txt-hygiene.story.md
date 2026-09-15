@@ -21,7 +21,11 @@ root (0 ammessi, violazione).
 ## File coinvolti
 
 - `Media_phpmd.txt` — output effimero di un run PHPMD (report path riferiscono
+<<<<<<< HEAD
   `<repo progetto>`, run storico non riproducibile in questo albero).
+=======
+  `base_techplanner_fila5`, run storico non riproducibile in questo albero).
+>>>>>>> laraxot/dev
 - `pest_results.txt` — output effimero (con codici ANSI) di un run Pest storico.
 
 Entrambi sono log/output di tool, non documentazione viva.
