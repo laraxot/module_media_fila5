@@ -132,7 +132,11 @@ describe('Media coverage 100 — remaining sweep', function (): void {
 
     test('TemporaryUpload session disk accessors offline', function (): void {
         TemporaryUpload::$disk = 'local';
+<<<<<<< HEAD
+        $upload = new TemporaryUpload;
+=======
         $upload = new TemporaryUpload();
+>>>>>>> laraxot/dev
         $upload->forceFill([
             'session_id' => 'sess-1',
             'uuid' => 'uuid-1',

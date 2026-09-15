@@ -6,11 +6,17 @@ namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+<<<<<<< HEAD
+=======
 use Override;
+>>>>>>> laraxot/dev
 
 class ConvertMedia extends XotBaseViewRecord
 {
     protected static string $resource = MediaResource::class;
+<<<<<<< HEAD
+=======
 
     
+>>>>>>> laraxot/dev
 }

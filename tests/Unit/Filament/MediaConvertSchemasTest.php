@@ -28,7 +28,11 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('the form exposes one component per conversion parameter', function (): void {
+<<<<<<< HEAD
+    $schema = app(MediaConvertForm::class)->getFormSchema();
+=======
     $schema = (new MediaConvertForm())->getFormSchema();
+>>>>>>> laraxot/dev
 
     Assert::assertSame(
         ['format', 'codec_video', 'codec_audio', 'preset', 'bitrate', 'width', 'height', 'threads', 'speed'],
@@ -43,7 +47,11 @@ test('the form exposes one component per conversion parameter', function (): voi
 });
 
 test('codec and preset are radio choices, sizes are text inputs', function (): void {
+<<<<<<< HEAD
+    $schema = app(MediaConvertForm::class)->getFormSchema();
+=======
     $schema = (new MediaConvertForm())->getFormSchema();
+>>>>>>> laraxot/dev
 
     foreach (['format', 'codec_video', 'codec_audio', 'preset'] as $key) {
         Assert::assertInstanceOf(Radio::class, $schema[$key]);
@@ -55,7 +63,11 @@ test('codec and preset are radio choices, sizes are text inputs', function (): v
 });
 
 test('the video codec offers both vp9 and vp8', function (): void {
+<<<<<<< HEAD
+    $codec = app(MediaConvertForm::class)->getFormSchema()['codec_video'];
+=======
     $codec = (new MediaConvertForm())->getFormSchema()['codec_video'];
+>>>>>>> laraxot/dev
     Assert::assertInstanceOf(Radio::class, $codec);
 
     Assert::assertSame(
@@ -65,7 +77,11 @@ test('the video codec offers both vp9 and vp8', function (): void {
 });
 
 test('the table lists the identifier and both timestamps', function (): void {
+<<<<<<< HEAD
+    $columns = (new MediaConvertsTable)->getTableColumns();
+=======
     $columns = (new MediaConvertsTable())->getTableColumns();
+>>>>>>> laraxot/dev
 
     Assert::assertSame(['id', 'created_at', 'updated_at'], array_keys($columns));
 
@@ -75,9 +91,30 @@ test('the table lists the identifier and both timestamps', function (): void {
     }
 });
 
+<<<<<<< HEAD
+test('the table offers view, edit and convert row actions', function (): void {
+    // Reflection: il contratto sotto test e' quello del modulo, non il prototipo
+    // deprecato ereditato da HasXotTable (`@deprecated override the table() method`).
+    $actions = (new \ReflectionMethod(MediaConvertsTable::class, 'getTableActions'))->invoke(new MediaConvertsTable);
+    Assert::assertIsArray($actions);
+
+    Assert::assertCount(3, $actions);
+    Assert::assertArrayHasKey('view', $actions);
+    Assert::assertInstanceOf(ViewAction::class, $actions['view']);
+    Assert::assertArrayHasKey('edit', $actions);
+    Assert::assertInstanceOf(EditAction::class, $actions['edit']);
+    Assert::assertArrayHasKey('convert', $actions);
+    Assert::assertInstanceOf(Action::class, $actions['convert']);
+    Assert::assertSame('convert', $actions['convert']->getName());
+});
+
+test('the table exposes bulk actions keyed by name', function (): void {
+    $bulk = (new MediaConvertsTable)->getTableBulkActions();
+=======
 
 test('the table exposes bulk actions keyed by name', function (): void {
     $bulk = (new MediaConvertsTable())->getTableBulkActions();
+>>>>>>> laraxot/dev
 
     Assert::assertNotSame([], $bulk);
     Assert::assertArrayHasKey('delete', $bulk);

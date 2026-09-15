@@ -16,13 +16,21 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('empty results fall back to the given message', function (): void {
+<<<<<<< HEAD
+    $output = (new FormatDebugOutputAction)->execute([], 'nessun risultato');
+=======
     $output = (new FormatDebugOutputAction())->execute([], 'nessun risultato');
+>>>>>>> laraxot/dev
 
     Assert::assertSame('nessun risultato', $output);
 });
 
 test('a well formed result renders title, status and data lines', function (): void {
+<<<<<<< HEAD
+    $output = (new FormatDebugOutputAction)->execute([
+=======
     $output = (new FormatDebugOutputAction())->execute([
+>>>>>>> laraxot/dev
         'bucket' => [
             'title' => 'Bucket',
             'status' => 'ok',
@@ -44,7 +52,11 @@ test('a well formed result renders title, status and data lines', function (): v
 });
 
 test('nested array values are rendered as pretty printed json', function (): void {
+<<<<<<< HEAD
+    $output = (new FormatDebugOutputAction)->execute([
+=======
     $output = (new FormatDebugOutputAction())->execute([
+>>>>>>> laraxot/dev
         'policy' => [
             'title' => 'Policy',
             'status' => 'ko',
@@ -58,7 +70,11 @@ test('nested array values are rendered as pretty printed json', function (): voi
 });
 
 test('entries that are not arrays or lack the required keys are skipped', function (): void {
+<<<<<<< HEAD
+    $output = (new FormatDebugOutputAction)->execute([
+=======
     $output = (new FormatDebugOutputAction())->execute([
+>>>>>>> laraxot/dev
         'scalare' => 'non e un array',
         'incompleto' => ['title' => 'Solo il titolo'],
     ], 'nessun risultato');
@@ -73,7 +89,11 @@ test('several results are separated by their own rule line', function (): void {
         'data' => ['k' => 'v'],
     ];
 
+<<<<<<< HEAD
+    $output = (new FormatDebugOutputAction)->execute([
+=======
     $output = (new FormatDebugOutputAction())->execute([
+>>>>>>> laraxot/dev
         'primo' => $result('Primo'),
         'secondo' => $result('Secondo'),
     ], 'nessun risultato');

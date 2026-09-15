@@ -6,9 +6,15 @@ created: 2026-07-16
 updated: 2026-07-16
 qmd: "media psr-4 casing conversions imagegenerators videogenerators"
 issues:
+<<<<<<< HEAD
+  - "https://github.com/laraxot/<repo progetto>/issues/38"
+discussions:
+  - "https://github.com/laraxot/<repo progetto>/discussions/12"
+=======
   - "https://github.com/laraxot/base_workorder_fila5/issues/38"
 discussions:
   - "https://github.com/laraxot/base_workorder_fila5/discussions/12"
+>>>>>>> laraxot/dev
 related:
   - "../../../../Xot/docs/wiki/concepts/psr4-one-class-one-file.md"
 ---
