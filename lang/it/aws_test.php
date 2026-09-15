@@ -10,6 +10,7 @@ return [
         'id' => ['label' => 'Identificativo', 'tooltip' => 'Identificativo univoco del record', 'helper_text' => '', 'description' => ''],
         'created_at' => ['label' => 'Data Creazione', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
         'updated_at' => ['label' => 'Ultima Modifica', 'tooltip' => '', 'helper_text' => '', 'description' => ''],
+<<<<<<< HEAD
         's3_results' => ['label' => 's3_results', 'placeholder' => 's3_results', 'helper_text' => '', 'description' => 's3_results'],
         'cloudfront_url' => ['label' => 'cloudfront_url', 'placeholder' => 'cloudfront_url', 'helper_text' => '', 'description' => 'cloudfront_url'],
         'cloudfront_results' => ['label' => 'cloudfront_results', 'placeholder' => 'cloudfront_results', 'helper_text' => '', 'description' => 'cloudfront_results'],
@@ -17,6 +18,15 @@ return [
         'iam_results' => ['label' => 'iam_results', 'placeholder' => 'iam_results', 'helper_text' => '', 'description' => 'iam_results'],
         'full_results' => ['label' => 'full_results', 'placeholder' => 'full_results', 'helper_text' => '', 'description' => 'full_results'],
         'aws_config' => ['label' => 'aws_config', 'placeholder' => 'aws_config', 'helper_text' => '', 'description' => 'aws_config'],
+=======
+        's3_results' => ['label' => 's3_results', 'placeholder' => 's3_results', 'helper_text' => 's3_results', 'description' => 's3_results'],
+        'cloudfront_url' => ['label' => 'cloudfront_url', 'placeholder' => 'cloudfront_url', 'helper_text' => 'cloudfront_url', 'description' => 'cloudfront_url'],
+        'cloudfront_results' => ['label' => 'cloudfront_results', 'placeholder' => 'cloudfront_results', 'helper_text' => 'cloudfront_results', 'description' => 'cloudfront_results'],
+        'iam_user' => ['label' => 'iam_user', 'placeholder' => 'iam_user', 'helper_text' => 'iam_user', 'description' => 'iam_user'],
+        'iam_results' => ['label' => 'iam_results', 'placeholder' => 'iam_results', 'helper_text' => 'iam_results', 'description' => 'iam_results'],
+        'full_results' => ['label' => 'full_results', 'placeholder' => 'full_results', 'helper_text' => 'full_results', 'description' => 'full_results'],
+        'aws_config' => ['label' => 'aws_config', 'placeholder' => 'aws_config', 'helper_text' => 'aws_config', 'description' => 'aws_config'],
+>>>>>>> laraxot/dev
     ],
     'actions' => [
         'create' => ['label' => 'Crea Aws Test'],

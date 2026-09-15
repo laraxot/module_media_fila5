@@ -24,6 +24,10 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\file_get_contents;
+<<<<<<< HEAD
+=======
+use Modules\User\Models\User;
+>>>>>>> laraxot/dev
 
 /**
  * Base test case for Media module.
@@ -146,7 +150,11 @@ abstract class TestCase extends XotBaseTestCase
     /**
      * Lo sqlite condiviso non contiene per forza le tabelle del modulo Media:
      * i test che toccano il DB vanno saltati, non falliti.
+<<<<<<< HEAD
      * sqlite condiviso = ambiente offline anche se `media` esiste.
+=======
+     * fixcity_data.sqlite = ambiente offline anche se `media` esiste.
+>>>>>>> laraxot/dev
      */
     public static function mediaDbUnavailable(): bool
     {
@@ -154,7 +162,11 @@ abstract class TestCase extends XotBaseTestCase
             $connection = DB::connection('media');
             $connection->getPdo();
             $database = (string) $connection->getDatabaseName();
+<<<<<<< HEAD
             if (str_contains($database, basename(self::sharedSqlitePath()))) {
+=======
+            if (str_contains($database, 'fixcity_data.sqlite')) {
+>>>>>>> laraxot/dev
                 return true;
             }
 

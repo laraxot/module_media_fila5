@@ -24,11 +24,16 @@ class MediaConvertsTable extends XotBaseResourceTable
 {
     /**
      * @return array<string, Column>
+<<<<<<< HEAD
+=======
+     * @return array<string, Column>
+>>>>>>> laraxot/dev
      */
     public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
+<<<<<<< HEAD
             'media.file_name' => TextColumn::make('media.file_name')->sortable(),
             'format' => TextColumn::make('format')->searchable(),
             'codec_video' => TextColumn::make('codec_video')->searchable(),
@@ -43,6 +48,8 @@ class MediaConvertsTable extends XotBaseResourceTable
             'remaining' => TextColumn::make('remaining')->numeric(),
             'rate' => TextColumn::make('rate')->numeric(),
             'execution_time' => TextColumn::make('execution_time')->numeric(),
+=======
+>>>>>>> laraxot/dev
             'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];
