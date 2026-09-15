@@ -9,7 +9,6 @@ use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
-/** @phpstan-ignore-next-line method.nonObject, function.void (Pest uses()->group() chain: pest-plugin-phpstan extension is disabled in root phpstan.neon, so PHPStan does not know uses() returns a bindable TestCase call) */
 uses(TestCase::class)->group('no-media-db');
 
 describe('Media Model', function (): void {
