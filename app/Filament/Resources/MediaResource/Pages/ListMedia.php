@@ -8,8 +8,6 @@ use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ViewAction;
-use Filament\Tables;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
@@ -22,29 +20,6 @@ use Webmozart\Assert\Assert;
 class ListMedia extends XotBaseListRecords
 {
     protected static string $resource = MediaResource::class;
-
-    /**
-     * @return array<string, Tables\Columns\Column>
-     */
-    #[Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'id' => TextColumn::make('id')->sortable()->searchable(),
-            'model_type' => TextColumn::make('model_type')->searchable(),
-            'model_id' => TextColumn::make('model_id')->searchable(),
-            'collection_name' => TextColumn::make('collection_name')->searchable(),
-            'name' => TextColumn::make('name')->searchable(),
-            'file_name' => TextColumn::make('file_name')->searchable(),
-            'mime_type' => TextColumn::make('mime_type')->searchable(),
-            'disk' => TextColumn::make('disk')->searchable(),
-            'size' => TextColumn::make('size')->formatStateUsing(fn (string $state): string => number_format(
-                ((int) $state) / 1024,
-                2,
-            ).' KB'),
-            'created_at' => TextColumn::make('created_at')->dateTime(),
-        ];
-    }
 
     /**
      * @return array<string, BaseFilter>
@@ -81,7 +56,7 @@ class ListMedia extends XotBaseListRecords
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
-                ->action(static function ($record) {
+                ->action(static function (mixed $record) {
                     // PHPStan Level 10: isset() per Eloquent magic property
                     if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
                         throw new RuntimeException('Invalid record for download');
@@ -96,7 +71,7 @@ class ListMedia extends XotBaseListRecords
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
-                ->url(function ($record): string {
+                ->url(static function (mixed $record): string {
                     Assert::string($res = static::$resource::getUrl('convert', ['record' => $record]));
 
                     return $res;
