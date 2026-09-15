@@ -62,4 +62,3 @@ jobs:
           else
             echo "PHPInsights not found, skipping..."
           fi
-

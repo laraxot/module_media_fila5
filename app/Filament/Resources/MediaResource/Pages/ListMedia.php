@@ -8,8 +8,6 @@ use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ViewAction;
-use Filament\Tables;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
@@ -24,11 +22,14 @@ class ListMedia extends XotBaseListRecords
     protected static string $resource = MediaResource::class;
 
     /**
+<<<<<<< HEAD
      * @return array<string, Tables\Columns\Column>
      */
     
 
     /**
+=======
+>>>>>>> laraxot/dev
      * @return array<string, BaseFilter>
      */
     public function getTableFilters(): array

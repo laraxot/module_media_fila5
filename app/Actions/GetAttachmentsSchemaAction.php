@@ -22,6 +22,10 @@ class GetAttachmentsSchemaAction
         foreach ($attachments as $attachment) {
             $attachmentStr = (string) $attachment;
             $fileUpload = FileUpload::make($attachmentStr)
+<<<<<<< HEAD
+=======
+                // $fileUpload=SpatieMediaLibraryFileUpload::make($attachmentStr)
+>>>>>>> laraxot/dev
                 ->directory('temp')
                 ->disk($disk)
                 ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
@@ -33,7 +37,11 @@ class GetAttachmentsSchemaAction
                 ->downloadable(true)
                 ->reorderable(false)
                 ->multiple(false)
+<<<<<<< HEAD
                 ->afterStateUpdated(function (mixed $state, Set $set) use ($attachment): void {
+=======
+                ->afterStateUpdated(function ($state, Set $set) use ($attachment): void {
+>>>>>>> laraxot/dev
                     if (! $state) {
                         return;
                     }

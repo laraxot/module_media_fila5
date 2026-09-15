@@ -10,6 +10,9 @@ use Modules\Media\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
+use Webmozart\Assert\Assert as WebmozartAssert;
+
+require_once dirname(__DIR__, 2).'/Pest.php';
 
 uses(TestCase::class);
 
@@ -33,6 +36,7 @@ describe('Media model (database)', function (): void {
             'size' => 1024,
         ]);
 
+<<<<<<< HEAD
         XotBasePest::assertTableHas('media', 'media', [
             'id' => SafeIntCastAction::cast($media->getKey()),
             'collection_name' => 'avatars',
@@ -367,4 +371,17 @@ it('media has casts', function (): void {
     ksort($actualCasts);
 
     expect($actualCasts)->toBe($expectedCasts);
+=======
+    $key = $media->getKey();
+    WebmozartAssert::integerish($key);
+
+    assertMediaTableHas('media', [
+        'id' => (int) $key,
+        'collection_name' => 'avatars',
+        'name' => 'test-image',
+        'file_name' => 'test-image.jpg',
+        'disk' => 'public',
+        'size' => 1024,
+    ]);
+>>>>>>> laraxot/dev
 });

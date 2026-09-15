@@ -6,6 +6,7 @@ namespace Modules\Media\Actions\Diagnostic\S3;
 
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
+use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
 
@@ -46,9 +47,19 @@ class FormatDebugOutputAction
             return [];
         }
 
+        $title = $result['title'];
+        $status = $result['status'];
+        Assert::string($title);
+        Assert::string($status);
+
         $lines = [
+<<<<<<< HEAD
             '=== '.SafeStringCastAction::cast($result['title']).' ===',
             'Status: '.SafeStringCastAction::cast($result['status']),
+=======
+            '=== '.$title.' ===',
+            'Status: '.$status,
+>>>>>>> laraxot/dev
             '',
         ];
 
@@ -83,6 +94,16 @@ class FormatDebugOutputAction
             return $key.': '.json_encode($value, JSON_PRETTY_PRINT);
         }
 
+<<<<<<< HEAD
         return $key.': '.SafeStringCastAction::cast($value);
+=======
+        if (is_string($value) || is_int($value) || is_float($value) || is_bool($value) || $value === null) {
+            return $key.': '.(string) $value;
+        }
+
+        Assert::isInstanceOf($value, \Stringable::class);
+
+        return $key.': '.$value;
+>>>>>>> laraxot/dev
     }
 }

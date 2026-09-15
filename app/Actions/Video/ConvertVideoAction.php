@@ -7,6 +7,10 @@ namespace Modules\Media\Actions\Video;
 /**
  * @see https://github.com/protonemedia/laravel-ffmpeg
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
 use FFMpeg\Format\Video\X264;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
@@ -28,7 +32,7 @@ class ConvertVideoAction
 
         $exportedMedia = $openedMedia->export();
 
-        $format = new X264();
+        $format = new X264;
         $format->setKiloBitrate(1000);
 
         $exportedMedia->toDisk($disk_mp4);
