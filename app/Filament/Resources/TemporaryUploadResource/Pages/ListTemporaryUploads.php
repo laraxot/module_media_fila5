@@ -8,7 +8,6 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Models\TemporaryUpload;
@@ -20,11 +19,14 @@ class ListTemporaryUploads extends XotBaseListRecords
     protected static string $resource = TemporaryUploadResource::class;
 
     /**
+<<<<<<< HEAD
      * @return array<string, TextColumn>
      */
     
 
     /**
+=======
+>>>>>>> laraxot/dev
      * @return array<string, SelectFilter>
      */
     public function getTableFilters(): array
