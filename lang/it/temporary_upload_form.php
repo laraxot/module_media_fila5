@@ -7,19 +7,19 @@ return [
         'file' => [
             'label' => 'file',
             'placeholder' => 'file',
-            'helper_text' => 'file',
+            'helper_text' => '',
             'description' => 'file',
         ],
         'folder' => [
             'label' => 'folder',
             'placeholder' => 'folder',
-            'helper_text' => 'folder',
+            'helper_text' => '',
             'description' => 'folder',
         ],
         'expires_at' => [
             'label' => 'expires_at',
             'placeholder' => 'expires_at',
-            'helper_text' => 'expires_at',
+            'helper_text' => '',
             'description' => 'expires_at',
         ],
     ],
