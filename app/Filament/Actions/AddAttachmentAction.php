@@ -45,7 +45,11 @@ class AddAttachmentAction extends XotBaseAction
     /**
      * @return array<int, Radio|TextInput|BaseFileUpload|FileUpload>
      */
+<<<<<<< HEAD
+    public function getFormSchema(bool $asset = true): array
+=======
     public static function getFormSchema(bool $asset = true): array
+>>>>>>> laraxot/dev
     {
         Assert::integer($max_size = config('media-library.max_file_size'));
 

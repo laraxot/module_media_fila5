@@ -13,7 +13,11 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateImagesTable.
  */
+<<<<<<< HEAD
+return new class extends XotBaseMigration
+=======
 return new class() extends XotBaseMigration
+>>>>>>> laraxot/dev
 {
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.
@@ -49,7 +53,11 @@ return new class() extends XotBaseMigration
             // 'user_id' NOT NULL senza default blocca ogni insert (nessun codice/trait la
             // valorizza: l'audit "chi ha caricato" e' gia' gestito da created_by/updated_by
             // via il trait Updater). Resa nullable, non rimossa, per non perdere dati
+<<<<<<< HEAD
+            // eventualmente gia' presenti. Vedi la issue del modulo Media sul repo del modulo.
+=======
             // eventualmente gia' presenti. Vedi module_quaeris_fila5#23.
+>>>>>>> laraxot/dev
             if ($this->hasColumn('user_id')) {
                 $table->integer('user_id')->nullable()->change();
             }
