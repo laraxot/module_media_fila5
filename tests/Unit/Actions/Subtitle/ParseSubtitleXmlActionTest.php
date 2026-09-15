@@ -14,7 +14,6 @@ use PHPUnit\Framework\Assert;
  * timecode `HH:MM:SS,mmm`.
  */
 
-/** @phpstan-ignore-next-line method.nonObject, function.void (Pest uses()->group() chain: pest-plugin-phpstan extension is disabled in root phpstan.neon, so PHPStan does not know uses() returns a bindable TestCase call) */
 uses(TestCase::class)->group('no-media-db');
 
 test('a non xml extension yields no rows', function (): void {

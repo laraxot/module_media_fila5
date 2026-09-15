@@ -28,7 +28,6 @@ use PHPUnit\Framework\Assert;
  * visitare una classe anonima dichiarata dentro una funzione ed esce in errore.
  */
 
-/** @phpstan-ignore-next-line method.nonObject, function.void (Pest uses()->group() chain: pest-plugin-phpstan extension is disabled in root phpstan.neon, so PHPStan does not know uses() returns a bindable TestCase call) */
 uses(TestCase::class)->group('no-media-db');
 
 function mediaColumnRecordWith(?object $media): MediaColumnRecordStub

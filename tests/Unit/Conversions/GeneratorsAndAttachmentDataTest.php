@@ -21,7 +21,6 @@ use PHPUnit\Framework\Assert;
  * non e' codice invocabile. Segnalato, non aggirato.
  */
 
-/** @phpstan-ignore-next-line method.nonObject, function.void (Pest uses()->group() chain: pest-plugin-phpstan extension is disabled in root phpstan.neon, so PHPStan does not know uses() returns a bindable TestCase call) */
 uses(TestCase::class)->group('no-media-db');
 
 test('the webm generator declares itself installable and handles mp4 sources', function (): void {
