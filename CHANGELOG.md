@@ -1,3 +1,9 @@
+## [0.1.0-dev.2](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2026-09-15)
+
+### Bug Fixes
+
+* **phpstan:** rimuovi duplicato case-collision tests/filament/resources/mediaconvertresourcetest.php ([a70e661](https://github.com/laraxot/module_media_fila5/commit/a70e661ee6ece4725f2627b409cf6a7d9007a19b))
+
 ## [0.1.0-dev.1](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.15...v0.1.0-dev.1) (2026-09-15)
 
 ### Features
