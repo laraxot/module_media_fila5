@@ -6,20 +6,19 @@ namespace Modules\Media\Tests\Unit\Actions;
 
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
-<<<<<<< HEAD
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-=======
-use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\TestCase;
->>>>>>> laraxot/dev
 
 uses(TestCase::class)->group('no-media-db');
 
-it('builds one upload component for each attachment', function (): void {
-    $form = (new GetAttachmentsSchemaAction)->execute(['invoice', 'contract']);
+/**
+ * Test that the action returns attachment schema correctly.
+ */
+it('returns attachment schema', function (): void {
+    // Arrange
+    $action = new GetAttachmentsSchemaAction();
+    $attachments = ['invoice', 'contract', 'receipt'];
 
-<<<<<<< HEAD
     // Act
     $form = $action->execute($attachments);
 
@@ -30,18 +29,16 @@ it('builds one upload component for each attachment', function (): void {
     foreach ($form as $component) {
         Assert::assertInstanceOf(FileUpload::class, $component);
     }
-=======
-    Assert::assertCount(2, $form);
-    Assert::assertContainsOnlyInstancesOf(FileUpload::class, $form);
-    Assert::assertSame('invoice', $form[0]->getName());
-    Assert::assertSame('contract', $form[1]->getName());
->>>>>>> laraxot/dev
 });
 
-it('configures attachment storage and validation', function (): void {
-    $component = (new GetAttachmentsSchemaAction)->execute(['invoice'], 'private')[0];
+/**
+ * Test that the schema has correct names.
+ */
+it('has correct names', function (): void {
+    // Arrange
+    $action = new GetAttachmentsSchemaAction();
+    $attachments = ['invoice', 'contract'];
 
-<<<<<<< HEAD
     // Act
     $form = $action->execute($attachments);
 
@@ -321,16 +318,4 @@ it('has correct placeholder', function (): void {
     // framework non ha mai avuto.
     $component = $form[0];
     Assert::assertSame($component->getName(), $component->getPlaceholder());
-=======
-    Assert::assertSame('private', $component->getDiskName());
-    Assert::assertSame('temp', $component->getDirectory());
-    Assert::assertSame('public', $component->getVisibility());
-    Assert::assertSame(10 * 1024, $component->getMaxSize());
-    Assert::assertTrue($component->isRequired());
-    Assert::assertFalse($component->isMultiple());
-    Assert::assertTrue($component->isPreviewable());
-    Assert::assertTrue($component->isDownloadable());
-    Assert::assertFalse($component->isReorderable());
-    Assert::assertNotEmpty($component->getAcceptedFileTypes());
->>>>>>> laraxot/dev
 });

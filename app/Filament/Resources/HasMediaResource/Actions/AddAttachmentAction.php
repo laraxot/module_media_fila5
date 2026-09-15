@@ -85,10 +85,7 @@ class AddAttachmentAction extends XotBaseAction
 
     /**
      * @param  array<string, mixed>  $data
-<<<<<<< HEAD
      * @param  array<string, mixed>  $data
-=======
->>>>>>> laraxot/dev
      */
     public static function formHandlerCallback(RelationManager $livewire, array $data): void
     {
@@ -110,10 +107,7 @@ class AddAttachmentAction extends XotBaseAction
             throw new Exception('FileAdder does not have required methods');
         }
 
-<<<<<<< HEAD
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast(SafeStringCastAction::cast($data['original_file_name'] ?? ''), '.'));
-=======
->>>>>>> laraxot/dev
         $originalFileName = $data['original_file_name'] ?? '';
         Assert::string($originalFileName);
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast($originalFileName, '.'));
