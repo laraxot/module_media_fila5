@@ -60,6 +60,10 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         Assert::string($mediaModelClass);
         Assert::subclassOf($mediaModelClass, Media::class);
 
+<<<<<<< HEAD
+        return new $mediaModelClass;
+=======
         return new $mediaModelClass();
+>>>>>>> laraxot/dev
     }
 }

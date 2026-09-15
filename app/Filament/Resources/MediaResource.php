@@ -4,11 +4,15 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources;
 
+<<<<<<< HEAD
+use Filament\Resources\Pages\PageRegistration;
+=======
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\PageRegistration;
 use Filament\Schemas\Components\Component;
+>>>>>>> laraxot/dev
 use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
@@ -22,6 +26,18 @@ class MediaResource extends XotBaseResource
 {
     protected static ?string $model = Media::class;
 
+<<<<<<< HEAD
+    /**
+     * Elenco esplicito delle pagine: `parent::getPages()` dichiara un
+     * `array<string, PageRegistration>` generico (le chiavi sono risolte
+     * per convenzione a runtime), quindi PHPStan non può restringere lo
+     * spread a questo shape fisso. Le pagine sono elencate qui in modo
+     * esplicito perché lo shape sia verificabile staticamente.
+     *
+     * @return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration, view: PageRegistration, convert: PageRegistration}
+     */
+    #[Override]
+=======
     
 
     /**
@@ -35,6 +51,7 @@ class MediaResource extends XotBaseResource
     /**
      * @return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration, view: PageRegistration, convert: PageRegistration}
      */
+>>>>>>> laraxot/dev
     public static function getPages(): array
     {
         return [

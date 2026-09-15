@@ -38,7 +38,11 @@ declare(strict_types=1);
 
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaCollection;
+<<<<<<< HEAD
+use Modules\User\Models\User;
+=======
 use Modules\Xot\Contracts\UserContract;
+>>>>>>> laraxot/dev
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
