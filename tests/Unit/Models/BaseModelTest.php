@@ -6,20 +6,15 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
-<<<<<<< HEAD
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-=======
-use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\TestCase;
->>>>>>> laraxot/dev
 
 uses(TestCase::class)->group('no-media-db');
 
 if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     function makeMediaTestBaseModel(): BaseModel
     {
-        return new class extends BaseModel
+        return new class() extends BaseModel
         {
             protected $table = 'test_media_table';
         };
@@ -31,7 +26,7 @@ test('base model extends eloquent model', function (): void {
 });
 
 test('base model has correct table name', function (): void {
-    Assert::assertSame('test_media_table', makeMediaTestBaseModel()->getTable());
+    expect(makeMediaTestBaseModel()->getTable())->toBe('test_media_table');
 });
 
 test('base model can be instantiated', function (): void {
@@ -45,5 +40,5 @@ test('base model has proper inheritance chain', function (): void {
 });
 
 test('base model has timestamps enabled', function (): void {
-    Assert::assertTrue(makeMediaTestBaseModel()->usesTimestamps());
+    expect(makeMediaTestBaseModel()->usesTimestamps())->toBeTrue();
 });

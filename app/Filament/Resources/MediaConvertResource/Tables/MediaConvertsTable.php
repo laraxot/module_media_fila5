@@ -24,29 +24,12 @@ class MediaConvertsTable extends XotBaseResourceTable
 {
     /**
      * @return array<string, Column>
-<<<<<<< HEAD
      * @return array<string, Column>
-=======
->>>>>>> laraxot/dev
      */
     public function getTableColumns(): array
     {
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
-            'media.file_name' => TextColumn::make('media.file_name')->sortable(),
-            'format' => TextColumn::make('format')->searchable(),
-            'codec_video' => TextColumn::make('codec_video')->searchable(),
-            'codec_audio' => TextColumn::make('codec_audio')->searchable(),
-            'preset' => TextColumn::make('preset')->searchable(),
-            'bitrate' => TextColumn::make('bitrate'),
-            'width' => TextColumn::make('width')->numeric(),
-            'height' => TextColumn::make('height')->numeric(),
-            'threads' => TextColumn::make('threads')->numeric(),
-            'speed' => TextColumn::make('speed')->numeric(),
-            'percentage' => TextColumn::make('percentage')->numeric(),
-            'remaining' => TextColumn::make('remaining')->numeric(),
-            'rate' => TextColumn::make('rate')->numeric(),
-            'execution_time' => TextColumn::make('execution_time')->numeric(),
             'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];

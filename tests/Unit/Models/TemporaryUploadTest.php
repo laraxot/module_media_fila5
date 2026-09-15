@@ -6,7 +6,6 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
-<<<<<<< HEAD
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
@@ -15,77 +14,67 @@ uses(TestCase::class)->group('no-media-db');
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
         Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload());
-=======
-use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\TestCase;
-
-uses(TestCase::class);
-
-describe('TemporaryUpload Model', function (): void {
-    it('extends BaseModel', function (): void {
-        Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload);
->>>>>>> laraxot/dev
     });
 
     it('uses HasXotFactory trait', function (): void {
         $traits = class_uses_recursive(TemporaryUpload::class);
 
-        Assert::assertContains('Modules\Xot\Models\Traits\HasXotFactory', $traits);
+        expect(in_array('Modules\Xot\Models\Traits\HasXotFactory', $traits, true))->toBeTrue();
     });
 
     it('uses InteractsWithMedia trait', function (): void {
         $traits = class_uses_recursive(TemporaryUpload::class);
 
-        Assert::assertTrue(in_array('Spatie\MediaLibrary\InteractsWithMedia', $traits, true));
+        expect(in_array('Spatie\MediaLibrary\InteractsWithMedia', $traits, true))->toBeTrue();
     });
 
     it('uses MassPrunable trait', function (): void {
         $traits = class_uses_recursive(TemporaryUpload::class);
 
-        Assert::assertTrue(in_array('Illuminate\Database\Eloquent\MassPrunable', $traits, true));
+        expect(in_array('Illuminate\Database\Eloquent\MassPrunable', $traits, true))->toBeTrue();
     });
 
     it('has media connection', function (): void {
         $upload = new TemporaryUpload();
 
-        Assert::assertSame('media', $upload->getConnectionName());
+        expect($upload->getConnectionName())->toBe('media');
     });
 
     it('has empty guarded array', function (): void {
         $upload = new TemporaryUpload();
 
-        Assert::assertSame([], $upload->getGuarded());
+        expect($upload->getGuarded())->toBe([]);
     });
 
     it('has findByMediaUuid static method', function (): void {
-        Assert::assertTrue((new \ReflectionClass(TemporaryUpload::class))->hasMethod('findByMediaUuid'));
+        expect((new \ReflectionClass(TemporaryUpload::class))->hasMethod('findByMediaUuid'))->toBeTrue();
     });
 
     it('has findByMediaUuidInCurrentSession static method', function (): void {
-        Assert::assertTrue((new \ReflectionClass(TemporaryUpload::class))->hasMethod('findByMediaUuidInCurrentSession'));
+        expect((new \ReflectionClass(TemporaryUpload::class))->hasMethod('findByMediaUuidInCurrentSession'))->toBeTrue();
     });
 
     it('has createForFile static method', function (): void {
-        Assert::assertTrue((new \ReflectionClass(TemporaryUpload::class))->hasMethod('createForFile'));
+        expect((new \ReflectionClass(TemporaryUpload::class))->hasMethod('createForFile'))->toBeTrue();
     });
 
     it('has createForRemoteFile static method', function (): void {
-        Assert::assertTrue((new \ReflectionClass(TemporaryUpload::class))->hasMethod('createForRemoteFile'));
+        expect((new \ReflectionClass(TemporaryUpload::class))->hasMethod('createForRemoteFile'))->toBeTrue();
     });
 
     it('has registerMediaConversions method', function (): void {
-        Assert::assertTrue((new \ReflectionClass(TemporaryUpload::class))->hasMethod('registerMediaConversions'));
+        expect((new \ReflectionClass(TemporaryUpload::class))->hasMethod('registerMediaConversions'))->toBeTrue();
     });
 
     it('has moveMedia method', function (): void {
-        Assert::assertTrue((new \ReflectionClass(TemporaryUpload::class))->hasMethod('moveMedia'));
+        expect((new \ReflectionClass(TemporaryUpload::class))->hasMethod('moveMedia'))->toBeTrue();
     });
 
     it('has static disk property', function (): void {
-        Assert::assertTrue((new \ReflectionClass(TemporaryUpload::class))->hasProperty('disk'));
+        expect((new \ReflectionClass(TemporaryUpload::class))->hasProperty('disk'))->toBeTrue();
     });
 
     it('has static manipulatePreview property', function (): void {
-        Assert::assertTrue((new \ReflectionClass(TemporaryUpload::class))->hasProperty('manipulatePreview'));
+        expect((new \ReflectionClass(TemporaryUpload::class))->hasProperty('manipulatePreview'))->toBeTrue();
     });
 });
