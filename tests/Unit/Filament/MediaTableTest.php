@@ -18,6 +18,7 @@ use PHPUnit\Framework\Assert;
  * connessioni.
  */
 
+/** @phpstan-ignore-next-line method.nonObject, function.void (Pest uses()->group() chain: pest-plugin-phpstan extension is disabled in root phpstan.neon, so PHPStan does not know uses() returns a bindable TestCase call) */
 uses(TestCase::class)->group('no-media-db');
 
 test('the table exposes the media columns in a stable order', function (): void {

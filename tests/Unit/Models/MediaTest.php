@@ -21,6 +21,7 @@ function mediaTestCreate(array $attributes = []): Media
     return MediaFactory::new()->createOne($attributes);
 }
 
+/** @phpstan-ignore-next-line function.void (Pest describe()->group() chain: pest-plugin-phpstan extension is disabled in root phpstan.neon) */
 describe('Media model (database)', function (): void {
     it('can create media with minimal data', function (): void {
         $media = mediaTestCreate([
@@ -341,6 +342,7 @@ describe('Media model (database)', function (): void {
 
         expect($media->id)->toBeGreaterThan(0);
     });
+/** @phpstan-ignore-next-line method.nonObject (Pest describe()->group() chain: pest-plugin-phpstan extension is disabled in root phpstan.neon) */
 })->group('media-db');
 
 it('media has casts', function (): void {
