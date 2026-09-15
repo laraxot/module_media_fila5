@@ -11,10 +11,6 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
-<<<<<<< HEAD
-use Modules\Media\Database\Factories\TemporaryUploadFactory;
-=======
->>>>>>> laraxot/dev
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;
@@ -73,13 +69,7 @@ use Webmozart\Assert\Assert;
 class TemporaryUpload extends BaseModel implements HasMedia
 {
     use HasUuids;
-<<<<<<< HEAD
-
     use HasXotFactory;
-
-=======
-    use HasXotFactory;
->>>>>>> laraxot/dev
     use InteractsWithMedia;
     use MassPrunable;
 

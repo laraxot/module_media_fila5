@@ -13,11 +13,7 @@ uses(TestCase::class)->group('no-media-db');
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
-<<<<<<< HEAD
-        Assert::assertInstanceOf(SpatieMedia::class, new Media);
-=======
         Assert::assertInstanceOf(SpatieMedia::class, new Media());
->>>>>>> laraxot/dev
     });
 
     it('uses HasXotFactory trait', function (): void {
@@ -33,11 +29,7 @@ describe('Media Model', function (): void {
     });
 
     it('has media connection', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         expect($model->getConnectionName())->toBe('media');
     });
@@ -47,31 +39,19 @@ describe('Media Model', function (): void {
     });
 
     it('has temporaryUpload relationship', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         expect((new \ReflectionClass($model))->hasMethod('temporaryUpload'))->toBeTrue();
     });
 
     it('has creator relationship', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         expect((new \ReflectionClass($model))->hasMethod('creator'))->toBeTrue();
     });
 
     it('has mediaConverts relationship', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         expect((new \ReflectionClass($model))->hasMethod('mediaConverts'))->toBeTrue();
     });
@@ -85,33 +65,21 @@ describe('Media Model', function (): void {
     });
 
     it('casts id to string', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['id'] ?? null)->toBe('string');
     });
 
     it('casts uuid to string', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['uuid'] ?? null)->toBe('string');
     });
 
     it('casts datetime fields', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['created_at'] ?? null)->toBe('datetime');
@@ -120,11 +88,7 @@ describe('Media Model', function (): void {
     });
 
     it('casts user fields to string', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['updated_by'] ?? null)->toBe('string');
@@ -133,11 +97,7 @@ describe('Media Model', function (): void {
     });
 
     it('casts array fields', function (): void {
-<<<<<<< HEAD
-        $model = new Media;
-=======
         $model = new Media();
->>>>>>> laraxot/dev
 
         $casts = $model->getCasts();
         expect($casts['manipulations'] ?? null)->toBe('array');

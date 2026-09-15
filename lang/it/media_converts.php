@@ -10,22 +10,6 @@ return [
         'format' => ['label' => 'format'],
         'codec_video' => ['label' => 'codec_video'],
         'codec_audio' => ['label' => 'codec_audio'],
-<<<<<<< HEAD
-        'media' => [
-            'file_name' => ['label' => 'media.file_name'],
-        ],
-        'preset' => ['label' => 'preset'],
-        'bitrate' => ['label' => 'bitrate'],
-        'width' => ['label' => 'width'],
-        'height' => ['label' => 'height'],
-        'threads' => ['label' => 'threads'],
-        'speed' => ['label' => 'speed'],
-        'percentage' => ['label' => 'percentage'],
-        'remaining' => ['label' => 'remaining'],
-        'rate' => ['label' => 'rate'],
-        'execution_time' => ['label' => 'execution_time'],
-=======
->>>>>>> laraxot/dev
     ],
     'actions' => [
         'view' => ['label' => 'view', 'icon' => 'view', 'tooltip' => 'view'],
