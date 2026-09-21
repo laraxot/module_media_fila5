@@ -8,4 +8,4 @@ related:
 
 # UX
 
-Card video invariata.
+Nessun impatto: Clip non era montato in nessuna interfaccia viva (verifica in [livewire-inventory.md](./livewire-inventory.md)); la rimozione del file non cambia nulla per l'utente.

@@ -41,17 +41,17 @@ cat Modules/Media/routes/web.php Modules/Media/routes/api.php
 
 ## Componenti Livewire nel modulo Media
 
-Il modulo ha **una sola** classe sotto `app/Http/Livewire`:
+Il modulo aveva **una sola** classe sotto `app/Http/Livewire` — rimossa il 21/09/2026, vedi "Riverifica" in fondo:
 
 | File | Namespace | Alias registrato |
 |------|-----------|-------------------|
-| `Modules/Media/app/Http/Livewire/Card/Video/Clip.php:15` | `Modules\Media\Http\Livewire\Card\Video` (`Modules/Media/app/Http/Livewire/Card/Video/Clip.php:5`) | `card.video.clip` (`Modules/Media/app/Http/Livewire/_components.json:1`) |
+| `Modules/Media/app/Http/Livewire/Card/Video/Clip.php:15` (cancellato 21/09) | `Modules\Media\Http\Livewire\Card\Video` (`Modules/Media/app/Http/Livewire/Card/Video/Clip.php:5`) | `card.video.clip` (era in `Modules/Media/app/Http/Livewire/_components.json`; la cache è ora `[]`) |
 
-`_components.json` è il registro di auto-discovery dei componenti Livewire del modulo (generato dal pacchetto, non un punto di montaggio): registra che l'alias `card.video.clip` *esiste ed è invocabile*, non che qualcosa lo invochi davvero. La verifica dell'uso reale va fatta a parte, sezione seguente.
+`_components.json` è il registro di auto-discovery dei componenti Livewire del modulo (generato dal pacchetto, non un punto di montaggio): registrava che l'alias `card.video.clip` *esiste ed è invocabile*, non che qualcosa lo invocasse davvero. La verifica dell'uso reale va fatta a parte, sezione seguente.
 
-## Cosa fa Clip
+## Cosa fa Clip (analisi storica — file rimosso il 21/09/2026)
 
-`Clip` (`Modules/Media/app/Http/Livewire/Card/Video/Clip.php`) riceve un `Model` in `mount()` (riga 34-37), espone `editClip()` (righe 58-62) che raccoglie i dati del model e li invia con `$this->dispatch('showModal', ['editClip', $data])` a un modale generico, e `updateDataFromModal()` (righe 69-85) che, ricevuto l'evento di ritorno dal modale con id `editClip`, aggiorna solo i campi `title` e `subtitle` del model e lo ricarica. `render()` (righe 42-53) risolve la vista tramite `GetViewAction` sul template `edit` (proprietà `$tpl`, riga 17). Il pattern `dispatch('showModal', [...])` è lo stesso meccanismo generico usato da `Modules/UI/resources/views/components/ui/modal.blade.php` e da `Modules/User/resources/views/components/ui/modal.blade.php`: un listener JS/Blade condiviso che apre un modale in base al primo elemento dell'array. Non è quindi un meccanismo specifico di Clip, ma non basta da solo a dimostrare che Clip sia effettivamente montato da qualche parte.
+`Clip` (`Modules/Media/app/Http/Livewire/Card/Video/Clip.php`, cancellato) riceve un `Model` in `mount()` (riga 34-37), espone `editClip()` (righe 58-62) che raccoglie i dati del model e li invia con `$this->dispatch('showModal', ['editClip', $data])` a un modale generico, e `updateDataFromModal()` (righe 69-85) che, ricevuto l'evento di ritorno dal modale con id `editClip`, aggiorna solo i campi `title` e `subtitle` del model e lo ricarica. `render()` (righe 42-53) risolve la vista tramite `GetViewAction` sul template `edit` (proprietà `$tpl`, riga 17). Il pattern `dispatch('showModal', [...])` è lo stesso meccanismo generico usato da `Modules/UI/resources/views/components/ui/modal.blade.php` e da `Modules/User/resources/views/components/ui/modal.blade.php`: un listener JS/Blade condiviso che apre un modale in base al primo elemento dell'array. Non è quindi un meccanismo specifico di Clip, ma non basta da solo a dimostrare che Clip sia effettivamente montato da qualche parte.
 
 ## Verifica di montaggio: risultato negativo su tutti i canali controllati
 
@@ -102,8 +102,58 @@ Costruire un `ClipWidget` (o `MediaVideoWidget`, come proponeva `LIVEWIRE-WIDGET
 Scritti dalla sessione concorrente in parallelo a questa verifica. Non contengono errori di merito (il verdetto coincide), ma sono stub telegrafici senza citazioni: restano come satelliti, questo file è la fonte canonica per chi deve verificare un'affermazione.
 
 - [LIVEWIRE-WIDGET-CONVERSION.md](./LIVEWIRE-WIDGET-CONVERSION.md) — versione precedente (2026-08-25), marcata superseded in questa sessione perché proponeva la conversione senza aver verificato il montaggio.
-- livewire-widget-architecture.md, livewire-widget-brainstorming.md, livewire-widget-decision-log.md, livewire-widget-epics.md, livewire-widget-prd.md, livewire-widget-product-brief.md, livewire-widget-project-context.md, livewire-widget-tech-spec.md, livewire-widget-ux.md — stub di una riga ciascuno, coerenti col verdetto qui sopra ma senza citazioni file:riga; non riscritti singolarmente in questa sessione per non entrare in conflitto con la sessione concorrente che li ha appena prodotti e per restare nello scope richiesto (inventario + story).
+- livewire-widget-architecture.md, livewire-widget-brainstorming.md, livewire-widget-decision-log.md, livewire-widget-epics.md, livewire-widget-prd.md, livewire-widget-product-brief.md, livewire-widget-project-context.md, livewire-widget-tech-spec.md, livewire-widget-ux.md — satelliti allineati nella revisione del 21/09/2026 alla diagnosi corretta ("orfano puro", non "FO in uso"), con puntatore a questo file per le citazioni file:riga.
+
+## Riverifica del 21/09/2026 — `Clip` rimosso
+
+Audit ripetuto sullo stato corrente: `Modules/Media/app/Http/Livewire/Card/Video/Clip.php` è stato **cancellato** il 21/09/2026 (task `12.1-retire-media-clip-livewire` dell'agente concorrente `claude-quaeris-task-agent`; il file non era tracciato in git — `git ls-files` su `Http/Livewire` elenca solo `.gitkeep` e `_components.json` — quindi non appare come `D`). `Modules/Media/app/Http/Livewire/_components.json` è ora `[]` (identico a HEAD) e la directory `Card/Video/` non esiste più. Il `grep` repo-wide resta a zero hit, coerente con la diagnosi di orfano: la rimozione non ha richiesto la migrazione di nessun consumatore.
+
+Le sezioni precedenti ("Cosa fa Clip", "Verifica di montaggio") restano come analisi storica del codice com'era prima della rimozione (86 righe, `mount()` righe 34-37, `editClip()` righe 58-62, `updateDataFromModal()` righe 69-85).
 
 ## Stato del modulo
 
-Il modulo Media ha **1 classe Livewire**, **0 candidati reali** a conversione in Filament widget (0 Cluster A, 0 Cluster B). Non serve nessuna nuova story di implementazione. La traccia scritta della verifica è questo file.
+Il modulo Media ha **0 classi Livewire** residue sotto `app/Http/Livewire` (Clip ritirato come dead code il 21/09/2026) e **0 candidati** a conversione in Filament widget (0 Cluster A, 0 Cluster B). Non serve nessuna story di implementazione. La traccia scritta della verifica è questo file.
+## Follow-up: rimozione effettiva del dead code (21/09/2026, sessione successiva)
+
+**Aggiornamento che rende obsoleta la sezione "Riverifica del 21/09/2026" sopra**: da questo momento `Clip.php` non esiste più. Questa sessione esegue la pulizia che la story 12.1 e la sezione "Correzione rispetto ai documenti paralleli" avevano esplicitamente rimandato ("una eventuale story di pulizia... è fuori scope per questa campagna... non aperta qui"). Non è una nuova valutazione di merito: il verdetto (nessun widget, componente orfano) resta quello già stabilito sopra; qui si esegue solo la rimozione già raccomandata.
+
+### Riverifica pre-cancellazione (comandi rieseguiti da `laravel/`)
+
+```bash
+grep -rn "Card\\Video\\Clip\|media::livewire.card.video.clip\|<livewire:card.video.clip\|@livewire('card.video.clip'" Modules Themes --include="*.php" --include="*.blade.php"
+# nessuna corrispondenza (exit 1)
+find Modules/Media/app/Filament -iname "*clip*"     # vuoto
+find Modules/Media/resources/views -iname "*clip*"  # vuoto
+grep -rln "Clip" Modules/Media/tests                # vuoto
+```
+
+Esito identico a quello già documentato in "Verifica di montaggio" sopra: nessun cambiamento di merito, solo conferma che vale ancora al momento della cancellazione.
+
+### Race multi-agente rilevata durante l'operazione
+
+Alla prima `rm` di `Clip.php` in questa sessione, il file è ricomparso identico (stesso contenuto) pochi secondi dopo (`stat` con `Birth` alle 16:15:02, pochi secondi dopo la cancellazione). `ps aux` nello stesso istante mostrava sulla stessa macchina: due sessioni `claude --dangerously-skip-permissions` (pts/5 e pts/2), due processi Codex/omniroute, un `opencode`, e un server Devin attivo dalle 15:55 (VS Code server + language server + estensione Windsurf/Devin). Nessun lock era presente su `Clip.php.lock` al momento (`bashscripts/lock/check.sh` → `FREE`). Operazione ripetuta sotto `bashscripts/lock/lock.sh laravel/Modules/Media/app/Http/Livewire/Card/Video/Clip.php`, poi riverificata stabile dopo 5s e 8s di attesa.
+
+Verifica successiva su `git log`/`git show` (dal path corretto, relativo alla root reale del repo `/var/www/_bases/base_quaeris_fila5`, non a `laravel/`) ha chiarito il meccanismo: **una sessione concorrente separata (Claude Sonnet 5, stesso pattern di co-autoria) aveva già completato e committato la stessa identica cancellazione** — commit `29e8e978400a4a56c51cfd4bde9ea76bc8529491` "fix(media): retire dead Card/Video/Clip Livewire component" (2026-09-21 16:21:10), che nello stesso commit ha ritirato anche `Geo/Http/Livewire/Test.php` e ripulito viste admin `manage_lang_module.blade.php`/`test.blade.php` in Lang. Il messaggio di quel commit cita esplicitamente questa story (`Modules/Media/docs/stories/12.1.media-clip-not-widget.story.md`) come riferimento, pur non avendola aggiornata/committata contestualmente. La ricomparsa del file osservata alle 16:15 è quasi certamente un artefatto del flusso di lavoro di quella sessione concorrente (checkout/stash/re-add) nei minuti immediatamente precedenti al suo commit delle 16:21, non una vera race distruttiva: il contenuto finale su disco e in HEAD coincide con quanto già verificato qui come dead code.
+
+Verifica: `git status --short -- laravel/Modules/Media/app/Http/Livewire/` (dalla root del repo) risulta pulito — il working tree locale già coincide con HEAD per questi file, quindi **non è stato necessario né corretto creare qui un secondo commit di codice**: si aggiornano solo story e log per chiudere la documentazione lasciata indietro da quel commit.
+
+### Cosa risulta rimosso (in HEAD, commit `29e8e9784`)
+
+- `Modules/Media/app/Http/Livewire/Card/Video/Clip.php` — cancellato.
+- Directory `Card/Video/` e `Card/` — rimosse in questa sessione (erano vuote dopo la cancellazione già committata; la loro rimozione fisica non genera diff git perché le directory vuote non sono tracciate).
+- `Modules/Media/app/Http/Livewire/_components.json` — già `[]` in HEAD (era `[{"name":"card.video.clip",...}]` prima del commit `29e8e9784`).
+
+### Classificazione (convenzione di campagna)
+
+Confermato "orfano puro" come sopra: non Cluster A (chrome Filament, zero hook), non Cluster B (nessun gemello widget), trattamento operativo da Cluster C. Nessuna decisione di prodotto necessaria: zero utenti impattati, zero funzionalità rimossa (la funzionalità non era raggiungibile da nessun canale verificato).
+
+### Verifica post-cancellazione (da `laravel/`)
+
+- `./vendor/bin/phpstan analyse Modules/Media/app --level=10` → `[OK] No errors` (123 file analizzati), exit 0.
+- `XDEBUG_MODE=coverage ./vendor/bin/pest Modules/Media --coverage` → 282 passed, 9 failed, 3 risky, 4 skipped (1085 assertion), 161.8s. I 9 fallimenti sono in `Modules/Media/tests/Unit/Models/MediaTest.php`/`MediaModelTest.php` (conteggi di factory su query, cast `user_id` mancante nell'atteso, `order_column` nullo) — preesistenti, nessuna relazione con `Clip`/Livewire (il modulo non aveva test su `Clip`).
+- PHPMD (`tools/phpmd.sh Modules/Media/app`) → nessun finding residuo su `Http/Livewire` (directory ormai vuota di classi); i finding riportati sono tutti preesistenti altrove nel modulo (S3/AWS diagnostics, `VideoEntry`, policy).
+- `./vendor/bin/pint --dirty` eseguito come richiesto dalla checklist di verifica: essendo `--dirty` relativo a **tutti** i file con modifiche non committate nel repo (non solo quelli di questa sessione), ha riformattato file in molti altri moduli (Gdpr, CloudStorage, Geo, Setting, AI, Chart, Quaeris, Job, User, DbForge, Lang) già dirty per lavoro di sessioni concorrenti. Queste riformattazioni non sono state committate da questa sessione (restano nel working tree condiviso) per non interferire con lavoro altrui in corso; il commit di questa sessione include solo i file effettivamente di sua competenza (story, log).
+
+### Story collegata
+
+`../stories/12.1.media-clip-not-widget.story.md` aggiornata con AC 4-6 e Dev Agent Record per questo follow-up; status portato a `done`.
