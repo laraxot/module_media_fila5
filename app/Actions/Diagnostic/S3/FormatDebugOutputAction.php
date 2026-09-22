@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Media\Actions\Diagnostic\S3;
 
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Spatie\QueueableAction\QueueableAction;
-use Webmozart\Assert\Assert;
 
 use function Safe\json_encode;
 
@@ -24,6 +24,9 @@ class FormatDebugOutputAction
 
         $output = [];
         foreach ($debugResults as $result) {
+            if (! is_array($result)) {
+                continue;
+            }
             $block = $this->formatResultBlock($result);
             if ($block !== []) {
                 array_push($output, ...$block);
@@ -34,22 +37,18 @@ class FormatDebugOutputAction
     }
 
     /**
+     * @param  array<int|string, mixed>  $result
      * @return list<string>
      */
-    private function formatResultBlock(mixed $result): array
+    private function formatResultBlock(array $result): array
     {
-        if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
+        if (! isset($result['title'], $result['status'], $result['data'])) {
             return [];
         }
 
-        $title = $result['title'];
-        $status = $result['status'];
-        Assert::string($title);
-        Assert::string($status);
-
         $lines = [
-            '=== '.$title.' ===',
-            'Status: '.$status,
+            '=== '.SafeStringCastAction::cast($result['title']).' ===',
+            'Status: '.SafeStringCastAction::cast($result['status']),
             '',
         ];
 
@@ -65,7 +64,7 @@ class FormatDebugOutputAction
     }
 
     /**
-     * @param  array<mixed, mixed>  $data
+     * @param  array<int|string, mixed>  $data
      * @return list<string>
      */
     private function formatDataLines(array $data): array
@@ -78,18 +77,15 @@ class FormatDebugOutputAction
         return $lines;
     }
 
+    /**
+     * `mixed $value` voluto: i valori di debug sono eterogenei (scalari, array, oggetti).
+     */
     private function formatDataLine(string $key, mixed $value): string
     {
         if (is_array($value)) {
             return $key.': '.json_encode($value, JSON_PRETTY_PRINT);
         }
 
-        if (is_string($value) || is_int($value) || is_float($value) || is_bool($value) || $value === null) {
-            return $key.': '.(string) $value;
-        }
-
-        Assert::isInstanceOf($value, \Stringable::class);
-
-        return $key.': '.$value;
+        return $key.': '.SafeStringCastAction::cast($value);
     }
 }
