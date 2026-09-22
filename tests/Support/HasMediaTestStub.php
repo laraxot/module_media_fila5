@@ -78,9 +78,15 @@ abstract class HasMediaTestStub implements HasMedia
         return false;
     }
 
-    public function loadMedia(string $collectionName): mixed
+    /**
+     * Il contratto Spatie (`InteractsWithMedia`) restituisce `Collection`;
+     * il tipo nativo si restringe rispetto al docblock dell'interfaccia (non tipizzato).
+     *
+     * @return Collection<int, Media>
+     */
+    public function loadMedia(string $collectionName): Collection
     {
-        return null;
+        return new Collection;
     }
 
     public function addMediaConversion(string $name): Conversion

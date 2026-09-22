@@ -23,7 +23,7 @@ class TemporaryUploadsTable extends XotBaseResourceTable
     {
         return [
             'id' => TextColumn::make('id')->searchable()->sortable(),
-            'created_at' => TextColumn::make('created_at')->dateTime()->sortable(),
+            'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];
     }

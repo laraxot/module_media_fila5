@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Tables\Columns;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn as IconColumn;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -16,20 +17,20 @@ class IconMediaColumn extends IconColumn
         parent::setUp();
         $attachment = $this->getName();
 
-        $this->default(function ($record) use ($attachment) {
+        $this->default(static function (?Model $record) use ($attachment) {
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
             }
         })
             ->icon('heroicon-o-document-text')
-            ->color(function ($record) use ($attachment): string {
+            ->color(static function (?Model $record) use ($attachment): string {
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     return $record->getFirstMedia($attachment) ? 'success' : 'danger';
                 }
 
                 return 'danger';
             })
-            ->tooltip(function ($record) use ($attachment): string {
+            ->tooltip(static function (?Model $record) use ($attachment): string {
                 if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                     $media = $record->getFirstMedia($attachment);
                     if (is_object($media) && isset($media->file_name) && is_string($media->file_name)) {

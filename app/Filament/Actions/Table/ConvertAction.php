@@ -1,10 +1,9 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://coderflex.com/blog/create-advanced-filters-with-filament
  */
-
-declare(strict_types=1);
 
 namespace Modules\Media\Filament\Actions\Table;
 
@@ -31,7 +30,9 @@ class ConvertAction extends XotBaseAction
                     ->inline()
                     ->inlineLabel(false),
             ])
-            ->action(dddx(...));
+            ->action(static function (): void {
+                throw new \RuntimeException('Removed debug dddx');
+            });
 
         // ->requiresConfirmation()
     }
