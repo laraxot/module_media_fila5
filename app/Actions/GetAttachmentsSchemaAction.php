@@ -12,8 +12,8 @@ use Webmozart\Assert\Assert;
 class GetAttachmentsSchemaAction
 {
     /**
-     * @param  array<string>  $attachments
-     * @return array<FileUpload>
+     * @param  array<string|int, string>  $attachments
+     * @return array<int, FileUpload>
      */
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
@@ -22,7 +22,6 @@ class GetAttachmentsSchemaAction
         foreach ($attachments as $attachment) {
             $attachmentStr = (string) $attachment;
             $fileUpload = FileUpload::make($attachmentStr)
-                // $fileUpload=SpatieMediaLibraryFileUpload::make($attachmentStr)
                 ->directory('temp')
                 ->disk($disk)
                 ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
@@ -34,7 +33,11 @@ class GetAttachmentsSchemaAction
                 ->downloadable(true)
                 ->reorderable(false)
                 ->multiple(false)
-                ->afterStateUpdated(function ($state, Set $set) use ($attachment): void {
+                /**
+                 * `mixed $state` voluto: lo stato FileUpload e' eterogeneo
+                 * (TemporaryUploadedFile|array|string|null) — Arr::wrap lo normalizza.
+                 */
+                ->afterStateUpdated(function (mixed $state, Set $set) use ($attachment): void {
                     if (! $state) {
                         return;
                     }
