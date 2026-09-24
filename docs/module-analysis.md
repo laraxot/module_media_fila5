@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Media Module - Comprehensive Analysis"
 module: "Media"
@@ -105,7 +104,3 @@ The Media module provides comprehensive media file management:
 - Advanced search
 - Metadata management
 - Performance optimization
-=======
-- Performance optimization
-- Performance optimization
->>>>>>> laraxot/dev

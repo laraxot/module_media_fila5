@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Bad Practices – Media Module"
 module: "Media"
@@ -25,6 +24,4 @@ related:
 
 // ✅ CORRECT: SVG in standard location
 @svg('map-marker.svg')
-=======
->>>>>>> laraxot/dev
 ```
