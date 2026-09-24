@@ -14,10 +14,10 @@ last_updated: 2026-07-28
 ## Quick Navigation
 
 - **[Overview & README](./README.md)** — Use cases, features, dependencies
-- **[Architecture](./architecture.md)** — System design and core patterns (`ARCHITECTURE.md` is a bridge to this file)
-- **API Documentation** — planned, not yet written (no `API.md` in this folder)
-- **[Components Guide](./filament/laraxot-compliance-checklist.md)** — closest existing doc; a dedicated `COMPONENTS.md` (FFmpeg, Intervention Image, Storage) is planned but not yet written
-- **Contributing** — planned, not yet written (no `CONTRIBUTING.md` in this folder)
+- **[Architecture](./ARCHITECTURE.md)** — System design and core patterns
+- **[API Documentation](./API.md)** — Actions, Models, Contracts
+- **[Components Guide](./COMPONENTS.md)** — FFmpeg, Intervention Image, Storage
+- **[Contributing](./CONTRIBUTING.md)** — Development workflow
 
 ---
 
@@ -28,8 +28,8 @@ last_updated: 2026-07-28
 | **Actions** | 49 | File upload, processing, S3, FFmpeg, video/image transforms |
 | **Models** | 8 | Media, MediaConvert, TemporaryUpload, BaseModel |
 | **Controllers** | 2 | HTTP request handling |
-| **Migrations** | 6 | Database schema for 3 tables (medias, media_converts, temporary_uploads) — `medias` and `temporary_uploads` each have two overlapping "create table" migrations (legacy + newer), see finding in audit report |
-| **Filament Resources** | 41 files | Admin UI components across Resources, Pages, Tables, Actions, RelationManagers, Clusters, Infolists |
+| **Migrations** | 3 | Database schema (medias, media_converts, temporary_uploads) |
+| **Filament Resources** | 30 | Admin UI components, tables, forms |
 | **Services** | 2 | SubtitleService, VideoStream utilities |
 | **Conversions** | 2 | ImageGenerators, VideoGenerators |
 | **Contracts** | 2 | PathGeneratorContract, custom interfaces |
@@ -61,13 +61,13 @@ last_updated: 2026-07-28
 
 ### Core Documentation
 - [README.md](./README.md) — Module overview, features, use cases
-- [architecture.md](./architecture.md) — System design, component structure (`ARCHITECTURE.md` bridges here)
-- COMPONENTS.md — planned, not yet written (FFmpeg, Intervention Image, Cloud Storage)
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — System design, component structure
+- [COMPONENTS.md](./COMPONENTS.md) — FFmpeg, Intervention Image, Cloud Storage
 
 ### API & Development
-- API.md — planned, not yet written (action signatures, model methods, contracts)
+- [API.md](./API.md) — Action signatures, model methods, contracts
 - [PATTERNS.md](./PATTERNS.md) — Architectural patterns, best practices
-- CONTRIBUTING.md — planned, not yet written (development workflow)
+- [CONTRIBUTING.md](./CONTRIBUTING.md) — Development workflow
 
 ### Operations & Troubleshooting
 - [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) — Error resolution, common issues
@@ -89,7 +89,7 @@ last_updated: 2026-07-28
 
 1. **Read first:** [README.md](./README.md)
 2. **Understand patterns:** [PATTERNS.md](./PATTERNS.md)
-3. **Use the API:** see [architecture.md](./architecture.md) (a dedicated API.md is planned but not yet written)
+3. **Use the API:** [API.md](./API.md)
 4. **Deploy safely:** [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
 
 ---
@@ -119,13 +119,10 @@ last_updated: 2026-07-28
 ## Related Modules
 
 - **[Xot](../../Xot/docs/README.md)** — Framework base, HasMedia trait
+- **[CloudStorage](../../CloudStorage/docs/README.md)** — Cloud provider abstraction
 - **[Cms](../../Cms/docs/README.md)** — Content media integration
-
-> Note: earlier revisions of this index also listed `CloudStorage` and `Filament` as related
-> modules with their own `docs/README.md`. Neither module exists in this monorepo (this repo
-> has no `Modules/CloudStorage` or `Modules/Filament` directory) — those entries were stale,
-> likely copied from a sibling Laraxot project's template, and have been removed here.
+- **[Filament](../../Filament/docs/README.md)** — Admin UI framework
 
 ---
 
-**Navigation:** [Home](../README.md) | [Troubleshooting](./TROUBLESHOOTING.md)
+**Navigation:** [Home](../README.md) | [Contributing](./CONTRIBUTING.md) | [Troubleshooting](./TROUBLESHOOTING.md)

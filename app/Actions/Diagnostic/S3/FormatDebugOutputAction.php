@@ -77,6 +77,9 @@ class FormatDebugOutputAction
         return $lines;
     }
 
+    /**
+     * `mixed $value` voluto: i valori di debug sono eterogenei (scalari, array, oggetti).
+     */
     private function formatDataLine(string $key, mixed $value): string
     {
         if (is_array($value)) {
