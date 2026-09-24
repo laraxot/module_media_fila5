@@ -1,93 +1,42 @@
----
-id: module-media-readme
-title: "Media — File, Immagini, Video e Documenti"
-type: module-readme
-category: module-documentation
-module: Media
-status: active
-tags: [media, files, images, video, storage]
-created: 2026-09-14
-updated: 2026-09-14
-qmd: "media files images video ffmpeg storage cdn module documentation"
-issues:
-  - "https://github.com/laraxot/module_media_fila5/issues/57"
-discussions:
-  - "https://github.com/laraxot/module_media_fila5/discussions/58"
-related:
-  - "./docs/"
-sources: []
----
+# Media: il modulo che trasforma complessita in vantaggio operativo
 
-# 🖼️ Media
+Media management module for the Laraxot ecosystem: images, videos, FFmpeg, and Intervention Image.
 
-> **File, immagini, video e documenti.**
+## Perche guardarlo adesso
 
-Upload, storage, trasformazioni e distribuzione media locale o cloud.
+- Riduce attrito operativo con convenzioni Laraxot gia pronte.
+- Porta documentazione, release e changelog nello stesso flusso verificabile.
+- Aiuta team e agenti AI a capire subito scopo, confini e prossime mosse.
+- E pensato per crescere: semantic versioning, auto release e changelog automatico sono gia configurati.
 
-## Cosa offre
+## Cosa promette
 
-- **Upload** – carico sicuro di file
-- **Immagini** – gestione dimensioni e formati
-- **Video/FFmpeg** – transcodifica e processing
-- **S3/CDN** – distribuzione e caching
+Questo modulo non e solo codice: e una vetrina operativa. Mostra dove intervenire, cosa leggere, come rilasciare e come mantenere alta la confidenza tecnica.
 
-## Funzionalità chiave
+## Release automation
 
-### Upload & storage
-- Upload temporanei con tracciamento di sessione
-- Validazione automatica (MIME type, dimensione, estensioni)
-- Supporto multi-disk (local, S3, Minio, CloudFront)
-- Operazioni di attach atomiche
+- Workflow: [Semantic Release](./.github/workflows/semantic-release.yml)
+- Config: [.releaserc.json](./.releaserc.json)
+- Changelog: [CHANGELOG.md](./CHANGELOG.md)
 
-### Elaborazione immagini
-- Trasformazioni Intervention Image (resize, crop, optimize)
-- Conversione formato (WebP, fallback AVIF)
-- Generazione thumbnail
-- Preservazione e sanitizzazione dati EXIF
 
-### Video
-- Pipeline di conversione FFmpeg (MP4, WebM, HLS)
-- Generazione ed embedding sottotitoli
-- Estrazione frame per thumbnail
+## Documentazione tecnica
 
-### Cloud
-- Supporto nativo AWS S3, URL firmati CloudFront per contenuti privati
-- Compatibilità Minio per deployment self-hosted
+- [Indice docs](./docs/README.md) — mappa knowledge base locale (wiki, audit, regole)
 
-## Dipendenze
+## Documentazione essenziale
 
-- `pbmedia/laravel-ffmpeg` e `intervention/image` (vedi `composer.json` per i vincoli correnti)
-- Pacchetti di sistema: `ffmpeg`, `imagemagick` o `gd`
+- [Second brain locale](./docs/wiki/index.md)
+- [Audit ridondanza](./docs/code-redundancy-audit.md)
+- [Protocollo confidenza](./docs/agent-confidence-protocol.md)
+- [Disciplina agenti](./docs/agent-edit-discipline.md)
+- [  Stream](./docs/--stream.md)
+- [ Competitors](./docs/-competitors.md)
+- [00 Index](./docs/00-INDEX.md)
+- [00 Index](./docs/00-index.md)
+- [Bad Practices](./docs/BAD_PRACTICES.md)
+- [Changelog](./docs/CHANGELOG.md)
 
-## Confini architetturali
+## Filosofia
 
-This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
-
-## Integrazione rapida
-
-```bash
-cd laravel
-php artisan module:list
-./vendor/bin/phpstan analyse Modules/Media
-```
-
-See local docs for integration patterns.
-
-## Documentazione
-
-The technical map is in [docs/README.md](./docs/README.md).
-
-- [Story BMAD del modulo](./docs/stories/)
-- [Architettura](./docs/architecture.md) · [Pattern](./docs/patterns.md) · [Troubleshooting](./docs/troubleshooting.md)
-- [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/PERFORMANCE-OPTIMIZATION.md) · [Migrazioni](./docs/MIGRATIONS.md) · [Testing](./docs/testing-guidelines.md)
-- [Changelog](./CHANGELOG.md) · [Semantic release config](./.releaserc.json)
-- [Regole del progetto](../../../docs/wiki/)
-- [README del progetto](../../README.md)
-
-## Qualità e manutenzione
-
-Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, and update docs when contracts evolve.
-
----
-
-**Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**
+Scopo prima del codice. DRY prima dell'orgoglio. KISS prima dell'astrazione. La release automatica non sostituisce il giudizio: lo rende tracciabile.

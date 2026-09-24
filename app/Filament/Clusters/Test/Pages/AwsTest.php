@@ -16,8 +16,8 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
+use Illuminate\Support\Facades\Config;
 use Modules\Media\Filament\Clusters\Test;
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
 
 use function Safe\json_encode;
@@ -153,14 +153,14 @@ class AwsTest extends XotBasePage
             ]);
 
             $result = $s3->headBucket([
-                'Bucket' => $this->getS3Bucket(),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
             ]);
 
             $this->testResults['s3'] = [
                 'status' => 'success',
                 'message' => 'Successfully connected to S3 bucket',
                 'details' => [
-                    'Bucket' => $this->getS3Bucket(),
+                    'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                     'Region' => config('filesystems.disks.s3.region'),
                 ],
             ];
@@ -250,17 +250,12 @@ class AwsTest extends XotBasePage
     protected function getAwsConfig(): array
     {
         return [
-            'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, self::KEY_PREVIEW_LENGTH).'...',
+            'AWS_ACCESS_KEY_ID' => substr(Config::string('filesystems.disks.s3.key', ''), 0, self::KEY_PREVIEW_LENGTH).'...',
             'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
-            'AWS_BUCKET' => $this->getS3Bucket(),
+            'AWS_BUCKET' => Config::string('filesystems.disks.s3.bucket'),
             'CLOUDFRONT_URL' => config('filesystems.cloudfront.url'),
             'CLOUDFRONT_KEY_PAIR_ID' => config('filesystems.cloudfront.key_pair_id'),
         ];
-    }
-
-    private function getS3Bucket(): string
-    {
-        return SafeStringCastAction::cast(config('filesystems.disks.s3.bucket', ''));
     }
 
     protected function getS3Solution(?string $errorCode): string
@@ -293,7 +288,7 @@ class AwsTest extends XotBasePage
 
             // Test list objects permission
             $result = $s3->listObjectsV2([
-                'Bucket' => $this->getS3Bucket(),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'MaxKeys' => 1,
             ]);
 
@@ -302,7 +297,7 @@ class AwsTest extends XotBasePage
                 'message' => 'S3 permissions verified successfully',
                 'details' => [
                     'ListObjects' => 'OK',
-                    'Bucket' => $this->getS3Bucket(),
+                    'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 ],
             ];
 
@@ -345,7 +340,7 @@ class AwsTest extends XotBasePage
 
             // Test put operation
             $s3->putObject([
-                'Bucket' => $this->getS3Bucket(),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'Key' => $testFileName,
                 'Body' => $testContent,
                 'ContentType' => 'text/plain',
@@ -353,13 +348,13 @@ class AwsTest extends XotBasePage
 
             // Test get operation
             $result = $s3->getObject([
-                'Bucket' => $this->getS3Bucket(),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'Key' => $testFileName,
             ]);
 
             // Clean up - delete test file
             $s3->deleteObject([
-                'Bucket' => $this->getS3Bucket(),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'Key' => $testFileName,
             ]);
 
@@ -500,12 +495,12 @@ class AwsTest extends XotBasePage
 
             // Test bucket access
             $s3->headBucket([
-                'Bucket' => $this->getS3Bucket(),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
             ]);
 
             // Test list objects
             $s3->listObjectsV2([
-                'Bucket' => $this->getS3Bucket(),
+                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
                 'MaxKeys' => 1,
             ]);
 

@@ -19,15 +19,15 @@ use Modules\Media\Actions\Video\GetVideoDurationAction;
 use Modules\Media\Actions\Video\GetVideoFrameContentAction;
 use Modules\Media\Actions\Video\GetVideoScreenshotAction;
 use Modules\Media\Tests\TestCase;
-use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
-uses(TestCase::class)->group('no-media-db');
+uses(TestCase::class);
 
 describe('Media Actions Coverage', function () {
     describe('Image Merge Action', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(ImageMerge::class, new ImageMerge());
+            $action = new ImageMerge;
+            expect(get_class($action))->toBe(ImageMerge::class);
         });
 
         it('has handle method', function (): void {
@@ -39,21 +39,23 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(ImageMerge::class);
+            assertMediaUsesQueueableAction(ImageMerge::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(ImageMerge::class);
+            assertMediaDeclaresStrictTypes(ImageMerge::class);
         });
     });
 
     describe('SvgExistsAction', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(SvgExistsAction::class, new SvgExistsAction());
+            $action = new SvgExistsAction;
+            expect(get_class($action))->toBe(SvgExistsAction::class);
         });
 
         it('can be resolved from container', function (): void {
-            Assert::assertInstanceOf(SvgExistsAction::class, app(SvgExistsAction::class));
+            $action = app(SvgExistsAction::class);
+            expect(get_class($action))->toBe(SvgExistsAction::class);
         });
 
         it('has execute method', function (): void {
@@ -61,17 +63,19 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(SvgExistsAction::class);
+            assertMediaDeclaresStrictTypes(SvgExistsAction::class);
         });
     });
 
     describe('ConvertVideoAction', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(ConvertVideoAction::class, new ConvertVideoAction());
+            $action = new ConvertVideoAction;
+            expect(get_class($action))->toBe(ConvertVideoAction::class);
         });
 
         it('can be resolved from container', function (): void {
-            Assert::assertInstanceOf(ConvertVideoAction::class, app(ConvertVideoAction::class));
+            $action = app(ConvertVideoAction::class);
+            expect(get_class($action))->toBe(ConvertVideoAction::class);
         });
 
         it('has execute method', function (): void {
@@ -79,17 +83,18 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(ConvertVideoAction::class);
+            assertMediaUsesQueueableAction(ConvertVideoAction::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(ConvertVideoAction::class);
+            assertMediaDeclaresStrictTypes(ConvertVideoAction::class);
         });
     });
 
     describe('ConvertVideoByConvertDataAction', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(ConvertVideoByConvertDataAction::class, new ConvertVideoByConvertDataAction());
+            $action = new ConvertVideoByConvertDataAction;
+            expect(get_class($action))->toBe(ConvertVideoByConvertDataAction::class);
         });
 
         it('has execute method', function (): void {
@@ -97,17 +102,18 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(ConvertVideoByConvertDataAction::class);
+            assertMediaUsesQueueableAction(ConvertVideoByConvertDataAction::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(ConvertVideoByConvertDataAction::class);
+            assertMediaDeclaresStrictTypes(ConvertVideoByConvertDataAction::class);
         });
     });
 
     describe('ConvertVideoByMediaConvertAction', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(ConvertVideoByMediaConvertAction::class, new ConvertVideoByMediaConvertAction());
+            $action = new ConvertVideoByMediaConvertAction;
+            expect(get_class($action))->toBe(ConvertVideoByMediaConvertAction::class);
         });
 
         it('has execute method', function (): void {
@@ -115,17 +121,18 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(ConvertVideoByMediaConvertAction::class);
+            assertMediaUsesQueueableAction(ConvertVideoByMediaConvertAction::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(ConvertVideoByMediaConvertAction::class);
+            assertMediaDeclaresStrictTypes(ConvertVideoByMediaConvertAction::class);
         });
     });
 
     describe('GetVideoScreenshotAction', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(GetVideoScreenshotAction::class, new GetVideoScreenshotAction());
+            $action = new GetVideoScreenshotAction;
+            expect(get_class($action))->toBe(GetVideoScreenshotAction::class);
         });
 
         it('has backoff property', function (): void {
@@ -133,17 +140,18 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(GetVideoScreenshotAction::class);
+            assertMediaUsesQueueableAction(GetVideoScreenshotAction::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(GetVideoScreenshotAction::class);
+            assertMediaDeclaresStrictTypes(GetVideoScreenshotAction::class);
         });
     });
 
     describe('GetVideoFrameContentAction', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(GetVideoFrameContentAction::class, new GetVideoFrameContentAction());
+            $action = new GetVideoFrameContentAction;
+            expect(get_class($action))->toBe(GetVideoFrameContentAction::class);
         });
 
         it('has execute method', function (): void {
@@ -151,17 +159,18 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(GetVideoFrameContentAction::class);
+            assertMediaUsesQueueableAction(GetVideoFrameContentAction::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(GetVideoFrameContentAction::class);
+            assertMediaDeclaresStrictTypes(GetVideoFrameContentAction::class);
         });
     });
 
     describe('GetVideoDurationAction', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(GetVideoDurationAction::class, new GetVideoDurationAction());
+            $action = new GetVideoDurationAction;
+            expect(get_class($action))->toBe(GetVideoDurationAction::class);
         });
 
         it('has execute method', function (): void {
@@ -169,11 +178,11 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(GetVideoDurationAction::class);
+            assertMediaUsesQueueableAction(GetVideoDurationAction::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(GetVideoDurationAction::class);
+            assertMediaDeclaresStrictTypes(GetVideoDurationAction::class);
         });
     });
 
@@ -187,7 +196,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(UploadFileAction::class);
+            assertMediaDeclaresStrictTypes(UploadFileAction::class);
         });
     });
 
@@ -201,7 +210,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(DeleteFileAction::class);
+            assertMediaDeclaresStrictTypes(DeleteFileAction::class);
         });
     });
 
@@ -215,7 +224,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(GetFileInfoAction::class);
+            assertMediaDeclaresStrictTypes(GetFileInfoAction::class);
         });
     });
 
@@ -229,7 +238,7 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(CheckFileExistsAction::class);
+            assertMediaDeclaresStrictTypes(CheckFileExistsAction::class);
         });
     });
 
@@ -239,11 +248,11 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(BaseS3Action::class);
+            assertMediaUsesQueueableAction(BaseS3Action::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(BaseS3Action::class);
+            assertMediaDeclaresStrictTypes(BaseS3Action::class);
         });
 
         it('has s3Client property', function (): void {
@@ -261,7 +270,8 @@ describe('Media Actions Coverage', function () {
 
     describe('GetCloudFrontSignedUrlAction', function () {
         it('can be instantiated', function (): void {
-            Assert::assertInstanceOf(GetCloudFrontSignedUrlAction::class, new GetCloudFrontSignedUrlAction());
+            $action = new GetCloudFrontSignedUrlAction;
+            expect(get_class($action))->toBe(GetCloudFrontSignedUrlAction::class);
         });
 
         it('has execute method', function (): void {
@@ -269,11 +279,11 @@ describe('Media Actions Coverage', function () {
         });
 
         it('uses QueueableAction trait', function (): void {
-            TestCase::assertMediaUsesQueueableAction(GetCloudFrontSignedUrlAction::class);
+            assertMediaUsesQueueableAction(GetCloudFrontSignedUrlAction::class);
         });
 
         it('uses strict types', function (): void {
-            TestCase::assertMediaDeclaresStrictTypes(GetCloudFrontSignedUrlAction::class);
+            assertMediaDeclaresStrictTypes(GetCloudFrontSignedUrlAction::class);
         });
     });
 });

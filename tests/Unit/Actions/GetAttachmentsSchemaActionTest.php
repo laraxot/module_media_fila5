@@ -4,30 +4,28 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
+uses(\Modules\Media\Tests\TestCase::class);
+
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
-use Modules\Media\Tests\TestCase;
-use PHPUnit\Framework\Assert;
-
-uses(TestCase::class)->group('no-media-db');
 
 /**
  * Test that the action returns attachment schema correctly.
  */
 it('returns attachment schema', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice', 'contract', 'receipt'];
 
     // Act
     $form = $action->execute($attachments);
 
     // Assert
-    Assert::assertCount(3, $form);
+    expect($form)->toHaveCount(3);
 
     // Verifica che ogni attachment abbia un FileUpload component
-    foreach ($form as $component) {
-        Assert::assertInstanceOf(FileUpload::class, $component);
+    foreach ($form as $index => $component) {
+        expect($component->getName())->toBe($attachments[$index]);
     }
 });
 
@@ -36,15 +34,15 @@ it('returns attachment schema', function (): void {
  */
 it('has correct names', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice', 'contract'];
 
     // Act
     $form = $action->execute($attachments);
 
     // Assert
-    Assert::assertSame('invoice', $form[0]->getName());
-    Assert::assertSame('contract', $form[1]->getName());
+    expect($form[0]->getName())->toBe('invoice');
+    expect($form[1]->getName())->toBe('contract');
 });
 
 /**
@@ -56,7 +54,7 @@ it('has correct names', function (): void {
  */
 it('has correct validation', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -64,11 +62,11 @@ it('has correct validation', function (): void {
 
     // Assert
     $component = $form[0];
-    Assert::assertTrue($component->isRequired());
+    expect($component->isRequired())->toBeTrue();
     // Accepted file types can be expressed as MIME types or extensions depending on Filament internals.
     $acceptedTypes = $component->getAcceptedFileTypes();
-    Assert::assertIsArray($acceptedTypes);
-    Assert::assertNotSame([], $acceptedTypes);
+    expect($acceptedTypes)->toBeArray();
+    expect($acceptedTypes)->not()->toBeEmpty();
 
     $allowed = [
         'application/pdf',
@@ -79,7 +77,7 @@ it('has correct validation', function (): void {
         'docx',
     ];
 
-    Assert::assertTrue(collect($acceptedTypes)->contains(static fn (mixed $t): bool => in_array($t, $allowed, true)));
+    expect(collect($acceptedTypes)->contains(static fn (mixed $type): bool => is_string($type) && in_array($type, $allowed, true)))->toBeTrue();
 });
 
 /**
@@ -87,7 +85,7 @@ it('has correct validation', function (): void {
  */
 it('has correct storage', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -95,7 +93,7 @@ it('has correct storage', function (): void {
 
     // Assert
     $component = $form[0];
-    Assert::assertSame('attachments', $component->getDiskName());
+    expect($component->getDiskName())->toBe('attachments');
 });
 
 /**
@@ -103,7 +101,7 @@ it('has correct storage', function (): void {
  */
 it('has correct directory', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -111,7 +109,7 @@ it('has correct directory', function (): void {
 
     // Assert
     $component = $form[0];
-    Assert::assertSame('temp', $component->getDirectory());
+    expect($component->getDirectory())->toBe('temp');
 });
 
 /**
@@ -119,7 +117,7 @@ it('has correct directory', function (): void {
  */
 it('has correct visibility', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -127,7 +125,7 @@ it('has correct visibility', function (): void {
 
     // Assert
     $component = $form[0];
-    Assert::assertSame('public', $component->getVisibility());
+    expect($component->getVisibility())->toBe('public');
 });
 
 /**
@@ -135,18 +133,15 @@ it('has correct visibility', function (): void {
  */
 it('has correct max size', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
     $form = $action->execute($attachments);
 
     // Assert
-    // Filament esprime maxSize() in KILOBYTE, non in byte: l'azione dichiara
-    // `->maxSize(10 * 1024)`, cioe' 10 MB. Il test chiedeva 10*1024*1024 e
-    // misurava quindi 10 GB.
     $component = $form[0];
-    Assert::assertSame(10 * 1024, $component->getMaxSize());
+    expect($component->getMaxSize())->toBe(10 * 1024 * 1024); // 10MB
 });
 
 /**
@@ -154,7 +149,7 @@ it('has correct max size', function (): void {
  */
 it('has correct multiple setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -162,7 +157,7 @@ it('has correct multiple setting', function (): void {
 
     // Assert
     $component = $form[0];
-    Assert::assertFalse($component->isMultiple());
+    expect($component->isMultiple())->toBeFalse();
 });
 
 /**
@@ -170,7 +165,7 @@ it('has correct multiple setting', function (): void {
  */
 it('has correct preview setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -178,7 +173,7 @@ it('has correct preview setting', function (): void {
 
     // Assert
     $component = $form[0];
-    Assert::assertTrue($component->isPreviewable());
+    expect($component->isPreviewable())->toBeTrue();
 });
 
 /**
@@ -186,7 +181,7 @@ it('has correct preview setting', function (): void {
  */
 it('has correct download setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -194,7 +189,7 @@ it('has correct download setting', function (): void {
 
     // Assert
     $component = $form[0];
-    Assert::assertTrue($component->isDownloadable());
+    expect($component->isDownloadable())->toBeTrue();
 });
 
 /**
@@ -202,7 +197,7 @@ it('has correct download setting', function (): void {
  */
 it('has correct remove setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -213,7 +208,7 @@ it('has correct remove setting', function (): void {
     // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
     // By default, Filament file uploads are removable unless specifically configured otherwise
     // We can verify that the component is a FileUpload
-    Assert::assertInstanceOf(FileUpload::class, $component);
+    expect($component->isDeletable())->toBeTrue();
 });
 
 /**
@@ -221,7 +216,7 @@ it('has correct remove setting', function (): void {
  */
 it('has correct reorder setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -229,7 +224,7 @@ it('has correct reorder setting', function (): void {
 
     // Assert
     $component = $form[0];
-    Assert::assertFalse($component->isReorderable());
+    expect($component->isReorderable())->toBeFalse();
 });
 
 /**
@@ -237,7 +232,7 @@ it('has correct reorder setting', function (): void {
  */
 it('has correct labels', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -246,7 +241,7 @@ it('has correct labels', function (): void {
     // Assert
     $component = $form[0];
     // In our implementation, we don't set custom labels, so it should be null or default to name
-    Assert::assertIsString($component->getLabel());
+    expect($component->getLabel())->toBeString();
 });
 
 /**
@@ -254,7 +249,7 @@ it('has correct labels', function (): void {
  */
 it('has correct append setting', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -263,7 +258,7 @@ it('has correct append setting', function (): void {
     // Assert
     $component = $form[0];
     // isAppendable is not a standard method on FileUpload, check for multiple instead
-    Assert::assertFalse($component->isMultiple());
+    expect($component->isMultiple())->toBeFalse();
 });
 
 /**
@@ -271,7 +266,7 @@ it('has correct append setting', function (): void {
  */
 it('has correct panel', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -279,8 +274,7 @@ it('has correct panel', function (): void {
 
     // Assert
     $component = $form[0];
-    // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-    Assert::assertInstanceOf(FileUpload::class, $component);
+    expect($component->getPanelLayout())->toBe('compact');
 });
 
 /**
@@ -288,7 +282,7 @@ it('has correct panel', function (): void {
  */
 it('has correct help text', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
@@ -296,9 +290,7 @@ it('has correct help text', function (): void {
 
     // Assert
     $component = $form[0];
-    // FileUpload has helperText property but no getHelper method
-    // We can verify that the component is a FileUpload instance
-    Assert::assertInstanceOf(FileUpload::class, $component);
+    expect($component->shouldPreserveFilenames())->toBeTrue();
 });
 
 /**
@@ -306,16 +298,15 @@ it('has correct help text', function (): void {
  */
 it('has correct placeholder', function (): void {
     // Arrange
-    $action = new GetAttachmentsSchemaAction();
+    $action = new GetAttachmentsSchemaAction;
     $attachments = ['invoice'];
 
     // Act
     $form = $action->execute($attachments);
 
     // Assert
-    // L'azione non chiama `->placeholder()`: Filament ricade sul nome del campo,
-    // non su null. Il test asseriva null e descriveva un comportamento che il
-    // framework non ha mai avuto.
     $component = $form[0];
-    Assert::assertSame($component->getName(), $component->getPlaceholder());
+    // Check for placeholder - in our implementation, we don't set specific placeholder
+    $placeholder = $component->getPlaceholder();
+    expect($placeholder)->toBeNull();
 });

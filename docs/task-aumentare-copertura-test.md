@@ -1,14 +1,3 @@
----
-title: "Task: Aumentare Copertura Test - Media"
-module: "Media"
-type: concept
-tags: [task, aumentare, copertura, test]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "task aumentare copertura test"
-related:
-  - "./webm.md"
----
 # Task: Aumentare Copertura Test - Media
 
 **Modulo**: Media
