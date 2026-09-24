@@ -1,3 +1,5 @@
+<<<<<<< .merge_file_aDzTW5
+=======
 ---
 title: "Root files hygiene"
 module: "Media"
@@ -9,6 +11,7 @@ qmd: "root files hygiene"
 related:
   - "./webm.md"
 ---
+>>>>>>> .merge_file_Vw808e
 # Root files hygiene
 
 ## 2026-07-08 16:51
