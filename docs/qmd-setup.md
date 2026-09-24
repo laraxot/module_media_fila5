@@ -64,27 +64,7 @@ qmd search "form" -c media  # Solo questo modulo
 
 - [Global QMD Config](../qmd.md) (root docs)
 - [Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
-<<<<<<< .merge_file_EVJtU8
-=======
-<<<<<<< .merge_file_7zW9KA
-=======
-<<<<<<< .merge_file_lTluTN
->>>>>>> .merge_file_pSol9N
->>>>>>> .merge_file_3MLpRv
-<<<<<<< HEAD
 - [On-Demand Pattern](./on-demand-pattern.md)
-=======
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_EVJtU8
-=======
-<<<<<<< .merge_file_7zW9KA
-=======
-=======
-- [On-Demand Pattern](./on-demand-pattern.md)
->>>>>>> .merge_file_C5bgYi
->>>>>>> .merge_file_pSol9N
->>>>>>> .merge_file_3MLpRv
 
 ---
 *Cache: ~/.cache/qmd-cache/ | Index: ~/.cache/qmd-cache/index*
