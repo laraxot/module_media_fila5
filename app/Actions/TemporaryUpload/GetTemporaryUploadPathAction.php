@@ -11,7 +11,7 @@ use Webmozart\Assert\Assert;
 /**
  * Genera il path per l'upload temporaneo originale di un media.
  */
-final class GetTemporaryUploadPathAction
+class GetTemporaryUploadPathAction
 {
     use QueueableAction;
 
