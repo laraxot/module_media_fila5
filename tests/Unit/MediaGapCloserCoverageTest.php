@@ -35,9 +35,22 @@ afterEach(function (): void {
  * perché è il contratto di ValidationRule: una closure `(): void` passerebbe a runtime
  * e mentirebbe sul tipo.
  *
+<<<<<<< .merge_file_fGX5sA
  * @return list<string>
  */
 function mediaFileExtensionFailures(FileExtensionRule $rule, mixed $value): array
+=======
+<<<<<<< .merge_file_QXulE4
+ * @return list<string>
+ */
+function mediaFileExtensionFailures(FileExtensionRule $rule, mixed $value): array
+=======
+ * @param  UploadedFile|string  $value  File valido oppure valore non-file per il ramo negativo
+ * @return list<string>
+ */
+function mediaFileExtensionFailures(FileExtensionRule $rule, UploadedFile|string $value): array
+>>>>>>> .merge_file_Y7RjN7
+>>>>>>> .merge_file_ECfn5C
 {
     /** @var list<string> $failures */
     $failures = [];
@@ -55,10 +68,23 @@ function mediaFileExtensionFailures(FileExtensionRule $rule, mixed $value): arra
 
 describe('Media gap closer — statement coverage', function (): void {
     test('TemporaryUploadPathGenerator builds paths from in-memory media', function (): void {
+<<<<<<< .merge_file_fGX5sA
+=======
+<<<<<<< .merge_file_QXulE4
+>>>>>>> .merge_file_ECfn5C
         $media = new Media();
         $media->id = 7;
         $media->uuid = '550e8400-e29b-41d4-a716-446655440000';
         $gen = new TemporaryUploadPathGenerator();
+<<<<<<< .merge_file_fGX5sA
+=======
+=======
+        $media = new Media;
+        $media->id = 7;
+        $media->uuid = '550e8400-e29b-41d4-a716-446655440000';
+        $gen = new TemporaryUploadPathGenerator;
+>>>>>>> .merge_file_Y7RjN7
+>>>>>>> .merge_file_ECfn5C
         Assert::assertStringContainsString('tmp/', $gen->getPath($media));
         Assert::assertStringContainsString(md5($media->id.$media->uuid.'conversion'), $gen->getPathForConversions($media));
         Assert::assertStringContainsString(md5($media->id.$media->uuid.'responsive'), $gen->getPathForResponsiveImages($media));
@@ -86,7 +112,15 @@ describe('Media gap closer — statement coverage', function (): void {
             Assert::assertNotSame('', $e->getMessage());
         }
 
+<<<<<<< .merge_file_fGX5sA
         $controller = new ConvertController();
+=======
+<<<<<<< .merge_file_QXulE4
+        $controller = new ConvertController();
+=======
+        $controller = new ConvertController;
+>>>>>>> .merge_file_Y7RjN7
+>>>>>>> .merge_file_ECfn5C
         Assert::assertInstanceOf(ConvertController::class, $controller);
     });
 

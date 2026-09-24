@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-// Media translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Media/docs/wiki — domain i18n only.
-// File: lang/it/attachments_schema_action_test.php
 return [
     'fields' => [
         'invoice' => [
@@ -41,7 +37,7 @@ return [
         ],
         'label' => 'Attachments Schema Action Test',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => [

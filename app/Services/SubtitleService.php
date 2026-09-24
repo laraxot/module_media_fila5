@@ -17,6 +17,8 @@ use function Safe\simplexml_load_string;
 
 /**
  * SubtitleService.
+ *
+ * @phpstan-type SubtitleItem array{sentence_i: int, item_i: int, start: float|int, end: float|int, time: string, text: string}
  */
 class SubtitleService
 {
@@ -27,7 +29,7 @@ class SubtitleService
 
     public string $field_name = 'txt';
 
-    /** @var array<int, array<string, float|int|string|mixed>> */
+    /** @var list<SubtitleItem> */
     public array $subtitles = [];
 
     public Model $model;
@@ -40,7 +42,11 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
+<<<<<<< .merge_file_PXJnWl
             self::$instance = new self();
+=======
+            self::$instance = new self;
+>>>>>>> .merge_file_WsOu3G
         }
 
         return self::$instance;
@@ -100,7 +106,9 @@ class SubtitleService
     }
 
     /**
-     * @return array<int, array<string, float|int|string|mixed>>
+     * Restituisce i sottotitoli dal file.
+     *
+     * @return list<SubtitleItem>
      */
     public function get(): array
     {
@@ -126,9 +134,7 @@ class SubtitleService
     }
 
     /**
-     * @return array<int, array<string, float|int|string|mixed>>
-     *
-     * @psalm-return list{0?: array{sentence_i: int<0, max>, item_i: int<0, max>, start: float|int, end: float|int, time: string, text: mixed},...}
+     * @return list<SubtitleItem>
      */
     public function getFromXml(): array
     {
@@ -170,17 +176,6 @@ class SubtitleService
         return $data;
     }
 
-    private function secondsToHms(int|float $seconds): string
-    {
-        $totalMs = (int) round($seconds * 1000);
-        $hours = intdiv($totalMs, 3_600_000);
-        $minutes = intdiv($totalMs % 3_600_000, 60_000);
-        $secs = intdiv($totalMs % 60_000, 1000);
-        $ms = $totalMs % 1000;
-
-        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
-    }
-
     /**
      * Undocumented function.
      */
@@ -211,5 +206,16 @@ class SubtitleService
         $header = "WEBVTT\n\n";
 
         file_put_contents(public_path($webVttFile), $header.implode('', $lines));
+    }
+
+    private function secondsToHms(int|float $seconds): string
+    {
+        $totalMs = (int) round($seconds * 1000);
+        $hours = intdiv($totalMs, 3_600_000);
+        $minutes = intdiv($totalMs % 3_600_000, 60_000);
+        $secs = intdiv($totalMs % 60_000, 1000);
+        $ms = $totalMs % 1000;
+
+        return sprintf('%02d:%02d:%02d,%03d', $hours, $minutes, $secs, $ms);
     }
 }
