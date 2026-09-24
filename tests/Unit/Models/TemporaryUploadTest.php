@@ -6,12 +6,14 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
+use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-        expect(new TemporaryUpload)->toBeInstanceOf(BaseModel::class);
+        Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload);
     });
 
     it('uses HasXotFactory trait', function (): void {
@@ -38,17 +40,10 @@ describe('TemporaryUpload Model', function (): void {
         expect($upload->getConnectionName())->toBe('media');
     });
 
-    it('has explicit fillable attributes', function (): void {
+    it('has empty guarded array', function (): void {
         $upload = new TemporaryUpload;
 
-        expect($upload->getFillable())->toBe([
-            'session_id',
-            'user_id',
-            'file_name',
-            'file_size',
-            'mime_type',
-            'status',
-        ]);
+        expect($upload->getGuarded())->toBe([]);
     });
 
     it('has findByMediaUuid static method', function (): void {

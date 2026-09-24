@@ -1,3 +1,14 @@
+---
+title: "Modulo Media"
+module: "Media"
+type: concept
+tags: [structure]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "structure"
+related:
+  - "./webm.md"
+---
 # Modulo Media
 
 Data: [DATE] 19:09:56
@@ -267,7 +278,7 @@ app/Providers
 app/Providers/Filament
 app/Rules
 app/Services
-# app/Support — eliminato 2026-07-12 → Actions/Adapters/Datas
+app/Support
 app/View
 app/View/Components
 app/View/View

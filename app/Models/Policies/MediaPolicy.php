@@ -20,9 +20,9 @@ class MediaPolicy extends MediaBasePolicy
     /**
      * Determine whether the user can view the model.
      */
-    public function view(UserContract $user, Media $media): bool
+    public function view(UserContract $user, Media $_media): bool
     {
-        return ($media->created_by === $user->getKey() || $user->hasRole('super-admin')) && $user->hasPermissionTo('media.view');
+        return $user->hasPermissionTo('media.view');
     }
 
     /**
@@ -36,25 +36,25 @@ class MediaPolicy extends MediaBasePolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(UserContract $user, Media $media): bool
+    public function update(UserContract $user, Media $_media): bool
     {
-        return ($media->created_by === $user->getKey() || $user->hasRole('super-admin')) && $user->hasPermissionTo('media.update');
+        return $user->hasPermissionTo('media.update');
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(UserContract $user, Media $media): bool
+    public function delete(UserContract $user, Media $_media): bool
     {
-        return ($media->created_by === $user->getKey() || $user->hasRole('super-admin')) && $user->hasPermissionTo('media.delete');
+        return $user->hasPermissionTo('media.delete');
     }
 
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(UserContract $user, Media $media): bool
+    public function restore(UserContract $user, Media $_media): bool
     {
-        return ($media->created_by === $user->getKey() || $user->hasRole('super-admin')) && $user->hasPermissionTo('media.restore');
+        return $user->hasPermissionTo('media.restore');
     }
 
     /**
@@ -62,6 +62,6 @@ class MediaPolicy extends MediaBasePolicy
      */
     public function forceDelete(UserContract $user, Media $media): bool
     {
-        return ($media->created_by === $user->getKey() || $user->hasRole('super-admin')) && $user->hasPermissionTo('media.forceDelete');
+        return $user->hasPermissionTo('media.forceDelete');
     }
 }
