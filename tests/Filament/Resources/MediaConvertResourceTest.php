@@ -8,16 +8,18 @@ use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm;
 use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
-    $form = (new MediaConvertForm)->getFormSchema();
+    $form = app(MediaConvertForm::class)->getFormSchema();
 
-    expect($form)->not->toBeEmpty();
+    Assert::assertIsArray($form);
+    Assert::assertNotEmpty($form);
 
-    $componentClasses = array_map(get_class(...), $form);
+    $componentClasses = array_map(get_class(...), array_values($form));
 
-    expect($componentClasses)->toContain(Radio::class);
-    expect($componentClasses)->toContain(TextInput::class);
+    Assert::assertContains(Radio::class, $componentClasses);
+    Assert::assertContains(TextInput::class, $componentClasses);
 });
