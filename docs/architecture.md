@@ -138,6 +138,27 @@ Il modulo utilizza l'inversion of control tramite:
 - README.md - Documentazione di base
 - index.md - Bridge indice
 - /docs/ root - Standard di documentazione globali
+<<<<<<< .merge_file_J6q0Jb
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_9cK8go
+
+---
+
+> **Nota (audit doc, 2026-09-17):** una versione precedente di questo file conteneva un blocco
+> "Architecture" in inglese (proveniente dal merge con `ARCHITECTURE.md`, collisi su filesystem
+> case-insensitive) che descriveva classi mai esistite in questo modulo: modello `Media` da
+> `spatie/laravel-medialibrary` (il modulo usa invece `Modules\Media\Models\Media` con
+> `BaseModel`/`MediaConvert`/`TemporaryUpload`), `MediaCollections`, `MediaItem`,
+> `UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `CollectionResource`. Nessuna
+> di queste classi esiste in `app/` (verificato con `find Modules/Media/app`). Il blocco è stato
+> rimosso qui; `ARCHITECTURE.md` è stato convertito in bridge stub verso questo file.
+=======
+<<<<<<< .merge_file_eMOEDk
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NMTXHl
+>>>>>>> .merge_file_x2faUD
 
 ---
 
@@ -188,3 +209,14 @@ Media module provides file handling, storage, and processing infrastructure for 
 ## Quality Gates
 - **PHPStan L10**: Pending verification
 - **Storage**: Tested with local/S3 drivers
+<<<<<<< .merge_file_J6q0Jb
+=======
+>>>>>>> laraxot/dev
+=======
+<<<<<<< .merge_file_eMOEDk
+=======
+>>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NMTXHl
+>>>>>>> .merge_file_FER2dT
+>>>>>>> .merge_file_x2faUD

@@ -13,6 +13,20 @@ class Webm extends ImageGenerator
     public function convert(string $file, ?Conversion $conversion = null): string
     {
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.webmXXX';
+<<<<<<< .merge_file_nDHcUc
+=======
+<<<<<<< .merge_file_WX2DKp
+=======
+<<<<<<< .merge_file_MC8IFQ
+        dddx([
+            'file' => $file,
+            '$pathToImageFile' => ${$pathToImageFile},
+            'conversion' => $conversion,
+        ]);
+=======
+>>>>>>> .merge_file_1POwKB
+>>>>>>> .merge_file_6rjT59
+>>>>>>> .merge_file_rembkY
 
         /*
          * $image = imagecreatefromwebp($file);
