@@ -1,7 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_s4VHdd
 
+=======
+>>>>>>> .merge_file_sQA97R
 /*
  * Messaggi di validazione del modulo Media.
  *

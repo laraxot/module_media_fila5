@@ -1,7 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_0QQD6N
 
+=======
+>>>>>>> .merge_file_b3dhtc
 /*
  * Validierungsmeldungen des Media-Moduls.
  *

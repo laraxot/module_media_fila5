@@ -138,7 +138,10 @@ Il modulo utilizza l'inversion of control tramite:
 - README.md - Documentazione di base
 - index.md - Bridge indice
 - /docs/ root - Standard di documentazione globali
+<<<<<<< .merge_file_eMOEDk
 <<<<<<< HEAD
+=======
+>>>>>>> .merge_file_NMTXHl
 
 ---
 
@@ -189,5 +192,8 @@ Media module provides file handling, storage, and processing infrastructure for 
 ## Quality Gates
 - **PHPStan L10**: Pending verification
 - **Storage**: Tested with local/S3 drivers
+<<<<<<< .merge_file_eMOEDk
 =======
 >>>>>>> laraxot/dev
+=======
+>>>>>>> .merge_file_NMTXHl
