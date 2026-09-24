@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 id: module-media-readme
 title: "Media — File, Immagini, Video e Documenti"
@@ -32,43 +31,9 @@ Upload, storage, trasformazioni e distribuzione media locale o cloud.
 - **Video/FFmpeg** – transcodifica e processing
 - **S3/CDN** – distribuzione e caching
 
-## Confini architetturali
-
-This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
-
-## Integrazione rapida
-
-```bash
-cd laravel
-php artisan module:list
-./vendor/bin/phpstan analyse Modules/Media
-```
-
-See local docs for integration patterns.
-
-## Documentazione
-
-The technical map is in [docs/README.md](./docs/README.md).
-
-- [Story BMAD del modulo](./docs/stories/)
-- [Regole del progetto](../../../docs/wiki/)
-- [README del progetto](../../README.md)
-
-## Qualità e manutenzione
-
-Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, and update docs when contracts evolve.
-
----
-
-**Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**
-=======
-# Media Module — File Storage & Transformation
-
-**Last updated:** 2026-07-28
-
 Complete media management for the Laraxot ecosystem: image optimization, video encoding, FFmpeg integration, and cloud storage (S3/CloudFront).
 
-## Why This Module
+### Why This Module
 
 - **Unified file handling** — Consistent API for uploads, validation, and storage across all modules
 - **FFmpeg integration** — Professional-grade video encoding with automatic quality presets
@@ -103,19 +68,33 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 - Minio compatibility for self-hosted deployments
 - Automatic CDN invalidation
 
+## Confini architetturali
+
+This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
+
 ## Dependencies
 
 **Composer packages:**
-- `pbmedia/laravel-ffmpeg:^8.7` — Video processing
-- `intervention/image:^3.0` — Image transformation
-- `laravel/framework:^11.0` — Laravel framework
-- `spatie/laravel-queueable-action` — Async actions
+- `pbmedia/laravel-ffmpeg:^8.5` — Video processing
+- `intervention/image` — Image transformation
 
 **System packages (required):**
 - `ffmpeg` — Video encoding engine
 - `imagemagick` or `gd` — Image processing library
 
-## Documentation
+## Integrazione rapida
+
+```bash
+cd laravel
+php artisan module:list
+./vendor/bin/phpstan analyse Modules/Media
+```
+
+See local docs for integration patterns.
+
+## Documentazione
+
+The technical map is in [docs/README.md](./docs/README.md).
 
 **Start here:**
 1. [Documentation Index](./docs/INDEX.md) — Navigation & file guide
@@ -124,22 +103,26 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 4. [Troubleshooting](./docs/TROUBLESHOOTING.md) — Error resolution
 
 **Deep dives:**
-- [API Documentation](./docs/API.md) — Action signatures & contracts
 - [FFmpeg Integration](./docs/ffmpeg-usage.md) — Video encoding guide
-- [Components](./docs/COMPONENTS.md) — Intervention Image, Storage strategies
 
 **Operations:**
 - [Performance Optimization](./docs/PERFORMANCE-OPTIMIZATION.md) — Tuning guide
 - [Migration Guide](./docs/MIGRATIONS.md) — Database upgrades
 - [Testing Guidelines](./docs/testing-guidelines.md) — Test strategies
 
+**Progetto:**
+- [Story BMAD del modulo](./docs/stories/)
+- [Regole del progetto](../../../docs/wiki/)
+- [README del progetto](../../README.md)
+
 ## Release & Automation
 
-- **Semantic Release:** [Workflow](./.github/workflows/semantic-release.yml)
-- **Configuration:** [.releaserc.json](./.releaserc.json)
+- **Semantic Release configuration:** [.releaserc.json](./.releaserc.json)
 - **Changelog:** [CHANGELOG.md](./CHANGELOG.md)
 
-## Philosophy
+## Qualità e manutenzione
+
+Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, and update docs when contracts evolve.
 
 **Scopo prima del codice** — Every class serves a specific use case.  
 **DRY prima dell'orgoglio** — Reuse patterns established in Laraxot.  
@@ -147,5 +130,4 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 
 ---
 
-**Quick links:** [Index](./docs/INDEX.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/TROUBLESHOOTING.md) | [Contributing](./docs/CONTRIBUTING.md)
->>>>>>> laraxot/dev
+**Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**
