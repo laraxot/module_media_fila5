@@ -1,10 +1,28 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_RIBPJW
+=======
+<<<<<<< .merge_file_vgdpL2
+
+=======
+<<<<<<< .merge_file_KZtSLH
+
+=======
+<<<<<<< .merge_file_KXISO2
+
+=======
+>>>>>>> .merge_file_rVV42X
 <<<<<<< .merge_file_vUfi5G
 =======
 
 >>>>>>> .merge_file_xwUL4j
+<<<<<<< .merge_file_RIBPJW
+=======
+>>>>>>> .merge_file_4s4Tj2
+>>>>>>> .merge_file_ZDwEYe
+>>>>>>> .merge_file_of4hHY
+>>>>>>> .merge_file_rVV42X
 use Illuminate\Support\Str;
 
 return [
