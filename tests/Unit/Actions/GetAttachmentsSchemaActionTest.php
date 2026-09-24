@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
-uses(\Modules\Media\Tests\TestCase::class);
-
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+
+uses(TestCase::class)->group('no-media-db');
 
 /**
  * Test that the action returns attachment schema correctly.
@@ -21,11 +23,11 @@ it('returns attachment schema', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
-    expect($form)->toBeArray()->toHaveCount(3);
+    Assert::assertCount(3, $form);
 
     // Verifica che ogni attachment abbia un FileUpload component
     foreach ($form as $component) {
-        expect($component)->toBeInstanceOf(FileUpload::class);
+        Assert::assertInstanceOf(FileUpload::class, $component);
     }
 });
 
@@ -41,8 +43,8 @@ it('has correct names', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
-    expect($form[0]->getName())->toBe('invoice');
-    expect($form[1]->getName())->toBe('contract');
+    Assert::assertSame('invoice', $form[0]->getName());
+    Assert::assertSame('contract', $form[1]->getName());
 });
 
 /**
@@ -62,11 +64,11 @@ it('has correct validation', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->isRequired())->toBeTrue();
+    Assert::assertTrue($component->isRequired());
     // Accepted file types can be expressed as MIME types or extensions depending on Filament internals.
     $acceptedTypes = $component->getAcceptedFileTypes();
-    expect($acceptedTypes)->toBeArray();
-    expect($acceptedTypes)->not()->toBeEmpty();
+    Assert::assertIsArray($acceptedTypes);
+    Assert::assertNotSame([], $acceptedTypes);
 
     $allowed = [
         'application/pdf',
@@ -77,7 +79,7 @@ it('has correct validation', function (): void {
         'docx',
     ];
 
-    expect(collect($acceptedTypes)->contains(fn ($t) => in_array($t, $allowed, true)))->toBeTrue();
+    Assert::assertTrue(collect($acceptedTypes)->contains(static fn (mixed $t): bool => in_array($t, $allowed, true)));
 });
 
 /**
@@ -93,7 +95,7 @@ it('has correct storage', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->getDiskName())->toBe('attachments');
+    Assert::assertSame('attachments', $component->getDiskName());
 });
 
 /**
@@ -109,7 +111,7 @@ it('has correct directory', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->getDirectory())->toBe('temp');
+    Assert::assertSame('temp', $component->getDirectory());
 });
 
 /**
@@ -125,7 +127,7 @@ it('has correct visibility', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->getVisibility())->toBe('public');
+    Assert::assertSame('public', $component->getVisibility());
 });
 
 /**
@@ -140,8 +142,11 @@ it('has correct max size', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
+    // Filament esprime maxSize() in KILOBYTE, non in byte: l'azione dichiara
+    // `->maxSize(10 * 1024)`, cioe' 10 MB. Il test chiedeva 10*1024*1024 e
+    // misurava quindi 10 GB.
     $component = $form[0];
-    expect($component->getMaxSize())->toBe(10 * 1024 * 1024); // 10MB
+    Assert::assertSame(10 * 1024, $component->getMaxSize());
 });
 
 /**
@@ -157,7 +162,7 @@ it('has correct multiple setting', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->isMultiple())->toBeFalse();
+    Assert::assertFalse($component->isMultiple());
 });
 
 /**
@@ -173,7 +178,7 @@ it('has correct preview setting', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->isPreviewable())->toBeTrue();
+    Assert::assertTrue($component->isPreviewable());
 });
 
 /**
@@ -189,7 +194,7 @@ it('has correct download setting', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->isDownloadable())->toBeTrue();
+    Assert::assertTrue($component->isDownloadable());
 });
 
 /**
@@ -208,7 +213,7 @@ it('has correct remove setting', function (): void {
     // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
     // By default, Filament file uploads are removable unless specifically configured otherwise
     // We can verify that the component is a FileUpload
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    Assert::assertInstanceOf(FileUpload::class, $component);
 });
 
 /**
@@ -224,7 +229,7 @@ it('has correct reorder setting', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->isReorderable())->toBeFalse();
+    Assert::assertFalse($component->isReorderable());
 });
 
 /**
@@ -241,7 +246,7 @@ it('has correct labels', function (): void {
     // Assert
     $component = $form[0];
     // In our implementation, we don't set custom labels, so it should be null or default to name
-    expect($component->getLabel())->toBeString();
+    Assert::assertIsString($component->getLabel());
 });
 
 /**
@@ -258,7 +263,7 @@ it('has correct append setting', function (): void {
     // Assert
     $component = $form[0];
     // isAppendable is not a standard method on FileUpload, check for multiple instead
-    expect($component->isMultiple())->toBeFalse();
+    Assert::assertFalse($component->isMultiple());
 });
 
 /**
@@ -275,7 +280,7 @@ it('has correct panel', function (): void {
     // Assert
     $component = $form[0];
     // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    Assert::assertInstanceOf(FileUpload::class, $component);
 });
 
 /**
@@ -293,7 +298,7 @@ it('has correct help text', function (): void {
     $component = $form[0];
     // FileUpload has helperText property but no getHelper method
     // We can verify that the component is a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
+    Assert::assertInstanceOf(FileUpload::class, $component);
 });
 
 /**
@@ -308,8 +313,9 @@ it('has correct placeholder', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
+    // L'azione non chiama `->placeholder()`: Filament ricade sul nome del campo,
+    // non su null. Il test asseriva null e descriveva un comportamento che il
+    // framework non ha mai avuto.
     $component = $form[0];
-    // Check for placeholder - in our implementation, we don't set specific placeholder
-    $placeholder = $component->getPlaceholder();
-    expect($placeholder)->toBeNull();
+    Assert::assertSame($component->getName(), $component->getPlaceholder());
 });

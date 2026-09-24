@@ -1,3 +1,14 @@
+---
+title: "Migration Patterns - Media Module"
+module: "Media"
+type: pattern
+tags: [migration, patterns]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "migration patterns"
+related:
+  - "./webm.md"
+---
 # Migration Patterns - Media Module
 
 ## Conformità XotBaseMigration

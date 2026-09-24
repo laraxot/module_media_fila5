@@ -12,6 +12,19 @@ use ReflectionClass;
 
 uses(TestCase::class)->group('no-media-db');
 
+<<<<<<< .merge_file_ZyePoM
+=======
+<<<<<<< .merge_file_Frfzng
+=======
+<<<<<<< .merge_file_Dm4lWn
+=======
+/**
+ * Invoker via reflection: `mixed ...$args` e ritorno `mixed` sono voluti,
+ * gli argomenti e i ritorni dei metodi diagnostici sono eterogenei.
+ */
+>>>>>>> .merge_file_PsKKXC
+>>>>>>> .merge_file_f8rTia
+>>>>>>> .merge_file_XiNjgq
 function mediaInvoke(object $target, string $method, mixed ...$args): mixed
 {
     $ref = new ReflectionClass($target);
@@ -23,6 +36,17 @@ function mediaInvoke(object $target, string $method, mixed ...$args): mixed
 
 /**
  * Invoca un metodo che il contratto dichiara `string` e ne verifica il tipo di ritorno.
+<<<<<<< .merge_file_ZyePoM
+=======
+<<<<<<< .merge_file_Frfzng
+=======
+<<<<<<< .merge_file_Dm4lWn
+=======
+ *
+ * @param  mixed  ...$args  Argomenti eterogenei per reflection
+>>>>>>> .merge_file_PsKKXC
+>>>>>>> .merge_file_f8rTia
+>>>>>>> .merge_file_XiNjgq
  */
 function mediaInvokeString(object $target, string $method, mixed ...$args): string
 {
@@ -37,6 +61,16 @@ function mediaInvokeString(object $target, string $method, mixed ...$args): stri
 /**
  * Invoca un metodo che il contratto dichiara `array` e ne verifica il tipo di ritorno.
  *
+<<<<<<< .merge_file_ZyePoM
+=======
+<<<<<<< .merge_file_Frfzng
+=======
+<<<<<<< .merge_file_Dm4lWn
+=======
+ * @param  mixed  ...$args  Argomenti eterogenei per reflection
+>>>>>>> .merge_file_PsKKXC
+>>>>>>> .merge_file_f8rTia
+>>>>>>> .merge_file_XiNjgq
  * @return array<array-key, mixed>
  */
 function mediaInvokeArray(object $target, string $method, mixed ...$args): array

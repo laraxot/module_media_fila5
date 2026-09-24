@@ -42,7 +42,19 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
+<<<<<<< .merge_file_egHuqI
             self::$instance = new self();
+=======
+<<<<<<< .merge_file_Tidt6X
+            self::$instance = new self();
+=======
+<<<<<<< .merge_file_CuXODK
+            self::$instance = new self();
+=======
+            self::$instance = new self;
+>>>>>>> .merge_file_JljqZM
+>>>>>>> .merge_file_yibhiG
+>>>>>>> .merge_file_4BwCh9
         }
 
         return self::$instance;
