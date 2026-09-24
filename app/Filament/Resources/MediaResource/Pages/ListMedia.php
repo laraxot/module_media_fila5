@@ -9,14 +9,12 @@ use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-use Override;
-use RuntimeException;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Webmozart\Assert\Assert;
 
 class ListMedia extends XotBaseListRecords
@@ -26,30 +24,10 @@ class ListMedia extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
-    #[Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'id' => TextColumn::make('id')->sortable()->searchable(),
-            'model_type' => TextColumn::make('model_type')->searchable(),
-            'model_id' => TextColumn::make('model_id')->searchable(),
-            'collection_name' => TextColumn::make('collection_name')->searchable(),
-            'name' => TextColumn::make('name')->searchable(),
-            'file_name' => TextColumn::make('file_name')->searchable(),
-            'mime_type' => TextColumn::make('mime_type')->searchable(),
-            'disk' => TextColumn::make('disk')->searchable(),
-            'size' => TextColumn::make('size')->formatStateUsing(fn (string $state): string => number_format(
-                ((int) $state) / 1024,
-                2,
-            ).' KB'),
-            'created_at' => TextColumn::make('created_at')->dateTime(),
-        ];
-    }
 
     /**
      * @return array<string, BaseFilter>
      */
-    #[Override]
     public function getTableFilters(): array
     {
         return [
@@ -67,7 +45,6 @@ class ListMedia extends XotBaseListRecords
     /**
      * @return array<string, Action|ActionGroup>
      */
-    #[Override]
     public function getTableActions(): array
     {
         return [
@@ -81,20 +58,18 @@ class ListMedia extends XotBaseListRecords
             'download' => Action::make('download_attachment')
                 ->icon('heroicon-o-arrow-down-tray')
                 ->color('primary')
-                ->action(static function ($record) {
-                    // PHPStan Level 10: isset() per Eloquent magic property
-                    if (! is_object($record) || ! method_exists($record, 'getPath') || ! isset($record->file_name)) {
-                        throw new RuntimeException('Invalid record for download');
-                    }
+                ->action(static function (Media $record): BinaryFileResponse {
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
+                    $fileName = $record->file_name;
+                    Assert::string($fileName);
 
-                    return response()->download($filePath, (string) $record->file_name);
+                    return response()->download($filePath, $fileName);
                 }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
-                ->url(function ($record): string {
+                ->url(static function (Media $record): string {
                     Assert::string($res = static::$resource::getUrl('convert', ['record' => $record]));
 
                     return $res;

@@ -5,21 +5,12 @@ module: "Media"
 
 # Media - Wiki Activity Log
 
-## [2026-07-13] phpstan | SaveAttachmentsAction — codice orfano merge
+## [2026-09-21] cleanup | ritiro Card/Video/Clip Livewire (dead code)
 
-- Rimosso blocco duplicato L87–118 (loop inline residuo post-refactor `attachmentPath` + `saveAttachment`)
-- Uso: salva allegati da disco temporaneo su Spatie Media Library (`HasMedia::addMedia`)
-- PHPStan Modules: 0 errori
+- Cancellato `app/Http/Livewire/Card/Video/Clip.php` (zero caller repo-wide: no hook Filament, no `@livewire`, no rotta, no vista dedicata) e svuotato `_components.json` a `[]`.
+- Già in HEAD via commit `29e8e9784` (sessione concorrente); questa sessione ha chiuso la documentazione residua: story `docs/stories/12.1.media-clip-not-widget.story.md` (status -> done, AC 4-6) e `docs/bmad/livewire-inventory.md`.
+- Verifica: PHPStan L10 `[OK]` 0 errori (123 file); Pest+coverage 282 passed / 9 failed preesistenti (non Clip); PHPMD nessun finding su Livewire.
 
-## [2026-07-12] deadcode | swarm — GetTemporary* triplicati rimossi
-
-- Rimossi `GetTemporaryUploadPathAction`, `GetTemporaryResponsiveImagePathAction`, `GetTemporaryConversionPathAction` — 0 consumer PHP; SSoT `GenerateTemporaryUploadPathAction` (`purpose`: original|conversion|responsive)
-- Issue [#372](https://github.com/laraxot/base_fixcity_fila5/issues/372)
-
-## [2026-07-12] phpstan | swarm quality gate — 0 errori
-
-- Scope precedente (file ora rimossi): cast `(string)` su id/uuid — superseded da cleanup deadcode
-- Comando: `php -d memory_limit=2048M vendor/bin/phpstan analyse Modules/Media` → verificare post-cleanup
 
 ## [2026-05-27] lint | phpstan zero
 

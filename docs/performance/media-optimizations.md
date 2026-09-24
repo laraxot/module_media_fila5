@@ -1,3 +1,14 @@
+---
+title: "Ottimizzazioni Performance Modulo Media"
+module: "Media"
+type: concept
+tags: [media, optimizations]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "media optimizations"
+related:
+  - "./webm.md"
+---
 # Ottimizzazioni Performance Modulo Media
 
 ## 1. Ottimizzazione Conversione Video
@@ -214,7 +225,7 @@ final class GetVideoFrameContentAction
 - Riduzione uso memoria: 40%
 
 ## 3. Ottimizzazione Upload Temporanei
-**File**: `laravel/Modules/Media/app/Actions/GenerateTemporaryUploadPathAction.php`
+**File**: `laravel/Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
 
 **Problema**:
 - Generazione path non ottimizzata
