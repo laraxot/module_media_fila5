@@ -150,3 +150,10 @@ Tutte le variazioni importanti di Media saranno generate automaticamente da sema
 ### Bug Fixes
 
 * resolve nested git conflict markers in Media module ([e0935b2](https://github.com/laraxot/module_media_fila5/commit/e0935b222be41e3a8f6327812c390644368c2cfe))
+<<<<<<< .merge_file_nQX0JF
+=======
+
+# Changelog
+
+Tutte le variazioni importanti di Media saranno generate automaticamente da semantic-release.
+>>>>>>> .merge_file_gAaNBK

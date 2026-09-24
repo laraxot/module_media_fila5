@@ -31,6 +31,7 @@ Upload, storage, trasformazioni e distribuzione media locale o cloud.
 - **Video/FFmpeg** – transcodifica e processing
 - **S3/CDN** – distribuzione e caching
 
+<<<<<<< .merge_file_Upopj3
 Complete media management for the Laraxot ecosystem: image optimization, video encoding, FFmpeg integration, and cloud storage (S3/CloudFront).
 
 ### Why This Module
@@ -68,10 +69,13 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 - Minio compatibility for self-hosted deployments
 - Automatic CDN invalidation
 
+=======
+>>>>>>> .merge_file_Wq7uEA
 ## Confini architetturali
 
 This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
 
+<<<<<<< .merge_file_Upopj3
 ## Dependencies
 
 **Composer packages:**
@@ -82,6 +86,8 @@ This module publishes contracts usable by other modules. Logic lives in `Actions
 - `ffmpeg` — Video encoding engine
 - `imagemagick` or `gd` — Image processing library
 
+=======
+>>>>>>> .merge_file_Wq7uEA
 ## Integrazione rapida
 
 ```bash
@@ -96,6 +102,7 @@ See local docs for integration patterns.
 
 The technical map is in [docs/README.md](./docs/README.md).
 
+<<<<<<< .merge_file_Upopj3
 **Start here:**
 1. [Documentation Index](./docs/INDEX.md) — Navigation & file guide
 2. [Architecture](./docs/ARCHITECTURE.md) — System design & patterns
@@ -111,23 +118,31 @@ The technical map is in [docs/README.md](./docs/README.md).
 - [Testing Guidelines](./docs/testing-guidelines.md) — Test strategies
 
 **Progetto:**
+=======
+>>>>>>> .merge_file_Wq7uEA
 - [Story BMAD del modulo](./docs/stories/)
 - [Regole del progetto](../../../docs/wiki/)
 - [README del progetto](../../README.md)
 
+<<<<<<< .merge_file_Upopj3
 ## Release & Automation
 
 - **Semantic Release configuration:** [.releaserc.json](./.releaserc.json)
 - **Changelog:** [CHANGELOG.md](./CHANGELOG.md)
 
+=======
+>>>>>>> .merge_file_Wq7uEA
 ## Qualità e manutenzione
 
 Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, and update docs when contracts evolve.
 
+<<<<<<< .merge_file_Upopj3
 **Scopo prima del codice** — Every class serves a specific use case.  
 **DRY prima dell'orgoglio** — Reuse patterns established in Laraxot.  
 **KISS prima dell'astrazione** — Simple, verifiable code over clever frameworks.
 
+=======
+>>>>>>> .merge_file_Wq7uEA
 ---
 
 **Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**

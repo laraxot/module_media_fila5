@@ -1,6 +1,10 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< .merge_file_vUfi5G
+=======
+
+>>>>>>> .merge_file_xwUL4j
 use Illuminate\Support\Str;
 
 return [
