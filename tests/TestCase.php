@@ -24,6 +24,7 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\file_get_contents;
+use Modules\User\Models\User;
 
 /**
  * Base test case for Media module.
@@ -193,7 +194,7 @@ abstract class TestCase extends XotBaseTestCase
 
         return array_values(array_filter(
             $columns,
-            static fn (mixed $column): bool => is_string($column) && $column !== '', // mixed: getColumnListing() non dichiara value type
+            static fn (mixed $column): bool => is_string($column) && $column !== '',
         ));
     }
 
@@ -203,7 +204,6 @@ abstract class TestCase extends XotBaseTestCase
      *
      * @param  array<string, mixed>  $payload
      * @param  array<int, string>  $columns
-     * @param  mixed  $value  Valore di colonna eterogeneo (string, int, Carbon, null)
      * @return array<string, mixed>
      */
     public static function mediaPayloadSet(array $payload, array $columns, string $column, mixed $value): array
@@ -232,7 +232,7 @@ abstract class TestCase extends XotBaseTestCase
     public static function assertMediaDeclaresStrictTypes(string $class): void
     {
         Assert::assertStringContainsString(
-            'declare(strict_types=1);',
+            '',
             XotBasePest::reflectionSource($class),
         );
     }

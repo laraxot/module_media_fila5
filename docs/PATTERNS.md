@@ -357,24 +357,8 @@ public function store(Request $request)
 
 ---
 
-<<<<<<< .merge_file_efUm6q
-=======
-<<<<<<< .merge_file_OZm2u0
-=======
-<<<<<<< .merge_file_mPLzAQ
->>>>>>> .merge_file_UPkyck
->>>>>>> .merge_file_mv28Hh
 <<<<<<< HEAD
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
 =======
 **Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](./TROUBLESHOOTING.md) | [Contributing](./CONTRIBUTING.md)
 >>>>>>> laraxot/dev
-<<<<<<< .merge_file_efUm6q
-=======
-<<<<<<< .merge_file_OZm2u0
-=======
-=======
-**Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
->>>>>>> .merge_file_ckrfLo
->>>>>>> .merge_file_UPkyck
->>>>>>> .merge_file_mv28Hh
