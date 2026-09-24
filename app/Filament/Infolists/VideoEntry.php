@@ -5,17 +5,16 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Infolists;
 
 use Closure;
+use Filament\Infolists\Components\Entry;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\ComponentAttributeBag;
 use League\Flysystem\UnableToCheckFileExistence;
-use Modules\Xot\Filament\Infolists\Components\XotBaseEntry;
 use Throwable;
 use Webmozart\Assert\Assert;
 
-// phpmd: TooManyFields, TooManyPublicMethods, ExcessiveClassComplexity, LongVariable — entry video Filament ricca
-class VideoEntry extends XotBaseEntry
+class VideoEntry extends Entry
 {
     protected string $view = 'media::filament.infolists.video-entry';
 
@@ -88,6 +87,11 @@ class VideoEntry extends XotBaseEntry
         $this->height($size);
 
         return $this;
+    }
+
+    public function imageSize(int|string|Closure $size): static
+    {
+        return $this->size($size);
     }
 
     public function visibility(string|Closure $visibility): static
@@ -174,7 +178,7 @@ class VideoEntry extends XotBaseEntry
         if ($this->getVisibility() === 'private') {
             try {
                 return $storage->temporaryUrl($state, now()->addMinutes(5));
-            } catch (\Throwable) {
+            } catch (Throwable) {
                 // This driver does not support creating temporary URLs.
             }
         }

@@ -5,15 +5,13 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\Media;
-use Modules\Media\Tests\TestCase;
-use PHPUnit\Framework\Assert;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
-uses(TestCase::class)->group('no-media-db');
+uses(\Modules\Media\Tests\TestCase::class);
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
-        Assert::assertInstanceOf(SpatieMedia::class, new Media());
+        expect(get_parent_class(Media::class))->toBe(SpatieMedia::class);
     });
 
     it('uses HasXotFactory trait', function (): void {
@@ -29,7 +27,7 @@ describe('Media Model', function (): void {
     });
 
     it('has media connection', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         expect($model->getConnectionName())->toBe('media');
     });
@@ -39,19 +37,19 @@ describe('Media Model', function (): void {
     });
 
     it('has temporaryUpload relationship', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         expect((new \ReflectionClass($model))->hasMethod('temporaryUpload'))->toBeTrue();
     });
 
     it('has creator relationship', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         expect((new \ReflectionClass($model))->hasMethod('creator'))->toBeTrue();
     });
 
     it('has mediaConverts relationship', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         expect((new \ReflectionClass($model))->hasMethod('mediaConverts'))->toBeTrue();
     });
@@ -65,21 +63,21 @@ describe('Media Model', function (): void {
     });
 
     it('casts id to string', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         $casts = $model->getCasts();
         expect($casts['id'] ?? null)->toBe('string');
     });
 
     it('casts uuid to string', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         $casts = $model->getCasts();
         expect($casts['uuid'] ?? null)->toBe('string');
     });
 
     it('casts datetime fields', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         $casts = $model->getCasts();
         expect($casts['created_at'] ?? null)->toBe('datetime');
@@ -88,7 +86,7 @@ describe('Media Model', function (): void {
     });
 
     it('casts user fields to string', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         $casts = $model->getCasts();
         expect($casts['updated_by'] ?? null)->toBe('string');
@@ -97,7 +95,7 @@ describe('Media Model', function (): void {
     });
 
     it('casts array fields', function (): void {
-        $model = new Media();
+        $model = new Media;
 
         $casts = $model->getCasts();
         expect($casts['manipulations'] ?? null)->toBe('array');

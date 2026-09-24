@@ -14,14 +14,12 @@ use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
-use Modules\Job\Filament\Widgets\ClockWidget;
 use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Override;
-use Spatie\QueueableAction\ActionJob;
 
 class ListMediaConverts extends XotBaseListRecords
 {
@@ -30,11 +28,32 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
-    
+    #[Override]
+    public function getTableColumns(): array
+    {
+        return [
+            'id' => TextColumn::make('id')->sortable(),
+            'media.file_name' => TextColumn::make('media.file_name')->sortable(),
+            'format' => TextColumn::make('format')->searchable(),
+            'codec_video' => TextColumn::make('codec_video')->searchable(),
+            'codec_audio' => TextColumn::make('codec_audio')->searchable(),
+            'preset' => TextColumn::make('preset')->searchable(),
+            'bitrate' => TextColumn::make('bitrate'),
+            'width' => TextColumn::make('width')->numeric(),
+            'height' => TextColumn::make('height')->numeric(),
+            'threads' => TextColumn::make('threads')->numeric(),
+            'speed' => TextColumn::make('speed')->numeric(),
+            'percentage' => TextColumn::make('percentage')->numeric(),
+            'remaining' => TextColumn::make('remaining')->numeric(),
+            'rate' => TextColumn::make('rate')->numeric(),
+            'execution_time' => TextColumn::make('execution_time')->numeric(),
+        ];
+    }
 
     /**
      * @return array<string, BaseFilter>
      */
+    #[Override]
     public function getTableFilters(): array
     {
         return [
@@ -56,6 +75,7 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, Action|ActionGroup>
      */
+    #[Override]
     public function getTableActions(): array
     {
         return [
@@ -67,10 +87,7 @@ class ListMediaConverts extends XotBaseListRecords
                     'file' => $record->file,
                     'disk' => $record->disk,
                 ]);
-                // `QueueableAction::onQueue()` restituisce una classe anonima non tipizzata:
-                // PHPStan la vede `mixed` e ogni chiamata su di essa e' un errore. Il job
-                // che quel proxy costruisce e' pubblico, quindi lo si accoda direttamente.
-                dispatch(new ActionJob(app(ConvertVideoByMediaConvertAction::class), [$data, $record]));
+                app(ConvertVideoByMediaConvertAction::class)->onQueue()->execute($data, $record);
             }),
         ];
     }
@@ -78,6 +95,7 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, BulkAction>
      */
+    #[Override]
     public function getTableBulkActions(): array
     {
         return [
@@ -90,8 +108,6 @@ class ListMediaConverts extends XotBaseListRecords
      */
     protected function getHeaderWidgets(): array
     {
-        return [
-            ClockWidget::class,
-        ];
+        return [];
     }
 }
