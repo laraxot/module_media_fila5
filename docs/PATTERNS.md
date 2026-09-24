@@ -357,8 +357,12 @@ public function store(Request $request)
 
 ---
 
+<<<<<<< .merge_file_mPLzAQ
 <<<<<<< HEAD
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
 =======
 **Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](./TROUBLESHOOTING.md) | [Contributing](./CONTRIBUTING.md)
 >>>>>>> laraxot/dev
+=======
+**Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
+>>>>>>> .merge_file_ckrfLo

@@ -69,7 +69,11 @@ describe('FileExtensionRule', function (): void {
     });
 
     it('builds a message even when no extension is allowed', function (): void {
+<<<<<<< .merge_file_jSBKtL
         $rule = new FileExtensionRule();
+=======
+        $rule = new FileExtensionRule;
+>>>>>>> .merge_file_I3bcez
 
         Assert::assertNotSame('', $rule->message());
     });

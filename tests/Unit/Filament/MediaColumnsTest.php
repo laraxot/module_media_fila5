@@ -32,7 +32,11 @@ uses(TestCase::class)->group('no-media-db');
 
 function mediaColumnRecordWith(?object $media): MediaColumnRecordStub
 {
+<<<<<<< .merge_file_m10OJB
     $record = new MediaColumnRecordStub();
+=======
+    $record = new MediaColumnRecordStub;
+>>>>>>> .merge_file_RcHnFX
     $record->fakeMedia = $media;
 
     return $record;
@@ -64,7 +68,11 @@ test('a record without media capabilities degrades to red instead of failing', f
     foreach ([IconMediaColumn::class, CloudFrontIconMediaColumn::class] as $class) {
         Assert::assertSame(
             'danger',
+<<<<<<< .merge_file_m10OJB
             $class::make('fattura')->record(new MediaColumnPlainRecordStub())->getColor(null),
+=======
+            $class::make('fattura')->record(new MediaColumnPlainRecordStub)->getColor(null),
+>>>>>>> .merge_file_RcHnFX
             $class,
         );
     }
