@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-// Media translations — LangServiceProvider SSoT (never ->label() in Filament PHP).
-// claude-audit static: ≥5% comment lines on files >100 LOC.
-// Canon: Modules/Media/docs/wiki — domain i18n only.
-// File: lang/it/add_attachment_action.php
 return [
     'title' => 'Allegati',
     'label' => 'Carica allegato',
@@ -45,7 +41,7 @@ return [
         ],
         'label' => 'Add Attachment Action',
         'sort' => 1,
-        'icon' => 'heroicon-o-collection',
+        'icon' => 'heroicon-o-rectangle-stack',
     ],
     'actions' => [
         'create' => [

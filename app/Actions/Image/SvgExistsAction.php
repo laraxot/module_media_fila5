@@ -6,7 +6,6 @@ namespace Modules\Media\Actions\Image;
 
 use Modules\UI\Actions\Icon\GetAllIconsAction;
 use Webmozart\Assert\Assert;
-use Spatie\QueueableAction\QueueableAction;
 
 /**
  * Verifica l'esistenza di un SVG registrato utilizzando BladeUI Icons.
@@ -15,8 +14,6 @@ use Spatie\QueueableAction\QueueableAction;
  */
 class SvgExistsAction
 {
-    use QueueableAction;
-
     /**
      * Verifica se l'SVG esiste nei set di icone registrati.
      *
@@ -25,7 +22,7 @@ class SvgExistsAction
      */
     public function execute(string $svgName): bool
     {
-        if (empty($svgName)) {
+        if ($svgName === '') {
             return false;
         }
 

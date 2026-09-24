@@ -22,8 +22,8 @@
   ],
   "require": {
     "php": "^8.2",
-    "pbmedia/laravel-ffmpeg": "^8.9",
-    "intervention/image": "^3.0"
+    "pbmedia/laravel-ffmpeg": "^8.5",
+    "intervention/image": "*"
   },
   "require-dev": {},
   "repositories": [

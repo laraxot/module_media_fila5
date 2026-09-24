@@ -12,11 +12,7 @@ class TestCloudFrontConnectionAction
 {
     use QueueableAction;
 
-    private const URL_PREVIEW_LENGTH = 100;
-
-    public function __construct(
-        private readonly GetCloudFrontSignedUrlAction $signedUrlAction,
-    ) {}
+    private const int URL_PREVIEW_LENGTH = 100;
 
     /**
      * @return array<string, mixed>
@@ -29,10 +25,10 @@ class TestCloudFrontConnectionAction
             $privateKey = config('services.cloudfront.private_key');
 
             if (! $baseUrl || ! $keyPairId || ! $privateKey) {
-                return $this->incompleteConfiguration($baseUrl, $keyPairId, $privateKey);
+                return $this->incompleteConfiguration(! $baseUrl, ! $keyPairId, ! $privateKey);
             }
 
-            $testUrl = $this->signedUrlAction->execute($testFile, 5);
+            $testUrl = app(GetCloudFrontSignedUrlAction::class)->execute($testFile, 5);
 
             return [
                 'title' => '☁️ CloudFront',
@@ -59,7 +55,7 @@ class TestCloudFrontConnectionAction
     /**
      * @return array<string, mixed>
      */
-    private function incompleteConfiguration(mixed $baseUrl, mixed $keyPairId, mixed $privateKey): array
+    private function incompleteConfiguration(bool $missingBaseUrl, bool $missingKeyPairId, bool $missingPrivateKey): array
     {
         return [
             'title' => '☁️ CloudFront',
@@ -67,9 +63,9 @@ class TestCloudFrontConnectionAction
             'data' => [
                 'Configuration' => '❌ Incomplete',
                 'Missing' => collect([
-                    'Base URL' => ! $baseUrl,
-                    'Key Pair ID' => ! $keyPairId,
-                    'Private Key' => ! $privateKey,
+                    'Base URL' => $missingBaseUrl,
+                    'Key Pair ID' => $missingKeyPairId,
+                    'Private Key' => $missingPrivateKey,
                 ])
                     ->filter()
                     ->keys()
