@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+## [0.1.0-dev.4](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.3...v0.1.0-dev.4) (2026-09-24)
+
+### Bug Fixes
+
+* **Media:** PHPStan Modules a 0 errori, consolidati i fix dopo il sync ([5cb442a](https://github.com/laraxot/module_media_fila5/commit/5cb442aa97bd22b56587c03a2779e43803b2bc48))
+* **Media:** risolti i marker di conflitto reimmessi dal sync con laraxot/dev ([acb9274](https://github.com/laraxot/module_media_fila5/commit/acb9274faf9100c21932d472f3e1e7d2bf0c4305))
+
+=======
+>>>>>>> laraxot/dev
 ## [0.1.0-dev.2](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2026-09-15)
 
 ### Bug Fixes
@@ -134,6 +144,7 @@
 * **tests:** add missing generic/iterable PHPDoc types to HasMediaTestStub ([d4ba1fd](https://github.com/laraxot/module_media_fila5/commit/d4ba1fd2ef1eb93c46d916e9f49d6ed29b049b15))
 * **tests:** add missing generic/iterable PHPDoc types to HasMediaTestStub ([b61d0b8](https://github.com/laraxot/module_media_fila5/commit/b61d0b8c9df895b8af2e3154bfc8a1bde50f964f))
 
+<<<<<<< HEAD
 ## [0.0.3-dev.12](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.11...v0.0.3-dev.12) (2026-08-24)
 
 ### Bug Fixes
@@ -147,6 +158,8 @@
 
 * resolve nested git conflict markers in Media module ([e0935b2](https://github.com/laraxot/module_media_fila5/commit/e0935b222be41e3a8f6327812c390644368c2cfe))
 
+=======
+>>>>>>> laraxot/dev
 # Changelog
 
 Tutte le variazioni importanti di Media saranno generate automaticamente da semantic-release.

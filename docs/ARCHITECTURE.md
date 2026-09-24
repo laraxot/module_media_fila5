@@ -1,23 +1,4 @@
 ---
-<<<<<<< .merge_file_hwGdsT
-=======
-<<<<<<< .merge_file_O62LyX
-title: "Architecture: Media Module (bridge)"
-type: architecture
-tags: [module, architecture, media, storage, bridge]
-created: 2026-08-04
-updated: 2026-09-17
----
-# Media Module — Architecture (bridge)
-
-Questo file è un bridge. La documentazione architetturale canonica è **[architecture.md](architecture.md)**.
-
-La versione precedente di questo file descriveva classi (`MediaCollections`, `MediaItem`,
-`UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `CollectionResource`) che non
-esistono in `Modules/Media/app/` — verificato durante l'audit documentazione del 2026-09-17.
-Il contenuto reale, verificato contro il codice, vive in `architecture.md`.
-=======
->>>>>>> .merge_file_Ig3mqL
 title: "Architecture: Media Module"
 type: architecture
 tags: [module, architecture, media, storage]
@@ -62,7 +43,3 @@ Media module provides file handling, storage, and processing infrastructure for 
 ## Quality Gates
 - **PHPStan L10**: Pending verification
 - **Storage**: Tested with local/S3 drivers
-<<<<<<< .merge_file_hwGdsT
-=======
->>>>>>> .merge_file_Ckojel
->>>>>>> .merge_file_Ig3mqL

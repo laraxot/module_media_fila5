@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_HD4QBv
-=======
 ---
 title: "Changelog"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "changelog"
 related:
   - "./webm.md"
 ---
->>>>>>> .merge_file_AyG3JU
 # Changelog
 
 Tutte le variazioni importanti di Media saranno generate automaticamente da semantic-release.

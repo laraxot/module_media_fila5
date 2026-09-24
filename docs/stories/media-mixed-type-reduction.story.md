@@ -9,19 +9,7 @@ scope: module:Media
 status: done
 priority: low
 created_at: '2026-09-04'
-<<<<<<< .merge_file_m5p3UX
 updated_at: '2026-09-04'
-=======
-<<<<<<< .merge_file_7qYFbX
-updated_at: '2026-09-04'
-=======
-<<<<<<< .merge_file_Nlo5rU
-updated_at: '2026-09-04'
-=======
-updated_at: '2026-09-21'
->>>>>>> .merge_file_GMAMCF
->>>>>>> .merge_file_cSvewI
->>>>>>> .merge_file_MZuRlK
 tags: [bmad, story, phpstan, mixed, type-safety, media]
 ---
 
@@ -89,27 +77,3 @@ momento di iniziare questo task, in parte sulla stessa campagna mixed/PHPStan.
 Non toccati per evitare sovrascritture; segnalazione lasciata al coordinatore
 (fuori scope diretto modificare `docs/chat/` per istruzione esplicita del
 task).
-<<<<<<< .merge_file_m5p3UX
-=======
-<<<<<<< .merge_file_7qYFbX
-=======
-<<<<<<< .merge_file_Nlo5rU
-=======
-
-## 2026-09-21 — follow-up `declare` su legacy config (vuoto)
-
-**Perché**: il contratto strict vale anche per PHP in `docs/` se il path è
-un file `.php`. Un file vuoto non è "già strict": è assente.
-
-**Fatto**: `docs/wiki/legacy/config.php` era 0 byte; scritto
-`<?php` + `declare(strict_types=1);` (declare **dopo** `<?php`).
-
-**Skip**:
-- `app/Filament/Clusters/Test/Pages/AwsTest.php` aveva già `declare` — non
-  riaperto, PHPStan non lanciato.
-- `app/Http/Livewire/Card/Video/Clip.php` lock + non convertire.
-
-`php -l` su `docs/wiki/legacy/config.php`: 0 errori.
->>>>>>> .merge_file_GMAMCF
->>>>>>> .merge_file_cSvewI
->>>>>>> .merge_file_MZuRlK

@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 use Modules\User\Models\User;
 use Modules\Xot\Contracts\ProfileContract;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
@@ -22,18 +23,18 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
- * @property-read User|null $creator
- * @property-read string $extension
+ * @property-read \Modules\User\Models\User|null $creator
+ * @property-read mixed $extension
  * @property-read array<int, array{name: string, generated: bool, src: string}> $entry_conversions
  * @property-read string $path
- * @property-read string $human_readable_size
+ * @property-read mixed $human_readable_size
  * @property-read EloquentCollection<int, MediaConvert> $mediaConverts
  * @property-read int|null $media_converts_count
  * @property-read Model|Eloquent $model
- * @property-read string $original_url
- * @property-read string $preview_url
+ * @property-read mixed $original_url
+ * @property-read mixed $preview_url
  * @property-read TemporaryUpload|null $temporaryUpload
- * @property-read string $type
+ * @property-read mixed $type
  * @property-read ProfileContract|null $updater
  *
  * @method static MediaCollection<int, static> all($columns = ['*'])
