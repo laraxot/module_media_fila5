@@ -13,24 +13,19 @@ class TestConnectionDetailsAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly CreateFilesystemS3ClientAction $s3ClientFactory,
-        private readonly ResolveAwsS3ErrorSolutionAction $resolveError,
-    ) {}
-
     /**
      * @return array<string, mixed>
      */
     public function execute(): array
     {
         try {
-            $s3 = $this->s3ClientFactory->execute();
-            $bucket = $this->s3ClientFactory->bucket();
+            $s3 = app(CreateFilesystemS3ClientAction::class)->execute();
+            $bucket = app(CreateFilesystemS3ClientAction::class)->bucket();
 
             $s3->headBucket(['Bucket' => $bucket]);
 
             $location = $s3->getBucketLocation(['Bucket' => $bucket]);
-            $bucketRegion = $location['LocationConstraint'] ?: 'us-east-1';
+            $bucketRegion = ($location['LocationConstraint'] ?? '') !== '' ? $location['LocationConstraint'] : 'us-east-1';
             $regionMatch = $bucketRegion === config('filesystems.disks.s3.region');
 
             return [
@@ -51,7 +46,7 @@ class TestConnectionDetailsAction
                     'Bucket Accessible' => '❌ No',
                     'Error Code' => $exception->getAwsErrorCode() ?? 'UnknownError',
                     'Message' => $exception->getMessage(),
-                    'Solution' => $this->resolveError->execute($exception->getAwsErrorCode()),
+                    'Solution' => app(ResolveAwsS3ErrorSolutionAction::class)->execute($exception->getAwsErrorCode()),
                 ],
             ];
         }

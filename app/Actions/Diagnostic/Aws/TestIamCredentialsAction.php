@@ -12,17 +12,13 @@ class TestIamCredentialsAction
 {
     use QueueableAction;
 
-    public function __construct(
-        private readonly CreateFilesystemStsClientAction $stsClientFactory,
-    ) {}
-
     /**
      * @return array<string, mixed>
      */
     public function execute(): array
     {
         try {
-            $result = $this->stsClientFactory->execute()->getCallerIdentity();
+            $result = app(CreateFilesystemStsClientAction::class)->execute()->getCallerIdentity();
 
             return [
                 'status' => 'success',
