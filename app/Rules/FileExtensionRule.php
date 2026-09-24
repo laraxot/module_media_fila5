@@ -29,6 +29,9 @@ class FileExtensionRule implements ValidationRule
         ));
     }
 
+    /**
+     * `mixed $value` imposto da `Illuminate\Contracts\Validation\ValidationRule` (LSP).
+     */
     public function validate(string $_attribute, mixed $value, Closure $fail): void
     {
         if (! $value instanceof UploadedFile) {

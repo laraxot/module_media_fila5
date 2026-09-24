@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_WemcAu
 ---
 title: "Correzioni PHPStan Livello 10 - Modulo Media"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "phpstan level10 fixes 1"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> .merge_file_dVc2fv
 # Correzioni PHPStan Livello 10 - Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).

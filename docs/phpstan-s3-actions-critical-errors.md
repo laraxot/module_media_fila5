@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_mMkFSp
 ---
 title: "PHPStan S3 Actions Critical Errors Analysis"
 module: "Media"
@@ -9,6 +10,8 @@ qmd: "phpstan s3 actions critical errors"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> .merge_file_wCo4Rs
 # PHPStan S3 Actions Critical Errors Analysis
 
 ## Errori Critici Identificati nel Modulo Media
@@ -180,10 +183,13 @@ $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
 - ✅ Refactoring facilitato
 - ✅ Team productivity incrementata
 
+<<<<<<< .merge_file_mMkFSp
 ## Campagna 5.10 (mixed)
 
 `FormatDebugOutputAction::formatResultBlock` è `array` dopo `is_array` nel loop: i blocchi debug hanno forma, non sono opachi. `formatDataLine(mixed $value)` resta mixed (dump diagnostico). `TestCloudFrontConnectionAction::incompleteConfiguration` prende tre `bool` (manca/c’è): `config()` resta mixed al call site, la firma no.
 
+=======
+>>>>>>> .merge_file_wCo4Rs
 ## Lesson Learned
 
 1. **Config/Env Type Safety è Critica**: Sempre validare tipi prima del cast
