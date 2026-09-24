@@ -5,13 +5,6 @@ module: "Media"
 
 # Media - Wiki Activity Log
 
-## [2026-09-21] cleanup | ritiro Card/Video/Clip Livewire (dead code)
-
-- Cancellato `app/Http/Livewire/Card/Video/Clip.php` (zero caller repo-wide: no hook Filament, no `@livewire`, no rotta, no vista dedicata) e svuotato `_components.json` a `[]`.
-- Già in HEAD via commit `29e8e9784` (sessione concorrente); questa sessione ha chiuso la documentazione residua: story `docs/stories/12.1.media-clip-not-widget.story.md` (status -> done, AC 4-6) e `docs/bmad/livewire-inventory.md`.
-- Verifica: PHPStan L10 `[OK]` 0 errori (123 file); Pest+coverage 282 passed / 9 failed preesistenti (non Clip); PHPMD nessun finding su Livewire.
-
-
 ## [2026-05-27] lint | phpstan zero
 
 - `./vendor/bin/phpstan analyse Modules/Media` → 0 errori (135 file).

@@ -33,10 +33,6 @@ class GetAttachmentsSchemaAction
                 ->downloadable(true)
                 ->reorderable(false)
                 ->multiple(false)
-                /**
-                 * `mixed $state` voluto: lo stato FileUpload e' eterogeneo
-                 * (TemporaryUploadedFile|array|string|null) — Arr::wrap lo normalizza.
-                 */
                 ->afterStateUpdated(function (mixed $state, Set $set) use ($attachment): void {
                     if (! $state) {
                         return;

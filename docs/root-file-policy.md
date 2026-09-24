@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_ZdB2tT
-=======
 ---
 title: "Root file policy"
 module: "Media"
@@ -11,7 +9,6 @@ qmd: "root file policy"
 related:
   - "./webm.md"
 ---
->>>>>>> .merge_file_2dBIFt
 # Root file policy
 
 Updated: 2026-07-08
