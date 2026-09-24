@@ -1,14 +1,3 @@
----
-title: "Ffmpeg"
-module: "Media"
-type: concept
-tags: [ffmpeg]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "ffmpeg"
-related:
-  - "./webm.md"
----
 WINDOWS
 
 https://www.gyan.dev/ffmpeg/builds/

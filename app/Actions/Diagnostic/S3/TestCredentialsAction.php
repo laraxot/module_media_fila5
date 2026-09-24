@@ -12,6 +12,7 @@ class TestCredentialsAction
 {
     use QueueableAction;
 
+
     /**
      * @return array<string, mixed>
      */
