@@ -11,11 +11,7 @@ use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
-<<<<<<< HEAD
-uses(TestCase::class)->group('media-db');
-=======
 uses(TestCase::class);
->>>>>>> laraxot/dev
 
 /**
  * @param  array<string, mixed>  $attributes
@@ -345,11 +341,7 @@ describe('Media model (database)', function (): void {
 
         expect($media->id)->toBeGreaterThan(0);
     });
-<<<<<<< HEAD
-});
-=======
 })->group('media-db');
->>>>>>> laraxot/dev
 
 it('media has casts', function (): void {
     $media = new Media();
