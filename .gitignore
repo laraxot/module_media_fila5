@@ -188,3 +188,6 @@ phpmd*.*
 /.vscode/
 .cursor~*
 .windsurf~*
+
+# Artefatti audit vietati (rule: tests-auditcoverage-forbidden)
+audit-coverage/
