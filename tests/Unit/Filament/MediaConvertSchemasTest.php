@@ -4,11 +4,22 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Filament;
 
+<<<<<<< .merge_file_aBslOO
+=======
+<<<<<<< .merge_file_hkUCD6
+>>>>>>> .merge_file_rIt51B
 use Filament\Actions\Action;
 use Filament\Actions\BulkAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
+<<<<<<< .merge_file_aBslOO
+=======
+=======
+use Filament\Actions\BulkAction;
+use Filament\Actions\DeleteBulkAction;
+>>>>>>> .merge_file_zng4Ut
+>>>>>>> .merge_file_rIt51B
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
@@ -28,7 +39,15 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('the form exposes one component per conversion parameter', function (): void {
+<<<<<<< .merge_file_aBslOO
     $schema = (new MediaConvertForm())->getFormSchema();
+=======
+<<<<<<< .merge_file_hkUCD6
+    $schema = (new MediaConvertForm())->getFormSchema();
+=======
+    $schema = (new MediaConvertForm)->getFormSchema();
+>>>>>>> .merge_file_zng4Ut
+>>>>>>> .merge_file_rIt51B
 
     Assert::assertSame(
         ['format', 'codec_video', 'codec_audio', 'preset', 'bitrate', 'width', 'height', 'threads', 'speed'],
@@ -43,7 +62,15 @@ test('the form exposes one component per conversion parameter', function (): voi
 });
 
 test('codec and preset are radio choices, sizes are text inputs', function (): void {
+<<<<<<< .merge_file_aBslOO
     $schema = (new MediaConvertForm())->getFormSchema();
+=======
+<<<<<<< .merge_file_hkUCD6
+    $schema = (new MediaConvertForm())->getFormSchema();
+=======
+    $schema = (new MediaConvertForm)->getFormSchema();
+>>>>>>> .merge_file_zng4Ut
+>>>>>>> .merge_file_rIt51B
 
     foreach (['format', 'codec_video', 'codec_audio', 'preset'] as $key) {
         Assert::assertInstanceOf(Radio::class, $schema[$key]);
@@ -55,7 +82,15 @@ test('codec and preset are radio choices, sizes are text inputs', function (): v
 });
 
 test('the video codec offers both vp9 and vp8', function (): void {
+<<<<<<< .merge_file_aBslOO
     $codec = (new MediaConvertForm())->getFormSchema()['codec_video'];
+=======
+<<<<<<< .merge_file_hkUCD6
+    $codec = (new MediaConvertForm())->getFormSchema()['codec_video'];
+=======
+    $codec = (new MediaConvertForm)->getFormSchema()['codec_video'];
+>>>>>>> .merge_file_zng4Ut
+>>>>>>> .merge_file_rIt51B
     Assert::assertInstanceOf(Radio::class, $codec);
 
     Assert::assertSame(
@@ -65,7 +100,15 @@ test('the video codec offers both vp9 and vp8', function (): void {
 });
 
 test('the table lists the identifier and both timestamps', function (): void {
+<<<<<<< .merge_file_aBslOO
     $columns = (new MediaConvertsTable())->getTableColumns();
+=======
+<<<<<<< .merge_file_hkUCD6
+    $columns = (new MediaConvertsTable())->getTableColumns();
+=======
+    $columns = (new MediaConvertsTable)->getTableColumns();
+>>>>>>> .merge_file_zng4Ut
+>>>>>>> .merge_file_rIt51B
 
     Assert::assertSame(['id', 'created_at', 'updated_at'], array_keys($columns));
 
@@ -75,9 +118,20 @@ test('the table lists the identifier and both timestamps', function (): void {
     }
 });
 
+<<<<<<< .merge_file_aBslOO
 
 test('the table exposes bulk actions keyed by name', function (): void {
     $bulk = (new MediaConvertsTable())->getTableBulkActions();
+=======
+<<<<<<< .merge_file_hkUCD6
+
+test('the table exposes bulk actions keyed by name', function (): void {
+    $bulk = (new MediaConvertsTable())->getTableBulkActions();
+=======
+test('the table exposes bulk actions keyed by name', function (): void {
+    $bulk = (new MediaConvertsTable)->getTableBulkActions();
+>>>>>>> .merge_file_zng4Ut
+>>>>>>> .merge_file_rIt51B
 
     Assert::assertNotSame([], $bulk);
     Assert::assertArrayHasKey('delete', $bulk);

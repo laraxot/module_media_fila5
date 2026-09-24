@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_6qoZsd
 ---
 title: "Bad Practices – Media Module (bridge)"
 module: "Media"
@@ -12,3 +13,16 @@ related:
 
 Questo file era vuoto (solo marker di conflitto git irrisolti, nessun contenuto reale). Il
 contenuto effettivo vive in **[BAD_PRACTICES.md](BAD_PRACTICES.md)**.
+=======
+```
+<<<<<<< .merge_file_tKre9o
+<<<<<<< HEAD
+
+```
+=======
+>>>>>>> laraxot/dev
+=======
+
+```
+>>>>>>> .merge_file_6FSTnh
+>>>>>>> .merge_file_bf86wH
