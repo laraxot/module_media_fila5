@@ -30,11 +30,11 @@ related:
 - 📄 **[Responsive Images](./webm.md)** - Gestione formati moderni (WebP, AVIF).
 
 ## 🎨 **Filament & UI**
-- 🖼️ **[Media Library](./filament/relation-managers/media-relation-manager.md)** - La libreria media in Filament.
+- 🖼️ **[Media Library](./filament.md)** - La libreria media in Filament.
 - 🛠️ **[Table Actions](./filament-table-actions.md)** - Azioni di massa su file e directory.
 
 ## 🧪 **Qualità e Sviluppo**
-- ✅ **[PHPStan Level 10](./phpstan-level10-fixes-1.md)** - Report di conformità totale.
+- ✅ **[PHPStan Level 10](./phpstan-level10-fixes.md)** - Report di conformità totale.
 - 🔬 **[Testing Guidelines](./testing.md)** - Strategie per testare upload e stream.
 - 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
 

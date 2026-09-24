@@ -1,3 +1,5 @@
+```
+
 ### Error 2: Inline SVG Misuse
 ```blade
 {{-- ❌ FALSE FRIEND - Invalid placement --}}

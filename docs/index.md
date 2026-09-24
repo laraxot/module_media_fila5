@@ -252,7 +252,3 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
 - [wiki/index.md](./wiki/index.md)
-
-> Nota: molti dei link nelle sezioni "Categorie Principali" sopra puntano a file mai creati
-> (es. `file-upload.md`, `video-conversion.md`, `api.md`, `queueable-action.md`). Vedi il
-> finding "Indici doc duplicati/aspirazionali" nel report di audit per il consolidamento.

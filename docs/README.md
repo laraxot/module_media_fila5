@@ -22,8 +22,4 @@ Documentazione canonica per il modulo Media: gestione multimediale (immagini, vi
 - Utilizzato da: temi e moduli applicativi
 - Standard di documentazione: vedi `/docs/` root
 
-## Guidelines
-
-La documentazione del modulo deve essere chiara, concisa, guidata da esempi e aggiornata insieme al codice.
-
 Per dettagli architetturali, vedi **architecture.md**.

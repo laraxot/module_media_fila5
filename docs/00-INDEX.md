@@ -16,18 +16,19 @@
 ### Development
 | File | Scopo |
 |------|-------|
+| GSD_WORKFLOW.md | GSD Workflow |
 | SPRINT_PLANNING.md | Sprint Planning |
 | USER_RESEARCH.md | User Research |
 
 ## 🔗 Riferimenti
 
-- [Xot Module](../Xot/docs/index.md) - Base classes
+- [Xot Module](../Xot/docs/00-index.md) - Base classes
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
-
-## Dependency Intelligence
-
-- [Dependency intelligence](dependency-intelligence.md)
 
 ---
 
 **Ultimo Aggiornamento**: 2026-03-24
+
+## Dependency Intelligence
+
+- [Dependency intelligence](dependency-intelligence.md)
