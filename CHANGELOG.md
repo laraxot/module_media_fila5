@@ -1,3 +1,14 @@
+## [0.1.0-dev.3](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.2...v0.1.0-dev.3) (2026-09-24)
+
+### Bug Fixes
+
+* **git:** rimuovi marker di conflitto committati in .gitattributes e workflow GitHub duplicati/obsoleti ([bf8f7d5](https://github.com/laraxot/module_media_fila5/commit/bf8f7d522f6fae3b5f1da89742c0badcfa1bb003))
+* **lang:** empty helper_text when equal to field key ([d5ba2c0](https://github.com/laraxot/module_media_fila5/commit/d5ba2c02ab18da535b0e519e1e139a3178b7a2ad))
+* **Media:** pulizia marker di conflitto residui in docs/ + verifica indice ([6114000](https://github.com/laraxot/module_media_fila5/commit/61140006a7697a142cfa7f92834553ca544dfda3))
+* **Media:** rimuove test11.txt vuoto dalla root (regola zero .txt in root) ([1381294](https://github.com/laraxot/module_media_fila5/commit/1381294ede32b8e52e22fe7acc80b9d091d92a5b))
+* **Media:** risolvi marker di conflitto in README.md e CHANGELOG.md + ignora graphify-out/ ([a3cf02a](https://github.com/laraxot/module_media_fila5/commit/a3cf02a17b88c921614611deb0cf3306ef5e06a7))
+* **Media:** un solo _module_media.code-workspace in root (dedup) ([01afd21](https://github.com/laraxot/module_media_fila5/commit/01afd21439597ac7b233d20b3377e3da99440e03))
+
 ## [0.1.0-dev.2](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2026-09-15)
 
 ### Bug Fixes
