@@ -114,30 +114,8 @@ context-mode ctx-stats
 ## Riferimenti
 
 - [Global Performance Guide](../../docs/wiki/concepts/performance-optimization.md)
-<<<<<<< .merge_file_1gjiWX
-=======
-<<<<<<< .merge_file_NqxzBj
-=======
-<<<<<<< .merge_file_GnkZAU
->>>>>>> .merge_file_uq1lp9
->>>>>>> .merge_file_HJF1bx
-<<<<<<< HEAD
 - [On-Demand Pattern](./on-demand-pattern.md)
 - [QMD Setup](./qmd-setup.md)
-=======
-- [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
-- [QMD Setup](./QMD-SETUP.md)
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_1gjiWX
-=======
-<<<<<<< .merge_file_NqxzBj
-=======
-=======
-- [On-Demand Pattern](./on-demand-pattern.md)
-- [QMD Setup](./qmd-setup.md)
->>>>>>> .merge_file_lttFk8
->>>>>>> .merge_file_uq1lp9
->>>>>>> .merge_file_HJF1bx
 
 ---
 *Status: Ottimizzato | Token risparmiati: ~48K per session*
