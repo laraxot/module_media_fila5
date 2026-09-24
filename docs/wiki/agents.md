@@ -6,7 +6,6 @@ tags: [AGENTS]
 created: 2026-07-14
 updated: 2026-07-14
 qmd: "agents"
-<<<<<<< HEAD
 related:
   - "./webm.md"
 ---
@@ -164,8 +163,6 @@ updated: 2026-07-01
 qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []
-=======
->>>>>>> laraxot/dev
 related:
   - "./webm.md"
 ---
