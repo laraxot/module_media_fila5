@@ -24,19 +24,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('the webm generator declares itself installable and handles mp4 sources', function (): void {
-<<<<<<< .merge_file_l0iojt
     $generator = new Webm();
-=======
-<<<<<<< .merge_file_sHeb3v
-    $generator = new Webm();
-=======
-<<<<<<< .merge_file_7to9BE
-    $generator = new Webm();
-=======
-    $generator = new Webm;
->>>>>>> .merge_file_2CAPc6
->>>>>>> .merge_file_vJAksN
->>>>>>> .merge_file_Bt4zeX
 
     Assert::assertTrue($generator->requirementsAreInstalled());
 
@@ -48,19 +36,7 @@ test('the webm generator declares itself installable and handles mp4 sources', f
 });
 
 test('the powerpoint generator advertises extensions and mime types consistently', function (): void {
-<<<<<<< .merge_file_l0iojt
     $generator = new PowerPoint();
-=======
-<<<<<<< .merge_file_sHeb3v
-    $generator = new PowerPoint();
-=======
-<<<<<<< .merge_file_7to9BE
-    $generator = new PowerPoint();
-=======
-    $generator = new PowerPoint;
->>>>>>> .merge_file_2CAPc6
->>>>>>> .merge_file_vJAksN
->>>>>>> .merge_file_Bt4zeX
 
     $extensions = $generator->supportedExtensions();
     $mimeTypes = $generator->supportedMimeTypes();

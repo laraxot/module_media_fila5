@@ -154,19 +154,7 @@ describe('Media gap attack — S3 Aws pages actions', function (): void {
             Assert::assertInstanceOf(ConvertWidget::class, $widget);
         }
 
-<<<<<<< .merge_file_pqUI7T
         $media = new Media();
-=======
-<<<<<<< .merge_file_1VgKQ0
-        $media = new Media();
-=======
-<<<<<<< .merge_file_jJbDVb
-        $media = new Media();
-=======
-        $media = new Media;
->>>>>>> .merge_file_uiVD2s
->>>>>>> .merge_file_KaTfHZ
->>>>>>> .merge_file_mDI1b5
         $media->forceFill([
             'id' => 1,
             'file_name' => 'a.mp4',
