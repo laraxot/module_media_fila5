@@ -1,3 +1,10 @@
+## [0.1.0-dev.4](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.3...v0.1.0-dev.4) (2026-09-24)
+
+### Bug Fixes
+
+* **Media:** PHPStan Modules a 0 errori, consolidati i fix dopo il sync ([5cb442a](https://github.com/laraxot/module_media_fila5/commit/5cb442aa97bd22b56587c03a2779e43803b2bc48))
+* **Media:** risolti i marker di conflitto reimmessi dal sync con laraxot/dev ([acb9274](https://github.com/laraxot/module_media_fila5/commit/acb9274faf9100c21932d472f3e1e7d2bf0c4305))
+
 ## [0.1.0-dev.2](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2026-09-15)
 
 ### Bug Fixes
