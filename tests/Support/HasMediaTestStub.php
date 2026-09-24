@@ -57,7 +57,15 @@ abstract class HasMediaTestStub implements HasMedia
      */
     public function getMedia(string $collectionName = 'default', callable|array $filters = []): Collection
     {
+<<<<<<< .merge_file_Y39ikO
         return new Collection();
+=======
+<<<<<<< .merge_file_3PKW80
+        return new Collection();
+=======
+        return new Collection;
+>>>>>>> .merge_file_E2LjIF
+>>>>>>> .merge_file_sqw8RA
     }
 
     public function clearMediaCollection(string $collectionName = 'default'): HasMedia
@@ -78,9 +86,27 @@ abstract class HasMediaTestStub implements HasMedia
         return false;
     }
 
+<<<<<<< .merge_file_Y39ikO
     public function loadMedia(string $collectionName): mixed
     {
         return null;
+=======
+<<<<<<< .merge_file_3PKW80
+    public function loadMedia(string $collectionName): mixed
+    {
+        return null;
+=======
+    /**
+     * Il contratto Spatie (`InteractsWithMedia`) restituisce `Collection`;
+     * il tipo nativo si restringe rispetto al docblock dell'interfaccia (non tipizzato).
+     *
+     * @return Collection<int, Media>
+     */
+    public function loadMedia(string $collectionName): Collection
+    {
+        return new Collection;
+>>>>>>> .merge_file_E2LjIF
+>>>>>>> .merge_file_sqw8RA
     }
 
     public function addMediaConversion(string $name): Conversion
