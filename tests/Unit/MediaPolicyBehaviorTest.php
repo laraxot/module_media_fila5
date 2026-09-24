@@ -44,19 +44,7 @@ afterEach(function (): void {
 });
 
 test('MediaBasePolicy before concede super-admin e passa oltre altrimenti', function (): void {
-<<<<<<< .merge_file_ZzW7MO
     $policy = new MediaPolicy();
-=======
-<<<<<<< .merge_file_pYT4R9
-    $policy = new MediaPolicy();
-=======
-<<<<<<< .merge_file_7pp67W
-    $policy = new MediaPolicy();
-=======
-    $policy = new MediaPolicy;
->>>>>>> .merge_file_oUuP35
->>>>>>> .merge_file_dxl5Fo
->>>>>>> .merge_file_E1kTP9
     $super = mediaBehaviorUser(roles: ['super-admin']);
     Assert::assertTrue($policy->before($super, 'viewAny'));
 
@@ -66,23 +54,8 @@ test('MediaBasePolicy before concede super-admin e passa oltre altrimenti', func
 });
 
 test('MediaPolicy deny/allow su permessi CRUD media', function (): void {
-<<<<<<< .merge_file_ZzW7MO
     $policy = new MediaPolicy();
     $media = new Media();
-=======
-<<<<<<< .merge_file_pYT4R9
-    $policy = new MediaPolicy();
-    $media = new Media();
-=======
-<<<<<<< .merge_file_7pp67W
-    $policy = new MediaPolicy();
-    $media = new Media();
-=======
-    $policy = new MediaPolicy;
-    $media = new Media;
->>>>>>> .merge_file_oUuP35
->>>>>>> .merge_file_dxl5Fo
->>>>>>> .merge_file_E1kTP9
     $denied = mediaBehaviorUser();
     $allowed = mediaBehaviorUser([
         'media.viewAny', 'media.view', 'media.create', 'media.update',
@@ -107,23 +80,8 @@ test('MediaPolicy deny/allow su permessi CRUD media', function (): void {
 });
 
 test('TemporaryUploadPolicy legato a permessi temporary_upload.*', function (): void {
-<<<<<<< .merge_file_ZzW7MO
     $policy = new TemporaryUploadPolicy();
     $upload = new TemporaryUpload();
-=======
-<<<<<<< .merge_file_pYT4R9
-    $policy = new TemporaryUploadPolicy();
-    $upload = new TemporaryUpload();
-=======
-<<<<<<< .merge_file_7pp67W
-    $policy = new TemporaryUploadPolicy();
-    $upload = new TemporaryUpload();
-=======
-    $policy = new TemporaryUploadPolicy;
-    $upload = new TemporaryUpload;
->>>>>>> .merge_file_oUuP35
->>>>>>> .merge_file_dxl5Fo
->>>>>>> .merge_file_E1kTP9
     $allowed = mediaBehaviorUser(['temporary_upload.viewAny', 'temporary_upload.view', 'temporary_upload.create']);
 
     Assert::assertFalse($policy->viewAny(mediaBehaviorUser()));
@@ -133,23 +91,8 @@ test('TemporaryUploadPolicy legato a permessi temporary_upload.*', function (): 
 });
 
 test('MediaConvertPolicy legato a permessi media_convert.*', function (): void {
-<<<<<<< .merge_file_ZzW7MO
     $policy = new MediaConvertPolicy();
     $convert = new MediaConvert();
-=======
-<<<<<<< .merge_file_pYT4R9
-    $policy = new MediaConvertPolicy();
-    $convert = new MediaConvert();
-=======
-<<<<<<< .merge_file_7pp67W
-    $policy = new MediaConvertPolicy();
-    $convert = new MediaConvert();
-=======
-    $policy = new MediaConvertPolicy;
-    $convert = new MediaConvert;
->>>>>>> .merge_file_oUuP35
->>>>>>> .merge_file_dxl5Fo
->>>>>>> .merge_file_E1kTP9
     $allowed = mediaBehaviorUser(['media_convert.viewAny', 'media_convert.update']);
 
     Assert::assertFalse($policy->viewAny(mediaBehaviorUser()));
