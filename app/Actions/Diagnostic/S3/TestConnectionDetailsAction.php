@@ -13,6 +13,7 @@ class TestConnectionDetailsAction
 {
     use QueueableAction;
 
+
     /**
      * @return array<string, mixed>
      */
@@ -25,7 +26,7 @@ class TestConnectionDetailsAction
             $s3->headBucket(['Bucket' => $bucket]);
 
             $location = $s3->getBucketLocation(['Bucket' => $bucket]);
-            $bucketRegion = ($location['LocationConstraint'] ?? '') !== '' ? $location['LocationConstraint'] : 'us-east-1';
+            $bucketRegion = $location['LocationConstraint'] ?: 'us-east-1';
             $regionMatch = $bucketRegion === config('filesystems.disks.s3.region');
 
             return [
