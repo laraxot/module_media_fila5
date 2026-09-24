@@ -1,6 +1,10 @@
 includes:
     - phpstan-baseline.neon
+<<<<<<< .merge_file_NuwcAo
     - ./vendor/larastan/larastan/extension.neon
+=======
+    - ../../vendor/larastan/larastan/extension.neon
+>>>>>>> .merge_file_847vTU
     - ./vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
     #- ./vendor/symplify/phpstan-rules/config/code-complexity-rules.neon
     #- ./vendor/symplify/phpstan-rules/config/collector-rules.neon
@@ -32,7 +36,11 @@ parameters:
         - ./phpstan_constants.php
 
     scanFiles:
+<<<<<<< .merge_file_NuwcAo
     #    - ./Helpers/Helper.php
+=======
+    #    - ./helpers/Helper.php
+>>>>>>> .merge_file_847vTU
     #   - ./vendor/amenadiel/jpgraph/src/config.inc.php
 
     editorUrl: 'vscode://file/%%file%%:%%line%%'

@@ -30,7 +30,19 @@ describe('MediaExporterResolver', function (): void {
 
     it('names the received type in the error message for an object', function (): void {
         try {
+<<<<<<< .merge_file_bVJ9wR
+            MediaExporterResolver::from(new \stdClass());
+=======
+<<<<<<< .merge_file_spTm39
+            MediaExporterResolver::from(new \stdClass());
+=======
+<<<<<<< .merge_file_VTPQNB
+            MediaExporterResolver::from(new \stdClass());
+=======
             MediaExporterResolver::from(new \stdClass);
+>>>>>>> .merge_file_vsWkSW
+>>>>>>> .merge_file_gSFK4J
+>>>>>>> .merge_file_qAKn9C
             Assert::fail('Expected RuntimeException was not thrown.');
         } catch (RuntimeException $exception) {
             Assert::assertStringContainsString('stdClass', $exception->getMessage());
