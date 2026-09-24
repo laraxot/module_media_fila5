@@ -1,0 +1,148 @@
+---
+id: module-media-readme
+title: "Media — File, Immagini, Video e Documenti"
+type: module-readme
+category: module-documentation
+module: Media
+status: active
+tags: [media, files, images, video, storage]
+created: 2026-09-14
+updated: 2026-09-14
+qmd: "media files images video ffmpeg storage cdn module documentation"
+issues:
+  - "https://github.com/laraxot/module_media_fila5/issues/57"
+discussions:
+  - "https://github.com/laraxot/module_media_fila5/discussions/58"
+related:
+  - "./docs/"
+sources: []
+---
+
+# 🖼️ Media
+
+> **File, immagini, video e documenti.**
+
+Upload, storage, trasformazioni e distribuzione media locale o cloud.
+
+## Cosa offre
+
+- **Upload** – carico sicuro di file
+- **Immagini** – gestione dimensioni e formati
+- **Video/FFmpeg** – transcodifica e processing
+- **S3/CDN** – distribuzione e caching
+
+<<<<<<< .merge_file_Upopj3
+Complete media management for the Laraxot ecosystem: image optimization, video encoding, FFmpeg integration, and cloud storage (S3/CloudFront).
+
+### Why This Module
+
+- **Unified file handling** — Consistent API for uploads, validation, and storage across all modules
+- **FFmpeg integration** — Professional-grade video encoding with automatic quality presets
+- **Image optimization** — Intervention Image transforms with smart caching strategy
+- **Cloud-native** — Built-in S3/CloudFront support with fallback to local storage
+- **Filament admin UI** — Media library, bulk operations, batch processing
+- **Battle-tested conventions** — Laraxot best practices embedded from day one
+
+## Key Features
+
+### File Upload & Storage
+- Temporary upload handling with session tracking
+- Automatic validation (MIME type, size, extensions)
+- Multiple disk support (local, S3, Minio, CloudFront)
+- Atomic attachment operations
+
+### Image Processing
+- Intervention Image transforms (resize, crop, optimize)
+- Automatic format conversion (WebP, AVIF fallback)
+- Smart thumbnail generation
+- EXIF data preservation & sanitization
+
+### Video Encoding
+- FFmpeg conversion pipeline (MP4, WebM, HLS)
+- Subtitle generation & embedding
+- Frame extraction for thumbnails
+- Adaptive bitrate streaming preparation
+
+### Cloud Integration
+- AWS S3 native support
+- CloudFront URL signing for private content
+- Minio compatibility for self-hosted deployments
+- Automatic CDN invalidation
+
+=======
+>>>>>>> .merge_file_Wq7uEA
+## Confini architetturali
+
+This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
+
+<<<<<<< .merge_file_Upopj3
+## Dependencies
+
+**Composer packages:**
+- `pbmedia/laravel-ffmpeg:^8.5` — Video processing
+- `intervention/image` — Image transformation
+
+**System packages (required):**
+- `ffmpeg` — Video encoding engine
+- `imagemagick` or `gd` — Image processing library
+
+=======
+>>>>>>> .merge_file_Wq7uEA
+## Integrazione rapida
+
+```bash
+cd laravel
+php artisan module:list
+./vendor/bin/phpstan analyse Modules/Media
+```
+
+See local docs for integration patterns.
+
+## Documentazione
+
+The technical map is in [docs/README.md](./docs/README.md).
+
+<<<<<<< .merge_file_Upopj3
+**Start here:**
+1. [Documentation Index](./docs/INDEX.md) — Navigation & file guide
+2. [Architecture](./docs/ARCHITECTURE.md) — System design & patterns
+3. [Patterns & Best Practices](./docs/PATTERNS.md) — Common patterns & anti-patterns
+4. [Troubleshooting](./docs/TROUBLESHOOTING.md) — Error resolution
+
+**Deep dives:**
+- [FFmpeg Integration](./docs/ffmpeg-usage.md) — Video encoding guide
+
+**Operations:**
+- [Performance Optimization](./docs/PERFORMANCE-OPTIMIZATION.md) — Tuning guide
+- [Migration Guide](./docs/MIGRATIONS.md) — Database upgrades
+- [Testing Guidelines](./docs/testing-guidelines.md) — Test strategies
+
+**Progetto:**
+=======
+>>>>>>> .merge_file_Wq7uEA
+- [Story BMAD del modulo](./docs/stories/)
+- [Regole del progetto](../../../docs/wiki/)
+- [README del progetto](../../README.md)
+
+<<<<<<< .merge_file_Upopj3
+## Release & Automation
+
+- **Semantic Release configuration:** [.releaserc.json](./.releaserc.json)
+- **Changelog:** [CHANGELOG.md](./CHANGELOG.md)
+
+=======
+>>>>>>> .merge_file_Wq7uEA
+## Qualità e manutenzione
+
+Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, and update docs when contracts evolve.
+
+<<<<<<< .merge_file_Upopj3
+**Scopo prima del codice** — Every class serves a specific use case.  
+**DRY prima dell'orgoglio** — Reuse patterns established in Laraxot.  
+**KISS prima dell'astrazione** — Simple, verifiable code over clever frameworks.
+
+=======
+>>>>>>> .merge_file_Wq7uEA
+---
+
+**Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**
