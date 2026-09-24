@@ -17,19 +17,31 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('a non xml extension yields no rows', function (): void {
+<<<<<<< .merge_file_wyzR96
     $rows = (new ParseSubtitleXmlAction())->execute(__DIR__.'/sottotitoli.srt');
+=======
+    $rows = (new ParseSubtitleXmlAction)->execute(__DIR__.'/sottotitoli.srt');
+>>>>>>> .merge_file_ZzVDpV
 
     Assert::assertSame([], $rows);
 });
 
 test('a path without extension yields no rows', function (): void {
+<<<<<<< .merge_file_wyzR96
     $rows = (new ParseSubtitleXmlAction())->execute('/tmp/senza-estensione');
+=======
+    $rows = (new ParseSubtitleXmlAction)->execute('/tmp/senza-estensione');
+>>>>>>> .merge_file_ZzVDpV
 
     Assert::assertSame([], $rows);
 });
 
 test('every item becomes a row with normalised timings', function (): void {
+<<<<<<< .merge_file_wyzR96
     $rows = (new ParseSubtitleXmlAction())->execute(
+=======
+    $rows = (new ParseSubtitleXmlAction)->execute(
+>>>>>>> .merge_file_ZzVDpV
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
     );
 
@@ -52,7 +64,11 @@ test('every item becomes a row with normalised timings', function (): void {
 });
 
 test('timecodes carry hours, minutes and milliseconds', function (): void {
+<<<<<<< .merge_file_wyzR96
     $rows = (new ParseSubtitleXmlAction())->execute(
+=======
+    $rows = (new ParseSubtitleXmlAction)->execute(
+>>>>>>> .merge_file_ZzVDpV
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
     );
 

@@ -1,42 +1,62 @@
-# Media: il modulo che trasforma complessita in vantaggio operativo
+---
+id: module-media-readme
+title: "Media — File, Immagini, Video e Documenti"
+type: module-readme
+category: module-documentation
+module: Media
+status: active
+tags: [media, files, images, video, storage]
+created: 2026-09-14
+updated: 2026-09-14
+qmd: "media files images video ffmpeg storage cdn module documentation"
+issues:
+  - "https://github.com/laraxot/module_media_fila5/issues/57"
+discussions:
+  - "https://github.com/laraxot/module_media_fila5/discussions/58"
+related:
+  - "./docs/"
+sources: []
+---
 
-Media management module for the Laraxot ecosystem: images, videos, FFmpeg, and Intervention Image.
+# 🖼️ Media
 
-## Perche guardarlo adesso
+> **File, immagini, video e documenti.**
 
-- Riduce attrito operativo con convenzioni Laraxot gia pronte.
-- Porta documentazione, release e changelog nello stesso flusso verificabile.
-- Aiuta team e agenti AI a capire subito scopo, confini e prossime mosse.
-- E pensato per crescere: semantic versioning, auto release e changelog automatico sono gia configurati.
+Upload, storage, trasformazioni e distribuzione media locale o cloud.
 
-## Cosa promette
+## Cosa offre
 
-Questo modulo non e solo codice: e una vetrina operativa. Mostra dove intervenire, cosa leggere, come rilasciare e come mantenere alta la confidenza tecnica.
+- **Upload** – carico sicuro di file
+- **Immagini** – gestione dimensioni e formati
+- **Video/FFmpeg** – transcodifica e processing
+- **S3/CDN** – distribuzione e caching
 
-## Release automation
+## Confini architetturali
 
-- Workflow: [Semantic Release](./.github/workflows/semantic-release.yml)
-- Config: [.releaserc.json](./.releaserc.json)
-- Changelog: [CHANGELOG.md](./CHANGELOG.md)
+This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
 
+## Integrazione rapida
 
-## Documentazione tecnica
+```bash
+cd laravel
+php artisan module:list
+./vendor/bin/phpstan analyse Modules/Media
+```
 
-- [Indice docs](./docs/README.md) — mappa knowledge base locale (wiki, audit, regole)
+See local docs for integration patterns.
 
-## Documentazione essenziale
+## Documentazione
 
-- [Second brain locale](./docs/wiki/index.md)
-- [Audit ridondanza](./docs/code-redundancy-audit.md)
-- [Protocollo confidenza](./docs/agent-confidence-protocol.md)
-- [Disciplina agenti](./docs/agent-edit-discipline.md)
-- [  Stream](./docs/--stream.md)
-- [ Competitors](./docs/-competitors.md)
-- [00 Index](./docs/00-INDEX.md)
-- [00 Index](./docs/00-index.md)
-- [Bad Practices](./docs/BAD_PRACTICES.md)
-- [Changelog](./docs/CHANGELOG.md)
+The technical map is in [docs/README.md](./docs/README.md).
 
-## Filosofia
+- [Story BMAD del modulo](./docs/stories/)
+- [Regole del progetto](../../../docs/wiki/)
+- [README del progetto](../../README.md)
 
-Scopo prima del codice. DRY prima dell'orgoglio. KISS prima dell'astrazione. La release automatica non sostituisce il giudizio: lo rende tracciabile.
+## Qualità e manutenzione
+
+Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, and update docs when contracts evolve.
+
+---
+
+**Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**

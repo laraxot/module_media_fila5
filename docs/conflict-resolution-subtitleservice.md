@@ -1,3 +1,14 @@
+---
+title: "Risoluzione Conflitti Git - SubtitleService.php"
+module: "Media"
+type: concept
+tags: [conflict, resolution, subtitleservice]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict resolution subtitleservice"
+related:
+  - "./webm.md"
+---
 # Risoluzione Conflitti Git - SubtitleService.php
 
 ## Intento
