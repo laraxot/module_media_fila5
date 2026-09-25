@@ -14,8 +14,7 @@ describe('AttachMediaAction', function () {
         // Arrange
         $action = new AttachMediaAction;
 
-        // Assert - Verify the trait is used
-        expect(trait_exists(QueueableAction::class))->toBeTrue();
+        expect(class_uses_recursive($action))->toContain(QueueableAction::class);
     });
 
     it('is instance of AttachMediaAction', function (): void {
@@ -23,14 +22,7 @@ describe('AttachMediaAction', function () {
         $action = new AttachMediaAction;
 
         // Assert
-        expect($action)->toBeInstanceOf(AttachMediaAction::class);
+        expect(method_exists($action, 'execute'))->toBeTrue();
     });
 
-    it('can be instantiated', function (): void {
-        // Act
-        $action = new AttachMediaAction;
-
-        // Assert
-        expect($action)->not()->toBeNull();
-    });
 });

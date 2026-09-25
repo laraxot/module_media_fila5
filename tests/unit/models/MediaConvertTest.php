@@ -11,7 +11,7 @@ uses(\Modules\Media\Tests\TestCase::class);
 
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {
-        expect(new MediaConvert)->toBeInstanceOf(BaseModel::class);
+        expect(get_parent_class(MediaConvert::class))->toBe(BaseModel::class);
     });
 
     it('has correct fillable fields', function (): void {
