@@ -1,3 +1,14 @@
+## [0.1.0-dev.5](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.4...v0.1.0-dev.5) (2026-09-25)
+
+### Bug Fixes
+
+* **Media:** pagine View implementano getInfolistSchema() delegando a MediaInfolist ([4acc0cf](https://github.com/laraxot/module_media_fila5/commit/4acc0cf36dd9833b1ff2b4eb66bb91b37877b961))
+* **Media:** pagine View implementano getInfolistSchema() delegando a MediaInfolist ([54f7b52](https://github.com/laraxot/module_media_fila5/commit/54f7b524536a05c920ff9422b453ca430432d556))
+* **Media:** PHPStan Modules a 0 errori dopo il sync delle 16:10 (regressioni ripristinate) ([f362766](https://github.com/laraxot/module_media_fila5/commit/f36276661e3d32769ad7b22997ba0f686f6f9004))
+* **Media:** PHPStan Modules a 0 errori dopo il sync delle 16:10 (regressioni ripristinate) ([f782d0b](https://github.com/laraxot/module_media_fila5/commit/f782d0b432ce286fb6536a67ca1fae5f2a797093))
+* **Media:** PHPStan Modules a 0 errori, consolidati i fix dopo il sync ([ba755b3](https://github.com/laraxot/module_media_fila5/commit/ba755b36b7020c58bdae9411ba3f9ab269b3daab))
+* **Media:** risolti i marker di conflitto reimmessi dal sync con laraxot/dev ([ae5607c](https://github.com/laraxot/module_media_fila5/commit/ae5607cfce2987af64bafb15c45721fab93a51be))
+
 ## [0.1.0-dev.2](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2026-09-15)
 
 ### Bug Fixes
