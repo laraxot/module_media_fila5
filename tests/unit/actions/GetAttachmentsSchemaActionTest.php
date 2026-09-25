@@ -22,7 +22,7 @@ it('returns attachment schema', function (): void {
 
     // Assert
     expect($form)->toHaveCount(3);
-    expect(array_map(static fn (FileUpload $component): ?string => $component->getName(), $form))
+    expect(array_map(static fn (FileUpload $component): string => $component->getName(), $form))
         ->toBe($attachments);
 });
 
