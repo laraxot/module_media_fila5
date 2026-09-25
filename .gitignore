@@ -114,7 +114,6 @@ Thumbs.db
 # DEVELOPMENT TOOLS
 # ==============================================
 .windsurf/
-.cursor/
 .phpstorm.meta.php
 
 # ==============================================
@@ -173,7 +172,24 @@ _docs/
 _docs/
 agentdb.rvf
 tests/AuditCoverage/
-audit-coverage/
 .claude-audit/
 .vscode/
 .devcontainer/
+.rector.php
+.phpinsights.php
+
+# Laraxot — root quality tool configs
+
+# Root agent tooling and PHP quality configuration
+/.agents/
+/.codex/
+/.cursor/
+/.opencode/
+/.qwen/
+/rector.php
+/phpinsights.php
+/.php-cs-fixer.php
+/.php-cs-fixer.dist.php
+
+# Generated Claude audit coverage scaffold (never commit)
+/audit-coverage/
