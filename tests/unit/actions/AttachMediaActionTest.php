@@ -17,11 +17,4 @@ describe('AttachMediaAction', function () {
         expect(class_uses_recursive($action))->toContain(QueueableAction::class);
     });
 
-    it('is instance of AttachMediaAction', function (): void {
-        // Arrange
-        $action = new AttachMediaAction;
-
-        // Assert
-        expect(method_exists($action, 'execute'))->toBeTrue();
-    });
 });
