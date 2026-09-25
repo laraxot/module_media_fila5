@@ -26,30 +26,11 @@ class ListMedia extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
-    #[Override]
-    public function getTableColumns(): array
-    {
-        return [
-            'id' => TextColumn::make('id')->sortable()->searchable(),
-            'model_type' => TextColumn::make('model_type')->searchable(),
-            'model_id' => TextColumn::make('model_id')->searchable(),
-            'collection_name' => TextColumn::make('collection_name')->searchable(),
-            'name' => TextColumn::make('name')->searchable(),
-            'file_name' => TextColumn::make('file_name')->searchable(),
-            'mime_type' => TextColumn::make('mime_type')->searchable(),
-            'disk' => TextColumn::make('disk')->searchable(),
-            'size' => TextColumn::make('size')->formatStateUsing(fn (string $state): string => number_format(
-                ((int) $state) / 1024,
-                2,
-            ).' KB'),
-            'created_at' => TextColumn::make('created_at')->dateTime(),
-        ];
-    }
+    
 
     /**
      * @return array<string, BaseFilter>
      */
-    #[Override]
     public function getTableFilters(): array
     {
         return [
@@ -67,7 +48,6 @@ class ListMedia extends XotBaseListRecords
     /**
      * @return array<string, Action|ActionGroup>
      */
-    #[Override]
     public function getTableActions(): array
     {
         return [
@@ -88,14 +68,15 @@ class ListMedia extends XotBaseListRecords
                     }
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
-                    Assert::string($fileName = $record->file_name, 'Media file name must be a string');
+                    $fileName = $record->file_name;
+                    Assert::string($fileName);
 
                     return response()->download($filePath, $fileName);
                 }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
-                ->url(function (Media $record): string {
+                ->url(static function (mixed $record): string {
                     Assert::string($res = static::$resource::getUrl('convert', ['record' => $record]));
 
                     return $res;

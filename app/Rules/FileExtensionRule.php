@@ -16,36 +16,30 @@ class FileExtensionRule implements ValidationRule
     protected array $validExtensions = [];
 
     /**
-     * @param  array<int, string>  $validExtensions
+     * @param  list<string>  $validExtensions
      */
     public function __construct(array $validExtensions = [])
     {
         $this->validExtensions = array_values(array_map(
-            static fn (string $extension): string => mb_strtolower($extension),
-            $validExtensions,
+            /**
+             * @return lowercase-string
+             */
+            static fn (string $ext): string => mb_strtolower($ext),
+            $validExtensions
         ));
     }
 
-    public function validate(string $attribute, mixed $value, Closure $fail): void
+    public function validate(string $_attribute, mixed $value, Closure $fail): void
     {
-        if ($this->passes($attribute, $value)) {
+        if (! $value instanceof UploadedFile) {
+            $fail($this->message());
+
             return;
         }
 
-        $fail($this->message());
-    }
-
-    /**
-     * @param  string  $attribute  The attribute being validated (not used in this rule)
-     * @param  mixed  $value  The uploaded file to validate
-     */
-    public function passes(string $attribute, mixed $value): bool
-    {
-        if (! $value instanceof UploadedFile) {
-            return false;
+        if (! in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: false)) {
+            $fail($this->message());
         }
-
-        return in_array(mb_strtolower($value->getClientOriginalExtension()), $this->validExtensions, strict: true);
     }
 
     public function message(): string
@@ -58,14 +52,13 @@ class FileExtensionRule implements ValidationRule
             return $message;
         }
 
-        if (is_array($message)) {
-            foreach ($message as $translation) {
-                if (is_string($translation)) {
-                    return $translation;
-                }
+        $parts = [];
+        foreach ($message as $part) {
+            if (is_string($part)) {
+                $parts[] = $part;
             }
         }
 
-        return 'The file extension is not allowed.';
+        return implode(' ', $parts);
     }
 }

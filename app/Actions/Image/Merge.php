@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Image;
 
 use Illuminate\Support\Facades\File;
+use Intervention\Image\Alignment;
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\ImageManager as InterventionImageManager;
 use Intervention\Image\Interfaces\ImageInterface;
@@ -23,17 +24,20 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
-        $manager = new InterventionImageManager(new GdDriver);
+        $manager = new InterventionImageManager(new GdDriver());
 
-        /** @var ImageInterface $image1 */
-        $image1 = $manager->read($path1); // @phpstan-ignore method.notFound
-        /** @var ImageInterface $image2 */
-        $image2 = $manager->read($path2); // @phpstan-ignore method.notFound
+        $image1 = $manager->decodePath($path1);
+        $image2 = $manager->decodePath($path2);
 
-        $image1->place($image2, 'center'); // @phpstan-ignore method.notFound
+        $width = max($image1->width(), $image2->width());
+        $height = $image1->height() + $image2->height();
+
+        $canvas = $manager->createImage($width, $height);
+        $canvas->insert($image1, 0, 0, Alignment::TOP_LEFT);
+        $canvas->insert($image2, 0, $image1->height(), Alignment::TOP_LEFT);
 
         File::ensureDirectoryExists(dirname($outputPath));
-        $image1->save($outputPath);
+        $canvas->save($outputPath);
 
         return File::exists($outputPath);
     }
@@ -44,7 +48,7 @@ class Merge
      * Questo metodo unisce tutte le immagini in $filenames verticalmente
      * in un'unica immagine, mantenendo la larghezza massima e sommando le altezze.
      *
-     * @param  array<int, string>  $filenames  Array di percorsi relativi (es: 'chart/123-0.png')
+     * @param  list<string>  $filenames  Array di percorsi relativi (es: 'chart/123-0.png')
      * @param  string  $outputFilename  Nome file output relativo (es: 'chart/123.png')
      * @return bool Successo operazione
      */
@@ -78,7 +82,7 @@ class Merge
             }
         }
 
-        $manager = new InterventionImageManager(new GdDriver);
+        $manager = new InterventionImageManager(new GdDriver());
 
         /** @var list<ImageInterface> $images */
         $images = [];
@@ -86,20 +90,18 @@ class Merge
         $totalHeight = 0;
 
         foreach ($absolutePaths as $path) {
-            /** @var ImageInterface $img */
-            $img = $manager->read($path); // @phpstan-ignore method.notFound
+            $img = $manager->decodePath($path);
             $images[] = $img;
             $totalWidth = max($totalWidth, $img->width());
             $totalHeight += $img->height();
         }
 
-        /** @var ImageInterface $final */
-        $final = $manager->create($totalWidth, $totalHeight); // @phpstan-ignore method.notFound
+        $final = $manager->createImage($totalWidth, $totalHeight);
 
         $yOffset = 0;
         foreach ($images as $img) {
             $xOffset = (int) (($totalWidth - $img->width()) / 2);
-            $final->place($img, 'top-left', $xOffset, $yOffset); // @phpstan-ignore method.notFound
+            $final->insert($img, $xOffset, $yOffset, Alignment::TOP_LEFT);
             $yOffset += $img->height();
         }
 

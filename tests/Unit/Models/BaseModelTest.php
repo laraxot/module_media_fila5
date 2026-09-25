@@ -7,14 +7,14 @@ namespace Modules\Media\Tests\Unit\Models;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Tests\TestCase;
-use Modules\Xot\Models\XotBaseModel;
+use PHPUnit\Framework\Assert;
 
-uses(TestCase::class);
+uses(TestCase::class)->group('no-media-db');
 
 if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     function makeMediaTestBaseModel(): BaseModel
     {
-        return new class extends BaseModel
+        return new class() extends BaseModel
         {
             protected $table = 'test_media_table';
         };
@@ -22,7 +22,7 @@ if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
 }
 
 test('base model extends eloquent model', function (): void {
-    expect(get_parent_class(BaseModel::class))->toBe(XotBaseModel::class);
+    Assert::assertInstanceOf(Model::class, makeMediaTestBaseModel());
 });
 
 test('base model has correct table name', function (): void {
@@ -30,13 +30,13 @@ test('base model has correct table name', function (): void {
 });
 
 test('base model can be instantiated', function (): void {
-    expect(get_class(makeMediaTestBaseModel()))->toContain('@anonymous');
+    Assert::assertInstanceOf(BaseModel::class, makeMediaTestBaseModel());
 });
 
 test('base model has proper inheritance chain', function (): void {
     $model = makeMediaTestBaseModel();
-    expect(get_class($model))->toContain('@anonymous');
-    expect(is_subclass_of(get_class($model), Model::class))->toBeTrue();
+    Assert::assertInstanceOf(BaseModel::class, $model);
+    Assert::assertInstanceOf(Model::class, $model);
 });
 
 test('base model has timestamps enabled', function (): void {

@@ -1,3 +1,14 @@
+---
+title: "FileUpload foreach Error Fix - Internal Server Error"
+module: "Media"
+type: concept
+tags: [fileupload, foreach, error, fix]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "fileupload foreach error fix"
+related:
+  - "./webm.md"
+---
 # FileUpload foreach Error Fix - Internal Server Error
 
 ## Problema Identificato
