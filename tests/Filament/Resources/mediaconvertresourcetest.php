@@ -12,8 +12,14 @@ use Tests\TestCase;
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
+<<<<<<< .merge_file_0XoCW3
     $form = app(MediaConvertResource::class)->getFormSchema();
 
+=======
+    $form = MediaConvertResource::getFormSchema();
+
+    expect($form)->toBeArray();
+>>>>>>> .merge_file_NKN0Ei
     expect($form)->not->toBeEmpty();
 
     $componentClasses = array_map(get_class(...), $form);

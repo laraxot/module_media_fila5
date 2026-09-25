@@ -26,7 +26,11 @@ test('can create media with minimal data', function (): void {
 
     /** @var TestCase $this */
     $this->assertMediaTableHas('media', [
+<<<<<<< .merge_file_xvtXDG
         'id' => $media->getKey(),
+=======
+        'id' => (int) $media->getKey(),
+>>>>>>> .merge_file_KAM2YF
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',
