@@ -22,33 +22,11 @@ class MediaResource extends XotBaseResource
 {
     protected static ?string $model = Media::class;
 
-    /**
-     * @return array<string, Component>
-     */
-    #[Override]
-    public function getFormSchemaOld(): array
-    {
-        return [
-            'file' => FileUpload::make('file')
-                ->hint(static::trans('fields.file_hint'))
-                ->storeFileNamesIn('original_file_name')
-                ->visibility('private')
-                ->required()
-                ->columnSpanFull(),
-            'attachment_type' => Radio::make('attachment_type'),
-            'name' => TextInput::make('name')
-                ->translateLabel()
-                ->hint(static::trans('fields.name.hint'))
-                ->autocomplete(false)
-                ->maxLength(255)
-                ->columnSpanFull(),
-        ];
-    }
+    
 
     /**
      * @psalm-return array<never, never>
      */
-    #[Override]
     public static function getRelations(): array
     {
         return [];
@@ -57,7 +35,6 @@ class MediaResource extends XotBaseResource
     /**
      * @return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration, view: PageRegistration, convert: PageRegistration}
      */
-    #[Override]
     public static function getPages(): array
     {
         return [
