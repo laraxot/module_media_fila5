@@ -11,7 +11,11 @@ uses(\Modules\Media\Tests\TestCase::class);
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
+<<<<<<< .merge_file_GecVRd
         expect(get_parent_class(TemporaryUpload::class))->toBe(BaseModel::class);
+=======
+        expect(new TemporaryUpload)->toBeInstanceOf(BaseModel::class);
+>>>>>>> .merge_file_YzIgs9
     });
 
     it('uses HasXotFactory trait', function (): void {

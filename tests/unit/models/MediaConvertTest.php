@@ -11,7 +11,11 @@ uses(\Modules\Media\Tests\TestCase::class);
 
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {
+<<<<<<< .merge_file_M46sLv
         expect(get_parent_class(MediaConvert::class))->toBe(BaseModel::class);
+=======
+        expect(new MediaConvert)->toBeInstanceOf(BaseModel::class);
+>>>>>>> .merge_file_C5hJhd
     });
 
     it('has correct fillable fields', function (): void {
