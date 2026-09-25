@@ -11,6 +11,7 @@ use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Support\Str;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Actions\XotBaseAction;
 use Webmozart\Assert\Assert;
 
@@ -66,6 +67,7 @@ class AddAttachmentAction extends XotBaseAction
 
     /**
      * @param  array<string, mixed>  $data
+     * @param  array<string, mixed>  $data
      */
     public static function formHandlerCallback(RelationManager $livewire, array $data): void
     {
@@ -86,13 +88,10 @@ class AddAttachmentAction extends XotBaseAction
             throw new Exception('FileAdder does not have required methods');
         }
 
-        $name = $data['name'] ?? null;
-        if (! is_string($name)) {
-            $originalFileName = $data['original_file_name'] ?? null;
-            $name = is_string($originalFileName) ? Str::beforeLast($originalFileName, '.') : '';
-        }
-
-        $fileAdderWithName = $fileAdder->setName($name);
+        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast(SafeStringCastAction::cast($data['original_file_name'] ?? ''), '.'));
+        $originalFileName = $data['original_file_name'] ?? '';
+        Assert::string($originalFileName);
+        $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast($originalFileName, '.'));
         if (! is_object($fileAdderWithName) || ! method_exists($fileAdderWithName, 'preservingOriginal')) {
             throw new Exception('setName did not return valid object');
         }
