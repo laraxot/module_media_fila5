@@ -26,9 +26,9 @@ function mediaBehaviorUser(array $permissions = [], array $roles = []): UserCont
 {
     /** @var Mockery\MockInterface&UserContract $user */
     $user = Mockery::mock(UserContract::class);
-    TestCase::mockExpectation($user, 'hasPermissionTo')
+    $user->shouldReceive('hasPermissionTo')
         ->andReturnUsing(static fn (string $permission): bool => in_array($permission, $permissions, true));
-    TestCase::mockExpectation($user, 'hasRole')
+    $user->shouldReceive('hasRole')
         ->andReturnUsing(static function (array|string $richiesti) use ($roles): bool {
             /** @var list<string> $normalizzati */
             $normalizzati = is_array($richiesti) ? $richiesti : [$richiesti];

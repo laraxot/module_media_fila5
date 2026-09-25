@@ -1,14 +1,3 @@
----
-title: "Boost Skill Fix Summary - Media Module"
-module: "Media"
-type: concept
-tags: [boost, skill, fix, summary]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "boost skill fix summary"
-related:
-  - "./webm.md"
----
 # Boost Skill Fix Summary - Media Module
 
 **Date**: 2026-03-02  
@@ -61,8 +50,5 @@ Critical dependencies for Media module:
 1. **Media operations require Laravel services**
    - Filesystem needs framework
    - Storage needs config
-<<<<<<< HEAD
    - Cannot operate in isolation
-=======
-   - Cannot operate in isolation
->>>>>>> laraxot/dev
+

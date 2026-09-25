@@ -1,14 +1,3 @@
----
-title: "Risoluzione Conflitti ConvertVideoByMediaConvertAction.php"
-module: "Media"
-type: concept
-tags: [conflict, resolution, convertvideobymediaconvertaction]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "conflict resolution convertvideobymediaconvertaction"
-related:
-  - "./webm.md"
----
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
@@ -83,10 +72,5 @@ FFMpeg::fromDisk($data->disk)
 - [Media Module Documentation](module_media.md)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
-- [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
+- [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
-<<<<<<< HEAD
-*Ultimo aggiornamento: giugno 2025*
-=======
-*Ultimo aggiornamento: giugno 2025*
->>>>>>> laraxot/dev
