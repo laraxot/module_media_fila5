@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 <<<<<<< .merge_file_zJ75UG
 
 =======
@@ -13,6 +14,9 @@ declare(strict_types=1);
 >>>>>>> .merge_file_oKUxAb
 >>>>>>> .merge_file_XuaTQN
 >>>>>>> .merge_file_h8yNyk
+=======
+
+>>>>>>> laraxot/dev
 /*
  * Chiavi lette da Modules\Xot\Traits\EnumTrait tramite TransTrait::transClass():
  * la chiave e' `<modulo>::<snake(NomeClasse)>.values.<valore>.<attributo>`.

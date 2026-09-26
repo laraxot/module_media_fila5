@@ -21,13 +21,18 @@ if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
 }
 
 test('base model extends eloquent model', function (): void {
+<<<<<<< HEAD
     expect(makeMediaTestBaseModel())->toBeInstanceOf(Model::class);
+=======
+    expect(get_parent_class(BaseModel::class))->toBe(Model::class);
+>>>>>>> laraxot/dev
 });
 
 test('base model has correct table name', function (): void {
     expect(makeMediaTestBaseModel()->getTable())->toBe('test_media_table');
 });
 
+<<<<<<< HEAD
 test('base model can be instantiated', function (): void {
     expect(makeMediaTestBaseModel())->toBeInstanceOf(BaseModel::class);
 });
@@ -38,6 +43,8 @@ test('base model has proper inheritance chain', function (): void {
     expect($model)->toBeInstanceOf(Model::class);
 });
 
+=======
+>>>>>>> laraxot/dev
 test('base model has timestamps enabled', function (): void {
     expect(makeMediaTestBaseModel()->usesTimestamps())->toBeTrue();
 });

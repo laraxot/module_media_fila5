@@ -13,6 +13,10 @@ use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+<<<<<<< HEAD
+=======
+use Override;
+>>>>>>> laraxot/dev
 
 class ListTemporaryUploads extends XotBaseListRecords
 {
@@ -21,6 +25,10 @@ class ListTemporaryUploads extends XotBaseListRecords
     /**
      * @return array<string, TextColumn>
      */
+<<<<<<< HEAD
+=======
+    
+>>>>>>> laraxot/dev
 
     /**
      * @return array<string, SelectFilter>

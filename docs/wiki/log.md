@@ -5,6 +5,7 @@ module: "Media"
 
 # Media - Wiki Activity Log
 
+<<<<<<< HEAD
 ## [2026-09-21] cleanup | ritiro Card/Video/Clip Livewire (dead code)
 
 - Cancellato `app/Http/Livewire/Card/Video/Clip.php` (zero caller repo-wide: no hook Filament, no `@livewire`, no rotta, no vista dedicata) e svuotato `_components.json` a `[]`.
@@ -12,6 +13,8 @@ module: "Media"
 - Verifica: PHPStan L10 `[OK]` 0 errori (123 file); Pest+coverage 282 passed / 9 failed preesistenti (non Clip); PHPMD nessun finding su Livewire.
 
 
+=======
+>>>>>>> laraxot/dev
 ## [2026-05-27] lint | phpstan zero
 
 - `./vendor/bin/phpstan analyse Modules/Media` → 0 errori (135 file).
@@ -30,3 +33,11 @@ module: "Media"
 - Created module index.md
 - Ready for on-demand loading via QMD
 
+<<<<<<< HEAD
+=======
+## [2026-09-25] phpstan | Pest helper invocations
+
+- I test Media invocano i metodi di `Tests\TestCase` come helper globali; usare `$this->` per gli helper d'istanza e `TestCase::` per quelli statici.
+- Le firme PHPDoc dei builder payload preservano `array<string, mixed>` e l'inferenza dei dati passati a Eloquent `create()`.
+- Verifica eseguita: `php -l` sui due file di test aggiornati. Analisi PHPStan e test non eseguiti in questa correzione.
+>>>>>>> laraxot/dev
