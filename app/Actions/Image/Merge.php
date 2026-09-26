@@ -24,11 +24,7 @@ class Merge
      */
     public function handle(string $path1, string $path2, string $outputPath): bool
     {
-<<<<<<< HEAD
-        $manager = new InterventionImageManager(new GdDriver);
-=======
         $manager = new InterventionImageManager(new GdDriver());
->>>>>>> laraxot/dev
 
         $image1 = $manager->decodePath($path1);
         $image2 = $manager->decodePath($path2);
@@ -86,11 +82,7 @@ class Merge
             }
         }
 
-<<<<<<< HEAD
-        $manager = new InterventionImageManager(new GdDriver);
-=======
         $manager = new InterventionImageManager(new GdDriver());
->>>>>>> laraxot/dev
 
         /** @var list<ImageInterface> $images */
         $images = [];

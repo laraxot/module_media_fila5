@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 # Modulo Media — Documentazione Bridge
 
 Documentazione canonica per il modulo Media: gestione multimediale (immagini, video, documenti, audio) in Laraxot.
@@ -27,8 +24,6 @@ Documentazione canonica per il modulo Media: gestione multimediale (immagini, vi
 - Standard di documentazione: vedi `/docs/` root
 
 Per dettagli architetturali, vedi **architecture.md**.
-<<<<<<< HEAD
-=======
 =======
 # Documentation
 
@@ -46,5 +41,4 @@ Documentation should be:
 - Example-driven
 - Updated with code changes
 - Use Markdown format (.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

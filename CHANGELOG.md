@@ -1,27 +1,3 @@
-## [0.1.0-dev.6](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.5...v0.1.0-dev.6) (2026-09-26)
-
-### Features
-
-* **module:** sync subtree Media ([08b21e4](https://github.com/laraxot/module_media_fila5/commit/08b21e4047beb7da1e23ea74214d3e7864ceb5d6))
-
-### Bug Fixes
-
-* **git:** rimuovi marker di conflitto committati in .gitattributes e workflow GitHub duplicati/obsoleti ([523bc06](https://github.com/laraxot/module_media_fila5/commit/523bc066c389e0774b35f65d45b9094fca6486b3))
-* **lang:** empty helper_text when equal to field key ([c7550c6](https://github.com/laraxot/module_media_fila5/commit/c7550c6c51707e6416e0c6529a874fa26f1c4c02))
-* **Media:** pagine View implementano getInfolistSchema() delegando a MediaInfolist ([63ade26](https://github.com/laraxot/module_media_fila5/commit/63ade26aa47fb1cdf5e2fdda3e172f507de2017a))
-* **Media:** PHPStan Modules a 0 errori dopo il sync delle 16:10 (regressioni ripristinate) ([534403f](https://github.com/laraxot/module_media_fila5/commit/534403f3c5f0eb1c775c3516ffcddee038dbf781))
-* **Media:** PHPStan Modules a 0 errori, consolidati i fix dopo il sync ([fe308da](https://github.com/laraxot/module_media_fila5/commit/fe308daf00aa5a9d510f06e2442b3d78d469c5ca))
-* **Media:** pulizia marker di conflitto residui in docs/ + verifica indice ([7743b25](https://github.com/laraxot/module_media_fila5/commit/7743b25d04cf0baf990d78174ff6bdaa6a257fec))
-* **Media:** resolve PHPStan cast errors via Webmozart Assert / Safe ([f9ee4e8](https://github.com/laraxot/module_media_fila5/commit/f9ee4e8ad4412e264f170b353bc716557d26b9cf))
-* **Media:** rimuove test11.txt vuoto dalla root (regola zero .txt in root) ([71bc061](https://github.com/laraxot/module_media_fila5/commit/71bc0617121fd9b0524c87ef4776b779846bbe50))
-* **Media:** risolti i marker di conflitto reimmessi dal sync con laraxot/dev ([0544ead](https://github.com/laraxot/module_media_fila5/commit/0544eadea30dc27c5921c44185d56eaf518a6b11))
-* **Media:** risolvi marker di conflitto Git committati (24/40 file) ([e010b29](https://github.com/laraxot/module_media_fila5/commit/e010b294b1ee95938e56f20c6647bf02fbe2e771))
-* **Media:** risolvi marker di conflitto in README.md e CHANGELOG.md + ignora graphify-out/ ([807924c](https://github.com/laraxot/module_media_fila5/commit/807924c36f38fdea376da7bcd32f00bad586c15a))
-* **Media:** un solo _module_media.code-workspace in root (dedup) ([a27de56](https://github.com/laraxot/module_media_fila5/commit/a27de56cb36222e4a74cbfdafad84f27b533f0d0))
-* **phpstan:** rimuovi [@phpstan-ignore-next-line](https://github.com/phpstan-ignore-next-line) non piu' necessari (ignore.unmatchedLine) ([97ea94a](https://github.com/laraxot/module_media_fila5/commit/97ea94a4425295070b023a062182ac38f5f0691c))
-* **phpstan:** rimuovi duplicato case-collision tests/filament/resources/mediaconvertresourcetest.php ([1556217](https://github.com/laraxot/module_media_fila5/commit/15562177148684c8bfabbf5b754876f9d33b7003))
-* **phpstan:** silenzia falso positivo uses()/describe()->group() nei test Pest ([11e9aca](https://github.com/laraxot/module_media_fila5/commit/11e9aca30d83d53c3ba1442c6122e5d27cef9a60))
-
 ## [0.1.0-dev.2](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2026-09-15)
 
 ### Bug Fixes
@@ -159,9 +135,6 @@
 * **tests:** add missing generic/iterable PHPDoc types to HasMediaTestStub ([b61d0b8](https://github.com/laraxot/module_media_fila5/commit/b61d0b8c9df895b8af2e3154bfc8a1bde50f964f))
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ## [0.0.3-dev.12](https://github.com/laraxot/module_media_fila5/compare/v0.0.3-dev.11...v0.0.3-dev.12) (2026-08-24)
 
 ### Bug Fixes
@@ -175,10 +148,7 @@
 
 * resolve nested git conflict markers in Media module ([e0935b2](https://github.com/laraxot/module_media_fila5/commit/e0935b222be41e3a8f6327812c390644368c2cfe))
 
-<<<<<<< HEAD
 =======
-=======
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 # Changelog
 

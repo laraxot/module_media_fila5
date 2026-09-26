@@ -1,19 +1,12 @@
 <?php
 
-<<<<<<< HEAD
-declare(strict_types=1);
-=======
->>>>>>> laraxot/dev
 /**
  * @see https://github.com/protonemedia/laravel-ffmpeg
  * Azione per convertire un video utilizzando ConvertData.
  */
 
-<<<<<<< HEAD
-=======
 declare(strict_types=1);
 
->>>>>>> laraxot/dev
 namespace Modules\Media\Actions\Video;
 
 use Exception;
@@ -45,11 +38,7 @@ class ConvertVideoByConvertDataAction
         }
 
         // Instanziamo il formato prima di usarlo
-<<<<<<< HEAD
-        $formatInstance = new $format;
-=======
         $formatInstance = new $format();
->>>>>>> laraxot/dev
 
         $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)

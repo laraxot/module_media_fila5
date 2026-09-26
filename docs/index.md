@@ -244,27 +244,17 @@ Il modulo Media segue una struttura standard con directory per modelli, servizi,
 Modulo: Media
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ## File disponibili
 
 <!-- auto-generato: elencare i file .md presenti -->
 =======
->>>>>>> laraxot/dev
 Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un indice esaustivo):
 - [structure.md](./structure.md)
 - [data-models.md](./data-models.md)
 - [core-functionality.md](./core-functionality.md)
 - [file-management-architecture.md](./file-management-architecture.md)
-<<<<<<< HEAD
-- [phpstan-level10-fixes-1.md](./phpstan-level10-fixes-1.md) / [phpstan-report-1.md](./phpstan-report-1.md)
-- [testing.md](./testing.md)
-- [troubleshooting.md](./troubleshooting.md)
-- [wiki/index.md](./wiki/index.md)
-=======
 - [phpstan_level10_fixes.md](./phpstan_level10_fixes.md) / [phpstan-report.md](./phpstan-report.md)
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
 - [wiki/index.md](./wiki/index.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

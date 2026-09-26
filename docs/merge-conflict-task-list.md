@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 title: "Documentation Merge Conflict Task List"
 module: "Media"
@@ -29,9 +26,6 @@ related:
 - [x] `Modules/LegacyDomain/docs/docs/INDEX.md` - Added DRY/KISS requirements
 
 ## BOUNDARY CASES (0)
-<<<<<<< HEAD
 =======
-=======
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [ ] No boundary cases detected

@@ -10,9 +10,6 @@ related:
   - "./webm.md"
 ---
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 # Troubleshooting
 
 ---
@@ -561,9 +558,6 @@ Systematic error resolution for file upload, storage, processing, and permission
 ---
 
 **Related:** [Patterns](./PATTERNS.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)
-<<<<<<< HEAD
-=======
 =======
 # Troubleshooting
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

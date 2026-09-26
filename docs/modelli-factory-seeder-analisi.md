@@ -48,11 +48,7 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 <<<<<<< HEAD
 - **Dominio sanitario**: Documenti pazienti, referti medici, immagini profilo
 =======
-<<<<<<< HEAD
-- **Dominio sanitario**: Documenti pazienti, referti medici, immagini profilo
-=======
 - **SaluteOra**: Documenti pazienti, referti medici, immagini profilo
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
@@ -219,11 +215,7 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 <<<<<<< HEAD
 - Modulo sanitario legacy - Documenti medici
 =======
-<<<<<<< HEAD
-- Modulo sanitario legacy - Documenti medici
-=======
 - [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali

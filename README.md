@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> laraxot/dev
 ---
 id: module-media-readme
 title: "Media — File, Immagini, Video e Documenti"
@@ -64,8 +61,6 @@ Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, an
 ---
 
 **Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**
-<<<<<<< HEAD
-=======
 =======
 # Media Module — File Storage & Transformation
 
@@ -153,5 +148,4 @@ Complete media management for the Laraxot ecosystem: image optimization, video e
 ---
 
 **Quick links:** [Index](./docs/INDEX.md) | [Patterns](./docs/PATTERNS.md) | [Troubleshooting](./docs/TROUBLESHOOTING.md) | [Contributing](./docs/CONTRIBUTING.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

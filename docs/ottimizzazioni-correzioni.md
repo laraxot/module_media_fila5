@@ -11,9 +11,5 @@ related:
 <<<<<<< HEAD
 ---
 =======
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

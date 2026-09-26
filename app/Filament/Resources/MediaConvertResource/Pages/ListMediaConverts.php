@@ -11,10 +11,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables;
-<<<<<<< HEAD
-=======
 use Filament\Tables\Columns\TextColumn;
->>>>>>> laraxot/dev
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Job\Filament\Widgets\ClockWidget;
@@ -23,10 +20,7 @@ use Modules\Media\Datas\ConvertData;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
-<<<<<<< HEAD
-=======
 use Override;
->>>>>>> laraxot/dev
 use Spatie\QueueableAction\ActionJob;
 
 class ListMediaConverts extends XotBaseListRecords
@@ -36,10 +30,7 @@ class ListMediaConverts extends XotBaseListRecords
     /**
      * @return array<string, Tables\Columns\Column>
      */
-<<<<<<< HEAD
-=======
     
->>>>>>> laraxot/dev
 
     /**
      * @return array<string, BaseFilter>
