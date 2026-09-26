@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 <<<<<<< .merge_file_hwGdsT
 =======
 <<<<<<< .merge_file_O62LyX
@@ -18,6 +19,8 @@ esistono in `Modules/Media/app/` — verificato durante l'audit documentazione d
 Il contenuto reale, verificato contro il codice, vive in `architecture.md`.
 =======
 >>>>>>> .merge_file_Ig3mqL
+=======
+>>>>>>> laraxot/dev
 title: "Architecture: Media Module"
 type: architecture
 tags: [module, architecture, media, storage]
@@ -62,7 +65,10 @@ Media module provides file handling, storage, and processing infrastructure for 
 ## Quality Gates
 - **PHPStan L10**: Pending verification
 - **Storage**: Tested with local/S3 drivers
+<<<<<<< HEAD
 <<<<<<< .merge_file_hwGdsT
 =======
 >>>>>>> .merge_file_Ckojel
 >>>>>>> .merge_file_Ig3mqL
+=======
+>>>>>>> laraxot/dev

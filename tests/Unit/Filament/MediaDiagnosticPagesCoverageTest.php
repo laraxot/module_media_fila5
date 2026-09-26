@@ -12,6 +12,7 @@ use ReflectionClass;
 
 uses(TestCase::class)->group('no-media-db');
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_ZyePoM
 =======
 <<<<<<< .merge_file_Frfzng
@@ -25,6 +26,8 @@ uses(TestCase::class)->group('no-media-db');
 >>>>>>> .merge_file_PsKKXC
 >>>>>>> .merge_file_f8rTia
 >>>>>>> .merge_file_XiNjgq
+=======
+>>>>>>> laraxot/dev
 function mediaInvoke(object $target, string $method, mixed ...$args): mixed
 {
     $ref = new ReflectionClass($target);
@@ -36,6 +39,7 @@ function mediaInvoke(object $target, string $method, mixed ...$args): mixed
 
 /**
  * Invoca un metodo che il contratto dichiara `string` e ne verifica il tipo di ritorno.
+<<<<<<< HEAD
 <<<<<<< .merge_file_ZyePoM
 =======
 <<<<<<< .merge_file_Frfzng
@@ -47,6 +51,8 @@ function mediaInvoke(object $target, string $method, mixed ...$args): mixed
 >>>>>>> .merge_file_PsKKXC
 >>>>>>> .merge_file_f8rTia
 >>>>>>> .merge_file_XiNjgq
+=======
+>>>>>>> laraxot/dev
  */
 function mediaInvokeString(object $target, string $method, mixed ...$args): string
 {
@@ -61,6 +67,7 @@ function mediaInvokeString(object $target, string $method, mixed ...$args): stri
 /**
  * Invoca un metodo che il contratto dichiara `array` e ne verifica il tipo di ritorno.
  *
+<<<<<<< HEAD
 <<<<<<< .merge_file_ZyePoM
 =======
 <<<<<<< .merge_file_Frfzng
@@ -71,6 +78,8 @@ function mediaInvokeString(object $target, string $method, mixed ...$args): stri
 >>>>>>> .merge_file_PsKKXC
 >>>>>>> .merge_file_f8rTia
 >>>>>>> .merge_file_XiNjgq
+=======
+>>>>>>> laraxot/dev
  * @return array<array-key, mixed>
  */
 function mediaInvokeArray(object $target, string $method, mixed ...$args): array
