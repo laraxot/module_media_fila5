@@ -1,0 +1,69 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Media\Tests\Unit\Support\Ffmpeg;
+
+use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
+use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
+use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
+use RuntimeException;
+
+uses(TestCase::class)->group('no-media-db');
+
+describe('MediaExporterResolver', function (): void {
+    it('returns the value unchanged when it is already a MediaExporter', function (): void {
+        $exporter = \Mockery::mock(MediaExporter::class);
+
+        Assert::assertSame($exporter, MediaExporterResolver::from($exporter));
+    });
+
+    it('rejects a value that is not a MediaExporter', function (): void {
+        try {
+            MediaExporterResolver::from('non-un-exporter');
+            Assert::fail('Expected RuntimeException was not thrown.');
+        } catch (RuntimeException $exception) {
+            Assert::assertStringContainsString('MediaExporter', $exception->getMessage());
+        }
+    });
+
+    it('names the received type in the error message for an object', function (): void {
+        try {
+<<<<<<< .merge_file_bVJ9wR
+            MediaExporterResolver::from(new \stdClass());
+=======
+<<<<<<< .merge_file_spTm39
+            MediaExporterResolver::from(new \stdClass());
+=======
+<<<<<<< .merge_file_VTPQNB
+            MediaExporterResolver::from(new \stdClass());
+=======
+            MediaExporterResolver::from(new \stdClass);
+>>>>>>> .merge_file_vsWkSW
+>>>>>>> .merge_file_gSFK4J
+>>>>>>> .merge_file_qAKn9C
+            Assert::fail('Expected RuntimeException was not thrown.');
+        } catch (RuntimeException $exception) {
+            Assert::assertStringContainsString('stdClass', $exception->getMessage());
+        }
+    });
+
+    it('names the received type in the error message for a scalar', function (): void {
+        try {
+            MediaExporterResolver::from(42);
+            Assert::fail('Expected RuntimeException was not thrown.');
+        } catch (RuntimeException $exception) {
+            Assert::assertStringContainsString('int', $exception->getMessage());
+        }
+    });
+
+    it('rejects null', function (): void {
+        try {
+            MediaExporterResolver::from(null);
+            Assert::fail('Expected RuntimeException was not thrown.');
+        } catch (RuntimeException $exception) {
+            Assert::assertStringContainsString('null', $exception->getMessage());
+        }
+    });
+});
