@@ -256,13 +256,9 @@ private function getSolutionForError(?string $errorCode): string
 ## Collegamenti
 
 <<<<<<< HEAD
-- [Documentazione Generale Media](README.md)
-=======
-<<<<<<< HEAD
 - [Documentazione Generale Media](../readme.md)
 =======
 - [Documentazione Generale Media](README.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)

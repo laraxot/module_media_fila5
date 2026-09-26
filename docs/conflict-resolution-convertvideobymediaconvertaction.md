@@ -88,9 +88,5 @@ FFMpeg::fromDisk($data->disk)
 <<<<<<< HEAD
 *Ultimo aggiornamento: giugno 2025*
 =======
-<<<<<<< HEAD
 *Ultimo aggiornamento: giugno 2025*
-=======
-*Ultimo aggiornamento: giugno 2025*
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

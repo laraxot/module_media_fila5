@@ -63,28 +63,16 @@ it('handles empty attachments', function (): void {
     $action = new SaveAttachmentsAction;
 
     $record = $this->makeTestMock(HasMedia::class);
-<<<<<<< HEAD
-    $record->method('update')->with([])->willReturn(true);
-
-    $action->execute($record, [], [], 'attachments');
-
-    expect(true)->toBeTrue();
-=======
     $record->expects($this->never())->method('update');
 
     $action->execute($record, [], [], 'attachments');
->>>>>>> laraxot/dev
 });
 
 it('skips nonexistent files', function (): void {
     $action = new SaveAttachmentsAction;
 
     $record = $this->makeTestMock(HasMedia::class);
-<<<<<<< HEAD
-    $record->method('update')->with([])->willReturn(true);
-=======
     $record->expects($this->never())->method('update');
->>>>>>> laraxot/dev
 
     $attachments = ['invoice'];
     $data = [
@@ -92,11 +80,6 @@ it('skips nonexistent files', function (): void {
     ];
 
     $action->execute($record, $attachments, $data, 'attachments');
-<<<<<<< HEAD
-
-    expect(true)->toBeTrue();
-=======
->>>>>>> laraxot/dev
 });
 
 it('handles storage errors gracefully', function (): void {
@@ -168,11 +151,7 @@ it('cleans up temp files', function (): void {
 
     $action->execute($record, $attachments, $data, 'attachments');
 
-<<<<<<< HEAD
-    expect(true)->toBeTrue();
-=======
     expect(Storage::disk('attachments')->exists('temp/invoice.pdf'))->toBeTrue();
->>>>>>> laraxot/dev
 });
 
 it('handles multiple attachments', function (): void {

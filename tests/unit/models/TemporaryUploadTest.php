@@ -11,11 +11,7 @@ uses(\Modules\Media\Tests\TestCase::class);
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-<<<<<<< HEAD
-        expect(new TemporaryUpload)->toBeInstanceOf(BaseModel::class);
-=======
         expect(get_parent_class(TemporaryUpload::class))->toBe(BaseModel::class);
->>>>>>> laraxot/dev
     });
 
     it('uses HasXotFactory trait', function (): void {

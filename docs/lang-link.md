@@ -41,9 +41,5 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 <<<<<<< HEAD
 * [lang-link.md](../../../Cms/docs/lang-link.md)
 =======
-<<<<<<< HEAD
 * [lang-link.md](../../../Cms/docs/lang-link.md)
-=======
-* [lang-link.md](../../../Cms/docs/lang-link.md)
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

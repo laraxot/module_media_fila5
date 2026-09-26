@@ -12,9 +12,5 @@ related:
 <<<<<<< HEAD
 https://github.com/mokhosh/laravel-xml2srt
 =======
-<<<<<<< HEAD
 https://github.com/mokhosh/laravel-xml2srt
-=======
-https://github.com/mokhosh/laravel-xml2srt
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
