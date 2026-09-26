@@ -344,11 +344,7 @@ describe('Media model (database)', function (): void {
 })->group('media-db');
 
 it('media has casts', function (): void {
-<<<<<<< HEAD
-    $media = new Media;
-=======
     $media = new Media();
->>>>>>> laraxot/dev
 
     $expectedCasts = [
         'id' => 'integer',
