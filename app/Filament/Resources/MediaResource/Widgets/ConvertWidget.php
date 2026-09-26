@@ -52,7 +52,11 @@ class ConvertWidget extends XotBaseWidget
         $disk_path = Storage::disk($disk_mp4)->path('/');
         $file_mp4 = Str::after($file_mp4, $disk_path);
 
+<<<<<<< HEAD
         $format = new WebM;
+=======
+        $format = new WebM();
+>>>>>>> laraxot/dev
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
 

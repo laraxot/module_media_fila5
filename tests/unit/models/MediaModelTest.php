@@ -17,7 +17,11 @@ uses(\Modules\Media\Tests\TestCase::class);
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
+<<<<<<< HEAD
         expect(new Media)->toBeInstanceOf(SpatieMedia::class);
+=======
+        expect(get_parent_class(Media::class))->toBe(SpatieMedia::class);
+>>>>>>> laraxot/dev
     });
 
     it('uses HasXotFactory trait', function (): void {

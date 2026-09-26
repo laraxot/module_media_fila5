@@ -138,6 +138,7 @@ Il modulo utilizza l'inversion of control tramite:
 - README.md - Documentazione di base
 - index.md - Bridge indice
 - /docs/ root - Standard di documentazione globali
+<<<<<<< HEAD
 <<<<<<< .merge_file_J6q0Jb
 <<<<<<< HEAD
 =======
@@ -159,6 +160,9 @@ Il modulo utilizza l'inversion of control tramite:
 =======
 >>>>>>> .merge_file_NMTXHl
 >>>>>>> .merge_file_x2faUD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ---
 
@@ -209,6 +213,7 @@ Media module provides file handling, storage, and processing infrastructure for 
 ## Quality Gates
 - **PHPStan L10**: Pending verification
 - **Storage**: Tested with local/S3 drivers
+<<<<<<< HEAD
 <<<<<<< .merge_file_J6q0Jb
 =======
 >>>>>>> laraxot/dev
@@ -220,3 +225,7 @@ Media module provides file handling, storage, and processing infrastructure for 
 >>>>>>> .merge_file_NMTXHl
 >>>>>>> .merge_file_FER2dT
 >>>>>>> .merge_file_x2faUD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

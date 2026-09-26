@@ -14,6 +14,7 @@ describe('AttachMediaAction', function () {
         // Arrange
         $action = new AttachMediaAction;
 
+<<<<<<< HEAD
         // Assert - Verify the trait is used
         expect(trait_exists(QueueableAction::class))->toBeTrue();
     });
@@ -33,4 +34,9 @@ describe('AttachMediaAction', function () {
         // Assert
         expect($action)->not()->toBeNull();
     });
+=======
+        expect(class_uses_recursive($action))->toContain(QueueableAction::class);
+    });
+
+>>>>>>> laraxot/dev
 });

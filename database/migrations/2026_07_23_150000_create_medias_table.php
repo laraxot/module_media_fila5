@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_6BN6cp
 =======
 <<<<<<< .merge_file_bHWhRW
@@ -7,12 +8,15 @@
 <<<<<<< .merge_file_tNgl6T
 >>>>>>> .merge_file_yYEjPW
 >>>>>>> .merge_file_ZoQlMn
+=======
+>>>>>>> laraxot/dev
 /**
  * @see https://github.com/spatie/laravel-medialibrary/blob/main/database/migrations/create_media_table.php.stub
  */
 
 declare(strict_types=1);
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_6BN6cp
 =======
 <<<<<<< .merge_file_bHWhRW
@@ -25,6 +29,8 @@ declare(strict_types=1);
 >>>>>>> .merge_file_Bp2xLT
 >>>>>>> .merge_file_yYEjPW
 >>>>>>> .merge_file_ZoQlMn
+=======
+>>>>>>> laraxot/dev
 use Illuminate\Database\Schema\Blueprint;
 // ----- models -----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
@@ -32,6 +38,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /*
  * Class CreateImagesTable.
  */
+<<<<<<< HEAD
 <<<<<<< .merge_file_6BN6cp
 return new class() extends XotBaseMigration
 =======
@@ -45,6 +52,9 @@ return new class extends XotBaseMigration
 >>>>>>> .merge_file_Bp2xLT
 >>>>>>> .merge_file_yYEjPW
 >>>>>>> .merge_file_ZoQlMn
+=======
+return new class() extends XotBaseMigration
+>>>>>>> laraxot/dev
 {
     /**
      * i don't write table name, it take from Model, model is singular of this class wit.

@@ -8,4 +8,12 @@ updated: 2026-07-14
 qmd: "guida migrazione step by step"
 related:
   - "./webm.md"
+<<<<<<< HEAD
 ---
+=======
+<<<<<<< HEAD
+---
+=======
+---
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

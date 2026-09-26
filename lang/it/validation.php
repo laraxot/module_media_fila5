@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 <<<<<<< .merge_file_sf75od
 
 =======
@@ -13,6 +14,9 @@ declare(strict_types=1);
 >>>>>>> .merge_file_sQA97R
 >>>>>>> .merge_file_F2a50F
 >>>>>>> .merge_file_NiVaHL
+=======
+
+>>>>>>> laraxot/dev
 /*
  * Messaggi di validazione del modulo Media.
  *

@@ -12,9 +12,16 @@ use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
+<<<<<<< HEAD
 use Modules\User\Contracts\UserContract;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Tests\XotBasePest;
+=======
+use Modules\User\Database\Factories\UserFactory;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Tests\XotBasePest;
+use Modules\User\Models\User;
+>>>>>>> laraxot/dev
 
 uses(TestCase::class);
 
@@ -91,7 +98,11 @@ describe('Media Business Logic', function () {
             $mediaPayload['size'] = $temporaryUpload->file_size ?? 0;
         }
 
+<<<<<<< HEAD
         if ($user instanceof UserContract && in_array('user_id', $mediaColumns, true)) {
+=======
+        if ($user instanceof User && in_array('user_id', $mediaColumns, true)) {
+>>>>>>> laraxot/dev
             $mediaPayload['user_id'] = $user->id;
         }
 
@@ -201,7 +212,11 @@ describe('Media Business Logic', function () {
             'status' => 'completed',
         ];
 
+<<<<<<< HEAD
         if ($user instanceof UserContract && in_array('user_id', $columns, true)) {
+=======
+        if ($user instanceof User && in_array('user_id', $columns, true)) {
+>>>>>>> laraxot/dev
             $expected['user_id'] = $user->id;
         }
 
@@ -276,7 +291,11 @@ describe('Media Business Logic', function () {
             'file_name' => 'valid-document.pdf',
         ];
 
+<<<<<<< HEAD
         if ($user instanceof UserContract && in_array('user_id', $columns, true)) {
+=======
+        if ($user instanceof User && in_array('user_id', $columns, true)) {
+>>>>>>> laraxot/dev
             $documentPayload['user_id'] = $user->id;
         }
 

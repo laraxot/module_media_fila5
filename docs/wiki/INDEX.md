@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 <<<<<<< .merge_file_Gr2U0G
 =======
 <<<<<<< .merge_file_uXgZMO
@@ -13,6 +14,8 @@ merge fatto originariamente su filesystem case-insensitive. Il file canonico è
 **[index.md](index.md)**. Questo file resta come bridge invece di essere cancellato.
 =======
 >>>>>>> .merge_file_hGUNBE
+=======
+>>>>>>> laraxot/dev
 title: "Media Wiki Index"
 module: "Media"
 ---
@@ -37,15 +40,19 @@ qmd search "Media <topic>" --limit 5
 
 ## Composer / nwidart
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_Gr2U0G
 =======
 <<<<<<< .merge_file_B8KjuN
 >>>>>>> .merge_file_hGUNBE
+=======
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
 - [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello laraxot)
 =======
 - [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello fixcity)
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 <<<<<<< .merge_file_Gr2U0G
 =======
 =======
@@ -53,3 +60,5 @@ qmd search "Media <topic>" --limit 5
 >>>>>>> .merge_file_B5aS0I
 >>>>>>> .merge_file_88Ep0e
 >>>>>>> .merge_file_hGUNBE
+=======
+>>>>>>> laraxot/dev

@@ -19,4 +19,12 @@ https://stackoverflow.com/questions/76302960/convert-large-video-files-with-php-
 
 
 
+<<<<<<< HEAD
 https://gist.github.com/Nks/b3b1cd7398a560eda8ddb7e37901869e?permalink_comment_id=3450216
+=======
+<<<<<<< HEAD
+https://gist.github.com/Nks/b3b1cd7398a560eda8ddb7e37901869e?permalink_comment_id=3450216
+=======
+https://gist.github.com/Nks/b3b1cd7398a560eda8ddb7e37901869e?permalink_comment_id=3450216
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

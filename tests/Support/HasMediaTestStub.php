@@ -57,6 +57,7 @@ abstract class HasMediaTestStub implements HasMedia
      */
     public function getMedia(string $collectionName = 'default', callable|array $filters = []): Collection
     {
+<<<<<<< HEAD
 <<<<<<< .merge_file_M2qEDl
         return new Collection();
 =======
@@ -70,6 +71,9 @@ abstract class HasMediaTestStub implements HasMedia
 >>>>>>> .merge_file_E2LjIF
 >>>>>>> .merge_file_sqw8RA
 >>>>>>> .merge_file_9rmV6c
+=======
+        return new Collection();
+>>>>>>> laraxot/dev
     }
 
     public function clearMediaCollection(string $collectionName = 'default'): HasMedia
@@ -90,6 +94,7 @@ abstract class HasMediaTestStub implements HasMedia
         return false;
     }
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_M2qEDl
     public function loadMedia(string $collectionName): mixed
     {
@@ -117,6 +122,11 @@ abstract class HasMediaTestStub implements HasMedia
 >>>>>>> .merge_file_E2LjIF
 >>>>>>> .merge_file_sqw8RA
 >>>>>>> .merge_file_9rmV6c
+=======
+    public function loadMedia(string $collectionName): mixed
+    {
+        return null;
+>>>>>>> laraxot/dev
     }
 
     public function addMediaConversion(string $name): Conversion

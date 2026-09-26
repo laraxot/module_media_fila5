@@ -188,4 +188,7 @@ phpmd*.*
 /.vscode/
 .cursor~*
 .windsurf~*
+<<<<<<< HEAD
 graphify-out/
+=======
+>>>>>>> laraxot/dev

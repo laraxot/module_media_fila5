@@ -16,6 +16,7 @@ use Modules\Media\Filament\Actions\Table\ConvertAction;
 use Modules\Media\Filament\Infolists\VideoEntry;
 use Modules\Media\Filament\Resources\MediaConvertResource;
 use Modules\Media\Filament\Resources\MediaConvertResource\Pages\ListMediaConverts;
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
@@ -39,6 +40,11 @@ use Modules\Media\Filament\Resources\MediaResource\Schemas\MediaForm;
 >>>>>>> .merge_file_UQ25oh
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+use Modules\Media\Filament\Resources\MediaResource;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
+use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
+>>>>>>> laraxot/dev
 use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Http\Requests\CreateTemporaryUploadFromDirectS3UploadRequest;
 use Modules\Media\Models\Media;
@@ -86,6 +92,7 @@ describe('Media highest-miss coverage', function (): void {
         Assert::assertArrayHasKey('index', $mediaPages);
         Assert::assertArrayHasKey('view', $mediaPages);
         Assert::assertArrayHasKey('convert', $mediaPages);
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
 =======
 <<<<<<< .merge_file_UMUoQn
@@ -93,11 +100,14 @@ describe('Media highest-miss coverage', function (): void {
 <<<<<<< .merge_file_kBVFL1
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+>>>>>>> laraxot/dev
         Assert::assertArrayHasKey('file', (new \Modules\Media\Filament\Resources\MediaResource\Schemas\MediaForm())->getFormSchema());
 
         Assert::assertSame(MediaConvert::class, MediaConvertResource::getModel());
         Assert::assertArrayHasKey('index', MediaConvertResource::getPages());
         Assert::assertArrayHasKey('format', (new \Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm())->getFormSchema());
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
 =======
 <<<<<<< .merge_file_UMUoQn
@@ -111,12 +121,15 @@ describe('Media highest-miss coverage', function (): void {
 >>>>>>> .merge_file_UQ25oh
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+>>>>>>> laraxot/dev
 
         Assert::assertSame(TemporaryUpload::class, TemporaryUploadResource::getModel());
         Assert::assertNotEmpty(TemporaryUploadResource::getPages());
     });
 
     test('list pages expose table columns and row actions', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
 =======
 <<<<<<< .merge_file_UMUoQn
@@ -124,11 +137,14 @@ describe('Media highest-miss coverage', function (): void {
 <<<<<<< .merge_file_kBVFL1
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+>>>>>>> laraxot/dev
         $mediaColumns = mediaTablePart(new ListMedia(), 'getTableColumns');
         Assert::assertArrayHasKey('file_name', $mediaColumns);
         Assert::assertArrayHasKey('view', mediaTablePart(new ListMedia(), 'getTableActions'));
 
         $convertColumns = mediaTablePart(new ListMediaConverts(), 'getTableColumns');
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
 =======
 <<<<<<< .merge_file_UMUoQn
@@ -142,6 +158,8 @@ describe('Media highest-miss coverage', function (): void {
 >>>>>>> .merge_file_UQ25oh
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+>>>>>>> laraxot/dev
         Assert::assertNotEmpty($convertColumns);
     });
 
@@ -163,6 +181,7 @@ describe('Media highest-miss coverage', function (): void {
     });
 
     test('models expose table fillable and in-memory accessors', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
         $upload = new TemporaryUpload();
 =======
@@ -176,6 +195,9 @@ describe('Media highest-miss coverage', function (): void {
 >>>>>>> .merge_file_UQ25oh
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+        $upload = new TemporaryUpload();
+>>>>>>> laraxot/dev
         Assert::assertIsString($upload->getTable());
         TemporaryUpload::$disk = 'local';
         $disk = (new ReflectionClass($upload))->getMethod('getDiskName');
@@ -185,6 +207,7 @@ describe('Media highest-miss coverage', function (): void {
         config(['media-library.generate_thumbnails_for_temporary_uploads' => false]);
         $upload->registerMediaConversions();
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
         $convert = new MediaConvert();
 =======
@@ -198,12 +221,16 @@ describe('Media highest-miss coverage', function (): void {
 >>>>>>> .merge_file_UQ25oh
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+        $convert = new MediaConvert();
+>>>>>>> laraxot/dev
         $convert->setRelation('media', null);
         Assert::assertContains('format', $convert->getFillable());
         Assert::assertNull($convert->disk);
         Assert::assertNull($convert->file);
         Assert::assertNull($convert->converted_file);
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
         $media = new Media();
 =======
@@ -217,6 +244,9 @@ describe('Media highest-miss coverage', function (): void {
 >>>>>>> .merge_file_UQ25oh
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+        $media = new Media();
+>>>>>>> laraxot/dev
         Assert::assertIsString($media->getTable());
     });
 
@@ -272,6 +302,7 @@ XML;
 
     test('direct S3 upload request declares validation rules', function (): void {
         try {
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
             $rules = (new CreateTemporaryUploadFromDirectS3UploadRequest())->rules();
 =======
@@ -285,6 +316,9 @@ XML;
 >>>>>>> .merge_file_UQ25oh
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+            $rules = (new CreateTemporaryUploadFromDirectS3UploadRequest())->rules();
+>>>>>>> laraxot/dev
             Assert::assertArrayHasKey('key', $rules);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());
@@ -362,6 +396,7 @@ XML;
     });
 
     test('Media model exposes relations and casts without database', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_puk6ek
         $media = new Media();
 =======
@@ -375,6 +410,9 @@ XML;
 >>>>>>> .merge_file_UQ25oh
 >>>>>>> .merge_file_0Afau5
 >>>>>>> .merge_file_aFm9g6
+=======
+        $media = new Media();
+>>>>>>> laraxot/dev
         $media->id = 1;
         Assert::assertIsArray($media->getCasts());
         Assert::assertInstanceOf(BelongsTo::class, $media->temporaryUpload());

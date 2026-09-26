@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Filament;
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_9TpyeN
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
@@ -22,6 +23,11 @@ use Filament\Actions\ViewAction;
 >>>>>>> .merge_file_lgvIg1
 >>>>>>> .merge_file_7U4DJw
 >>>>>>> .merge_file_0i8znP
+=======
+use Filament\Actions\Action;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ViewAction;
+>>>>>>> laraxot/dev
 use Filament\Tables\Columns\TextColumn;
 use Modules\Media\Filament\Resources\MediaResource\Tables\MediaTable;
 use Modules\Media\Tests\TestCase;
@@ -36,6 +42,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('the table exposes the media columns in a stable order', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_9TpyeN
     $columns = (new MediaTable())->getTableColumns();
 =======
@@ -49,6 +56,9 @@ test('the table exposes the media columns in a stable order', function (): void 
 >>>>>>> .merge_file_lgvIg1
 >>>>>>> .merge_file_7U4DJw
 >>>>>>> .merge_file_0i8znP
+=======
+    $columns = (new MediaTable())->getTableColumns();
+>>>>>>> laraxot/dev
 
     Assert::assertSame([
         'id',
@@ -67,6 +77,7 @@ test('the table exposes the media columns in a stable order', function (): void 
 });
 
 test('every column is a text column named after its own key', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_9TpyeN
     foreach ((new MediaTable())->getTableColumns() as $key => $column) {
 =======
@@ -80,12 +91,16 @@ test('every column is a text column named after its own key', function (): void 
 >>>>>>> .merge_file_lgvIg1
 >>>>>>> .merge_file_7U4DJw
 >>>>>>> .merge_file_0i8znP
+=======
+    foreach ((new MediaTable())->getTableColumns() as $key => $column) {
+>>>>>>> laraxot/dev
         Assert::assertInstanceOf(TextColumn::class, $column, $key);
         Assert::assertSame($key, $column->getName());
     }
 });
 
 test('the searchable columns are the descriptive ones, not the numeric ones', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_9TpyeN
     $columns = (new MediaTable())->getTableColumns();
 =======
@@ -99,6 +114,9 @@ test('the searchable columns are the descriptive ones, not the numeric ones', fu
 >>>>>>> .merge_file_lgvIg1
 >>>>>>> .merge_file_7U4DJw
 >>>>>>> .merge_file_0i8znP
+=======
+    $columns = (new MediaTable())->getTableColumns();
+>>>>>>> laraxot/dev
 
     foreach (['name', 'file_name', 'mime_type', 'collection_name', 'model_type', 'model_id'] as $key) {
         Assert::assertTrue($columns[$key]->isSearchable(), "{$key} dovrebbe essere ricercabile");
@@ -110,6 +128,7 @@ test('the searchable columns are the descriptive ones, not the numeric ones', fu
 });
 
 test('updated_at is the only column hidden behind the toggle', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_9TpyeN
     $columns = (new MediaTable())->getTableColumns();
 =======
@@ -123,10 +142,14 @@ test('updated_at is the only column hidden behind the toggle', function (): void
 >>>>>>> .merge_file_lgvIg1
 >>>>>>> .merge_file_7U4DJw
 >>>>>>> .merge_file_0i8znP
+=======
+    $columns = (new MediaTable())->getTableColumns();
+>>>>>>> laraxot/dev
 
     Assert::assertTrue($columns['updated_at']->isToggledHiddenByDefault());
     Assert::assertFalse($columns['created_at']->isToggledHiddenByDefault());
 });
+<<<<<<< HEAD
 <<<<<<< .merge_file_9TpyeN
 
 =======
@@ -139,3 +162,6 @@ test('updated_at is the only column hidden behind the toggle', function (): void
 >>>>>>> .merge_file_lgvIg1
 >>>>>>> .merge_file_7U4DJw
 >>>>>>> .merge_file_0i8znP
+=======
+
+>>>>>>> laraxot/dev

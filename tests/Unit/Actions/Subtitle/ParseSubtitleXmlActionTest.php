@@ -17,6 +17,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('a non xml extension yields no rows', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_bsAPsb
     $rows = (new ParseSubtitleXmlAction())->execute(__DIR__.'/sottotitoli.srt');
 =======
@@ -30,11 +31,15 @@ test('a non xml extension yields no rows', function (): void {
 >>>>>>> .merge_file_ZzVDpV
 >>>>>>> .merge_file_UmTkfa
 >>>>>>> .merge_file_IPgLJV
+=======
+    $rows = (new ParseSubtitleXmlAction())->execute(__DIR__.'/sottotitoli.srt');
+>>>>>>> laraxot/dev
 
     Assert::assertSame([], $rows);
 });
 
 test('a path without extension yields no rows', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_bsAPsb
     $rows = (new ParseSubtitleXmlAction())->execute('/tmp/senza-estensione');
 =======
@@ -48,11 +53,15 @@ test('a path without extension yields no rows', function (): void {
 >>>>>>> .merge_file_ZzVDpV
 >>>>>>> .merge_file_UmTkfa
 >>>>>>> .merge_file_IPgLJV
+=======
+    $rows = (new ParseSubtitleXmlAction())->execute('/tmp/senza-estensione');
+>>>>>>> laraxot/dev
 
     Assert::assertSame([], $rows);
 });
 
 test('every item becomes a row with normalised timings', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_bsAPsb
     $rows = (new ParseSubtitleXmlAction())->execute(
 =======
@@ -66,6 +75,9 @@ test('every item becomes a row with normalised timings', function (): void {
 >>>>>>> .merge_file_ZzVDpV
 >>>>>>> .merge_file_UmTkfa
 >>>>>>> .merge_file_IPgLJV
+=======
+    $rows = (new ParseSubtitleXmlAction())->execute(
+>>>>>>> laraxot/dev
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
     );
 
@@ -88,6 +100,7 @@ test('every item becomes a row with normalised timings', function (): void {
 });
 
 test('timecodes carry hours, minutes and milliseconds', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_bsAPsb
     $rows = (new ParseSubtitleXmlAction())->execute(
 =======
@@ -101,6 +114,9 @@ test('timecodes carry hours, minutes and milliseconds', function (): void {
 >>>>>>> .merge_file_ZzVDpV
 >>>>>>> .merge_file_UmTkfa
 >>>>>>> .merge_file_IPgLJV
+=======
+    $rows = (new ParseSubtitleXmlAction())->execute(
+>>>>>>> laraxot/dev
         dirname(__DIR__, 3).'/Fixtures/subtitle.xml',
     );
 

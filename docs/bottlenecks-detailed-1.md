@@ -371,5 +371,13 @@ final class Media extends Model
 ```
 
 ---
+<<<<<<< HEAD
 
 ```
+=======
+<<<<<<< HEAD
+
+```
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev
