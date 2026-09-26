@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+<<<<<<< HEAD
 <<<<<<< .merge_file_oSmC9m
 
 =======
@@ -13,6 +14,9 @@ declare(strict_types=1);
 >>>>>>> .merge_file_oujC1n
 >>>>>>> .merge_file_dJw50N
 >>>>>>> .merge_file_bK9rvc
+=======
+
+>>>>>>> laraxot/dev
 /*
  * Validation messages for the Media module.
  *

@@ -154,6 +154,7 @@ describe('Media gap attack — S3 Aws pages actions', function (): void {
             Assert::assertInstanceOf(ConvertWidget::class, $widget);
         }
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_pqUI7T
         $media = new Media();
 =======
@@ -167,6 +168,9 @@ describe('Media gap attack — S3 Aws pages actions', function (): void {
 >>>>>>> .merge_file_uiVD2s
 >>>>>>> .merge_file_KaTfHZ
 >>>>>>> .merge_file_mDI1b5
+=======
+        $media = new Media();
+>>>>>>> laraxot/dev
         $media->forceFill([
             'id' => 1,
             'file_name' => 'a.mp4',

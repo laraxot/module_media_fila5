@@ -21,12 +21,18 @@ it('returns attachment schema', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
+<<<<<<< HEAD
     expect($form)->toBeArray()->toHaveCount(3);
 
     // Verifica che ogni attachment abbia un FileUpload component
     foreach ($form as $component) {
         expect($component)->toBeInstanceOf(FileUpload::class);
     }
+=======
+    expect($form)->toHaveCount(3);
+    expect(array_map(static fn (FileUpload $component): string => $component->getName(), $form))
+        ->toBe($attachments);
+>>>>>>> laraxot/dev
 });
 
 /**
@@ -195,6 +201,7 @@ it('has correct download setting', function (): void {
 /**
  * Test that the schema has correct remove setting.
  */
+<<<<<<< HEAD
 it('has correct remove setting', function (): void {
     // Arrange
     $action = new GetAttachmentsSchemaAction;
@@ -211,6 +218,8 @@ it('has correct remove setting', function (): void {
     expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
 });
 
+=======
+>>>>>>> laraxot/dev
 /**
  * Test that the schema has correct reorder setting.
  */
@@ -264,6 +273,7 @@ it('has correct append setting', function (): void {
 /**
  * Test that the schema has correct panel.
  */
+<<<<<<< HEAD
 it('has correct panel', function (): void {
     // Arrange
     $action = new GetAttachmentsSchemaAction;
@@ -296,6 +306,8 @@ it('has correct help text', function (): void {
     expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
 });
 
+=======
+>>>>>>> laraxot/dev
 /**
  * Test that the schema has correct placeholder.
  */

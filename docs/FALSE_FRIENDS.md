@@ -1,4 +1,8 @@
 ```
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> laraxot/dev
 
 ### Error 2: Inline SVG Misuse
 ```blade
@@ -11,3 +15,8 @@
 {{-- ✅ CORRECT - Standard approach --}}
 @svg('map-marker.svg', ['class' => 'map-marker'])
 ```
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> laraxot/dev
+>>>>>>> laraxot/dev

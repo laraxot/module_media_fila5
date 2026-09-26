@@ -69,6 +69,7 @@ describe('FileExtensionRule', function (): void {
     });
 
     it('builds a message even when no extension is allowed', function (): void {
+<<<<<<< HEAD
 <<<<<<< .merge_file_KON7kc
         $rule = new FileExtensionRule();
 =======
@@ -82,6 +83,9 @@ describe('FileExtensionRule', function (): void {
 >>>>>>> .merge_file_I3bcez
 >>>>>>> .merge_file_gNuEa3
 >>>>>>> .merge_file_KK4fNr
+=======
+        $rule = new FileExtensionRule();
+>>>>>>> laraxot/dev
 
         Assert::assertNotSame('', $rule->message());
     });

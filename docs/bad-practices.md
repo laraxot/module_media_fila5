@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< .merge_file_TnKRhR
 ```
 =======
@@ -20,11 +21,15 @@ contenuto effettivo vive in **[BAD_PRACTICES.md](BAD_PRACTICES.md)**.
 ```
 <<<<<<< .merge_file_tKre9o
 >>>>>>> .merge_file_Fpg49q
+=======
+```
+>>>>>>> laraxot/dev
 <<<<<<< HEAD
 
 ```
 =======
 >>>>>>> laraxot/dev
+<<<<<<< HEAD
 <<<<<<< .merge_file_TnKRhR
 =======
 =======
@@ -33,3 +38,5 @@ contenuto effettivo vive in **[BAD_PRACTICES.md](BAD_PRACTICES.md)**.
 >>>>>>> .merge_file_6FSTnh
 >>>>>>> .merge_file_bf86wH
 >>>>>>> .merge_file_Fpg49q
+=======
+>>>>>>> laraxot/dev
