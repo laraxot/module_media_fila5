@@ -24,10 +24,7 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\file_get_contents;
-<<<<<<< HEAD
-=======
 use Modules\User\Models\User;
->>>>>>> laraxot/dev
 
 /**
  * Base test case for Media module.
@@ -197,11 +194,7 @@ abstract class TestCase extends XotBaseTestCase
 
         return array_values(array_filter(
             $columns,
-<<<<<<< HEAD
-            static fn (mixed $column): bool => is_string($column) && $column !== '', // mixed: getColumnListing() non dichiara value type
-=======
             static fn (mixed $column): bool => is_string($column) && $column !== '',
->>>>>>> laraxot/dev
         ));
     }
 
@@ -211,10 +204,6 @@ abstract class TestCase extends XotBaseTestCase
      *
      * @param  array<string, mixed>  $payload
      * @param  array<int, string>  $columns
-<<<<<<< HEAD
-     * @param  mixed  $value  Valore di colonna eterogeneo (string, int, Carbon, null)
-=======
->>>>>>> laraxot/dev
      * @return array<string, mixed>
      */
     public static function mediaPayloadSet(array $payload, array $columns, string $column, mixed $value): array

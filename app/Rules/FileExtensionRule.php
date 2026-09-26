@@ -29,12 +29,6 @@ class FileExtensionRule implements ValidationRule
         ));
     }
 
-<<<<<<< HEAD
-    /**
-     * `mixed $value` imposto da `Illuminate\Contracts\Validation\ValidationRule` (LSP).
-     */
-=======
->>>>>>> laraxot/dev
     public function validate(string $_attribute, mixed $value, Closure $fail): void
     {
         if (! $value instanceof UploadedFile) {

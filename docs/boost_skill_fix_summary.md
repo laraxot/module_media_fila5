@@ -64,9 +64,5 @@ Critical dependencies for Media module:
 <<<<<<< HEAD
    - Cannot operate in isolation
 =======
-<<<<<<< HEAD
    - Cannot operate in isolation
-=======
-   - Cannot operate in isolation
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

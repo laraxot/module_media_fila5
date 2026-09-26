@@ -12,13 +12,7 @@ use Modules\Media\Tests\TestCase;
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
-<<<<<<< HEAD
-    $form = MediaConvertResource::getFormSchema();
-
-    expect($form)->toBeArray();
-=======
     $form = app(MediaConvertResource::class)->getFormSchema();
->>>>>>> laraxot/dev
     expect($form)->not->toBeEmpty();
 
     $componentClasses = array_map(get_class(...), $form);

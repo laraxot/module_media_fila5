@@ -77,12 +77,6 @@ class FormatDebugOutputAction
         return $lines;
     }
 
-<<<<<<< HEAD
-    /**
-     * `mixed $value` voluto: i valori di debug sono eterogenei (scalari, array, oggetti).
-     */
-=======
->>>>>>> laraxot/dev
     private function formatDataLine(string $key, mixed $value): string
     {
         if (is_array($value)) {

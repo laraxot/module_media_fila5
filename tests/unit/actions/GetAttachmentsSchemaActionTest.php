@@ -21,18 +21,9 @@ it('returns attachment schema', function (): void {
     $form = $action->execute($attachments);
 
     // Assert
-<<<<<<< HEAD
-    expect($form)->toBeArray()->toHaveCount(3);
-
-    // Verifica che ogni attachment abbia un FileUpload component
-    foreach ($form as $component) {
-        expect($component)->toBeInstanceOf(FileUpload::class);
-    }
-=======
     expect($form)->toHaveCount(3);
     expect(array_map(static fn (FileUpload $component): string => $component->getName(), $form))
         ->toBe($attachments);
->>>>>>> laraxot/dev
 });
 
 /**
@@ -201,25 +192,6 @@ it('has correct download setting', function (): void {
 /**
  * Test that the schema has correct remove setting.
  */
-<<<<<<< HEAD
-it('has correct remove setting', function (): void {
-    // Arrange
-    $action = new GetAttachmentsSchemaAction;
-    $attachments = ['invoice'];
-
-    // Act
-    $form = $action->execute($attachments);
-
-    // Assert
-    $component = $form[0];
-    // FileUpload has deleteUploadedFileUsing method to control removal, but no direct isRemovable method
-    // By default, Filament file uploads are removable unless specifically configured otherwise
-    // We can verify that the component is a FileUpload
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
-});
-
-=======
->>>>>>> laraxot/dev
 /**
  * Test that the schema has correct reorder setting.
  */
@@ -273,41 +245,6 @@ it('has correct append setting', function (): void {
 /**
  * Test that the schema has correct panel.
  */
-<<<<<<< HEAD
-it('has correct panel', function (): void {
-    // Arrange
-    $action = new GetAttachmentsSchemaAction;
-    $attachments = ['invoice'];
-
-    // Act
-    $form = $action->execute($attachments);
-
-    // Assert
-    $component = $form[0];
-    // There's no getPanel method in FileUpload, so just check it's a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
-});
-
-/**
- * Test that the schema has correct help text.
- */
-it('has correct help text', function (): void {
-    // Arrange
-    $action = new GetAttachmentsSchemaAction;
-    $attachments = ['invoice'];
-
-    // Act
-    $form = $action->execute($attachments);
-
-    // Assert
-    $component = $form[0];
-    // FileUpload has helperText property but no getHelper method
-    // We can verify that the component is a FileUpload instance
-    expect($component)->toBeInstanceOf(\Filament\Forms\Components\FileUpload::class);
-});
-
-=======
->>>>>>> laraxot/dev
 /**
  * Test that the schema has correct placeholder.
  */

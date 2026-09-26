@@ -14,9 +14,5 @@ https://github.com/mokhosh/laravel-youtube-api
 <<<<<<< HEAD
 https://github.com/mokhosh/laravel-youtube-downloader
 =======
-<<<<<<< HEAD
 https://github.com/mokhosh/laravel-youtube-downloader
-=======
-https://github.com/mokhosh/laravel-youtube-downloader
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev

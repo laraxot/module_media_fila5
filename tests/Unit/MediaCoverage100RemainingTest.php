@@ -132,23 +132,7 @@ describe('Media coverage 100 — remaining sweep', function (): void {
 
     test('TemporaryUpload session disk accessors offline', function (): void {
         TemporaryUpload::$disk = 'local';
-<<<<<<< HEAD
-<<<<<<< .merge_file_BpOQtR
         $upload = new TemporaryUpload();
-=======
-<<<<<<< .merge_file_btEAVh
-        $upload = new TemporaryUpload();
-=======
-<<<<<<< .merge_file_rXY2ny
-        $upload = new TemporaryUpload();
-=======
-        $upload = new TemporaryUpload;
->>>>>>> .merge_file_mlxJc5
->>>>>>> .merge_file_UDSrBu
->>>>>>> .merge_file_GpJn3H
-=======
-        $upload = new TemporaryUpload();
->>>>>>> laraxot/dev
         $upload->forceFill([
             'session_id' => 'sess-1',
             'uuid' => 'uuid-1',

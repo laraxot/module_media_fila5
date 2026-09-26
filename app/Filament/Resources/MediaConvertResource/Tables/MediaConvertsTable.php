@@ -24,10 +24,7 @@ class MediaConvertsTable extends XotBaseResourceTable
 {
     /**
      * @return array<string, Column>
-<<<<<<< HEAD
-=======
      * @return array<string, Column>
->>>>>>> laraxot/dev
      */
     public function getTableColumns(): array
     {

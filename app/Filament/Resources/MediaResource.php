@@ -4,15 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources;
 
-<<<<<<< HEAD
-use Filament\Resources\Pages\PageRegistration;
-=======
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Pages\PageRegistration;
 use Filament\Schemas\Components\Component;
->>>>>>> laraxot/dev
 use Modules\Media\Filament\Resources\MediaResource\Pages\ConvertMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\CreateMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\EditMedia;
@@ -20,20 +16,14 @@ use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-<<<<<<< HEAD
-=======
 use Override;
->>>>>>> laraxot/dev
 
 class MediaResource extends XotBaseResource
 {
     protected static ?string $model = Media::class;
 
-<<<<<<< HEAD
-=======
     
 
->>>>>>> laraxot/dev
     /**
      * @psalm-return array<never, never>
      */

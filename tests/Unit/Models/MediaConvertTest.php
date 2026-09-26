@@ -13,19 +13,11 @@ uses(TestCase::class)->group('no-media-db');
 
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {
-<<<<<<< HEAD
-        Assert::assertInstanceOf(BaseModel::class, new MediaConvert);
-    });
-
-    it('has correct fillable fields', function (): void {
-        $model = new MediaConvert;
-=======
         Assert::assertInstanceOf(BaseModel::class, new MediaConvert());
     });
 
     it('has correct fillable fields', function (): void {
         $model = new MediaConvert();
->>>>>>> laraxot/dev
 
         expect($model->getFillable())->toContain('media_id');
         expect($model->getFillable())->toContain('format');
@@ -44,11 +36,7 @@ describe('MediaConvert Model', function (): void {
     });
 
     it('has media relationship', function (): void {
-<<<<<<< HEAD
-        $model = new MediaConvert;
-=======
         $model = new MediaConvert();
->>>>>>> laraxot/dev
 
         expect((new \ReflectionClass($model))->hasMethod('media'))->toBeTrue();
     });
@@ -66,11 +54,7 @@ describe('MediaConvert Model', function (): void {
     });
 
     it('has connection', function (): void {
-<<<<<<< HEAD
-        $model = new MediaConvert;
-=======
         $model = new MediaConvert();
->>>>>>> laraxot/dev
 
         expect($model->getConnectionName())->toBe('media');
     });

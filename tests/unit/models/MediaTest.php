@@ -26,11 +26,7 @@ test('can create media with minimal data', function (): void {
 
     /** @var TestCase $this */
     $this->assertMediaTableHas('media', [
-<<<<<<< HEAD
-        'id' => (int) $media->getKey(),
-=======
         'id' => $media->getKey(),
->>>>>>> laraxot/dev
         'collection_name' => 'avatars',
         'name' => 'test-image',
         'file_name' => 'test-image.jpg',

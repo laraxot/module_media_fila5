@@ -93,9 +93,5 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 <<<<<<< HEAD
 *Ultimo aggiornamento: 29 luglio 2025*
 =======
-<<<<<<< HEAD
 *Ultimo aggiornamento: 29 luglio 2025*
-=======
-*Ultimo aggiornamento: 29 luglio 2025*
->>>>>>> laraxot/dev
 >>>>>>> laraxot/dev
