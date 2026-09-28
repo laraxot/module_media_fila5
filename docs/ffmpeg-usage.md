@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Utilizzo di Laravel-FFMpeg nel Modulo Media"
 module: "Media"
 type: concept

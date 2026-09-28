@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Dependency Intelligence - Module Media"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "player"
 module: "Media"
 type: concept

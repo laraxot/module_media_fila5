@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Task: Ridurre Suppressioni PHPStan Inline - Media"
 module: "Media"
 type: concept

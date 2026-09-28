@@ -1,4 +1,10 @@
 ---
+type: note
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "media mixed type reduction.story"
+issues: []
+discussions: []
 id: story-media-mixed-type-reduction
 slug: media-mixed-type-reduction
 title: "Riduzione uso di mixed nel modulo Media"

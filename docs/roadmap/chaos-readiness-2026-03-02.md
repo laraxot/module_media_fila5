@@ -1,3 +1,14 @@
+---
+title: "chaos readiness 2026 03 02"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "chaos readiness 2026 03 02"
+issues: []
+discussions: []
+---
+
 # Media Chaos Readiness - 2026-03-02
 
 ## Scope

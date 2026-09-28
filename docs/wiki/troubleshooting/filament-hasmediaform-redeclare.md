@@ -1,4 +1,8 @@
 ---
+created: 2026-09-26
+qmd: "filament hasmediaform redeclare"
+issues: []
+discussions: []
 title: "HasMediaForm cannot redeclare (cross-base)"
 module: Media
 type: troubleshooting

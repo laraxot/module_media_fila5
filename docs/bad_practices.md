@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Bad Practices – Media Module"
 module: "Media"
 type: concept

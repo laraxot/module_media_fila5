@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module - Testing Guidelines"
 module: "Media"
 type: how-to

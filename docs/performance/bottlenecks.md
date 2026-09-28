@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module Performance Bottlenecks"
 module: "Media"
 type: concept

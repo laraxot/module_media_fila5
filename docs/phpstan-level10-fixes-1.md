@@ -1,3 +1,14 @@
+---
+title: "phpstan level10 fixes 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan level10 fixes 1"
+issues: []
+discussions: []
+---
+
 # Correzioni PHPStan Livello 10 - Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
@@ -115,4 +126,12 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 
 ---
 
+title: "phpstan level10 fixes 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan level10 fixes 1"
+issues: []
+discussions: []
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).

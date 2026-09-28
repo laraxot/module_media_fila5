@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "TemporaryUploadPathGenerator Documentation"
 module: "Media"
 type: concept

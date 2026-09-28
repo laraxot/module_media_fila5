@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Indice task - Modulo Media"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Conflict Resolution — Module Media"
 module: "Media"
 type: concept

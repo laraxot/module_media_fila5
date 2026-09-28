@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Milestones - Media"
 module: "Media"
 type: concept

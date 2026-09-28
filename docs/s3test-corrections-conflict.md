@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept
