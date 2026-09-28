@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
+---
+
+>>>>>>> laraxot/dev
 # Media Module Documentation
 
 **Last Update**: Feb 2026
@@ -157,6 +171,17 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 ---
+<<<<<<< HEAD
+=======
+title: "index"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "index"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 # Indice della Documentazione - Modulo Media
 
 ## Panoramica
@@ -243,6 +268,13 @@ Il modulo Media segue una struttura standard con directory per modelli, servizi,
 
 Modulo: Media
 
+<<<<<<< HEAD
+=======
+## File disponibili
+
+<!-- auto-generato: elencare i file .md presenti -->
+---
+>>>>>>> laraxot/dev
 Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un indice esaustivo):
 - [structure.md](./structure.md)
 - [data-models.md](./data-models.md)

@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Linee Guida Prevenzione Problemi - Modulo Media"
 module: "Media"
 type: concept

@@ -232,7 +232,11 @@ abstract class TestCase extends XotBaseTestCase
     public static function assertMediaDeclaresStrictTypes(string $class): void
     {
         Assert::assertStringContainsString(
+<<<<<<< HEAD
             '',
+=======
+            'declare(strict_types=1);',
+>>>>>>> laraxot/dev
             XotBasePest::reflectionSource($class),
         );
     }

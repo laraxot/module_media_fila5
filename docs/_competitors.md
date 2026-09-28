@@ -1,4 +1,10 @@
 ---
+<<<<<<< HEAD
+=======
+qmd: " competitors"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: 'Competitors — risorse esterne'
 module: Media
 type: reference
