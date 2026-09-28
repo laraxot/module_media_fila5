@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Risoluzione Conflitti ConvertVideoByMediaConvertAction.php"
 module: "Media"
 type: concept
@@ -86,3 +91,8 @@ FFMpeg::fromDisk($data->disk)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
 
 *Ultimo aggiornamento: giugno 2025*
+<<<<<<< HEAD
+=======
+---
+*Ultimo aggiornamento: giugno 2025*
+>>>>>>> laraxot/dev

@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Media Module - File Management Architecture"
 module: "Media"
 type: concept

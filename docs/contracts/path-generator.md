@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "PathGenerator Interface"
 module: "Media"
 type: concept

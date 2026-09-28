@@ -1,4 +1,10 @@
 ---
+<<<<<<< HEAD
+=======
+qmd: "architecture"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Architettura - Modulo Media"
 module: "Media"
 type: architecture
@@ -188,3 +194,7 @@ Media module provides file handling, storage, and processing infrastructure for 
 ## Quality Gates
 - **PHPStan L10**: Pending verification
 - **Storage**: Tested with local/S3 drivers
+<<<<<<< HEAD
+=======
+---
+>>>>>>> laraxot/dev

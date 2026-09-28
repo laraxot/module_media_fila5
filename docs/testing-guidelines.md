@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Media Module - Testing Guidelines"
 module: "Media"
 type: how-to

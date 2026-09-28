@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Conflict Resolution — Module Media"
 module: "Media"
 type: concept

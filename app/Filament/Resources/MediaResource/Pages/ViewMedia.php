@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\DeleteAction;
 use Filament\Schemas\Components\Component;
 use Modules\Media\Filament\Resources\MediaResource;
@@ -11,22 +12,38 @@ use Modules\Media\Filament\Resources\MediaResource\Schemas\MediaInfolist;
 use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 use Filament\Actions\Action;
+=======
+use Filament\Actions\Action;
+use Filament\Actions\DeleteAction;
+>>>>>>> laraxot/dev
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\RepeatableEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Actions;
+<<<<<<< HEAD
+=======
+use Filament\Schemas\Components\Component;
+>>>>>>> laraxot/dev
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Filament\Infolists\VideoEntry;
 use Modules\Media\Filament\Resources\MediaConvertResource;
+<<<<<<< HEAD
 use Modules\Media\Models\Media;
+=======
+use Modules\Media\Filament\Resources\MediaResource;
+use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
+use Modules\Media\Models\Media;
+use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+>>>>>>> laraxot/dev
 use Override;
 
 class ViewMedia extends XotBaseViewRecord
 {
     protected static string $resource = MediaResource::class;
 
+<<<<<<< HEAD
     /**
      * @return array<string, Component>
      */
@@ -34,6 +51,9 @@ class ViewMedia extends XotBaseViewRecord
     {
         return app(MediaInfolist::class)->getInfolistSchema();
     }
+=======
+    
+>>>>>>> laraxot/dev
 
     /**
      * @return array<string, DeleteAction>

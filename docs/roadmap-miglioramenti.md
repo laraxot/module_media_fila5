@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "roadmap miglioramenti"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "roadmap miglioramenti"
+issues: []
+discussions: []
+---
+
+>>>>>>> laraxot/dev
 # Roadmap — Media, il modulo con un dump-and-die ancora vivo dentro un generatore video
 
 > Numeri misurati: [`docs/cosa-migliorare.md`](cosa-migliorare.md) (80,

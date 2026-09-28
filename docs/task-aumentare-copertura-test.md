@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Task: Aumentare Copertura Test - Media"
 module: "Media"
 type: concept

@@ -174,7 +174,11 @@ class VideoEntry extends XotBaseEntry
         if ($this->getVisibility() === 'private') {
             try {
                 return $storage->temporaryUrl($state, now()->addMinutes(5));
+<<<<<<< HEAD
             } catch (\Throwable) {
+=======
+            } catch (Throwable) {
+>>>>>>> laraxot/dev
                 // This driver does not support creating temporary URLs.
             }
         }

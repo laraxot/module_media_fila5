@@ -1,4 +1,10 @@
 ---
+<<<<<<< HEAD
+=======
+qmd: "ARCHITECTURE"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Architecture: Media Module"
 type: architecture
 tags: [module, architecture, media, storage]

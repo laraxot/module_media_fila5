@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH"
 module: "Media"
 type: rule

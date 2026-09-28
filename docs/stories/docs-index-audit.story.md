@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+type: note
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "docs index audit.story"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 id: story-docs-index-audit
 slug: docs-index-audit
 title: "Audit indice documentazione Modules/Media/docs"

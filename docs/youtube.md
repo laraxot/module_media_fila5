@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Youtube"
 module: "Media"
 type: concept
@@ -12,3 +17,8 @@ related:
 https://github.com/mokhosh/laravel-youtube-api
 
 https://github.com/mokhosh/laravel-youtube-downloader
+<<<<<<< HEAD
+=======
+---
+https://github.com/mokhosh/laravel-youtube-downloader
+>>>>>>> laraxot/dev

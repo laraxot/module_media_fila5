@@ -13,11 +13,14 @@ class Webm extends ImageGenerator
     public function convert(string $file, ?Conversion $conversion = null): string
     {
         $pathToImageFile = pathinfo($file, PATHINFO_DIRNAME).'/'.pathinfo($file, PATHINFO_FILENAME).'.webmXXX';
+<<<<<<< HEAD
         dddx([
             'file' => $file,
             '$pathToImageFile' => ${$pathToImageFile},
             'conversion' => $conversion,
         ]);
+=======
+>>>>>>> laraxot/dev
 
         /*
          * $image = imagecreatefromwebp($file);
