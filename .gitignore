@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 !.env.example
 # ==============================================
 # AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
@@ -192,7 +191,6 @@ phpmd*.*
 
 # Artefatti audit vietati (rule: tests-auditcoverage-forbidden)
 audit-coverage/
-=======
 ._*
 # =============================================
 # ==============================================
@@ -379,4 +377,3 @@ graphify-out/
 .claude-audit/
 test-results/
 media.code-workspace
->>>>>>> laraxot/dev

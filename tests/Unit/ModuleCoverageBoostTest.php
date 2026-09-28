@@ -65,11 +65,7 @@ describe('Media coverage boost', function (): void {
                 continue;
             }
             Assert::assertInstanceOf($class, app($class));
-<<<<<<< HEAD
             Assert::assertStringContainsString('', XotBasePest::reflectionSource($class));
-=======
-            Assert::assertStringContainsString('declare(strict_types=1);', XotBasePest::reflectionSource($class));
->>>>>>> laraxot/dev
         }
     });
 
