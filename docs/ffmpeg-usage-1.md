@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Utilizzo di Laravel-FFMpeg nel Modulo Media"
 module: "Media"
 type: concept

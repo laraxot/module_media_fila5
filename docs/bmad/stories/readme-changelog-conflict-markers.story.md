@@ -1,4 +1,11 @@
 ---
+<<<<<<< HEAD
+=======
+type: note
+tags: [documentation]
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 id: "media-readme-changelog-conflict-markers"
 title: "Media: marker README + CHANGELOG in HEAD"
 status: review

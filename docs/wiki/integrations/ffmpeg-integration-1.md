@@ -1,4 +1,10 @@
 ---
+<<<<<<< HEAD
+=======
+qmd: "ffmpeg integration 1"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Integrazione di FFmpeg nel Modulo Media"
 type: integration
 tags: [integrations]

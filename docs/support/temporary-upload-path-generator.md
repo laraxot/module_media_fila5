@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "TemporaryUploadPathGenerator Documentation"
 module: "Media"
 type: concept

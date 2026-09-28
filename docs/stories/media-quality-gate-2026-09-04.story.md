@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+type: note
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "media quality gate 2026 09 04.story"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 id: story-media-quality-gate-2026-09-04
 slug: media-quality-gate-2026-09-04
 title: "Chiusura quality-gate modulo Media (phpmd + pest + coverage baseline)"

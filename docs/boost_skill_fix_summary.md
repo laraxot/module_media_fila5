@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Boost Skill Fix Summary - Media Module"
 module: "Media"
 type: concept
@@ -62,3 +67,8 @@ Critical dependencies for Media module:
    - Filesystem needs framework
    - Storage needs config
    - Cannot operate in isolation
+<<<<<<< HEAD
+=======
+---
+   - Cannot operate in isolation
+>>>>>>> laraxot/dev

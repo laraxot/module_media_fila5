@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Risoluzione Conflitti per l'Integrazione FFmpeg nel Modulo Media"
 module: "Media"
 type: concept

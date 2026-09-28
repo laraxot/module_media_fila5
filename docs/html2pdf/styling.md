@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Guida agli Stili, Tabelle e Immagini"
 module: "Media"
 type: concept

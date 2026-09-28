@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Collegamento alle Traduzioni del Modulo Media"
 module: "Media"
 type: concept
