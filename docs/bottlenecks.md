@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Colli di Bottiglia e Soluzioni - Modulo Media"
 module: "Media"
 type: concept

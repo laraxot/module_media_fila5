@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Case Sensitivity Rules - Media Module"
 module: "Media"
 type: rule

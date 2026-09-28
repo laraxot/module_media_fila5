@@ -1,4 +1,10 @@
 ---
+<<<<<<< HEAD
+=======
+qmd: "study"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: 'Study'
 module: Media
 type: reference

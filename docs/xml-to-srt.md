@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Xml To Srt"
 module: "Media"
 type: concept
@@ -10,3 +15,8 @@ related:
   - "./webm.md"
 ---
 https://github.com/mokhosh/laravel-xml2srt
+<<<<<<< HEAD
+=======
+---
+https://github.com/mokhosh/laravel-xml2srt
+>>>>>>> laraxot/dev

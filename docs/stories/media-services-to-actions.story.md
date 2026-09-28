@@ -1,4 +1,13 @@
 ---
+<<<<<<< HEAD
+=======
+type: note
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "media services to actions.story"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 id: story-media-services-to-actions
 slug: media-services-to-actions
 title: "Conversione app/Services in QueueableAction nel modulo Media"

@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
 module: "Media"
 type: concept
@@ -163,6 +168,10 @@ updated: 2026-07-01
 qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []
+<<<<<<< HEAD
+=======
+---
+>>>>>>> laraxot/dev
 related:
   - "./webm.md"
 ---

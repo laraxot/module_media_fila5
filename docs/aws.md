@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Aws"
 module: "Media"
 type: concept
@@ -10,3 +15,8 @@ related:
   - "./webm.md"
 ---
 https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
+<<<<<<< HEAD
+=======
+---
+https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
+>>>>>>> laraxot/dev

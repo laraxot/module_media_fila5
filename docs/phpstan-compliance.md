@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "phpstan compliance"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan compliance"
+issues: []
+discussions: []
+---
+
+>>>>>>> laraxot/dev
 # PHPStan Compliance - Media Module
 
 ## Status: ✅ FULLY COMPLIANT

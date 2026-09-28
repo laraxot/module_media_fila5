@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "S3Test.php - Analisi Refactoring e Regole di Conformità Laraxot"
 module: "Media"
 type: concept

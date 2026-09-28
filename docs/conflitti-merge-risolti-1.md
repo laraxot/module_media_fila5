@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Risoluzione dei Conflitti Git nel Modulo Media"
 module: "Media"
 type: concept

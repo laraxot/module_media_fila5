@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Risoluzione conflitto git su Filament Table ConvertAction"
 module: "Media"
 type: concept

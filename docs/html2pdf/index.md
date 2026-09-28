@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Html2Pdf - Panoramica e Installazione"
 module: "Media"
 type: concept

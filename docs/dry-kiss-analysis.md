@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "🐄 DRY & KISS Analysis - Media"
 module: "Media"
 type: concept

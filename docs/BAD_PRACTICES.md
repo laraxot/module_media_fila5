@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Bad Practices – Media Module"
 module: "Media"
 type: concept
@@ -24,4 +29,8 @@ related:
 
 // ✅ CORRECT: SVG in standard location
 @svg('map-marker.svg')
+<<<<<<< HEAD
+=======
+---
+>>>>>>> laraxot/dev
 ```

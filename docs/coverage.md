@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: "Media Module Test Coverage"
 module: "Media"
 type: concept
@@ -9,6 +10,18 @@ qmd: "coverage"
 related:
   - "./webm.md"
 ---
+=======
+title: "coverage"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "coverage"
+issues: []
+discussions: []
+---
+
+>>>>>>> laraxot/dev
 # Media Module Test Coverage
 
 ## Coverage Results
