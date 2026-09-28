@@ -1,4 +1,11 @@
 ---
+<<<<<<< HEAD
+=======
+tags: [documentation]
+qmd: "xotbaseresourcetable model audit media batch.story"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "XotBaseResourceTable: dichiarare $model esplicito e verificare colonne reali"
 type: story
 module: Media

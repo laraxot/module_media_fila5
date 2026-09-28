@@ -11,7 +11,11 @@ use Modules\Xot\Actions\Cast\SafeIntCastAction;
 use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
+<<<<<<< HEAD
 uses(TestCase::class)->group('media-db');
+=======
+uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 /**
  * @param  array<string, mixed>  $attributes

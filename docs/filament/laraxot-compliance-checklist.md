@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Checklist Conformità Laraxot - Modulo Media"
 module: "Media"
 type: concept

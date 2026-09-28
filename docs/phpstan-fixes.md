@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "phpstan fixes"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan fixes"
+issues: []
+discussions: []
+---
+
+>>>>>>> laraxot/dev
 # Correzioni PHPStan Livello 7 - Modulo Media
 
 Questo documento traccia gli errori PHPStan di livello 7 identificati nel modulo Media e le relative soluzioni implementate.
