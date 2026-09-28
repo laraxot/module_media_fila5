@@ -1,4 +1,11 @@
 ---
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "LIVEWIRE WIDGET CONVERSION"
+issues: []
+discussions: []
 title: "Puntatore — Media Livewire → Filament widget"
 canonical: ./livewire-inventory.md
 superseded: true

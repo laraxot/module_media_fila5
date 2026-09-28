@@ -1,3 +1,14 @@
+---
+title: "phpstan report 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan report 1"
+issues: []
+discussions: []
+---
+
 # Report PHPStan - Modulo Media
 
 ## Stato Attuale
@@ -64,3 +75,11 @@ L'analisi PHPStan di livello 1 non ha rilevato errori nel modulo Media. Questo Ã
    - Monitorare l'utilizzo dello storage
 
 ---
+title: "phpstan report 1"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "phpstan report 1"
+issues: []
+discussions: []

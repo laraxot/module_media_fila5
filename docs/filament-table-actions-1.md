@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Convenzioni per le Table Actions in Filament"
 module: "Media"
 type: concept

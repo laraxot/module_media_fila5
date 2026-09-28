@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Modulo Media"
 module: "Media"
 type: concept

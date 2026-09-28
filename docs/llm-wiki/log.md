@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Activity Log"
 module: "Media"
 type: concept

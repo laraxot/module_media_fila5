@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module - File Management Architecture"
 module: "Media"
 type: concept

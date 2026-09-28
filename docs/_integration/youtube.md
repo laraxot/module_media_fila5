@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "youtube"
 module: "Media"
 type: concept

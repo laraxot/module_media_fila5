@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "ConvertVideoByMediaConvertAction"
 module: "Media"
 type: concept

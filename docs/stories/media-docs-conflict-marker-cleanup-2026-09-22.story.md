@@ -1,3 +1,14 @@
+---
+title: "media docs conflict marker cleanup 2026 09 22.story"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "media docs conflict marker cleanup 2026 09 22.story"
+issues: []
+discussions: []
+---
+
 # Story: Media — pulizia marker di conflitto residui in docs/
 
 ## Status

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "__stream"
 module: "Media"
 type: concept

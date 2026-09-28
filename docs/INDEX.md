@@ -1,4 +1,9 @@
 ---
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "INDEX"
+issues: []
+discussions: []
 title: "Documentation Index — Media Module"
 module: "Media"
 type: documentation

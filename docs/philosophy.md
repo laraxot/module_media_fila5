@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module: Philosophy, Purpose, and Design Principles"
 module: "Media"
 type: concept

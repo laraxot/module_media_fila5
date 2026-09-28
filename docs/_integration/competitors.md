@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "_competitors"
 module: "Media"
 type: concept

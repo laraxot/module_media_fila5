@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Filament Version Declaration — Media"
 module: "Media"
 type: concept

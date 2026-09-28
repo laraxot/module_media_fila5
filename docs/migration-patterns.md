@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Migration Patterns - Media Module"
 module: "Media"
 type: pattern

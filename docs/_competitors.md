@@ -1,4 +1,7 @@
 ---
+qmd: " competitors"
+issues: []
+discussions: []
 title: 'Competitors — risorse esterne'
 module: Media
 type: reference
