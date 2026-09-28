@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Task: Media Docs Consolidation & Cleanup"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media — scopo, confini e come servirlo meglio"
 type: concept
 module: Media

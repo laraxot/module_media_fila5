@@ -1,4 +1,10 @@
 ---
+type: note
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "16 4 media case variant consolidation"
+issues: []
+discussions: []
 id: story-164-media-case-variant-consolidation
 slug: story-164-media-case-variant-consolidation
 title: "STORY-164 — Consolidamento delle coppie case-variant nel modulo Media"

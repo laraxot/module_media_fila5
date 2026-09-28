@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module Wiki Index"
 module: "Media"
 type: concept

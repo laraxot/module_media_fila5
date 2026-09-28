@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Task: Media Library Enhancement"
 module: "Media"
 type: concept

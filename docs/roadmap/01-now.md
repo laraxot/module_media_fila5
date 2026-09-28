@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Now (Module Media)"
 module: "Media"
 type: concept

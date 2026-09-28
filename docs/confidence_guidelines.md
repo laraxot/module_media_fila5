@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Massimizzare il livello di confidenza"
 module: "Media"
 type: how-to

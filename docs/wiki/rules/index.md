@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Indice regole — Modulo Media"
 module: "Media"
 type: concept

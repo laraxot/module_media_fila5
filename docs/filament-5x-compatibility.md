@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Filament 5.x compatibility - modulo Media"
 module: "Media"
 type: concept

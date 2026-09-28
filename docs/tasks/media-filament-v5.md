@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Task: Media Filament v5 Alignment (Clusters)"
 module: "Media"
 type: concept

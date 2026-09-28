@@ -1,4 +1,7 @@
 ---
+qmd: "xml to srt"
+issues: []
+discussions: []
 title: 'Xml to srt — risorse esterne'
 module: Media
 type: reference

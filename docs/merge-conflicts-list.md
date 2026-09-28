@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Merge conflict markers — file list"
 module: "Media"
 type: concept
@@ -61,8 +63,6 @@ Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_fil
 ## Note
 
 - Regola: ogni modulo e tema deve avere un file `docs/merge-conflicts-list.md` con la lista locale e lo stato di avanzamento.
-<<<<<<< HEAD
 - Quando si risolve un file, aggiornare lo stato nella lista e sincronizzare l'LLM Wiki (qmd embed) per ingestione.
-=======
+---
 - Quando si risolve un file, aggiornare lo stato nella lista e sincronizzare l'LLM Wiki (qmd embed) per ingestione.
->>>>>>> laraxot/dev

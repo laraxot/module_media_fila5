@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Task: Consolidare Documentazione - Media"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "MCP Server Consigliati per il Modulo Media"
 module: "Media"
 type: concept

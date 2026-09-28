@@ -1,4 +1,10 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "git status fleet merge markers media.story"
+issues: []
+discussions: []
 title: "Bonifica marker merge committati — Media"
 type: story
 module: Media

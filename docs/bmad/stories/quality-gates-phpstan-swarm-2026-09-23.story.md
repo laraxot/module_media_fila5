@@ -1,4 +1,8 @@
 ---
+type: note
+qmd: "quality gates phpstan swarm 2026 09 23.story"
+issues: []
+discussions: []
 id: quality-gates-phpstan-swarm-2026-09-23
 slug: media-phpstan-swarm-2026-09-23-verify-clean
 title: "PHPStan swarm 2026-09-23: verifica Modules/Media, 0 errori confermati"

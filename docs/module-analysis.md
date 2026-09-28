@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 ---
+issues: []
+discussions: []
 title: "Media Module - Comprehensive Analysis"
 module: "Media"
 type: concept
@@ -105,7 +106,6 @@ The Media module provides comprehensive media file management:
 - Advanced search
 - Metadata management
 - Performance optimization
-=======
+---
 - Performance optimization
 - Performance optimization
->>>>>>> laraxot/dev

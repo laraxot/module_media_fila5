@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "API Integration"
 module: "Media"
 type: concept

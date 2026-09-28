@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Risoluzione dei Conflitti Git nel Modulo Media"
 module: "Media"
 type: concept

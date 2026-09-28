@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "File Duplicati da Eliminare - Modulo Media"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Fix: Media TestCase - Database Connection Configuration"
 module: "Media"
 type: concept

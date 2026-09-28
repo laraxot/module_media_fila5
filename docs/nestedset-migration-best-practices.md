@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "NestedSet Migration Best Practices - Media Module"
 module: "Media"
 type: concept

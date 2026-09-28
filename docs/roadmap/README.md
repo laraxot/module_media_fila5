@@ -1,3 +1,14 @@
+---
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
+---
+
 # Media Module Roadmap
 
 > "Media and file management system for the Laraxot ecosystem with support for images, videos, and documents."
@@ -72,3 +83,11 @@ Provide a **comprehensive media management** system that handles:
 
 ---
 
+title: "README"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []

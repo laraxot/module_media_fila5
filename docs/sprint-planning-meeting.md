@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media - Sprint Planning Meeting"
 module: "Media"
 type: concept

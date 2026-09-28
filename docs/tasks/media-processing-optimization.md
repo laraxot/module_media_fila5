@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Task: Media Processing and Optimization"
 module: "Media"
 type: concept

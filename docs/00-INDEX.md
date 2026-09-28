@@ -1,3 +1,14 @@
+---
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
+---
+
 # 📚 MEDIA Module - Documentation Index
 
 **Path**: `laravel/Modules/Media/docs/`  
@@ -27,10 +38,16 @@
 
 ---
 
-<<<<<<< HEAD
+title: "00 INDEX"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "00 INDEX"
+issues: []
+discussions: []
 **Ultimo Aggiornamento**: 2026-03-24
-=======
+---
 ## Dependency Intelligence
 
 - [Dependency intelligence](dependency-intelligence.md)
->>>>>>> laraxot/dev

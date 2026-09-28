@@ -1,4 +1,7 @@
 ---
+qmd: "ARCHITECTURE"
+issues: []
+discussions: []
 title: "Architecture: Media Module"
 type: architecture
 tags: [module, architecture, media, storage]

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Task: Media Security and Access Control"
 module: "Media"
 type: concept
