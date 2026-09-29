@@ -1,7 +1,7 @@
 ---
 <<<<<<< HEAD
 =======
-qmd: "phpstan fixes 2026 05 06"
+qmd: "phpstan fixes"
 issues: []
 discussions: []
 >>>>>>> laraxot/dev
