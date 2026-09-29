@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept
@@ -260,11 +255,6 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
-<<<<<<< HEAD
-=======
-- [Documentazione Generale Media](../readme.md)
----
->>>>>>> laraxot/dev
 - [Documentazione Generale Media](README.md)
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)

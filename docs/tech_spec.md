@@ -1,10 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-qmd: "tech spec"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Technical Specification - Media Module"
 type: technical_spec
 tags: [tech spec, media]

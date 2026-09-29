@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Risoluzione conflitto git su Filament MediaConvertResource"
 module: "Media"
 type: concept

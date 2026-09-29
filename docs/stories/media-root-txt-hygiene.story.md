@@ -1,10 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-qmd: "media root txt hygiene.story"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Media root .txt hygiene"
 module: "Media"
 type: story

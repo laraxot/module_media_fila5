@@ -1,13 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-title: "media module"
-tags: [documentation]
-created: 2026-09-26
-qmd: "media module"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 type: overview
 module: Media
 sources:

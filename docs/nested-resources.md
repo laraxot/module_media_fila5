@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Media Module - Nested Resource Implementation Guide"
 module: "Media"
 type: concept

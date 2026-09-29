@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "NestedSet Migration Best Practices - Media Module"
 module: "Media"
 type: concept

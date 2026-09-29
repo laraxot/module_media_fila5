@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "ponytail audit"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "ponytail audit"
-issues: []
-discussions: []
----
-
->>>>>>> laraxot/dev
 # Ponytail-audit 2026-07-02: Media module findings
 
 Source: repo-wide ponytail-audit pattern (same pass as Xot and Notify module findings, see

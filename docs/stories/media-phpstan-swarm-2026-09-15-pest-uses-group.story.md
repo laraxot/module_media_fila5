@@ -1,13 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-type: note
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "media phpstan swarm 2026 09 15 pest uses group.story"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 id: story-media-phpstan-swarm-2026-09-15-pest-uses-group
 slug: media-phpstan-swarm-2026-09-15-pest-uses-group
 title: "Fix swarm PHPStan 2026-09-15: falsi positivi uses()/describe()->group() nei test Pest"

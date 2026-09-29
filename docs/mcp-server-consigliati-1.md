@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Server MCP consigliati per il modulo Media"
 module: "Media"
 type: concept

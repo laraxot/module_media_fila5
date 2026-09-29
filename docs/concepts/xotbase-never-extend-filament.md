@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Media — mai Filament\*, sempre XotBase*"
 type: concept
 module: Media
