@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "media optimizations"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "media optimizations"
-issues: []
-discussions: []
----
-
->>>>>>> laraxot/dev
 # Ottimizzazioni Performance Modulo Media
 
 ## 1. Ottimizzazione Conversione Video
