@@ -1,16 +1,19 @@
 ---
+<<<<<<< HEAD
+=======
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "log"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Media Wiki Activity Log"
 module: "Media"
 ---
 
 # Media - Wiki Activity Log
-
-## [2026-09-21] cleanup | ritiro Card/Video/Clip Livewire (dead code)
-
-- Cancellato `app/Http/Livewire/Card/Video/Clip.php` (zero caller repo-wide: no hook Filament, no `@livewire`, no rotta, no vista dedicata) e svuotato `_components.json` a `[]`.
-- Già in HEAD via commit `29e8e9784` (sessione concorrente); questa sessione ha chiuso la documentazione residua: story `docs/stories/12.1.media-clip-not-widget.story.md` (status -> done, AC 4-6) e `docs/bmad/livewire-inventory.md`.
-- Verifica: PHPStan L10 `[OK]` 0 errori (123 file); Pest+coverage 282 passed / 9 failed preesistenti (non Clip); PHPMD nessun finding su Livewire.
-
 
 ## [2026-05-27] lint | phpstan zero
 
@@ -30,3 +33,11 @@ module: "Media"
 - Created module index.md
 - Ready for on-demand loading via QMD
 
+<<<<<<< HEAD
+=======
+## [2026-09-25] phpstan | Pest helper invocations
+
+- I test Media invocano i metodi di `Tests\TestCase` come helper globali; usare `$this->` per gli helper d'istanza e `TestCase::` per quelli statici.
+- Le firme PHPDoc dei builder payload preservano `array<string, mixed>` e l'inferenza dei dati passati a Eloquent `create()`.
+- Verifica eseguita: `php -l` sui due file di test aggiornati. Analisi PHPStan e test non eseguiti in questa correzione.
+>>>>>>> laraxot/dev

@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Risoluzione Conflitto IconMediaColumn.php"
 module: "Media"
 type: concept
@@ -91,3 +96,8 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 - [Modules/Media/docs/](../docs/)
 
 *Ultimo aggiornamento: 29 luglio 2025*
+<<<<<<< HEAD
+=======
+---
+*Ultimo aggiornamento: 29 luglio 2025*
+>>>>>>> laraxot/dev

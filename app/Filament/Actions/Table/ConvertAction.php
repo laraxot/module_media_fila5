@@ -1,9 +1,10 @@
 <?php
 
-declare(strict_types=1);
 /**
  * @see https://coderflex.com/blog/create-advanced-filters-with-filament
  */
+
+declare(strict_types=1);
 
 namespace Modules\Media\Filament\Actions\Table;
 

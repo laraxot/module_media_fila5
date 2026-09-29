@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Custom Properties — spatie/laravel-medialibrary"
 module: "Media"
 type: how-to

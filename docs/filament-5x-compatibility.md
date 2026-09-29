@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Filament 5.x compatibility - modulo Media"
 module: "Media"
 type: concept

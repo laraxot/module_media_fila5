@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+## [0.1.0-dev.4](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.3...v0.1.0-dev.4) (2026-09-24)
+
+### Bug Fixes
+
+* **Media:** PHPStan Modules a 0 errori, consolidati i fix dopo il sync ([5cb442a](https://github.com/laraxot/module_media_fila5/commit/5cb442aa97bd22b56587c03a2779e43803b2bc48))
+* **Media:** risolti i marker di conflitto reimmessi dal sync con laraxot/dev ([acb9274](https://github.com/laraxot/module_media_fila5/commit/acb9274faf9100c21932d472f3e1e7d2bf0c4305))
+=======
+---
+title: "CHANGELOG"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "CHANGELOG"
+issues: []
+discussions: []
+---
+>>>>>>> laraxot/dev
+
 ## [0.1.0-dev.2](https://github.com/laraxot/module_media_fila5/compare/v0.1.0-dev.1...v0.1.0-dev.2) (2026-09-15)
 
 ### Bug Fixes
@@ -147,6 +167,18 @@
 
 * resolve nested git conflict markers in Media module ([e0935b2](https://github.com/laraxot/module_media_fila5/commit/e0935b222be41e3a8f6327812c390644368c2cfe))
 
+<<<<<<< HEAD
+=======
+---
+title: "CHANGELOG"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "CHANGELOG"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 # Changelog
 
 Tutte le variazioni importanti di Media saranno generate automaticamente da semantic-release.

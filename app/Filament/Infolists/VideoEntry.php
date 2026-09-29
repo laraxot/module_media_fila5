@@ -174,7 +174,7 @@ class VideoEntry extends XotBaseEntry
         if ($this->getVisibility() === 'private') {
             try {
                 return $storage->temporaryUrl($state, now()->addMinutes(5));
-            } catch (Throwable) {
+            } catch (\Throwable) {
                 // This driver does not support creating temporary URLs.
             }
         }

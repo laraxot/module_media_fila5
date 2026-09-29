@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "FALSE FRIENDS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FALSE FRIENDS"
+issues: []
+discussions: []
+---
+
+>>>>>>> laraxot/dev
 ```
 
 ### Error 2: Inline SVG Misuse
@@ -11,3 +25,15 @@
 {{-- ✅ CORRECT - Standard approach --}}
 @svg('map-marker.svg', ['class' => 'map-marker'])
 ```
+<<<<<<< HEAD
+=======
+---
+title: "FALSE FRIENDS"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "FALSE FRIENDS"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev

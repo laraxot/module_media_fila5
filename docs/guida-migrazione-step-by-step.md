@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Guida Migrazione Step By Step"
 module: "Media"
 type: concept
@@ -9,3 +14,8 @@ qmd: "guida migrazione step by step"
 related:
   - "./webm.md"
 ---
+<<<<<<< HEAD
+=======
+---
+---
+>>>>>>> laraxot/dev

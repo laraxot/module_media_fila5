@@ -1,4 +1,10 @@
 ---
+<<<<<<< HEAD
+=======
+qmd: "multibase class redeclare runtime"
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Ri-dichiarazione classe PHP con due basi _bases contemporanee"
 type: troubleshooting
 confidence: high
