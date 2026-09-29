@@ -31,6 +31,7 @@ Upload, storage, trasformazioni e distribuzione media locale o cloud.
 - **Video/FFmpeg** – transcodifica e processing
 - **S3/CDN** – distribuzione e caching
 
+<<<<<<< .merge_file_Aw7Iuk
 <<<<<<< .merge_file_HjRo7a
 ## Funzionalità chiave
 
@@ -62,6 +63,8 @@ Upload, storage, trasformazioni e distribuzione media locale o cloud.
 
 =======
 >>>>>>> .merge_file_Su0kLD
+=======
+>>>>>>> .merge_file_GKhRUC
 ## Confini architetturali
 
 This module publishes contracts usable by other modules. Logic lives in `Actions`; admin UI follows Laraxot/XotBase.
@@ -81,6 +84,7 @@ See local docs for integration patterns.
 The technical map is in [docs/README.md](./docs/README.md).
 
 - [Story BMAD del modulo](./docs/stories/)
+<<<<<<< .merge_file_Aw7Iuk
 <<<<<<< .merge_file_HjRo7a
 
 - [Architettura](./docs/architecture.md) · [Pattern](./docs/patterns.md) · [Troubleshooting](./docs/troubleshooting.md)
@@ -89,6 +93,8 @@ The technical map is in [docs/README.md](./docs/README.md).
 
 =======
 >>>>>>> .merge_file_Su0kLD
+=======
+>>>>>>> .merge_file_GKhRUC
 - [Regole del progetto](../../../docs/wiki/)
 - [README del progetto](../../README.md)
 
@@ -99,6 +105,7 @@ Maintain `declare(strict_types=1);` in PHP, adhere to project PHPStan config, an
 ---
 
 **Modulo** `media` · **Laraxot ecosystem** · **Project-agnostic**
+<<<<<<< .merge_file_Aw7Iuk
 <<<<<<< .merge_file_HjRo7a
 
 ---
@@ -216,3 +223,5 @@ documentate negli artefatti BMAD sotto [`docs/bmad/`](docs/bmad/). I numeri vann
 rigenerati quando il modulo cambia; non copiarli in badge non verificati.
 =======
 >>>>>>> .merge_file_Su0kLD
+=======
+>>>>>>> .merge_file_GKhRUC
