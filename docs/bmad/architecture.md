@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_aVCoVp
 <<<<<<< .merge_file_RqCfVn
 ---
 title: "Media — architecture"
@@ -114,6 +115,8 @@ Dichiarati in `module.json`:
 - [Setup guide](./setup-guide.md)
 - [BMAD method (Xot)](../../Xot/docs/bmad-method.md)
 =======
+=======
+>>>>>>> .merge_file_aW8Ute
 # Architettura del modulo Media
 
 ## Overview
@@ -147,4 +150,7 @@ Interfacce per l'iniezione di dipendenze.
 - Filament Widget invece di Livewire
 - Array una chiave per riga
 - Schema-driven Forms (XotBaseSchemaWidget)
+<<<<<<< .merge_file_aVCoVp
 >>>>>>> .merge_file_QnukCQ
+=======
+>>>>>>> .merge_file_aW8Ute

@@ -1,17 +1,14 @@
-<<<<<<< HEAD
-=======
 ---
-title: "phpstan s3 actions critical errors"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
+title: "PHPStan S3 Actions Critical Errors Analysis"
+module: "Media"
+type: concept
+tags: [phpstan, s3, actions, critical]
+created: 2026-07-14
+updated: 2026-07-14
 qmd: "phpstan s3 actions critical errors"
-issues: []
-discussions: []
+related:
+  - "./webm.md"
 ---
-
->>>>>>> laraxot/dev
 # PHPStan S3 Actions Critical Errors Analysis
 
 ## Errori Critici Identificati nel Modulo Media
@@ -182,6 +179,10 @@ $effectiveUri = is_array($metadata) && isset($metadata['effectiveUri'])
 - ✅ Debug semplificato
 - ✅ Refactoring facilitato
 - ✅ Team productivity incrementata
+
+## Campagna 5.10 (mixed)
+
+`FormatDebugOutputAction::formatResultBlock` è `array` dopo `is_array` nel loop: i blocchi debug hanno forma, non sono opachi. `formatDataLine(mixed $value)` resta mixed (dump diagnostico). `TestCloudFrontConnectionAction::incompleteConfiguration` prende tre `bool` (manca/c’è): `config()` resta mixed al call site, la firma no.
 
 ## Lesson Learned
 

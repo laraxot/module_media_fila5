@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_bKomSY
 <<<<<<< .merge_file_ovm4Zu
 ---
 title: "Media — BMAD"
@@ -109,6 +110,8 @@ related:
 - [BMAD method (Xot)](../../Xot/docs/bmad-method.md)
 - [Story 5.249 — BMAD docs fleet](../Xot/docs/bmad/stories/5.249-bmad-docs-fleet-completion.story.md)
 =======
+=======
+>>>>>>> .merge_file_GoLw13
 # Media Module
 
 Modulo del sistema PTVX per la gestione delle risorse umane e valutazione delle performance nelle pubbliche amministrazioni.
@@ -142,4 +145,7 @@ Il modulo Media si occupa di [DESCRIZIONE DA COMPLETARE].
 ## Licenza
 
 Proprietario - Laraxot
+<<<<<<< .merge_file_bKomSY
 >>>>>>> .merge_file_MJDPz2
+=======
+>>>>>>> .merge_file_GoLw13

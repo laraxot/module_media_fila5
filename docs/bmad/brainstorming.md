@@ -1,3 +1,4 @@
+<<<<<<< .merge_file_lGnsNL
 <<<<<<< .merge_file_7vADzj
 ---
 title: "Media — brainstorming"
@@ -69,6 +70,8 @@ related:
 - [Epic roadmap](./epics/module-roadmap.md)
 - [Module opportunities (shard)](./brainstorming/module-opportunities.md)
 =======
+=======
+>>>>>>> .merge_file_degadm
 # Brainstorming - Modulo Media
 
 ## Idee iniziali
@@ -91,4 +94,7 @@ related:
 
 - [DOMANDA 1]
 - [DOMANDA 2]
+<<<<<<< .merge_file_lGnsNL
 >>>>>>> .merge_file_kuFgpX
+=======
+>>>>>>> .merge_file_degadm
