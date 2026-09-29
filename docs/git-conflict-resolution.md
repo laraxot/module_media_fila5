@@ -1,15 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-title: "git conflict resolution"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "git conflict resolution"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 created_at: '2026-07-31'
 ---
 

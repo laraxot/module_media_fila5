@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Analisi Modelli, Factory e Seeder - Modulo Media"
 module: "Media"
 type: concept
@@ -51,11 +46,6 @@ Questo documento analizza tutti i modelli del modulo Media verificando la presen
 
 **Relazioni Business Logic**:
 - **Dominio sanitario**: Documenti pazienti, referti medici, immagini profilo
-<<<<<<< HEAD
-=======
----
-- **SaluteOra**: Documenti pazienti, referti medici, immagini profilo
->>>>>>> laraxot/dev
 - **User**: Avatar utenti, documenti identità
 - **Cms**: Immagini contenuti, allegati pagine
 - **Notify**: Allegati notifiche email
@@ -219,11 +209,6 @@ Tutti i file factory devono essere validati con PHPStan livello 9:
 
 ### Moduli Collegati
 - Modulo sanitario legacy - Documenti medici
-<<<<<<< HEAD
-=======
----
-- [SaluteOra Module](../../SaluteOra/docs/modelli_factory_seeder_analisi.md) - Documenti medici
->>>>>>> laraxot/dev
 - [User Module](../../User/docs/modelli_factory_seeder_analisi.md) - Avatar e documenti utente
 - [Cms Module](../../Cms/docs/modelli_factory_seeder_analisi.md) - Contenuti multimediali
 - [Notify Module](../../Notify/docs/modelli_factory_seeder_analisi.md) - Allegati notifiche

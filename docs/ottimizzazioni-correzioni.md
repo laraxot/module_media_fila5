@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Ottimizzazioni Correzioni"
 module: "Media"
 type: concept
@@ -14,8 +9,3 @@ qmd: "ottimizzazioni correzioni"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
-=======
----
----
->>>>>>> laraxot/dev

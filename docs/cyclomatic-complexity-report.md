@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Cyclomatic Complexity Report - Module: Media"
 module: "Media"
 type: concept

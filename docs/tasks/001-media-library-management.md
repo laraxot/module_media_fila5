@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "001 media library management"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "001 media library management"
-issues: []
-discussions: []
----
-
->>>>>>> laraxot/dev
 # Task 001: Implement Media Library Management System
 
 ## Description
@@ -257,18 +243,5 @@ The Media module needs a robust media management system for handling images, vid
 
 ---
 
-<<<<<<< HEAD
 **Status**: Pending
-=======
-title: "001 media library management"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "001 media library management"
-issues: []
-discussions: []
-**Status**: Pending
----
->>>>>>> laraxot/dev
 **Assignee**: TBD

@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Analisi Metodi Duplicati - Modulo Media"
 module: "Media"
 type: concept

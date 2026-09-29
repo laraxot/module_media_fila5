@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Laravel-FFMpeg – Pattern Laraxot nel Modulo Media"
 module: "Media"
 type: pattern

@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Task: Ridurre Suppressioni PHPStan Inline - Media"
 module: "Media"
 type: concept

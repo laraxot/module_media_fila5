@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Integrazione con Laravel e Best Practices"
 module: "Media"
 type: concept

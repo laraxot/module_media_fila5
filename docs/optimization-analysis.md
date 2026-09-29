@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Analisi di Ottimizzazione - Modulo Media"
 module: "Media"
 type: concept
