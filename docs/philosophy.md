@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Media Module: Philosophy, Purpose, and Design Principles"
 module: "Media"
 type: concept

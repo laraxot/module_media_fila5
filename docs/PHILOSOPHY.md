@@ -1,10 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-qmd: "PHILOSOPHY"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Media Module — Complete Philosophy"
 module: "Media"
 type: philosophy

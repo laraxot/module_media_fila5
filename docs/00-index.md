@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "📚 **Indice Documentazione Modulo Media**"
 module: "Media"
 type: concept

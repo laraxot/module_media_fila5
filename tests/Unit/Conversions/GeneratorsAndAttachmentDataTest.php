@@ -24,7 +24,7 @@ use PHPUnit\Framework\Assert;
 uses(TestCase::class)->group('no-media-db');
 
 test('the webm generator declares itself installable and handles mp4 sources', function (): void {
-    $generator = new Webm();
+    $generator = new Webm;
 
     Assert::assertTrue($generator->requirementsAreInstalled());
 
@@ -36,7 +36,7 @@ test('the webm generator declares itself installable and handles mp4 sources', f
 });
 
 test('the powerpoint generator advertises extensions and mime types consistently', function (): void {
-    $generator = new PowerPoint();
+    $generator = new PowerPoint;
 
     $extensions = $generator->supportedExtensions();
     $mimeTypes = $generator->supportedMimeTypes();

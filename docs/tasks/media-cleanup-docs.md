@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Task: Media Docs Consolidation & Cleanup"
 module: "Media"
 type: concept

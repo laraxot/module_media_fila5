@@ -1,12 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "PATTERNS"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Architectural Patterns — Media Module"
 module: "Media"
 type: architecture
@@ -366,8 +358,3 @@ public function store(Request $request)
 ---
 
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
-<<<<<<< HEAD
-=======
----
-**Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](./TROUBLESHOOTING.md) | [Contributing](./CONTRIBUTING.md)
->>>>>>> laraxot/dev

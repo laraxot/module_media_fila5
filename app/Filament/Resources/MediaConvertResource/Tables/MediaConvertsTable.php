@@ -24,7 +24,6 @@ class MediaConvertsTable extends XotBaseResourceTable
 {
     /**
      * @return array<string, Column>
-     * @return array<string, Column>
      */
     public function getTableColumns(): array
     {
