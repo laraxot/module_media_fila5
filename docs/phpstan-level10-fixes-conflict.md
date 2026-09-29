@@ -1,17 +1,14 @@
-<<<<<<< HEAD
-=======
 ---
-title: "phpstan level10 fixes conflict"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
+title: "Correzioni PHPStan Livello 10 - Modulo Media"
+module: "Media"
+type: concept
+tags: [phpstan, level10, fixes, conflict]
+created: 2026-07-14
+updated: 2026-07-14
 qmd: "phpstan level10 fixes conflict"
-issues: []
-discussions: []
+related:
+  - "./webm.md"
 ---
-
->>>>>>> laraxot/dev
 # Correzioni PHPStan Livello 10 - Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
@@ -129,15 +126,4 @@ Questa soluzione mantiene la funzionalità originale migliorando al contempo la 
 
 ---
 
-<<<<<<< HEAD
-=======
-title: "phpstan level10 fixes conflict"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "phpstan level10 fixes conflict"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 > **Collegamento globale:** Questa documentazione locale dettaglia i casi concreti e le decisioni architetturali adottate nel modulo Media. Per le strategie generali e le best practices, consulta sempre anche la documentazione globale in [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).

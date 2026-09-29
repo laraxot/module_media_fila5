@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Migrazione Filament"
 module: "Media"
 type: concept
@@ -14,8 +9,3 @@ qmd: "migrazione filament"
 related:
   - "./webm.md"
 ---
-<<<<<<< HEAD
-=======
----
----
->>>>>>> laraxot/dev

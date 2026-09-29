@@ -1,10 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-qmd: "xml to srt"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: 'Xml to srt — risorse esterne'
 module: Media
 type: reference

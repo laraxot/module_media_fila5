@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "REDUNDANCY ANALYSIS"
 module: "Media"
 type: concept

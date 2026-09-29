@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Modulo Media - Gestione File Multimediali"
 module: "Media"
 type: concept

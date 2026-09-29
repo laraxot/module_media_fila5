@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Laravel-FFMpeg – API Reference Completa"
 module: "Media"
 type: concept

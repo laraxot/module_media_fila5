@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Integrazione di FFmpeg nel Modulo Media"
 module: "Media"
 type: concept

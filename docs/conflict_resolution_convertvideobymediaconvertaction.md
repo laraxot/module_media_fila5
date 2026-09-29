@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Risoluzione Conflitti ConvertVideoByMediaConvertAction.php"
 module: "Media"
 type: concept
