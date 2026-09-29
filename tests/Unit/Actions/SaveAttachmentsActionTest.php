@@ -25,7 +25,7 @@ afterEach(function (): void {
 });
 
 it('executes save attachments successfully', function (): void {
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
@@ -56,7 +56,7 @@ it('executes save attachments successfully', function (): void {
 });
 
 it('handles empty attachments', function (): void {
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
@@ -66,7 +66,7 @@ it('handles empty attachments', function (): void {
 });
 
 it('skips nonexistent files', function (): void {
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
@@ -81,7 +81,7 @@ it('skips nonexistent files', function (): void {
 });
 
 it('handles storage errors gracefully', function (): void {
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
@@ -99,7 +99,7 @@ it('handles storage errors gracefully', function (): void {
 });
 
 it('uses correct disk', function (): void {
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
@@ -128,7 +128,7 @@ it('uses correct disk', function (): void {
 });
 
 it('cleans up temp files', function (): void {
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();
@@ -154,7 +154,7 @@ it('cleans up temp files', function (): void {
 });
 
 it('handles multiple attachments', function (): void {
-    $action = new SaveAttachmentsAction();
+    $action = new SaveAttachmentsAction;
 
     /** @var MockInterface&HasMedia $record */
     $record = $this->makeHasMediaRecordMock();

@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Merge Conflict Files List"
 module: "Media"
 type: concept
@@ -95,8 +90,4 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 ---
 *Generated on: $(date)
 *Total files: 96
-<<<<<<< HEAD
-=======
----
->>>>>>> laraxot/dev
 *Status: Pending resolution*

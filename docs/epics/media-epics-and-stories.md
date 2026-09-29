@@ -1,10 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-qmd: "media epics and stories"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Media Epics and User Stories"
 type: user_stories
 tags: [user stories, epics, media]

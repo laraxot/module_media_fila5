@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "BMAD Method v6.3 operativo nel progetto"
 module: "Media"
 type: concept

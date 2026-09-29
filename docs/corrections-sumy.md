@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Riepilogo Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept

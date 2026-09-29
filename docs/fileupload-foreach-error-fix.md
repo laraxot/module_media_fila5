@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "FileUpload foreach Error Fix - Internal Server Error"
 module: "Media"
 type: concept

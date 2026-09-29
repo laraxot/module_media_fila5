@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Report: Metodi con nome duplicato nei moduli e nei temi"
 module: "Media"
 type: concept

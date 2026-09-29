@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "ConvertVideoByMediaConvertAction"
 module: "Media"
 type: concept
