@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Task: Consolidare Documentazione - Media"
 module: "Media"
 type: concept

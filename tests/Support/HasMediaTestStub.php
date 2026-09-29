@@ -57,7 +57,7 @@ abstract class HasMediaTestStub implements HasMedia
      */
     public function getMedia(string $collectionName = 'default', callable|array $filters = []): Collection
     {
-        return new Collection;
+        return new Collection();
     }
 
     public function clearMediaCollection(string $collectionName = 'default'): HasMedia
@@ -78,15 +78,9 @@ abstract class HasMediaTestStub implements HasMedia
         return false;
     }
 
-    /**
-     * Il contratto Spatie (`InteractsWithMedia`) restituisce `Collection`;
-     * il tipo nativo si restringe rispetto al docblock dell'interfaccia (non tipizzato).
-     *
-     * @return Collection<int, Media>
-     */
-    public function loadMedia(string $collectionName): Collection
+    public function loadMedia(string $collectionName): mixed
     {
-        return new Collection;
+        return null;
     }
 
     public function addMediaConversion(string $name): Conversion

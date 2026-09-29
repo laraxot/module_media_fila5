@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+---
+title: "resource table columns"
+type: note
+tags: [documentation]
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "resource table columns"
+issues: []
+discussions: []
+---
+
+>>>>>>> laraxot/dev
 # Resource table columns
 
 ## BMAD story and evidence

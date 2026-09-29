@@ -1,10 +1,11 @@
 <?php
 
-declare(strict_types=1);
 /**
  * @see https://github.com/protonemedia/laravel-ffmpeg
  * Azione per convertire un video utilizzando ConvertData.
  */
+
+declare(strict_types=1);
 
 namespace Modules\Media\Actions\Video;
 
@@ -37,7 +38,7 @@ class ConvertVideoByConvertDataAction
         }
 
         // Instanziamo il formato prima di usarlo
-        $formatInstance = new $format;
+        $formatInstance = new $format();
 
         $export = FFMpeg::fromDisk($data->disk)
             ->open($data->file)

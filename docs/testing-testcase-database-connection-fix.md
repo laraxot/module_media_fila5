@@ -1,4 +1,9 @@
 ---
+<<<<<<< HEAD
+=======
+issues: []
+discussions: []
+>>>>>>> laraxot/dev
 title: "Fix: Media TestCase - Database Connection Configuration"
 module: "Media"
 type: concept
