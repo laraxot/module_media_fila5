@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
----
-title: "BOOST SKILL FIX SUMMARY"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "BOOST SKILL FIX SUMMARY"
-issues: []
-discussions: []
----
-
->>>>>>> laraxot/dev
 # Boost Skill Fix Summary - Media Module
 
 **Date**: 2026-03-02  

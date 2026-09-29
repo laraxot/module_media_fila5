@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Media - Filosofia Completa: Logica, Religione, Politica, Zen"
 module: "Media"
 type: concept

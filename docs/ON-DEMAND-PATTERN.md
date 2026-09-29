@@ -1,10 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-qmd: "ON DEMAND PATTERN"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "On-Demand Pattern — Module Media"
 type: documentation
 created: 2026-05-11

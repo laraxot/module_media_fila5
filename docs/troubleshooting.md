@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Troubleshooting"
 module: "Media"
 type: concept
@@ -562,8 +557,3 @@ Systematic error resolution for file upload, storage, processing, and permission
 ---
 
 **Related:** [Patterns](./PATTERNS.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)
-<<<<<<< HEAD
-=======
----
-# Troubleshooting
->>>>>>> laraxot/dev

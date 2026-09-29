@@ -1,9 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Ponytail audit — Media (over-engineering)"
 module: "Media"
 type: concept
@@ -35,9 +30,4 @@ Rename `.bak` su `BaseController.php` dopo grep globale. Nessun impatto se nessu
 
 ## Collegamenti
 
-- [00-INDEX.md](./00-index.md)
-<<<<<<< HEAD
-=======
----
 - [00-INDEX.md](./00-INDEX.md)
->>>>>>> laraxot/dev

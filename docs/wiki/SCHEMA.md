@@ -1,13 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-type: note
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "SCHEMA"
-issues: []
-discussions: []
->>>>>>> laraxot/dev
 title: "Rimando a schema.md"
 description: "Documento unificato: il contenuto canonico vive in schema.md."
 status: merged
