@@ -61,12 +61,14 @@ class MediaTable extends XotBaseResourceTable
      */
     private static function getDistinctOptions(string $column): array
     {
-        return Media::query()
-            ->distinct()
-            ->pluck($column, $column)
-            ->filter(static fn (mixed $value): bool => is_string($value))
-            ->mapWithKeys(static fn (mixed $value): array => [$value => $value])
-            ->all();
+        $options = [];
+        foreach (Media::query()->distinct()->pluck($column) as $value) {
+            if (is_string($value)) {
+                $options[$value] = $value;
+            }
+        }
+
+        return $options;
     }
 
     /**
@@ -89,6 +91,7 @@ class MediaTable extends XotBaseResourceTable
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
                     Assert::string($record->file_name, 'file_name must be string');
+
                     return response()->download($filePath, $record->file_name);
                 }),
             'convert' => Action::make('convert')
@@ -96,6 +99,7 @@ class MediaTable extends XotBaseResourceTable
                 ->color('gray')
                 ->url(static function (Media $record): string {
                     Assert::string($res = MediaResource::getUrl('convert', ['record' => $record]));
+
                     return $res;
                 })
                 ->openUrlInNewTab(true),
