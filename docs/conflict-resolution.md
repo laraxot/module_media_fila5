@@ -1,3 +1,14 @@
+---
+title: "Conflict Resolution — Module Media"
+module: "Media"
+type: concept
+tags: [conflict, resolution]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflict resolution"
+related:
+  - "./webm.md"
+---
 # Conflict Resolution — Module Media
 
 ## Summary

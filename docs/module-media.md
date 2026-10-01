@@ -1,3 +1,14 @@
+---
+title: "Modulo Media"
+module: "Media"
+type: concept
+tags: [module, media]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "module media"
+related:
+  - "./webm.md"
+---
 # Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).
