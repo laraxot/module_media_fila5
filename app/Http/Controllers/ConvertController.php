@@ -14,12 +14,9 @@ class ConvertController extends Controller
      */
     public function __invoke(string|int $mediaId): View
     {
-<<<<<<< .merge_file_E6nFVu
-        return view('media::convert', ['id' => $mediaId]);
-=======
         /** @var view-string $view */
         $view = 'media::convert';
         return view($view, []);
->>>>>>> .merge_file_rCdEYi
+
     }
 }
