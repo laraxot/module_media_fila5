@@ -14,6 +14,8 @@ class ConvertController extends Controller
      */
     public function __invoke(string|int $_id): View
     {
-        return view('media::convert', []);
+        /** @var view-string $view */
+        $view = 'media::convert';
+        return view($view, []);
     }
 }
