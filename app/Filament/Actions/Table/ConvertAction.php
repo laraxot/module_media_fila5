@@ -1,19 +1,18 @@
 <?php
 
+declare(strict_types=1);
 /**
  * @see https://coderflex.com/blog/create-advanced-filters-with-filament
  */
-
-declare(strict_types=1);
 
 namespace Modules\Media\Filament\Actions\Table;
 
 // Header actions must be an instance of Filament\Actions\Action, or Filament\Actions\ActionGroup.
 // use Filament\Actions\Action;
-use Filament\Actions\Action;
 use Filament\Forms\Components\Radio;
+use Modules\Xot\Filament\Actions\XotBaseAction;
 
-class ConvertAction extends Action
+class ConvertAction extends XotBaseAction
 {
     protected function setUp(): void
     {
@@ -31,7 +30,9 @@ class ConvertAction extends Action
                     ->inline()
                     ->inlineLabel(false),
             ])
-            ->action(dddx(...));
+            ->action(static function (): void {
+                throw new \RuntimeException('Removed debug dddx');
+            });
 
         // ->requiresConfirmation()
     }

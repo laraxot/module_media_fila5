@@ -14,12 +14,6 @@ class ConvertController extends Controller
      */
     public function __invoke(string|int $_id): View
     {
-        /**
-         * @phpstan-var view-string
-         */
-        $view = 'media::convert';
-        $view_params = [];
-
-        return view($view, $view_params);
+        return view('media::convert', []);
     }
 }

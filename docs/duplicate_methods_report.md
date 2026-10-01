@@ -1,3 +1,14 @@
+---
+title: "Report: Metodi con nome duplicato nei moduli e nei temi"
+module: "Media"
+type: concept
+tags: [duplicate, methods, report]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "duplicate methods report"
+related:
+  - "./webm.md"
+---
 # Report: Metodi con nome duplicato nei moduli e nei temi
 
 ## Introduzione

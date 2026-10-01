@@ -8,10 +8,13 @@ use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
-final class ResolveMediaExporterAction
+class ResolveMediaExporterAction
 {
     use QueueableAction;
 
+    /**
+     * `mixed $value` voluto: normalizza qualunque risultato della catena fluent FFmpeg.
+     */
     public function execute(mixed $value): MediaExporter
     {
         if (! $value instanceof MediaExporter) {
