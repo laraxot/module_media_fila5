@@ -10,10 +10,10 @@ use Illuminate\Contracts\View\View;
 class ConvertController extends Controller
 {
     /**
-     * Show the profile for the given user.
+     * Show the conversion page for the given media.
      */
-    public function __invoke(string|int $_id): View
+    public function __invoke(string|int $mediaId): View
     {
-        return view('media::convert', []);
+        return view('media::convert', ['id' => $mediaId]);
     }
 }
