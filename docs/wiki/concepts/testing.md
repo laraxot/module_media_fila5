@@ -1,3 +1,14 @@
+---
+title: "Testing in Media"
+module: "Media"
+type: concept
+tags: [testing]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "testing"
+related:
+  - "./webm.md"
+---
 # Testing in Media
 
 Questo componente segue lo standard globale di progetto per il testing.

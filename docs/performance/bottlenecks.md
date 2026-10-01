@@ -1,3 +1,14 @@
+---
+title: "Media Module Performance Bottlenecks"
+module: "Media"
+type: concept
+tags: [bottlenecks]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "bottlenecks"
+related:
+  - "./webm.md"
+---
 # Media Module Performance Bottlenecks
 
 ## File Upload and Processing

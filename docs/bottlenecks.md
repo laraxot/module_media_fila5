@@ -1,3 +1,14 @@
+---
+title: "Colli di Bottiglia e Soluzioni - Modulo Media"
+module: "Media"
+type: concept
+tags: [bottlenecks]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "bottlenecks"
+related:
+  - "./webm.md"
+---
 # Colli di Bottiglia e Soluzioni - Modulo Media
 
 ## Panoramica
