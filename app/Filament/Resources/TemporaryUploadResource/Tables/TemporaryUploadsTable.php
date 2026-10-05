@@ -34,10 +34,9 @@ class TemporaryUploadsTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
-            'folder' => SelectFilter::make('folder')->options(TemporaryUpload::distinct()->pluck(
-                'folder',
-                'folder',
-            )->toArray(...)),
+            'folder' => SelectFilter::make('folder')->options(
+                static fn (): array => TemporaryUpload::query()->distinct()->pluck('folder', 'folder')->toArray(),
+            ),
         ];
     }
 

@@ -40,18 +40,15 @@ class MediaConvertsTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
-            'format' => SelectFilter::make('format')->options(MediaConvert::distinct()->pluck(
-                'format',
-                'format',
-            )->toArray(...)),
-            'codec_video' => SelectFilter::make('codec_video')->options(MediaConvert::distinct()->pluck(
-                'codec_video',
-                'codec_video',
-            )->toArray(...)),
-            'codec_audio' => SelectFilter::make('codec_audio')->options(MediaConvert::distinct()->pluck(
-                'codec_audio',
-                'codec_audio',
-            )->toArray(...)),
+            'format' => SelectFilter::make('format')->options(
+                static fn (): array => MediaConvert::query()->distinct()->pluck('format', 'format')->toArray(),
+            ),
+            'codec_video' => SelectFilter::make('codec_video')->options(
+                static fn (): array => MediaConvert::query()->distinct()->pluck('codec_video', 'codec_video')->toArray(),
+            ),
+            'codec_audio' => SelectFilter::make('codec_audio')->options(
+                static fn (): array => MediaConvert::query()->distinct()->pluck('codec_audio', 'codec_audio')->toArray(),
+            ),
         ];
     }
 

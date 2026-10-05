@@ -61,12 +61,23 @@ class MediaTable extends XotBaseResourceTable
      */
     private static function getDistinctOptions(string $column): array
     {
+<<<<<<< .merge_file_28AUgF
         return Media::query()
             ->distinct()
             ->pluck($column, $column)
             ->filter(static fn (mixed $value): bool => is_string($value))
             ->mapWithKeys(static fn (mixed $value): array => [$value => $value])
             ->all();
+=======
+        $options = [];
+        foreach (Media::query()->distinct()->pluck($column) as $value) {
+            if (is_string($value)) {
+                $options[$value] = $value;
+            }
+        }
+
+        return $options;
+>>>>>>> .merge_file_KUUXwW
     }
 
     /**

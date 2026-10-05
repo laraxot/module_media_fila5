@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Feature;
+
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
@@ -27,7 +28,6 @@ use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
-use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;
