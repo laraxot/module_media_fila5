@@ -47,15 +47,26 @@ class MediaTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
-            'collection_name' => SelectFilter::make('collection_name')->options(Media::distinct()->pluck(
-                'collection_name',
-                'collection_name',
-            )->toArray(...)),
-            'mime_type' => SelectFilter::make('mime_type')->options(Media::distinct()->pluck(
-                'mime_type',
-                'mime_type',
-            )->toArray(...)),
+            'collection_name' => SelectFilter::make('collection_name')->options(
+                self::getDistinctOptions('collection_name'),
+            ),
+            'mime_type' => SelectFilter::make('mime_type')->options(
+                self::getDistinctOptions('mime_type'),
+            ),
         ];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    private static function getDistinctOptions(string $column): array
+    {
+        return Media::query()
+            ->distinct()
+            ->pluck($column, $column)
+            ->filter(static fn (mixed $value): bool => is_string($value))
+            ->mapWithKeys(static fn (mixed $value): array => [$value => $value])
+            ->all();
     }
 
     /**
@@ -77,9 +88,7 @@ class MediaTable extends XotBaseResourceTable
                 ->action(static function (Media $record): BinaryFileResponse {
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
-
                     Assert::string($record->file_name, 'file_name must be string');
-
                     return response()->download($filePath, $record->file_name);
                 }),
             'convert' => Action::make('convert')
@@ -87,7 +96,6 @@ class MediaTable extends XotBaseResourceTable
                 ->color('gray')
                 ->url(static function (Media $record): string {
                     Assert::string($res = MediaResource::getUrl('convert', ['record' => $record]));
-
                     return $res;
                 })
                 ->openUrlInNewTab(true),
