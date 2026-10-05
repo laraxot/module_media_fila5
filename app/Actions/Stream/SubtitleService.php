@@ -79,7 +79,7 @@ class SubtitleService
     {
         $plain = $this->getPlain();
         $up = [$this->field_name => $plain];
-        $this->model = tap($this->model)->update($up);
+        $this->model->update($up);
 
         return $this;
     }

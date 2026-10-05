@@ -6,8 +6,9 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
+use Modules\Media\Tests\TestCase;
 
-uses(\Modules\Media\Tests\TestCase::class);
+uses(TestCase::class);
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
