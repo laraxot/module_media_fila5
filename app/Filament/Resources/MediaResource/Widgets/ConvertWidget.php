@@ -32,9 +32,7 @@ class ConvertWidget extends XotBaseWidget
 
     public function __construct()
     {
-        /** @var view-string $viewPath */
-        $viewPath = 'media::filament.widgets.convert';
-        $this->view = $viewPath;
+        $this->view = 'media::filament.widgets.convert';
 
         parent::__construct();
     }

@@ -6,6 +6,7 @@ namespace Modules\Media\Services;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
+use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use Webmozart\Assert\Assert;
 
 use function is_string;
@@ -44,7 +45,7 @@ class VideoStream
      */
     public function __construct(string $disk, string $path)
     {
-        $filesystem = Storage::disk($disk);
+        $filesystem = app(GetFilesystemAdapterAction::class)->execute($disk);
 
         if (! $filesystem->exists($path)) {
             throw new Exception("File does not exist at path: {$path}");

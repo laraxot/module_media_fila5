@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-use Eloquent;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
@@ -29,7 +28,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property-read string $human_readable_size
  * @property-read EloquentCollection<int, MediaConvert> $mediaConverts
  * @property-read int|null $media_converts_count
- * @property-read Model|Eloquent $model
+ * @property-read Model $model
  * @property-read string $original_url
  * @property-read string $preview_url
  * @property-read TemporaryUpload|null $temporaryUpload
@@ -39,10 +38,10 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static MediaCollection<int, static> all($columns = ['*'])
  * @method static \Modules\Media\Database\Factories\MediaFactory factory($count = null, $state = [])
  * @method static MediaCollection<int, static> get($columns = ['*'])
- * @method static Builder<static>|Media newModelQuery()
- * @method static Builder<static>|Media newQuery()
- * @method static Builder<static>|Media ordered()
- * @method static Builder<static>|Media query()
+ * @method static Builder<static> newModelQuery()
+ * @method static Builder<static> newQuery()
+ * @method static Builder<static> ordered()
+ * @method static Builder<static> query()
  *
  * @property int $id
  * @property string $model_type
@@ -68,30 +67,28 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string|null $deleted_by
  * @property int|string|null $user_id
  *
- * @method static Builder<static>|Media whereCollectionName($value)
- * @method static Builder<static>|Media whereConversionsDisk($value)
- * @method static Builder<static>|Media whereCreatedAt($value)
- * @method static Builder<static>|Media whereCreatedBy($value)
- * @method static Builder<static>|Media whereCustomProperties($value)
- * @method static Builder<static>|Media whereDeletedAt($value)
- * @method static Builder<static>|Media whereDeletedBy($value)
- * @method static Builder<static>|Media whereDisk($value)
- * @method static Builder<static>|Media whereFileName($value)
- * @method static Builder<static>|Media whereGeneratedConversions($value)
- * @method static Builder<static>|Media whereId($value)
- * @method static Builder<static>|Media whereManipulations($value)
- * @method static Builder<static>|Media whereMimeType($value)
- * @method static Builder<static>|Media whereModelId($value)
- * @method static Builder<static>|Media whereModelType($value)
- * @method static Builder<static>|Media whereName($value)
- * @method static Builder<static>|Media whereOrderColumn($value)
- * @method static Builder<static>|Media whereResponsiveImages($value)
- * @method static Builder<static>|Media whereSize($value)
- * @method static Builder<static>|Media whereUpdatedAt($value)
- * @method static Builder<static>|Media whereUpdatedBy($value)
- * @method static Builder<static>|Media whereUuid($value)
- *
- * @mixin Eloquent
+ * @method static Builder<static> whereCollectionName($value)
+ * @method static Builder<static> whereConversionsDisk($value)
+ * @method static Builder<static> whereCreatedAt($value)
+ * @method static Builder<static> whereCreatedBy($value)
+ * @method static Builder<static> whereCustomProperties($value)
+ * @method static Builder<static> whereDeletedAt($value)
+ * @method static Builder<static> whereDeletedBy($value)
+ * @method static Builder<static> whereDisk($value)
+ * @method static Builder<static> whereFileName($value)
+ * @method static Builder<static> whereGeneratedConversions($value)
+ * @method static Builder<static> whereId($value)
+ * @method static Builder<static> whereManipulations($value)
+ * @method static Builder<static> whereMimeType($value)
+ * @method static Builder<static> whereModelId($value)
+ * @method static Builder<static> whereModelType($value)
+ * @method static Builder<static> whereName($value)
+ * @method static Builder<static> whereOrderColumn($value)
+ * @method static Builder<static> whereResponsiveImages($value)
+ * @method static Builder<static> whereSize($value)
+ * @method static Builder<static> whereUpdatedAt($value)
+ * @method static Builder<static> whereUpdatedBy($value)
+ * @method static Builder<static> whereUuid($value)
  */
 class Media extends SpatieMedia
 {
@@ -103,16 +100,18 @@ class Media extends SpatieMedia
 
     /**
      * @param  array<int, string>  $uuids
-     * @return MediaCollection<int, self>
+     * @return MediaCollection<int, static>
      */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
     {
-        return static::whereIn('uuid', $uuids)
-            ->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where(
-                'session_id',
-                session()->getId(),
-            ))
-            ->get();
+        $query = static::query();
+        $query->whereIn('uuid', $uuids);
+        $query->whereHasMorph('model', [TemporaryUpload::class], static fn (Builder $builder) => $builder->where(
+            'session_id',
+            session()->getId(),
+        ));
+
+        return new MediaCollection($query->get()->all());
     }
 
     /**

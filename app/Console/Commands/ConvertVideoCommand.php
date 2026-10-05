@@ -8,6 +8,7 @@ use FFMpeg\Format\Video\WebM;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Webmozart\Assert\Assert;
@@ -52,6 +53,6 @@ class ConvertVideoCommand extends Command
         )->inFormat($format);
         $formattedExport->save($file_new);
 
-        return Storage::disk($disk)->url($file_new);
+        return app(GetFilesystemAdapterAction::class)->execute($disk)->url($file_new);
     }
 }
