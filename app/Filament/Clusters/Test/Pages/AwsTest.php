@@ -16,6 +16,7 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
+use Illuminate\Support\Facades\Lang;
 use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
@@ -54,14 +55,14 @@ class AwsTest extends XotBasePage
                 ->schema([
                     Actions::make([
                         Action::make('test_s3_connection')
-                            ->label(__('ui::aws_test.test_s3_connection'))
+                            ->label(Lang::string('ui::aws_test.test_s3_connection'))
                             ->action('testS3Connection'),
                         Action::make('test_s3_permissions')
-                            ->label(__('ui::aws_test.test_s3_permissions'))
+                            ->label(Lang::string('ui::aws_test.test_s3_permissions'))
                             ->color('warning')
                             ->action('testS3Permissions'),
                         Action::make('test_file_operations')
-                            ->label(__('ui::aws_test.test_file_operations'))
+                            ->label(Lang::string('ui::aws_test.test_file_operations'))
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
@@ -166,7 +167,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.s3_connection_successful'))
+                ->title(Lang::string('ui::awstest.notifications.s3_connection_successful'))
                 ->success()
                 ->send();
         } catch (AwsException $e) {
@@ -180,7 +181,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.s3_connection_failed'))
+                ->title(Lang::string('ui::awstest.notifications.s3_connection_failed'))
                 ->danger()
                 ->body($e->getAwsErrorCode() ?? 'UnknownError')
                 ->send();
@@ -201,7 +202,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.cloudfront_config_valid'))
+                ->title(Lang::string('ui::awstest.notifications.cloudfront_config_valid'))
                 ->success()
                 ->send();
         } catch (Exception $e) {
@@ -215,7 +216,7 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
-                ->title(__('ui::awstest.notifications.cloudfront_config_error'))
+                ->title(Lang::string('ui::awstest.notifications.cloudfront_config_error'))
                 ->danger()
                 ->send();
         }
@@ -238,7 +239,7 @@ class AwsTest extends XotBasePage
         ];
 
         Notification::make()
-            ->title(__('ui::awstest.notifications.full_diagnostic_completed'))
+            ->title(Lang::string('ui::awstest.notifications.full_diagnostic_completed'))
             ->success()
             ->send();
     }

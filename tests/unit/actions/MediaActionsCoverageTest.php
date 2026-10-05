@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
+
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
