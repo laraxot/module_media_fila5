@@ -1,3 +1,13 @@
+---
+bmad_id: MEDIA-cleanup-media-2026-09-22.story
+domain: media-module
+version: 1.0.0
+status: active
+tags: [media, docs]
+created: 2026-10-06
+updated: 2026-10-06
+---
+
 # Story: Cleanup Media Module
 
 ## BMAD Method Applied
