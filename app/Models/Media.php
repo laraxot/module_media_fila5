@@ -99,10 +99,10 @@ class Media extends SpatieMedia
     protected $connection = 'media';
 
     /**
-     * @param  array<int, string>  $uuids
-     * @return MediaCollection<int, Media>
+     * @param array<int, string> $uuids
+     * @return \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media>
      */
-    public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
+    public static function findWithTemporaryUploadInCurrentSession(array $uuids): \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection
     {
         $query = static::query();
         $query->whereIn('uuid', $uuids);
@@ -111,7 +111,10 @@ class Media extends SpatieMedia
             session()->getId(),
         ));
 
-        return new MediaCollection($query->get()->all());
+        /** @var \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection<int, \Spatie\MediaLibrary\MediaCollections\Models\Media> $collection */
+        $collection = new \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection($query->get()->all());
+
+        return $collection;
     }
 
     /**
