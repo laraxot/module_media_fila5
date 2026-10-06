@@ -214,9 +214,3 @@ docs/chat
 # Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
 app/Application
 /.docs-archive/
-<<<<<<< HEAD
-=======
-
-# Artefatti audit vietati (rule: tests-auditcoverage-forbidden)
-audit-coverage/
->>>>>>> laraxot/dev
