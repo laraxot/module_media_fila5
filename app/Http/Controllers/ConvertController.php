@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Media\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 
-class ConvertController extends Controller
+class ConvertController extends BaseController
 {
     /**
      * Show the conversion page for the given media.
