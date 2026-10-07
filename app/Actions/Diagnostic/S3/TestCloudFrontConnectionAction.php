@@ -12,7 +12,7 @@ class TestCloudFrontConnectionAction
 {
     use QueueableAction;
 
-    private const URL_PREVIEW_LENGTH = 100;
+    private const int URL_PREVIEW_LENGTH = 100;
 
     /**
      * @return array<string, mixed>
