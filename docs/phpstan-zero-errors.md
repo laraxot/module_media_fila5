@@ -3,8 +3,8 @@ title: "PHPStan zero-error — modulo Media"
 type: concept
 tags: [phpstan, testing, pest]
 created: 2026-06-10
-updated: 2026-06-10
-qmd: "media phpstan pest assert database helper"
+updated: 2026-09-24
+qmd: "media phpstan pest assert database helper case-sensitive duplicates"
 issues:
   - "https://github.com/laraxot/base_fixcity_fila5/issues/330"
 discussions:
@@ -29,10 +29,13 @@ cd laravel && ./vendor/bin/phpstan analyse Modules/Media
 | Anti-pattern | Fix |
 |--------------|-----|
 | `expect()->toBe()` | `Assert::assertSame()` |
-| `$this->assertDatabaseHas` in closure Pest | `assertMediaTableHas()` in `MediaBusinessLogicTest.php` |
+| `$this->assertDatabaseHas` in closure Pest | `assertMediaTableHas()` / `XotBasePest::assertTableHas` |
 | `pest()->uses()` in `Pest.php` | `uses(TestCase::class)` per file; `Pest.php` solo helper |
 | `MediaCollection` fantasma | Rimosso da `Pest.php` |
 | `method_exists` triviali | `ReflectionClass::hasMethod` o assert su API reale |
+| Alberi duplicati `tests/unit` vs `tests/Unit` (Linux case-sensitive) | Tenere solo `Unit`/`Feature`/`Filament` PascalCase; eliminare lowercase stub |
+| `expect($typed)->toBeInstanceOf(Same::class)` | Redundant (pest-plugin-phpstan); usare `Assert::assertInstanceOf` o asserire comportamento |
+| Cast `(int)` su `mixed` / `mediaIntKey` ricorsivo | `SafeIntCastAction::cast()` + `getKey()` corretto |
 
 ## Pest.php
 

@@ -35,16 +35,10 @@ afterEach(function (): void {
  * perché è il contratto di ValidationRule: una closure `(): void` passerebbe a runtime
  * e mentirebbe sul tipo.
  *
-<<<<<<< HEAD
- * @return list<string>
- */
-function mediaFileExtensionFailures(FileExtensionRule $rule, mixed $value): array
-=======
  * @param  UploadedFile|string  $value  File valido oppure valore non-file per il ramo negativo
  * @return list<string>
  */
 function mediaFileExtensionFailures(FileExtensionRule $rule, UploadedFile|string $value): array
->>>>>>> laraxot/dev
 {
     /** @var list<string> $failures */
     $failures = [];
@@ -62,17 +56,10 @@ function mediaFileExtensionFailures(FileExtensionRule $rule, UploadedFile|string
 
 describe('Media gap closer — statement coverage', function (): void {
     test('TemporaryUploadPathGenerator builds paths from in-memory media', function (): void {
-<<<<<<< HEAD
-        $media = new Media();
-        $media->id = 7;
-        $media->uuid = '550e8400-e29b-41d4-a716-446655440000';
-        $gen = new TemporaryUploadPathGenerator();
-=======
         $media = new Media;
         $media->id = 7;
         $media->uuid = '550e8400-e29b-41d4-a716-446655440000';
         $gen = new TemporaryUploadPathGenerator;
->>>>>>> laraxot/dev
         Assert::assertStringContainsString('tmp/', $gen->getPath($media));
         Assert::assertStringContainsString(md5($media->id.$media->uuid.'conversion'), $gen->getPathForConversions($media));
         Assert::assertStringContainsString(md5($media->id.$media->uuid.'responsive'), $gen->getPathForResponsiveImages($media));
@@ -100,11 +87,7 @@ describe('Media gap closer — statement coverage', function (): void {
             Assert::assertNotSame('', $e->getMessage());
         }
 
-<<<<<<< HEAD
-        $controller = new ConvertController();
-=======
         $controller = new ConvertController;
->>>>>>> laraxot/dev
         Assert::assertInstanceOf(ConvertController::class, $controller);
     });
 

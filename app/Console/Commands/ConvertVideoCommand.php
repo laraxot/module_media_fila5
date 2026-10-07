@@ -8,10 +8,7 @@ use FFMpeg\Format\Video\WebM;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
-=======
 use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
->>>>>>> laraxot/dev
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Webmozart\Assert\Assert;
@@ -35,12 +32,7 @@ class ConvertVideoCommand extends Command
             return '';
         }
 
-<<<<<<< HEAD
-        $format = new WebM();
-        $format = new WebM();
-=======
         $format = new WebM;
->>>>>>> laraxot/dev
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file)->replaceLast('.mp4', '.'.$extension)->toString();
 
@@ -52,21 +44,9 @@ class ConvertVideoCommand extends Command
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
 
-<<<<<<< HEAD
-        $export->toDisk($disk);
-        $export->inFormat($format);
-        $export->save($file_new);
-        $formattedExport = MediaExporterResolver::from(
-            $export->toDisk($disk)
-        )->inFormat($format);
-        $formattedExport->save($file_new);
-
-        return Storage::disk($disk)->url($file_new);
-=======
         // Una sola transcodifica: toDisk() e inFormat() configurano lo stesso exporter, save() scrive $file_new.
         MediaExporterResolver::from($export->toDisk($disk))->inFormat($format)->save($file_new);
 
         return app(GetFilesystemAdapterAction::class)->execute($disk)->url($file_new);
->>>>>>> laraxot/dev
     }
 }

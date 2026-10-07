@@ -1,83 +1,99 @@
 ---
-<<<<<<< .merge_file_EvfORR
-title: "Media — quick reference"
+title: "Media - quick reference"
+description: "Riferimento rapido per lo sviluppo su Modules\\Media: classi chiave, comandi, verifiche e comandi BMAD"
 type: note
-tags: [media, quick-reference, commands, actions, spatie-media-library]
+module: "Media"
+alias: "media"
+tags: [media, quick-reference, commands, actions, spatie-media-library, bmad]
 created: 2026-09-28
-updated: 2026-09-28
-qmd: "Media quick reference comandi azioni conversioni ffmpeg s3"
+updated: 2026-10-07
+documentation_date: "2026-09-29"
+bmad_version: "6.2.0"
+qmd: "Media quick reference comandi azioni conversioni ffmpeg s3 bmad"
 related:
   - ./README.md
   - ./setup-guide.md
   - ./architecture/module-boundary.md
+  - ./epics/module-roadmap.md
 ---
 
-# Media — quick reference
+# Media - quick reference
 
 > **SUMMARY**: riferimento rapido per lo sviluppo su `Modules\Media`:
 > namespace, modelli chiave, action orchestrative, comandi console, path
-> delle conversioni e dipendenze. Tutto derivato da file reali del modulo.
+> delle conversioni, dipendenze e comandi BMAD. Derivato da file reali del modulo.
 
 ## Namespace e connessione
 
 - Namespace: `Modules\Media`
-- Connessione DB modello: `media` (vedi `app/Models/BaseModel.php:24`)
+- Connessione DB dei model: `media` (vedi `app/Models/BaseModel.php`)
 
 ## Modelli principali
 
-| Modello | File | Estende / Implementa | Tabella |
+| Modello | File | Estende / Implementa | Note |
 |---|---|---|---|
-| `Media` | `app/Models/Media.php` | `SpatieMedia` | `media` |
+| `Media` | `app/Models/Media.php` | `SpatieMedia` | tabella derivata dal model |
 | `MediaConvert` | `app/Models/MediaConvert.php` | `BaseModel` | `media_converts` |
 | `TemporaryUpload` | `app/Models/TemporaryUpload.php` | `BaseModel`, `HasMedia` | `temporary_uploads` |
-| `BaseModel` | `app/Models/BaseModel.php` | `XotBaseModel` | — |
+| `BaseModel` | `app/Models/BaseModel.php` | `XotBaseModel` | classe astratta, fissa la connessione |
 
 ## Relazioni chiave
 
-- `Media.mediaConverts()` → `HasMany` (`app/Models/Media.php:145`)
-- `Media.temporaryUpload()` → `BelongsTo` (`app/Models/Media.php:124`)
-- `MediaConvert.media()` → `BelongsTo` (reverse)
+- `Media::mediaConverts()` -> `HasMany`
+- `Media::temporaryUpload()` -> `BelongsTo`
+- `Media::creator()` -> `BelongsTo`
+- `MediaConvert::media()` -> `BelongsTo` (inversa)
 
-## Action orchestrative
+## Contracts ed enum
 
-| Action | File | Scopo |
-|---|---|---|
-| `AttachMediaAction` | `app/Actions/AttachMediaAction.php` | allega media a un modello |
-| `ConvertVideoAction` | `app/Actions/Video/ConvertVideoAction.php` | conversione video principale |
-| `SaveAttachmentsAction` | `app/Actions/SaveAttachmentsAction.php` | salvataggio allegati |
-| `S3.UploadFileAction` | `app/Actions/S3/UploadFileAction.php` | upload su S3 |
-| `S3.DeleteFileAction` | `app/Actions/S3/DeleteFileAction.php` | cancellazione su S3 |
+| Elemento | Ruolo |
+|---|---|
+| `PathGeneratorContract` (`app/Contracts/`) | Genera i path di storage in modo pluggable |
+| `PathGenerator` (`app/Contracts/`) | Implementazione concreta del generatore path |
+| `AttachmentTypeEnum` (`app/Enums/`) | `image`, `video`, `document`, `manual` |
+
+## Actions (`app/Actions/`): un dominio per cartella
+
+| Dominio | Action principali |
+|---------|-------------------|
+| root | `AttachMediaAction`, `SaveAttachmentsAction`, `GetAttachmentsSchemaAction`, `GenerateTemporaryUploadPathAction` |
+| `Video/` | `ConvertVideoAction`, `ConvertVideoByMediaConvertAction`, `ConvertVideoByConvertDataAction`, `GetVideoDurationAction`, `GetVideoScreenshotAction`, `GetVideoFrameContentAction` |
+| `Image/` | `Merge`, `SvgExistsAction` |
+| `Ffmpeg/` | `ResolveMediaExporterAction` |
+| `Stream/` | `StreamVideoAction`, `SubtitleService` |
+| `Subtitle/` | `ConvertSrtToVttAction`, `ExtractSubtitlePlainTextAction`, `ParseSubtitleXmlAction`, `UpdateModelSubtitleFieldAction` |
+| `CloudFront/` | `GetCloudFrontSignedUrlAction` |
+| `S3/` | `UploadFileAction`, `DeleteFileAction`, `CheckFileExistsAction`, `GetFileInfoAction` |
+| `Storage/` | `GetFilesystemAdapterAction` (disco tipizzato `FilesystemAdapter`, da usare al posto di `Storage::disk()` per `url()` e `mimeType()`) |
+| `TemporaryUpload/` | `GetTemporaryUploadPathAction`, `GetTemporaryUploadConversionPathAction`, `GetTemporaryUploadResponsivePathAction` |
+| `Diagnostic/` | `Aws/` (CloudFront, IAM, S3), `S3/` (connessione, credenziali, permessi), `Support/` (client S3/STS) |
 
 ## Console
 
 | Comando | File | Descrizione |
 |---|---|---|
-| `media:convert-video` (o simile) | `app/Console/Commands/ConvertVideoCommand.php` | conversione video via FFmpeg |
+| `php artisan media:convert-video {disk} {file}` | `app/Console/Commands/ConvertVideoCommand.php` | transcodifica un mp4 in WebM via FFmpeg |
 
 ## Conversioni (Spatie)
 
-- Conversioni immagine: `app/conversions/` e `app/Conversions/ImageGenerators/`
+- Conversioni immagine: `app/Conversions/ImageGenerators/` (esiste anche un residuo `app/conversions/` in minuscolo, case-variant)
 - Conversioni video: `app/Conversions/VideoGenerators/`
 - Conversione FFmpeg: `app/Actions/Ffmpeg/ResolveMediaExporterAction.php`
 
-## Diagnostic
+## Filament
 
-- `app/Actions/Diagnostic/S3/` — test connessione, credenziali, permessi
-- `app/Actions/Diagnostic/Aws/` — diagnostica CloudFront, IAM, S3
-- `app/Actions/Diagnostic/Support/` — creazione client S3/STS
+- **Resources** (`app/Filament/Resources/`): `MediaResource`, `MediaConvertResource`, `TemporaryUploadResource`, `HasMediaResource`
+- **Extra**: `Clusters/`, `RelationManagers/`, `Infolists/`, `Actions/`, `Tables/`
+- Le list page sono sottili: tabelle in `Resources/<R>/Tables/<Plurale>Table`, schemi in `Schemas/`.
+- **Livewire**: nessun controller residuo, i Conversion manager sono il target widget.
 
-## Enum
+## Pattern del modulo
 
-- `AttachmentTypeEnum` → `app/Enums/AttachmentTypeEnum.php`
-
-## Resource Filament
-
-| Resource | Namespace |
-|---|---|
-| `MediaResource` | `app/Filament/Resources/MediaResource` |
-| `MediaConvertResource` | `app/Filament/Resources/MediaConvertResource` |
-| `TemporaryUploadResource` | `app/Filament/Resources/TemporaryUploadResource` |
-| `HasMediaResource` | `app/Filament/Resources/HasMediaResource` |
+- Un path di storage non e' mai hardcoded: passa da `PathGeneratorContract`
+- `MediaConvert` e' asincrono: la conversione parte e il record si aggiorna via queue
+- Streaming via URL firmato CloudFront, mai file pubblico esposto
+- `TemporaryUpload` precede l'attach: ciclo separato, cleanup a parte
+- Immagini con `intervention/image`, video con `pbmedia/laravel-ffmpeg` `^8.5`
 
 ## Comandi rapidi (da laravel/)
 
@@ -92,24 +108,7 @@ php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/Media
 ./vendor/bin/pest Modules/Media
 ```
 
-## Vedi anche
-
-- [README](./README.md)
-- [Setup guide](./setup-guide.md)
-- [Architettura — module boundary](./architecture/module-boundary.md)
-- [Epic roadmap](./epics/module-roadmap.md)
-=======
-title: "Media — BMAD Quick Reference"
-description: "Comandi rapidi BMAD per il modulo Media"
-module: "Media"
-alias: "media"
-documentation_date: "2026-09-29"
-bmad_version: "6.2.0"
----
-
-# Media — BMAD Quick Reference
-
-## Comandi Rapidi
+## Comandi BMAD per Media
 
 ### Help
 
@@ -117,16 +116,16 @@ bmad_version: "6.2.0"
 bmad-help
 ```
 
-### Workflow Media
+### Workflow
 
 ```bash
 # Phase 1
 bmad-domain-research      # Studio dominio: immagini, video, streaming, S3
-bmad-technical-research   # Fattibilità FFmpeg, CloudFront, conversione
+bmad-technical-research   # Fattibilita' FFmpeg, CloudFront, conversione
 
 # Phase 2
 bmad-create-prd           # PRD: upload, conversioni, streaming, allegati
-bmad-create-architecture  # Architettura Media ↔ MediaConvert ↔ TemporaryUpload
+bmad-create-architecture  # Architettura Media <-> MediaConvert <-> TemporaryUpload
 
 # Phase 3
 bmad-create-epics-and-stories            # Epic: immagini, video, allegati
@@ -149,76 +148,16 @@ bmad-code-review          # Review con focus path, storage, ffmpeg
 | Amelia (dev) | `skill: "bmad-agent-dev"` | implementazione Actions |
 | Quinn (qa) | `skill: "bmad-agent-qa"` | test upload, conversione, signed URL |
 
-## Comandi Artisan del Modulo
-
-```bash
-php artisan media:convert-video {disk} {file}   # Convert Video
-```
-
-## Classi Chiave
-
-### Contracts (`app/Contracts/`)
-
-| Contract | Ruolo |
-|---|---|
-| `PathGeneratorContract` | Genera i path di storage in modo pluggable |
-| `PathGenerator` | Implementazione concreta del generatore path |
-
-### Enums (`app/Enums/`)
-
-`AttachmentTypeEnum` → `image`, `video`, `document`, `manual`.
-
-### Actions (`app/Actions/`) — un dominio per cartella
-
-| Dominio | Action principali |
-|---------|-------------------|
-| `Video/` | `ConvertVideoAction`, `ConvertVideoByMediaConvertAction`, `ConvertVideoByConvertDataAction`, `GetVideoDurationAction`, `GetVideoScreenshotAction`, `GetVideoFrameContentAction` |
-| `Image/` | `Merge`, `SvgExistsAction` |
-| `Ffmpeg/` | `ResolveMediaExporterAction` |
-| `Stream/` | `StreamVideoAction`, `SubtitleService` |
-| `Subtitle/` | gestione sottotitoli |
-| `CloudFront/` | `GetCloudFrontSignedUrlAction` |
-| `S3/` | upload e gestione bucket |
-| `TemporaryUpload/` | `GenerateTemporaryUploadPathAction` e ciclo di vita |
-| `Diagnostic/` | diagnostica ambiente ffmpeg/disk |
-| root | `AttachMediaAction`, `SaveAttachmentsAction`, `GetAttachmentsSchemaAction` |
-
-### Models (`app/Models/`)
-
-`Media`, `MediaConvert`, `TemporaryUpload` — tutti da `BaseModel`.
-
-### Filament 5
-
-- **Resources**: `MediaResource`, `MediaConvertResource`, `TemporaryUploadResource`, `HasMediaResource`
-- **Extra**: `Clusters/`, `RelationManagers/`, `Infolists/`, `Actions/`, `Tables/`
-- **Livewire**: nessun controller residuo — i Conversion manager sono il target widget
-
-## Pattern del Modulo
-
-- Un path di storage non è mai hardcoded: passa da `PathGeneratorContract`
-- `MediaConvert` è asincrono: la conversione parte e il record si aggiorna via queue
-- Streaming via URL firmato CloudFront, mai file pubblico esposto
-- `TemporaryUpload` precede l'attach: cycle separato, cleanup a parte
-- Conversione immagini con `intervention/image`, video con `pbmedia/laravel-ffmpeg` `^8.5`
-
-## Verifica
-
-```bash
-cd laravel
-
-php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/Media
-./vendor/bin/pest Modules/Media
-./vendor/bin/pint
-```
-
-## Quick Flow
+### Quick flow
 
 ```bash
 bmad-quick-dev "Aggiungi thumbnail alla tabella media"
 bmad-quick-spec "Specifica retention dei temporary upload"
 ```
 
----
+## Vedi anche
 
-*Media · BMAD Quick Reference · data 2026-09-29*
->>>>>>> .merge_file_WK5iXE
+- [README](./README.md)
+- [Setup guide](./setup-guide.md)
+- [Architettura: module boundary](./architecture/module-boundary.md)
+- [Epic roadmap](./epics/module-roadmap.md)
