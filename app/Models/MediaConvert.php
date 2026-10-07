@@ -1,18 +1,10 @@
 <?php
 
-<<<<<<< HEAD
-=======
 declare(strict_types=1);
->>>>>>> laraxot/dev
 /**
  * ---.
  */
 
-<<<<<<< HEAD
-declare(strict_types=1);
-
-=======
->>>>>>> laraxot/dev
 namespace Modules\Media\Models;
 
 use Illuminate\Database\Eloquent\Builder;
@@ -28,15 +20,9 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read Media|null $media
  * @property-read ProfileContract|null $updater
  *
-<<<<<<< HEAD
- * @method static Builder<static>|MediaConvert newModelQuery()
- * @method static Builder<static>|MediaConvert newQuery()
- * @method static Builder<static>|MediaConvert query()
-=======
  * @method static Builder<static> newModelQuery()
  * @method static Builder<static> newQuery()
  * @method static Builder<static> query()
->>>>>>> laraxot/dev
  *
  * @property string $id
  * @property int $media_id
@@ -60,31 +46,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
  *
-<<<<<<< HEAD
- * @method static Builder<static>|MediaConvert whereBitrate($value)
- * @method static Builder<static>|MediaConvert whereCodecAudio($value)
- * @method static Builder<static>|MediaConvert whereCodecVideo($value)
- * @method static Builder<static>|MediaConvert whereCreatedAt($value)
- * @method static Builder<static>|MediaConvert whereCreatedBy($value)
- * @method static Builder<static>|MediaConvert whereDeletedAt($value)
- * @method static Builder<static>|MediaConvert whereDeletedBy($value)
- * @method static Builder<static>|MediaConvert whereExecutionTime($value)
- * @method static Builder<static>|MediaConvert whereFormat($value)
- * @method static Builder<static>|MediaConvert whereHeight($value)
- * @method static Builder<static>|MediaConvert whereId($value)
- * @method static Builder<static>|MediaConvert whereMediaId($value)
- * @method static Builder<static>|MediaConvert wherePercentage($value)
- * @method static Builder<static>|MediaConvert wherePreset($value)
- * @method static Builder<static>|MediaConvert whereRate($value)
- * @method static Builder<static>|MediaConvert whereRemaining($value)
- * @method static Builder<static>|MediaConvert whereSpeed($value)
- * @method static Builder<static>|MediaConvert whereThreads($value)
- * @method static Builder<static>|MediaConvert whereUpdatedAt($value)
- * @method static Builder<static>|MediaConvert whereUpdatedBy($value)
- * @method static Builder<static>|MediaConvert whereWidth($value)
- *
- * @mixin \Eloquent
-=======
  * @method static Builder<static> whereBitrate($value)
  * @method static Builder<static> whereCodecAudio($value)
  * @method static Builder<static> whereCodecVideo($value)
@@ -106,7 +67,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static> whereUpdatedAt($value)
  * @method static Builder<static> whereUpdatedBy($value)
  * @method static Builder<static> whereWidth($value)
->>>>>>> laraxot/dev
  */
 class MediaConvert extends BaseModel
 {

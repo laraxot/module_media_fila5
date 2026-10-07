@@ -1,7 +1,4 @@
 ---
-qmd: "phpstan fixes ffmpeg convertvideo"
-issues: []
-discussions: []
 title: "PHPStan Fixes 2026-05-06"
 type: troubleshooting
 sources: ["phpstan_modules_initial.json"]

@@ -12,11 +12,7 @@ return [
             'name' => 'System',
             'description' => 'Multimedia-Dateiverwaltung',
         ],
-<<<<<<< HEAD
-        'label' => 'media',
-=======
         'label' => 'Medien',
->>>>>>> laraxot/dev
         'sort' => '20',
         'icon' => 'media-main-animated',
     ],

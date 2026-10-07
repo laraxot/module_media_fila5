@@ -1,13 +1,3 @@
----
-bmad_id: MEDIA-readme
-domain: media-module
-version: 1.0.0
-status: active
-tags: [media, docs]
-created: 2026-10-06
-updated: 2026-10-06
----
-
 # Modulo Media — Documentazione Bridge
 
 Documentazione canonica per il modulo Media: gestione multimediale (immagini, video, documenti, audio) in Laraxot.

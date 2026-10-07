@@ -10,10 +10,6 @@ use Modules\Xot\Filament\Actions\XotBaseAction;
 use Modules\Xot\Filament\Actions\XotBaseActionGroup;
 use Modules\Xot\Filament\Resources\RelationManagers\XotBaseRelationManager;
 use Modules\Xot\Filament\Resources\XotBaseResource;
-<<<<<<< HEAD
-use Override;
-=======
->>>>>>> laraxot/dev
 
 class MediaRelationManager extends XotBaseRelationManager
 {

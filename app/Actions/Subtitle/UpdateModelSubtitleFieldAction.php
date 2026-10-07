@@ -18,12 +18,8 @@ class UpdateModelSubtitleFieldAction
     {
         $plain = app(ExtractSubtitlePlainTextAction::class)->execute($filePath);
 
-<<<<<<< HEAD
-        return tap($model)->update([$fieldName => $plain]);
-=======
         $model->update([$fieldName => $plain]);
 
         return $model;
->>>>>>> laraxot/dev
     }
 }

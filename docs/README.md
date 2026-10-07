@@ -1,26 +1,37 @@
 ---
-<<<<<<< HEAD
-title: "README"
-type: note
-tags: [documentation]
+title: "Media Module - Documentation Index"
+type: documentation
+bmad_id: MEDIA-DOCS-INDEX
+domain: media-module
+module: Media
+version: 1.1.0
+status: active
+audience: [developer, maintainer]
+tags: [media, docs, index, bmad, documentation]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-10-07
 qmd: "README"
 issues: []
 discussions: []
+related: [bmad/00-INDEX.md, bmad/readme.md, INDEX.md]
 ---
 
-# Modulo Media — Documentazione Bridge
+# Media Module - Documentation Index
 
-Documentazione canonica per il modulo Media: gestione multimediale (immagini, video, documenti, audio) in Laraxot.
+Path: `laravel/Modules/Media/docs/`
+Module: @Modules/Media
+Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). Il wiki legacy e' in `docs-archive-2026/`.
 
-## File Canonici
+## File canonici
 
-1. **[README.md](README.md)** — questo file, punto di ingresso
-2. **[architecture.md](architecture.md)** — architettura, namespace, dipendenze, struttura, funzionalità
-3. **[index.md](index.md)** — bridge per discovery (legacy)
+1. **[README.md](README.md)** - questo file, punto di ingresso
+2. **[architecture.md](architecture.md)** - architettura, namespace, dipendenze, struttura, funzionalita'
+3. **[INDEX.md](INDEX.md)** - indice completo per categoria, con le story BMAD
+4. **[index.md](index.md)** - bridge per discovery (legacy)
 
-## Scopo Modulo
+Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
+
+## Scopo del modulo
 
 - Memorizzazione, elaborazione, distribuzione file multimediali
 - Supporto multi-format (immagini, video, documenti, audio)
@@ -34,51 +45,16 @@ Documentazione canonica per il modulo Media: gestione multimediale (immagini, vi
 - Utilizzato da: temi e moduli applicativi
 - Standard di documentazione: vedi `/docs/` root
 
-Per dettagli architetturali, vedi **architecture.md**.
----
-title: "README"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "README"
-issues: []
-discussions: []
-# Documentation
+## Struttura della documentazione
 
-This directory contains documentation for the module.
+- **architecture.md**: architettura del modulo e pattern di design
+- **README.md**: questo file
+- **stories/**: story BMAD del modulo (elenco in [INDEX.md](INDEX.md#story-bmad))
+- **bmad/**: artefatti BMAD (indice in [bmad/00-INDEX.md](./bmad/00-INDEX.md))
 
-## Structure
+Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al codice, in formato Markdown (`.md`).
 
-- **architecture.md** - Module architecture and design patterns
-- **README.md** - This file
+## Story recenti
 
-## Guidelines
-
-Documentation should be:
-- Clear and concise
-- Example-driven
-- Updated with code changes
-- Use Markdown format (.md)
-=======
-bmad_id: MEDIA-DOCS-INDEX
-domain: media-module
-version: 1.0.0
-status: active
-audience: [developer, maintainer]
-tags: [media, docs, index, bmad]
-created: 2026-10-06
-updated: 2026-10-06
-author: agent-org
-related: [docs/bmad/00-INDEX.md, docs/bmad/readme.md]
----
-# Media Module — Documentation Index
-
-Path: `laravel/Modules/Media/docs/`
-Module: @Modules/Media
-Scope: Consolidated docs after archive (docs-archive-2026/ holds legacy wiki).
-
-## Stories PHPStan
-
-- [2026-10-06 PHPStan cleanup — Media](./stories/2026-10-06-phpstan-cleanup-media.story.md) · [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md)
->>>>>>> laraxot/dev
+- [2026-10-06 PHPStan cleanup - Media](./stories/2026-10-06-phpstan-cleanup-media.story.md) · [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md)
+- [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)

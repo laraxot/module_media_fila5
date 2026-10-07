@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Http\Controllers;
 
-<<<<<<< HEAD
-abstract class BaseController {}
-=======
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -18,4 +15,3 @@ abstract class BaseController extends RoutingController
     use DispatchesJobs;
     use ValidatesRequests;
 }
->>>>>>> laraxot/dev

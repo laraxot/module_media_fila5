@@ -1,6 +1,4 @@
 ---
-issues: []
-discussions: []
 title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
 module: "Media"
 type: concept
@@ -165,10 +163,10 @@ updated: 2026-07-01
 qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []
----
 related:
-  - "./webm.md"
+  - ./coding-agent-manifests.md
 ---
+
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media

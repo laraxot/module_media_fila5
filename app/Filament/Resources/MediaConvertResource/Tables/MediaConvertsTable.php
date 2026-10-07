@@ -24,10 +24,6 @@ class MediaConvertsTable extends XotBaseResourceTable
 {
     /**
      * @return array<string, Column>
-<<<<<<< HEAD
-     * @return array<string, Column>
-=======
->>>>>>> laraxot/dev
      */
     public function getTableColumns(): array
     {
@@ -44,20 +40,6 @@ class MediaConvertsTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
-<<<<<<< HEAD
-            'format' => SelectFilter::make('format')->options(MediaConvert::distinct()->pluck(
-                'format',
-                'format',
-            )->toArray(...)),
-            'codec_video' => SelectFilter::make('codec_video')->options(MediaConvert::distinct()->pluck(
-                'codec_video',
-                'codec_video',
-            )->toArray(...)),
-            'codec_audio' => SelectFilter::make('codec_audio')->options(MediaConvert::distinct()->pluck(
-                'codec_audio',
-                'codec_audio',
-            )->toArray(...)),
-=======
             'format' => SelectFilter::make('format')->options(
                 static fn (): array => MediaConvert::query()->distinct()->pluck('format', 'format')->toArray(),
             ),
@@ -67,7 +49,6 @@ class MediaConvertsTable extends XotBaseResourceTable
             'codec_audio' => SelectFilter::make('codec_audio')->options(
                 static fn (): array => MediaConvert::query()->distinct()->pluck('codec_audio', 'codec_audio')->toArray(),
             ),
->>>>>>> laraxot/dev
         ];
     }
 
