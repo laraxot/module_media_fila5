@@ -32,7 +32,11 @@ return [
         ],
     ],
     'navigation' => [
+<<<<<<< HEAD
         'label' => 'Missing Navigation Label',
+=======
+        'label' => 'Anhang hochladen',
+>>>>>>> laraxot/dev
         'plural_label' => 'Missing Navigation Plural Label',
         'group' => 'Missing Group',
         'icon' => 'heroicon-o-puzzle-piece',

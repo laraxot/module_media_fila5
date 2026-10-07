@@ -38,9 +38,12 @@ class VideoPlayer extends Component
      */
     public function render(): View
     {
+<<<<<<< HEAD
         /**
          * @phpstan-var view-string
          */
+=======
+>>>>>>> laraxot/dev
         $view = app(GetViewAction::class)->execute($this->driver);
 
         $view_params = [

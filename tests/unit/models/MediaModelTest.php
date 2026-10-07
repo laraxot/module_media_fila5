@@ -3,6 +3,10 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
@@ -11,9 +15,16 @@ namespace Modules\Media\Tests\Unit\Models;
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 
 use Modules\Media\Models\Media;
+<<<<<<< HEAD
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 uses(\Modules\Media\Tests\TestCase::class);
+=======
+use Modules\Media\Tests\TestCase;
+use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
+
+uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
