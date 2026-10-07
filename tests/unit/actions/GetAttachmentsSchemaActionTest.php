@@ -4,10 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
 
+<<<<<<< HEAD
 uses(\Modules\Media\Tests\TestCase::class);
 
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+=======
+use Filament\Forms\Components\FileUpload;
+use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Media\Tests\TestCase;
+
+uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 /**
  * Test that the action returns attachment schema correctly.

@@ -1,6 +1,9 @@
 ---
+<<<<<<< HEAD
 issues: []
 discussions: []
+=======
+>>>>>>> laraxot/dev
 title: "Modulo Media"
 module: "Media"
 type: concept

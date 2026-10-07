@@ -12,6 +12,12 @@ class ResolveMediaExporterAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
+=======
+    /**
+     * `mixed $value` voluto: normalizza qualunque risultato della catena fluent FFmpeg.
+     */
+>>>>>>> laraxot/dev
     public function execute(mixed $value): MediaExporter
     {
         if (! $value instanceof MediaExporter) {

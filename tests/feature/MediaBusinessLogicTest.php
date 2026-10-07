@@ -3,6 +3,10 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Feature;
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
@@ -27,7 +31,10 @@ use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
+<<<<<<< HEAD
 use Modules\Media\Models\MediaConvert;
+=======
+>>>>>>> laraxot/dev
 use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\User\Models\User;

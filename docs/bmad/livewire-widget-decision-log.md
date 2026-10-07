@@ -1,10 +1,13 @@
 ---
+<<<<<<< HEAD
 tags: [documentation]
 created: 2026-09-26
 updated: 2026-09-26
 qmd: "livewire widget decision log"
 issues: []
 discussions: []
+=======
+>>>>>>> laraxot/dev
 title: "Decision log — Media"
 type: decision-log
 module: Media

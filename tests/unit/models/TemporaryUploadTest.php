@@ -6,8 +6,14 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
+<<<<<<< HEAD
 
 uses(\Modules\Media\Tests\TestCase::class);
+=======
+use Modules\Media\Tests\TestCase;
+
+uses(TestCase::class);
+>>>>>>> laraxot/dev
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {

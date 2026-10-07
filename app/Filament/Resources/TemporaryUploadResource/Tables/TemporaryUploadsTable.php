@@ -18,7 +18,10 @@ class TemporaryUploadsTable extends XotBaseResourceTable
 {
     /**
      * @return array<string, Column>
+<<<<<<< HEAD
      * @return array<string, Column>
+=======
+>>>>>>> laraxot/dev
      */
     public function getTableColumns(): array
     {
@@ -35,10 +38,16 @@ class TemporaryUploadsTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
+<<<<<<< HEAD
             'folder' => SelectFilter::make('folder')->options(TemporaryUpload::distinct()->pluck(
                 'folder',
                 'folder',
             )->toArray(...)),
+=======
+            'folder' => SelectFilter::make('folder')->options(
+                static fn (): array => TemporaryUpload::query()->distinct()->pluck('folder', 'folder')->toArray(),
+            ),
+>>>>>>> laraxot/dev
         ];
     }
 
