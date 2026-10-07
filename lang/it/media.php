@@ -9,7 +9,11 @@ return [
         'name' => 'Media',
         'plural' => 'Media',
         'group' => ['name' => 'Sistema', 'description' => 'Gestione dei file multimediali'],
+<<<<<<< HEAD
         'label' => 'media',
+=======
+        'label' => 'Media',
+>>>>>>> laraxot/dev
         'sort' => 20,
         'icon' => 'media-main-animated',
     ],

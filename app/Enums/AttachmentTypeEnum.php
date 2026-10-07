@@ -49,7 +49,11 @@ enum AttachmentTypeEnum: string implements HasLabel
     {
         $translationKey = sprintf('media::attachments.type_notes.%s', $this->value);
         if (Lang::has($translationKey)) {
+<<<<<<< HEAD
             return trans($translationKey);
+=======
+            return Lang::string($translationKey);
+>>>>>>> laraxot/dev
         }
 
         return null;
@@ -57,7 +61,11 @@ enum AttachmentTypeEnum: string implements HasLabel
 
     public function getLabel(): string
     {
+<<<<<<< HEAD
         return trans('media::attachments.types.'.$this->value);
+=======
+        return Lang::string('media::attachments.types.'.$this->value);
+>>>>>>> laraxot/dev
     }
 
     // private static function translateBaseUniquePath(): string

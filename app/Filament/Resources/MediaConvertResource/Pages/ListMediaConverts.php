@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaConvertResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\Action;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\BulkAction;
@@ -22,12 +23,18 @@ use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Override;
 use Spatie\QueueableAction\ActionJob;
+=======
+use Modules\Job\Filament\Widgets\ClockWidget;
+use Modules\Media\Filament\Resources\MediaConvertResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+>>>>>>> laraxot/dev
 
 class ListMediaConverts extends XotBaseListRecords
 {
     protected static string $resource = MediaConvertResource::class;
 
     /**
+<<<<<<< HEAD
      * @return array<string, Tables\Columns\Column>
      */
     
@@ -86,6 +93,8 @@ class ListMediaConverts extends XotBaseListRecords
     }
 
     /**
+=======
+>>>>>>> laraxot/dev
      * @return array<class-string>
      */
     protected function getHeaderWidgets(): array

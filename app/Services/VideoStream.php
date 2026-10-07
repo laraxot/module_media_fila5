@@ -6,6 +6,10 @@ namespace Modules\Media\Services;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
+<<<<<<< HEAD
+=======
+use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
+>>>>>>> laraxot/dev
 use Webmozart\Assert\Assert;
 
 use function is_string;
@@ -44,7 +48,11 @@ class VideoStream
      */
     public function __construct(string $disk, string $path)
     {
+<<<<<<< HEAD
         $filesystem = Storage::disk($disk);
+=======
+        $filesystem = app(GetFilesystemAdapterAction::class)->execute($disk);
+>>>>>>> laraxot/dev
 
         if (! $filesystem->exists($path)) {
             throw new Exception("File does not exist at path: {$path}");
