@@ -1,24 +1,3 @@
----
-<<<<<<< HEAD
-title: "cleanup media 2026 09 22.story"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "cleanup media 2026 09 22.story"
-issues: []
-discussions: []
-=======
-bmad_id: MEDIA-cleanup-media-2026-09-22.story
-domain: media-module
-version: 1.0.0
-status: active
-tags: [media, docs]
-created: 2026-10-06
-updated: 2026-10-06
->>>>>>> laraxot/dev
----
-
 # Story: Cleanup Media Module
 
 ## BMAD Method Applied

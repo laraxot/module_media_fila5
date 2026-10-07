@@ -1,28 +1,28 @@
 ---
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-10-07
 qmd: "INDEX"
 issues: []
 discussions: []
-title: "Documentation Index — Media Module"
+title: "Documentation Index - Media Module"
 module: "Media"
 type: documentation
 tags: [index, navigation]
-last_updated: 2026-07-28
+last_updated: 2026-10-07
 ---
 
-# Documentation Index — Media Module
+# Documentation Index - Media Module
 
-**Last updated:** 2026-07-28  
+**Last updated:** 2026-10-07  
 **Module Status:** ✅ PHPStan Level 10 Compliant
 
 ## Quick Navigation
 
 - **[Overview & README](./README.md)** — Use cases, features, dependencies
 - **[Architecture](./ARCHITECTURE.md)** — System design and core patterns
-- **[API Documentation](./API.md)** — Actions, Models, Contracts
-- **[Components Guide](./COMPONENTS.md)** — FFmpeg, Intervention Image, Storage
-- **[Contributing](./CONTRIBUTING.md)** — Development workflow
+- **[API integration](./api-integration.md)** - Actions, Models, Contracts
+- **[FFmpeg usage](./ffmpeg-usage.md)** - FFmpeg, Intervention Image, Storage
+- **[BMAD stories](#story-bmad)** - Development workflow, open followups
 
 ---
 
@@ -62,17 +62,37 @@ last_updated: 2026-07-28
 
 ---
 
+## Story BMAD
+
+Le story vivono in [`stories/`](./stories/). Le piu' recenti:
+
+| Story | Stato | Note |
+|---|---|---|
+| [02 Risoluzione dei marker di merge (e7e667b11)](./stories/02.Media-merge-conflict-resolution.story.md) | done | 92 file PHP + 6 file docs; contiene i followups aperti |
+| [2026-10-06 PHPStan cleanup](./stories/2026-10-06-phpstan-cleanup-media.story.md) | done | [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md) |
+| [16-4 Consolidamento case-variant](./stories/16-4-media-case-variant-consolidation.md) | ready-for-dev | restano `tests/filament` vs `tests/Filament`, `app/conversions` |
+| [media-services-to-actions](./stories/media-services-to-actions.story.md) | done | residuo verificato: `SubtitleService` ancora duplicato in `Services/` e `Actions/Stream/` |
+| [01 PHPStan fix](./stories/01.Media-phpstan-fix.story.md) | done | `method.staticCall` su `Schemas/*Form` e `*Infolist` |
+
+Followups aperti (dettaglio in [02](./stories/02.Media-merge-conflict-resolution.story.md#followups-aperti)):
+`ConvertVideoAction` salva due volte; chiavi lang `media::attachments.*` senza file;
+`SubtitleService` duplicato; `MediasTable` accanto a `MediaTable`; directory case-variant
+residue; placeholder lang (`navigation.icon`, `Missing Label`).
+
+---
+
 ## Documentation Categories
 
 ### Core Documentation
 - [README.md](./README.md) — Module overview, features, use cases
 - [ARCHITECTURE.md](./ARCHITECTURE.md) — System design, component structure
-- [COMPONENTS.md](./COMPONENTS.md) — FFmpeg, Intervention Image, Cloud Storage
+- [ffmpeg-usage.md](./ffmpeg-usage.md) - FFmpeg, Intervention Image, Cloud Storage
 
 ### API & Development
-- [API.md](./API.md) — Action signatures, model methods, contracts
+- [api-integration.md](./api-integration.md) - Action signatures, model methods, contracts
 - [PATTERNS.md](./PATTERNS.md) — Architectural patterns, best practices
-- [CONTRIBUTING.md](./CONTRIBUTING.md) — Development workflow
+- [bmad/setup-guide.md](./bmad/setup-guide.md) - Environment setup and BMAD conventions
+- [bmad/quick-reference.md](./bmad/quick-reference.md) - Quick reference (classes, commands, BMAD)
 
 ### Operations & Troubleshooting
 - [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) — Error resolution, common issues
@@ -94,7 +114,7 @@ last_updated: 2026-07-28
 
 1. **Read first:** [README.md](./README.md)
 2. **Understand patterns:** [PATTERNS.md](./PATTERNS.md)
-3. **Use the API:** [API.md](./API.md)
+3. **Use the API:** [api-integration.md](./api-integration.md)
 4. **Deploy safely:** [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
 
 ---
@@ -110,10 +130,10 @@ last_updated: 2026-07-28
 ## Dependencies
 
 ### Composer Packages
-- `pbmedia/laravel-ffmpeg:^8.7` — Video/audio encoding
-- `intervention/image:^3.0` — Image transformation
-- `laravel/framework:^11.0` — Laravel framework
-- `spatie/laravel-queueable-action` — Queueable actions
+- `pbmedia/laravel-ffmpeg` - Video/audio encoding (constraint in `composer.json`)
+- `intervention/image` - Image transformation
+- `spatie/laravel-medialibrary` - Media models
+- `spatie/laravel-queueable-action` - Queueable actions
 
 ### Required System Packages
 - `ffmpeg` — Video encoding engine
@@ -124,10 +144,9 @@ last_updated: 2026-07-28
 ## Related Modules
 
 - **[Xot](../../Xot/docs/README.md)** — Framework base, HasMedia trait
-- **[CloudStorage](../../CloudStorage/docs/README.md)** — Cloud provider abstraction
 - **[Cms](../../Cms/docs/README.md)** — Content media integration
-- **[Filament](../../Filament/docs/README.md)** — Admin UI framework
+- **[UI](../../UI/docs/README.md)** - Admin UI framework
 
 ---
 
-**Navigation:** [Home](../README.md) | [Contributing](./CONTRIBUTING.md) | [Troubleshooting](./TROUBLESHOOTING.md)
+**Navigation:** [Home](../README.md) | [BMAD stories](#story-bmad) | [Troubleshooting](./TROUBLESHOOTING.md)

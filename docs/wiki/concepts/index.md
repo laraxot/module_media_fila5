@@ -1,14 +1,3 @@
----
-title: "index"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "index"
-issues: []
-discussions: []
----
-
 # Media Module - concepts Index
 
 ## Purpose
@@ -25,12 +14,4 @@ qmd search "Media concepts" --limit 5
 - [Root Wiki](../../../docs/wiki/)
 
 ---
-title: "index"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "index"
-issues: []
-discussions: []
 *Updated: 2026-05-11*

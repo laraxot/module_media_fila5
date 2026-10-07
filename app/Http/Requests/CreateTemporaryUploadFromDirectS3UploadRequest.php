@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Modules\Media\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\Lang;
->>>>>>> laraxot/dev
 use Modules\Media\Models\Media;
 use Webmozart\Assert\Assert;
 
@@ -33,20 +30,12 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
     }
 
     /**
-<<<<<<< HEAD
-     * @return array<string, string|array<string, string>>
-=======
      * @return array<string, string>
->>>>>>> laraxot/dev
      */
     public function messages(): array
     {
         return [
-<<<<<<< HEAD
-            'uuid.unique' => trans('medialibrary-pro::upload_request.uuid_not_unique'),
-=======
             'uuid.unique' => Lang::string('medialibrary-pro::upload_request.uuid_not_unique'),
->>>>>>> laraxot/dev
         ];
     }
 
@@ -72,10 +61,6 @@ class CreateTemporaryUploadFromDirectS3UploadRequest extends FormRequest
         Assert::string($mediaModelClass);
         Assert::subclassOf($mediaModelClass, Media::class);
 
-<<<<<<< HEAD
-        return new $mediaModelClass();
-=======
         return new $mediaModelClass;
->>>>>>> laraxot/dev
     }
 }
