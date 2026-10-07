@@ -16,9 +16,17 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
+<<<<<<< HEAD
 use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
+=======
+use Illuminate\Support\Facades\Lang;
+use Modules\Media\Filament\Clusters\Test;
+use Modules\Xot\Actions\Cast\SafeStringCastAction;
+use Modules\Xot\Filament\Pages\XotBasePage;
+use Psr\Http\Message\StreamInterface;
+>>>>>>> laraxot/dev
 
 use function Safe\json_encode;
 
@@ -54,6 +62,7 @@ class AwsTest extends XotBasePage
                 ->schema([
                     Actions::make([
                         Action::make('test_s3_connection')
+<<<<<<< HEAD
                             ->label(__('ui::aws_test.test_s3_connection'))
                             ->action('testS3Connection'),
                         Action::make('test_s3_permissions')
@@ -62,6 +71,16 @@ class AwsTest extends XotBasePage
                             ->action('testS3Permissions'),
                         Action::make('test_file_operations')
                             ->label(__('ui::aws_test.test_file_operations'))
+=======
+                            ->label(Lang::string('ui::aws_test.test_s3_connection'))
+                            ->action('testS3Connection'),
+                        Action::make('test_s3_permissions')
+                            ->label(Lang::string('ui::aws_test.test_s3_permissions'))
+                            ->color('warning')
+                            ->action('testS3Permissions'),
+                        Action::make('test_file_operations')
+                            ->label(Lang::string('ui::aws_test.test_file_operations'))
+>>>>>>> laraxot/dev
                             ->color('success')
                             ->action('testS3FileOperations'),
                     ])->fullWidth(),
@@ -152,7 +171,12 @@ class AwsTest extends XotBasePage
                 ],
             ]);
 
+<<<<<<< HEAD
             $result = $s3->headBucket([
+=======
+            // headBucket() lancia AwsException se il bucket non e' raggiungibile: l'esito sta nell'eccezione.
+            $s3->headBucket([
+>>>>>>> laraxot/dev
                 'Bucket' => $this->getS3Bucket(),
             ]);
 
@@ -166,7 +190,11 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
+<<<<<<< HEAD
                 ->title(__('ui::awstest.notifications.s3_connection_successful'))
+=======
+                ->title(Lang::string('ui::awstest.notifications.s3_connection_successful'))
+>>>>>>> laraxot/dev
                 ->success()
                 ->send();
         } catch (AwsException $e) {
@@ -180,7 +208,11 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
+<<<<<<< HEAD
                 ->title(__('ui::awstest.notifications.s3_connection_failed'))
+=======
+                ->title(Lang::string('ui::awstest.notifications.s3_connection_failed'))
+>>>>>>> laraxot/dev
                 ->danger()
                 ->body($e->getAwsErrorCode() ?? 'UnknownError')
                 ->send();
@@ -201,7 +233,11 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
+<<<<<<< HEAD
                 ->title(__('ui::awstest.notifications.cloudfront_config_valid'))
+=======
+                ->title(Lang::string('ui::awstest.notifications.cloudfront_config_valid'))
+>>>>>>> laraxot/dev
                 ->success()
                 ->send();
         } catch (Exception $e) {
@@ -215,7 +251,11 @@ class AwsTest extends XotBasePage
             ];
 
             Notification::make()
+<<<<<<< HEAD
                 ->title(__('ui::awstest.notifications.cloudfront_config_error'))
+=======
+                ->title(Lang::string('ui::awstest.notifications.cloudfront_config_error'))
+>>>>>>> laraxot/dev
                 ->danger()
                 ->send();
         }
@@ -238,7 +278,11 @@ class AwsTest extends XotBasePage
         ];
 
         Notification::make()
+<<<<<<< HEAD
             ->title(__('ui::awstest.notifications.full_diagnostic_completed'))
+=======
+            ->title(Lang::string('ui::awstest.notifications.full_diagnostic_completed'))
+>>>>>>> laraxot/dev
             ->success()
             ->send();
     }
@@ -292,7 +336,11 @@ class AwsTest extends XotBasePage
             ]);
 
             // Test list objects permission
+<<<<<<< HEAD
             $result = $s3->listObjectsV2([
+=======
+            $s3->listObjectsV2([
+>>>>>>> laraxot/dev
                 'Bucket' => $this->getS3Bucket(),
                 'MaxKeys' => 1,
             ]);
@@ -351,11 +399,20 @@ class AwsTest extends XotBasePage
                 'ContentType' => 'text/plain',
             ]);
 
+<<<<<<< HEAD
             // Test get operation
             $result = $s3->getObject([
                 'Bucket' => $this->getS3Bucket(),
                 'Key' => $testFileName,
             ]);
+=======
+            // Test get operation: il contenuto scaricato deve coincidere con quello caricato
+            $body = $s3->getObject([
+                'Bucket' => $this->getS3Bucket(),
+                'Key' => $testFileName,
+            ])->get('Body');
+            $downloadMatches = $body instanceof StreamInterface && (string) $body === $testContent;
+>>>>>>> laraxot/dev
 
             // Clean up - delete test file
             $s3->deleteObject([
@@ -363,6 +420,30 @@ class AwsTest extends XotBasePage
                 'Key' => $testFileName,
             ]);
 
+<<<<<<< HEAD
+=======
+            if (! $downloadMatches) {
+                $this->testResults['s3_operations'] = [
+                    'status' => 'error',
+                    'message' => 'S3 download returned content different from the uploaded file',
+                    'details' => [
+                        'Upload' => 'OK',
+                        'Download' => 'Content mismatch',
+                        'Delete' => 'OK',
+                        'Test File' => $testFileName,
+                    ],
+                ];
+
+                Notification::make()
+                    ->title('S3 File Operations Failed')
+                    ->danger()
+                    ->body('Downloaded content does not match the uploaded content')
+                    ->send();
+
+                return;
+            }
+
+>>>>>>> laraxot/dev
             $this->testResults['s3_operations'] = [
                 'status' => 'success',
                 'message' => 'S3 file operations completed successfully',

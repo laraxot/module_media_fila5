@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 issues: []
 discussions: []
 title: "Competitors"
@@ -12,3 +13,11 @@ related:
   - "./webm.md"
 ---
 https://github.com/outer-web/filament-image-library
+=======
+module: theme
+topic: -competitors
+canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
+---
+
+See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep-Modules
+>>>>>>> laraxot/dev

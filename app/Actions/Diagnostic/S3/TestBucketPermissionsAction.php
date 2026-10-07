@@ -14,11 +14,17 @@ class TestBucketPermissionsAction
 {
     use QueueableAction;
 
+<<<<<<< HEAD
+=======
+    private const string TITLE = '🔒 S3 Permissions';
+
+>>>>>>> laraxot/dev
     /**
      * @return array<string, mixed>
      */
     public function execute(string $testKeyPrefix = 'test-permissions-'): array
     {
+<<<<<<< HEAD
         $results = [
             'title' => '🔒 S3 Permissions',
             'status' => 'info',
@@ -38,6 +44,24 @@ class TestBucketPermissionsAction
         }
 
         return $results;
+=======
+        try {
+            $client = app(CreateFilesystemS3ClientAction::class);
+            $testKey = $testKeyPrefix.time().'.txt';
+
+            return [
+                'title' => self::TITLE,
+                'status' => 'success',
+                'data' => $this->probePermissions($client->execute(), $client->bucket(), $testKey),
+            ];
+        } catch (Exception $exception) {
+            return [
+                'title' => self::TITLE,
+                'status' => 'error',
+                'data' => ['Error' => $exception->getMessage()],
+            ];
+        }
+>>>>>>> laraxot/dev
     }
 
     /**

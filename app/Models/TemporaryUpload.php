@@ -11,6 +11,10 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
+<<<<<<< HEAD
+=======
+use InvalidArgumentException;
+>>>>>>> laraxot/dev
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;
@@ -32,9 +36,15 @@ use Webmozart\Assert\Assert;
  * @property-read ProfileContract|null $updater
  *
  * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
+<<<<<<< HEAD
  * @method static Builder<static>|TemporaryUpload newModelQuery()
  * @method static Builder<static>|TemporaryUpload newQuery()
  * @method static Builder<static>|TemporaryUpload query()
+=======
+ * @method static Builder<static> newModelQuery()
+ * @method static Builder<static> newQuery()
+ * @method static Builder<static> query()
+>>>>>>> laraxot/dev
  *
  * @property string $id
  * @property string $session_id
@@ -50,6 +60,7 @@ use Webmozart\Assert\Assert;
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
  *
+<<<<<<< HEAD
  * @method static Builder<static>|TemporaryUpload whereCreatedAt($value)
  * @method static Builder<static>|TemporaryUpload whereCreatedBy($value)
  * @method static Builder<static>|TemporaryUpload whereDeletedAt($value)
@@ -65,6 +76,21 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static>|TemporaryUpload whereUserId($value)
  *
  * @mixin \Eloquent
+=======
+ * @method static Builder<static> whereCreatedAt($value)
+ * @method static Builder<static> whereCreatedBy($value)
+ * @method static Builder<static> whereDeletedAt($value)
+ * @method static Builder<static> whereDeletedBy($value)
+ * @method static Builder<static> whereFileName($value)
+ * @method static Builder<static> whereFileSize($value)
+ * @method static Builder<static> whereId($value)
+ * @method static Builder<static> whereMimeType($value)
+ * @method static Builder<static> whereSessionId($value)
+ * @method static Builder<static> whereStatus($value)
+ * @method static Builder<static> whereUpdatedAt($value)
+ * @method static Builder<static> whereUpdatedBy($value)
+ * @method static Builder<static> whereUserId($value)
+>>>>>>> laraxot/dev
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {
@@ -95,11 +121,19 @@ class TemporaryUpload extends BaseModel implements HasMedia
         /** @var class-string<Media> $mediaModelClass */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
+<<<<<<< HEAD
         if (! $media) {
             return null;
         }
 
         $temporaryUpload = $media->model;
+=======
+        if (! $media instanceof Media) {
+            return null;
+        }
+
+        $temporaryUpload = $media->model()->first();
+>>>>>>> laraxot/dev
 
         if (! ($temporaryUpload instanceof self)) {
             return null;
@@ -132,10 +166,14 @@ class TemporaryUpload extends BaseModel implements HasMedia
         string $uuid,
         string $name,
     ): self {
+<<<<<<< HEAD
         /**
          * @var TemporaryUpload $temporaryUpload
          */
         $temporaryUpload = static::create([
+=======
+        $temporaryUpload = static::query()->create([
+>>>>>>> laraxot/dev
             'session_id' => $sessionId,
         ]);
 
@@ -161,10 +199,14 @@ class TemporaryUpload extends BaseModel implements HasMedia
         string $name,
         string $diskName,
     ): self {
+<<<<<<< HEAD
         /**
          * @var TemporaryUpload $temporaryUpload
          */
         $temporaryUpload = static::create([
+=======
+        $temporaryUpload = static::query()->create([
+>>>>>>> laraxot/dev
             'session_id' => $sessionId,
         ]);
 
@@ -211,9 +253,17 @@ class TemporaryUpload extends BaseModel implements HasMedia
         // if (! $media instanceof \Spatie\MediaLibrary\MediaCollections\Models\Media) {
         //    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         // }
+<<<<<<< HEAD
         Assert::isInstanceOf($media, Media::class, '['.__LINE__.']['.class_basename($this).']');
 
         $temporaryUploadModel = $media->model;
+=======
+        if (! $media instanceof Media) {
+            throw new InvalidArgumentException('['.__LINE__.']['.class_basename($this).']');
+        }
+
+        $temporaryUploadModel = $media->model()->first();
+>>>>>>> laraxot/dev
         $uuid = $media->uuid;
 
         $newMedia = $media->move($hasMedia, $collectionName, $diskName, $fileName);

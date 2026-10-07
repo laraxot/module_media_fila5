@@ -4,9 +4,15 @@ declare(strict_types=1);
 
 return [
     'navigation' => [
+<<<<<<< HEAD
         'label' => 'media convert',
         'group' => 'media convert',
         'icon' => 'media convert',
+=======
+        'label' => 'Media convert',
+        'group' => 'Media convert',
+        'icon' => 'Media convert',
+>>>>>>> laraxot/dev
         'sort' => '20',
     ],
     'fields' => [

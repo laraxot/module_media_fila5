@@ -39,7 +39,11 @@ return [
             'name' => 'General',
             'description' => 'General Settings',
         ],
+<<<<<<< HEAD
         'label' => 'Add Attachment Action',
+=======
+        'label' => 'Carica allegato',
+>>>>>>> laraxot/dev
         'sort' => 1,
         'icon' => 'heroicon-o-rectangle-stack',
     ],

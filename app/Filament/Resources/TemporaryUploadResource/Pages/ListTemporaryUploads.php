@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\TemporaryUploadResource\Pages;
 
+<<<<<<< HEAD
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -14,10 +15,15 @@ use Modules\Media\Filament\Resources\TemporaryUploadResource;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
 use Override;
+=======
+use Modules\Media\Filament\Resources\TemporaryUploadResource;
+use Modules\Xot\Filament\Resources\Pages\XotBaseListRecords;
+>>>>>>> laraxot/dev
 
 class ListTemporaryUploads extends XotBaseListRecords
 {
     protected static string $resource = TemporaryUploadResource::class;
+<<<<<<< HEAD
 
     /**
      * @return array<string, TextColumn>
@@ -58,4 +64,6 @@ class ListTemporaryUploads extends XotBaseListRecords
             'delete' => DeleteBulkAction::make(),
         ];
     }
+=======
+>>>>>>> laraxot/dev
 }

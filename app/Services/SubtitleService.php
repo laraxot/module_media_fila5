@@ -42,7 +42,11 @@ class SubtitleService
     public static function getInstance(): self
     {
         if (! (self::$instance instanceof self)) {
+<<<<<<< HEAD
             self::$instance = new self();
+=======
+            self::$instance = new self;
+>>>>>>> laraxot/dev
         }
 
         return self::$instance;
@@ -79,7 +83,11 @@ class SubtitleService
     {
         $plain = $this->getPlain();
         $up = [$this->field_name => $plain];
+<<<<<<< HEAD
         $this->model = tap($this->model)->update($up);
+=======
+        $this->model->update($up);
+>>>>>>> laraxot/dev
 
         return $this;
     }
