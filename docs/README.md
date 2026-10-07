@@ -15,3 +15,7 @@ related: [docs/bmad/00-INDEX.md, docs/bmad/readme.md]
 Path: `laravel/Modules/Media/docs/`
 Module: @Modules/Media
 Scope: Consolidated docs after archive (docs-archive-2026/ holds legacy wiki).
+
+## Stories PHPStan
+
+- [2026-10-06 PHPStan cleanup — Media](./stories/2026-10-06-phpstan-cleanup-media.story.md) · [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md)
