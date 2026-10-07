@@ -151,7 +151,11 @@ class VideoEntry extends XotBaseEntry
 
     public function getImageUrl(?string $state = null): ?string
     {
+<<<<<<< HEAD
         if (filter_var($state, FILTER_VALIDATE_URL) !== false || str($state)->startsWith('data:')) {
+=======
+        if (filter_var($state, FILTER_VALIDATE_URL) !== false || str_starts_with((string) $state, 'data:')) {
+>>>>>>> laraxot/dev
             return $state;
         }
         if ($state === null) {

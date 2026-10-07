@@ -3,6 +3,10 @@
 declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Actions;
+<<<<<<< HEAD
+=======
+
+>>>>>>> laraxot/dev
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.
 // Media Pest/PHPUnit — claude-audit documentation ratio.

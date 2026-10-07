@@ -47,6 +47,7 @@ class MediaTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
+<<<<<<< HEAD
             'collection_name' => SelectFilter::make('collection_name')->options(Media::distinct()->pluck(
                 'collection_name',
                 'collection_name',
@@ -55,10 +56,35 @@ class MediaTable extends XotBaseResourceTable
                 'mime_type',
                 'mime_type',
             )->toArray(...)),
+=======
+            'collection_name' => SelectFilter::make('collection_name')->options(
+                self::getDistinctOptions('collection_name'),
+            ),
+            'mime_type' => SelectFilter::make('mime_type')->options(
+                self::getDistinctOptions('mime_type'),
+            ),
+>>>>>>> laraxot/dev
         ];
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * @return array<string, string>
+     */
+    private static function getDistinctOptions(string $column): array
+    {
+        $options = [];
+        foreach (Media::query()->distinct()->pluck($column) as $value) {
+            Assert::string($value);
+            $options[$value] = $value;
+        }
+
+        return $options;
+    }
+
+    /**
+>>>>>>> laraxot/dev
      * @return array<string, Action|ActionGroup>
      */
     public function getTableActions(): array
@@ -77,17 +103,26 @@ class MediaTable extends XotBaseResourceTable
                 ->action(static function (Media $record): BinaryFileResponse {
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
+<<<<<<< HEAD
 
                     Assert::string($record->file_name, 'file_name must be string');
 
+=======
+                    Assert::string($record->file_name, 'file_name must be string');
+>>>>>>> laraxot/dev
                     return response()->download($filePath, $record->file_name);
                 }),
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
+<<<<<<< HEAD
                 ->url(static function (mixed $record): string {
                     Assert::string($res = MediaResource::getUrl('convert', ['record' => $record]));
 
+=======
+                ->url(static function (Media $record): string {
+                    Assert::string($res = MediaResource::getUrl('convert', ['record' => $record]));
+>>>>>>> laraxot/dev
                     return $res;
                 })
                 ->openUrlInNewTab(true),

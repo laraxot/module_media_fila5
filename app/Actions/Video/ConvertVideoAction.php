@@ -8,7 +8,11 @@ namespace Modules\Media\Actions\Video;
  * @see https://github.com/protonemedia/laravel-ffmpeg
  */
 use FFMpeg\Format\Video\X264;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Storage;
+=======
+use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
+>>>>>>> laraxot/dev
 use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 use Spatie\QueueableAction\QueueableAction;
@@ -28,18 +32,30 @@ class ConvertVideoAction
 
         $exportedMedia = $openedMedia->export();
 
+<<<<<<< HEAD
         $format = new X264();
+=======
+        $format = new X264;
+>>>>>>> laraxot/dev
         $format->setKiloBitrate(1000);
 
         $exportedMedia->toDisk($disk_mp4);
         $exportedMedia->inFormat($format);
         $exportedMedia->save($file_new);
+<<<<<<< HEAD
         $format = new X264();
+=======
+        $format = new X264;
+>>>>>>> laraxot/dev
         $formattedMedia = MediaExporterResolver::from(
             $exportedMedia->toDisk($disk_mp4)
         )->inFormat($format);
         $formattedMedia->save($file_new);
 
+<<<<<<< HEAD
         return Storage::disk($disk_mp4)->url($file_new);
+=======
+        return app(GetFilesystemAdapterAction::class)->execute($disk_mp4)->url($file_new);
+>>>>>>> laraxot/dev
     }
 }
