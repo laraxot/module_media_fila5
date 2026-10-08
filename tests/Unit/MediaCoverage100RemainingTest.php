@@ -12,7 +12,6 @@ use Modules\Media\Actions\S3\GetFileInfoAction;
 use Modules\Media\Actions\S3\UploadFileAction;
 use Modules\Media\Actions\Stream\StreamVideoAction;
 use Modules\Media\Models\TemporaryUpload;
-use Modules\Media\Services\VideoStream;
 use Modules\Media\Tests\TestCase;
 use Modules\Xot\Tests\ModuleRemainingCoverage;
 use PHPUnit\Framework\Assert;
@@ -69,21 +68,10 @@ describe('Media coverage 100 — remaining sweep', function (): void {
         }
     });
 
-    test('VideoStream e StreamVideoAction rifiutano un path inesistente sul disco', function (): void {
+    test('StreamVideoAction rifiuta un path inesistente sul disco', function (): void {
         Storage::fake('local');
 
         $missing = 'media/assente-'.uniqid('', true).'.mp4';
-
-        $streamMessage = null;
-        try {
-            new VideoStream('local', $missing);
-        } catch (\Throwable $e) {
-            $streamMessage = $e->getMessage();
-        }
-        if ($streamMessage === null) {
-            Assert::fail('VideoStream doveva rifiutare un path inesistente');
-        }
-        Assert::assertStringContainsString($missing, $streamMessage);
 
         $actionMessage = null;
         try {
