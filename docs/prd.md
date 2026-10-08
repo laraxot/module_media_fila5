@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "PRD: Media Module"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "PathGenerator Interface"
 module: "Media"
 type: concept

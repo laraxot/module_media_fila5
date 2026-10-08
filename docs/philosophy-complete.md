@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media - Filosofia Completa: Logica, Religione, Politica, Zen"
 module: "Media"
 type: concept

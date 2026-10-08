@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "aws"
 module: "Media"
 type: concept

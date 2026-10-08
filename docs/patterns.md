@@ -1,4 +1,9 @@
 ---
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "patterns"
+issues: []
+discussions: []
 title: "Architectural Patterns — Media Module"
 module: "Media"
 type: architecture

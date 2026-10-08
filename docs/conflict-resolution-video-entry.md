@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Risoluzione Conflitto in VideoEntry"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Riepilogo Correzioni S3Test.php - Modulo Media"
 module: "Media"
 type: concept

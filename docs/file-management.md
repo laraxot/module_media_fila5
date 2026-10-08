@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Gestione dei File in <nome progetto>"
 module: "Media"
 type: concept

@@ -4,22 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Media\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 
-class ConvertController extends Controller
+class ConvertController extends BaseController
 {
     /**
-     * Show the profile for the given user.
+     * Show the conversion page for the given media.
      */
-    public function __invoke(string|int $_id): View
+    public function __invoke(string|int $mediaId): View
     {
-        /**
-         * @phpstan-var view-string
-         */
+        /** @var view-string $view */
         $view = 'media::convert';
-        $view_params = [];
 
-        return view($view, $view_params);
+        return view($view, []);
     }
 }

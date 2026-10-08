@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Docs Health - Media"
 module: "Media"
 type: concept

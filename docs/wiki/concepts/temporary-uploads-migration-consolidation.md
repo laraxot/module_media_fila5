@@ -1,4 +1,7 @@
 ---
+qmd: "temporary uploads migration consolidation"
+issues: []
+discussions: []
 title: "TemporaryUpload migration consolidation — one create migration per model"
 type: concept
 sources: []

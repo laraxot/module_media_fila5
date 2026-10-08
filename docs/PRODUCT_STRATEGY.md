@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module - Product Strategy"
 module: "Media"
 type: concept
