@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+updated: 2026-09-26
+qmd: "duplicated media relation manager"
+issues: []
+discussions: []
 title: "Duplicated MediaRelationManager (3 occurrences)"
 type: redundancy
 owner: Modules/Media

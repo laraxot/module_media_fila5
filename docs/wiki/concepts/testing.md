@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Testing in Media"
 module: "Media"
 type: concept

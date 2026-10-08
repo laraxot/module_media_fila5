@@ -1,4 +1,7 @@
 ---
+qmd: "media root txt hygiene.story"
+issues: []
+discussions: []
 title: "Media root .txt hygiene"
 module: "Media"
 type: story

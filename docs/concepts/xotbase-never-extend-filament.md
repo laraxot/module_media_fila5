@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media — mai Filament\*, sempre XotBase*"
 type: concept
 module: Media

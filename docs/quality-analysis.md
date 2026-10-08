@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Quality Analysis Report - Media Module"
 module: "Media"
 type: concept

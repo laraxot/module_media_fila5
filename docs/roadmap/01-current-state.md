@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Current State - Media"
 module: "Media"
 type: concept

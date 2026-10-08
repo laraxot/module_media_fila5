@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Product Requirements Document (PRD)"
 module: "Media"
 type: concept

@@ -1,4 +1,7 @@
 ---
+qmd: "PHILOSOPHY"
+issues: []
+discussions: []
 title: "Media Module — Complete Philosophy"
 module: "Media"
 type: philosophy

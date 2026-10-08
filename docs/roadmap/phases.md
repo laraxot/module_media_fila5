@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Fasi di sviluppo - Media Module"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "MediaRelationManager"
 module: "Media"
 type: concept

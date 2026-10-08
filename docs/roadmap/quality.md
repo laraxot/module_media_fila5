@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Checklist qualità - Media Module"
 module: "Media"
 type: concept

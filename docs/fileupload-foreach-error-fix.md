@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "FileUpload foreach Error Fix - Internal Server Error"
 module: "Media"
 type: concept

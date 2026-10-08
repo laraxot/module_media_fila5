@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Risks and dependencies (Module Media)"
 module: "Media"
 type: concept

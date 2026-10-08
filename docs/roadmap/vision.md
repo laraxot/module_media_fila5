@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Visione - Media Module"
 module: "Media"
 type: concept

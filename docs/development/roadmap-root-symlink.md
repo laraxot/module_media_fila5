@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Roadmap Root Symlink"
 module: "Media"
 type: concept

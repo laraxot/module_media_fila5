@@ -1,4 +1,10 @@
 ---
+type: note
+created: 2026-09-26
+updated: 2026-09-26
+qmd: "16 2 case variant dirs guard"
+issues: []
+discussions: []
 id: story-162-case-variant-dirs-guard
 slug: story-162-case-variant-dirs-guard
 title: "STORY-162 — Guard sulle directory case-variant e bonifica Media/tests"

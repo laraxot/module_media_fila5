@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Ottimizzazioni Performance Modulo Media"
 module: "Media"
 type: concept

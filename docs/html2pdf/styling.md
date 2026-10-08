@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Guida agli Stili, Tabelle e Immagini"
 module: "Media"
 type: concept

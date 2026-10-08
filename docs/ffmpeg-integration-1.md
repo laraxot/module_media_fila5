@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Integrazione di FFmpeg nel Modulo Media"
 module: "Media"
 type: concept

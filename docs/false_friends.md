@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "False Friends – Media Module"
 module: "Media"
 type: concept

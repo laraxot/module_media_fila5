@@ -9,7 +9,7 @@ return [
         'name' => 'Media',
         'plural' => 'Media',
         'group' => ['name' => 'Sistema', 'description' => 'Gestione dei file multimediali'],
-        'label' => 'media',
+        'label' => 'Media',
         'sort' => 20,
         'icon' => 'media-main-animated',
     ],

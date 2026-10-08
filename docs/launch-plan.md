@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Product Launch Plan: Media Module"
 module: "Media"
 type: concept

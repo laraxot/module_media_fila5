@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Traduzioni del Modulo Media"
 module: "Media"
 type: concept

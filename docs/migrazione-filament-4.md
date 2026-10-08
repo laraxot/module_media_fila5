@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Migrazione Filament 4"
 module: "Media"
 type: concept

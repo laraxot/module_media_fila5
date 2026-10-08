@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module - Roadmap"
 module: "Media"
 type: concept

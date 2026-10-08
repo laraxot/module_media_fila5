@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Risoluzione Conflitto IconMediaColumn.php"
 module: "Media"
 type: concept

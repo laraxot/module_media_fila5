@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Ponytail audit — Media"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Laravel-FFMpeg – Pattern Laraxot nel Modulo Media"
 module: "Media"
 type: pattern

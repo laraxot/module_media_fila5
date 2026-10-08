@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Laravel-FFMpeg – API Reference Completa"
 module: "Media"
 type: concept

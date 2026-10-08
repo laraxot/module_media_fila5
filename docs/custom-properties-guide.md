@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Custom Properties — spatie/laravel-medialibrary"
 module: "Media"
 type: how-to

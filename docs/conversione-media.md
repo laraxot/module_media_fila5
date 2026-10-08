@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Conversione Media"
 module: "Media"
 type: concept

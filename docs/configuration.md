@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Configuration"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Rules Index"
 module: "Media"
 type: rule

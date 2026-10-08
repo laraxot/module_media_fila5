@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "MediaRelationManager Documentation"
 module: "Media"
 type: concept

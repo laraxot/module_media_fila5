@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Ffmpeg"
 module: "Media"
 type: concept

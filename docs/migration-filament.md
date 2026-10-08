@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Migration Filament"
 module: "Media"
 type: concept
@@ -8,8 +10,6 @@ updated: 2026-07-14
 qmd: "migration filament"
 related:
   - "./webm.md"
-<<<<<<< HEAD
 ---
-=======
 ---
->>>>>>> laraxot/dev
+---

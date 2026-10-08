@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Codex Configuration Error Fixes"
 module: "Media"
 type: concept

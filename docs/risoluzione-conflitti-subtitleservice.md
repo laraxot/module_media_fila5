@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Risoluzione Conflitti Git - SubtitleService.php"
 module: "Media"
 type: concept

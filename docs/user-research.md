@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module - User Research"
 module: "Media"
 type: concept

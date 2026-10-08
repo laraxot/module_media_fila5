@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Workstreams - Media"
 module: "Media"
 type: concept

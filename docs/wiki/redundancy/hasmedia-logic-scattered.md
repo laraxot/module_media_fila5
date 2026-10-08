@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+updated: 2026-09-26
+qmd: "hasmedia logic scattered"
+issues: []
+discussions: []
 title: "HasMedia Logic Implemented Outside the Canonical Media Module"
 type: redundancy
 owner: Modules/Media
