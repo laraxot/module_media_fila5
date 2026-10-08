@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Upgrade Laravel 13 - Media 🐄✨"
 module: "Media"
 type: concept

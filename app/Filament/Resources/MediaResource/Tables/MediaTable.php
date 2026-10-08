@@ -18,6 +18,8 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Webmozart\Assert\Assert;
 
+use function is_string;
+
 class MediaTable extends XotBaseResourceTable
 {
     /**
@@ -47,15 +49,29 @@ class MediaTable extends XotBaseResourceTable
     public function getTableFilters(): array
     {
         return [
-            'collection_name' => SelectFilter::make('collection_name')->options(Media::distinct()->pluck(
-                'collection_name',
-                'collection_name',
-            )->toArray(...)),
-            'mime_type' => SelectFilter::make('mime_type')->options(Media::distinct()->pluck(
-                'mime_type',
-                'mime_type',
-            )->toArray(...)),
+            'collection_name' => SelectFilter::make('collection_name')->options(
+                self::getDistinctOptions('collection_name'),
+            ),
+            'mime_type' => SelectFilter::make('mime_type')->options(
+                self::getDistinctOptions('mime_type'),
+            ),
         ];
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    private static function getDistinctOptions(string $column): array
+    {
+        $options = [];
+        foreach (Media::query()->distinct()->pluck($column) as $value) {
+            // mime_type e' nullable: i valori non stringa non sono opzioni valide del filtro
+            if (is_string($value)) {
+                $options[$value] = $value;
+            }
+        }
+
+        return $options;
     }
 
     /**
@@ -77,7 +93,6 @@ class MediaTable extends XotBaseResourceTable
                 ->action(static function (Media $record): BinaryFileResponse {
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
-
                     Assert::string($record->file_name, 'file_name must be string');
 
                     return response()->download($filePath, $record->file_name);
@@ -85,7 +100,7 @@ class MediaTable extends XotBaseResourceTable
             'convert' => Action::make('convert')
                 ->icon('media-convert')
                 ->color('gray')
-                ->url(static function (mixed $record): string {
+                ->url(static function (Media $record): string {
                     Assert::string($res = MediaResource::getUrl('convert', ['record' => $record]));
 
                     return $res;

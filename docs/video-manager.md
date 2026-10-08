@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Video Manager"
 module: "Media"
 type: concept

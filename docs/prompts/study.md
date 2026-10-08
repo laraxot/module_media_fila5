@@ -1,4 +1,7 @@
 ---
+qmd: "study"
+issues: []
+discussions: []
 title: 'Study'
 module: Media
 type: reference

@@ -151,7 +151,7 @@ class VideoEntry extends XotBaseEntry
 
     public function getImageUrl(?string $state = null): ?string
     {
-        if (filter_var($state, FILTER_VALIDATE_URL) !== false || str($state)->startsWith('data:')) {
+        if (filter_var($state, FILTER_VALIDATE_URL) !== false || str_starts_with((string) $state, 'data:')) {
             return $state;
         }
         if ($state === null) {
@@ -174,7 +174,7 @@ class VideoEntry extends XotBaseEntry
         if ($this->getVisibility() === 'private') {
             try {
                 return $storage->temporaryUrl($state, now()->addMinutes(5));
-            } catch (\Throwable) {
+            } catch (Throwable) {
                 // This driver does not support creating temporary URLs.
             }
         }

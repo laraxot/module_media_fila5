@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Pacchetti del Modulo Media"
 module: "Media"
 type: concept

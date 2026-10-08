@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Linee Guida Prevenzione Problemi - Modulo Media"
 module: "Media"
 type: concept

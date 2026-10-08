@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Risoluzione conflitto git su Filament Table ConvertAction"
 module: "Media"
 type: concept

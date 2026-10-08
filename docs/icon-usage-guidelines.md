@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module Icon Usage Guidelines"
 module: "Media"
 type: how-to

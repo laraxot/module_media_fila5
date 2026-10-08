@@ -32,9 +32,7 @@ class ConvertWidget extends XotBaseWidget
 
     public function __construct()
     {
-        /** @var view-string $viewPath */
-        $viewPath = 'media::filament.widgets.convert';
-        $this->view = $viewPath;
+        $this->view = 'media::filament.widgets.convert';
 
         parent::__construct();
     }
@@ -52,7 +50,7 @@ class ConvertWidget extends XotBaseWidget
         $disk_path = Storage::disk($disk_mp4)->path('/');
         $file_mp4 = Str::after($file_mp4, $disk_path);
 
-        $format = new WebM();
+        $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
 

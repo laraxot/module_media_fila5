@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "DRY & KISS Analysis - Modulo Media"
 module: "Media"
 type: concept

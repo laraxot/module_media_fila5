@@ -1,4 +1,7 @@
 ---
+qmd: "ffmpeg integration 1"
+issues: []
+discussions: []
 title: "Integrazione di FFmpeg nel Modulo Media"
 type: integration
 tags: [integrations]

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Modulo Media - Gestione File Multimediali"
 module: "Media"
 type: concept

@@ -188,6 +188,29 @@ phpmd*.*
 /.vscode/
 .cursor~*
 .windsurf~*
+graphify-out/
+/bashscripts/
+/graphify-out/
+/tools/
+/scripts/
+/.agents/
+/.claude-audit/
+/.claude/
+/.codex/
+/.opencode/
+/tests/graphify-out/
+graphify-out
+tools
+.vscode
+build
+/.github/skills/
+.github/skills
+docs/graphify
+resources/lang
 
-# Artefatti audit vietati (rule: tests-auditcoverage-forbidden)
-audit-coverage/
+# docs/chat — coordination notes replaced by BMAD stories in docs/bmad/
+docs/chat
+
+# Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
+app/Application
+/.docs-archive/

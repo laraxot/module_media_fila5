@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Directory Structure Rules"
 module: "Media"
 type: rule

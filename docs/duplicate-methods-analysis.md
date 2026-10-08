@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Analisi Metodi Duplicati - Modulo Media"
 module: "Media"
 type: concept

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Goals - Media"
 module: "Media"
 type: concept

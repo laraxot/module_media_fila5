@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Dependencies (Module Media)"
 module: "Media"
 type: concept
