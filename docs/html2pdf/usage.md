@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "usage"
 related:
   - "./webm.md"
+status: draft
 ---
 # Utilizzo Base e Layout
 

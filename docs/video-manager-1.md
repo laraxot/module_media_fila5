@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "video manager 1"
 related:
   - "./webm.md"
+status: draft
 ---
 https://github.com/amitavroy/MyVideoManager
 

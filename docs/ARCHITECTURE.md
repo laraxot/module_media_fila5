@@ -7,7 +7,11 @@ type: architecture
 tags: [module, architecture, media, storage]
 created: 2026-08-04
 updated: 2026-08-04
+status: stale
 ---
+
+> Nota 2026-10-14 (docs-audit): Cita Action, modelli e Resource inesistenti in app/ (UploadMediaAction, ProcessMediaAction, DeleteMediaAction, MediaItem, CollectionResource); verificato 2026-10-14. Riferimento: README.md e 00-INDEX.md del modulo. Contenuto non riscritto, verificare prima di usarlo.
+
 # Media Module — Architecture
 
 ## Purpose

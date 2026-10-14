@@ -15,6 +15,8 @@ related:
   - ../../stories/01.Media-phpstan-fix.story.md
   - ../../stories/media-phpstan-swarm-2026-09-15-pest-uses-group.story.md
   - ../../stories/media-quality-gate-2026-09-04.story.md
+type: story
+qmd: "phpstan swarm 2026-09-23: verifica modules/media media"
 ---
 
 # PHPStan swarm 2026-09-23: verifica Modules/Media

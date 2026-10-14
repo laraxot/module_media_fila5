@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "vision"
 related:
   - "./webm.md"
+status: draft
 ---
 # Visione - Media Module
 

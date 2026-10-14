@@ -11,6 +11,7 @@ related:
   - ./module-roadmap.md
   - ../stories/module-bmad-audit-20260928.story.md
   - ../../../../Xot/docs/bmad-method.md
+status: draft
 ---
 
 # Epic 5.250 — architettura e contratto API modulo Media

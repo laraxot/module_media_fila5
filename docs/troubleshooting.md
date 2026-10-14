@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "troubleshooting"
 related:
   - "./webm.md"
+status: draft
 ---
 # Troubleshooting
 
@@ -18,7 +19,6 @@ related:
 <!-- Merged from TROUBLESHOOTING.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
-title: "Troubleshooting Guide — Media Module"
 module: "Media"
 type: operations
 tags: [troubleshooting, errors, debugging]

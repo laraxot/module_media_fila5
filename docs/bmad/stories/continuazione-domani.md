@@ -9,7 +9,7 @@ status: in-progress
 related:
   - ./readme-changelog-conflict-markers.story.md
   - ./cleanup-media-2026-09-22.story.md
-  - ../../../Xot/docs/bmad/stories/cleanup-all-modules.story.md
+  - ../../../../Xot/docs/bmad/stories/cleanup-all-modules.story.md
 ---
 
 # Media — Continuazione Domani

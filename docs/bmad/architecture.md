@@ -5,6 +5,8 @@ type: architecture
 tags: [architecture, structure]
 created: 2026-07-14
 updated: 2026-08-04
+status: draft
+qmd: "architettura modulo media media"
 ---
 
 # Architettura Modulo Media

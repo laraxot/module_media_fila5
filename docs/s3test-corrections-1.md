@@ -257,7 +257,7 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
-- [Documentazione Generale Media](../readme.md)
+- [Documentazione Generale Media](../README.md)
 ---
 - [Documentazione Generale Media](README.md)
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)

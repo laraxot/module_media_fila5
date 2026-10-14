@@ -6,6 +6,9 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+title: "Modulo Media — Documentazione Bridge"
+type: index
+qmd: "modulo media   documentazione bridge media"
 ---
 
 # Modulo Media — Documentazione Bridge

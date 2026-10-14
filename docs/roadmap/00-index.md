@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "00 index"
 related:
   - "./webm.md"
+status: draft
 ---
 # Media Module - Roadmap
 
@@ -43,7 +44,6 @@ related:
 <!-- Merged from 00-INDEX.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
-title: "Media Module - Roadmap"
 module: "Media"
 type: concept
 tags: [00, INDEX]
