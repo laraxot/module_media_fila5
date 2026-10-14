@@ -9,6 +9,7 @@ module: "Media"
 type: operations
 tags: [troubleshooting, errors, debugging]
 last_updated: 2026-07-28
+status: draft
 ---
 
 # Troubleshooting Guide — Media Module

@@ -6,6 +6,9 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+title: "bad practices"
+type: note
+qmd: "bad practices media"
 ---
 
 ```

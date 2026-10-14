@@ -10,6 +10,7 @@ updated: 2026-08-24
 qmd: "webm"
 related:
   - "./migrazione-filament-4.md"
+status: draft
 ---
 https://pixelpoint.io/blog/web-optimized-video-ffmpeg/
 

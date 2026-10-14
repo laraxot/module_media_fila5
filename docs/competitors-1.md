@@ -10,5 +10,6 @@ updated: 2026-07-14
 qmd: "competitors 1"
 related:
   - "./webm.md"
+status: draft
 ---
 https://github.com/outer-web/filament-image-library

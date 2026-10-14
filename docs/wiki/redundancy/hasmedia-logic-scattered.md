@@ -9,6 +9,7 @@ type: redundancy
 owner: Modules/Media
 severity: high
 created: 2026-05-21
+status: draft
 ---
 
 # HasMedia Logic Scattered Across the Codebase

@@ -13,6 +13,7 @@ related:
   - ../../../../../../bashscripts/ai/.agents/rules/migration-xot-base-standard.md
   - ../../../../../../bashscripts/ai/.agents/rules/migration-naming-standard.md
   - ../../MIGRATIONS.md
+status: draft
 ---
 
 # TemporaryUpload: consolidated into a single create migration

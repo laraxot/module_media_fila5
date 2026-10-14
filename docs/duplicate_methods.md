@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "duplicate methods"
 related:
   - "./webm.md"
+status: draft
 ---
 # Metodi duplicati — Media
 

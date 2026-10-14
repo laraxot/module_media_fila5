@@ -1,16 +1,20 @@
 ---
 issues: []
 discussions: []
-title: "📚 **Indice Documentazione Modulo Media**"
+title: "Indice Documentazione Modulo Media (superseded)"
 module: "Media"
 type: concept
 tags: [00, index]
 created: 2026-07-14
-updated: 2026-07-14
+updated: 2026-10-14
 qmd: "00 index"
 related:
   - "./webm.md"
+status: superseded
+superseded_by: 00-INDEX.md
 ---
+
+> Superseded il 2026-10-14: copia per sola differenza di maiuscole di [00-INDEX.md](./00-INDEX.md); l'indice canonico e' quello. Contenuto conservato per storia. Le voci "non presente" puntavano a file che non esistono (verificato 2026-10-14).
 # 📚 **Indice Documentazione Modulo Media**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -32,7 +36,7 @@ related:
 - 📄 **[Responsive Images](./webm.md)** - Gestione formati moderni (WebP, AVIF).
 
 ## 🎨 **Filament & UI**
-- 🖼️ **[Media Library](./filament.md)** - La libreria media in Filament.
+- 🖼️ **Media Library (`filament.md` non presente)** - La libreria media in Filament.
 - 🛠️ **[Table Actions](./filament-table-actions.md)** - Azioni di massa su file e directory.
 
 ## 🧪 **Qualità e Sviluppo**
@@ -41,14 +45,14 @@ related:
 - 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
 
 ## 📦 **Pacchetti Composer**
-- [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
+- Riferimento completo (`composer-packages-reference.md` non presente) | Inventario 312 pacchetti (`composer-packages-full-inventory.md` non presente)
 - `pbmedia/laravel-ffmpeg` - Elaborazione video
 - `intervention/image` - Elaborazione immagini
 
 ## 🔗 **Moduli Correlati**
-- [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
-- [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
-- [Cms](../../cms/docs/readme.md) - Integrazione media nei blocchi di contenuto.
+- [Xot](../../Xot/docs/README.md) - Base framework e Trait `HasMedia`.
+- CloudStorage (`readme.md` non presente) - Astrazione per provider cloud.
+- [Cms](../../Cms/docs/README.md) - Integrazione media nei blocchi di contenuto.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
@@ -85,7 +89,7 @@ related:
 
 ## 🔗 Riferimenti
 
-- [Xot Module](../Xot/docs/00-index.md) - Base classes
+- [Xot Module](../../Xot/docs/00-INDEX.md) - Base classes
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---

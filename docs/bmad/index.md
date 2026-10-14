@@ -3,6 +3,8 @@ title: Media — indice BMAD
 type: index
 tags: [docs, bmad, media]
 qmd: "Media indice BMAD documentazione"
+status: draft
+updated: 2026-10-09
 ---
 
 # Media — indice BMAD

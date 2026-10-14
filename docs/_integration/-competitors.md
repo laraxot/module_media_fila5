@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: _competitors
 canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
+status: stub
 ---
 # _competitors
 

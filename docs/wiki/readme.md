@@ -1,3 +1,11 @@
+---
+title: "LLM Wiki (module)"
+type: index
+status: draft
+updated: 2026-10-08
+tags: [docs, media, wiki]
+qmd: "llm wiki (module) media"
+---
 # LLM Wiki (module)
 
 This folder is the module's LLM wiki (docs/wiki). Use it to store synthesized, curated docs optimized for LLM ingestion.

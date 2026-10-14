@@ -12,6 +12,7 @@ discussions:
 related:
   - "phpstan.md"
   - "../../../../docs/wiki/troubleshooting/phpstan-test-assertion-chaining.md"
+status: draft
 ---
 
 # PHPStan zero-error — modulo Media

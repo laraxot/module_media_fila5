@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "conflict resolution iconmediacolumn"
 related:
   - "./webm.md"
+status: draft
 ---
 # Risoluzione Conflitto IconMediaColumn.php
 

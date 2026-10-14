@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "dry kiss analysis"
 related:
   - "./webm.md"
+status: draft
 ---
 # 🐄 DRY & KISS Analysis - Media
 

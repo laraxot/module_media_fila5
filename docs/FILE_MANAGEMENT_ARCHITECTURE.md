@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "file management architecture"
 related:
   - "./webm.md"
+status: draft
 ---
 # Media Module - File Management Architecture
 

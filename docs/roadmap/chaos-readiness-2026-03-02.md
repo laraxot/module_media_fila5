@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "chaos readiness 2026 03 02"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Media Chaos Readiness - 2026-03-02

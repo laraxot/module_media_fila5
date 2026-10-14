@@ -11,6 +11,7 @@ created: 2026-05-21
 related:
   - docs/wiki/troubleshooting/filament-hasmediaform-redeclare.md
   - https://github.com/laraxot/platform/issues/89
+status: draft
 ---
 
 # Media redundancy audit 2026-05-21

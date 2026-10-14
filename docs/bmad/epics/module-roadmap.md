@@ -6,6 +6,7 @@ module: Media
 created: 2026-09-28
 updated: 2026-09-28
 qmd: "Media epic roadmap qualità architettura test documentazione"
+tags: [docs, media, bmad]
 ---
 # Media — epic roadmap
 
