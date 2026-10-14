@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "risoluzione conflitti video entry"
 related:
   - "./webm.md"
+status: draft
 ---
 # Risoluzione Conflitto in VideoEntry
 

@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "conflitti merge risolti"
 related:
   - "./webm.md"
+status: draft
 ---
 # Risoluzione dei Conflitti Git nel Modulo Media
 

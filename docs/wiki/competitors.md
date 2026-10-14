@@ -8,6 +8,8 @@ tags: [migrato-da-txt, media]
 converted_from: _competitors.txt
 created: 2026-08-24
 updated: 2026-08-24
+status: draft
+qmd: "competitors   risorse esterne media"
 ---
 
 # Competitors — risorse esterne

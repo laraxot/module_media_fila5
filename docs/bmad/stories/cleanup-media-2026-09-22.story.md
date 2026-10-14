@@ -1,3 +1,11 @@
+---
+title: "Story: Cleanup Media Module"
+type: story
+status: draft
+updated: 2026-10-07
+tags: [docs, media, bmad]
+qmd: "story: cleanup media module media"
+---
 # Story: Cleanup Media Module
 
 ## BMAD Method Applied

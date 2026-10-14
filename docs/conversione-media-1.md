@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "conversione media 1"
 related:
   - "./webm.md"
+status: draft
 ---
 # Conversione Media
 

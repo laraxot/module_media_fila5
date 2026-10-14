@@ -8,10 +8,10 @@ discussions: []
 type: overview
 module: Media
 sources:
-  - ../../../philosophy.md
-  - ../../../file-management-architecture.md
-  - ../../../business-logic-overview.md
-  - ../../../configuration.md
+  - ../../philosophy.md
+  - ../../file-management-architecture.md
+  - ../../business-logic-overview.md
+  - ../../configuration.md
 confidence: high
 updated: 2026-04-15
 ---

@@ -8,6 +8,7 @@ type: concept
 tags: [PRD, media]
 created: 2026-08-04
 updated: 2026-08-04
+status: draft
 ---
 # Product Requirements Document (PRD) - Media Module
 

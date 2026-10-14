@@ -6,6 +6,9 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+title: "Decision Log - Modulo Media"
+type: note
+qmd: "decision log - modulo media media"
 ---
 
 # Decision Log - Modulo Media

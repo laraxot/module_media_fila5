@@ -10,6 +10,7 @@ discussions: []
 module: theme
 topic: conflicts-analysis-1
 canonical: ../../../../Themes/docs/shared-components/conflicts-analysis.md
+status: stub
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/conflicts-analysis.md

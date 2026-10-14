@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "filament table actions 1"
 related:
   - "./webm.md"
+status: draft
 ---
 # Convenzioni per le Table Actions in Filament
 
