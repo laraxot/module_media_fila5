@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Media Module - Product Roadmap"
+module: "Media"
+type: concept
+tags: [PRODUCT, ROADMAP]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "product roadmap"
+related:
+  - "./webm.md"
+status: draft
+---
 # Media Module - Product Roadmap
 
 **Module:** Media  

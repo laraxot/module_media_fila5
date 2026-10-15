@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Media module overview"
+module: "Media"
+type: concept
+tags: [module, overview]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "module overview"
+related:
+  - "./webm.md"
+status: draft
+---
 # Media module overview
 
 ## Scopo ("perché esiste")

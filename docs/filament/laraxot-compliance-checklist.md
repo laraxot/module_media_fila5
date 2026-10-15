@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Checklist Conformità Laraxot - Modulo Media"
+module: "Media"
+type: concept
+tags: [laraxot, compliance, checklist]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "laraxot compliance checklist"
+related:
+  - "./webm.md"
+status: draft
+---
 # Checklist Conformità Laraxot - Modulo Media
 
 ## 🎯 **CHECKLIST PRE-COMMIT OBBLIGATORIA**

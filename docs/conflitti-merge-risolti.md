@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Risoluzione dei Conflitti Git nel Modulo Media"
+module: "Media"
+type: concept
+tags: [conflitti, merge, risolti]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "conflitti merge risolti"
+related:
+  - "./webm.md"
+status: draft
+---
 # Risoluzione dei Conflitti Git nel Modulo Media
 
 ## Panoramica

@@ -1,3 +1,16 @@
+---
+issues: []
+discussions: []
+title: "Linee Guida Prevenzione Problemi - Modulo Media"
+module: "Media"
+type: how-to
+tags: [prevention, guidelines]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "prevention guidelines"
+related:
+  - "./webm.md"
+---
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -374,7 +387,7 @@ jobs:
 - [Correzioni S3Test.php](s3test_corrections.md)
 - [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
-- [Architecture Guidelines](../../docs/architecture.md)
+- [Architecture Guidelines](architecture.md)
 
 ---
 
