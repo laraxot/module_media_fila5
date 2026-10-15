@@ -80,10 +80,10 @@ Varianti: 45 gruppi di nomi che differiscono solo per maiuscole, `-` e `_` (103 
 
 ## Story BMAD
 
-- [2026-10-14 Ingressi docs del modulo Media](./stories/2026-10-14-docs-ingressi-media.story.md): verifica di README, indici e architecture sul codice
+- [2026-10-14 Ingressi docs del modulo Media](./stories/docs-ingressi-media.story.md): verifica di README, indici e architecture sul codice
 - [02 Risoluzione dei marker di merge (e7e667b11)](./stories/02.Media-merge-conflict-resolution.story.md) e i suoi [followups aperti](./stories/02.Media-merge-conflict-resolution.story.md#followups-aperti)
-- [2026-10-06 PHPStan cleanup](./stories/2026-10-06-phpstan-cleanup-media.story.md)
-- [2026-10-08 Services -> Actions (residui VideoStream, SubtitleService)](./stories/2026-10-08-services-to-actions-media.story.md)
+- [2026-10-06 PHPStan cleanup](./stories/phpstan-cleanup-media.story.md)
+- [2026-10-08 Services -> Actions (residui VideoStream, SubtitleService)](./stories/services-to-actions-media.story.md)
 - [16-4 Consolidamento case-variant](./stories/16-4-media-case-variant-consolidation.md)
 - Elenco completo: [`stories/`](./stories/) e [INDEX.md](./INDEX.md#story-bmad)
 

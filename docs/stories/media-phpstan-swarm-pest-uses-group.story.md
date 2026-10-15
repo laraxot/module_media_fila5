@@ -17,7 +17,7 @@ created_at: '2026-09-15'
 updated_at: '2026-09-15'
 tags: [bmad, story, phpstan, pest, media, phpstan-swarm]
 related:
-  - ./media-quality-gate-2026-09-04.story.md
+  - ./media-quality-gate.story.md
 ---
 
 # Fix swarm PHPStan 2026-09-15: falsi positivi uses()/describe()->group() nei test Pest
