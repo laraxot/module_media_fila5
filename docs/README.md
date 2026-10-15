@@ -9,7 +9,7 @@ status: active
 audience: [developer, maintainer]
 tags: [media, docs, index, bmad, documentation]
 created: 2026-09-26
-updated: 2026-10-14
+updated: 2026-10-15
 qmd: "README"
 issues: []
 discussions: []
@@ -85,3 +85,14 @@ Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al
 
 - [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media.dev.md)
 - [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)
+
+## Standing order (qualita' + docs)
+
+- **PHPStan a zero** sul codice del modulo: non ignorare errori, non abbassare il livello, non modificare `phpstan.neon` del progetto. Qualita' + docs + BMAD sono standing order, non opzionali.
+- **Cartella test**: solo `tests/` (minuscolo). `Tests/` e' vietato (case-collision su macOS/Windows e confusione PSR-4).
+- **Nomi `.md`**: kebab-case minuscolo, niente date/timestamp nel nome, unica eccezione `README.md`. Se esistono `readme.md` e `README.md`, resta solo `README.md`.
+- **Docs**: solo dentro `docs/` gia' esistente; consolida invece di moltiplicare file; link relativi; focus su scopo/perche'/business logic (DRY + KISS).
+- **Git**: forward-only (patch in avanti); no reset/revert/checkout come scorciatoia.
+- **BMAD + second brain**: indici e decisioni vivono in `docs/` del modulo; aggiornali quando cambia il perche', non solo il come.
+
+Vedi anche: [00-index.md](./00-index.md) · [index.md](./index.md)
