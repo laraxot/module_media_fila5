@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Riepilogo Correzioni S3Test.php - Modulo Media"
+module: "Media"
+type: concept
+tags: [corrections]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "corrections"
+related:
+  - "./webm.md"
+status: draft
+---
 # Riepilogo Correzioni S3Test.php - Modulo Media
 
 ## 🎯 **Obiettivo Completato**

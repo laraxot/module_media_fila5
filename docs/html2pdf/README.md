@@ -1,7 +1,13 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "README"
+issues: []
+discussions: []
 title: html2pdf — documentazione canonica
 type: reference
 updated: 2026-05-21
+status: draft
 ---
 
 # Html2Pdf (canonico Media)

@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Documentation Merge Conflict Task List"
+module: "Media"
+type: concept
+tags: [merge, conflict, task, list]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "merge conflict task list"
+related:
+  - "./webm.md"
+status: draft
+---
 # Documentation Merge Conflict Task List
 
 ## INCOMPLETE (3 DOCS)
@@ -11,7 +25,8 @@
 ## COMPLETE (12 DOCS)
 - [x] `Modules/Sixteen/docs/html-parity-body-policy.md` - Added lint rule
 - [x] `Modules/Notify/Modules/Xot/docs/INDEX.md` - Added missing index references
-- [x] `Modules/Fixcity/docs/docs/INDEX.md` - Added DRY/KISS requirements
+- [x] `Modules/LegacyDomain/docs/docs/INDEX.md` - Added DRY/KISS requirements
 
 ## BOUNDARY CASES (0)
+---
 - [ ] No boundary cases detected

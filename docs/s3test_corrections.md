@@ -1,3 +1,16 @@
+---
+issues: []
+discussions: []
+title: "Correzioni S3Test.php - Modulo Media"
+module: "Media"
+type: concept
+tags: [s3test, corrections]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "s3test corrections"
+related:
+  - "./webm.md"
+---
 # Correzioni S3Test.php - Modulo Media
 
 ## Problemi Identificati e Risolti
@@ -245,7 +258,7 @@ private function getSolutionForError(?string $errorCode): string
 ## Collegamenti
 
 - [Documentazione Generale Media](../README.md)
-- [Best Practice Traduzioni](../../../docs/translation-standards.md)
+- [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../docs/laraxot_conventions.md)
 - [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)
 

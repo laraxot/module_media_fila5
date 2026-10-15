@@ -1,3 +1,17 @@
+---
+issues: []
+discussions: []
+title: "Media Module - Roadmap"
+module: "Media"
+type: concept
+tags: [00, INDEX]
+created: 2026-07-14
+updated: 2026-07-14
+qmd: "00 index"
+related:
+  - "./webm.md"
+status: draft
+---
 # Media Module - Roadmap
 
 > Sistema universale per gestione, trasformazione e ottimizzazione file multimediali.
