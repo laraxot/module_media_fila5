@@ -49,7 +49,7 @@ superseded_by: ../00-INDEX.md
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../../Xot/docs/README.md) - Base framework e Trait `HasMedia`.
-- CloudStorage (`readme.md` non presente) - Astrazione per provider cloud.
+- CloudStorage (`README.md` non presente) - Astrazione per provider cloud.
 - [Cms](../../../Cms/docs/README.md) - Integrazione media nei blocchi di contenuto.
 
 ---

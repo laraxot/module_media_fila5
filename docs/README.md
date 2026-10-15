@@ -20,16 +20,16 @@ related: [bmad/00-INDEX.md, bmad/readme.md, INDEX.md]
 
 Path: `laravel/Modules/Media/docs/`
 Module: @Modules/Media
-Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). `docs-archive-2026/` non esiste ne' nel modulo ne' nella radice del repo (verificato 2026-10-14): lo storico vive nelle sottocartelle di `docs/`, classificate in [00-INDEX.md](./00-INDEX.md#mappa-delle-directory).
+Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). `docs-archive-2026/` non esiste ne' nel modulo ne' nella radice del repo (verificato 2026-10-14): lo storico vive nelle sottocartelle di `docs/`, classificate in [00-INDEX.md](./00-index.md#mappa-delle-directory).
 
 ## File canonici
 
 1. **[README.md](README.md)** - questo file, punto di ingresso
 2. **[architecture.md](architecture.md)** - architettura, namespace, dipendenze, struttura, funzionalita'
-3. **[INDEX.md](INDEX.md)** - indice completo per categoria, con le story BMAD
+3. **[INDEX.md](index.md)** - indice completo per categoria, con le story BMAD
 4. **[index.md](index.md)** - bridge per discovery (legacy)
 
-Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
+Nota: `README.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
 
 ## Scopo del modulo
 
@@ -76,7 +76,7 @@ Il pannello e' raggiungibile su `media/admin` (Resource `media`, `media-converts
 
 - **architecture.md**: architettura del modulo e pattern di design
 - **README.md**: questo file
-- **stories/**: story BMAD del modulo (elenco in [INDEX.md](INDEX.md#story-bmad))
+- **stories/**: story BMAD del modulo (elenco in [INDEX.md](index.md#story-bmad))
 - **bmad/**: artefatti BMAD (indice in [bmad/00-INDEX.md](./bmad/00-INDEX.md))
 
 Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al codice, in formato Markdown (`.md`).

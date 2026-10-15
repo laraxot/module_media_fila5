@@ -155,7 +155,7 @@ questa stessa convenzione di `@phpstan-ignore-next-line`.
 
 ## Igiene root modulo (richiesta dal coordinatore)
 
-Verificato `Modules/Media/` root: 3 file `.md` (`CHANGELOG.md`, `README.md`,
+Verificato `Modules/Media/` root: 3 file `.md` (`changelog.md`, `README.md`,
 `test11.md`), 0 file `.txt`. Sotto la soglia di 6 `.md` indicata dal
 coordinatore — nessuno spostamento necessario.
 
