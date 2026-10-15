@@ -70,10 +70,10 @@ Le story vivono in [`stories/`](./stories/). Le piu' recenti:
 | Story | Stato | Note |
 |---|---|---|
 | [02 Risoluzione dei marker di merge (e7e667b11)](./stories/02.Media-merge-conflict-resolution.story.md) | done | 92 file PHP + 6 file docs; contiene i followups aperti |
-| [2026-10-06 PHPStan cleanup](./stories/2026-10-06-phpstan-cleanup-media.story.md) | done | [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md) |
+| [2026-10-06 PHPStan cleanup](./stories/phpstan-cleanup-media.story.md) | done | [dev](./stories/phpstan-cleanup-media.dev.md) |
 | [16-4 Consolidamento case-variant](./stories/16-4-media-case-variant-consolidation.md) | ready-for-dev | restano `tests/filament` vs `tests/Filament`, `app/conversions` |
-| [2026-10-08 Services -> Actions](./stories/2026-10-08-services-to-actions-media.story.md) | done | `app/Services` rimosso; in `Actions/Stream` resta solo `StreamVideoAction` |
-| [2026-10-14 Ingressi docs Media](./stories/2026-10-14-docs-ingressi-media.story.md) | done | README, 00-INDEX, INDEX, architecture verificati sul codice; `ARCHITECTURE.md` marcato stale |
+| [2026-10-08 Services -> Actions](./stories/services-to-actions-media.story.md) | done | `app/Services` rimosso; in `Actions/Stream` resta solo `StreamVideoAction` |
+| [2026-10-14 Ingressi docs Media](./stories/docs-ingressi-media.story.md) | done | README, 00-INDEX, INDEX, architecture verificati sul codice; `ARCHITECTURE.md` marcato stale |
 | [media-services-to-actions](./stories/media-services-to-actions.story.md) | done | il residuo `SubtitleService` descritto qui è stato chiuso dalla story del 2026-10-08 (`app/Services` non esiste più) |
 | [01 PHPStan fix](./stories/01.Media-phpstan-fix.story.md) | done | `method.staticCall` su `Schemas/*Form` e `*Infolist` |
 
