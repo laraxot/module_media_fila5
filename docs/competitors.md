@@ -1,13 +1,24 @@
 ---
-module: theme
-topic: -competitors
-canonical: ../../../Themes/docs/shared-components/.gitkeep-Modules
-title: "competitors"
-type: note
-status: stub
-updated: 2026-10-08
-tags: [docs, media]
-qmd: "competitors media"
+qmd: " competitors"
+issues: []
+discussions: []
+title: 'Competitors — risorse esterne'
+module: Media
+type: reference
+slug: competitors
+description: 'Elenco di 1 riferimenti esterni raccolti per competitors, deduplicati e convertiti da un dump di link.'
+tags: [migrato-da-txt, media]
+converted_from: _competitors.txt
+created: 2026-08-24
+updated: 2026-08-24
+status: draft
 ---
 
-See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep-Modules
+# Competitors — risorse esterne
+
+> Fonti raccolte durante lo studio dell'argomento. Una fonte vale quando la si
+> collega a un punto del codice: leggila, poi trova dove è già applicata.
+
+## Riferimenti
+
+- <https://github.com/outer-web/filament-image-library>
