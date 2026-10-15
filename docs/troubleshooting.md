@@ -558,6 +558,6 @@ Systematic error resolution for file upload, storage, processing, and permission
 
 ---
 
-**Related:** [Patterns](./PATTERNS.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)
+**Related:** [Patterns](./patterns.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)
 ---
 # Troubleshooting
