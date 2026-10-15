@@ -19,7 +19,7 @@ status: draft
 - `ARCHITECTURE.md` marcato `stale` (cita `UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaItem`, `CollectionResource`, tutte assenti).
 - `00-index.md`, `wiki/00-index.md`, `wiki/00-INDEX.md`, `wiki/index.md`: copie per variante di maiuscole marcate `superseded` verso l'indice canonico; `index.md` (bridge) con i link a file inesistenti ridotti a testo.
 - `vendor/bin/phpstan analyse Modules/Media` da `laravel/`: exit 0. Pest non eseguito.
-- Story: [2026-10-14 Ingressi docs Media](../stories/2026-10-14-docs-ingressi-media.story.md).
+- Story: [2026-10-14 Ingressi docs Media](../stories/docs-ingressi-media.story.md).
 
 ## [2026-05-27] lint | phpstan zero
 

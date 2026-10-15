@@ -8,7 +8,7 @@ updated_at: '2026-09-22'
 status: in-progress
 related:
   - ./readme-changelog-conflict-markers.story.md
-  - ./cleanup-media-2026-09-22.story.md
+  - ./cleanup-media.story.md
   - ../../../../Xot/docs/bmad/stories/cleanup-all-modules.story.md
 ---
 
@@ -59,7 +59,7 @@ ripulito. Nessuna story BMAD copre questo file.
 - `app/Services/SubtitleService.php.bak` è **tracciato in git**
   (`git ls-files` lo conferma, aggiunto in `f4a106a9`) — file `.bak` non
   dovrebbe stare nel repo.
-- `docs/bmad/stories/cleanup-media-2026-09-22.story.md` è un template
+- `docs/bmad/stories/cleanup-media.story.md` è un template
   generico (Understand/Plan/Implement/Verify/Document) senza `status` e
   senza riferimenti concreti — non risulta collegato a nessun lavoro reale
   svolto finora; verificare se va chiuso come "mai eseguito" o riempito con
@@ -76,7 +76,7 @@ ripulito. Nessuna story BMAD copre questo file.
    vista `f4a106a9`), eliminare l'altro e il `.bak` tracciato.
 3. **readme-changelog-conflict-markers.story.md** — chi la possiede la marchi
    `done` (lavoro già verificato sopra), non riaprire l'analisi.
-4. **cleanup-media-2026-09-22.story.md** — valutare se chiuderla (mai
+4. **cleanup-media.story.md** — valutare se chiuderla (mai
    eseguita) o trasformarla in una story reale con task concreti.
 
 ## Second brain

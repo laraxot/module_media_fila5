@@ -11,7 +11,7 @@ qmd: "media docs ingressi README 00-INDEX INDEX architecture ARCHITECTURE stale 
 related:
   - ../README.md
   - ../00-INDEX.md
-  - ../../../Fixcity/docs/stories/2026-10-13-dcp-56-organizzazione-docs-moduli-e-temi.story.md
+  - ../../../Fixcity/docs/stories/dcp-56-organizzazione-docs-moduli-e-temi.story.md
   - ../../../../../bmad-output/docs-architecture/module-theme-docs-contract.md
 ---
 

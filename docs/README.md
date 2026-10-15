@@ -83,5 +83,5 @@ Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al
 
 ## Story recenti
 
-- [2026-10-06 PHPStan cleanup - Media](./stories/2026-10-06-phpstan-cleanup-media.story.md) · [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md)
+- [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media.dev.md)
 - [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)

@@ -24,7 +24,7 @@ Tool: `bashscripts/tools/resolve-merge-markers.sh`.
 
 - Branch: `dev`, up to date con `laraxot/dev`.
 - Worktree: 1 file untracked preesistente
-  (`docs/bmad/stories/quality-gates-phpstan-swarm-2026-09-23.story.md`), non toccato.
+  (`docs/bmad/stories/quality-gates-phpstan-swarm.story.md`), non toccato.
 - `.gitattributes`: nessun marker.
 
 ## Risultati
