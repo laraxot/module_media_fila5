@@ -73,7 +73,7 @@ La radice ha 275 file `.md`. Classificazione per nome del file (regole in ordine
 | Duplicati e ridondanza | 20 | `duplicate-methods-analysis.md`, `redundancy-audit.md` |
 | MCP, agenti, second brain, on-demand | 19 | `mcp-configuration.md`, `second-brain.md` |
 | FFmpeg, video, stream, conversioni | 18 | `ffmpeg-usage.md`, `stream.md`, `conversione-media.md` |
-| Filament e migrazioni | 15 | `filament-table-actions.md`, `migration-filament-4.md` |
+| Filament e migrazioni | 15 | `filament-table-actions.md`, `migration-filament.md` |
 | S3, AWS, storage, file | 10 | `aws.md`, `file-management.md` |
 
 Varianti: 45 gruppi di nomi che differiscono solo per maiuscole, `-` e `_` (103 file su 217 nomi distinti); nessun file della radice è marcato `superseded`. Il consolidamento richiede una migration map (DOC-004, DOC-006).
