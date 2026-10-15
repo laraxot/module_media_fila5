@@ -9,7 +9,7 @@ status: active
 audience: [developer, maintainer]
 tags: [media, docs, index, bmad, documentation]
 created: 2026-09-26
-updated: 2026-10-14
+updated: 2026-10-15
 qmd: "README"
 issues: []
 discussions: []
@@ -20,16 +20,16 @@ related: [bmad/00-INDEX.md, bmad/readme.md, INDEX.md]
 
 Path: `laravel/Modules/Media/docs/`
 Module: @Modules/Media
-Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). `docs-archive-2026/` non esiste ne' nel modulo ne' nella radice del repo (verificato 2026-10-14): lo storico vive nelle sottocartelle di `docs/`, classificate in [00-INDEX.md](./00-INDEX.md#mappa-delle-directory).
+Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). `docs-archive-2026/` non esiste ne' nel modulo ne' nella radice del repo (verificato 2026-10-14): lo storico vive nelle sottocartelle di `docs/`, classificate in [00-INDEX.md](./00-index.md#mappa-delle-directory).
 
 ## File canonici
 
 1. **[README.md](README.md)** - questo file, punto di ingresso
 2. **[architecture.md](architecture.md)** - architettura, namespace, dipendenze, struttura, funzionalita'
-3. **[INDEX.md](INDEX.md)** - indice completo per categoria, con le story BMAD
+3. **[INDEX.md](index.md)** - indice completo per categoria, con le story BMAD
 4. **[index.md](index.md)** - bridge per discovery (legacy)
 
-Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
+Nota: `README.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
 
 ## Scopo del modulo
 
@@ -76,7 +76,7 @@ Il pannello e' raggiungibile su `media/admin` (Resource `media`, `media-converts
 
 - **architecture.md**: architettura del modulo e pattern di design
 - **README.md**: questo file
-- **stories/**: story BMAD del modulo (elenco in [INDEX.md](INDEX.md#story-bmad))
+- **stories/**: story BMAD del modulo (elenco in [INDEX.md](index.md#story-bmad))
 - **bmad/**: artefatti BMAD (indice in [bmad/00-INDEX.md](./bmad/00-INDEX.md))
 
 Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al codice, in formato Markdown (`.md`).
@@ -85,3 +85,14 @@ Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al
 
 - [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media.dev.md)
 - [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)
+
+## Standing order (qualita' + docs)
+
+- **PHPStan a zero** sul codice del modulo: non ignorare errori, non abbassare il livello, non modificare `phpstan.neon` del progetto. Qualita' + docs + BMAD sono standing order, non opzionali.
+- **Cartella test**: solo `tests/` (minuscolo). `Tests/` e' vietato (case-collision su macOS/Windows e confusione PSR-4).
+- **Nomi `.md`**: kebab-case minuscolo, niente date/timestamp nel nome, unica eccezione `README.md`. Se esistono `readme.md` e `README.md`, resta solo `README.md`.
+- **Docs**: solo dentro `docs/` gia' esistente; consolida invece di moltiplicare file; link relativi; focus su scopo/perche'/business logic (DRY + KISS).
+- **Git**: forward-only (patch in avanti); no reset/revert/checkout come scorciatoia.
+- **BMAD + second brain**: indici e decisioni vivono in `docs/` del modulo; aggiornali quando cambia il perche', non solo il come.
+
+Vedi anche: [00-index.md](./00-index.md) · [index.md](./index.md)
