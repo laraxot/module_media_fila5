@@ -142,7 +142,7 @@ Il modulo utilizza l'inversion of control tramite:
 
 <!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
 
-> Nota 2026-10-14: questa sezione, copia di `architecture.md` (marcato `stale`), cita Action, modelli e Resource che non esistono in `app/` (`UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaItem`, `CollectionResource`) e consumatori (Activity, Lang) non confermati dal codice. Conservata per storia: usare la parte sopra e il README.md.
+> Nota 2026-10-14: questa sezione, copia di `ARCHITECTURE.md` (marcato `stale`), cita Action, modelli e Resource che non esistono in `app/` (`UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaItem`, `CollectionResource`) e consumatori (Activity, Lang) non confermati dal codice. Conservata per storia: usare la parte sopra e il README.md.
 
 # Media Module - Architecture (copia storica di ARCHITECTURE.md)
 
