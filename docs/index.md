@@ -12,7 +12,7 @@ status: draft
 
 # Media Module Documentation
 
-> Nota 2026-10-14: bridge di discovery legacy. L'indice operativo canonico e' [00-INDEX.md](./00-index.md), l'ingresso verificato sul codice e' [README.md](./README.md). Questo file e' una concatenazione di due indici storici: le voci indicate come "non presente" puntavano a file che non esistono nella cartella (misurato il 2026-10-14) e sono state lasciate come testo, senza inventare bersagli. Funzionalita' citate ma non presenti nel codice: watermark automatico, CDN generico (esiste solo CloudFront), `MediaService`.
+> Nota 2026-10-14: bridge di discovery legacy. L'indice operativo canonico e' [00-INDEX.md](./00-INDEX.md), l'ingresso verificato sul codice e' [README.md](./README.md). Questo file e' una concatenazione di due indici storici: le voci indicate come "non presente" puntavano a file che non esistono nella cartella (misurato il 2026-10-14) e sono state lasciate come testo, senza inventare bersagli. Funzionalita' citate ma non presenti nel codice: watermark automatico, CDN generico (esiste solo CloudFront), `MediaService`.
 
 **Last Update**: Feb 2026
 **Status**: Active Development
@@ -45,7 +45,7 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../../.agents/docs/critical-r
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](./README.md) - Panoramica generale del modulo
+- [README](./readme.md) - Panoramica generale del modulo
 - Architettura (`architecture/readme.md` non presente) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
@@ -86,7 +86,7 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../../.agents/docs/critical-r
 - Standard Traduzioni (`translation_standards.md` non presente) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
-- [PHPStan Level 10](./phpstan-level10-fixes.md) - Correzioni per PHPStan Level 10
+- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -240,7 +240,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - Standard Traduzioni (`translation_standards.md` non presente) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
-- [PHPStan Level 10](./phpstan-level10-fixes.md) - Correzioni per PHPStan Level 10
+- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -263,7 +263,7 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [data-models.md](./data-models.md)
 - [core-functionality.md](./core-functionality.md)
 - [file-management-architecture.md](./file-management-architecture.md)
-- [phpstan_level10_fixes.md](./phpstan-level10-fixes.md) / [phpstan-report.md](./phpstan-report.md)
+- [phpstan_level10_fixes.md](./phpstan_level10_fixes.md) / [phpstan-report.md](./phpstan-report.md)
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
 - [wiki/index.md](./wiki/index.md)
