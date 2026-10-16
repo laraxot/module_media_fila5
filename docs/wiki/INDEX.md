@@ -23,9 +23,9 @@ Ingresso del modulo: [../README.md](../README.md). Indice operativo canonico: [.
 | `troubleshooting/` | 5 | Errori noti (redeclare di classi, conflitti di merge, correzioni PHPStan su ConvertVideo) |
 | `integrations/` | 4 | FFmpeg, API, aggiornamento Laravel 13 |
 | `actions/` | 4 | Documenti sulle Action di conversione video (con copie `-1`) |
-| `rules/` | 3 | `module-commit-push-after-change.md` piu' `index.md` e `index.md` |
+| `rules/` | 3 | `module-commit-push-after-change.md` piu' `INDEX.md` e `index.md` |
 | `redundancy/`, `_templates/` | 3 + 3 | Analisi di ridondanza e modelli |
-| `skills/`, `memories/`, `commands/` | 2 + 2 + 2 | Solo `index.md` e `index.md` (nessuna voce reale) |
+| `skills/`, `memories/`, `commands/` | 2 + 2 + 2 | Solo `INDEX.md` e `index.md` (nessuna voce reale) |
 | `overviews/`, `how-to/` | 1 + 1 | Una pagina ciascuna |
 
 Primo livello: 29 file su 35 hanno lo stesso nome (senza distinguere le maiuscole) di un file nella radice di `docs/` e solo 1 e' identico byte per byte; non sono stati riconciliati (DOC-004). Esistono solo qui `AGENTS.md`, `agents.md`, `bmad-method.md`, `log.md`, `overview.md`, `resource-table-columns.md`. Registro delle attivita': [log.md](./log.md).

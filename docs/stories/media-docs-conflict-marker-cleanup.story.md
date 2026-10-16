@@ -33,7 +33,7 @@ risoluzione automatica; contenuto divergente → giudizio manuale):
 - 34 blocchi risolti automaticamente (un lato vuoto o sottoinsieme dell'altro).
 - 13 blocchi divergenti risolti a mano, criteri principali: tenuto il lato
   con informazione reale quando l'altro era stub/generico; unite le sezioni
-  quando entrambe portavano contenuto nuovo (es. `00-index.md`: sia "Ultimo
+  quando entrambe portavano contenuto nuovo (es. `00-INDEX.md`: sia "Ultimo
   Aggiornamento" sia "Dependency Intelligence"); preferita la denominazione
   generica "laraxot" ai nomi di progetti ospiti (FixCity, SaluteOra)
   hardcoded — Media e' un modulo condiviso fra piu' progetti (`git remote

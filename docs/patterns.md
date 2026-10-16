@@ -1,7 +1,7 @@
 ---
 created: 2026-09-26
 updated: 2026-09-26
-qmd: "PATTERNS"
+qmd: "patterns"
 issues: []
 discussions: []
 title: "Architectural Patterns — Media Module"
@@ -363,6 +363,4 @@ public function store(Request $request)
 
 ---
 
-**Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
----
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
