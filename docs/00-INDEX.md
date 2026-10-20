@@ -80,6 +80,7 @@ Varianti: 45 gruppi di nomi che differiscono solo per maiuscole, `-` e `_` (103 
 
 ## Story BMAD
 
+- [2026-10-20 Chiamate di debug (dddx) in produzione](./stories/debug-calls-removal-media.story.md): generatore `Webm` mai completato e non registrato, ora errore esplicito invece di un dump
 - [2026-10-20 PHPStan, test regrediti dal pull](./stories/phpstan-test-wave-media.story.md): 282 errori a 0 ripristinando 9 file di test scambiati dal remoto; `SubtitleService` ricomparso (zero chiamanti)
 - [2026-10-14 Ingressi docs del modulo Media](./stories/docs-ingressi-media.story.md): verifica di README, indici e architecture sul codice
 - [02 Risoluzione dei marker di merge (e7e667b11)](./stories/02.Media-merge-conflict-resolution.story.md) e i suoi [followups aperti](./stories/02.Media-merge-conflict-resolution.story.md#followups-aperti)

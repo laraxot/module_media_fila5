@@ -98,3 +98,13 @@ perimetro dello streaming sono documentati in
   `exit` per chiudere la risposta).
 - I test `MediaHighestMissCoverageTest` e simili restano in parte sweep di coverage con `try/catch Throwable`; non toccati
   (fuori perimetro).
+
+## Nota di verifica 2026-10-20
+
+Epic: [epic-services-to-queueable-actions](../../../../../bmad-output/epic-services-to-queueable-actions.md). Misura delle 13:00 UTC circa, righe volatili.
+
+- Su disco `Media/app/Services/` non esiste; `SubtitleService.php` e `VideoStream.php` sono cancellati (commit `bd511f57`, 12:17 UTC). `git -C Modules/Media ls-tree -r --name-only laraxot/dev -- app/Services | wc -l` restituisce 0.
+- Sostituiti da `Actions/Subtitle/{ConvertSrtToVttAction,ExtractSubtitlePlainTextAction,ParseSubtitleXmlAction,UpdateModelSubtitleFieldAction}` e `Actions/Stream/StreamVideoAction` (path verificati). Il refuso `upateModel` del Service non esiste piu'.
+- Chiamanti dei Service: zero. Dei successori solo `ExtractSubtitlePlainTextAction` ha 1 file di produzione; le altre 4 Action sottotitoli e `StreamVideoAction` hanno solo test.
+- Parita' da verificare: `ConvertSrtToVttAction` non ha piu' `exit()`, ma il `throw` per il fallimento di `fgets` avviene prima di `fclose` (handle non chiuso sul ramo d'errore). `StreamVideoAction` contiene 3 `exit;` (righe 117, 127, 170), `echo` e `flush()`: non puo' girare accodata ed e' senza consumatori di produzione.
+- Nessuna Action nuova in W0; le decisioni sono in W2 e W3 dell'epic.
