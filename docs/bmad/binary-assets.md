@@ -6,6 +6,9 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+title: "Asset binari"
+type: note
+qmd: "asset binari media"
 ---
 
 # Asset binari

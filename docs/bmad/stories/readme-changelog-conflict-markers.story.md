@@ -9,6 +9,8 @@ qmd: "media readme changelog committed conflict markers frontmatter"
 related:
   - ../../README.md
   - ../../../../Xot/docs/bmad/stories/cleanup-all-modules.story.md
+type: story
+tags: [docs, media, bmad]
 ---
 
 # Media — marker in README/CHANGELOG a git status pulito
