@@ -13,23 +13,26 @@ related:
   - ../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md
 ---
 
-# no `app/Support/` — business logic in QueueableAction
+# `app/Support/` solo per adapter e primitive infrastrutturali
 
 ## Scopo
 
-Nel modulo Media **non** esiste più `app/Support/`.
+Nel modulo Media le use-case stanno in `app/Actions/` e usano
+`Spatie\QueueableAction\QueueableAction`. `app/Support/` non contiene business
+logic: ospita solo primitive infrastrutturali che non sono use-case.
 
 ## Migrazione (2026-07-12)
 
 | Legacy `app/Support/` | Action |
 |-----------------------|--------|
-| `TemporaryUploadPathGenerator` (`TemporaryUploadPathGeneratorContract`) | `GenerateTemporaryUploadPathAction` (`purpose`: `original`, `conversion`, `responsive`) |
-| `Ffmpeg/MediaExporterResolver` | `Ffmpeg/ResolveMediaExporterAction` (`from()` → `execute()`) |
+| Use-case di path temporanei | `GenerateTemporaryUploadPathAction` (`purpose`: `original`, `conversion`, `responsive`) |
+| Use-case di risoluzione FFmpeg | `Ffmpeg/ResolveMediaExporterAction` (`from()` → `execute()`) |
 
 ## Note
 
-- Nessun consumer PHP attivo al momento della migrazione; path generator pronto per binding Spatie MediaLibrary.
-- `ResolveMediaExporterAction` normalizza il ritorno della fluent API FFmpeg.
+- `TemporaryUploadPathGenerator` resta un path generator infrastrutturale richiesto dal contratto MediaLibrary; non è un use-case.
+- `MediaExporterResolver` resta un adapter/runtime type guard della fluent API FFmpeg; non è un use-case.
+- `StreamVideoAction` resta un’Action: range headers e gestione dello stream HTTP sono parte dell’operazione invocabile e non un servizio separato.
 
 ## Collegamenti
 

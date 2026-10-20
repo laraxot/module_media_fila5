@@ -7,191 +7,182 @@ namespace Modules\Media\Tests\Unit\Actions;
 use Exception;
 use Illuminate\Support\Facades\Storage;
 use Mockery;
+use Mockery\MockInterface;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;
+use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
-use Tests\TestCase;
+use Spatie\MediaLibrary\MediaCollections\FileAdder;
 
-class SaveAttachmentsActionTest extends TestCase
-{
-    protected function setUp(): void
-    {
-        parent::setUp();
-        Storage::fake('attachments');
-    }
+uses(TestCase::class)->group('no-media-db');
 
-    public function test_executes_save_attachments_successfully(): void
-    {
-        // Arrange
-        $action = new SaveAttachmentsAction;
+beforeEach(function (): void {
+    Storage::fake('attachments');
+});
 
-        // Mock del record HasMedia
-        $record = Mockery::mock(HasMedia::class);
-        $record->shouldReceive('addMedia')->andReturnSelf();
-        $record->shouldReceive('usingFileName')->andReturnSelf();
-        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
-        $record->shouldReceive('update')->andReturn(true);
+afterEach(function (): void {
+    Mockery::close();
+});
 
-        $attachments = ['invoice', 'contract'];
-        $data = [
-            'invoice' => 'temp/invoice.pdf',
-            'contract' => 'temp/contract.pdf',
-        ];
+it('executes save attachments successfully', function (): void {
+    $action = new SaveAttachmentsAction;
 
-        // Crea file temporanei
-        Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
-        Storage::disk('attachments')->put('temp/contract.pdf', 'fake content');
+    /** @var MockInterface&HasMedia $record */
+    $record = $this->makeHasMediaRecordMock();
 
-        // Act
-        $action->execute($record, $attachments, $data, 'attachments');
+    $media = $this->makeTestMock(Media::class);
+    $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-        // Assert
-        static::assertTrue(Storage::disk('attachments')->exists('temp/invoice.pdf'));
-        static::assertTrue(Storage::disk('attachments')->exists('temp/contract.pdf'));
-    }
+    $fileAdder = $this->makeTestMock(FileAdder::class);
+    $fileAdder->method('usingFileName')->willReturnSelf();
+    $fileAdder->method('toMediaCollection')->willReturn($media);
 
-    public function test_handles_empty_attachments(): void
-    {
-        // Arrange
-        $action = new SaveAttachmentsAction;
+    $record->shouldReceive('addMedia')->andReturn($fileAdder);
+    $record->shouldReceive('update')->andReturn(true);
 
-        $record = Mockery::mock(HasMedia::class);
-        $record->shouldReceive('update')->with([])->andReturn(true);
+    $attachments = ['invoice', 'contract'];
+    $data = [
+        'invoice' => 'temp/invoice.pdf',
+        'contract' => 'temp/contract.pdf',
+    ];
 
-        $attachments = [];
-        $data = [];
+    Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
+    Storage::disk('attachments')->put('temp/contract.pdf', 'fake content');
 
-        // Act
-        $action->execute($record, $attachments, $data, 'attachments');
+    $action->execute($record, $attachments, $data, 'attachments');
 
-        // Assert - non dovrebbe lanciare eccezioni
-        static::assertTrue(true);
-    }
+    expect(Storage::disk('attachments')->exists('temp/invoice.pdf'))->toBeTrue();
+    expect(Storage::disk('attachments')->exists('temp/contract.pdf'))->toBeTrue();
+});
 
-    public function test_skips_nonexistent_files(): void
-    {
-        // Arrange
-        $action = new SaveAttachmentsAction;
+it('handles empty attachments', function (): void {
+    $action = new SaveAttachmentsAction;
 
-        $record = Mockery::mock(HasMedia::class);
-        $record->shouldReceive('update')->with([])->andReturn(true);
+    /** @var MockInterface&HasMedia $record */
+    $record = $this->makeHasMediaRecordMock();
+    $record->shouldReceive('update')->never();
 
-        $attachments = ['invoice'];
-        $data = [
-            'invoice' => 'nonexistent/file.pdf',
-        ];
+    $action->execute($record, [], [], 'attachments');
+});
 
-        // Act
-        $action->execute($record, $attachments, $data, 'attachments');
+it('skips nonexistent files', function (): void {
+    $action = new SaveAttachmentsAction;
 
-        // Assert - non dovrebbe lanciare eccezioni
-        static::assertTrue(true);
-    }
+    /** @var MockInterface&HasMedia $record */
+    $record = $this->makeHasMediaRecordMock();
+    $record->shouldReceive('update')->never();
 
-    public function test_handles_storage_errors_gracefully(): void
-    {
-        // Arrange
-        $action = new SaveAttachmentsAction;
+    $attachments = ['invoice'];
+    $data = [
+        'invoice' => 'nonexistent/file.pdf',
+    ];
 
-        $record = Mockery::mock(HasMedia::class);
-        $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
+    $action->execute($record, $attachments, $data, 'attachments');
+});
 
-        $attachments = ['invoice'];
-        $data = [
-            'invoice' => 'temp/invoice.pdf',
-        ];
+it('handles storage errors gracefully', function (): void {
+    $action = new SaveAttachmentsAction;
 
-        Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
+    /** @var MockInterface&HasMedia $record */
+    $record = $this->makeHasMediaRecordMock();
+    $record->shouldReceive('addMedia')->andThrow(new Exception('Storage error'));
 
-        // Act & Assert
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('Storage error');
+    $attachments = ['invoice'];
+    $data = [
+        'invoice' => 'temp/invoice.pdf',
+    ];
 
-        $action->execute($record, $attachments, $data, 'attachments');
-    }
+    Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
 
-    public function test_uses_correct_disk(): void
-    {
-        // Arrange
-        $action = new SaveAttachmentsAction;
+    expect(fn () => $action->execute($record, $attachments, $data, 'attachments'))
+        ->toThrow(Exception::class, 'Storage error');
+});
 
-        $record = Mockery::mock(HasMedia::class);
-        $record->shouldReceive('addMedia')->andReturnSelf();
-        $record->shouldReceive('usingFileName')->andReturnSelf();
-        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
-        $record->shouldReceive('update')->andReturn(true);
+it('uses correct disk', function (): void {
+    $action = new SaveAttachmentsAction;
 
-        $attachments = ['invoice'];
-        $data = [
-            'invoice' => 'temp/invoice.pdf',
-        ];
+    /** @var MockInterface&HasMedia $record */
+    $record = $this->makeHasMediaRecordMock();
 
-        // Crea file su disco diverso
-        Storage::fake('custom_disk');
-        Storage::disk('custom_disk')->put('temp/invoice.pdf', 'fake content');
+    $media = $this->makeTestMock(Media::class);
+    $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-        // Act
-        $action->execute($record, $attachments, $data, 'custom_disk');
+    $fileAdder = $this->makeTestMock(FileAdder::class);
+    $fileAdder->method('usingFileName')->willReturnSelf();
+    $fileAdder->method('toMediaCollection')->willReturn($media);
 
-        // Assert
-        static::assertTrue(Storage::disk('custom_disk')->exists('temp/invoice.pdf'));
-    }
+    $record->shouldReceive('addMedia')->andReturn($fileAdder);
+    $record->shouldReceive('update')->andReturn(true);
 
-    public function test_cleans_up_temp_files(): void
-    {
-        // Arrange
-        $action = new SaveAttachmentsAction;
+    $attachments = ['invoice'];
+    $data = [
+        'invoice' => 'temp/invoice.pdf',
+    ];
 
-        $record = Mockery::mock(HasMedia::class);
-        $record->shouldReceive('addMedia')->andReturnSelf();
-        $record->shouldReceive('usingFileName')->andReturnSelf();
-        $record->shouldReceive('toMediaCollection')->andReturn(new Media);
-        $record->shouldReceive('update')->andReturn(true);
+    Storage::fake('custom_disk');
+    Storage::disk('custom_disk')->put('temp/invoice.pdf', 'fake content');
 
-        $attachments = ['invoice'];
-        $data = [
-            'invoice' => 'temp/invoice.pdf',
-        ];
+    $action->execute($record, $attachments, $data, 'custom_disk');
 
-        Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
+    expect(Storage::disk('custom_disk')->exists('temp/invoice.pdf'))->toBeTrue();
+});
 
-        // Act
-        $action->execute($record, $attachments, $data, 'attachments');
+it('cleans up temp files', function (): void {
+    $action = new SaveAttachmentsAction;
 
-        // Assert - il file temporaneo dovrebbe essere pulito
-        // Questo test verifica che la pulizia avvenga nel finally block
-        static::assertTrue(true);
-    }
+    /** @var MockInterface&HasMedia $record */
+    $record = $this->makeHasMediaRecordMock();
 
-    public function test_handles_multiple_attachments(): void
-    {
-        // Arrange
-        $action = new SaveAttachmentsAction;
+    $media = $this->makeTestMock(Media::class);
+    $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
 
-        $record = Mockery::mock(HasMedia::class);
-        $record->shouldReceive('addMedia')->times(3)->andReturnSelf();
-        $record->shouldReceive('usingFileName')->times(3)->andReturnSelf();
-        $record->shouldReceive('toMediaCollection')->times(3)->andReturn(new Media);
-        $record->shouldReceive('update')->andReturn(true);
+    $fileAdder = $this->makeTestMock(FileAdder::class);
+    $fileAdder->method('usingFileName')->willReturnSelf();
+    $fileAdder->method('toMediaCollection')->willReturn($media);
 
-        $attachments = ['invoice', 'contract', 'receipt'];
-        $data = [
-            'invoice' => 'temp/invoice.pdf',
-            'contract' => 'temp/contract.pdf',
-            'receipt' => 'temp/receipt.pdf',
-        ];
+    $record->shouldReceive('addMedia')->andReturn($fileAdder);
+    $record->shouldReceive('update')->andReturn(true);
 
-        // Crea file temporanei
-        Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
-        Storage::disk('attachments')->put('temp/contract.pdf', 'fake content');
-        Storage::disk('attachments')->put('temp/receipt.pdf', 'fake content');
+    $attachments = ['invoice'];
+    $data = [
+        'invoice' => 'temp/invoice.pdf',
+    ];
 
-        // Act
-        $action->execute($record, $attachments, $data, 'attachments');
+    Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
 
-        // Assert
-        static::assertTrue(Storage::disk('attachments')->exists('temp/invoice.pdf'));
-        static::assertTrue(Storage::disk('attachments')->exists('temp/contract.pdf'));
-        static::assertTrue(Storage::disk('attachments')->exists('temp/receipt.pdf'));
-    }
-}
+    $action->execute($record, $attachments, $data, 'attachments');
+});
+
+it('handles multiple attachments', function (): void {
+    $action = new SaveAttachmentsAction;
+
+    /** @var MockInterface&HasMedia $record */
+    $record = $this->makeHasMediaRecordMock();
+
+    $media = $this->makeTestMock(Media::class);
+    $media->method('getPathRelativeToRoot')->willReturn('media/test-path');
+
+    $fileAdder = $this->makeTestMock(FileAdder::class);
+    $fileAdder->method('usingFileName')->willReturnSelf();
+    $fileAdder->method('toMediaCollection')->willReturn($media);
+
+    $record->shouldReceive('addMedia')->andReturn($fileAdder);
+    $record->shouldReceive('update')->andReturn(true);
+
+    $attachments = ['invoice', 'contract', 'receipt'];
+    $data = [
+        'invoice' => 'temp/invoice.pdf',
+        'contract' => 'temp/contract.pdf',
+        'receipt' => 'temp/receipt.pdf',
+    ];
+
+    Storage::disk('attachments')->put('temp/invoice.pdf', 'fake content');
+    Storage::disk('attachments')->put('temp/contract.pdf', 'fake content');
+    Storage::disk('attachments')->put('temp/receipt.pdf', 'fake content');
+
+    $action->execute($record, $attachments, $data, 'attachments');
+
+    expect(Storage::disk('attachments')->exists('temp/invoice.pdf'))->toBeTrue();
+    expect(Storage::disk('attachments')->exists('temp/contract.pdf'))->toBeTrue();
+    expect(Storage::disk('attachments')->exists('temp/receipt.pdf'))->toBeTrue();
+});
