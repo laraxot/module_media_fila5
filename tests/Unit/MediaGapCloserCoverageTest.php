@@ -87,8 +87,7 @@ describe('Media gap closer — statement coverage', function (): void {
             Assert::assertNotSame('', $e->getMessage());
         }
 
-        $controller = new ConvertController;
-        Assert::assertInstanceOf(ConvertController::class, $controller);
+        Assert::assertSame(ConvertController::class, (new ConvertController)::class);
     });
 
     test('filament pages and relation managers exist', function (): void {
@@ -112,7 +111,6 @@ describe('Media gap closer — statement coverage', function (): void {
     test('VideoPlayer constructs with explicit props', function (): void {
         try {
             $player = new VideoPlayer(mp4Src: 'https://example.test/v.mp4', currentTime: 0, driver: 'html5');
-            Assert::assertInstanceOf(VideoPlayer::class, $player);
             Assert::assertSame('html5', $player->driver);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());
