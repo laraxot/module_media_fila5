@@ -9,11 +9,13 @@ use Modules\Media\Models\MediaConvert;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
+use function Safe\class_parents;
+
 uses(TestCase::class)->group('no-media-db');
 
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {
-        Assert::assertInstanceOf(BaseModel::class, new MediaConvert);
+        Assert::assertArrayHasKey(BaseModel::class, class_parents(MediaConvert::class));
     });
 
     it('has correct fillable fields', function (): void {

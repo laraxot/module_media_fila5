@@ -190,7 +190,6 @@ phpmd*.*
 .windsurf~*
 graphify-out/
 /bashscripts/
-/graphify-out/
 /tools/
 /scripts/
 /.agents/
@@ -199,7 +198,6 @@ graphify-out/
 /.codex/
 /.opencode/
 /tests/graphify-out/
-graphify-out
 tools
 .vscode
 build
