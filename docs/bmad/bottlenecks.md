@@ -853,7 +853,7 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [bottlenecks.md](../../../Lang/docs/bottlenecks.md)
 * [bottlenecks.md](../../../Lang/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../../Job/docs/performance/bottlenecks.md)
-* [bottlenecks.md](performance/bottlenecks.md)
+* [bottlenecks.md](../performance/bottlenecks.md)
 * [bottlenecks.md](../../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../Cms/docs/bottlenecks.md)

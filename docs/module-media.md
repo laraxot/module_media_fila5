@@ -51,7 +51,7 @@ Sono stati risolti importanti conflitti di merge in diversi file critici del mod
 
 La risoluzione ha puntato a mantenere la coerenza del codice, evitando duplicazioni e garantendo il corretto funzionamento delle funzionalità di gestione media e del sistema di registrazione componenti.
 
-Per maggiori dettagli, consultare la [documentazione locale sulla risoluzione dei conflitti](./conflitti_merge_risolti.md) e la [documentazione globale](../../../../../docs/git_conflict_resolution.md).
+Per maggiori dettagli, consultare la [documentazione locale sulla risoluzione dei conflitti](./conflitti-merge-risolti.md) e la [documentazione globale](../../../../../docs/git_conflict_resolution.md).
 
 ## Dipendenze
 ### Pacchetti Required

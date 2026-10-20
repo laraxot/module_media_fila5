@@ -58,8 +58,8 @@ Questa classe gestisce la generazione dei percorsi per i file temporanei caricat
 - Validazione degli input per prevenire injection
 
 ## Collegamenti
-- [Documentazione Media Module](../module_media.md)
-- [Gestione File Temporanei](../file_management.md)
+- [Documentazione Media Module](../module-media.md)
+- [Gestione File Temporanei](../file-management.md)
 
 ## Note di Manutenzione
 - Mantenere la documentazione PHPDoc aggiornata

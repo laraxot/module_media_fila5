@@ -86,7 +86,7 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../../.agents/docs/critical-r
 - Standard Traduzioni (`translation_standards.md` non presente) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
-- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+- [PHPStan Level 10](./phpstan-level10-fixes.md) - Correzioni per PHPStan Level 10
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -240,7 +240,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - Standard Traduzioni (`translation_standards.md` non presente) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
-- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+- [PHPStan Level 10](./phpstan-level10-fixes.md) - Correzioni per PHPStan Level 10
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -263,7 +263,7 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [data-models.md](./data-models.md)
 - [core-functionality.md](./core-functionality.md)
 - [file-management-architecture.md](./file-management-architecture.md)
-- [phpstan_level10_fixes.md](./phpstan_level10_fixes.md) / [phpstan-report.md](./phpstan-report.md)
+- [phpstan_level10_fixes.md](./phpstan-level10-fixes.md) / [phpstan-report.md](./phpstan-report.md)
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
 - [wiki/index.md](./wiki/index.md)
