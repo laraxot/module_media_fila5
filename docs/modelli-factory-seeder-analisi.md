@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "modelli factory seeder analisi"
 related:
   - "./webm.md"
+status: draft
 ---
 
 

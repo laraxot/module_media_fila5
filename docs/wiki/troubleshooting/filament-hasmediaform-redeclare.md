@@ -9,6 +9,7 @@ type: troubleshooting
 confidence: high
 updated: 2026-05-21
 tags: [filament, autoload, media, php]
+status: draft
 ---
 
 # Errore: Cannot redeclare `HasMediaForm`

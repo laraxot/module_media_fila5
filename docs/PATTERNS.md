@@ -9,6 +9,7 @@ module: "Media"
 type: architecture
 tags: [patterns, best-practices]
 last_updated: 2026-07-28
+status: draft
 ---
 
 # Architectural Patterns — Media Module
