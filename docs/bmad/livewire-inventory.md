@@ -16,6 +16,9 @@ related:
   - ./livewire-widget-tech-spec.md
   - ./livewire-widget-ux.md
   - ../stories/12.1.media-clip-not-widget.story.md
+updated: 2026-10-07
+tags: [docs, media, bmad]
+qmd: "inventario: livewire http → filament widget, modulo media media"
 ---
 
 # Inventario: Livewire HTTP → Filament widget, modulo Media

@@ -22,7 +22,7 @@
 
 ## 🔗 Riferimenti
 
-- [Xot Module](../Xot/docs/00-index.md) - Base classes
+- [Xot Module](../../../Xot/docs/00-INDEX.md) - Base classes
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
@@ -31,4 +31,4 @@
 
 ## Dependency Intelligence
 
-- [Dependency intelligence](dependency-intelligence.md)
+- [Dependency intelligence](../dependency-intelligence.md)

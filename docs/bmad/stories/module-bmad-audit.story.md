@@ -10,6 +10,10 @@ references:
   - ../architecture/module-boundary.md
   - ../brainstorming/module-opportunities.md
   - ../epics/module-roadmap.md
+type: story
+updated: 2026-10-06
+tags: [docs, media, bmad]
+qmd: "story   media: baseline bmad media"
 ---
 # Story — Media: baseline BMAD
 

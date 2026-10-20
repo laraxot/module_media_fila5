@@ -6,6 +6,9 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+title: "Epics e User Stories - Modulo Media"
+type: note
+qmd: "epics e user stories - modulo media media"
 ---
 
 # Epics e User Stories - Modulo Media
