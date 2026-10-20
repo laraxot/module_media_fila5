@@ -16,9 +16,8 @@ use PHPUnit\Framework\Assert;
  * Capability dei generatori di conversione (quali estensioni e mime dichiarano di
  * saper trattare) e data object degli allegati. Tutto in memoria.
  *
- * `Webm::convert()` e `PowerPoint::convert()` restano fuori: il primo contiene
- * una variabile variabile `${$pathToImageFile}` e una `dddx()` di debug, quindi
- * non e' codice invocabile. Segnalato, non aggirato.
+ * `PowerPoint::convert()` resta fuori da questo file. `Webm::convert()` e' uno
+ * stub dichiarato: lancia `LogicException` invece di restituire un percorso finto.
  */
 
 uses(TestCase::class)->group('no-media-db');
@@ -33,6 +32,19 @@ test('the webm generator declares itself installable and handles mp4 sources', f
     Assert::assertSame(['mp4'], $extensions->all());
 
     Assert::assertSame(['video/mpeg', 'video/mp4'], $generator->supportedMimeTypes()->all());
+});
+
+test('the webm generator refuses to convert instead of returning a bogus path', function (): void {
+    $thrown = null;
+
+    try {
+        (new Webm)->convert('/tmp/clip.mp4');
+    } catch (\LogicException $exception) {
+        $thrown = $exception;
+    }
+
+    Assert::assertInstanceOf(\LogicException::class, $thrown);
+    Assert::assertStringContainsString('non implementato', $thrown->getMessage());
 });
 
 test('the powerpoint generator advertises extensions and mime types consistently', function (): void {
