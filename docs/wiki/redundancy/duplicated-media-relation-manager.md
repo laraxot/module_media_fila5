@@ -9,6 +9,7 @@ type: redundancy
 owner: Modules/Media
 severity: medium-high
 created: 2026-05-21
+status: draft
 ---
 
 # Duplicated MediaRelationManager

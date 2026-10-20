@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "path generator"
 related:
   - "./webm.md"
+status: draft
 ---
 # PathGenerator Interface
 

@@ -11,6 +11,7 @@ tags: [migrato-da-txt, media]
 converted_from: xml_to_srt.txt
 created: 2026-08-24
 updated: 2026-08-24
+status: draft
 ---
 
 # Xml to srt — risorse esterne

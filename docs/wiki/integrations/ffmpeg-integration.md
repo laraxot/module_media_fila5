@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "ffmpeg integration"
 related:
   - "./webm.md"
+status: draft
 ---
 # Integrazione di FFmpeg nel Modulo Media
 
