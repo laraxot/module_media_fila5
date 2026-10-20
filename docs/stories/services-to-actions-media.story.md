@@ -84,6 +84,14 @@ Nessuna `const` nel perimetro.
   e' gia' la forma corretta, con model e campo come parametri.
 - Stesso schema (residuo di un Service gia' convertito, riapparso) nelle story fratelli `2026-10-08-services-to-actions-*` di UI, Job, Lang e Seo.
 
+## Aggiornamento 2026-10-20
+
+Il working tree torna allo stato descritto sopra: `app/Services/SubtitleService.php` e
+`app/Services/VideoStream.php` sono eliminati e non risultano chiamanti nel codice.
+La verifica scoped di PHPStan resta verde; le primitive `app/Support/` ammesse e il
+perimetro dello streaming sono documentati in
+[`no-services-no-support-queueable-actions`](../wiki/concepts/no-services-no-support-queueable-actions.md).
+
 ## Aperto
 
 - `StreamVideoAction` non e' agganciata a nessuna route o controller: da decidere se serve davvero (il file usa

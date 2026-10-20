@@ -23,7 +23,7 @@ Indice completo per categoria: [INDEX.md](./INDEX.md). Punto di ingresso: [READM
 
 - Codice: 124 file PHP in `app/`, 49 Action in `app/Actions`, 3 Resource Filament (`MediaResource`, `MediaConvertResource`, `TemporaryUploadResource`) piu' `HasMediaResource` (schemi e relation manager riusabili), 5 file di migrazione, lang `it`/`en`/`de`, 40 file di test.
 - Rotte: `routes/web.php` e `routes/api.php` sono vuoti; esistono 19 rotte del pannello Filament `media/admin` (`php artisan route:list --name=media`).
-- PHPStan: `vendor/bin/phpstan analyse Modules/Media` da `laravel/` esce con 0 senza errori.
+- PHPStan: `vendor/bin/phpstan analyse Modules/Media` da `laravel/` esce con 0 senza errori (rimisurato il 2026-10-20; vedi [phpstan-test-wave-media](./stories/phpstan-test-wave-media.story.md)). I residui `app/Services/SubtitleService.php` e `VideoStream.php` sono rimossi: zero chiamanti, use-case coperti da `app/Actions/*`.
 - Docs: 548 file `.md` (275 nella radice, 94 in `wiki/`, 68 in `bmad/`, 29 in `roadmap/`, 22 in `stories/`). Ingresso: [README.md](./README.md).
 
 ## Documenti canonici
@@ -80,6 +80,7 @@ Varianti: 45 gruppi di nomi che differiscono solo per maiuscole, `-` e `_` (103 
 
 ## Story BMAD
 
+- [2026-10-20 PHPStan, test regrediti dal pull](./stories/phpstan-test-wave-media.story.md): 282 errori a 0 ripristinando 9 file di test scambiati dal remoto; `SubtitleService` ricomparso (zero chiamanti)
 - [2026-10-14 Ingressi docs del modulo Media](./stories/docs-ingressi-media.story.md): verifica di README, indici e architecture sul codice
 - [02 Risoluzione dei marker di merge (e7e667b11)](./stories/02.Media-merge-conflict-resolution.story.md) e i suoi [followups aperti](./stories/02.Media-merge-conflict-resolution.story.md#followups-aperti)
 - [2026-10-06 PHPStan cleanup](./stories/phpstan-cleanup-media.story.md)
