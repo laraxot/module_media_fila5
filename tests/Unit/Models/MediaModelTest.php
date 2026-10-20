@@ -9,11 +9,13 @@ use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
+use function Safe\class_parents;
+
 uses(TestCase::class)->group('no-media-db');
 
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
-        Assert::assertInstanceOf(SpatieMedia::class, new Media);
+        Assert::assertArrayHasKey(SpatieMedia::class, class_parents(Media::class));
     });
 
     it('uses HasXotFactory trait', function (): void {
