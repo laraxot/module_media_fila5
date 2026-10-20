@@ -23,7 +23,7 @@ Indice completo per categoria: [INDEX.md](./INDEX.md). Punto di ingresso: [READM
 
 - Codice: 124 file PHP in `app/`, 49 Action in `app/Actions`, 3 Resource Filament (`MediaResource`, `MediaConvertResource`, `TemporaryUploadResource`) piu' `HasMediaResource` (schemi e relation manager riusabili), 5 file di migrazione, lang `it`/`en`/`de`, 40 file di test.
 - Rotte: `routes/web.php` e `routes/api.php` sono vuoti; esistono 19 rotte del pannello Filament `media/admin` (`php artisan route:list --name=media`).
-- PHPStan: `vendor/bin/phpstan analyse Modules/Media` da `laravel/` esce con 0 senza errori (rimisurato il 2026-10-20 dopo il ripristino dei test: vedi [phpstan-test-wave-media](./stories/phpstan-test-wave-media.story.md)). `app/Services/SubtitleService.php` e' ricomparso col pull del 2026-10-20: zero chiamanti, sostituito da `app/Actions/Subtitle/*`.
+- PHPStan: `vendor/bin/phpstan analyse Modules/Media` da `laravel/` esce con 0 senza errori (rimisurato il 2026-10-20; vedi [phpstan-test-wave-media](./stories/phpstan-test-wave-media.story.md)). I residui `app/Services/SubtitleService.php` e `VideoStream.php` sono rimossi: zero chiamanti, use-case coperti da `app/Actions/*`.
 - Docs: 548 file `.md` (275 nella radice, 94 in `wiki/`, 68 in `bmad/`, 29 in `roadmap/`, 22 in `stories/`). Ingresso: [README.md](./README.md).
 
 ## Documenti canonici

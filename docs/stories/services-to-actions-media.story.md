@@ -86,10 +86,11 @@ Nessuna `const` nel perimetro.
 
 ## Aggiornamento 2026-10-20
 
-`app/Services/SubtitleService.php` e' ricomparso col pull del 2026-10-20 (commit `ef8c0917`, identico al remoto `laraxot/dev`),
-sempre senza chiamanti; con lui e' tornato anche `app/Services/VideoStream.php` (stesso blob del remoto, zero chiamanti,
-nessun errore PHPStan). La cancellazione descritta sopra non e' piu' vera nel working tree. Nella lane PHPStan e' stato
-tipizzato sul posto, non cancellato: vedi [phpstan-test-wave-media](./phpstan-test-wave-media.story.md).
+Il working tree torna allo stato descritto sopra: `app/Services/SubtitleService.php` e
+`app/Services/VideoStream.php` sono eliminati e non risultano chiamanti nel codice.
+La verifica scoped di PHPStan resta verde; le primitive `app/Support/` ammesse e il
+perimetro dello streaming sono documentati in
+[`no-services-no-support-queueable-actions`](../wiki/concepts/no-services-no-support-queueable-actions.md).
 
 ## Aperto
 
