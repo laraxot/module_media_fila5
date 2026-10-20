@@ -4,6 +4,11 @@ canonical: ./livewire-inventory.md
 superseded: true
 related:
   - ./livewire-inventory.md
+type: note
+status: stub
+updated: 2026-10-07
+tags: [docs, media, bmad]
+qmd: "media module   livewire → filament widget (superato) media"
 ---
 
 # Media module — Livewire → Filament widget (superato)

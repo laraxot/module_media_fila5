@@ -8,6 +8,7 @@ updated: 2026-07-14
 qmd: "bottlenecks detailed 1"
 related:
   - "./webm.md"
+status: draft
 ---
 # Analisi Dettagliata dei Colli di Bottiglia - Modulo Media
 
