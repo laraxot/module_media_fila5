@@ -4,7 +4,9 @@ module: "Media"
 type: architecture
 tags: [architecture, structure]
 created: 2026-07-14
-updated: 2026-08-04
+updated: 2026-10-14
+status: draft
+qmd: "architettura modulo media media"
 ---
 
 # Architettura Modulo Media
@@ -22,8 +24,7 @@ Il modulo Media gestisce la memorizzazione, elaborazione e distribuzione di file
   - `pbmedia/laravel-ffmpeg ^8.5` (conversione video)
   - `intervention/image *` (manipolazione immagini)
   - `Modules\Xot` (base framework)
-  - `Modules\Tenant` (multi-tenancy)
-  - `Modules\User` (autenticazione)
+  - `Modules\User`, `Modules\UI`, `Modules\Job` (uso puntuale, conteggi in README.md). `Tenant` compare solo nei `repositories` di `composer.json`: nessun uso in `app/` (verificato 2026-10-14)
 
 ## Struttura PSR-4
 
@@ -57,7 +58,7 @@ Il modulo Media gestisce la memorizzazione, elaborazione e distribuzione di file
   - `Enums/` - Enumerazioni (tipi media, stati conversione)
   - `Filament/` - Componenti Filament (Resources, Pages, Actions)
   - `Http/` - Controllers, middleware, requests, Livewire components
-  - `Services/` - Servizi (legacy, preferire Actions)
+  - (nessuna `Services/`: `app/Services` non esiste piu', vedi story 2026-10-08 services-to-actions)
   - `Providers/` - Service Providers
 
 - **`database/`** - Migrazioni e factories
@@ -82,30 +83,29 @@ Il modulo Media gestisce la memorizzazione, elaborazione e distribuzione di file
 
 Gerarchicamente il modulo Media dipende da:
 - **Xot** (6+ utilizzi di `XotBaseMigration`, base Filament resources)
-- **Tenant** (multi-tenancy)
-- **User** (autenticazione)
-- **UI** (componenti UI comuni)
+- **User** (3 usi: modello `User`, test), **UI** (2 usi: `GetAllIconsAction`), **Job** (1 uso: `ClockWidget`)
+- Tenant: nessun uso nel codice (verificato 2026-10-14)
 
 ## Funzionalità Principali
 
 ### Gestione File
 - Upload di file multipli (drag-and-drop)
 - Supporto multi-format (immagini, video, documenti, audio)
-- Memorizzazione con isolamento tenant
+- Memorizzazione sui dischi Laravel (S3 con CloudFront); nessun isolamento per tenant nel codice
 
 ### Elaborazione Media
 - Ottimizzazione e compressione immagini
 - Conversione video (FFmpeg)
-- Generazione automatica di versioni (thumbnail, preview)
-- Watermark automatico
+- Conversione `preview` per i `TemporaryUpload` (`config('media-library.generate_thumbnails_for_temporary_uploads')`)
+- Watermark automatico: non presente nel codice (verificato 2026-10-14)
 
 ### Streaming Video
-- Streaming ottimizzato con supporto HLS/DASH
-- Gestione sottotitoli
+- Streaming: `Actions/Stream/StreamVideoAction`. HLS/DASH: non presenti nel codice (verificato 2026-10-14)
+- Sottotitoli: `Actions/Subtitle/*` (SRT in VTT, lettura XML)
 
 ### Integrazione CDN
-- Supporto per Content Delivery Network
-- URL pubblico e privato
+- CloudFront con URL firmati: `Actions/CloudFront/GetCloudFrontSignedUrlAction`, chiavi `filesystems.cloudfront.*` e `services.cloudfront.*`
+- Nessun CDN generico oltre a CloudFront
 
 ## Convenzioni
 
@@ -128,9 +128,8 @@ Il modulo utilizza l'inversion of control tramite:
 
 ## Stato Corrente
 
-- **Total file PHP**: 97
-- **Classi/Interfacce**: 64
-- **PHPStan Level**: 10 (strict typing)
+- **File PHP in `app/`**: 124 (misurato 2026-10-14; include 2 copie in `app/conversions` per variante di maiuscole e 1 file vuoto sotto `Clusters/` con nome corrotto)
+- **PHPStan**: `vendor/bin/phpstan analyse Modules/Media` dalla cartella `laravel/` esce con 0 e nessun errore (2026-10-14)
 - **Test Coverage**: In progress
 
 ## Vedere Anche
@@ -143,14 +142,9 @@ Il modulo utilizza l'inversion of control tramite:
 
 <!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
 
----
-title: "Architecture: Media Module"
-type: architecture
-tags: [module, architecture, media, storage]
-created: 2026-08-04
-updated: 2026-08-04
----
-# Media Module — Architecture
+> Nota 2026-10-14: questa sezione, copia di `ARCHITECTURE.md` (marcato `stale`), cita Action, modelli e Resource che non esistono in `app/` (`UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaItem`, `CollectionResource`) e consumatori (Activity, Lang) non confermati dal codice. Conservata per storia: usare la parte sopra e il README.md.
+
+# Media Module - Architecture (copia storica di ARCHITECTURE.md)
 
 ## Purpose
 Media module provides file handling, storage, and processing infrastructure for the Laraxot ecosystem. Manages uploads, transformations, and media metadata.

@@ -8,6 +8,7 @@ updated: 2026-07-14
 qmd: "player"
 related:
   - "./webm.md"
+status: draft
 ---
 # player
 

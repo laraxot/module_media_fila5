@@ -1,3 +1,11 @@
+---
+title: "Modulo Media — Documentazione Bridge"
+type: index
+status: draft
+updated: 2026-10-08
+tags: [docs, media]
+qmd: "modulo media   documentazione bridge media"
+---
 # Modulo Media — Documentazione Bridge
 
 Documentazione canonica per il modulo Media: gestione multimediale (immagini, video, documenti, audio) in Laraxot.

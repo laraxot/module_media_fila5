@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "roadmap miglioramenti"
 issues: []
 discussions: []
+status: draft
 ---
 
 # Roadmap — Media, il modulo con un dump-and-die ancora vivo dentro un generatore video

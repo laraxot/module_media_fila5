@@ -7,6 +7,7 @@ title: "HasMedia Form & Table Duplication Pattern"
 type: concept
 tags: [redundancy, media, filament, duplication, 2026-05]
 created: 2026-05-21
+status: draft
 ---
 
 # HasMedia Form & Table Duplication Pattern

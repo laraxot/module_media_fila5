@@ -1,6 +1,6 @@
 ---
 created: 2026-09-26
-updated: 2026-10-07
+updated: 2026-10-14
 qmd: "INDEX"
 issues: []
 discussions: []
@@ -8,18 +8,19 @@ title: "Documentation Index - Media Module"
 module: "Media"
 type: documentation
 tags: [index, navigation]
-last_updated: 2026-10-07
+last_updated: 2026-10-14
+status: draft
 ---
 
 # Documentation Index - Media Module
 
-**Last updated:** 2026-10-07  
-**Module Status:** ✅ PHPStan Level 10 Compliant
+**Last updated:** 2026-10-14  
+**Module Status:** PHPStan (`vendor/bin/phpstan analyse Modules/Media` da `laravel/`) exit 0, verificato 2026-10-14. Indice canonico: [00-INDEX.md](./00-INDEX.md)
 
 ## Quick Navigation
 
 - **[Overview & README](./README.md)** — Use cases, features, dependencies
-- **[Architecture](./ARCHITECTURE.md)** — System design and core patterns
+- **[Architecture](./architecture.md)** - System design and core patterns (`ARCHITECTURE.md` è `stale`)
 - **[API integration](./api-integration.md)** - Actions, Models, Contracts
 - **[FFmpeg usage](./ffmpeg-usage.md)** - FFmpeg, Intervention Image, Storage
 - **[BMAD stories](#story-bmad)** - Development workflow, open followups
@@ -31,21 +32,21 @@ last_updated: 2026-10-07
 | Category | Count | Notes |
 |----------|-------|-------|
 | **Actions** | 49 | File upload, processing, S3, FFmpeg, video/image transforms |
-| **Models** | 8 | Media, MediaConvert, TemporaryUpload, BaseModel |
-| **Controllers** | 2 | HTTP request handling |
-| **Migrations** | 3 | Database schema (medias, media_converts, temporary_uploads) |
-| **Filament Resources** | 30 | Admin UI components, tables, forms |
-| **Services** | 2 | SubtitleService, VideoStream utilities |
-| **Conversions** | 2 | ImageGenerators, VideoGenerators |
-| **Contracts** | 2 | PathGeneratorContract, custom interfaces |
-| **Commands** | 1 | Artisan console commands |
+| **Models** | 4 | Media, MediaConvert, TemporaryUpload, BaseModel (più 4 Policy in `Models/Policies`) |
+| **Controllers** | 2 | BaseController, ConvertController (nessuna rotta: `routes/*.php` vuoti) |
+| **Migrations** | 5 file | 3 modelli (medias, media_converts, temporary_uploads); due file di create per `medias` e due per `temporary_uploads` |
+| **Filament** | 41 file PHP | 3 Resource (MediaResource, MediaConvertResource, TemporaryUploadResource) con Pages, Schemas, Tables; HasMediaResource; cluster Test (AwsTest, S3Test); colonne tabella; VideoEntry |
+| **Services** | 0 | `app/Services` non esiste (rimosso, story 2026-10-08); sottotitoli e stream sono in `Actions/Subtitle` e `Actions/Stream` |
+| **Conversions** | 2 | `ImageGenerators/PowerPoint`, `VideoGenerators/Webm` (più una copia in `app/conversions` per variante di maiuscole) |
+| **Contracts** | 2 | PathGeneratorContract, PathGenerator |
+| **Commands** | 1 | ConvertVideoCommand (`media:convert-video {disk} {file}`) |
 | **Data Objects** | 4 | AttachmentToSaveData, ConvertData, SaveAttachmentsData, CloudFrontData |
 
-**Total:** 101+ PHP classes
+**Total:** 124 file PHP in `app/` (misurato 2026-10-14, comprese 2 copie in `app/conversions` e 1 file vuoto sotto `Filament/Clusters/`)
 
 ---
 
-## Recently Updated Files
+## Recently Updated Files (tabella storica, date di luglio 2026, non rigenerata)
 
 | File | Last Modified | Type |
 |------|---|------|
@@ -69,14 +70,16 @@ Le story vivono in [`stories/`](./stories/). Le piu' recenti:
 | Story | Stato | Note |
 |---|---|---|
 | [02 Risoluzione dei marker di merge (e7e667b11)](./stories/02.Media-merge-conflict-resolution.story.md) | done | 92 file PHP + 6 file docs; contiene i followups aperti |
-| [2026-10-06 PHPStan cleanup](./stories/2026-10-06-phpstan-cleanup-media.story.md) | done | [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md) |
+| [2026-10-06 PHPStan cleanup](./stories/phpstan-cleanup-media.story.md) | done | [dev](./stories/phpstan-cleanup-media.dev.md) |
 | [16-4 Consolidamento case-variant](./stories/16-4-media-case-variant-consolidation.md) | ready-for-dev | restano `tests/filament` vs `tests/Filament`, `app/conversions` |
-| [media-services-to-actions](./stories/media-services-to-actions.story.md) | done | residuo verificato: `SubtitleService` ancora duplicato in `Services/` e `Actions/Stream/` |
+| [2026-10-08 Services -> Actions](./stories/services-to-actions-media.story.md) | done | `app/Services` rimosso; in `Actions/Stream` resta solo `StreamVideoAction` |
+| [2026-10-14 Ingressi docs Media](./stories/docs-ingressi-media.story.md) | done | README, 00-INDEX, INDEX, architecture verificati sul codice; `ARCHITECTURE.md` marcato stale |
+| [media-services-to-actions](./stories/media-services-to-actions.story.md) | done | il residuo `SubtitleService` descritto qui è stato chiuso dalla story del 2026-10-08 (`app/Services` non esiste più) |
 | [01 PHPStan fix](./stories/01.Media-phpstan-fix.story.md) | done | `method.staticCall` su `Schemas/*Form` e `*Infolist` |
 
 Followups aperti (dettaglio in [02](./stories/02.Media-merge-conflict-resolution.story.md#followups-aperti)):
 `ConvertVideoAction` salva due volte; chiavi lang `media::attachments.*` senza file;
-`SubtitleService` duplicato; `MediasTable` accanto a `MediaTable`; directory case-variant
+`MediasTable` accanto a `MediaTable` (entrambe in `Filament/Resources/MediaResource/Tables`); directory case-variant
 residue; placeholder lang (`navigation.icon`, `Missing Label`).
 
 ---
@@ -85,7 +88,7 @@ residue; placeholder lang (`navigation.icon`, `Missing Label`).
 
 ### Core Documentation
 - [README.md](./README.md) — Module overview, features, use cases
-- [ARCHITECTURE.md](./ARCHITECTURE.md) — System design, component structure
+- [architecture.md](./architecture.md) - System design, component structure (verificata il 2026-10-14)
 - [ffmpeg-usage.md](./ffmpeg-usage.md) - FFmpeg, Intervention Image, Cloud Storage
 
 ### API & Development

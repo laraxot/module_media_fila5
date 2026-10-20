@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "chaos readiness"
 related:
   - "./webm.md"
+status: draft
 ---
 # Media Chaos Readiness - 2026-03-02
 
