@@ -84,6 +84,13 @@ Nessuna `const` nel perimetro.
   e' gia' la forma corretta, con model e campo come parametri.
 - Stesso schema (residuo di un Service gia' convertito, riapparso) nelle story fratelli `2026-10-08-services-to-actions-*` di UI, Job, Lang e Seo.
 
+## Aggiornamento 2026-10-20
+
+`app/Services/SubtitleService.php` e' ricomparso col pull del 2026-10-20 (commit `ef8c0917`, identico al remoto `laraxot/dev`),
+sempre senza chiamanti; con lui e' tornato anche `app/Services/VideoStream.php` (stesso blob del remoto, zero chiamanti,
+nessun errore PHPStan). La cancellazione descritta sopra non e' piu' vera nel working tree. Nella lane PHPStan e' stato
+tipizzato sul posto, non cancellato: vedi [phpstan-test-wave-media](./phpstan-test-wave-media.story.md).
+
 ## Aperto
 
 - `StreamVideoAction` non e' agganciata a nessuna route o controller: da decidere se serve davvero (il file usa
