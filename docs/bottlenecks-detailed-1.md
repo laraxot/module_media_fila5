@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Analisi Dettagliata dei Colli di Bottiglia - Modulo Media"
 module: "Media"
 type: concept
@@ -373,3 +375,4 @@ final class Media extends Model
 ---
 
 ```
+---

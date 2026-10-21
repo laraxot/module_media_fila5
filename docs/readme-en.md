@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "🖼️ Media — English presentation"
 module: "Media"
 type: concept
@@ -65,3 +67,5 @@ Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filamen
 ---
 
 **Module** `media` · **Laraxot** · **Media Module** · PHPStan 10 · Filament 5
+---
+**Module** `media` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

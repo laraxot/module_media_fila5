@@ -6,7 +6,6 @@ namespace Modules\Media\Actions\Stream;
 
 use Exception;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\Storage\GetFilesystemAdapterAction;
 use Modules\Media\Models\Media;
 use Modules\Xot\Contracts\UserContract;

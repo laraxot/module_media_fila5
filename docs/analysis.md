@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module Analysis"
 module: "Media"
 type: concept
