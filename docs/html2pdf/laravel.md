@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "laravel"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_L2eLHV
+=======
+status: draft
+>>>>>>> .merge_file_jFWvNA
 ---
 # Integrazione con Laravel e Best Practices
 

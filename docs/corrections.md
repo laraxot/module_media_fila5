@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "corrections"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_FBhbXx
+=======
+status: draft
+>>>>>>> .merge_file_0JxYti
 ---
 # Riepilogo Correzioni S3Test.php - Modulo Media
 
@@ -150,7 +154,11 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 
 - [Correzioni Dettagliate](s3test_corrections.md)
 - [Linee Guida Prevenzione](prevention_guidelines.md)
+<<<<<<< .merge_file_FBhbXx
 - [PHPStan Fixes](phpstan_level10_fixes.md)
+=======
+- [PHPStan Fixes](phpstan-level10-fixes.md)
+>>>>>>> .merge_file_0JxYti
 - [Translation Standards](translations.md)
 
 ---

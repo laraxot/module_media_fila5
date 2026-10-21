@@ -8,6 +8,10 @@ updated: 2026-07-14
 qmd: "competitors"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_bTytly
+=======
+status: draft
+>>>>>>> .merge_file_ONYJZG
 ---
 
 # _competitors

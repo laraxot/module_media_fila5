@@ -3,6 +3,11 @@ title: Media — indice BMAD
 type: index
 tags: [docs, bmad, media]
 qmd: "Media indice BMAD documentazione"
+<<<<<<< .merge_file_heIszk
+=======
+status: draft
+updated: 2026-10-09
+>>>>>>> .merge_file_koozrB
 ---
 
 # Media — indice BMAD

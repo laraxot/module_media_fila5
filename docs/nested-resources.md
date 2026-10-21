@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "nested resources"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_hDyskH
+=======
+status: draft
+>>>>>>> .merge_file_lT44va
 ---
 # Media Module - Nested Resource Implementation Guide
 

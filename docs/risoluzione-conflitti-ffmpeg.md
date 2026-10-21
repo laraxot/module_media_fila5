@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "risoluzione conflitti ffmpeg"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_9NSpMd
+=======
+status: draft
+>>>>>>> .merge_file_9gKYQS
 ---
 # Risoluzione Conflitti per l'Integrazione FFmpeg nel Modulo Media
 
@@ -77,4 +81,8 @@ Per migliorare ulteriormente l'integrazione FFmpeg:
 
 - [Documentazione ufficiale di Laravel-FFMpeg](https://github.com/protonemedia/laravel-ffmpeg)
 - [Guida all'integrazione FFmpeg](ffmpeg_integration.md)
+<<<<<<< .merge_file_9NSpMd
 - [Esempi di utilizzo FFmpeg](ffmpeg_usage.md)
+=======
+- [Esempi di utilizzo FFmpeg](ffmpeg-usage.md)
+>>>>>>> .merge_file_9gKYQS

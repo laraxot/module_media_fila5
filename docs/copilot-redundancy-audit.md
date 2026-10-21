@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "copilot redundancy audit"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_7hqoEA
+=======
+status: draft
+>>>>>>> .merge_file_gc9XRq
 ---
 Copilot Redundancy Audit — 2026-05-25
 

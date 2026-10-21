@@ -5,6 +5,10 @@ module: Media
 related:
   - ../stories/12.1.media-clip-not-widget.story.md
   - ./livewire-inventory.md
+status: draft
+updated: 2026-10-07
+tags: [docs, media, bmad]
+qmd: "epic 12 media"
 ---
 
 # Epic 12

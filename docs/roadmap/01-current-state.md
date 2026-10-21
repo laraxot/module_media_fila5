@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "01 current state"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_N3EQFf
+=======
+status: draft
+>>>>>>> .merge_file_7FKLJe
 ---
 # Current State - Media
 

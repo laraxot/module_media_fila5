@@ -9,6 +9,10 @@ type: redundancy
 owner: Modules/Media
 severity: high
 created: 2026-05-21
+<<<<<<< .merge_file_UFDkJN
+=======
+status: draft
+>>>>>>> .merge_file_TYPxfS
 ---
 
 # HasMedia Logic Scattered Across the Codebase

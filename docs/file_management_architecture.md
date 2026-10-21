@@ -7,6 +7,10 @@ updated: 2026-09-26
 qmd: "file management architecture"
 issues: []
 discussions: []
+<<<<<<< .merge_file_ChgSig
+=======
+status: draft
+>>>>>>> .merge_file_cAgwXT
 ---
 
 # Media Module - File Management Architecture

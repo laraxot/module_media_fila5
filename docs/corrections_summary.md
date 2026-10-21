@@ -7,6 +7,10 @@ updated: 2026-09-26
 qmd: "corrections summary"
 issues: []
 discussions: []
+<<<<<<< .merge_file_EgFaE7
+=======
+status: draft
+>>>>>>> .merge_file_3l0USA
 ---
 
 # Riepilogo Correzioni S3Test.php - Modulo Media
@@ -148,6 +152,7 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 
 - [Correzioni Dettagliate](s3test_corrections.md)
 - [Linee Guida Prevenzione](prevention_guidelines.md)
+<<<<<<< .merge_file_EgFaE7
 - [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
 
@@ -161,6 +166,12 @@ updated: 2026-09-26
 qmd: "corrections summary"
 issues: []
 discussions: []
+=======
+- [PHPStan Fixes](phpstan-level10-fixes.md)
+- [Translation Standards](translations.md)
+
+---
+>>>>>>> .merge_file_3l0USA
 **🔄 Ultimo aggiornamento**: 27 Gennaio 2025  
 **📦 Versione**: 3.1.0  
 **✅ Status**: Tutti i problemi risolti e prevenzione implementata  

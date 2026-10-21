@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "ponytail audit over engineering"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_h1HFUY
+=======
+status: draft
+>>>>>>> .merge_file_FlOWtc
 ---
 # Ponytail audit — Media (over-engineering)
 

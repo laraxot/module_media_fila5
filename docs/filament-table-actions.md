@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "filament table actions"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_oJK6Dw
+=======
+status: draft
+>>>>>>> .merge_file_rLI61p
 ---
 # Convenzioni per le Table Actions in Filament
 

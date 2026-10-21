@@ -7,12 +7,20 @@ updated: 2026-09-26
 qmd: "ponytail audit"
 issues: []
 discussions: []
+<<<<<<< .merge_file_TeglCS
+=======
+status: draft
+>>>>>>> .merge_file_udDaeA
 ---
 
 # Ponytail-audit 2026-07-02: Media module findings
 
 Source: repo-wide ponytail-audit pattern (same pass as Xot and Notify module findings, see
+<<<<<<< .merge_file_TeglCS
 `Modules/Xot/docs/ponytail-audit-2026-07-02.md` and `Modules/Notify/docs/ponytail-audit-2026-07-02.md`).
+=======
+`Modules/Xot/docs/ponytail-audit-user-module-findings.md` and `Modules/Notify/docs/ponytail-audit-notify-module.md`).
+>>>>>>> .merge_file_udDaeA
 
 ## Finding
 
@@ -50,5 +58,10 @@ left in place as a minimal-diff choice).
 
 ## Related
 
+<<<<<<< .merge_file_TeglCS
 - Same audit pass as `Modules/Xot/docs/ponytail-audit-2026-07-02.md` (19 similar single-implementer
   Contracts identified in Xot, issue #102) and `Modules/Notify/docs/ponytail-audit-2026-07-02.md`.
+=======
+- Same audit pass as `Modules/Xot/docs/ponytail-audit-user-module-findings.md` (19 similar single-implementer
+  Contracts identified in Xot, issue #102) and `Modules/Notify/docs/ponytail-audit-notify-module.md`.
+>>>>>>> .merge_file_udDaeA

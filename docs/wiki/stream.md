@@ -8,6 +8,11 @@ tags: [migrato-da-txt, media]
 converted_from: __stream.txt
 created: 2026-08-24
 updated: 2026-08-24
+<<<<<<< .merge_file_XCQ1R7
+=======
+status: draft
+qmd: "stream media"
+>>>>>>> .merge_file_y8hY3k
 ---
 
 https://laravel-news.com/temporary-directory

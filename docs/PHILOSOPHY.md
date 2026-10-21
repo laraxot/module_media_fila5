@@ -8,6 +8,10 @@ type: philosophy
 tags: [philosophy, architecture, design, storage, media, ffmpeg]
 created: 2026-09-06
 updated: 2026-09-06
+<<<<<<< .merge_file_DHv9Rg
+=======
+status: draft
+>>>>>>> .merge_file_fBbgHv
 ---
 
 # Media Module — Complete Philosophy

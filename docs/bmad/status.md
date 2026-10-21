@@ -6,6 +6,12 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+<<<<<<< .merge_file_Oh5eqy
+=======
+title: "BMAD Status — Media (2026-10-06)"
+type: note
+qmd: "bmad status   media (2026-10-06) media"
+>>>>>>> .merge_file_3ruZDI
 ---
 
 # BMAD Status — Media (2026-10-06)

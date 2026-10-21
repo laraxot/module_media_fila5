@@ -6,6 +6,12 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+<<<<<<< .merge_file_X4Phyp
+=======
+title: "Epics e User Stories - Modulo Media"
+type: note
+qmd: "epics e user stories - modulo media media"
+>>>>>>> .merge_file_WTnCkO
 ---
 
 # Epics e User Stories - Modulo Media

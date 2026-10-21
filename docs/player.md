@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "player"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_D7jM5X
+=======
+status: draft
+>>>>>>> .merge_file_5DwirW
 ---
 https://github.com/spatie/laravel-sitemap/blob/main/resources/views/video.blade.php
 

@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "mcp server recommended"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_Di1eHA
+=======
+status: draft
+>>>>>>> .merge_file_khsWXN
 ---
 # MCP Server Consigliati per il Modulo Media
 

@@ -9,6 +9,10 @@ module: "Media"
 type: architecture
 tags: [patterns, best-practices]
 last_updated: 2026-07-28
+<<<<<<< .merge_file_MeS3Fv
+=======
+status: draft
+>>>>>>> .merge_file_0kH2JP
 ---
 
 # Architectural Patterns — Media Module

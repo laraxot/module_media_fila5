@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "custom properties guide"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_wHixWW
+=======
+status: draft
+>>>>>>> .merge_file_y3DZ9t
 ---
 # Custom Properties — spatie/laravel-medialibrary
 

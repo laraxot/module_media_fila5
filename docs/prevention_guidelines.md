@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "prevention guidelines"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_9nVczK
+=======
+status: draft
+>>>>>>> .merge_file_cui5Le
 ---
 # Linee Guida Prevenzione Problemi - Modulo Media
 
@@ -385,7 +389,11 @@ jobs:
 ## 🔗 **Collegamenti**
 
 - [Correzioni S3Test.php](s3test_corrections.md)
+<<<<<<< .merge_file_9nVczK
 - [PHPStan Fixes](phpstan_level10_fixes.md)
+=======
+- [PHPStan Fixes](phpstan-level10-fixes.md)
+>>>>>>> .merge_file_cui5Le
 - [Translation Standards](translations.md)
 - [Architecture Guidelines](../docs/architecture.md)
 

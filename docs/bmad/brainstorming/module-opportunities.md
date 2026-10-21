@@ -6,6 +6,7 @@ module: Media
 created: 2026-09-28
 updated: 2026-09-28
 qmd: "Media brainstorming rischi opportunità domande aperte"
+tags: [docs, media, bmad]
 ---
 # Media — brainstorming
 

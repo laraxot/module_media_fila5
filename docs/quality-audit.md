@@ -8,6 +8,10 @@ type: report
 module: Media
 updated: 2026-09-01
 qmd: "audit qualita media phpstan phpmd phpinsights pest coverage soppressioni collisioni case"
+<<<<<<< .merge_file_fqPe3r
+=======
+status: draft
+>>>>>>> .merge_file_5jmGDI
 ---
 
 # Audit di qualita — modulo Media

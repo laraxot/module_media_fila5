@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "filament version"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_kn4MnI
+=======
+status: draft
+>>>>>>> .merge_file_k5HhyD
 ---
 # Filament Version Declaration — Media
 

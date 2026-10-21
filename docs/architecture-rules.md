@@ -7,6 +7,7 @@ discussions: []
 title: architecture rules — puntatore
 type: reference
 updated: 2026-05-21
+status: draft
 ---
 
 # Architecture rules (puntatore)

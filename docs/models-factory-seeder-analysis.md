@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "models factory seeder analysis"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_2IPqJN
+=======
+status: draft
+>>>>>>> .merge_file_zkmpXn
 ---
 # Analisi Modelli, Factory e Seeder - Modulo Media
 

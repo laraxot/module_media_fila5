@@ -3,6 +3,11 @@ title: "Riorganizzazione docs core Media"
 type: story
 tags: [docs, bmad, media, reorganization]
 qmd: "riorganizzazione docs core Media"
+<<<<<<< .merge_file_yNn619
+=======
+status: draft
+updated: 2026-10-09
+>>>>>>> .merge_file_0x2unU
 ---
 
 # Story — riorganizzazione docs core: Media
