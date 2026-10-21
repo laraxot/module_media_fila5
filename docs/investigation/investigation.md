@@ -2,6 +2,13 @@
 type: investigation
 title: "Investigation Media Optimization Workflow"
 links: {github_issue: #XXX}
+<<<<<<< .merge_file_xAtYMY
+=======
+status: draft
+updated: 2026-10-08
+tags: [docs, media, investigation]
+qmd: "investigation: media optimization workflow media"
+>>>>>>> .merge_file_aX1EdS
 ---
 # Investigation: Media Optimization Workflow
 

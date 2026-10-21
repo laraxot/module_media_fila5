@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "convert"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_9dkc7s
+=======
+status: draft
+>>>>>>> .merge_file_iD4V9l
 ---
 https://tobyokeke.com/how-to-convert-uploaded-videos-in-laravel-1d605baf5033
 

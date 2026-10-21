@@ -7,6 +7,10 @@ updated: 2026-09-26
 qmd: "roadmap miglioramenti"
 issues: []
 discussions: []
+<<<<<<< .merge_file_fxXExx
+=======
+status: draft
+>>>>>>> .merge_file_Vp2ZzU
 ---
 
 # Roadmap — Media, il modulo con un dump-and-die ancora vivo dentro un generatore video

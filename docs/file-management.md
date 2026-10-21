@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "file management"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_8N929x
+=======
+status: draft
+>>>>>>> .merge_file_xI60q7
 ---
 # Gestione dei File in <nome progetto>
 

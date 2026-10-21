@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "conflict resolution convertvideobymediaconvertaction"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_AGp5l3
+=======
+status: draft
+>>>>>>> .merge_file_S0KUqo
 ---
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
@@ -82,7 +86,11 @@ FFMpeg::fromDisk($data->disk)
 **Anti-pattern**: Uso di annotazioni generiche quando sono disponibili annotazioni specifiche
 
 ## Collegamenti
+<<<<<<< .merge_file_AGp5l3
 - [Media Module Documentation](module_media.md)
+=======
+- [Media Module Documentation](module-media.md)
+>>>>>>> .merge_file_S0KUqo
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
 - [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)

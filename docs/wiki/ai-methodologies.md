@@ -15,9 +15,15 @@ This file is a DRY local index for AI workflows in this module or theme.
 
 ## Canonical Sources
 
+<<<<<<< .merge_file_nl9c65
 - [OpenViking Integration Guide](../../../../docs/openviking-integration.md)
 - [AI Methodologies Integration](../../../../docs/project/ai-methodologies-integration.md)
 - [Root Docs Index](../../../../docs/index.md)
+=======
+- [OpenViking Integration Guide](../../../../../docs/openviking-integration.md)
+- [AI Methodologies Integration](../../../../docs/project/ai-methodologies-integration.md)
+- [Root Docs Index](../../../../../docs/index.md)
+>>>>>>> .merge_file_xNhEMC
 
 ## Local Workflow
 

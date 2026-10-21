@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "conflict resolution iconmediacolumn"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_CpwyUl
+=======
+status: draft
+>>>>>>> .merge_file_YKMXpB
 ---
 # Risoluzione Conflitto IconMediaColumn.php
 
@@ -88,8 +92,13 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 
 ## Collegamenti
 
+<<<<<<< .merge_file_CpwyUl
 - [module_media.md](module_media.md)
 - [filament_table_actions.md](filament_table_actions.md)
+=======
+- [module_media.md](module-media.md)
+- [filament_table_actions.md](filament-table-actions.md)
+>>>>>>> .merge_file_YKMXpB
 - [Modules/Media/docs/](../docs/)
 
 *Ultimo aggiornamento: 29 luglio 2025*

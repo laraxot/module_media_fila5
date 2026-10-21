@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "security"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_3ygxyS
+=======
+status: draft
+>>>>>>> .merge_file_R1TFEd
 ---
 # Configurazione della Sicurezza
 

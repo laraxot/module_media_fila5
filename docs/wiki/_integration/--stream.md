@@ -2,6 +2,15 @@
 module: theme
 topic: __stream
 canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
+<<<<<<< .merge_file_FNlcdQ
+=======
+title: "__stream"
+type: note
+status: stub
+updated: 2026-10-08
+tags: [docs, media, wiki]
+qmd: "__stream media"
+>>>>>>> .merge_file_1VKf4B
 ---
 # __stream
 

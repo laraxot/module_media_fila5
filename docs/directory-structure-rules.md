@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "directory structure rules"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_ynsygQ
+=======
+status: draft
+>>>>>>> .merge_file_LK8Sr7
 ---
 # Directory Structure Rules
 

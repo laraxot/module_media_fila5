@@ -8,10 +8,17 @@ discussions: []
 type: overview
 module: Media
 sources:
+<<<<<<< .merge_file_us7SLe
   - ../../../philosophy.md
   - ../../../file-management-architecture.md
   - ../../../business-logic-overview.md
   - ../../../configuration.md
+=======
+  - ../../philosophy.md
+  - ../../file-management-architecture.md
+  - ../../business-logic-overview.md
+  - ../../configuration.md
+>>>>>>> .merge_file_WRqK7z
 confidence: high
 updated: 2026-04-15
 ---

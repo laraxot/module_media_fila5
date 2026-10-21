@@ -4,6 +4,8 @@ type: architecture
 tags: [module, architecture, media, storage]
 created: 2026-08-04
 updated: 2026-08-04
+status: draft
+qmd: "media module   architecture media"
 ---
 # Media Module — Architecture
 

@@ -47,7 +47,7 @@ describe('Media coverage 100 — remaining sweep', function (): void {
 
         try {
             $upload = app(UploadFileAction::class)->execute($missing, 'media/dest.bin');
-            Assert::assertSame(false, $upload['success'] ?? null, 'un upload da un path inesistente non può riuscire');
+            Assert::assertFalse($upload['success'], 'un upload da un path inesistente non può riuscire');
             Assert::assertArrayHasKey('error', $upload);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());

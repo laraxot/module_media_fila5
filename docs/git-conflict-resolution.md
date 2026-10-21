@@ -8,6 +8,10 @@ qmd: "git conflict resolution"
 issues: []
 discussions: []
 created_at: '2026-07-31'
+<<<<<<< .merge_file_Vzn6pe
+=======
+status: draft
+>>>>>>> .merge_file_9RCfC0
 ---
 
 # Audit collisioni Git committate in bashscripts

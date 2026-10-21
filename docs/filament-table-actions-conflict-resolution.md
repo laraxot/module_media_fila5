@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "filament table actions conflict resolution"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_gA6j1S
+=======
+status: draft
+>>>>>>> .merge_file_w1YSdo
 ---
 # Risoluzione conflitto git su Filament Table ConvertAction
 
