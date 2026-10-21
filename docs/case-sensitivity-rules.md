@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Case Sensitivity Rules - Media Module"
 module: "Media"
 type: rule

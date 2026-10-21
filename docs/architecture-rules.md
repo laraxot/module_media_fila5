@@ -1,4 +1,9 @@
 ---
+tags: [documentation]
+created: 2026-09-26
+qmd: "architecture rules"
+issues: []
+discussions: []
 title: architecture rules — puntatore
 type: reference
 updated: 2026-05-21

@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Colli di Bottiglia e Soluzioni - Modulo Media"
 module: "Media"
 type: concept

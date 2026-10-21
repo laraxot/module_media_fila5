@@ -33,7 +33,6 @@ class ConvertVideoCommand extends Command
         }
 
         $format = new WebM;
-        $format = new WebM;
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file)->replaceLast('.mp4', '.'.$extension)->toString();
 
@@ -45,13 +44,8 @@ class ConvertVideoCommand extends Command
             $this->info("{$remaining} seconds left at rate: {$rate}");
         });
 
-        $export->toDisk($disk);
-        $export->inFormat($format);
-        $export->save($file_new);
-        $formattedExport = MediaExporterResolver::from(
-            $export->toDisk($disk)
-        )->inFormat($format);
-        $formattedExport->save($file_new);
+        // Una sola transcodifica: toDisk() e inFormat() configurano lo stesso exporter, save() scrive $file_new.
+        MediaExporterResolver::from($export->toDisk($disk))->inFormat($format)->save($file_new);
 
         return app(GetFilesystemAdapterAction::class)->execute($disk)->url($file_new);
     }

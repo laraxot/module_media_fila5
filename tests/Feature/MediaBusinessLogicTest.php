@@ -12,8 +12,8 @@ use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
-use Modules\User\Contracts\UserContract;
 use Modules\User\Database\Factories\UserFactory;
+use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Tests\XotBasePest;
 
 uses(TestCase::class);
