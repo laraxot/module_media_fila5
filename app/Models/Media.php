@@ -100,7 +100,7 @@ class Media extends SpatieMedia
 
     /**
      * @param  array<int, string>  $uuids
-     * @return MediaCollection<int, static>
+     * @return MediaCollection<int, Media>
      */
     public static function findWithTemporaryUploadInCurrentSession(array $uuids): MediaCollection
     {
@@ -111,7 +111,10 @@ class Media extends SpatieMedia
             session()->getId(),
         ));
 
-        return new MediaCollection($query->get()->all());
+        /** @var list<Media> $media */
+        $media = array_values($query->get()->all());
+
+        return new MediaCollection($media);
     }
 
     /**

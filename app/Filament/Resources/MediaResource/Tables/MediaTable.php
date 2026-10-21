@@ -18,6 +18,8 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Webmozart\Assert\Assert;
 
+use function is_string;
+
 class MediaTable extends XotBaseResourceTable
 {
     /**
@@ -63,8 +65,10 @@ class MediaTable extends XotBaseResourceTable
     {
         $options = [];
         foreach (Media::query()->distinct()->pluck($column) as $value) {
-            Assert::string($value);
-            $options[$value] = $value;
+            // mime_type e' nullable: i valori non stringa non sono opzioni valide del filtro
+            if (is_string($value)) {
+                $options[$value] = $value;
+            }
         }
 
         return $options;
@@ -90,6 +94,7 @@ class MediaTable extends XotBaseResourceTable
                     $filePath = $record->getPath();
                     Assert::string($filePath, 'getPath must return string');
                     Assert::string($record->file_name, 'file_name must be string');
+
                     return response()->download($filePath, $record->file_name);
                 }),
             'convert' => Action::make('convert')
@@ -97,6 +102,7 @@ class MediaTable extends XotBaseResourceTable
                 ->color('gray')
                 ->url(static function (Media $record): string {
                     Assert::string($res = MediaResource::getUrl('convert', ['record' => $record]));
+
                     return $res;
                 })
                 ->openUrlInNewTab(true),

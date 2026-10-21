@@ -1,4 +1,6 @@
 ---
+issues: []
+discussions: []
 title: "Media Module - Business Logic Overview"
 module: "Media"
 type: concept
