@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "conflicts analysis"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_4UhOrW
+=======
+status: draft
+>>>>>>> .merge_file_FVOKLf
 ---
 # Analisi Conflitti - README.md
 

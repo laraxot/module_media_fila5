@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "bad practices"
 issues: []
 discussions: []
+<<<<<<< .merge_file_9rwqml
 ---
 
 ```
@@ -21,3 +22,12 @@ updated: 2026-09-26
 qmd: "bad practices"
 issues: []
 discussions: []
+=======
+status: draft
+---
+
+```
+
+```
+---
+>>>>>>> .merge_file_M8tNUL

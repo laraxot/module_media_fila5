@@ -9,6 +9,10 @@ module: "Media"
 type: operations
 tags: [troubleshooting, errors, debugging]
 last_updated: 2026-07-28
+<<<<<<< .merge_file_qItuIc
+=======
+status: draft
+>>>>>>> .merge_file_29FCy7
 ---
 
 # Troubleshooting Guide — Media Module

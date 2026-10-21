@@ -8,13 +8,22 @@ created: 2026-05-11
 updated: 2026-05-11
 tags: [on-demand, pattern, wiki, qmd]
 related:
+<<<<<<< .merge_file_LJqPqv
   - ../../docs/wiki/rules/on-demand-pattern.md
   - ../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+=======
+  - ../../../../docs/wiki/rules/on-demand-pattern.md
+  - ../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md
+>>>>>>> .merge_file_JFrL8K
 ---
 
 # On-Demand Pattern — Module **Media**
 
+<<<<<<< .merge_file_LJqPqv
 **Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../docs/wiki/rules/on-demand-pattern.md)
+=======
+**Fonte canonica**: [../../docs/wiki/rules/on-demand-pattern.md](../../../../docs/wiki/rules/on-demand-pattern.md)
+>>>>>>> .merge_file_JFrL8K
 
 ## Principio
 
@@ -83,9 +92,15 @@ qmd search "<topic>"
 
 ## Riferimenti
 
+<<<<<<< .merge_file_LJqPqv
 - [Global On-Demand Pattern](../../docs/wiki/rules/on-demand-pattern.md)
 - [LLM Wiki Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [Trigger Map](../../docs/wiki/rules/00-TRIGGER_MAP.md)
+=======
+- [Global On-Demand Pattern](../../../../docs/wiki/rules/on-demand-pattern.md)
+- [LLM Wiki Operational Discipline](../../../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
+- [Trigger Map](../../../../docs/wiki/rules/00-TRIGGER_MAP.md)
+>>>>>>> .merge_file_JFrL8K
 - [Module Wiki Index](./wiki/index.md)
 
 ---

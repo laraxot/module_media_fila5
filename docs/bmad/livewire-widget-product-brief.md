@@ -4,6 +4,10 @@ type: product-brief
 module: Media
 related:
   - ./livewire-inventory.md
+status: draft
+updated: 2026-10-07
+tags: [docs, media, bmad]
+qmd: "brief media"
 ---
 
 # Brief

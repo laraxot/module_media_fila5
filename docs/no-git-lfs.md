@@ -8,6 +8,10 @@ type: guideline
 module: Media
 updated: 2026-09-01
 qmd: "git lfs vietato gitattributes prototipo binari blob normali media puntatori immagini"
+<<<<<<< .merge_file_lpZGj0
+=======
+status: draft
+>>>>>>> .merge_file_FxD6Zs
 ---
 
 # Git LFS non si usa in questo progetto

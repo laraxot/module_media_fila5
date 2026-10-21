@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "dry kiss analysis"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_SEAO2A
+=======
+status: draft
+>>>>>>> .merge_file_5CHbeN
 ---
 # 🐄 DRY & KISS Analysis - Media
 

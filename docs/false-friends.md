@@ -7,6 +7,7 @@ updated: 2026-09-26
 qmd: "false friends"
 issues: []
 discussions: []
+<<<<<<< .merge_file_HrhkSx
 ---
 
 ```
@@ -21,3 +22,12 @@ updated: 2026-09-26
 qmd: "false friends"
 issues: []
 discussions: []
+=======
+status: draft
+---
+
+```
+
+```
+---
+>>>>>>> .merge_file_fmksG7

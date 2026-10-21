@@ -10,6 +10,10 @@ confidence: high
 tags: [queueable-action, spatie, architecture, laraxot, media]
 related:
   - Modules/Xot/docs/queueable-actions.md
+<<<<<<< .merge_file_OXc6Zf
+=======
+status: draft
+>>>>>>> .merge_file_mMSpuS
 ---
 
 # Queueable Actions — Media Module Doctrine

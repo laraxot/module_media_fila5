@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "usage"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_8D9KOV
+=======
+status: draft
+>>>>>>> .merge_file_ilz8wJ
 ---
 # Utilizzo Base e Layout
 

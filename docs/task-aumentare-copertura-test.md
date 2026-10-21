@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "task aumentare copertura test"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_V79mah
+=======
+status: draft
+>>>>>>> .merge_file_Cf2as5
 ---
 # Task: Aumentare Copertura Test - Media
 

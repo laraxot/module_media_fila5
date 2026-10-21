@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "task ridurre phpstan suppressioni"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_4wY22D
+=======
+status: draft
+>>>>>>> .merge_file_wIv8jd
 ---
 # Task: Ridurre Suppressioni PHPStan Inline - Media
 

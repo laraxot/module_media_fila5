@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "mcp server consigliati"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_yuId3b
+=======
+status: draft
+>>>>>>> .merge_file_aI9CzU
 ---
 # Server MCP consigliati per il modulo Media
 

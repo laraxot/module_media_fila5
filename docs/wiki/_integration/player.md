@@ -8,6 +8,10 @@ updated: 2026-07-14
 qmd: "player"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_xvjQsO
+=======
+status: draft
+>>>>>>> .merge_file_Lpl2WJ
 ---
 # player
 

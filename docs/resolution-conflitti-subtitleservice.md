@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "resolution conflitti subtitleservice"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_EcA51f
+=======
+status: draft
+>>>>>>> .merge_file_LTpt5h
 ---
 # Risoluzione Conflitti Git - SubtitleService.php
 

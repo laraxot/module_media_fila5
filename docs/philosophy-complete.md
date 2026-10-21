@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "philosophy complete"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_wINeeP
+=======
+status: draft
+>>>>>>> .merge_file_b26xQn
 ---
 # Media - Filosofia Completa: Logica, Religione, Politica, Zen
 

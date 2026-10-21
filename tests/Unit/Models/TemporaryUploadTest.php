@@ -9,11 +9,13 @@ use Modules\Media\Models\TemporaryUpload;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
+use function Safe\class_parents;
+
 uses(TestCase::class)->group('no-media-db');
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-        Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload);
+        Assert::assertArrayHasKey(BaseModel::class, class_parents(TemporaryUpload::class));
     });
 
     it('uses HasXotFactory trait', function (): void {

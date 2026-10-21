@@ -10,6 +10,10 @@ updated: 2026-07-14
 qmd: "filament resource conflict resolution"
 related:
   - "./webm.md"
+<<<<<<< .merge_file_psODsw
+=======
+status: draft
+>>>>>>> .merge_file_A3Adol
 ---
 # Risoluzione conflitto git su Filament MediaConvertResource
 
