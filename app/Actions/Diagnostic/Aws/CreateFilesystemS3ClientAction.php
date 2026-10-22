@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Media\Actions\Diagnostic\Support;
+namespace Modules\Media\Actions\Diagnostic\Aws;
 
 use Aws\S3\S3Client;
 use Spatie\QueueableAction\QueueableAction;

@@ -4,7 +4,7 @@ title: "no app/Support — business logic in QueueableAction"
 type: concept
 tags: [media, actions, queueable-action, support, refactor]
 created: 2026-07-12
-updated: 2026-07-12
+updated: 2026-10-22
 =======
 title: "app/Support — adapters and primitives only"
 type: concept
@@ -18,6 +18,7 @@ issues:
 discussions:
   - "https://github.com/laraxot/platform/discussions/273"
 related:
+  - ../../../../../../docs/second-brain/process/no-app-support-queueable-actions.md
 <<<<<<< .merge_file_5usMSl
   - ../../../../docs/wiki/rules/queueable-action-trait-mandatory.md
 ---
@@ -72,3 +73,11 @@ logic: ospita solo primitive infrastrutturali che non sono use-case.
 
 - [queueable-action-trait-mandatory](../../../../../../docs/wiki/rules/queueable-action-trait-mandatory.md)
 >>>>>>> .merge_file_SGkBSO
+
+## Wave 2026-10-22
+
+| Legacy | Action |
+|--------|--------|
+| `TemporaryUploadPathGenerator` | `GenerateTemporaryUploadPathAction` |
+| `MediaExporterResolver` | `Actions/Ffmpeg/ResolveMediaExporterAction` |
+| Diagnostic AWS Support/* | `Actions/Diagnostic/Aws/*Action` |

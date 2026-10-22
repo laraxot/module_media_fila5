@@ -7,7 +7,7 @@ namespace Modules\Media\Actions\Diagnostic\S3;
 use Aws\Exception\AwsException;
 use Aws\S3\S3Client;
 use Exception;
-use Modules\Media\Actions\Diagnostic\Support\CreateFilesystemS3ClientAction;
+use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemS3ClientAction;
 use Spatie\QueueableAction\QueueableAction;
 
 class TestBucketPermissionsAction

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Modules\Media\Actions\Diagnostic\Support;
+namespace Modules\Media\Actions\Diagnostic\Aws;
 
 use Spatie\QueueableAction\QueueableAction;
 
