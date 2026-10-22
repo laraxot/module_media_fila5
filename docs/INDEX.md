@@ -70,7 +70,7 @@ Le story vivono in [`stories/`](./stories/). Le piu' recenti:
 | Story | Stato | Note |
 |---|---|---|
 | [02 Risoluzione dei marker di merge (e7e667b11)](./stories/02.Media-merge-conflict-resolution.story.md) | done | 92 file PHP + 6 file docs; contiene i followups aperti |
-| [2026-10-06 PHPStan cleanup](./stories/2026-10-06-phpstan-cleanup-media.story.md) | done | [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md) |
+| [2026-10-06 PHPStan cleanup](./stories/2026-10-06-phpstan-cleanup-media.story.md) | done | [dev](./stories/phpstan-cleanup-media-dev.dev.md) |
 | [16-4 Consolidamento case-variant](./stories/16-4-media-case-variant-consolidation.md) | ready-for-dev | restano `tests/filament` vs `tests/Filament`, `app/conversions` |
 | [media-services-to-actions](./stories/media-services-to-actions.story.md) | done | residuo verificato: `SubtitleService` ancora duplicato in `Services/` e `Actions/Stream/` |
 | [01 PHPStan fix](./stories/01.Media-phpstan-fix.story.md) | done | `method.staticCall` su `Schemas/*Form` e `*Infolist` |
