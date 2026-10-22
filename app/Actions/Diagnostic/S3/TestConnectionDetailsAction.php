@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Diagnostic\S3;
 
 use Aws\Exception\AwsException;
-use Modules\Media\Actions\Diagnostic\Support\CreateFilesystemS3ClientAction;
-use Modules\Media\Actions\Diagnostic\Support\ResolveAwsS3ErrorSolutionAction;
+use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemS3ClientAction;
+use Modules\Media\Actions\Diagnostic\Aws\ResolveAwsS3ErrorSolutionAction;
 use Spatie\QueueableAction\QueueableAction;
 
 class TestConnectionDetailsAction

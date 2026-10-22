@@ -173,7 +173,7 @@ In questo modulo BMAD serve a:
 - **`app/Models/`**: `Media`, `MediaConvert`, `TemporaryUpload`
 - **`app/Filament/`**: Resource + `Clusters/`, `RelationManagers/`, `Infolists/`
 - **`app/Conversions/`**: generatori immagine/video (le directory `conversions/` in minuscolo sono residui)
-- **`app/Support/Ffmpeg/`, `app/Exceptions/`**: supporto runtime
+- **`app/Actions/Ffmpeg/`** (`ResolveMediaExporterAction`), **`app/Exceptions/`**: runtime (niente `app/Support/`)
 - **`docs/bmad/`**: questa documentazione
 
 ## Vedi anche
