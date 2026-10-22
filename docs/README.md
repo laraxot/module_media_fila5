@@ -110,7 +110,7 @@ Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al
 
 ## Story recenti
 
-- [2026-10-06 PHPStan cleanup - Media](./stories/2026-10-06-phpstan-cleanup-media.story.md) · [dev](./stories/2026-10-06-phpstan-cleanup-media.dev.md)
+- [2026-10-06 PHPStan cleanup - Media](./stories/2026-10-06-phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media-dev.dev.md)
 =======
 - [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media.dev.md)
 >>>>>>> .merge_file_TtQlOD
