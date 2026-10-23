@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "rules testing no migrate fresh"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_rwHzqo
-=======
 status: draft
->>>>>>> .merge_file_OLRBEA
 ---
 # CRITICAL ARCHITECTURE RULE: NO MIGRATE:FRESH
 

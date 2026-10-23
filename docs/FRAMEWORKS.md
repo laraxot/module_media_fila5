@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "FRAMEWORKS"
 issues: []
 discussions: []
-<<<<<<< .merge_file_AMbLV0
-=======
 status: draft
->>>>>>> .merge_file_WBstx8
 ---
 
 # Media — Framework Integration Notes
@@ -48,7 +45,6 @@ Efficiency principles:
 - Simplification opportunities: [TBD]
 
 ---
-<<<<<<< .merge_file_AMbLV0
 title: "FRAMEWORKS"
 type: note
 tags: [documentation]
@@ -57,6 +53,4 @@ updated: 2026-09-26
 qmd: "FRAMEWORKS"
 issues: []
 discussions: []
-=======
->>>>>>> .merge_file_WBstx8
 *Generated: 2026-08-04*

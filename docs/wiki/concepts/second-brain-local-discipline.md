@@ -9,10 +9,7 @@ type: reference
 updated: 2026-05-21
 related:
   - "../../../../Xot/docs/wiki/concepts/second-brain-local-discipline.md"
-<<<<<<< .merge_file_NMUeOF
-=======
 status: draft
->>>>>>> .merge_file_4qhVQl
 ---
 
 # second brain local discipline

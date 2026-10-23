@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "duplicate methods report"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_8aRjic
-=======
 status: draft
->>>>>>> .merge_file_BY0aOl
 ---
 # Report: Metodi con nome duplicato nei moduli e nei temi
 

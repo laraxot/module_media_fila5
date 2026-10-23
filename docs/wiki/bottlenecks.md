@@ -832,44 +832,20 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 
 ## Collegamenti tra versioni di BOTTLENECKS.md
 * [BOTTLENECKS.md](../../../xot/docs/bottlenecks.md)
-<<<<<<< .merge_file_HHzgt2
-* [BOTTLENECKS.md](../../../user/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../../../media/docs/bottlenecks.md)
-* [BOTTLENECKS.md](../../../cms/docs/bottlenecks.md)
-=======
 * [BOTTLENECKS.md](../../../User/docs/bottlenecks.md)
 * [BOTTLENECKS.md](../bottlenecks.md)
 * [BOTTLENECKS.md](../../../Cms/docs/bottlenecks.md)
->>>>>>> .merge_file_wlZmCX
 
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/performance/bottlenecks.md)
-<<<<<<< .merge_file_HHzgt2
-* [bottlenecks.md](../../gdpr/docs/bottlenecks.md)
-* [bottlenecks.md](../../gdpr/docs/performance/bottlenecks.md)
-=======
 * [bottlenecks.md](../../../Gdpr/docs/bottlenecks.md)
 * [bottlenecks.md](../../../Gdpr/docs/performance/bottlenecks.md)
->>>>>>> .merge_file_wlZmCX
 * [bottlenecks.md](../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../dental/docs/bottlenecks.md)
-<<<<<<< .merge_file_HHzgt2
-* [bottlenecks.md](../../user/docs/bottlenecks.md)
-* [bottlenecks.md](../../user/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../ui/docs/bottlenecks.md)
-* [bottlenecks.md](../../ui/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../lang/docs/bottlenecks.md)
-* [bottlenecks.md](../../lang/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../job/docs/performance/bottlenecks.md)
-* [bottlenecks.md](performance/bottlenecks.md)
-* [bottlenecks.md](../../activity/docs/bottlenecks.md)
-* [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
-* [bottlenecks.md](../../cms/docs/bottlenecks.md)
-=======
 * [bottlenecks.md](../../../User/docs/bottlenecks.md)
 * [bottlenecks.md](../../../User/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../ui/docs/bottlenecks.md)
@@ -881,4 +857,3 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [bottlenecks.md](../../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
 * [bottlenecks.md](../../../Cms/docs/bottlenecks.md)
->>>>>>> .merge_file_wlZmCX

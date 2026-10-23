@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "s3test corrections conflict"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_mUqYav
-=======
 status: draft
->>>>>>> .merge_file_jr0IQ1
 ---
 # Correzioni S3Test.php - Modulo Media
 
@@ -264,11 +261,7 @@ private function getSolutionForError(?string $errorCode): string
 - [Documentazione Generale Media](README.md)
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
-<<<<<<< .merge_file_mUqYav
-- [PHPStan Level 10 Fixes](./phpstan_level10_fixes.md)
-=======
 - [PHPStan Level 10 Fixes](./phpstan-level10-fixes.md)
->>>>>>> .merge_file_jr0IQ1
 
 ---
 

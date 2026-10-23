@@ -8,10 +8,7 @@ updated: 2026-07-14
 qmd: "ffmpeg"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_Gqp8Kf
-=======
 status: draft
->>>>>>> .merge_file_dqTjtn
 ---
 # ffmpeg
 

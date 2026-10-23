@@ -1,6 +1,4 @@
 ---
-<<<<<<< .merge_file_ezTjs6
-=======
 bmad_id: MEDIA-readme
 domain: media-module
 version: 1.0.0
@@ -44,7 +42,6 @@ Per dettagli architetturali, vedi **architecture.md**.
 ## Nota da README precedente
 
 ---
->>>>>>> .merge_file_sqxoJf
 title: "README"
 type: note
 tags: [documentation]
@@ -53,17 +50,11 @@ updated: 2026-10-06
 qmd: "README"
 issues: []
 discussions: []
-<<<<<<< .merge_file_ezTjs6
-=======
 status: draft
->>>>>>> .merge_file_sqxoJf
 ---
 
 # Media bmad docs
 
-<<<<<<< .merge_file_ezTjs6
-This folder contains BMAD method documentation for the Media module.
-=======
 ## Kit BMAD owner (canonico)
 
 - [BMAD Planning](../bmad-planning.md)
@@ -73,4 +64,3 @@ This folder contains BMAD method documentation for the Media module.
 - [Decision log](./decision-log.md)
 
 This folder contains BMAD method documentation for the Media module.
->>>>>>> .merge_file_sqxoJf

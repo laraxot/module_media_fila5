@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "s3test refactoring analysis"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_Sy492L
-=======
 status: draft
->>>>>>> .merge_file_NeozVO
 ---
 # S3Test.php - Analisi Refactoring e Regole di Conformità Laraxot
 

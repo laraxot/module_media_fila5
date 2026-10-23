@@ -10,10 +10,7 @@ discussions: []
 module: theme
 topic: module_analysis
 canonical: ../../../../Themes/docs/shared-components/MODULE_ANALYSIS-Modules.md
-<<<<<<< .merge_file_GjECpb
-=======
 status: stub
->>>>>>> .merge_file_PvLlfk
 ---
 
 See canonical documentation: ../../../../Themes/docs/shared-components/MODULE_ANALYSIS-Modules.md

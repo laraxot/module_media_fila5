@@ -8,10 +8,7 @@ updated: 2026-07-14
 qmd: "youtube"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_g1V1DI
-=======
 status: draft
->>>>>>> .merge_file_XXRkMA
 ---
 # youtube
 

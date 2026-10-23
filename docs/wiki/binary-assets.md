@@ -1,5 +1,3 @@
-<<<<<<< .merge_file_iK0Jdp
-=======
 ---
 title: "Asset binari"
 type: note
@@ -8,7 +6,6 @@ updated: 2026-10-08
 tags: [docs, media, wiki]
 qmd: "asset binari media"
 ---
->>>>>>> .merge_file_tlKa4m
 # Asset binari
 
 Gli asset binari sono file normali del repository.

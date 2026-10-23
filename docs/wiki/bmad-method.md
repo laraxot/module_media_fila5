@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "bmad method"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_nBrtsX
-=======
 status: draft
->>>>>>> .merge_file_q428ns
 ---
 # BMAD Method v6.3 operativo nel progetto
 

@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "media optimizations"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_HT2wus
-=======
 status: draft
->>>>>>> .merge_file_t9OLvQ
 ---
 # Ottimizzazioni Performance Modulo Media
 

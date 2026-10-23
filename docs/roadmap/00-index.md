@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "00 index"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_LQdg7R
-=======
 status: draft
->>>>>>> .merge_file_Y4Vy90
 ---
 # Media Module - Roadmap
 
@@ -29,11 +26,7 @@ status: draft
 - [Workstreams](03-workstreams.md)
 - [Milestones](04-milestones.md)
 - [Risks](05-risks.md)
-<<<<<<< .merge_file_LQdg7R
-- [Chaos Readiness 2026-03-02](chaos-readiness-2026-03-02.md)
-=======
 - [Chaos Readiness 2026-03-02](chaos-readiness.md)
->>>>>>> .merge_file_Y4Vy90
 
 ## Metriche rapide
 
@@ -51,10 +44,7 @@ status: draft
 <!-- Merged from 00-INDEX.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
-<<<<<<< .merge_file_LQdg7R
 title: "Media Module - Roadmap"
-=======
->>>>>>> .merge_file_Y4Vy90
 module: "Media"
 type: concept
 tags: [00, INDEX]

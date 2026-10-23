@@ -10,10 +10,7 @@ module: Media
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
 canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
-<<<<<<< .merge_file_mZ35s1
-=======
 status: stub
->>>>>>> .merge_file_5XlCVK
 ---
 
 # Metodi Duplicati — Analisi Media

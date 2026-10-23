@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "log"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_GnPes7
-=======
 status: draft
->>>>>>> .merge_file_FA3iiK
 ---
 # Media Activity Log
 

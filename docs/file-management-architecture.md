@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "file management architecture"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_nHzZI0
-=======
 status: draft
->>>>>>> .merge_file_56gvTF
 ---
 # Media Module - File Management Architecture
 
@@ -1167,10 +1164,7 @@ Il modulo Media rappresenta un componente critico per user experience e richiede
 <!-- Merged from FILE_MANAGEMENT_ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
-<<<<<<< .merge_file_nHzZI0
 title: "Media Module - File Management Architecture"
-=======
->>>>>>> .merge_file_56gvTF
 module: "Media"
 type: concept
 tags: [FILE, MANAGEMENT, ARCHITECTURE]

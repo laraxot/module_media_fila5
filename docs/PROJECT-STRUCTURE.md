@@ -97,18 +97,11 @@ graph TD
 
 ## Riferimenti Globali
 
-- [Project Wiki Root](../../docs/wiki/)
-<<<<<<< .merge_file_L5HlIb
-- [Global Rules](../../docs/wiki/rules/)
-- [Global Skills](../../docs/wiki/skills/)
-- [Global Commands](../../docs/wiki/commands/)
-- [Global Memories](../../docs/wiki/memories/)
-=======
-- [Global Rules](wiki/rules)
-- [Global Skills](wiki/skills)
-- [Global Commands](wiki/commands)
-- [Global Memories](wiki/memories)
->>>>>>> .merge_file_uQa0CO
+- [Project Wiki Root](../../../../docs/wiki/)
+- [Global Rules](../../../../bashscripts/ai/wiki/rules/)
+- [Global Skills](../../../../bashscripts/ai/wiki/skills/)
+- [Global Commands](../../../../bashscripts/ai/wiki/commands/)
+- [Global Memories](../../../../bashscripts/ai/wiki/memories/)
 
 ## Setup Iniziale (per nuovi moduli)
 

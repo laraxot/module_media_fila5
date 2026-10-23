@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "sprint planning meeting"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_zXDjQ1
-=======
 status: draft
->>>>>>> .merge_file_GoOUEa
 ---
 # Media - Sprint Planning Meeting
 

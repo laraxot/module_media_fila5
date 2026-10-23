@@ -7,10 +7,7 @@ discussions: []
 title: html2pdf — documentazione canonica
 type: reference
 updated: 2026-05-21
-<<<<<<< .merge_file_gKNVA4
-=======
 status: draft
->>>>>>> .merge_file_PmZfh8
 ---
 
 # Html2Pdf (canonico Media)

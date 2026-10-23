@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "frameworks"
 issues: []
 discussions: []
-<<<<<<< .merge_file_5EkQ7x
-=======
 status: draft
->>>>>>> .merge_file_ZSo3AT
 ---
 
 # Media — Framework Integration Notes
@@ -48,7 +45,6 @@ Efficiency principles:
 - Simplification opportunities: [TBD]
 
 ---
-<<<<<<< .merge_file_5EkQ7x
 title: "frameworks"
 type: note
 tags: [documentation]
@@ -57,6 +53,4 @@ updated: 2026-09-26
 qmd: "frameworks"
 issues: []
 discussions: []
-=======
->>>>>>> .merge_file_ZSo3AT
 *Generated: 2026-08-04*

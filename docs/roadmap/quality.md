@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "quality"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_vRAYSz
-=======
 status: draft
->>>>>>> .merge_file_C1W098
 ---
 # Checklist qualità - Media Module
 

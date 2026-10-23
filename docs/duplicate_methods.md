@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "duplicate methods"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_SPt6r6
-=======
 status: draft
->>>>>>> .merge_file_mKbj9T
 ---
 # Metodi duplicati — Media
 

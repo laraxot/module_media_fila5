@@ -9,10 +9,7 @@ updated: 2026-07-12
 tags: [contract, naming, architecture, laraxot, media]
 related:
   - ../../../../docs/wiki/rules/module-contracts-naming-placement.md
-<<<<<<< .merge_file_jmyk4A
-=======
 status: draft
->>>>>>> .merge_file_YnYxKd
 ---
 
 # Contracts Naming & Placement in Media

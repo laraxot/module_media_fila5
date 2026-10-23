@@ -72,19 +72,6 @@ Modules/Media/
 ### Versione HEAD
 
 ## Collegamenti tra versioni di analysis.md
-<<<<<<< .merge_file_qpYExq
-* [analysis.md](../../../notify/docs/analysis.md)
-* [analysis.md](../../../notify/docs/phpstan/analysis.md)
-* [analysis.md](../../../xot/docs/analysis.md)
-* [analysis.md](../../../xot/docs/phpstan/analysis.md)
-* [analysis.md](../../../user/docs/analysis.md)
-* [analysis.md](../../../user/docs/phpstan/analysis.md)
-* [analysis.md](../../../ui/docs/analysis.md)
-* [analysis.md](../../../ui/docs/phpstan/analysis.md)
-* [analysis.md](../../../job/docs/analysis.md)
-* [analysis.md](../../../job/docs/phpstan/analysis.md)
-* [analysis.md](../../../media/docs/analysis.md)
-=======
 * [analysis.md](../../../Notify/docs/analysis.md)
 * [analysis.md](../../../notify/docs/phpstan/analysis.md)
 * [analysis.md](../../../xot/docs/analysis.md)
@@ -96,7 +83,6 @@ Modules/Media/
 * [analysis.md](../../../Job/docs/analysis.md)
 * [analysis.md](../../../job/docs/phpstan/analysis.md)
 * [analysis.md](../analysis.md)
->>>>>>> .merge_file_TK6wqm
 * [analysis.md](../../../media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../themes/one/docs/analysis.md)
 

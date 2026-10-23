@@ -11,10 +11,7 @@ discussions:
   - "https://github.com/laraxot/base_workorder_fila5/discussions/12"
 related:
   - "../../../../Xot/docs/wiki/concepts/psr4-one-class-one-file.md"
-<<<<<<< .merge_file_1zfjnk
-=======
 status: draft
->>>>>>> .merge_file_5R1MT1
 ---
 
 # PSR-4 e casing dei path Media

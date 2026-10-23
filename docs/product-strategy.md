@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "product strategy"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_9PLacw
-=======
 status: draft
->>>>>>> .merge_file_cNNaAb
 ---
 # Media - Product Strategy
 # Media Module - Product Strategy

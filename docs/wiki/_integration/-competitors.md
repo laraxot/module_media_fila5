@@ -2,15 +2,12 @@
 module: theme
 topic: _competitors
 canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
-<<<<<<< .merge_file_IfbyEO
-=======
 title: "_competitors"
 type: note
 status: stub
 updated: 2026-10-08
 tags: [docs, media, wiki]
 qmd: "_competitors media"
->>>>>>> .merge_file_AOV66c
 ---
 # _competitors
 

@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "testing guidelines"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_fPvagB
-=======
 status: draft
->>>>>>> .merge_file_56i6su
 ---
 # Media Module - Testing Guidelines
 

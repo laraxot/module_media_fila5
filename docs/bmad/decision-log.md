@@ -6,12 +6,9 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
-<<<<<<< .merge_file_T9VKiy
-=======
 title: "Decision Log - Modulo Media"
 type: note
 qmd: "decision log - modulo media media"
->>>>>>> .merge_file_k1JJSZ
 ---
 
 # Decision Log - Modulo Media

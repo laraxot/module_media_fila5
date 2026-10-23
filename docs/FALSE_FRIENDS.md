@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "FALSE FRIENDS"
 issues: []
 discussions: []
-<<<<<<< .merge_file_4QhAzc
-=======
 status: draft
->>>>>>> .merge_file_VVaVS6
 ---
 
 ```

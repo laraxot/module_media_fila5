@@ -50,11 +50,7 @@ Digital assets tied to tickets, profiles, and CMS content.
 
 Every pixel **tracked and secure** — media done right.
 
-<<<<<<< .merge_file_RP3nZy
-Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
-=======
 Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filament v5** — see [STORY-133](../../../../../docs/stories/STORY-133-frontend-stack-religion-tailwind-alpine-lit.md).
->>>>>>> .merge_file_FZNKo0
 
 ---
 

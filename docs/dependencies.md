@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "dependencies"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_VxEH5J
-=======
 status: draft
->>>>>>> .merge_file_vgREIY
 ---
 # Dependencies (Module Media)
 

@@ -8,10 +8,7 @@ module: Media
 created: 2026-08-24
 updated: 2026-08-24
 qmd: "Media quality report phpstan pest coverage test ratio"
-<<<<<<< .merge_file_LwyfnJ
-=======
 status: draft
->>>>>>> .merge_file_r9Tge1
 ---
 
 # Quality Report — Media

@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "agents"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_8KiBr3
-=======
 status: draft
->>>>>>> .merge_file_yhYi3Q
 ---
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
