@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "dry kiss analysis "
 related:
   - "./webm.md"
-<<<<<<< .merge_file_Kh86bx
-=======
 status: draft
->>>>>>> .merge_file_BlfEJo
 ---
 # DRY & KISS Analysis - Modulo Media
 

@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "laravel ffmpeg patterns laraxot"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_dVrQIy
-=======
 status: draft
->>>>>>> .merge_file_nyYRbR
 ---
 # Laravel-FFMpeg – Pattern Laraxot nel Modulo Media
 

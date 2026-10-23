@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "folio volt best practices"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_R5cKyE
-=======
 status: draft
->>>>>>> .merge_file_ByVWmS
 ---
 # Laravel Folio + Volt - Best Practices and Patterns Analysis
 

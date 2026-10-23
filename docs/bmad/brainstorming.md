@@ -12,10 +12,7 @@ related:
   - ./brainstorming/module-opportunities.md
   - ./epics/module-roadmap.md
   - ./coverage.md
-<<<<<<< .merge_file_nzTR9k
-=======
 status: draft
->>>>>>> .merge_file_84L4z1
 ---
 
 # Media - brainstorming

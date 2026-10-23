@@ -9,11 +9,7 @@ status: active
 audience: [developer, maintainer]
 tags: [media, docs, index, bmad, documentation]
 created: 2026-09-26
-<<<<<<< .merge_file_owq1IQ
-updated: 2026-10-07
-=======
-updated: 2026-10-14
->>>>>>> .merge_file_TtQlOD
+updated: 2026-10-23
 qmd: "README"
 issues: []
 discussions: []
@@ -24,11 +20,7 @@ related: [bmad/00-INDEX.md, bmad/readme.md, INDEX.md]
 
 Path: `laravel/Modules/Media/docs/`
 Module: @Modules/Media
-<<<<<<< .merge_file_owq1IQ
-Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). Il wiki legacy e' in `docs-archive-2026/`.
-=======
-Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). `docs-archive-2026/` non esiste ne' nel modulo ne' nella radice del repo (verificato 2026-10-14): lo storico vive nelle sottocartelle di `docs/`, classificate in [00-INDEX.md](./00-INDEX.md#mappa-delle-directory).
->>>>>>> .merge_file_TtQlOD
+Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). `docs-archive-2026/` non esiste ne' nel modulo ne' nella radice del repo (verificato 2026-10-14): lo storico vive nelle sottocartelle di `docs/`. La mappa delle directory era in `00-INDEX.md`, rimosso il 2026-10-22 (commit e2282c1b) e non riportato altrove.
 
 ## File canonici
 
@@ -36,13 +28,6 @@ Scope: punto di ingresso della documentazione del modulo Media (gestione multime
 2. **[architecture.md](architecture.md)** - architettura, namespace, dipendenze, struttura, funzionalita'
 3. **[INDEX.md](INDEX.md)** - indice completo per categoria, con le story BMAD
 4. **[index.md](index.md)** - bridge per discovery (legacy)
-<<<<<<< .merge_file_owq1IQ
-
-Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
-
-## Scopo del modulo
-=======
->>>>>>> .merge_file_TtQlOD
 
 Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
 
@@ -98,20 +83,5 @@ Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al
 
 ## Story recenti
 
-<<<<<<< .merge_file_owq1IQ
-## Struttura della documentazione
-
-- **architecture.md**: architettura del modulo e pattern di design
-- **README.md**: questo file
-- **stories/**: story BMAD del modulo (elenco in [INDEX.md](INDEX.md#story-bmad))
-- **bmad/**: artefatti BMAD (indice in [bmad/00-INDEX.md](./bmad/00-INDEX.md))
-
-Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al codice, in formato Markdown (`.md`).
-
-## Story recenti
-
-- [2026-10-06 PHPStan cleanup - Media](./stories/2026-10-06-phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media-dev.dev.md)
-=======
 - [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media.dev.md)
->>>>>>> .merge_file_TtQlOD
 - [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)

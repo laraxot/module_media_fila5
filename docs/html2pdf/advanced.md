@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "advanced"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_Uq2WaP
-=======
 status: draft
->>>>>>> .merge_file_FjO2Iq
 ---
 # Funzionalità Avanzate
 

@@ -1,17 +1,4 @@
 ---
-<<<<<<< .merge_file_9rplHR
-title: "README"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "README"
-issues: []
-discussions: []
----
-
-# LLM Wiki (module)
-=======
 title: "Media wiki: README"
 type: note
 tags: [documentation]
@@ -22,7 +9,6 @@ issues: []
 discussions: []
 status: draft
 ---
->>>>>>> .merge_file_QNUzYY
 
 # Media wiki
 

@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "merge conflict task list"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_WMT4GO
-=======
 status: draft
->>>>>>> .merge_file_7Lcnmh
 ---
 # Documentation Merge Conflict Task List
 

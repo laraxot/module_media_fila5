@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "laravel ffmpeg api reference"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_6kY5py
-=======
 status: draft
->>>>>>> .merge_file_PsAB9p
 ---
 # Laravel-FFMpeg – API Reference Completa
 

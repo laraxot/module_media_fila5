@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "optimization analysis"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_HAKxqh
-=======
 status: draft
->>>>>>> .merge_file_8htSES
 ---
 # Analisi di Ottimizzazione - Modulo Media
 

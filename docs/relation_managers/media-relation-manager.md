@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "media relation manager"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_FINW5E
-=======
 status: draft
->>>>>>> .merge_file_F63oux
 ---
 # MediaRelationManager
 
@@ -39,13 +36,8 @@ Le azioni sono implementate seguendo le convenzioni documentate in `filament_tab
 - Documentazione PHPDoc completa
 
 ## Collegamenti
-<<<<<<< .merge_file_FINW5E
-- [Convenzioni Table Actions](../filament_table_actions.md)
-- [Documentazione Media Module](../module_media.md)
-=======
 - [Convenzioni Table Actions](../filament-table-actions.md)
 - [Documentazione Media Module](../module-media.md)
->>>>>>> .merge_file_F63oux
 
 ## Note di Manutenzione
 - Mantenere la coerenza con le convenzioni di naming

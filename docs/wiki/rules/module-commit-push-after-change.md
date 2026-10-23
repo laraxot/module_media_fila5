@@ -9,10 +9,7 @@ updated: 2026-07-08
 qmd: "Media git commit push dopo modifiche regola"
 related:
   - index.md
-<<<<<<< .merge_file_Ttc2Yh
-=======
 status: draft
->>>>>>> .merge_file_CNHDYE
 ---
 
 # Commit & push dopo modifiche al modulo

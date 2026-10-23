@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "module"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_Fbri0b
-=======
 status: draft
->>>>>>> .merge_file_Yi7UR2
 ---
 # Modulo Media - Gestione File Multimediali
 

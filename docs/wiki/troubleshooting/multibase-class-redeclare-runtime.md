@@ -12,10 +12,7 @@ related:
   - ../concepts/second-brain-local-discipline.md
   - ../concepts/context-overflow-prevention.md
   - ../../README.md
-<<<<<<< .merge_file_ILhBsi
-=======
 status: draft
->>>>>>> .merge_file_sTDP38
 ---
 
 # FatalError: Cannot redeclare class (path mix `base_*_fila5`)

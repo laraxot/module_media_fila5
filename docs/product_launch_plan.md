@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "product launch plan"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_ZV9CzK
-=======
 status: draft
->>>>>>> .merge_file_QW2RgZ
 ---
 # Media Module - Product Launch Plan
 

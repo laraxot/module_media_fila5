@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "product requirements"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_xTV5gf
-=======
 status: draft
->>>>>>> .merge_file_M5svTD
 ---
 # Product Requirements Document (PRD)
 

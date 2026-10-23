@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "conflitti merge risolti"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_DBk4iv
-=======
 status: draft
->>>>>>> .merge_file_YKy9SM
 ---
 # Risoluzione dei Conflitti Git nel Modulo Media
 
@@ -31,11 +28,7 @@ Per una panoramica generale sulla risoluzione dei conflitti Git nel progetto, co
 
 ## Collegamenti alle Risoluzioni Specifiche
 
-<<<<<<< .merge_file_DBk4iv
-- [Risoluzione conflitto VideoEntry](./risoluzione_conflitti_video_entry.md)
-=======
 - [Risoluzione conflitto VideoEntry](./risoluzione-conflitti-video-entry.md)
->>>>>>> .merge_file_YKy9SM
 - [Risoluzione conflitto MediaConvertResource](../../../../../docs/media_convert_resource_conflict.md)
 
 ## File Risolti
@@ -351,11 +344,7 @@ Per approfondimenti generali sulle strategie di risoluzione dei conflitti, fare 
 
 **Problema**: Conflitto nell'implementazione del componente VideoEntry, con differenze nella gestione dei tipi e nella formattazione.
 
-<<<<<<< .merge_file_DBk4iv
-**Soluzione**: È stata adottata l'implementazione più robusta con controlli di tipo completi e documentazione dettagliata, mantenendo la coerenza stilistica senza linee vuote superflue. Per dettagli completi, vedere [documentazione dedicata](./risoluzione_conflitti_video_entry.md).
-=======
 **Soluzione**: È stata adottata l'implementazione più robusta con controlli di tipo completi e documentazione dettagliata, mantenendo la coerenza stilistica senza linee vuote superflue. Per dettagli completi, vedere [documentazione dedicata](./risoluzione-conflitti-video-entry.md).
->>>>>>> .merge_file_YKy9SM
 
 ## Principi di Risoluzione Applicati
 
@@ -414,8 +403,4 @@ I problemi di conflitto nei file relativi all'integrazione di FFmpeg erano princ
 
 ### Documentazione
 
-<<<<<<< .merge_file_DBk4iv
-Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
-=======
 Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione-conflitti-ffmpeg.md).
->>>>>>> .merge_file_YKy9SM

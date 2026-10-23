@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "mcp configuration"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_weYpgi
-=======
 status: draft
->>>>>>> .merge_file_RsuxKT
 ---
 # MCP Server Configuration - Media Module
 

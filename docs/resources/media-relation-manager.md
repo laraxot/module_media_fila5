@@ -90,9 +90,5 @@ class CustomMediaRelationManager extends MediaRelationManager
 }
 ```
 ## Collegamenti tra versioni di media-relation-manager.md
-<<<<<<< .merge_file_fXh3hS
-* [media-relation-manager.md](../../../media/docs/filament/relation-managers/media-relation-manager.md)
-=======
 * [media-relation-manager.md](../filament/relation-managers/media-relation-manager.md)
->>>>>>> .merge_file_vgv3AJ
 * [media-relation-manager.md](../../../media/docs/resources/media-relation-manager.md)

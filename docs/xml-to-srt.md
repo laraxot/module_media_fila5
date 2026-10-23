@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "xml to srt"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_a0MeC9
-=======
 status: draft
->>>>>>> .merge_file_7zPP18
 ---
 https://github.com/mokhosh/laravel-xml2srt
 ---

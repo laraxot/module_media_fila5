@@ -7,10 +7,7 @@ type: technical_spec
 tags: [tech spec, media]
 created: 2026-08-04
 updated: 2026-08-04
-<<<<<<< .merge_file_mTio0N
-=======
 status: draft
->>>>>>> .merge_file_eouxdP
 ---
 # Technical Specification - Media Module
 

@@ -7,10 +7,7 @@ tags: [bmad, media, uploads, privacy]
 qmd: "Media module product brief PRD architecture UX security epics gaps release"
 issues: ["https://github.com/laraxot/base_fixcity_fila5/issues/383"]
 discussions: ["https://github.com/laraxot/base_fixcity_fila5/discussions/392"]
-<<<<<<< .merge_file_2y7cbV
-=======
 status: draft
->>>>>>> .merge_file_t3KMQx
 ---
 # Media — BMAD dossier
 ## Product brief / PRD

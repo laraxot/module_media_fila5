@@ -8,10 +8,7 @@ updated: 2026-07-14
 qmd: "bad practices"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_xun0RU
-=======
 status: draft
->>>>>>> .merge_file_YeMpEw
 ---
 # Bad Practices – Media Module
 

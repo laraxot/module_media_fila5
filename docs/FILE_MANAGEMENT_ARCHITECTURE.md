@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "file management architecture"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_SWd48C
-=======
 status: draft
->>>>>>> .merge_file_HPLOl8
 ---
 # Media Module - File Management Architecture
 

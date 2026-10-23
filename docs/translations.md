@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "translations"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_TkWAFF
-=======
 status: draft
->>>>>>> .merge_file_CWYnuA
 ---
 # Traduzioni del Modulo Media
 

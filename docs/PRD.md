@@ -8,10 +8,7 @@ type: concept
 tags: [PRD, media]
 created: 2026-08-04
 updated: 2026-08-04
-<<<<<<< .merge_file_JRHpVQ
-=======
 status: draft
->>>>>>> .merge_file_9oRBDl
 ---
 # Product Requirements Document (PRD) - Media Module
 

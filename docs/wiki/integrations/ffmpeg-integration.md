@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "ffmpeg integration"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_M4g7Ra
-=======
 status: draft
->>>>>>> .merge_file_KcI7RN
 ---
 # Integrazione di FFmpeg nel Modulo Media
 
@@ -89,8 +86,4 @@ class ConvertVideoAction extends QueueableAction
 ## Collegamenti Utili
 - [Guida GitHub](https://github.com/protonemedia/laravel-ffmpeg)
 - [Report PHPStan livello 1](phpstan/level_1.md)
-<<<<<<< .merge_file_M4g7Ra
-- [Documentazione Modulo Media](module_media.md)
-=======
 - [Documentazione Modulo Media](../../module-media.md)
->>>>>>> .merge_file_KcI7RN

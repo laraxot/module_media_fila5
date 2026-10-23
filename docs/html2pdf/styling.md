@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "styling"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_sUFkSG
-=======
 status: draft
->>>>>>> .merge_file_vPk2N9
 ---
 # Guida agli Stili, Tabelle e Immagini
 
