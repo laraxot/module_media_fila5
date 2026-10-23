@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "codex error fix"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_apyjXO
-=======
 status: draft
->>>>>>> .merge_file_UYwNBo
 ---
 # Codex Configuration Error Fixes
 

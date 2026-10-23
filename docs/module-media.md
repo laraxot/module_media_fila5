@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "module media"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_AzdAlY
-=======
 status: draft
->>>>>>> .merge_file_x1Sw3e
 ---
 # Modulo Media
 
@@ -54,11 +51,7 @@ Sono stati risolti importanti conflitti di merge in diversi file critici del mod
 
 La risoluzione ha puntato a mantenere la coerenza del codice, evitando duplicazioni e garantendo il corretto funzionamento delle funzionalità di gestione media e del sistema di registrazione componenti.
 
-<<<<<<< .merge_file_AzdAlY
-Per maggiori dettagli, consultare la [documentazione locale sulla risoluzione dei conflitti](./conflitti_merge_risolti.md) e la [documentazione globale](../../../../../docs/git_conflict_resolution.md).
-=======
 Per maggiori dettagli, consultare la [documentazione locale sulla risoluzione dei conflitti](./conflitti-merge-risolti.md) e la [documentazione globale](../../../../../docs/git_conflict_resolution.md).
->>>>>>> .merge_file_x1Sw3e
 
 ## Dipendenze
 ### Pacchetti Required

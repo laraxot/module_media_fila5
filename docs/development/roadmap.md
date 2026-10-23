@@ -92,22 +92,6 @@ Overall Module Completion: 60%
 
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/docs/roadmap.md)
-<<<<<<< .merge_file_4Wy6hy
-* [roadmap.md](docs/roadmap.md)
-* [roadmap.md](../../../gdpr/docs/roadmap.md)
-* [roadmap.md](../../../notify/docs/roadmap.md)
-* [roadmap.md](../../../xot/docs/roadmap.md)
-* [roadmap.md](../../../dental/docs/roadmap.md)
-* [roadmap.md](../../../user/docs/roadmap.md)
-* [roadmap.md](../../../ui/docs/roadmap.md)
-* [roadmap.md](../../../lang/docs/roadmap.md)
-* [roadmap.md](../../../job/docs/roadmap.md)
-* [roadmap.md](../../../media/docs/roadmap.md)
-* [roadmap.md](../../../tenant/docs/roadmap.md)
-* [roadmap.md](../../../activity/docs/roadmap.md)
-* [roadmap.md](../../../patient/docs/roadmap.md)
-* [roadmap.md](../../../cms/docs/roadmap.md)
-=======
 * [roadmap.md](../roadmap.md)
 * [roadmap.md](../../../Gdpr/docs/roadmap.md)
 * [roadmap.md](../../../Notify/docs/roadmap.md)
@@ -122,7 +106,6 @@ Overall Module Completion: 60%
 * [roadmap.md](../../../Activity/docs/roadmap.md)
 * [roadmap.md](../../../patient/docs/roadmap.md)
 * [roadmap.md](../../../Cms/docs/roadmap.md)
->>>>>>> .merge_file_S3JDGG
 * [roadmap.md](../../../../themes/one/docs/roadmap.md)
 
 ### Versione Incoming

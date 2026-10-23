@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "module overview"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_J7M0Z1
-=======
 status: draft
->>>>>>> .merge_file_O78byZ
 ---
 # Media module overview
 

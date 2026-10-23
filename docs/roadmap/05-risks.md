@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "05 risks"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_BVcbqz
-=======
 status: draft
->>>>>>> .merge_file_8ysJlx
 ---
 # Risks - Media
 

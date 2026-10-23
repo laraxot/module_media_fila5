@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "02 goals"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_d5ET8U
-=======
 status: draft
->>>>>>> .merge_file_lgrI8k
 ---
 # Goals - Media
 

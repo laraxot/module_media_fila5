@@ -15,10 +15,7 @@ related:
   - ./setup-guide.md
   - ./architecture/module-boundary.md
   - ./epics/module-roadmap.md
-<<<<<<< .merge_file_VpvOvg
-=======
 status: draft
->>>>>>> .merge_file_bjXqAp
 ---
 
 # Media - quick reference

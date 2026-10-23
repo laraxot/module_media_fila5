@@ -11,10 +11,7 @@ tags: [migrato-da-txt, media]
 converted_from: study.txt
 created: 2026-08-24
 updated: 2026-08-24
-<<<<<<< .merge_file_KrLcQI
-=======
 status: draft
->>>>>>> .merge_file_nafAXG
 ---
 
 studia molto a fondo https://github.com/protonemedia/laravel-ffmpeg  e aggiorna le tue cartelle docs, le tue rules, le tue memories e le tue skills

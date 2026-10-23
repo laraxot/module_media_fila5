@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "confidence guidelines"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_AAqu7v
-=======
 status: draft
->>>>>>> .merge_file_MxHwUq
 ---
 # Massimizzare il livello di confidenza
 

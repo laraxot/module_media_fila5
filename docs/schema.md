@@ -8,10 +8,7 @@ discussions: []
 title: "Module Schema"
 module: "Media"
 created: "2026-04-15T08:28:44Z"
-<<<<<<< .merge_file_IsGUC7
-=======
 status: draft
->>>>>>> .merge_file_Gu3Tm3
 ---
 
 # Media Module Schema

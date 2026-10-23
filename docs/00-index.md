@@ -1,24 +1,20 @@
 ---
 issues: []
 discussions: []
-<<<<<<< .merge_file_l2IdBi
-title: "📚 **Indice Documentazione Modulo Media**"
-=======
 title: "Indice Documentazione Modulo Media (superseded)"
->>>>>>> .merge_file_tWasPC
 module: "Media"
 type: concept
 tags: [00, index]
 created: 2026-07-14
-updated: 2026-10-14
+updated: 2026-10-23
 qmd: "00 index"
 related:
   - "./webm.md"
 status: superseded
-superseded_by: 00-INDEX.md
+superseded_by: README.md
 ---
 
-> Superseded il 2026-10-14: copia per sola differenza di maiuscole di [00-INDEX.md](./00-INDEX.md); l'indice canonico e' quello. Contenuto conservato per storia. Le voci "non presente" puntavano a file che non esistono (verificato 2026-10-14).
+> Superseded il 2026-10-14 come copia per sola differenza di maiuscole di `00-INDEX.md`. Quel file e' stato rimosso il 2026-10-22 (commit e2282c1b) e il suo contenuto (tra cui la mappa delle directory) non e' stato riportato qui: l'ingresso verificato sul codice e' [README.md](./README.md). Contenuto conservato per storia. Le voci "non presente" puntavano a file che non esistono (verificato 2026-10-14).
 # 📚 **Indice Documentazione Modulo Media**
 
 **Status**: ✅ PHPStan Level 10 Compliant

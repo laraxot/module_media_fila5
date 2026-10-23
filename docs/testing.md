@@ -282,11 +282,7 @@ protected function createApplication()
 
 - [Testing Setup Guide](../../../docs/testing-setup.md)
 - [Testing Best Practices](../../../docs/testing-best-practices.md)
-<<<<<<< .merge_file_kEa86E
-- [Troubleshooting Guide](../../../docs/troubleshooting.md)
-=======
 - [Troubleshooting Guide](../../../../docs/troubleshooting.md)
->>>>>>> .merge_file_yhscGk
 
 ## Testing Examples
 

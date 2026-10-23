@@ -7,10 +7,7 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-<<<<<<< .merge_file_XkdTFR
-=======
 status: draft
->>>>>>> .merge_file_5YWaaC
 ---
 
 # Media Module Roadmap
@@ -86,7 +83,6 @@ Provide a **comprehensive media management** system that handles:
 - Global delivery optimization
 
 ---
-<<<<<<< .merge_file_XkdTFR
 
 title: "README"
 type: note
@@ -96,5 +92,3 @@ updated: 2026-09-26
 qmd: "README"
 issues: []
 discussions: []
-=======
->>>>>>> .merge_file_5YWaaC

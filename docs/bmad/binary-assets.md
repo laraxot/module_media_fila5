@@ -6,12 +6,9 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
-<<<<<<< .merge_file_w0lCwL
-=======
 title: "Asset binari"
 type: note
 qmd: "asset binari media"
->>>>>>> .merge_file_hIyks1
 ---
 
 # Asset binari

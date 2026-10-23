@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "merge conflicts list"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_jqJlOD
-=======
 status: draft
->>>>>>> .merge_file_jNpEKa
 ---
 # Merge conflict markers — file list
 

@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "changelog"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_QagJ9F
-=======
 status: draft
->>>>>>> .merge_file_tz1c3H
 ---
 # Changelog
 

@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "filament 5x compatibility"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_U8M6Jb
-=======
 status: draft
->>>>>>> .merge_file_1WclXS
 ---
 # Filament 5.x compatibility - modulo Media
 

@@ -9,24 +9,14 @@ created: 2026-07-16
 updated: 2026-07-16
 qmd: "Media filament never extend Filament class XotBase mirror path"
 related:
-<<<<<<< .merge_file_BJiwyM
-  - ../../../../docs/wiki/rules/xotbase-critical-rules.md
-  - ../../../../docs/wiki/rules/xot-base-filament-widgets.md
-  - ../../../../docs/wiki/memories/xotbase-never-extend-filament.md
-=======
   - ../../../../../docs/wiki/rules/xotbase-critical-rules.md
   - ../../../../../docs/wiki/rules/xot-base-filament-widgets.md
   - ../../../../../docs/wiki/memories/xotbase-never-extend-filament.md
->>>>>>> .merge_file_F8ibvY
 ---
 
 # Mai `Filament\*` — sempre `Modules\Xot\Filament\...\XotBase*`
 
-<<<<<<< .merge_file_BJiwyM
-Bridge on-demand. Contenuto canonico: [docs/wiki/rules/xotbase-critical-rules.md](../../../../docs/wiki/rules/xotbase-critical-rules.md).
-=======
 Bridge on-demand. Contenuto canonico: [docs/wiki/rules/xotbase-critical-rules.md](../../../../../docs/wiki/rules/xotbase-critical-rules.md).
->>>>>>> .merge_file_F8ibvY
 
 ## Zen (riassunto)
 

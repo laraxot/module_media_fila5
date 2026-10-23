@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "conflict resolution"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_LwA5ss
-=======
 status: draft
->>>>>>> .merge_file_HFTxrj
 ---
 # Conflict Resolution — Module Media
 

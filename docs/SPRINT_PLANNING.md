@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "sprint planning"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_xsIoAA
-=======
 status: draft
->>>>>>> .merge_file_ruE0Cw
 ---
 # Media Module - Sprint Planning
 

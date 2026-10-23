@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "task consolidare documentazione"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_qMMVMg
-=======
 status: draft
->>>>>>> .merge_file_HVwCqz
 ---
 # Task: Consolidare Documentazione - Media
 

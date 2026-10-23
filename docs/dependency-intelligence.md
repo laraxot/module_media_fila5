@@ -10,10 +10,7 @@ updated: 2026-07-14
 qmd: "dependency intelligence"
 related:
   - "./webm.md"
-<<<<<<< .merge_file_t2GDwL
-=======
 status: draft
->>>>>>> .merge_file_5a5lle
 ---
 # Dependency Intelligence - Module Media
 
