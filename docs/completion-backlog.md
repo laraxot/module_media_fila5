@@ -1,3 +1,11 @@
+---
+title: "Media — completion backlog"
+type: note
+status: draft
+updated: 2026-10-26
+tags: [docs, media]
+qmd: "media   completion backlog media"
+---
 # Media — completion backlog
 
 Status: partial and evidence-driven. This file is the canonical owner-local list for future work.

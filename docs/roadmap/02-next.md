@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "02 next"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: next.md
 ---
 # Next (Module Media)
 

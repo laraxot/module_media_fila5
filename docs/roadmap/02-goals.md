@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "02 goals"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: goals.md
 ---
 # Goals - Media
 

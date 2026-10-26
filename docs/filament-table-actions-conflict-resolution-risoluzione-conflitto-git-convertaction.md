@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "filament table actions conflict resolution 1"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: filament-table-actions-conflict-resolution.md
 ---
 # Risoluzione conflitto git su Filament Table ConvertAction
 

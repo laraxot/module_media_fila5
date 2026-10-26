@@ -10,7 +10,8 @@ issues: []
 discussions: []
 related:
   - "../webm.md"
-status: draft
+status: superseded
+superseded_by: ../coverage.md
 ---
 
 # Media Module Test Coverage

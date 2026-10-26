@@ -45,7 +45,7 @@ Vedi anche: [bashscripts/ai/.agents/docs/critical-rules.md](../../../../bashscri
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](./readme.md) - Panoramica generale del modulo
+- [README](./README.md) - Panoramica generale del modulo
 - Architettura (`architecture/readme.md` non presente) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
@@ -152,7 +152,7 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nell'upl
 - Index (`support/index.md` non presente) - Indice della documentazione sui componenti di supporto
 
 ## Collegamenti alla Documentazione Correlata
-- [Panoramica Architettura](./architecture.md)
+- [Panoramica Architettura](./ARCHITECTURE.md)
 - [Funzionalità Core](./core-functionality.md)
 - [Gestione File](./file-management.md)
 - [Ottimizzazione](./optimization-analysis.md)

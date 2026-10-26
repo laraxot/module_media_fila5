@@ -8,6 +8,8 @@ updated: 2026-10-26
 tags: [bmad, media, module, stories, remaining-work]
 related:
   - ../../docs/second-brain/project/bmad-architecture.md
+status: draft
+qmd: "media module   bmad stories & remaining work media"
 ---
 
 # Media Module — BMAD Stories & Remaining Work

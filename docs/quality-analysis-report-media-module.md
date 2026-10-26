@@ -1,3 +1,11 @@
+---
+title: "Quality Analysis Report - Media Module"
+type: note
+status: draft
+updated: 2026-10-22
+tags: [docs, media]
+qmd: "quality analysis report - media module media"
+---
 # Quality Analysis Report - Media Module
 **Date**: 2025-11-11
 **Status**: ✅ **ILLUMINATED** - PHPStan Level 10 PASS

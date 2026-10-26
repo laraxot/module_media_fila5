@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "corrections sumy"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: corrections.md
 ---
 # Riepilogo Correzioni S3Test.php - Modulo Media
 

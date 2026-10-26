@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "readme en"
 related:
   - "./webm.md"
+status: draft
 ---
 # 🖼️ Media — English presentation
 

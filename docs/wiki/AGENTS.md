@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "agents"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: ../llm-wiki/AGENTS.md
 ---
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
