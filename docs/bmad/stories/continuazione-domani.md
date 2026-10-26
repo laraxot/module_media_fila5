@@ -10,6 +10,9 @@ related:
   - ./readme-changelog-conflict-markers.story.md
   - ./cleanup-media.story.md
   - ../../../../Xot/docs/bmad/stories/cleanup-all-modules.story.md
+updated: 2026-10-15
+tags: [docs, media, bmad]
+qmd: "media   continuazione domani media"
 ---
 
 # Media — Continuazione Domani

@@ -19,7 +19,6 @@ status: draft
 <!-- Merged from TROUBLESHOOTING.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
-title: "Troubleshooting Guide — Media Module"
 module: "Media"
 type: operations
 tags: [troubleshooting, errors, debugging]

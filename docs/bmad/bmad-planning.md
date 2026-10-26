@@ -10,7 +10,7 @@ tags: [bmad, planning, second-brain, filament-blueprint, media]
 qmd: "bmad planning media scopo onde filament"
 related:
   - ./bmad/bmad-dossier.md
-  - ../Fixcity/docs/bmad/ticket-lifecycle-blueprint.md
+  - ../../../Fixcity/docs/bmad/ticket-lifecycle-blueprint.md
   - ./bmad-brainstorming.md
   - ./bmad/filament-blueprint.md
 ---

@@ -8,6 +8,8 @@ updated: 2026-07-14
 qmd: "readme en"
 related:
   - "./webm.md"
+status: superseded
+superseded_by: ../wiki/readme-en.md
 ---
 # 🖼️ Media — English presentation
 

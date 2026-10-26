@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "product roadmap"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: product_roadmap.md
 ---
 # Media Module - Product Roadmap
 

@@ -5,6 +5,7 @@ module: Media
 status: decision-input
 updated: 2026-10-15
 tags: [sustainability, media, assets, bmad]
+qmd: "asset partner (ownership media) media"
 ---
 
 # Asset partner (ownership Media)

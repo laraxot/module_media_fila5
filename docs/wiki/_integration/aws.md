@@ -8,7 +8,8 @@ updated: 2026-07-14
 qmd: "aws"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: ../../_integration/aws.md
 ---
 # aws
 
