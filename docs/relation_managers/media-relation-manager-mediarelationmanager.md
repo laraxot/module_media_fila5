@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "media relation manager 1"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: media-relation-manager.md
 ---
 # MediaRelationManager
 

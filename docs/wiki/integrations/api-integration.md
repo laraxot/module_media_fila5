@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "api integration"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: ../../api-integration.md
 ---
 # API Integration

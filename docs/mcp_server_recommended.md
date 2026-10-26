@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "mcp server recommended"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: mcp-server-recommended.md
 ---
 # MCP Server Consigliati per il Modulo Media
 

@@ -10,6 +10,8 @@ updated: 2026-07-14
 qmd: "prevention guidelines"
 related:
   - "./webm.md"
+status: superseded
+superseded_by: preventionlines.md
 ---
 # Linee Guida Prevenzione Problemi - Modulo Media
 

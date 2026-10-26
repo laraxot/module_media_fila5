@@ -1164,7 +1164,6 @@ Il modulo Media rappresenta un componente critico per user experience e richiede
 <!-- Merged from FILE_MANAGEMENT_ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
-title: "Media Module - File Management Architecture"
 module: "Media"
 type: concept
 tags: [FILE, MANAGEMENT, ARCHITECTURE]

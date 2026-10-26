@@ -2,6 +2,8 @@
 title: agent edit discipline — puntatore
 type: reference
 updated: 2026-05-21
+status: superseded
+superseded_by: ../wiki/agent-edit-discipline.md
 ---
 
 # Disciplina edit e qualità (puntatore)

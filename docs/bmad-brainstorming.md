@@ -10,7 +10,7 @@ tags: [bmad, brainstorming, scamper, starbursting, second-brain, media]
 qmd: "bmad brainstorming media perche insight rischi"
 related:
   - ./bmad/bmad-dossier.md
-  - ../Fixcity/docs/bmad/ticket-lifecycle-blueprint.md
+  - ../../Fixcity/docs/bmad/ticket-lifecycle-blueprint.md
   - ./bmad-planning.md
   - ./bmad/filament-blueprint.md
 ---

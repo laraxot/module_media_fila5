@@ -8,7 +8,8 @@ updated: 2026-07-14
 qmd: "youtube"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: ../../_integration/youtube.md
 ---
 # youtube
 

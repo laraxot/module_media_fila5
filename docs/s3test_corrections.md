@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "s3test corrections"
 related:
   - "./webm.md"
+status: draft
 ---
 # Correzioni S3Test.php - Modulo Media
 

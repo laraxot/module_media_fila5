@@ -25,8 +25,8 @@ Scope: punto di ingresso della documentazione del modulo Media (gestione multime
 ## File canonici
 
 1. **[README.md](README.md)** - questo file, punto di ingresso
-2. **[architecture.md](architecture.md)** - architettura, namespace, dipendenze, struttura, funzionalita'
-3. **[INDEX.md](INDEX.md)** - indice completo per categoria, con le story BMAD
+2. **[architecture.md](ARCHITECTURE.md)** - architettura, namespace, dipendenze, struttura, funzionalita'
+3. **[INDEX.md](index.md)** - indice completo per categoria, con le story BMAD
 4. **[index.md](index.md)** - bridge per discovery (legacy)
 
 Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
@@ -76,8 +76,8 @@ Il pannello e' raggiungibile su `media/admin` (Resource `media`, `media-converts
 
 - **architecture.md**: architettura del modulo e pattern di design
 - **README.md**: questo file
-- **stories/**: story BMAD del modulo (elenco in [INDEX.md](INDEX.md#story-bmad))
-- **bmad/**: artefatti BMAD (indice in [bmad/00-INDEX.md](./bmad/00-INDEX.md))
+- **stories/**: story BMAD del modulo (elenco in [INDEX.md](index.md#story-bmad))
+- **bmad/**: artefatti BMAD (indice in [bmad/00-INDEX.md](./bmad/00-index.md))
 
 Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al codice, in formato Markdown (`.md`).
 

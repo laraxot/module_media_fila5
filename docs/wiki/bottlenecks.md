@@ -8,6 +8,7 @@ updated: 2026-07-14
 qmd: "bottlenecks"
 related:
   - "./webm.md"
+status: draft
 ---
 # Colli di Bottiglia e Soluzioni - Modulo Media
 

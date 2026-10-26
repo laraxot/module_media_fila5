@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "lang link"
 related:
   - "./webm.md"
+status: draft
 ---
 # Collegamento alle Traduzioni del Modulo Media
 
