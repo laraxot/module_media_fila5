@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Actions;
+namespace Modules\Media\Tests\Unit\Actions;
 
 use Modules\Media\Actions\AttachMediaAction;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\class_uses;

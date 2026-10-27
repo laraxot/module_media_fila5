@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Actions;
+namespace Modules\Media\Tests\Unit\Actions;
 
 use Exception;
 use Illuminate\Support\Facades\Storage;
@@ -10,7 +10,7 @@ use Mockery;
 use Mockery\MockInterface;
 use Modules\Media\Actions\SaveAttachmentsAction;
 use Modules\Media\Models\Media;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\FileAdder;
 

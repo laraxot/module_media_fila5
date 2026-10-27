@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media;
+namespace Modules\Media\Tests;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Application;
@@ -15,8 +15,8 @@ use Mockery\Expectation;
 use Mockery\MockInterface;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
-use Tests\Modules\Xot\XotBasePest;
-use Tests\Modules\Xot\XotBaseTestCase;
+use Modules\Xot\Tests\XotBasePest;
+use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\MockObject\MockObject;
 use ReflectionClass;

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Actions\Diagnostic;
+namespace Modules\Media\Tests\Unit\Actions\Diagnostic;
 
 use Modules\Media\Actions\Diagnostic\S3\FormatDebugOutputAction;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 /*

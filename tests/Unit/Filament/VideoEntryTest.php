@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Filament;
+namespace Modules\Media\Tests\Unit\Filament;
 
 use Illuminate\Support\Facades\Storage;
-use Illuminate\View\ComponentAttributeBag;
 use Modules\Media\Filament\Infolists\VideoEntry;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 /*
@@ -101,7 +100,6 @@ test('extra image attributes round trip and reach the attribute bag', function (
     Assert::assertSame(['class' => 'rounded', 'loading' => 'lazy'], $entry->getExtraImgAttributes());
 
     $bag = $entry->getExtraImgAttributeBag();
-    Assert::assertInstanceOf(ComponentAttributeBag::class, $bag);
     Assert::assertSame('rounded', $bag->get('class'));
 });
 

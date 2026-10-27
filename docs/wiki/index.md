@@ -9,7 +9,7 @@ tags: [docs, media, wiki]
 qmd: "media module wiki media"
 ---
 
-> Superseded il 2026-10-14: copia per sola differenza di maiuscole di [INDEX.md](./index.md), che e' l'indice canonico della wiki. Contenuto conservato per storia.
+> Superseded il 2026-10-14: copia per sola differenza di maiuscole di [INDEX.md](./INDEX.md), che e' l'indice canonico della wiki. Contenuto conservato per storia.
 
 # Media Module Wiki
 
@@ -41,10 +41,10 @@ qmd search "Media <topic>" --limit 5
 
 ## Indices
 - [Rules](rules/index.md)
-- [Skills](skills/INDEX.md)
-- [Commands](commands/INDEX.md)
-- [Memories](memories/INDEX.md)
-- [Concepts](concepts/INDEX.md)
+- [Skills](skills/index.md)
+- [Commands](commands/index.md)
+- [Memories](memories/index.md)
+- [Concepts](concepts/index.md)
 
 ## On-Demand Workflow
 

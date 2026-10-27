@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Feature;
+namespace Modules\Media\Tests\Feature;
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Schema;
@@ -11,10 +11,10 @@ use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Models\Media;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Contracts\UserContract;
-use Tests\Modules\Xot\XotBasePest;
+use Modules\Xot\Tests\XotBasePest;
 
 uses(TestCase::class);
 
