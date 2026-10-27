@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit;
+namespace Modules\Media\Tests\Unit;
 
 use Illuminate\Support\Facades\Storage;
 use Mockery;
@@ -12,8 +12,8 @@ use Modules\Media\Actions\S3\GetFileInfoAction;
 use Modules\Media\Actions\S3\UploadFileAction;
 use Modules\Media\Actions\Stream\StreamVideoAction;
 use Modules\Media\Models\TemporaryUpload;
-use Tests\Modules\Media\TestCase;
-use Tests\Modules\Xot\ModuleRemainingCoverage;
+use Modules\Media\Tests\TestCase;
+use Modules\Xot\Tests\ModuleRemainingCoverage;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
@@ -47,7 +47,7 @@ describe('Media coverage 100 — remaining sweep', function (): void {
 
         try {
             $upload = app(UploadFileAction::class)->execute($missing, 'media/dest.bin');
-            Assert::assertSame(false, $upload['success'] ?? null, 'un upload da un path inesistente non può riuscire');
+            Assert::assertFalse($upload['success'], 'un upload da un path inesistente non può riuscire');
             Assert::assertArrayHasKey('error', $upload);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());

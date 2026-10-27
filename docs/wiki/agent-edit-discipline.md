@@ -2,6 +2,9 @@
 title: agent edit discipline — puntatore
 type: reference
 updated: 2026-05-21
+status: draft
+tags: [docs, media, wiki]
+qmd: "disciplina edit e qualità (puntatore) media"
 ---
 
 # Disciplina edit e qualità (puntatore)

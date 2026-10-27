@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "04 risks"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: risks.md
 ---
 # Risks and dependencies (Module Media)
 

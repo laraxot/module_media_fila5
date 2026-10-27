@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit;
+namespace Modules\Media\Tests\Unit;
 
 use Filament\Support\Contracts\HasLabel;
-use Tests\Modules\Media\TestCase;
-use Tests\Modules\Xot\XotBasePest;
+use Modules\Media\Tests\TestCase;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 

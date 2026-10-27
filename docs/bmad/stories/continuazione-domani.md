@@ -10,6 +10,9 @@ related:
   - ./readme-changelog-conflict-markers.story.md
   - ./cleanup-media.story.md
   - ../../../../Xot/docs/bmad/stories/cleanup-all-modules.story.md
+updated: 2026-10-15
+tags: [docs, media, bmad]
+qmd: "media   continuazione domani media"
 ---
 
 # Media — Continuazione Domani
@@ -20,14 +23,14 @@ related:
   la sequenza reale: `61140006` (pulizia marker residui in `docs/`),
   `8c0ca799` (rimozione `.code-workspace` duplicati), `1381294e` (rimosso
   `test11.txt` vuoto dalla root), `a3cf02a1` (marker in `README.md` +
-  `changelog.md` risolti, `graphify-out/` aggiunto a `.gitignore`).
+  `CHANGELOG.md` risolti, `graphify-out/` aggiunto a `.gitignore`).
   Riverificato ora con grep ricorsivo su tutta l'albero (esclusi
   vendor/node_modules/graphify-out): **0 marker residui** (`<<<<<<<`,
   `=======`, `>>>>>>>`) in tutto il modulo.
 - `docs/bmad/stories/readme-changelog-conflict-markers.story.md` ha ancora
   `status: review` ma il lavoro descritto è **verificato applicato**:
   `README.md` ha il frontmatter `id: module-media-readme` (lato scelto),
-  `changelog.md` ha le entry `0.1.0-dev.1`/`0.1.0-dev.2` pulite, `.gitignore:191`
+  `CHANGELOG.md` ha le entry `0.1.0-dev.1`/`0.1.0-dev.2` pulite, `.gitignore:191`
   contiene `graphify-out/`. Story da marcare `done` da chi la possiede
   (non toccata qui, non è tra i file assegnati).
 - `git status --short`: pulito, solo `docs/bmad/stories/continuazione-domani.md`

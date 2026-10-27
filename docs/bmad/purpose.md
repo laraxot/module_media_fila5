@@ -1,7 +1,6 @@
 ---
 title: "Media — scopo del modulo e come raggiungerlo meglio"
 type: concept
-status: active
 created: 2026-09-02
 tags: [media, purpose, allegati, conversioni, storage, public-path]
 qmd: "media scopo modulo allegati conversioni temporary upload storage public html path prova documentale"
@@ -13,6 +12,8 @@ issues:
 discussions:
   # DA CREARE — vedi sopra.
   - "https://github.com/provtv/module_media_fila5/discussions/"
+status: superseded
+superseded_by: ../purpose.md
 ---
 
 # Media — perche' esiste

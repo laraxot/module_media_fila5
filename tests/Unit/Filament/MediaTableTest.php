@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Filament;
+namespace Modules\Media\Tests\Unit\Filament;
 
 use Filament\Tables\Columns\TextColumn;
 use Modules\Media\Filament\Resources\MediaResource\Tables\MediaTable;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 /*

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit;
+namespace Modules\Media\Tests\Unit;
 
 use Filament\Forms\Components\Field;
 use Filament\Tables\Columns\Column;
@@ -16,7 +16,7 @@ use Modules\Media\Filament\Resources\MediaResource\Tables\MediasTable;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Schemas\TemporaryUploadForm;
 use Modules\Media\Filament\Resources\TemporaryUploadResource\Tables\TemporaryUploadsTable;
 use Modules\Media\Models\Media;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ProtoneMedia\LaravelFFMpeg\Exporters\MediaExporter;
 use RuntimeException;

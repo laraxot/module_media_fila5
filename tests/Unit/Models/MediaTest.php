@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Models;
+namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Models\Media;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use Modules\Xot\Actions\Cast\SafeIntCastAction;
-use Tests\Modules\Xot\XotBasePest;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);

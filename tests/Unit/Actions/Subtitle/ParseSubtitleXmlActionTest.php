@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Actions\Subtitle;
+namespace Modules\Media\Tests\Unit\Actions\Subtitle;
 
 use Modules\Media\Actions\Subtitle\ParseSubtitleXmlAction;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 /*

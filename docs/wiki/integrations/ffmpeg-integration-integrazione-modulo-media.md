@@ -7,7 +7,8 @@ type: integration
 tags: [integrations]
 created: 2026-08-24
 updated: 2026-08-24
-status: draft
+status: superseded
+superseded_by: ffmpeg-integration.md
 ---
 
 # Integrazione di FFmpeg nel Modulo Media
@@ -84,4 +85,4 @@ class ConvertVideoAction extends QueueableAction
 ## Collegamenti Utili
 - [Guida GitHub](https://github.com/protonemedia/laravel-ffmpeg)
 - [Report PHPStan livello 1](phpstan/level_1.md)
-- [Documentazione Modulo Media](module_media.md)
+- [Documentazione Modulo Media](../../module-media.md)

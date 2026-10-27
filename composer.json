@@ -60,6 +60,11 @@
       "Modules\\Media\\Database\\Seeders\\": "database/seeders/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Media\\Tests\\": "tests/"
+    }
+  },
   "scripts": {
     "post-autoload-dump1": "@php ./vendor/bin/testbench package:discover --ansi",
     "analyse": "vendor/bin/phpstan analyse",

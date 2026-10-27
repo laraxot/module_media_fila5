@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Rules;
+namespace Modules\Media\Tests\Unit\Rules;
 
 use Closure;
 use Illuminate\Http\UploadedFile;
 use Modules\Media\Rules\FileExtensionRule;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class)->group('no-media-db');

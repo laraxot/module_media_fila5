@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Filament;
+namespace Modules\Media\Tests\Unit\Filament;
 
 use Modules\Media\Filament\Clusters\Test\Pages\AwsTest;
 use Modules\Media\Filament\Clusters\Test\Pages\S3Test;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 

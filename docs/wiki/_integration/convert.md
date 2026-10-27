@@ -8,7 +8,8 @@ updated: 2026-07-14
 qmd: "convert"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: ../../_integration/convert.md
 ---
 # convert
 

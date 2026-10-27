@@ -1,5 +1,5 @@
 ---
-qmd: "PROJECT STRUCTURE"
+qmd: "project structure"
 issues: []
 discussions: []
 title: "Project Structure — Module Media"
@@ -7,6 +7,7 @@ type: documentation
 created: 2026-05-11
 updated: 2026-05-11
 tags: [structure, architecture, module]
+status: draft
 ---
 
 # Project Structure — Module **Media**
@@ -50,7 +51,7 @@ tags: [structure, architecture, module]
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
-| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
 
 ## Convenzioni
 
@@ -97,11 +98,11 @@ graph TD
 
 ## Riferimenti Globali
 
-- [Project Wiki Root](../../docs/wiki/)
-- [Global Rules](wiki/rules)
-- [Global Skills](wiki/skills)
-- [Global Commands](wiki/commands)
-- [Global Memories](wiki/memories)
+- [Project Wiki Root](../../../../docs/wiki/)
+- [Global Rules](../../../../bashscripts/ai/wiki/rules/)
+- [Global Skills](../../../../bashscripts/ai/wiki/skills/)
+- [Global Commands](../../../../bashscripts/ai/wiki/commands/)
+- [Global Memories](../../../../bashscripts/ai/wiki/memories/)
 
 ## Setup Iniziale (per nuovi moduli)
 

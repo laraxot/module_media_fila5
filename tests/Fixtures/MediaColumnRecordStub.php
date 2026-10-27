@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Fixtures;
+namespace Modules\Media\Tests\Fixtures;
 
 use Illuminate\Database\Eloquent\Model;
 

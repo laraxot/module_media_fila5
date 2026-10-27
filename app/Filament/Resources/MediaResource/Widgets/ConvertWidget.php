@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
-use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
+use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 
@@ -73,7 +73,7 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
-        $formattedMedia = MediaExporterResolver::from(
+        $formattedMedia = app(ResolveMediaExporterAction::class)->execute(
             $exportedMedia->toDisk($disk_mp4)
         )->inFormat($format);
         $formattedMedia->save($file_new);

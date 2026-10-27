@@ -3,7 +3,7 @@ title: "index"
 type: note
 tags: [documentation]
 created: 2026-09-26
-updated: 2026-10-14
+updated: 2026-10-23
 qmd: "index"
 issues: []
 discussions: []
@@ -12,7 +12,7 @@ status: draft
 
 # Media Module Documentation
 
-> Nota 2026-10-14: bridge di discovery legacy. L'indice operativo canonico e' [00-INDEX.md](./00-index.md), l'ingresso verificato sul codice e' [README.md](./README.md). Questo file e' una concatenazione di due indici storici: le voci indicate come "non presente" puntavano a file che non esistono nella cartella (misurato il 2026-10-14) e sono state lasciate come testo, senza inventare bersagli. Funzionalita' citate ma non presenti nel codice: watermark automatico, CDN generico (esiste solo CloudFront), `MediaService`.
+> Nota 2026-10-14: bridge di discovery legacy. L'ingresso verificato sul codice e' [README.md](./README.md); l'indice operativo canonico era `00-INDEX.md`, rimosso il 2026-10-22 (commit e2282c1b). Questo file e' una concatenazione di due indici storici: le voci indicate come "non presente" puntavano a file che non esistono nella cartella (misurato il 2026-10-14, ricontrollato il 2026-10-23) e sono state lasciate come testo, senza inventare bersagli. Funzionalita' citate ma non presenti nel codice: watermark automatico, CDN generico (esiste solo CloudFront), `MediaService`.
 
 **Last Update**: Feb 2026
 **Status**: Active Development
@@ -32,14 +32,14 @@ status: draft
 
 ## Standards
 
-Vedi anche: [.agents/docs/critical-rules.md](../../../../.agents/docs/critical-rules.md)
+Vedi anche: [bashscripts/ai/.agents/docs/critical-rules.md](../../../../bashscripts/ai/.agents/docs/critical-rules.md)
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
+- [Documentazione Generale del progetto](../../../../docs/README.md)
 - Collegamenti Documentazione (`docs/collegamenti-documentazione.md` non presente)
 - [Standard di Documentazione](../../../../docs/ai-agents/documentation-standards.md)
 - [Modulo Xot](../../Xot/docs/README.md)
-- [Modulo Lang](../../Lang/docs/readme.md)
+- [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
 
 ## Categorie Principali
@@ -152,7 +152,7 @@ Implementare una gestione robusta degli errori per gestire i fallimenti nell'upl
 - Index (`support/index.md` non presente) - Indice della documentazione sui componenti di supporto
 
 ## Collegamenti alla Documentazione Correlata
-- [Panoramica Architettura](./architecture.md)
+- [Panoramica Architettura](./ARCHITECTURE.md)
 - [Funzionalità Core](./core-functionality.md)
 - [Gestione File](./file-management.md)
 - [Ottimizzazione](./optimization-analysis.md)
@@ -189,11 +189,11 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Watermark Automatico**: non presente nel codice (verificato 2026-10-14)
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../docs/README.md)
+- [Documentazione Generale del progetto](../../../../docs/README.md)
 - Collegamenti Documentazione (`docs/collegamenti-documentazione.md` non presente)
 - [Standard di Documentazione](../../../../docs/ai-agents/documentation-standards.md)
 - [Modulo Xot](../../Xot/docs/README.md)
-- [Modulo Lang](../../Lang/docs/readme.md)
+- [Modulo Lang](../../Lang/docs/README.md)
 - [Modulo UI](../../UI/docs/README.md)
 
 ## Categorie Principali

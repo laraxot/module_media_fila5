@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit;
+namespace Modules\Media\Tests\Unit;
 
 use Mockery;
-use Tests\Modules\Media\TestCase;
-use Tests\Modules\Xot\ModuleBusinessCoverage;
+use Modules\Media\Tests\TestCase;
+use Modules\Xot\Tests\ModuleBusinessCoverage;
 
 uses(TestCase::class)->group('no-media-db');
 

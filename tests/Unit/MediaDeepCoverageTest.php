@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit;
+namespace Modules\Media\Tests\Unit;
 
-use Tests\Modules\Media\TestCase;
-use Tests\Modules\Xot\ModuleDeepCoverage;
+use Modules\Media\Tests\TestCase;
+use Modules\Xot\Tests\ModuleDeepCoverage;
 
 uses(TestCase::class)->group('no-media-db');
 

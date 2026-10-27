@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit;
+namespace Modules\Media\Tests\Unit;
 
 use Mockery;
 use Modules\Media\Models\Media;
@@ -11,7 +11,7 @@ use Modules\Media\Models\Policies\MediaConvertPolicy;
 use Modules\Media\Models\Policies\MediaPolicy;
 use Modules\Media\Models\Policies\TemporaryUploadPolicy;
 use Modules\Media\Models\TemporaryUpload;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use Modules\Xot\Contracts\UserContract;
 use PHPUnit\Framework\Assert;
 

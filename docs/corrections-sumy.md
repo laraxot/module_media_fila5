@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "corrections sumy"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: corrections.md
 ---
 # Riepilogo Correzioni S3Test.php - Modulo Media
 
@@ -149,8 +150,8 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 
 ## 🔗 **Collegamenti**
 
-- [Correzioni Dettagliate](s3test-corrections.md)
-- [Linee Guida Prevenzione](prevention-guidelines.md)
+- [Correzioni Dettagliate](s3test_corrections.md)
+- [Linee Guida Prevenzione](prevention_guidelines.md)
 - [PHPStan Fixes](phpstan-level10-fixes.md)
 - [Translation Standards](translations.md)
 

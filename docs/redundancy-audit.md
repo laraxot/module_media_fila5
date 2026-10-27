@@ -23,7 +23,7 @@ High-risk findings:
 - Docs still contain wrong example namespaces with `Modules\Media\app\...` in `laravel-ffmpeg-patterns-laraxot.md`.
 - Duplicate documentation variants exist: `performance/media-optimizations.md`, `performance/media_optimizations.md`, and `performance/media-optimizations-ottimizzazioni-performance-modulo.md`.
 - Historical config copies exist in multiple old/superseded locations, including `docs/archived`, `docs/superseded`, and `docs/wiki/_archive`.
-- Case-only docs duplicates exist, for example `file-management-architecture.md` and `file-management-architecture.md`.
+- Case-only docs duplicates exist, for example `FILE_MANAGEMENT_ARCHITECTURE.md` and `file_management_architecture.md`.
 
 Risk:
 - Wrong namespace examples get copied into code and recreate fatal autoload bugs.

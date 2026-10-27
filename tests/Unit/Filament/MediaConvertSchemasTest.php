@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Filament;
+namespace Modules\Media\Tests\Unit\Filament;
 
 use Filament\Actions\BulkAction;
 use Filament\Actions\DeleteBulkAction;
@@ -12,7 +12,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Modules\Media\Filament\Resources\MediaConvertResource\Schemas\MediaConvertForm;
 use Modules\Media\Filament\Resources\MediaConvertResource\Tables\MediaConvertsTable;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 /*
