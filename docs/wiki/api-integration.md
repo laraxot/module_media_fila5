@@ -1,14 +1,13 @@
 ---
 title: "API Integration"
-module: "Media"
-type: concept
-tags: [api, integration]
-created: 2026-07-14
-updated: 2026-07-14
-qmd: "api integration"
-related:
-  - "./webm.md"
+type: alias
 status: superseded
-superseded_by: ../api-integration.md
+canonical: "bmad/api-integration.md"
+qmd: "api-integration alias superseded"
 ---
+
 # API Integration
+
+Documento identico al canonico: [api-integration.md](../bmad/api-integration.md).
+
+Canonico: `laravel/Modules/Media/docs/bmad/api-integration.md`. Qui non ci sono istruzioni: seguire il file collegato.
