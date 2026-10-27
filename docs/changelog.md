@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "changelog"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: CHANGELOG.md
 ---
 # Changelog
 

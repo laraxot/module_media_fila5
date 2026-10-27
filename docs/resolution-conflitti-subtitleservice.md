@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "resolution conflitti subtitleservice"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: conflict-resolution-subtitleservice.md
 ---
 # Risoluzione Conflitti Git - SubtitleService.php
 

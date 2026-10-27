@@ -6,8 +6,9 @@ confidence: verified
 created: 2026-05-06
 updated: 2026-05-06
 tags: [phpstan, media, ffmpeg, type-safety]
-status: draft
 qmd: "phpstan fixes - 2026-05-06 media"
+status: superseded
+superseded_by: phpstan-fixes.md
 ---
 
 # PHPStan Fixes - 2026-05-06

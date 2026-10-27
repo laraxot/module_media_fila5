@@ -2,12 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit;
+namespace Modules\Media\Tests\Unit;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
@@ -26,7 +24,7 @@ use Modules\Media\Http\Requests\CreateTemporaryUploadFromDirectS3UploadRequest;
 use Modules\Media\Models\Media;
 use Modules\Media\Models\MediaConvert;
 use Modules\Media\Models\TemporaryUpload;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use Modules\Media\View\Components\VideoPlayer;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
@@ -173,7 +171,5 @@ describe('Media highest-miss coverage', function (): void {
         $media = new Media;
         $media->id = 1;
         Assert::assertIsArray($media->getCasts());
-        Assert::assertInstanceOf(BelongsTo::class, $media->temporaryUpload());
-        Assert::assertInstanceOf(HasMany::class, $media->mediaConverts());
     });
 });

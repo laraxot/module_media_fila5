@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Datas;
+namespace Modules\Media\Tests\Unit\Datas;
 
-use FFMpeg\Format\Video\DefaultVideo;
 use FFMpeg\Format\Video\WebM;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Datas\CloudFrontData;
 use Modules\Media\Datas\ConvertData;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use RuntimeException;
 
@@ -68,7 +67,6 @@ test('the ffmpeg format is a webm carrying the declared codecs and bitrate', fun
     $format = $data->getFFMpegFormat();
 
     Assert::assertInstanceOf(WebM::class, $format);
-    Assert::assertInstanceOf(DefaultVideo::class, $format);
     Assert::assertSame(1500, $format->getKiloBitrate());
     Assert::assertSame('libvpx-vp9', $format->getVideoCodec());
     Assert::assertSame('libvorbis', $format->getAudioCodec());

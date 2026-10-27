@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit;
+namespace Modules\Media\Tests\Unit;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -16,7 +16,7 @@ use Modules\Media\Filament\Clusters\Test\Pages\AwsTest;
 use Modules\Media\Filament\Clusters\Test\Pages\S3Test;
 use Modules\Media\Filament\Widgets\ConvertWidget;
 use Modules\Media\Models\Media;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 use ReflectionClass;
 use ReflectionMethod;

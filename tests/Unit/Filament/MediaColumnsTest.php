@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Filament;
+namespace Modules\Media\Tests\Unit\Filament;
 
 use Modules\Media\Filament\Tables\Columns\CloudFrontIconMediaColumn;
 use Modules\Media\Filament\Tables\Columns\IconMediaColumn;
-use Tests\Modules\Media\Fixtures\MediaColumnFileStub;
-use Tests\Modules\Media\Fixtures\MediaColumnPlainRecordStub;
-use Tests\Modules\Media\Fixtures\MediaColumnRecordStub;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\Fixtures\MediaColumnFileStub;
+use Modules\Media\Tests\Fixtures\MediaColumnPlainRecordStub;
+use Modules\Media\Tests\Fixtures\MediaColumnRecordStub;
+use Modules\Media\Tests\TestCase;
 use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn;
 use PHPUnit\Framework\Assert;
 

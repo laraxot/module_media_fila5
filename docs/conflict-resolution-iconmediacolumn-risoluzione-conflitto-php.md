@@ -89,8 +89,8 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 
 ## Collegamenti
 
-- [module_media.md](module_media.md)
-- [filament_table_actions.md](filament_table_actions.md)
+- [module_media.md](module-media.md)
+- [filament_table_actions.md](filament-table-actions.md)
 - [Modules/Media/docs/](../../docs/)
 
 *

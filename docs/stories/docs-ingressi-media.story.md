@@ -21,7 +21,7 @@ Fase BMAD: documentazione e qualita' (DOC-010 e DOC-002 del piano `bmad-output/s
 
 ## Richiesta
 
-Studiare il modulo Media (codice e `docs/`), correggere gli ingressi (`README.md`, `00-index.md`, `index.md`) solo con fatti verificati, dichiarare directory canoniche, evidence e legacy, collegare solo file esistenti. Vietato spostare, rinominare o cancellare file; vietato `dups --fix`.
+Studiare il modulo Media (codice e `docs/`), correggere gli ingressi (`README.md`, `00-INDEX.md`, `index.md`) solo con fatti verificati, dichiarare directory canoniche, evidence e legacy, collegare solo file esistenti. Vietato spostare, rinominare o cancellare file; vietato `dups --fix`.
 
 ## Analisi (cosa fa il modulo, confrontato con cio' che i docs dicevano)
 
@@ -38,13 +38,13 @@ Cosa i docs dicevano di falso o non provato:
 
 | Dove | Affermazione | Esito |
 |------|--------------|-------|
-| `README.md`, `README.md`, `architecture.md` | dipende da `Tenant` e isola per tenant | nessun riferimento a `Tenant` in `app/`; solo nei `repositories` di `composer.json` |
+| `README.md`, `readme.md`, `architecture.md` | dipende da `Tenant` e isola per tenant | nessun riferimento a `Tenant` in `app/`; solo nei `repositories` di `composer.json` |
 | `README.md` | wiki legacy in `docs-archive-2026/` | la directory non esiste ne' nel modulo ne' nella radice del repo |
-| `index.md` | Services 2 (`SubtitleService`, `VideoStream`) | `app/Services` non esiste; `Actions/Stream` contiene solo `StreamVideoAction` |
-| `index.md` | Models 8, Migrations 3, Filament Resources 30, "101+ classi" | Models 4 (+4 Policy), 5 file di migrazione, 41 file in `app/Filament` (3 Resource), 124 file PHP |
+| `INDEX.md` | Services 2 (`SubtitleService`, `VideoStream`) | `app/Services` non esiste; `Actions/Stream` contiene solo `StreamVideoAction` |
+| `INDEX.md` | Models 8, Migrations 3, Filament Resources 30, "101+ classi" | Models 4 (+4 Policy), 5 file di migrazione, 41 file in `app/Filament` (3 Resource), 124 file PHP |
 | `index.md` | `SubtitleService`, `VideoStream`, `MediaService` come servizi disponibili | nessuno dei tre esiste |
 | `index.md`, `architecture.md` | HLS/DASH, watermark automatico, CDN generico | HLS 0 riscontri, DASH 0, watermark 0; esiste solo CloudFront (12 file) |
-| `architecture.md` | `UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaItem`, `CollectionResource`, consumatori Activity e Lang | classi assenti (0 riscontri in `app/` e `tests/`); consumatori non confermati |
+| `ARCHITECTURE.md` | `UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaItem`, `CollectionResource`, consumatori Activity e Lang | classi assenti (0 riscontri in `app/` e `tests/`); consumatori non confermati |
 | `index.md` | 55 link a file inesistenti (27 bersagli distinti, ripetuti per concatenazione di due indici) | resi testo "non presente" |
 | `00-index.md`, `wiki/00-index.md` | 4 e 10 link rotti, emoji, "Compliant" non provato | copie per variante di maiuscole, marcate `superseded` |
 | `docs/lambda_function.py`, `lambda-function.py` | (nessun docs li cita) | identici (`cmp`), esempio AWS Lambda con ffmpeg; nessun uso nel modulo: zero riscontri di "lambda" in `app/`, `config/`, `tests/` |
@@ -59,7 +59,7 @@ File toccati (tutti con mtime piu' vecchio di 10 minuti al momento della modific
 - `docs/00-INDEX.md`: stato verificato, documenti canonici, mappa delle directory (canonica, evidence, legacy), famiglie della radice con conteggi; frontmatter `type: index`, `status: active`.
 - `docs/INDEX.md`: tabella "Module Content Overview" corretta, riferimento a `architecture.md`, riga story aggiornata.
 - `docs/index.md`: nota di bridge, link inesistenti ridotti a testo, blocco "Servizi disponibili" corretto, intestazione spuria di 9 righe (residuo di merge) rimossa.
-- `docs/architecture.md`: correzioni su Tenant, Services, HLS/DASH, watermark, CDN, conteggi; nota sulla sezione copiata da `architecture.md`; frontmatter spurio interno rimosso.
+- `docs/architecture.md`: correzioni su Tenant, Services, HLS/DASH, watermark, CDN, conteggi; nota sulla sezione copiata da `ARCHITECTURE.md`; frontmatter spurio interno rimosso.
 - `docs/ARCHITECTURE.md`: `docs-organizer.py stale --file ARCHITECTURE.md --fix` (status `stale` e nota).
 - `docs/00-index.md`, `docs/wiki/00-index.md`, `docs/wiki/00-INDEX.md`, `docs/wiki/index.md`: `status: superseded` con `superseded_by`; contenuto conservato; `wiki/00-INDEX.md` non aveva frontmatter.
 - `docs/wiki/INDEX.md`, `docs/wiki/README.md`: inventario reale della wiki (94 file, 13 sottocartelle); il vecchio README descriveva una struttura inesistente.
@@ -78,8 +78,8 @@ Nessun file cancellato, spostato o rinominato.
 
 ## Decisioni
 
-1. `00-index.md` e' l'unico indice operativo; le copie per variante di maiuscole sono `superseded`, non cancellate (nessun indice con nome alternativo).
-2. `architecture.md` e' `stale` e non viene riscritto: la fonte e' `README.md` piu' `architecture.md` corretta.
+1. `00-INDEX.md` e' l'unico indice operativo; le copie per variante di maiuscole sono `superseded`, non cancellate (nessun indice con nome alternativo).
+2. `ARCHITECTURE.md` e' `stale` e non viene riscritto: la fonte e' `README.md` piu' `architecture.md` corretta.
 3. I link inesistenti negli ingressi diventano testo "non presente" invece di essere puntati a file "simili": nessun bersaglio inventato. `--annotate` non e' stato usato perche' lavora su tutta la cartella e non su un file.
 4. Le righe aggiunte sono in italiano senza emoji; le copie `superseded` conservano il testo originale, emoji compresi.
 
@@ -88,6 +88,6 @@ Nessun file cancellato, spostato o rinominato.
 - 700 eventi `unresolved` restano in 230 file del modulo (primi: `duplicate-methods-analysis.md` 189, `wiki/bottlenecks.md` e `bmad/bottlenecks.md` 17 ciascuno, `bottlenecks.md` 15, `conflitti-merge-risolti*.md` 13): sono copie e cronaca, da trattare con DOC-004.
 - Dry-run `frontmatter` con `--busy-minutes 0` dopo le mie correzioni: 67 file senza chiavi richieste (per lo piu' `status`) e 5 blocchi spuri da correggere a mano; l'esclusione silenziosa dei file recenti ha lasciato fuori questi file dalla passata del lead.
 - 45 gruppi di nomi con varianti di maiuscole nella radice: servono migration map e revisione umana (DOC-004, DOC-006).
-- Contenuto non verificato riga per riga: `ffmpeg-usage.md`, `queueable-actions.md`, `testing.md`, `migrations.md`, `phpstan-level10-fixes.md`, `dependency-intelligence.md` (versioni da `composer show` del 2026-03-02) e i documenti di prodotto.
+- Contenuto non verificato riga per riga: `ffmpeg-usage.md`, `queueable-actions.md`, `testing.md`, `MIGRATIONS.md`, `phpstan-level10-fixes.md`, `dependency-intelligence.md` (versioni da `composer show` del 2026-03-02) e i documenti di prodotto.
 - Codice (fuori perimetro docs): `app/Filament/Clusters/` contiene un file tracciato da 0 byte in una directory dal nome corrotto accanto a `Test/`; due file di create per `medias` e per `temporary_uploads` (la nota `wiki/concepts/temporary-uploads-migration-consolidation.md` dichiara una sola migrazione per modello); `ConvertController` e `resources/views/convert.blade.php` senza rotta; `app/Conversions` e `app/conversions`, `tests/Filament` e `tests/filament` (story 16-4).
 - Nessun commit eseguito; il second brain (`bashscripts/ai/wiki/memories/`) e `llm-wiki-qmd.sh update` restano al lead.

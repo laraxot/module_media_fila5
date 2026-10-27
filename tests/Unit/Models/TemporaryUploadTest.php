@@ -2,18 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Tests\Modules\Media\Unit\Models;
+namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
-use Tests\Modules\Media\TestCase;
+use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
+use function Safe\class_parents;
 
 uses(TestCase::class)->group('no-media-db');
 
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
-        Assert::assertInstanceOf(BaseModel::class, new TemporaryUpload);
+        Assert::assertArrayHasKey(BaseModel::class, class_parents(TemporaryUpload::class));
     });
 
     it('uses HasXotFactory trait', function (): void {

@@ -4,15 +4,15 @@ module: "Media"
 type: concept
 tags: [00, index]
 created: 2026-07-14
-updated: 2026-10-14
+updated: 2026-10-23
 qmd: "00 index"
 related:
   - "../webm.md"
 status: superseded
-superseded_by: ../00-INDEX.md
+superseded_by: ../README.md
 ---
 
-> Superseded il 2026-10-14: copia per sola differenza di maiuscole di [00-INDEX.md](../00-INDEX.md); l'indice canonico e' quello. Contenuto conservato per storia. Le voci "non presente" puntavano a file che non esistono (verificato 2026-10-14).
+> Superseded il 2026-10-14 come copia per sola differenza di maiuscole di `../00-INDEX.md`. Quel file e' stato rimosso il 2026-10-22 (commit e2282c1b): l'ingresso verificato sul codice e' [../README.md](../README.md). Contenuto conservato per storia. Le voci "non presente" puntano a file che non esistono (verificato 2026-10-23).
 # 📚 **Indice Documentazione Modulo Media**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -20,18 +20,18 @@ superseded_by: ../00-INDEX.md
 
 ## 🎯 **Lettura Essenziale**
 1. [README.md](README.md) - Panoramica completa, Upload e Processing.
-2. roadmap.md (`roadmap.md` non presente) - Obiettivi di trasformazione e AI 2026.
-3. philosophy.md (`philosophy.md` non presente) - "Il file come entità": la nostra visione del media.
+2. [roadmap.md](../roadmap.md) - Obiettivi di trasformazione e AI 2026.
+3. [philosophy.md](../philosophy.md) - "Il file come entità": la nostra visione del media.
 
 ## 🎞️ **Video & Image Processing**
-- 🎥 **FFmpeg Integration (`ffmpeg-integration.md` non presente)** - Guida alla gestione video e codec.
+- 🎥 **[FFmpeg Integration](../ffmpeg-integration.md)** - Guida alla gestione video e codec.
 - 🖼️ **[Image Optimization](../file-management-architecture.md)** - Architettura di trasformazione immagini.
 - 🔄 **[Auto Conversions](../conversione-media.md)** - Logic per preview e watermark.
 
 ## ☁️ **Cloud & Storage**
 - ☁️ **[S3 Integration](../s3test-corrections.md)** - Guida alla configurazione AWS S3/Minio.
 - 📁 **[File Management](../file-management.md)** - Organizzazione directory e disk strategy.
-- 📄 **Responsive Images (`webm.md` non presente)** - Gestione formati moderni (WebP, AVIF).
+- 📄 **[Responsive Images](../webm.md)** - Gestione formati moderni (WebP, AVIF).
 
 ## 🎨 **Filament & UI**
 - 🖼️ **Media Library (`filament.md` non presente)** - La libreria media in Filament.
@@ -39,7 +39,7 @@ superseded_by: ../00-INDEX.md
 
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Level 10](../phpstan-level10-fixes.md)** - Report di conformità totale.
-- 🔬 **Testing Guidelines (`testing.md` non presente)** - Strategie per testare upload e stream.
+- 🔬 **[Testing Guidelines](../testing.md)** - Strategie per testare upload e stream.
 - 🧹 **[PHPMD Analysis](../cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
 
 ## 📦 **Pacchetti Composer**
@@ -49,7 +49,7 @@ superseded_by: ../00-INDEX.md
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../../Xot/docs/README.md) - Base framework e Trait `HasMedia`.
-- CloudStorage (`README.md` non presente) - Astrazione per provider cloud.
+- CloudStorage (`readme.md` non presente) - Astrazione per provider cloud.
 - [Cms](../../../Cms/docs/README.md) - Integrazione media nei blocchi di contenuto.
 
 ---
@@ -87,7 +87,7 @@ superseded_by: ../00-INDEX.md
 
 ## 🔗 Riferimenti
 
-- [Xot Module](../../../Xot/docs/00-INDEX.md) - Base classes
+- [Xot Module](../../../Xot/docs/00-index.md) - Base classes
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
