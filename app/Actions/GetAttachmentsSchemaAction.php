@@ -8,10 +8,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Modules\Media\Datas\MediaConfigData;
-<<<<<<< .merge_file_e2qA9S
-=======
 use Spatie\QueueableAction\QueueableAction;
->>>>>>> .merge_file_9MVCno
 use Webmozart\Assert\Assert;
 
 class GetAttachmentsSchemaAction

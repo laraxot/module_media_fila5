@@ -269,8 +269,4 @@ private function getSolutionForError(?string $errorCode): string
 
 **Ultimo aggiornamento**: Gennaio 2025
 **Autore**: Sistema di correzione automatica
-<<<<<<< .merge_file_cdzC0k
 **Stato**: ✅ Completato e verificato
-=======
-**Stato**: ✅ Completato e verificato
->>>>>>> .merge_file_3lR6Vk

@@ -372,8 +372,3 @@ final class Media extends Model
 ```
 
 ---
-<<<<<<< .merge_file_yFDyHj
-
-```
-=======
->>>>>>> .merge_file_YpwUxM

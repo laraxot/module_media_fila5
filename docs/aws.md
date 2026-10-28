@@ -11,15 +11,5 @@ qmd: "aws"
 related:
   - "./webm.md"
 status: draft
-<<<<<<< .merge_file_KfXVEl
----
-https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
-=======
->>>>>>> .merge_file_dRcSQM
----
-https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
----
-https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
----
 https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
 

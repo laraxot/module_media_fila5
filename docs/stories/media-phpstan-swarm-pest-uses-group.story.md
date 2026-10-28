@@ -162,8 +162,4 @@ coordinatore — nessuno spostamento necessario.
 ## File toccati
 
 34 file in `Modules/Media/tests/Unit/**` (vedi commit). Nessun file in
-<<<<<<< .merge_file_h02NNb
 `app/`, `docs/stories/` root o `docs/sprint-status.yaml` root toccato.
-=======
-`app/`, `docs/stories/` root o `docs/sprint-status.yaml` root toccato.
->>>>>>> .merge_file_63J6Pr

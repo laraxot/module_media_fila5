@@ -1,14 +1,4 @@
-<<<<<<< .merge_file_SGK3Y8
-# Prototype: laravel/Modules/* e laravel/Themes/*
-# Canon: bashscripts/ai/wiki/rules/no-git-lfs.md
-# Sync: bash bashscripts/templates/sync-gitattributes-modules.sh
-#
-# Git LFS VIETATO. Binari = blob git normali.
-# Mai: filter=lfs / diff=lfs / merge=lfs
-
-=======
 # Git attributes for this module. Git LFS is intentionally not used.
->>>>>>> .merge_file_SfF65f
 * text=auto
 *.css linguist-vendored
 *.scss linguist-vendored
