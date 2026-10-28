@@ -1,5 +1,4 @@
 
-!.env.example
 # ==============================================
 # AI/TOOL SCAFFOLD — must never exist in module tree (see docs/wiki/rules/module-theme-root-cleanup.md)
 # Auto-generated forbidden paths — do not edit manually
@@ -99,6 +98,7 @@ public_html/hot
 storage/*.key
 .env
 .env.*
+!.env.example
 Homestead.yaml
 Homestead.json
 /.vagrant
