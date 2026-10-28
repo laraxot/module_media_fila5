@@ -176,4 +176,8 @@ Repo del modulo (`.git` separato, remote `laraxot`,
 miei edit: `dev` in sync con `laraxot/dev` (0 ahead, 0 behind). Aggiunti
 solo i 3 file intenzionalmente modificati piu' `docs/coverage.md` e questa
 story; **non** aggiunto nient'altro dei 122 file di drift pre-esistente.
+<<<<<<< .merge_file_NDk3Zp
 Commit e push: vedi output strutturato finale per SHA e conferma remote.
+=======
+Commit e push: vedi output strutturato finale per SHA e conferma remote.
+>>>>>>> .merge_file_8hHet4

@@ -79,4 +79,8 @@ Per migliorare ulteriormente l'integrazione FFmpeg:
 
 - [Documentazione ufficiale di Laravel-FFMpeg](https://github.com/protonemedia/laravel-ffmpeg)
 - [Guida all'integrazione FFmpeg](ffmpeg_integration.md)
+<<<<<<< .merge_file_7B69Dq
 - [Esempi di utilizzo FFmpeg](ffmpeg-usage.md)
+=======
+- [Esempi di utilizzo FFmpeg](ffmpeg-usage.md)
+>>>>>>> .merge_file_bMJCQO

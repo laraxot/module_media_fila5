@@ -22,7 +22,7 @@ status: draft
 [![PSR-12](https://img.shields.io/badge/Code-PSR--12-blue.svg)](https://www.php-fig.org/psr/psr-12/)
 [![Strict Types](https://img.shields.io/badge/PHP-strict__types-1-informational.svg)](#)
 [![Laraxot Modules](https://img.shields.io/badge/Architecture-Modular-purple.svg)](#)
-[![Media Module](https://img.shields.io/badge/Module-Media-008758.svg)](#)
+[![FixCity Platform](https://img.shields.io/badge/Platform-FixCity-008758.svg)](#)
 
 > **Attachments, report photos, PDFs.** Typed media library — uploads that don't break the wizard.
 

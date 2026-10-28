@@ -28,6 +28,10 @@ class ConvertWidget extends XotBaseWidget
 
     public float $rate = 0.0;
 
+    /** @var view-string */
+    /** @phpstan-ignore property.defaultValue */
+    protected string $view = 'media::filament.widgets.convert';
+
     protected static string $resource = MediaResource::class;
 
     public function __construct()
@@ -54,9 +58,6 @@ class ConvertWidget extends XotBaseWidget
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
 
-        /*
-         * -preset ultrafast.
-         */
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();

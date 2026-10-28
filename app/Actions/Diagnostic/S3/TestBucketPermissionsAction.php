@@ -46,8 +46,9 @@ class TestBucketPermissionsAction
     {
         $data = [];
         $data['ListBucket'] = $this->probeListBucket($s3, $bucket);
+        $data = array_merge($data, $this->probeObjectCrud($s3, $bucket, $testKey));
 
-        return array_merge($data, $this->probeObjectCrud($s3, $bucket, $testKey));
+        return $data;
     }
 
     private function probeListBucket(S3Client $s3, string $bucket): string

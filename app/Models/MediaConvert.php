@@ -10,6 +10,7 @@ namespace Modules\Media\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -17,6 +18,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read string|null $converted_file
  * @property-read string|null $disk
  * @property-read string|null $file
+ * @property string|null $format
  * @property-read Media|null $media
  * @property-read ProfileContract|null $updater
  *
@@ -26,7 +28,6 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @property string $id
  * @property int $media_id
- * @property string|null $format
  * @property string|null $codec_video
  * @property string|null $codec_audio
  * @property string|null $preset
@@ -35,10 +36,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property int|null $height
  * @property int|null $threads
  * @property int|null $speed
- * @property numeric|null $percentage
- * @property numeric|null $remaining
- * @property numeric|null $rate
- * @property numeric|null $execution_time
+ * @property string|null $percentage
+ * @property string|null $remaining
+ * @property string|null $rate
+ * @property string|null $execution_time
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by

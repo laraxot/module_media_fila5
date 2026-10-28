@@ -17,8 +17,6 @@ class ListMediaConverts extends XotBaseListRecords
      */
     protected function getHeaderWidgets(): array
     {
-        return [
-            ClockWidget::class,
-        ];
+        return [];
     }
 }

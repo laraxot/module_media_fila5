@@ -94,4 +94,8 @@ diff.
   Modules` con exit code + conteggi json a swarm fermo; questa verifica Media
   e' statica in attesa di env con shell.
 - Claim: perimetro `laravel/Modules/Media/` verificato senza modifiche; file
+<<<<<<< .merge_file_Vbl0wF
   condivisi/base (Xot, vendor) non toccati.
+=======
+  condivisi/base (Xot, vendor) non toccati.
+>>>>>>> .merge_file_rcHVuv

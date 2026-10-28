@@ -23,8 +23,8 @@ use Illuminate\Support\Facades\Storage;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Modules\Media\Actions\Diagnostic\S3\TestBucketPermissionsAction;
 use Modules\Media\Filament\Clusters\Test;
-use Modules\Xot\Actions\Cast\SafeStringCastAction;
 use Modules\Xot\Filament\Pages\XotBasePage;
+use Override;
 use Webmozart\Assert\Assert;
 
 use function Safe\file_put_contents;
@@ -78,6 +78,7 @@ class S3Test extends XotBasePage
      *
      * @return array<Action>
      */
+    #[Override]
     protected function getFormActions(): array
     {
         return [
@@ -128,7 +129,8 @@ class S3Test extends XotBasePage
      */
     protected function fillForms(): void
     {
-        $this->getSchema('form')?->fill([
+        /** @phpstan-ignore-next-line */
+        $this->form->fill([
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -232,12 +234,13 @@ class S3Test extends XotBasePage
 
     public function test01(): void
     {
-        $formState = $this->getSchema('form')?->getState() ?? [];
+        /** @phpstan-ignore-next-line */
+        $formState = $this->form->getState();
         Assert::isArray($formState, 'Form state must be array');
         $data = $formState;
         $filePath = $data['attachment'] ?? null;
 
-        if (! $filePath) {
+        if (! is_string($filePath) || '' === $filePath) {
             Notification::make()
                 ->warning()
                 ->title(Lang::string('media::s3test.notifications.no_attachment'))
@@ -248,16 +251,12 @@ class S3Test extends XotBasePage
         }
 
         // Generate CloudFront signed URL for attachment
-        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
-        $this->debugResults['cloudfront_signed_url'] = [
-            'title' => 'CloudFront signed URL',
-            'status' => 'info',
-            'data' => ['url' => $signedUrl],
-        ];
-        $this->updateDebugOutput();
-        Log::info('S3 Test CloudFront signed URL', [
-            'attachment_path' => $filePath,
-            'signed_url' => $signedUrl,
+        $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
+        dddx([
+            'signedurl' => $signedUrl,
+            'filePath' => $filePath,
+            'url2' => Storage::disk('s3')->url($filePath),
+            'url3' => Storage::disk('s3')->temporaryUrl($filePath, now()->addMinutes(5)),
         ]);
         Notification::make()
             ->title(Lang::string('media::s3test.notifications.config_debugged'))
@@ -276,10 +275,10 @@ class S3Test extends XotBasePage
             'title' => '📋 Configuration',
             'status' => 'info',
             'data' => [
-                'AWS_ACCESS_KEY_ID' => substr(SafeStringCastAction::cast(config('filesystems.disks.s3.key', '')), 0, 8).'...',
+                'AWS_ACCESS_KEY_ID' => substr(Config::string('filesystems.disks.s3.key', ''), 0, 8).'...',
                 'AWS_SECRET_ACCESS_KEY' => config('filesystems.disks.s3.secret') ? '✅ Present' : '❌ Missing',
                 'AWS_DEFAULT_REGION' => config('filesystems.disks.s3.region'),
-                'AWS_BUCKET' => $this->getS3Bucket(),
+                'AWS_BUCKET' => Config::string('filesystems.disks.s3.bucket'),
                 'AWS_USE_PATH_STYLE_ENDPOINT' => config('filesystems.disks.s3.use_path_style_endpoint', 'false'),
                 'CLOUDFRONT_BASE_URL' => config('services.cloudfront.base_url'),
                 'CLOUDFRONT_KEYPAIR_ID' => config('services.cloudfront.key_pair_id'),
@@ -331,11 +330,6 @@ class S3Test extends XotBasePage
         }
     }
 
-    private function getS3Bucket(): string
-    {
-        return SafeStringCastAction::cast(config('filesystems.disks.s3.bucket', ''));
-    }
-
     /**
      * Test S3 connection details.
      *
@@ -354,10 +348,10 @@ class S3Test extends XotBasePage
             ]);
 
             // Test bucket accessibility
-            $s3->headBucket(['Bucket' => $this->getS3Bucket()]);
+            $s3->headBucket(['Bucket' => Config::string('filesystems.disks.s3.bucket')]);
 
             // Get bucket region
-            $location = $s3->getBucketLocation(['Bucket' => $this->getS3Bucket()]);
+            $location = $s3->getBucketLocation(['Bucket' => Config::string('filesystems.disks.s3.bucket')]);
             $bucketRegion = $location['LocationConstraint'] ?: 'us-east-1';
 
             $regionMatch = $bucketRegion === config('filesystems.disks.s3.region');
@@ -413,14 +407,18 @@ class S3Test extends XotBasePage
                 ],
             ]);
 
-            $policy = $s3->getBucketPolicy(['Bucket' => $this->getS3Bucket()]);
+            $policy = $s3->getBucketPolicy(['Bucket' => Config::string('filesystems.disks.s3.bucket')]);
+            $policyDocument = $policy['Policy'] ?? null;
+            $formattedPolicy = is_string($policyDocument)
+                ? json_encode(json_decode($policyDocument), JSON_PRETTY_PRINT)
+                : 'Policy document unavailable';
 
             return [
                 'title' => '📜 Bucket Policy',
                 'status' => 'info',
                 'data' => [
                     'Policy Exists' => '✅ Yes',
-                    'Policy' => json_encode(json_decode(SafeStringCastAction::cast($policy['Policy'])), JSON_PRETTY_PRINT),
+                    'Policy' => $formattedPolicy,
                 ],
             ];
         } catch (AwsException $e) {
@@ -532,12 +530,13 @@ class S3Test extends XotBasePage
 
         $output = [];
         foreach ($this->debugResults as $result) {
-            if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])) {
+            if (! is_array($result) || ! isset($result['title'], $result['status'], $result['data'])
+                || ! is_string($result['title']) || ! is_string($result['status'])) {
                 continue;
             }
 
-            $title = SafeStringCastAction::cast($result['title']);
-            $status = SafeStringCastAction::cast($result['status']);
+            $title = $result['title'];
+            $status = $result['status'];
             $data = $result['data'];
 
             $output[] = "=== {$title} ===";
@@ -550,7 +549,7 @@ class S3Test extends XotBasePage
                     if (is_array($value)) {
                         $output[] = "{$keyStr}: ".json_encode($value, JSON_PRETTY_PRINT);
                     } else {
-                        $valueStr = SafeStringCastAction::cast($value);
+                        $valueStr = \Modules\Xot\Actions\Cast\SafeStringCastAction::cast($value);
                         $output[] = "{$keyStr}: {$valueStr}";
                     }
                 }
@@ -570,12 +569,13 @@ class S3Test extends XotBasePage
     public function sendEmail(): void
     {
         try {
-            $formState = $this->getSchema('form')?->getState() ?? [];
+            /** @phpstan-ignore-next-line */
+            $formState = $this->form->getState();
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
 
-            if (! $filePath) {
+            if (! is_string($filePath) || '' === $filePath) {
                 Notification::make()
                     ->warning()
                     ->title(Lang::string('media::s3test.notifications.no_attachment'))
@@ -586,7 +586,7 @@ class S3Test extends XotBasePage
             }
 
             // Generate CloudFront signed URL for attachment
-            $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 60);
+            $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
 
             // Log the email data for testing purposes (no actual email sent)
             Log::debug('S3 Test Email Data', [
@@ -694,7 +694,8 @@ class S3Test extends XotBasePage
      */
     private function updateDebugOutput(): void
     {
-        $this->getSchema('form')?->fill([
+        /** @phpstan-ignore-next-line */
+        $this->form->fill([
             'debug_output' => $this->getDebugOutput(),
         ]);
     }
@@ -717,10 +718,19 @@ class S3Test extends XotBasePage
             $s3Disk = Storage::disk('s3');
             $temporaryUrl = $s3Disk->temporaryUrl($filename, now()->addMinutes(5));
 
-            $formState = $this->getSchema('form')?->getState() ?? [];
+            /** @phpstan-ignore-next-line */
+            $formState = $this->form->getState();
             Assert::isArray($formState, 'Form state must be array');
             $data = $formState;
             $filePath = $data['attachment'] ?? null;
+
+            $uploadedFile = is_string($filePath) && '' !== $filePath
+                ? [
+                    'path' => $filePath,
+                    'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 30),
+                    'temporary_url' => $s3Disk->temporaryUrl($filePath, now()->addMinutes(30)),
+                ]
+                : null;
 
             $results = [
                 'test_file' => [
@@ -728,12 +738,7 @@ class S3Test extends XotBasePage
                     'cloudfront_url' => $cloudFrontUrl,
                     'temporary_url' => $temporaryUrl,
                 ],
-                'uploaded_file' => $filePath
-                    ? [
-                        'path' => SafeStringCastAction::cast($filePath),
-                        'cloudfront_url' => app(GetCloudFrontSignedUrlAction::class)->execute(SafeStringCastAction::cast($filePath), 30),
-                        'temporary_url' => $s3Disk->temporaryUrl(SafeStringCastAction::cast($filePath), now()->addMinutes(30)),
-                    ] : null,
+                'uploaded_file' => $uploadedFile,
             ];
 
             // Clean up test file

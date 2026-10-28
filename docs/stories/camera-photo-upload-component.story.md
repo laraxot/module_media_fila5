@@ -101,3 +101,11 @@ Proposta di fusione accolta e applicata; punto 9 (stato `preparing`, `error_prep
 
 - Imagick (domanda dell'utente): non risolve il 413, nginx rifiuta il corpo prima di PHP e l'installazione richiede root.
   Utile in futuro per leggere HEIC lato server (GD non lo legge), insieme all'aumento del limite da Ploi.
+<<<<<<< .merge_file_lCDzz1
+=======
+
+## Nota 2026-10-28
+`Modules\Xot\Filament\Forms\Components\XotBaseSpatieMediaLibraryFileUpload` non esiste piu' nel working tree di Xot (ne' nella sua storia git).
+Per tenere PHPStan a zero `CameraPhotoUpload` estende direttamente `Filament\Forms\Components\SpatieMediaLibraryFileUpload`;
+se Xot ripristina la base, e' una riga da cambiare.
+>>>>>>> .merge_file_2D3hLT

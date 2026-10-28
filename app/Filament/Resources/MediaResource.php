@@ -12,6 +12,7 @@ use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class MediaResource extends XotBaseResource
 {
@@ -20,6 +21,7 @@ class MediaResource extends XotBaseResource
     /**
      * @psalm-return array<never, never>
      */
+    #[Override]
     public static function getRelations(): array
     {
         return [];
@@ -28,6 +30,7 @@ class MediaResource extends XotBaseResource
     /**
      * @return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration, view: PageRegistration, convert: PageRegistration}
      */
+    #[Override]
     public static function getPages(): array
     {
         return [

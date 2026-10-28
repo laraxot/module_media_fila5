@@ -47,4 +47,8 @@ bucket sono state allineate, la rimozione resta una decisione aperta.
 ## Update Log
 
 - **[DATE]**: Removed `mediaconvertresourcetest.php` duplicate
+<<<<<<< .merge_file_GEN5f3
 - **2026-10-20**: duplicati ricomparsi nel repository (vedi sopra), non rimossi
+=======
+- **2026-10-20**: duplicati ricomparsi nel repository (vedi sopra), non rimossi
+>>>>>>> .merge_file_fJo7iU

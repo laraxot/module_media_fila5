@@ -12,6 +12,7 @@ related:
   - "./webm.md"
 status: draft
 ---
+
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media
