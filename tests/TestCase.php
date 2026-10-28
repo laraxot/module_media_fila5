@@ -10,7 +10,6 @@ use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Providers\XotServiceProvider;
 use Modules\Xot\Tests\XotBaseTestCase;
-<<<<<<< HEAD
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\MockObject\MockObject;
 use ReflectionClass;
@@ -18,8 +17,6 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\file_get_contents;
-=======
->>>>>>> ec2b884b (.)
 
 /**
  * Base test case for Media module.
@@ -42,7 +39,6 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-<<<<<<< HEAD
      * Controparte di {@see self::assertMediaTableHas()}: la riga non deve esistere.
      *
      * @param  array<string, mixed>  $where
@@ -108,8 +104,6 @@ abstract class TestCase extends XotBaseTestCase
     }
 
     /**
-=======
->>>>>>> ec2b884b (.)
      * @template T of object
      *
      * @param  class-string<T>  $class

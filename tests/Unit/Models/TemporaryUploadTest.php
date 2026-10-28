@@ -7,7 +7,6 @@ namespace Modules\Media\Tests\Unit\Models;
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\TemporaryUpload;
 
-<<<<<<< HEAD
 use function Safe\class_parents;
 
 uses(TestCase::class)->group('no-media-db');
@@ -15,13 +14,6 @@ uses(TestCase::class)->group('no-media-db');
 describe('TemporaryUpload Model', function (): void {
     it('extends BaseModel', function (): void {
         Assert::assertArrayHasKey(BaseModel::class, class_parents(TemporaryUpload::class));
-=======
-uses(\Modules\Media\Tests\TestCase::class);
-
-describe('TemporaryUpload Model', function (): void {
-    it('extends BaseModel', function (): void {
-        expect(get_parent_class(TemporaryUpload::class))->toBe(BaseModel::class);
->>>>>>> ec2b884b (.)
     });
 
     it('uses HasXotFactory trait', function (): void {

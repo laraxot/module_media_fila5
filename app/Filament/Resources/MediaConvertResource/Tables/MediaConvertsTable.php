@@ -10,11 +10,7 @@ use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 class MediaConvertsTable extends XotBaseResourceTable
 {
     /**
-<<<<<<< HEAD
      * @return array<string, Column>
-=======
-     * @return array<string, \Filament\Tables\Columns\Column>
->>>>>>> ec2b884b (.)
      */
     public function getTableColumns(): array
     {
@@ -24,7 +20,6 @@ class MediaConvertsTable extends XotBaseResourceTable
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];
     }
-<<<<<<< HEAD
 
     /**
      * @return array<string, BaseFilter>
@@ -75,6 +70,4 @@ class MediaConvertsTable extends XotBaseResourceTable
             'delete' => DeleteBulkAction::make(),
         ];
     }
-=======
->>>>>>> ec2b884b (.)
 }

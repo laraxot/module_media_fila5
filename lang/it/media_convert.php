@@ -3,16 +3,7 @@
 declare(strict_types=1);
 
 return [
-<<<<<<< HEAD
     'navigation' => ['label' => 'Conversione media', 'group' => 'Conversione media', 'icon' => 'Conversione media', 'sort' => 20],
-=======
-    'navigation' => [
-        'label' => 'media convert',
-        'group' => 'media convert',
-        'icon' => 'media convert',
-        'sort' => 20,
-    ],
->>>>>>> ec2b884b (.)
     'fields' => [
         'applyFilters' => [
             'label' => 'applyFilters',

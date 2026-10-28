@@ -14,10 +14,7 @@ class TestBucketPermissionsAction
 {
     use QueueableAction;
 
-<<<<<<< HEAD
     private const string TITLE = '🔒 S3 Permissions';
-=======
->>>>>>> ec2b884b (.)
 
     /**
      * @return array<string, mixed>

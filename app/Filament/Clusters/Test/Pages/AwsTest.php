@@ -16,11 +16,7 @@ use Filament\Notifications\Notification;
 use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Component;
 use Filament\Schemas\Components\Section;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Lang;
-=======
-use Illuminate\Support\Facades\Config;
->>>>>>> ec2b884b (.)
 use Modules\Media\Filament\Clusters\Test;
 use Modules\Xot\Filament\Pages\XotBasePage;
 use Psr\Http\Message\StreamInterface;
@@ -157,14 +153,9 @@ class AwsTest extends XotBasePage
                 ],
             ]);
 
-<<<<<<< HEAD
             // headBucket() lancia AwsException se il bucket non e' raggiungibile: l'esito sta nell'eccezione.
             $s3->headBucket([
                 'Bucket' => $this->getS3Bucket(),
-=======
-            $result = $s3->headBucket([
-                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
->>>>>>> ec2b884b (.)
             ]);
 
             $this->testResults['s3'] = [
@@ -298,13 +289,8 @@ class AwsTest extends XotBasePage
             ]);
 
             // Test list objects permission
-<<<<<<< HEAD
             $s3->listObjectsV2([
                 'Bucket' => $this->getS3Bucket(),
-=======
-            $result = $s3->listObjectsV2([
-                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
->>>>>>> ec2b884b (.)
                 'MaxKeys' => 1,
             ]);
 
@@ -362,15 +348,9 @@ class AwsTest extends XotBasePage
                 'ContentType' => 'text/plain',
             ]);
 
-<<<<<<< HEAD
             // Test get operation: il contenuto scaricato deve coincidere con quello caricato
             $body = $s3->getObject([
                 'Bucket' => $this->getS3Bucket(),
-=======
-            // Test get operation
-            $result = $s3->getObject([
-                'Bucket' => Config::string('filesystems.disks.s3.bucket'),
->>>>>>> ec2b884b (.)
                 'Key' => $testFileName,
             ])->get('Body');
             $downloadMatches = $body instanceof StreamInterface && (string) $body === $testContent;

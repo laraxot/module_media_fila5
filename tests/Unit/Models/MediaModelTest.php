@@ -7,7 +7,6 @@ namespace Modules\Media\Tests\Unit\Models;
 use Modules\Media\Models\Media;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
-<<<<<<< HEAD
 use function Safe\class_parents;
 
 uses(TestCase::class)->group('no-media-db');
@@ -15,13 +14,6 @@ uses(TestCase::class)->group('no-media-db');
 describe('Media Model', function (): void {
     it('extends SpatieMedia', function (): void {
         Assert::assertArrayHasKey(SpatieMedia::class, class_parents(Media::class));
-=======
-uses(\Modules\Media\Tests\TestCase::class);
-
-describe('Media Model', function (): void {
-    it('extends SpatieMedia', function (): void {
-        expect(get_parent_class(Media::class))->toBe(SpatieMedia::class);
->>>>>>> ec2b884b (.)
     });
 
     it('uses HasXotFactory trait', function (): void {

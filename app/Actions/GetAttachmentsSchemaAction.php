@@ -5,14 +5,11 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Filament\Forms\Components\FileUpload;
-<<<<<<< HEAD
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Modules\Media\Datas\MediaConfigData;
-use Webmozart\Assert\Assert;
-=======
 use Spatie\QueueableAction\QueueableAction;
->>>>>>> ec2b884b (.)
+use Webmozart\Assert\Assert;
 
 class GetAttachmentsSchemaAction
 {
@@ -32,24 +29,14 @@ class GetAttachmentsSchemaAction
             $form[] = FileUpload::make($attachment)
                 ->directory('temp')
                 ->disk($disk)
-<<<<<<< HEAD
                 ->acceptedFileTypes($config->attachment_mime_types)
                 ->maxSize($config->attachment_max_size_kb)
-=======
-                ->acceptedFileTypes([
-                    'application/pdf',
-                    'application/msword',
-                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                ])
-                ->maxSize(10 * 1024 * 1024)
->>>>>>> ec2b884b (.)
                 ->visibility('public')
                 ->preserveFilenames()
                 ->required()
                 ->previewable()
                 ->downloadable()
                 ->reorderable(false)
-<<<<<<< HEAD
                 ->multiple(false)
                 /**
                  * `mixed $state` voluto: lo stato FileUpload e' eterogeneo
@@ -71,10 +58,6 @@ class GetAttachmentsSchemaAction
                     $set($attachment, $sessionFiles);
                 });
 
-            $form[] = $fileUpload;
-=======
-                ->multiple(false);
->>>>>>> ec2b884b (.)
         }
 
         return $form;
