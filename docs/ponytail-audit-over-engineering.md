@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Ponytail audit — Media (over-engineering)
 
 **Ultimo run:** 2026-06-30  
@@ -36,10 +33,6 @@ Rename `.bak` su `BaseController.php` dopo grep globale. Nessun impatto se nessu
 
 ## Collegamenti
 
-<<<<<<< HEAD
 - [00-INDEX.md](./00-index.md)
 ---
 - [00-INDEX.md](./00-index.md)
-=======
-- [00-INDEX.md](./00-INDEX.md)
->>>>>>> ec2b884b (.)

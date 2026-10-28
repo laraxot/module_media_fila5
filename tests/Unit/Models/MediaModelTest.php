@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\Media;
+use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 use function Safe\class_parents;

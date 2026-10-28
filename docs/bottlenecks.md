@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Colli di Bottiglia e Soluzioni - Modulo Media
 
 ## Panoramica
@@ -862,8 +859,4 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 * [bottlenecks.md](performance/bottlenecks.md)
 * [bottlenecks.md](../../Activity/docs/bottlenecks.md)
 * [bottlenecks.md](../../patient/docs/roadmap/bottlenecks.md)
-<<<<<<< HEAD
 * [bottlenecks.md](../../Cms/docs/bottlenecks.md)
-=======
-* [bottlenecks.md](../../cms/docs/bottlenecks.md)
->>>>>>> ec2b884b (.)

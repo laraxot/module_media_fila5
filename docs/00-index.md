@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -16,8 +15,6 @@ superseded_by: README.md
 ---
 
 > Superseded il 2026-10-14 come copia per sola differenza di maiuscole di `00-INDEX.md`. Quel file e' stato rimosso il 2026-10-22 (commit e2282c1b) e il suo contenuto (tra cui la mappa delle directory) non e' stato riportato qui: l'ingresso verificato sul codice e' [README.md](./README.md). Contenuto conservato per storia. Le voci "non presente" puntavano a file che non esistono (verificato 2026-10-14).
-=======
->>>>>>> ec2b884b (.)
 # 📚 **Indice Documentazione Modulo Media**
 
 **Status**: ✅ PHPStan Level 10 Compliant
@@ -63,7 +60,6 @@ superseded_by: README.md
 ## Dependency Intelligence
 
 - [Dependency intelligence](dependency-intelligence.md)
-<<<<<<< HEAD
 
 ---
 
@@ -104,5 +100,3 @@ superseded_by: README.md
 
 `/media/admin/setting`, solo super-admin, file `config/{tenant}/media.php`: dimensione massima e tipi MIME degli allegati delle Resource (prima 10 MB, pdf/doc/docx in `GetAttachmentsSchemaAction`).
 Decisione e modulo per modulo: [../../Xot/docs/stories/module-setting-pages.epic.md](../../Xot/docs/stories/module-setting-pages.epic.md).
-=======
->>>>>>> ec2b884b (.)

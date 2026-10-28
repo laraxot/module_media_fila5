@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 module: theme
 topic: -competitors
@@ -12,6 +11,3 @@ qmd: "competitors media"
 ---
 
 See canonical documentation: ../../../Themes/docs/shared-components/.gitkeep-Modules
-=======
-https://github.com/outer-web/filament-image-library
->>>>>>> ec2b884b (.)

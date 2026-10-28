@@ -8,12 +8,8 @@ qmd: "istruzioni agenti LLM wiki modulo"
 issues: []
 discussions: []
 related:
-<<<<<<< HEAD
   - "./webm.md"
 status: draft
-=======
-  - ./coding-agent-manifests.md
->>>>>>> ec2b884b (.)
 ---
 
 # Media {{TYPE^}} LLM Wiki Agent Instructions
@@ -156,7 +152,6 @@ Related:
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
 - [Module Documentation](../README.md)
-<<<<<<< HEAD
 
 ---
 
@@ -315,5 +310,3 @@ Related:
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
 - [Module Documentation](../README.md)
-=======
->>>>>>> ec2b884b (.)

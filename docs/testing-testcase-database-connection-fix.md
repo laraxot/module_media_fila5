@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Fix: Media TestCase - Database Connection Configuration
 
 **Problema**: Test Media falliscono con QueryException per database connection 'media'

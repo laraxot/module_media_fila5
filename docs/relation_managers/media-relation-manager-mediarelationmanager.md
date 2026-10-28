@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/relation_managers/media-relation-manager-mediarelationmanager.md
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: media-relation-manager.md
 ---
-=======
->>>>>>> ec2b884b (.):docs/relation_managers/media-relation-manager-1.md
 # MediaRelationManager
 
 ## Descrizione

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -17,7 +16,5 @@ https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.j
 ---
 https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
 ---
-=======
->>>>>>> ec2b884b (.)
 https://github.com/kefabean/lambda-transcoder/blob/master/transcoder/transcode.js
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/conflitti-merge-risolti-risoluzione-git-modulo-media.md
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: conflitti-merge-risolti.md
 ---
-=======
->>>>>>> ec2b884b (.):docs/conflitti-merge-risolti-1.md
 # Risoluzione dei Conflitti Git nel Modulo Media
 
 ## Panoramica

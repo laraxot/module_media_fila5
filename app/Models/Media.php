@@ -20,7 +20,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
- * @property-read User|null $creator
+ * @property-read ProfileContract|null $creator
  * @property-read string $extension
  * @property-read array<int, array{name: string, generated: bool, src: string}> $entry_conversions
  * @property-read string $path
@@ -77,8 +77,8 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string|null $curations
  * @property string|null $deleted_at
  * @property string|null $deleted_by
- * @property UserContract|null $creator
- * @property Model|Eloquent $model
+ * @property ProfileContract|null $creator
+ * @property Model $model
  * @property TemporaryUpload|null $temporaryUpload
  * @property ProfileContract|null $updater
  * @property ProfileContract|null $deleter

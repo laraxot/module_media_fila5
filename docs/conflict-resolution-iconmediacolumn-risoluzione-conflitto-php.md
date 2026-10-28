@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/conflict-resolution-iconmediacolumn-risoluzione-conflitto-php.md
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.):docs/conflict-resolution-iconmediacolumn-1.md
 # Risoluzione Conflitto IconMediaColumn.php
 
 ## Problema Identificato

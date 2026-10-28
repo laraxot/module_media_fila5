@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 title: "Media Module - Documentation Index"
 type: documentation
 bmad_id: MEDIA-DOCS-INDEX
@@ -44,34 +43,18 @@ Verificato sul codice il 2026-10-14 (`app/`, `config/`, `database/migrations`, `
 - Pannello Filament `media::admin` con tre Resource (`MediaResource`, `MediaConvertResource`, `TemporaryUploadResource`) piu' `HasMediaResource`, che porta relation manager e schemi riusabili dagli altri moduli.
 
 Citato in vecchi documenti ma non trovato nel codice: HLS/DASH, watermark automatico, isolamento per tenant (nessun riferimento a `Tenant` in `app/`), CDN generico (esiste solo CloudFront).
-=======
-title: documentazione modulo media
-module: Media
-type: index
-status: approved
-tags: [documentation, readme, modulo, second-brain]
-updated: "2026-05-27"
-related:
-  - ../README.md
----
-
-# Documentazione — modulo Media
-
-> **Mappa knowledge base locale.** Il [README in root](../README.md) è la vetrina (valore, release, onboarding); questo file indica **dove** trovare regole, wiki e audit per chi sviluppa o per gli agenti AI.
-
-## Scopo
-
-Media management module for the Laraxot ecosystem: images, videos, FFmpeg, and Intervention Image.
 
 ## Dove iniziare
->>>>>>> ec2b884b (.)
 
 - [Wiki locale](./wiki/index.md)
 - [Audit ridondanza](./code-redundancy-audit.md)
 - [Regole architettura](./architecture-rules.md)
 - [Disciplina agenti](./agent-edit-discipline.md)
 
-<<<<<<< HEAD
+## Dipendenze e collegamenti
+
+- [README root (vetrina)](../README.md) · [Xot (framework base)](../../Xot/docs/)
+- Standard [README doppio](../../../../docs/wiki/standards/module-theme-readme-dual.md) e [disciplina issue GitHub](../../../../docs/wiki/how-to/github-issue-agent-discipline.md) da seguire prima di modifiche sostanziali.
 - Dipende, nel codice, da: Xot (85 righe `use Modules\Xot` in `app/` e `tests/`), User (3), UI (2, `SvgExistsAction`), Job (1, `ClockWidget` in `ListMediaConverts`). `Tenant` compare solo tra i `repositories` di tipo path in `composer.json`.
 - Usato da (file in `Modules/*/app` e `Themes/*/app` che citano `Modules\Media` o `media::`): Blog 9, Notify 8, User 4, Rating 2, Fixcity 2, Cms 2, Xot 1.
 - Standard di documentazione: [contratto docs di moduli e temi](../../../../bmad-output/docs-architecture/module-theme-docs-contract.md).
@@ -111,35 +94,3 @@ Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al
 
 - [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media.dev.md)
 - [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)
-=======
-
-## Struttura tipica
-
-```text
-Media/
-├── README.md          ← vetrina (root package)
-├── docs/
-│   ├── README.md      ← questo indice
-│   └── wiki/          ← second brain (se presente)
-├── app/ o resources/
-└── composer.json
-```
-
-## Namespace / confini
-
-- Namespace: `Modules\Media`
-- Non duplicare qui la filosofia marketing: resta nel README root.
-
-## Collegamenti
-
-- [README root (vetrina)](../README.md)
-- [Xot (framework base)](../Xot/docs/)
-- [Wiki progetto](../../../docs/wiki/README.md)
-- [Standard README doppio](../../../../docs/wiki/standards/module-theme-readme-dual.md)
-
-## Per agenti
-
-1. Leggere scopo in questo file.
-2. Aprire `docs/wiki/index.md` se esiste.
-3. Seguire [disciplina issue GitHub](../../../docs/wiki/how-to/github-issue-agent-discipline.md) prima di modifiche sostanziali.
->>>>>>> ec2b884b (.)

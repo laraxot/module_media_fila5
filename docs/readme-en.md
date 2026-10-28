@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # 🖼️ Media — English presentation
 
 [![Domain-Media](https://img.shields.io/badge/Domain-Media%20Library-AD1457.svg)](#)
@@ -70,9 +67,6 @@ Frontoffice stack: **Tailwind · Alpine · Lit · DaisyUI · Flowbite · Filamen
 
 ---
 
-<<<<<<< HEAD
 **Module** `media` · **Laraxot** · **Media Module** · PHPStan 10 · Filament 5
 ---
-=======
->>>>>>> ec2b884b (.)
 **Module** `media` · **Laraxot** · **FixCity Platform** · PHPStan 10 · Filament 5

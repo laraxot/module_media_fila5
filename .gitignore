@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> ec2b884b (.)
 # ==============================================
 # LARAXOT MODULE MEDIA - .GITIGNORE
 # ==============================================
@@ -72,13 +69,6 @@ storage/*.key
 .env
 .env.*
 !.env.example
-<<<<<<< HEAD
-=======
-
-# ==============================================
-# ENVIRONMENT & CONFIGURATION
-# ==============================================
->>>>>>> ec2b884b (.)
 Homestead.yaml
 Homestead.json
 /.vagrant
@@ -180,7 +170,8 @@ _docs/
 _docs/
 agentdb.rvf
 tests/AuditCoverage/
-<<<<<<< HEAD
+audit-coverage/
+.devcontainer/
 
 # Root quality tool configs forbidden in module root
 phpmd*
@@ -234,9 +225,3 @@ docs/chat
 # Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
 app/Application
 /.docs-archive/
-=======
-audit-coverage/
-.claude-audit/
-.vscode/
-.devcontainer/
->>>>>>> ec2b884b (.)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "metodi duplicati analisi"
 type: note
@@ -452,8 +451,6 @@ qmd: "metodi duplicati analisi"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> ec2b884b (.)
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
 
 **Powered by**: Super Mucca AI 🐄✨

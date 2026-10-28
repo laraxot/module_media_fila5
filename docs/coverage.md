@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "coverage"
 type: note
@@ -11,8 +10,6 @@ discussions: []
 status: draft
 ---
 
-=======
->>>>>>> ec2b884b (.)
 # Media Module Test Coverage
 
 ## Coverage Results

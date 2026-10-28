@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Boost Skill Fix Summary - Media Module
 
 **Date**: 2026-03-02  
@@ -68,9 +65,5 @@ Critical dependencies for Media module:
    - Filesystem needs framework
    - Storage needs config
    - Cannot operate in isolation
-<<<<<<< HEAD
 ---
    - Cannot operate in isolation
-=======
-
->>>>>>> ec2b884b (.)

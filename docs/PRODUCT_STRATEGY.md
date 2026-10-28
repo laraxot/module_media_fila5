@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: product_strategy.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Media Module - Product Strategy
 
 **Module:** Media  

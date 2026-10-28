@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: mcp-server-recommended.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # MCP Server Consigliati per il Modulo Media
 
 ## Scopo del Modulo

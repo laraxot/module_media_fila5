@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Merge Conflict Files List
 
 This file contains a comprehensive list of files with merge conflict markers (`<<<< HEAD` or `<<<< .merge_file`) that need to be resolved.
@@ -96,9 +93,5 @@ This file contains a comprehensive list of files with merge conflict markers (`<
 ---
 *Generated on: $(date)
 *Total files: 96
-<<<<<<< HEAD
 ---
 *Status: Pending resolution*
-=======
-*Status: Pending resolution*
->>>>>>> ec2b884b (.)

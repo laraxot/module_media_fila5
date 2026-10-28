@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -97,8 +96,6 @@ status: draft
 ---
 
 *Last Updated: March 12, 2026*
-=======
->>>>>>> ec2b884b (.)
 # Media - Product Launch Plan
 
 > Piano di lancio. Modulo.

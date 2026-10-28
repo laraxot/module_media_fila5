@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,8 +11,6 @@ qmd: "index"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> ec2b884b (.)
 # Raw Sources — Media
 
 Questo layer contiene le fonti grezze: documenti immutabili che l'LLM legge ma non modifica.

@@ -6,6 +6,8 @@ namespace Modules\Media\Tests\Unit\Models;
 
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
+use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 
 use function Safe\class_parents;
 

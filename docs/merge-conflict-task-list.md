@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Documentation Merge Conflict Task List
 
 ## INCOMPLETE (3 DOCS)
@@ -31,9 +28,5 @@ status: draft
 - [x] `Modules/Fixcity/docs/docs/INDEX.md` - Added DRY/KISS requirements
 
 ## BOUNDARY CASES (0)
-<<<<<<< HEAD
 ---
 - [ ] No boundary cases detected
-=======
-- [ ] No boundary cases detected
->>>>>>> ec2b884b (.)

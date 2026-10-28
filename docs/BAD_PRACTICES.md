@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Bad Practices – Media Module
 
 - ❌ **VIOLATE** SVG asset location rule (see `svg-asset-location.md`) using invalid paths
@@ -30,9 +27,5 @@ status: draft
 
 // ✅ CORRECT: SVG in standard location
 @svg('map-marker.svg')
-<<<<<<< HEAD
 ---
 ```
-=======
-```
->>>>>>> ec2b884b (.)

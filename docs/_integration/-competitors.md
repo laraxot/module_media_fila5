@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: " competitors"
 type: note
@@ -26,8 +25,6 @@ qmd: " competitors"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> ec2b884b (.)
 # _competitors
 
 <!-- Contenuto migrato da _docs/_competitors.txt -->

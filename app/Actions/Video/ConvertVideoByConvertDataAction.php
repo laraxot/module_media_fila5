@@ -42,13 +42,6 @@ class ConvertVideoByConvertDataAction
         FFMpeg::fromDisk($data->disk)
             ->open($data->file)
             ->export()
-            ->onProgress(function (float $percentage, float $remaining, float $rate): void {
-                // Gestione del progresso
-                $msg = "{$percentage}% transcoded";
-                $msg .= "{$remaining} seconds left at rate: {$rate}";
-
-                // Log o notifica del progresso
-            })
             ->addFilter('-preset', 'ultrafast')
             // Utilizziamo il formato istanziato come parametro
             // @phpstan-ignore-next-line method.notFound

@@ -7,6 +7,8 @@ namespace Modules\Media\Tests\Unit\Models;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
+use Modules\Xot\Actions\Cast\SafeIntCastAction;
+use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);

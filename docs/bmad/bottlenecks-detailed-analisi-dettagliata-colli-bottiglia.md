@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/bmad/bottlenecks-detailed-analisi-dettagliata-colli-bottiglia.md
 ---
 title: "Analisi Dettagliata dei Colli di Bottiglia - Modulo Media"
 module: "Media"
@@ -11,8 +10,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.):docs/bottlenecks-detailed-1.md
 # Analisi Dettagliata dei Colli di Bottiglia - Modulo Media
 
 ## Panoramica

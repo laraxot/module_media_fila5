@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -15,7 +14,5 @@ status: draft
 ---
 https://github.com/mokhosh/laravel-xml2srt
 ---
-=======
->>>>>>> ec2b884b (.)
 https://github.com/mokhosh/laravel-xml2srt
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/s3test-corrections-correzioni-php-modulo-media.md
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.):docs/s3test-corrections-1.md
 # Correzioni S3Test.php - Modulo Media
 
 ## Problemi Identificati e Risolti
@@ -261,13 +258,9 @@ private function getSolutionForError(?string $errorCode): string
 
 ## Collegamenti
 
-<<<<<<< HEAD:docs/s3test-corrections-correzioni-php-modulo-media.md
 - [Documentazione Generale Media](../README.md)
 ---
 - [Documentazione Generale Media](README.md)
-=======
-- [Documentazione Generale Media](../readme.md)
->>>>>>> ec2b884b (.):docs/s3test-corrections-1.md
 - [Best Practice Traduzioni](../../../../docs/translation-standards.md)
 - [Convenzioni Laraxot](../../../../docs/laraxot_conventions.md)
 - [PHPStan Level 10 Fixes](./phpstan-level10-fixes.md)

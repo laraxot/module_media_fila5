@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # MediaRelationManager Documentation
 
 ## Overview
@@ -66,8 +63,4 @@ class YourResource extends Resource
 - Implementata integrazione Laraxot
 ## Collegamenti tra versioni di media-relation-manager.md
 * [media-relation-manager.md](../../../media/docs/filament/relation-managers/media-relation-manager.md)
-<<<<<<< HEAD
 * [media-relation-manager.md](../../resources/media-relation-manager.md)
-=======
-* [media-relation-manager.md](../../../media/docs/resources/media-relation-manager.md)
->>>>>>> ec2b884b (.)

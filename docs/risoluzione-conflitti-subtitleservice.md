@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: conflict-resolution-subtitleservice.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Risoluzione Conflitti Git - SubtitleService.php
 
 ## Intento

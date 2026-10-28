@@ -6,12 +6,15 @@ namespace Modules\Media\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Facades\Schema;
+use Mockery\Expectation;
+use Mockery\MockInterface;
 use Modules\Media\Providers\MediaServiceProvider;
 use Modules\User\Providers\UserServiceProvider;
 use Modules\Xot\Providers\XotServiceProvider;
+use Modules\Xot\Tests\XotBasePest;
 use Modules\Xot\Tests\XotBaseTestCase;
 use PHPUnit\Framework\Assert;
-use PHPUnit\Framework\MockObject\MockObject;
 use ReflectionClass;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\QueueableAction\QueueableAction;
@@ -29,6 +32,11 @@ use function Safe\file_get_contents;
 abstract class TestCase extends XotBaseTestCase
 {
     use DatabaseTransactions;
+
+    public static function mockExpectation(MockInterface $mock, string $method): Expectation
+    {
+        return $mock->shouldReceive($method);
+    }
 
     /**
      * @param  array<string, mixed>  $where
