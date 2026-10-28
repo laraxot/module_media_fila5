@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 issues: []
 discussions: []
 title: "Media {{TYPE^}} LLM Wiki Agent Instructions"
@@ -11,7 +12,20 @@ qmd: "agents"
 related:
   - "./webm.md"
 status: draft
+=======
+title: "Agent instructions"
+type: reference
+tags: [agents, coding-agent, llm-wiki]
+created: 2026-07-01
+updated: 2026-07-01
+qmd: "istruzioni agenti LLM wiki modulo"
+issues: []
+discussions: []
+related:
+  - ./coding-agent-manifests.md
+>>>>>>> ec2b884b (.)
 ---
+
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media
@@ -152,6 +166,7 @@ Related:
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
 - [Module Documentation](../README.md)
+<<<<<<< HEAD
 
 ---
 
@@ -310,3 +325,5 @@ Related:
 - [Project Wiki Integration](../../docs/wiki/README.md)
 - [Project Wiki Agent Instructions](../../docs/wiki/AGENTS.md)
 - [Module Documentation](../README.md)
+=======
+>>>>>>> ec2b884b (.)

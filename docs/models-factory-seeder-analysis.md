@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Analisi Modelli, Factory e Seeder - Modulo Media
 
 ## Riepilogo Modelli

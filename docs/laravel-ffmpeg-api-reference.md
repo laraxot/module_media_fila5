@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Laravel-FFMpeg – API Reference Completa
 
 > Package: `protonemedia/laravel-ffmpeg` v8+

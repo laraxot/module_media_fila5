@@ -4,19 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Resources\MediaResource\Tables;
 
-use Filament\Actions\Action;
-use Filament\Actions\ActionGroup;
-use Filament\Actions\DeleteAction;
-use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Filters\BaseFilter;
-use Filament\Tables\Filters\SelectFilter;
-use Modules\Media\Filament\Resources\MediaResource;
-use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Webmozart\Assert\Assert;
 
 use function is_string;
 
@@ -42,6 +32,7 @@ class MediaTable extends XotBaseResourceTable
             'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
         ];
     }
+<<<<<<< HEAD
 
     /**
      * @return array<string, BaseFilter>
@@ -108,4 +99,6 @@ class MediaTable extends XotBaseResourceTable
                 ->openUrlInNewTab(true),
         ];
     }
+=======
+>>>>>>> ec2b884b (.)
 }

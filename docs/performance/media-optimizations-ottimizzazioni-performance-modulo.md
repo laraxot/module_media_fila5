@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/performance/media-optimizations-ottimizzazioni-performance-modulo.md
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.):docs/performance/media-optimizations-1.md
 # Ottimizzazioni Performance Modulo Media
 
 ## 1. Ottimizzazione Conversione Video

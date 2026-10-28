@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 Copilot Redundancy Audit — 2026-05-25
 
 Sintesi

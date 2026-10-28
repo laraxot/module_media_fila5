@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -81,6 +82,8 @@ Implement core media upload and storage system with basic transformations.
 ---
 
 *Last Updated: March 12, 2026*
+=======
+>>>>>>> ec2b884b (.)
 # Sprint Planning: Media Module
 
 ## 🏁 Sprint Goal

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/contracts/path-generator-pathgenerator-interface.md
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: path-generator.md
 ---
+=======
+>>>>>>> ec2b884b (.):docs/contracts/path-generator-1.md
 # PathGenerator Interface
 
 ## Descrizione

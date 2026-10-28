@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: " stream"
 type: note
@@ -25,6 +26,8 @@ qmd: " stream"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> ec2b884b (.)
 # __stream
 
 <!-- Contenuto migrato da _docs/__stream.txt -->

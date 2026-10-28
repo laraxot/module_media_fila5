@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/filament-table-actions-convenzioni.md
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: filament-table-actions.md
 ---
+=======
+>>>>>>> ec2b884b (.):docs/filament-table-actions-1.md
 # Convenzioni per le Table Actions in Filament
 
 ## Regola Fondamentale

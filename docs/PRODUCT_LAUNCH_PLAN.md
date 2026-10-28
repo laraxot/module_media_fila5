@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: product_launch_plan.md
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Media Module - Product Launch Plan
 
 **Module:** Media  

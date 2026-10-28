@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: conflict-resolution-video-entry.md
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Risoluzione Conflitto in VideoEntry
 
 ## Panoramica

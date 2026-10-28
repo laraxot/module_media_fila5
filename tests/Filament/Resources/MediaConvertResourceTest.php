@@ -12,8 +12,12 @@ use Modules\Media\Tests\TestCase;
 uses(TestCase::class);
 
 test('get form schema returns expected components', function (): void {
+<<<<<<< HEAD
     $form = (new MediaConvertForm)->getFormSchema();
 
+=======
+    $form = (new MediaConvertResource)->getFormSchema();
+>>>>>>> ec2b884b (.)
     expect($form)->not->toBeEmpty();
 
     $componentClasses = array_map(get_class(...), $form);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -101,6 +102,8 @@ Majority of uploads from mobile.
 ---
 
 *Last Updated: March 12, 2026*
+=======
+>>>>>>> ec2b884b (.)
 # User Research: Media Module
 
 ## 🔬 Research Goals

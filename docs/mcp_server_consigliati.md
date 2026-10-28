@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: mcp-server-consigliati.md
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Server MCP consigliati per il modulo Media
 
 ## Scopo del modulo
@@ -37,4 +40,4 @@ Gestione, manipolazione e automazione di file e media.
 ```
 
 **Nota:**
-Aggiungi solo i server che realmente ti servono per il tuo workflow.
+Aggiungi solo i server che realmente ti servono per il tuo workflow. 

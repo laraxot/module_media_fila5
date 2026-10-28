@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 https://github.com/spatie/laravel-sitemap/blob/main/resources/views/video.blade.php
 
 https://github.com/anggadarkprince/beats-laravel-web/blob/master/resources/views/pages/video.blade.php

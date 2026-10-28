@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Media - Filosofia Completa: Logica, Religione, Politica, Zen
 
 **Data Creazione**: [DATE]
@@ -122,7 +125,7 @@ class Media extends BaseModel
 
 Il modulo Media **è utilizzato da** tutti i moduli che gestiscono file:
 - **User**: Avatar, documenti profilo
-- **Dominio operativo**: Documenti clienti, certificazioni dispositivi
+- **TechPlanner**: Documenti clienti, certificazioni dispositivi
 - **Cms**: Immagini contenuti, media gallery
 - **Employee**: Documenti dipendenti, foto profilo
 

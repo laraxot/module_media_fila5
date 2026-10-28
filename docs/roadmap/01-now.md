@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: now.md
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Now (Module Media)
 
 ## Stabilization

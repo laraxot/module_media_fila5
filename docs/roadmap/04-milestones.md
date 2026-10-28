@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: milestones.md
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Milestones - Media
 
 ## M1 Documentation Baseline

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/mcp-server-consigliati-modulo-media.md
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: mcp-server-consigliati.md
 ---
+=======
+>>>>>>> ec2b884b (.):docs/mcp-server-consigliati-1.md
 # Server MCP consigliati per il modulo Media
 
 ## Scopo del modulo

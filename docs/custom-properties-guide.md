@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Custom Properties — spatie/laravel-medialibrary
 
 **Package**: [`spatie/laravel-medialibrary`](https://spatie.be/docs/laravel-medialibrary/v11/advanced-usage/using-custom-properties)

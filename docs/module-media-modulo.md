@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/module-media-modulo.md
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: module-media.md
 ---
+=======
+>>>>>>> ec2b884b (.):docs/module-media-1.md
 # Modulo Media
 
 > **Collegamento globale:** Per le strategie generali e le best practices sulla risoluzione dei conflitti git, vedi [docs/git_conflict_resolution.md](../../../../../docs/git_conflict_resolution.md).

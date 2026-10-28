@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,3 +14,6 @@ related:
 status: draft
 ---
 # Best Practices
+=======
+# Best Practices
+>>>>>>> ec2b884b (.)

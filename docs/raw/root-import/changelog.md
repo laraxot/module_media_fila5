@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -11,6 +12,8 @@ qmd: "changelog"
 related:
   - "./webm.md"
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Changelog
 
 Tutte le variazioni importanti di Media saranno generate automaticamente da semantic-release.
