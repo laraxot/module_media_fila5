@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: preventionlines.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php

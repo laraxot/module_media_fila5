@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Merge conflict markers — file list
 
 Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_file). Seguire la lista per assegnare task agli agenti.
@@ -68,9 +65,5 @@ Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_fil
 
 - Regola: ogni modulo e tema deve avere un file `docs/merge-conflicts-list.md` con la lista locale e lo stato di avanzamento.
 - Quando si risolve un file, aggiornare lo stato nella lista e sincronizzare l'LLM Wiki (qmd embed) per ingestione.
-<<<<<<< HEAD
 ---
 - Quando si risolve un file, aggiornare lo stato nella lista e sincronizzare l'LLM Wiki (qmd embed) per ingestione.
-=======
-
->>>>>>> ec2b884b (.)

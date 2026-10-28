@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Modules\Media\Filament\Resources\MediaResource\Pages;
 
 use Filament\Actions\DeleteAction;
+use Filament\Widgets\Widget;
+use Filament\Widgets\WidgetConfiguration;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Filament\Resources\MediaResource\Widgets\ConvertWidget;
+use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
+use UnexpectedValueException;
 
 class ViewMedia extends XotBaseViewRecord
 {

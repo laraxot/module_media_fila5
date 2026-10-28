@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -106,8 +105,6 @@ Easy media management.
 ---
 
 *Last Updated: March 12, 2026*
-=======
->>>>>>> ec2b884b (.)
 # Media - Product Strategy
 
 > Strategia prodotto. Modulo.

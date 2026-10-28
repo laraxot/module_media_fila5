@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: sprint_planning.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Media Module - Sprint Planning
 
 **Module:** Media  

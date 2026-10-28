@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Quality Analysis Report - Media Module
 **Date**: [DATE]
 **Status**: ✅ **ILLUMINATED** - PHPStan Level 10 PASS

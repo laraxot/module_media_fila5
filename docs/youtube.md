@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -18,11 +17,3 @@ https://github.com/mokhosh/laravel-youtube-api
 https://github.com/mokhosh/laravel-youtube-downloader
 ---
 https://github.com/mokhosh/laravel-youtube-downloader
-=======
-https://github.com/mokhosh/laravel-youtube-api
-
-https://github.com/mokhosh/laravel-youtube-downloader
-
-
-
->>>>>>> ec2b884b (.)

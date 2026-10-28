@@ -1,6 +1,14 @@
 <?php
 
 declare(strict_types=1);
+
+use Illuminate\Support\Facades\DB;
+use Modules\Media\Database\Factories\MediaFactory;
+use Modules\Media\Models\Media;
+use PHPUnit\Framework\Assert;
+
+use function Safe\file_get_contents;
+
 /*
  * Bootstrap Pest — modulo Media.
  * Ogni file test dichiara uses(\Modules\Media\Tests\TestCase::class).

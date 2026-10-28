@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: overview.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Roadmap overview (Module Media)
 
 ## Scope

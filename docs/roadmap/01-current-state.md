@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: current-state.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Current State - Media
 
 ## Baseline

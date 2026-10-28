@@ -12,6 +12,7 @@ use Modules\Media\Filament\Resources\MediaResource\Pages\ListMedia;
 use Modules\Media\Filament\Resources\MediaResource\Pages\ViewMedia;
 use Modules\Media\Models\Media;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 class MediaResource extends XotBaseResource
 {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: later.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Later (Module Media)
 
 ## Longer-term ideas

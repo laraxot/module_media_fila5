@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,6 +13,3 @@ related:
 status: draft
 ---
 # Data Models
-=======
-# Data Models
->>>>>>> ec2b884b (.)

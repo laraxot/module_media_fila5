@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -171,8 +170,6 @@ related:
   - ./coding-agent-manifests.md
 ---
 
-=======
->>>>>>> ec2b884b (.)
 # Media {{TYPE^}} LLM Wiki Agent Instructions
 
 > **Module/Theme:** Media

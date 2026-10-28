@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Fasi di sviluppo - Media Module
 
 ## Fase 1: Infrastruttura Core (Completata)

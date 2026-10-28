@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Server MCP consigliati per il modulo Media
 
 ## Scopo del modulo

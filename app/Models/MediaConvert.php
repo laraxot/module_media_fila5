@@ -18,6 +18,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read string|null $converted_file
  * @property-read string|null $disk
  * @property-read string|null $file
+ * @property string|null $format
  * @property-read Media|null $media
  * @property-read ProfileContract|null $updater
  *

@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/actions/convert-video-by-media-convert-convertvideobymediaconvertaction.md
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.):docs/actions/convert-video-by-media-convert-1.md
 # ConvertVideoByMediaConvertAction
 
 ## Panoramica

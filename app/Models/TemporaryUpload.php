@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
 use InvalidArgumentException;
+use Modules\Media\Database\Factories\TemporaryUploadFactory;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;

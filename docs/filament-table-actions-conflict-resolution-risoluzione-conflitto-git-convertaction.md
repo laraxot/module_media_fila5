@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/filament-table-actions-conflict-resolution-risoluzione-conflitto-git-convertaction.md
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: filament-table-actions-conflict-resolution.md
 ---
-=======
->>>>>>> ec2b884b (.):docs/filament-table-actions-conflict-resolution-1.md
 # Risoluzione conflitto git su Filament Table ConvertAction
 
 ## Problema

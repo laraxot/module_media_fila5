@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Media Module - Comprehensive Analysis
 
 ## Module Overview
@@ -109,11 +106,7 @@ The Media module provides comprehensive media file management:
 - Bulk operations
 - Advanced search
 - Metadata management
-<<<<<<< HEAD
 - Performance optimization
 ---
 - Performance optimization
 - Performance optimization
-=======
-- Performance optimization
->>>>>>> ec2b884b (.)

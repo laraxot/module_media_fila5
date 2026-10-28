@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Analisi Dettagliata dei Colli di Bottiglia - Modulo Media
 
 ## Panoramica
@@ -377,10 +374,7 @@ final class Media extends Model
 ```
 
 ---
-<<<<<<< HEAD
 
 ```
 ---
 ---
-=======
->>>>>>> ec2b884b (.)

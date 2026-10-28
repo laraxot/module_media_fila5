@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,5 +11,3 @@ qmd: "test11"
 related:
   - "./webm.md"
 ---
-=======
->>>>>>> ec2b884b (.)

@@ -19,6 +19,7 @@ use Modules\Media\Actions\Video\GetVideoDurationAction;
 use Modules\Media\Actions\Video\GetVideoFrameContentAction;
 use Modules\Media\Actions\Video\GetVideoScreenshotAction;
 use Modules\Media\Tests\TestCase;
+use PHPUnit\Framework\Assert;
 use ReflectionClass;
 
 uses(TestCase::class);

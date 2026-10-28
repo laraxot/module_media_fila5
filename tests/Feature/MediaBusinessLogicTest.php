@@ -16,6 +16,7 @@ use Modules\Media\Tests\TestCase;
 use Modules\User\Database\Factories\UserFactory;
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Tests\XotBasePest;
+use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 

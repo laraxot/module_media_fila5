@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: risks.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Risks and dependencies (Module Media)
 
 ## Risks

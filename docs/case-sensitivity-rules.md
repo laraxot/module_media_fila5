@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Case Sensitivity Rules - Media Module
 
 ## Problema / Problem
@@ -50,7 +47,4 @@ bucket sono state allineate, la rimozione resta una decisione aperta.
 ## Update Log
 
 - **[DATE]**: Removed `mediaconvertresourcetest.php` duplicate
-<<<<<<< HEAD
 - **2026-10-20**: duplicati ricomparsi nel repository (vedi sopra), non rimossi
-=======
->>>>>>> ec2b884b (.)

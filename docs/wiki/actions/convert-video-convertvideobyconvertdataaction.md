@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/wiki/actions/convert-video-convertvideobyconvertdataaction.md
 ---
 title: "ConvertVideoByConvertDataAction"
 module: "Media"
@@ -11,8 +10,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.):docs/actions/convert-video-1.md
 # ConvertVideoByConvertDataAction
 
 ## Panoramica

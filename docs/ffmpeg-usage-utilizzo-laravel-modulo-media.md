@@ -1,4 +1,3 @@
-<<<<<<< HEAD:docs/ffmpeg-usage-utilizzo-laravel-modulo-media.md
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.):docs/ffmpeg-usage-1.md
 # Utilizzo di Laravel-FFMpeg nel Modulo Media
 
 ## Introduzione

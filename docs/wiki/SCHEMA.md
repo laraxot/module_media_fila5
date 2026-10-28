@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 type: note
 created: 2026-09-26
 updated: 2026-09-26
@@ -10,15 +9,6 @@ title: "Rimando a schema.md"
 description: "Documento unificato: il contenuto canonico vive in schema.md."
 status: merged
 tags: [merge, duplicato, case-only]
-=======
-title: Wiki Schema
-description: Schema e convenzioni per la manutenzione della wiki
-tags:
-  - schema
-  - conventions
-  - llm-instructions
-created: 2026-04-15
->>>>>>> ec2b884b (.)
 ---
 
 # Wiki Schema - Media

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,8 +12,6 @@ related:
   - "./webm.md"
 status: draft
 ---
-=======
->>>>>>> ec2b884b (.)
 # Modulo Media
 
 Data: [DATE] 19:09:56
@@ -425,10 +422,5 @@ tests_old/Unit
 * [structure.md](../../Tenant/docs/structure.md)
 * [structure.md](../../Activity/docs/structure.md)
 * [structure.md](../../../cms/docs/structure.md)
-<<<<<<< HEAD
 * [structure.md](../../Cms/docs/themes/structure.md)
 * [structure.md](../../Cms/docs/components/structure.md)
-=======
-* [structure.md](../../../cms/docs/themes/structure.md)
-* [structure.md](../../../cms/docs/components/structure.md)
->>>>>>> ec2b884b (.)

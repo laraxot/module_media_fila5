@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,8 +13,6 @@ related:
 status: superseded
 superseded_by: workstreams.md
 ---
-=======
->>>>>>> ec2b884b (.)
 # Workstreams - Media
 
 ## WS1 Architecture

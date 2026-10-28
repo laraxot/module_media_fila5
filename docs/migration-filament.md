@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -15,6 +14,3 @@ status: draft
 ---
 ---
 ---
-=======
-
->>>>>>> ec2b884b (.)
