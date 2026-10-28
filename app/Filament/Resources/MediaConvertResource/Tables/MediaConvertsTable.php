@@ -20,6 +20,9 @@ use Modules\Media\Models\MediaConvert;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Spatie\QueueableAction\ActionJob;
 
+use function app;
+use function dispatch;
+
 class MediaConvertsTable extends XotBaseResourceTable
 {
     /**

@@ -24,6 +24,10 @@ class ResolveAwsS3ErrorSolutionAction
             'BucketRegionError' => 'Update AWS_DEFAULT_REGION to match bucket region',
         ];
 
+<<<<<<< .merge_file_vOBsLf
         return $solutions[$errorCode] ?? 'Consult AWS documentation for error: '.$errorCode;
+=======
+        return $solutions[$errorCode] ?? ('Consult AWS documentation for error: '.$errorCode);
+>>>>>>> .merge_file_k3I0gI
     }
 }

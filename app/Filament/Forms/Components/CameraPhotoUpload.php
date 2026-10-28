@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Media\Filament\Forms\Components;
 
+<<<<<<< .merge_file_0V7kMQ
 use Modules\Xot\Filament\Forms\Components\XotBaseSpatieMediaLibraryFileUpload;
+=======
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+>>>>>>> .merge_file_sC5sqn
 
 /**
  * Media Library field for photos taken with a phone camera.
@@ -14,7 +18,11 @@ use Modules\Xot\Filament\Forms\Components\XotBaseSpatieMediaLibraryFileUpload;
  * the same transform rewrites SVGs, flattens animated GIFs and makes small PNGs heavier (docs/camera-photo-upload-research.md).
  * The field's own calls still override these defaults; server-side validation is unchanged.
  */
+<<<<<<< .merge_file_0V7kMQ
 class CameraPhotoUpload extends XotBaseSpatieMediaLibraryFileUpload
+=======
+class CameraPhotoUpload extends SpatieMediaLibraryFileUpload
+>>>>>>> .merge_file_sC5sqn
 {
     /** Longest side, in pixels, of a photo after the browser has shrunk it; same value as Media camera-image.js (public wizard). */
     public const int MAX_SIDE = 2048;

@@ -423,4 +423,8 @@ tests_old/Unit
 * [structure.md](../../Activity/docs/structure.md)
 * [structure.md](../../../cms/docs/structure.md)
 * [structure.md](../../Cms/docs/themes/structure.md)
+<<<<<<< .merge_file_leeNpx
 * [structure.md](../../Cms/docs/components/structure.md)
+=======
+* [structure.md](../../Cms/docs/components/structure.md)
+>>>>>>> .merge_file_7seGaj
