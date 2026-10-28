@@ -53,8 +53,4 @@ Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in quest
 * [lang-link.md](../../../Patient/docs/lang-link.md)
 * [lang-link.md](../../Cms/docs/lang-link.md)
 ---
-<<<<<<< .merge_file_dhcsOg
 * [lang-link.md](../../Cms/docs/lang-link.md)
-=======
-* [lang-link.md](../../Cms/docs/lang-link.md)
->>>>>>> .merge_file_y6n0xI

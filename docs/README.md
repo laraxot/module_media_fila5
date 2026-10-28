@@ -34,8 +34,6 @@ Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" 
 ## Scopo del modulo
 
 Verificato sul codice il 2026-10-14 (`app/`, `config/`, `database/migrations`, `routes/`):
-<<<<<<< .merge_file_0X9zhJ
-
 - Modelli sopra Spatie MediaLibrary: `Media` estende `Spatie\MediaLibrary\MediaCollections\Models\Media`, `TemporaryUpload` implementa `HasMedia`, `MediaConvert` traccia le conversioni video. Connessione database `media` (`Models/BaseModel`).
 - Conversione video con `pbmedia/laravel-ffmpeg`: `Actions/Video/*`, comando `media:convert-video {disk} {file}`, generatori `Conversions/VideoGenerators/Webm` e `Conversions/ImageGenerators/PowerPoint`.
 - Allegati ai record: `AttachMediaAction`, `SaveAttachmentsAction`, `GetAttachmentsSchemaAction`, azione Filament `AddAttachmentAction`.
@@ -44,8 +42,6 @@ Verificato sul codice il 2026-10-14 (`app/`, `config/`, `database/migrations`, `
 - Pannello Filament `media::admin` con tre Resource (`MediaResource`, `MediaConvertResource`, `TemporaryUploadResource`) piu' `HasMediaResource`, che porta relation manager e schemi riusabili dagli altri moduli.
 
 Citato in vecchi documenti ma non trovato nel codice: HLS/DASH, watermark automatico, isolamento per tenant (nessun riferimento a `Tenant` in `app/`), CDN generico (esiste solo CloudFront).
-=======
->>>>>>> .merge_file_3g4T8r
 
 - Modelli sopra Spatie MediaLibrary: `Media` estende `Spatie\MediaLibrary\MediaCollections\Models\Media`, `TemporaryUpload` implementa `HasMedia`, `MediaConvert` traccia le conversioni video. Connessione database `media` (`Models/BaseModel`).
 - Conversione video con `pbmedia/laravel-ffmpeg`: `Actions/Video/*`, comando `media:convert-video {disk} {file}`, generatori `Conversions/VideoGenerators/Webm` e `Conversions/ImageGenerators/PowerPoint`.
@@ -53,10 +49,6 @@ Citato in vecchi documenti ma non trovato nel codice: HLS/DASH, watermark automa
 - Sottotitoli e streaming: `Actions/Subtitle/*` (SRT in VTT, lettura XML) e `Actions/Stream/StreamVideoAction`.
 - Storage AWS S3 e CloudFront: `Actions/S3/*`, `Actions/CloudFront/GetCloudFrontSignedUrlAction`, diagnostica in `Actions/Diagnostic/Aws/*` e `Actions/Diagnostic/S3/*`, pagine Filament di prova nel cluster `Test` (`AwsTest`, `S3Test`).
 - Pannello Filament `media::admin` con tre Resource (`MediaResource`, `MediaConvertResource`, `TemporaryUploadResource`) piu' `HasMediaResource`, che porta relation manager e schemi riusabili dagli altri moduli.
-
-<<<<<<< .merge_file_0X9zhJ
-=======
-Citato in vecchi documenti ma non trovato nel codice: HLS/DASH, watermark automatico, isolamento per tenant (nessun riferimento a `Tenant` in `app/`), CDN generico (esiste solo CloudFront).
 
 ## Dove iniziare
 
@@ -69,7 +61,6 @@ Citato in vecchi documenti ma non trovato nel codice: HLS/DASH, watermark automa
 
 - [README root (vetrina)](../README.md) · [Xot (framework base)](../../Xot/docs/)
 - Standard [README doppio](../../../../docs/wiki/standards/module-theme-readme-dual.md) e [disciplina issue GitHub](../../../../docs/wiki/how-to/github-issue-agent-discipline.md) da seguire prima di modifiche sostanziali.
->>>>>>> .merge_file_3g4T8r
 - Dipende, nel codice, da: Xot (85 righe `use Modules\Xot` in `app/` e `tests/`), User (3), UI (2, `SvgExistsAction`), Job (1, `ClockWidget` in `ListMediaConverts`). `Tenant` compare solo tra i `repositories` di tipo path in `composer.json`.
 - Usato da (file in `Modules/*/app` e `Themes/*/app` che citano `Modules\Media` o `media::`): Blog 9, Notify 8, User 4, Rating 2, Fixcity 2, Cms 2, Xot 1.
 - Standard di documentazione: [contratto docs di moduli e temi](../../../../bmad-output/docs-architecture/module-theme-docs-contract.md).
@@ -108,8 +99,4 @@ Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al
 ## Story recenti
 
 - [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-zero-errors-media.story.md) · [dev](./stories/phpstan-zero-errors-media.dev.md)
-<<<<<<< .merge_file_0X9zhJ
 - [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)
-=======
-- [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)
->>>>>>> .merge_file_3g4T8r

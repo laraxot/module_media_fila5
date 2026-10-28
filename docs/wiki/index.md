@@ -40,19 +40,11 @@ qmd search "Media <topic>" --limit 5
 # Media Module Wiki
 
 ## Indices
-<<<<<<< .merge_file_CSVSCB
 - [Rules](rules/index.md)
 - [Skills](skills/index.md)
 - [Commands](commands/index.md)
 - [Memories](memories/index.md)
 - [Concepts](concepts/index.md)
-=======
-- [Rules](rules/INDEX.md)
-- [Skills](skills/INDEX.md)
-- [Commands](commands/INDEX.md)
-- [Memories](memories/INDEX.md)
-- [Concepts](concepts/INDEX.md)
->>>>>>> .merge_file_ITatTm
 
 ## On-Demand Workflow
 

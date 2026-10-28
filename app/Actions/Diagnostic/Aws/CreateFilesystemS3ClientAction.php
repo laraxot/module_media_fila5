@@ -6,10 +6,6 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 
 use Aws\S3\S3Client;
 use Spatie\QueueableAction\QueueableAction;
-<<<<<<< .merge_file_1pbUCL
-use Webmozart\Assert\Assert;
-=======
->>>>>>> .merge_file_tsuZnw
 
 class CreateFilesystemS3ClientAction
 {
@@ -32,13 +28,7 @@ class CreateFilesystemS3ClientAction
     public function bucket(): string
     {
         $bucket = config('filesystems.disks.s3.bucket');
-<<<<<<< .merge_file_1pbUCL
-        Assert::string($bucket);
-
-        return $bucket;
-=======
 
         return is_string($bucket) ? $bucket : '';
->>>>>>> .merge_file_tsuZnw
     }
 }
