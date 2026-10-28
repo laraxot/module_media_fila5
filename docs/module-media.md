@@ -97,6 +97,25 @@ composer format        # Formatta il codice
 - Integrazione con Filament
 - Sistema di cache media
 
+### Contratto upload camera mobile (2026-10-27)
+
+Il modulo Media riceve gli allegati del ticket attraverso il contratto standard
+`TemporaryUploadedFile`/Spatie Media Library. La cattura camera avviene nel
+browser del tema: `getUserMedia` produce un JPEG ridimensionato e lo consegna
+allo stesso upload Livewire del picker. Media non introduce una seconda tabella,
+un endpoint Uppy o persistenza base64.
+
+La sicurezza resta centralizzata nel campo Fixcity: JPEG, PNG e PDF, massimo 5
+file e 10 MB ciascuno. HEIC/HEIF è solo un formato d'ingresso client convertito
+in JPEG; non è una nuova whitelist della collezione. Il web server deve
+consentire almeno `upload_max_filesize=12M`, `post_max_size=16M` e
+`client_max_body_size 16M`, così PHP non respinge il multipart prima della
+validazione applicativa.
+
+Il riferimento progettuale e i criteri sono in
+`Modules/Fixcity/docs/bmad/research/mobile-camera-upload-ecosystem.md` e nella
+story camera del modulo Fixcity.
+
 ## Configurazione
 ### FFmpeg
 - Richiede FFmpeg installato nel sistema
