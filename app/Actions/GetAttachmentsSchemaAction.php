@@ -7,6 +7,7 @@ namespace Modules\Media\Actions;
 use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
+use Modules\Media\Datas\MediaConfigData;
 use Webmozart\Assert\Assert;
 
 class GetAttachmentsSchemaAction
@@ -18,14 +19,16 @@ class GetAttachmentsSchemaAction
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
         $form = [];
+        // Limiti dalla SettingPage di Media (prima scritti qui: 10 MB, pdf/doc/docx).
+        $config = MediaConfigData::make();
 
         foreach ($attachments as $attachment) {
             $attachmentStr = (string) $attachment;
             $fileUpload = FileUpload::make($attachmentStr)
                 ->directory('temp')
                 ->disk($disk)
-                ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
-                ->maxSize(10 * 1024)
+                ->acceptedFileTypes($config->attachment_mime_types)
+                ->maxSize($config->attachment_max_size_kb)
                 ->visibility('public')
                 ->preserveFilenames()
                 ->required()

@@ -95,3 +95,8 @@ superseded_by: README.md
 ---
 
 **Ultimo Aggiornamento**: 2026-03-24
+
+## Impostazioni del modulo (SettingPage)
+
+`/media/admin/setting`, solo super-admin, file `config/{tenant}/media.php`: dimensione massima e tipi MIME degli allegati delle Resource (prima 10 MB, pdf/doc/docx in `GetAttachmentsSchemaAction`).
+Decisione e modulo per modulo: [../../Xot/docs/stories/module-setting-pages.epic.md](../../Xot/docs/stories/module-setting-pages.epic.md).

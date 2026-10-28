@@ -16,7 +16,7 @@ updated: 2026-10-21
 - [Brainstorming](./brainstorming/)
 - [Epiche](./epics/)
 - [Stories](./stories/)
-  - [PHPStan cluster A 2026-10-21](./stories/phpstan-clusterA-20261021.story.md)
+  - [PHPStan cluster A 2026-10-21](./stories/phpstan-clusterA.story.md)
 - [Wiki del modulo](../wiki/)
 
 ## Legacy da consultare, non da estendere
