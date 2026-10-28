@@ -10,11 +10,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Carbon;
-<<<<<<< HEAD
 use InvalidArgumentException;
-=======
-use Modules\Media\Database\Factories\TemporaryUploadFactory;
->>>>>>> ec2b884b (.)
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
 use Modules\Xot\Contracts\ProfileContract;
@@ -37,20 +33,10 @@ use Webmozart\Assert\Assert;
  * @property MediaCollection<int, Media> $media
  * @property int|null $media_count
  *
-<<<<<<< HEAD
  * @method static \Modules\Media\Database\Factories\TemporaryUploadFactory factory($count = null, $state = [])
  * @method static Builder<static> newModelQuery()
  * @method static Builder<static> newQuery()
  * @method static Builder<static> query()
-=======
- * @method static Builder<static>|TemporaryUpload newModelQuery()
- * @method static Builder<static>|TemporaryUpload newQuery()
- * @method static Builder<static>|TemporaryUpload query()
- * @method static Builder<static>|TemporaryUpload whereCreatedAt($value)
- * @method static Builder<static>|TemporaryUpload whereId($value)
- * @method static Builder<static>|TemporaryUpload whereSessionId($value)
- * @method static Builder<static>|TemporaryUpload whereUpdatedAt($value)
->>>>>>> ec2b884b (.)
  *
  * @property string|null $updated_by
  * @property string|null $created_by
@@ -72,7 +58,6 @@ use Webmozart\Assert\Assert;
  * @property string|null $mime_type
  * @property string $status
  *
-<<<<<<< HEAD
  * @method static Builder<static> whereCreatedAt($value)
  * @method static Builder<static> whereCreatedBy($value)
  * @method static Builder<static> whereDeletedAt($value)
@@ -86,15 +71,6 @@ use Webmozart\Assert\Assert;
  * @method static Builder<static> whereUpdatedAt($value)
  * @method static Builder<static> whereUpdatedBy($value)
  * @method static Builder<static> whereUserId($value)
-=======
- * @method static Builder<static>|TemporaryUpload whereFileName($value)
- * @method static Builder<static>|TemporaryUpload whereFileSize($value)
- * @method static Builder<static>|TemporaryUpload whereMimeType($value)
- * @method static Builder<static>|TemporaryUpload whereStatus($value)
- * @method static Builder<static>|TemporaryUpload whereUserId($value)
- *
- * @mixin \Eloquent
->>>>>>> ec2b884b (.)
  */
 class TemporaryUpload extends BaseModel implements HasMedia
 {

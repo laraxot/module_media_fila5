@@ -32,7 +32,6 @@ class MediaTable extends XotBaseResourceTable
             'updated_at' => TextColumn::make('updated_at')->dateTime()->sortable()->toggleable(isToggledHiddenByDefault: true),
         ];
     }
-<<<<<<< HEAD
 
     /**
      * @return array<string, BaseFilter>
@@ -99,6 +98,4 @@ class MediaTable extends XotBaseResourceTable
                 ->openUrlInNewTab(true),
         ];
     }
-=======
->>>>>>> ec2b884b (.)
 }

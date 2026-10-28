@@ -26,12 +26,7 @@ uses(TestCase::class);
 describe('Media Actions Coverage', function () {
     describe('Image Merge Action', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(ImageMerge::class, (new ImageMerge)::class);
-=======
-            $action = new ImageMerge;
-            expect(get_class($action))->toBe(ImageMerge::class);
->>>>>>> ec2b884b (.)
         });
 
         it('has handle method', function (): void {
@@ -53,21 +48,10 @@ describe('Media Actions Coverage', function () {
 
     describe('SvgExistsAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(SvgExistsAction::class, (new SvgExistsAction)::class);
         });
 
         it('can be resolved from container', function (): void {})->todo();
-=======
-            $action = new SvgExistsAction;
-            expect(get_class($action))->toBe(SvgExistsAction::class);
-        });
-
-        it('can be resolved from container', function (): void {
-            $action = app(SvgExistsAction::class);
-            expect(get_class($action))->toBe(SvgExistsAction::class);
-        });
->>>>>>> ec2b884b (.)
 
         it('has execute method', function (): void {
             expect((new ReflectionClass(SvgExistsAction::class))->hasMethod('execute'))->toBeTrue();
@@ -80,21 +64,10 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(ConvertVideoAction::class, (new ConvertVideoAction)::class);
         });
 
         it('can be resolved from container', function (): void {})->todo();
-=======
-            $action = new ConvertVideoAction;
-            expect(get_class($action))->toBe(ConvertVideoAction::class);
-        });
-
-        it('can be resolved from container', function (): void {
-            $action = app(ConvertVideoAction::class);
-            expect(get_class($action))->toBe(ConvertVideoAction::class);
-        });
->>>>>>> ec2b884b (.)
 
         it('has execute method', function (): void {
             expect((new ReflectionClass(ConvertVideoAction::class))->hasMethod('execute'))->toBeTrue();
@@ -111,12 +84,7 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByConvertDataAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(ConvertVideoByConvertDataAction::class, (new ConvertVideoByConvertDataAction)::class);
-=======
-            $action = new ConvertVideoByConvertDataAction;
-            expect(get_class($action))->toBe(ConvertVideoByConvertDataAction::class);
->>>>>>> ec2b884b (.)
         });
 
         it('has execute method', function (): void {
@@ -134,12 +102,7 @@ describe('Media Actions Coverage', function () {
 
     describe('ConvertVideoByMediaConvertAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(ConvertVideoByMediaConvertAction::class, (new ConvertVideoByMediaConvertAction)::class);
-=======
-            $action = new ConvertVideoByMediaConvertAction;
-            expect(get_class($action))->toBe(ConvertVideoByMediaConvertAction::class);
->>>>>>> ec2b884b (.)
         });
 
         it('has execute method', function (): void {
@@ -157,12 +120,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoScreenshotAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(GetVideoScreenshotAction::class, (new GetVideoScreenshotAction)::class);
-=======
-            $action = new GetVideoScreenshotAction;
-            expect(get_class($action))->toBe(GetVideoScreenshotAction::class);
->>>>>>> ec2b884b (.)
         });
 
         it('has backoff property', function (): void {
@@ -180,12 +138,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoFrameContentAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(GetVideoFrameContentAction::class, (new GetVideoFrameContentAction)::class);
-=======
-            $action = new GetVideoFrameContentAction;
-            expect(get_class($action))->toBe(GetVideoFrameContentAction::class);
->>>>>>> ec2b884b (.)
         });
 
         it('has execute method', function (): void {
@@ -203,12 +156,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetVideoDurationAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(GetVideoDurationAction::class, (new GetVideoDurationAction)::class);
-=======
-            $action = new GetVideoDurationAction;
-            expect(get_class($action))->toBe(GetVideoDurationAction::class);
->>>>>>> ec2b884b (.)
         });
 
         it('has execute method', function (): void {
@@ -308,12 +256,7 @@ describe('Media Actions Coverage', function () {
 
     describe('GetCloudFrontSignedUrlAction', function () {
         it('can be instantiated', function (): void {
-<<<<<<< HEAD
             Assert::assertSame(GetCloudFrontSignedUrlAction::class, (new GetCloudFrontSignedUrlAction)::class);
-=======
-            $action = new GetCloudFrontSignedUrlAction;
-            expect(get_class($action))->toBe(GetCloudFrontSignedUrlAction::class);
->>>>>>> ec2b884b (.)
         });
 
         it('has execute method', function (): void {

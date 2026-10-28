@@ -26,14 +26,10 @@ class FileExtensionRule implements ValidationRule
         ));
     }
 
-<<<<<<< HEAD
     /**
      * `mixed $value` imposto da `Illuminate\Contracts\Validation\ValidationRule` (LSP).
      */
     public function validate(string $_attribute, mixed $value, Closure $fail): void
-=======
-    public function validate(string $attribute, mixed $value, Closure $fail): void
->>>>>>> ec2b884b (.)
     {
         if ($this->passes($attribute, $value)) {
             return;

@@ -8,16 +8,8 @@ return [
     'navigation' => [
         'name' => 'Media',
         'plural' => 'Media',
-<<<<<<< HEAD
         'group' => ['name' => 'Sistema', 'description' => 'Gestione dei file multimediali'],
         'label' => 'Media',
-=======
-        'group' => [
-            'name' => 'Sistema',
-            'description' => 'Gestione dei file multimediali',
-        ],
-        'label' => 'media',
->>>>>>> ec2b884b (.)
         'sort' => 20,
         'icon' => 'media-main-animated',
     ],

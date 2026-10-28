@@ -20,33 +20,15 @@ if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     }
 }
 
-<<<<<<< HEAD
-=======
-test('base model extends eloquent model', function (): void {
-    expect(get_parent_class(BaseModel::class))->toBe(XotBaseModel::class);
-});
-
->>>>>>> ec2b884b (.)
 test('base model has correct table name', function (): void {
     expect(makeMediaTestBaseModel()->getTable())->toBe('test_media_table');
 });
 
-<<<<<<< HEAD
 test('base model can be instantiated with configured table', function (): void {
     $model = makeMediaTestBaseModel();
 
     Assert::assertSame('test_media_table', $model->getTable());
     Assert::assertNotSame(BaseModel::class, $model::class);
-=======
-test('base model can be instantiated', function (): void {
-    expect(get_class(makeMediaTestBaseModel()))->toContain('@anonymous');
-});
-
-test('base model has proper inheritance chain', function (): void {
-    $model = makeMediaTestBaseModel();
-    expect(get_class($model))->toContain('@anonymous');
-    expect(is_subclass_of(get_class($model), Model::class))->toBeTrue();
->>>>>>> ec2b884b (.)
 });
 
 test('base model has timestamps enabled', function (): void {

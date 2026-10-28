@@ -14,7 +14,6 @@ use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
-<<<<<<< HEAD
  * @property-read ProfileContract|null $creator
  * @property-read string|null $converted_file
  * @property-read string|null $disk
@@ -27,9 +26,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static> query()
  *
  * @property string $id
-=======
- * @property int $id
->>>>>>> ec2b884b (.)
  * @property int $media_id
  * @property string|null $codec_video
  * @property string|null $codec_audio
@@ -49,7 +45,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property string|null $created_by
  * @property Carbon|null $deleted_at
  * @property string|null $deleted_by
-<<<<<<< HEAD
  *
  * @method static Builder<static> whereBitrate($value)
  * @method static Builder<static> whereCodecAudio($value)
@@ -72,42 +67,6 @@ use Modules\Xot\Contracts\ProfileContract;
  * @method static Builder<static> whereUpdatedAt($value)
  * @method static Builder<static> whereUpdatedBy($value)
  * @method static Builder<static> whereWidth($value)
-=======
- * @property string|null $format
- * @property string|null $converted_file
- * @property string|null $disk
- * @property string|null $file
- * @property Media|null $media
- * @method static MediaConvertFactory factory($count = null, $state = [])
- * @method static Builder|MediaConvert newModelQuery()
- * @method static Builder|MediaConvert newQuery()
- * @method static Builder|MediaConvert query()
- * @method static Builder|MediaConvert whereBitrate($value)
- * @method static Builder|MediaConvert whereCodecAudio($value)
- * @method static Builder|MediaConvert whereCodecVideo($value)
- * @method static Builder|MediaConvert whereCreatedAt($value)
- * @method static Builder|MediaConvert whereCreatedBy($value)
- * @method static Builder|MediaConvert whereDeletedAt($value)
- * @method static Builder|MediaConvert whereDeletedBy($value)
- * @method static Builder|MediaConvert whereExecutionTime($value)
- * @method static Builder|MediaConvert whereFormat($value)
- * @method static Builder|MediaConvert whereHeight($value)
- * @method static Builder|MediaConvert whereId($value)
- * @method static Builder|MediaConvert whereMediaId($value)
- * @method static Builder|MediaConvert wherePercentage($value)
- * @method static Builder|MediaConvert wherePreset($value)
- * @method static Builder|MediaConvert whereRate($value)
- * @method static Builder|MediaConvert whereRemaining($value)
- * @method static Builder|MediaConvert whereSpeed($value)
- * @method static Builder|MediaConvert whereThreads($value)
- * @method static Builder|MediaConvert whereUpdatedAt($value)
- * @method static Builder|MediaConvert whereUpdatedBy($value)
- * @method static Builder|MediaConvert whereWidth($value)
- * @property-read ProfileContract|null $creator
- * @property-read ProfileContract|null $updater
- * @property-read ProfileContract|null $deleter
- * @mixin \Eloquent
->>>>>>> ec2b884b (.)
  */
 class MediaConvert extends BaseModel
 {

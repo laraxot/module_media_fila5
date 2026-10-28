@@ -257,15 +257,10 @@ class S3Test extends XotBasePage
             'url2' => Storage::disk('s3')->url($filePath),
             'url3' => Storage::disk('s3')->temporaryUrl($filePath, now()->addMinutes(5)),
         ]);
-<<<<<<< HEAD
         Notification::make()
             ->title(Lang::string('media::s3test.notifications.config_debugged'))
             ->success()
             ->send();
-=======
-        $this->debugResults = [];
-        $this->updateDebugOutput();
->>>>>>> ec2b884b (.)
     }
 
     /**
@@ -391,75 +386,7 @@ class S3Test extends XotBasePage
      */
     private function test_s3_permissions(): array
     {
-<<<<<<< HEAD
         return app(TestBucketPermissionsAction::class)->execute(self::PERMISSION_TEST_PREFIX);
-=======
-        $results = [
-            'title' => '🔒 S3 Permissions',
-            'status' => 'info',
-            'data' => [],
-        ];
-
-        try {
-            $s3 = new S3Client([
-                'region' => config('filesystems.disks.s3.region', self::DEFAULT_REGION),
-                'version' => 'latest',
-                'credentials' => [
-                    'key' => config('filesystems.disks.s3.key'),
-                    'secret' => config('filesystems.disks.s3.secret'),
-                ],
-            ]);
-
-            $bucket = Config::string('filesystems.disks.s3.bucket');
-            $testKey = self::PERMISSION_TEST_PREFIX.time().'.txt';
-
-            // Test ListBucket
-            try {
-                $s3->listObjectsV2(['Bucket' => $bucket, 'MaxKeys' => 1]);
-                $results['data']['ListBucket'] = '✅ OK';
-            } catch (AwsException $e) {
-                $results['data']['ListBucket'] = '❌ '.($e->getAwsErrorCode() ?? 'UnknownError');
-            }
-
-            // Test PutObject
-            try {
-                $s3->putObject([
-                    'Bucket' => $bucket,
-                    'Key' => $testKey,
-                    'Body' => 'Test permissions',
-                    'ACL' => 'private',
-                ]);
-                $results['data']['PutObject'] = '✅ OK';
-
-                // Test GetObject (only if put succeeded)
-                try {
-                    $s3->getObject(['Bucket' => $bucket, 'Key' => $testKey]);
-                    $results['data']['GetObject'] = '✅ OK';
-                } catch (AwsException $e) {
-                    $results['data']['GetObject'] = '❌ '.($e->getAwsErrorCode() ?? 'UnknownError');
-                }
-
-                // Test DeleteObject (cleanup)
-                try {
-                    $s3->deleteObject(['Bucket' => $bucket, 'Key' => $testKey]);
-                    $results['data']['DeleteObject'] = '✅ OK';
-                } catch (AwsException $e) {
-                    $results['data']['DeleteObject'] = '❌ '.($e->getAwsErrorCode() ?? 'UnknownError');
-                }
-            } catch (AwsException $e) {
-                $results['data']['PutObject'] = '❌ '.($e->getAwsErrorCode() ?? 'UnknownError');
-                $results['data']['GetObject'] = 'Skipped (PutObject failed)';
-                $results['data']['DeleteObject'] = 'Skipped (PutObject failed)';
-            }
-
-            $results['status'] = 'success';
-        } catch (Exception $e) {
-            $results['status'] = 'error';
-            $results['data']['Error'] = $e->getMessage();
-        }
-
-        return $results;
->>>>>>> ec2b884b (.)
     }
 
     /**

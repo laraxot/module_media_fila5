@@ -86,19 +86,9 @@ class AddAttachmentAction extends XotBaseAction
             throw new Exception('FileAdder does not have required methods');
         }
 
-<<<<<<< HEAD
         $originalFileName = $data['original_file_name'] ?? '';
         Assert::string($originalFileName);
         $fileAdderWithName = $fileAdder->setName($data['name'] ?? Str::beforeLast($originalFileName, '.'));
-=======
-        $name = $data['name'] ?? null;
-        if (! is_string($name)) {
-            $originalFileName = $data['original_file_name'] ?? null;
-            $name = is_string($originalFileName) ? Str::beforeLast($originalFileName, '.') : '';
-        }
-
-        $fileAdderWithName = $fileAdder->setName($name);
->>>>>>> ec2b884b (.)
         if (! is_object($fileAdderWithName) || ! method_exists($fileAdderWithName, 'preservingOriginal')) {
             throw new Exception('setName did not return valid object');
         }

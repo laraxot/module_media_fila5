@@ -7,7 +7,6 @@ namespace Modules\Media\Tests\Unit\Models;
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Models\MediaConvert;
 
-<<<<<<< HEAD
 use function Safe\class_parents;
 
 uses(TestCase::class)->group('no-media-db');
@@ -15,13 +14,6 @@ uses(TestCase::class)->group('no-media-db');
 describe('MediaConvert Model', function (): void {
     it('extends BaseModel', function (): void {
         Assert::assertArrayHasKey(BaseModel::class, class_parents(MediaConvert::class));
-=======
-uses(\Modules\Media\Tests\TestCase::class);
-
-describe('MediaConvert Model', function (): void {
-    it('extends BaseModel', function (): void {
-        expect(get_parent_class(MediaConvert::class))->toBe(BaseModel::class);
->>>>>>> ec2b884b (.)
     });
 
     it('has correct fillable fields', function (): void {
