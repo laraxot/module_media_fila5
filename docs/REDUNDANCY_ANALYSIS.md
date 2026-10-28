@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -14,3 +15,6 @@ status: superseded
 superseded_by: redundancy-analysis.md
 ---
 Redundancy analysis available: docs/analysis/redundancies/summary.md
+=======
+Redundancy analysis available: docs/analysis/redundancies/summary.md
+>>>>>>> ec2b884b (.)

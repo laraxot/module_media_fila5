@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "index"
 type: note
@@ -16,9 +17,19 @@ status: draft
 
 **Last Update**: Feb 2026
 **Status**: Active Development
+=======
+# Indice della Documentazione - Modulo Media
 
-## Quick Start
+## Panoramica
+Questo documento serve come indice centrale per il modulo Media, fornendo una guida per la gestione dei contenuti multimediali all'interno di un'applicazione Laravel. Il modulo Media gestisce vari tipi di file multimediali come immagini, video, documenti e audio in modo modulare e riutilizzabile.
+>>>>>>> ec2b884b (.)
 
+## Principi Chiave
+1. **Modularità**: Il modulo Media è progettato per essere riutilizzabile in diversi progetti, mantenendo funzionalità generiche
+2. **Estensibilità**: Consente personalizzazione e aggiunta di nuovi tipi di media senza alterare il codice principale
+3. **Affidabilità**: Garantisce la gestione sicura e efficiente dei file multimediali attraverso gestione robusta degli errori e logging
+
+<<<<<<< HEAD
 - [README.md](./README.md) - Panoramica modulo
 
 ## Core Features
@@ -33,6 +44,17 @@ status: draft
 ## Standards
 
 Vedi anche: [bashscripts/ai/.agents/docs/critical-rules.md](../../../../bashscripts/ai/.agents/docs/critical-rules.md)
+=======
+## Funzionalità Principali
+- **Gestione File Multi-formato**: Supporto per immagini, video, documenti e audio
+- **Upload Avanzato**: Funzionalità di drag-and-drop e upload multiplo
+- **Ottimizzazione Media**: Compressione e ottimizzazione automatica dei file
+- **Conversione Video**: Sistema di conversione video con supporto per diversi formati
+- **Streaming Video**: Funzionalità di streaming video ottimizzata
+- **Gestione Sottotitoli**: Supporto per sottotitoli e loro elaborazione
+- **Integrazione CDN**: Supporto per Content Delivery Network
+- **Watermark Automatico**: Applicazione automatica di watermark sui media
+>>>>>>> ec2b884b (.)
 
 ## Collegamenti Correlati
 - [Documentazione Generale del progetto](../../../../docs/README.md)
@@ -168,6 +190,7 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - Vedi anche: [../../../../../docs/README.md](../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
+<<<<<<< HEAD
 # Indice della Documentazione - Modulo Media
 
 ## Panoramica
@@ -267,3 +290,5 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
 - [wiki/index.md](./wiki/index.md)
+=======
+>>>>>>> ec2b884b (.)

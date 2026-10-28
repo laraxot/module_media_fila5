@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/ffmpeg-integration-integrazione-modulo-media.md
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: ffmpeg-integration.md
 ---
+=======
+>>>>>>> ec2b884b (.):docs/ffmpeg-integration-1.md
 # Integrazione di FFmpeg nel Modulo Media
 
 Questa guida documenta l'integrazione del pacchetto [protonemedia/laravel-ffmpeg](https://github.com/protonemedia/laravel-ffmpeg) all'interno del modulo Media, basandosi sulle seguenti risorse:

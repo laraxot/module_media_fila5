@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: CHANGELOG.md
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Changelog
 
 All notable changes to this project will be documented in this file.

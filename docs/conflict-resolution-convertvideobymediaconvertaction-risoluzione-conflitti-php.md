@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/conflict-resolution-convertvideobymediaconvertaction-risoluzione-conflitti-php.md
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.):docs/conflict-resolution-convertvideobymediaconvertaction-1.md
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto

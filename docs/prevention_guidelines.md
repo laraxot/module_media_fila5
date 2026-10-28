@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Linee Guida Prevenzione Problemi - Modulo Media
 
 ## 🚨 Problemi Critici Risolti in S3Test.php
@@ -388,7 +391,11 @@ jobs:
 - [Correzioni S3Test.php](s3test_corrections.md)
 - [PHPStan Fixes](phpstan-level10-fixes.md)
 - [Translation Standards](translations.md)
+<<<<<<< HEAD
 - [Architecture Guidelines](ARCHITECTURE.md)
+=======
+- [Architecture Guidelines](../../docs/architecture.md)
+>>>>>>> ec2b884b (.)
 
 ---
 

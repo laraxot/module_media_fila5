@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # File Duplicati da Eliminare - Modulo Media
 
 ## 🗑️ File da Eliminare (Case Sensitivity)

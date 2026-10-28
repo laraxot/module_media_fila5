@@ -7,12 +7,11 @@ namespace Modules\Media\Tests\Unit\Models;
 use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
-use Modules\Xot\Actions\Cast\SafeIntCastAction;
-use Modules\Xot\Tests\XotBasePest;
 use PHPUnit\Framework\Assert;
 
 uses(TestCase::class);
 
+<<<<<<< HEAD
 /**
  * @param  array<string, mixed>  $attributes
  */
@@ -367,4 +366,28 @@ it('media has casts', function (): void {
     ksort($actualCasts);
 
     expect($actualCasts)->toBe($expectedCasts);
+=======
+test('can create media with minimal data', function (): void {
+    $media = MediaFactory::new()->createOne([
+        'model_type' => 'Modules\User\Models\User',
+        'model_id' => '1',
+        'collection_name' => 'avatars',
+        'name' => 'test-image',
+        'file_name' => 'test-image.jpg',
+        'disk' => 'public',
+        'size' => 1024,
+    ]);
+
+    Assert::assertInstanceOf(Media::class, $media);
+
+    /** @var TestCase $this */
+    $this->assertMediaTableHas('media', [
+        'id' => $media->id,
+        'collection_name' => 'avatars',
+        'name' => 'test-image',
+        'file_name' => 'test-image.jpg',
+        'disk' => 'public',
+        'size' => 1024,
+    ]);
+>>>>>>> ec2b884b (.)
 });

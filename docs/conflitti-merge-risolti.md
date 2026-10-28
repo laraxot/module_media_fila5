@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Risoluzione dei Conflitti Git nel Modulo Media
 
 ## Panoramica
@@ -403,4 +406,8 @@ I problemi di conflitto nei file relativi all'integrazione di FFmpeg erano princ
 
 ### Documentazione
 
+<<<<<<< HEAD
 Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione-conflitti-ffmpeg.md).
+=======
+Per maggiori dettagli, consultare il [documento dedicato alla risoluzione dei conflitti FFmpeg](risoluzione_conflitti_ffmpeg.md).
+>>>>>>> ec2b884b (.)

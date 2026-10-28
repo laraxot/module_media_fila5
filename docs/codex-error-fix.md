@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Codex Configuration Error Fixes
 
 Questo documento descrive le correzioni applicate agli errori riscontrati durante l'avvio di `codex`.

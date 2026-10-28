@@ -5,16 +5,22 @@ declare(strict_types=1);
 namespace Modules\Media\Actions;
 
 use Filament\Forms\Components\FileUpload;
+<<<<<<< HEAD
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Modules\Media\Datas\MediaConfigData;
 use Webmozart\Assert\Assert;
+=======
+use Spatie\QueueableAction\QueueableAction;
+>>>>>>> ec2b884b (.)
 
 class GetAttachmentsSchemaAction
 {
+    use QueueableAction;
+
     /**
-     * @param  array<string|int, string>  $attachments
-     * @return array<int, FileUpload>
+     * @param  array<array-key, string>  $attachments
+     * @return list<FileUpload>
      */
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
@@ -23,18 +29,27 @@ class GetAttachmentsSchemaAction
         $config = MediaConfigData::make();
 
         foreach ($attachments as $attachment) {
-            $attachmentStr = (string) $attachment;
-            $fileUpload = FileUpload::make($attachmentStr)
+            $form[] = FileUpload::make($attachment)
                 ->directory('temp')
                 ->disk($disk)
+<<<<<<< HEAD
                 ->acceptedFileTypes($config->attachment_mime_types)
                 ->maxSize($config->attachment_max_size_kb)
+=======
+                ->acceptedFileTypes([
+                    'application/pdf',
+                    'application/msword',
+                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                ])
+                ->maxSize(10 * 1024 * 1024)
+>>>>>>> ec2b884b (.)
                 ->visibility('public')
                 ->preserveFilenames()
                 ->required()
-                ->previewable(true)
-                ->downloadable(true)
+                ->previewable()
+                ->downloadable()
                 ->reorderable(false)
+<<<<<<< HEAD
                 ->multiple(false)
                 /**
                  * `mixed $state` voluto: lo stato FileUpload e' eterogeneo
@@ -57,6 +72,9 @@ class GetAttachmentsSchemaAction
                 });
 
             $form[] = $fileUpload;
+=======
+                ->multiple(false);
+>>>>>>> ec2b884b (.)
         }
 
         return $form;

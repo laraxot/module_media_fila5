@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -116,6 +117,8 @@ To provide a **comprehensive media management system** that handles all image, v
 ---
 
 *Last Updated: March 12, 2026*
+=======
+>>>>>>> ec2b884b (.)
 # Media - Product Roadmap
 
 > Documento vivente. Modulo.

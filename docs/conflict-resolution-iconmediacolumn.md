@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Risoluzione Conflitto IconMediaColumn.php
 
 ## Problema Identificato
@@ -89,6 +92,7 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 
 ## Collegamenti
 
+<<<<<<< HEAD
 - [module_media.md](module-media.md)
 - [filament_table_actions.md](filament-table-actions.md)
 - [Modules/Media/docs/](../docs/)
@@ -96,3 +100,9 @@ Il file `Modules/Media/app/Filament/Tables/Columns/IconMediaColumn.php` presenta
 *Ultimo aggiornamento: 29 luglio 2025*
 ---
 *Ultimo aggiornamento: 29 luglio 2025*
+=======
+- [module_media.md](module_media.md)
+- [filament_table_actions.md](filament_table_actions.md)
+- [Modules/Media/docs/](../../docs/)
+
+>>>>>>> ec2b884b (.)

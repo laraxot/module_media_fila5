@@ -7,12 +7,11 @@ namespace Modules\Media\Models;
 use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
-use Modules\User\Models\User;
+use Modules\Media\Database\Factories\MediaFactory;
 use Modules\Xot\Contracts\ProfileContract;
 use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
@@ -21,6 +20,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
 use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 
 /**
+<<<<<<< HEAD
  * @property-read User|null $creator
  * @property-read string $extension
  * @property-read array<int, array{name: string, generated: bool, src: string}> $entry_conversions
@@ -43,9 +43,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder<static> ordered()
  * @method static Builder<static> query()
  *
+=======
+>>>>>>> ec2b884b (.)
  * @property int $id
  * @property string $model_type
- * @property string|null $model_id
+ * @property string $model_id
  * @property string|null $uuid
  * @property string $collection_name
  * @property string $name
@@ -54,19 +56,40 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @property string $disk
  * @property string|null $conversions_disk
  * @property int $size
- * @property array<array-key, mixed> $manipulations
- * @property array<array-key, mixed> $custom_properties
- * @property array<array-key, mixed> $generated_conversions
- * @property array<array-key, mixed> $responsive_images
+ * @property array<string, mixed>|null $manipulations
+ * @property array<string, mixed>|null $custom_properties
+ * @property array<string, bool>|null $generated_conversions
+ * @property array<string, string>|null $responsive_images
  * @property int|null $order_column
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property string|null $updated_by
  * @property string|null $created_by
- * @property Carbon|null $deleted_at
+ * @property string|null $updated_by
+ * @property int|null $user_id
+ * @property string $directory
+ * @property string|null $path
+ * @property int|null $width
+ * @property int|null $height
+ * @property string|null $type
+ * @property string|null $ext
+ * @property string|null $alt
+ * @property string|null $title
+ * @property string|null $description
+ * @property string|null $caption
+ * @property string|null $exif
+ * @property string|null $curations
+ * @property string|null $deleted_at
  * @property string|null $deleted_by
- * @property int|string|null $user_id
+ * @property UserContract|null $creator
+ * @property Model|Eloquent $model
+ * @property TemporaryUpload|null $temporaryUpload
+ * @property ProfileContract|null $updater
+ * @property ProfileContract|null $deleter
+ * @property array<int, array{name: string, generated: bool, src: string}> $entry_conversions
+ * @property EloquentCollection<int, MediaConvert> $mediaConverts
+ * @property int|null $media_converts_count
  *
+<<<<<<< HEAD
  * @method static Builder<static> whereCollectionName($value)
  * @method static Builder<static> whereConversionsDisk($value)
  * @method static Builder<static> whereCreatedAt($value)
@@ -89,6 +112,48 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
  * @method static Builder<static> whereUpdatedAt($value)
  * @method static Builder<static> whereUpdatedBy($value)
  * @method static Builder<static> whereUuid($value)
+=======
+ * @method static Builder|Media newModelQuery()
+ * @method static Builder|Media newQuery()
+ * @method static Builder|Media ordered()
+ * @method static Builder|Media query()
+ * @method static Builder|Media whereAlt($value)
+ * @method static Builder|Media whereCaption($value)
+ * @method static Builder|Media whereCollectionName($value)
+ * @method static Builder|Media whereConversionsDisk($value)
+ * @method static Builder|Media whereCreatedAt($value)
+ * @method static Builder|Media whereCreatedBy($value)
+ * @method static Builder|Media whereCurations($value)
+ * @method static Builder|Media whereCustomProperties($value)
+ * @method static Builder|Media whereDeletedAt($value)
+ * @method static Builder|Media whereDeletedBy($value)
+ * @method static Builder|Media whereDescription($value)
+ * @method static Builder|Media whereDirectory($value)
+ * @method static Builder|Media whereDisk($value)
+ * @method static Builder|Media whereExif($value)
+ * @method static Builder|Media whereExt($value)
+ * @method static Builder|Media whereFileName($value)
+ * @method static Builder|Media whereGeneratedConversions($value)
+ * @method static Builder|Media whereHeight($value)
+ * @method static Builder|Media whereId($value)
+ * @method static Builder|Media whereManipulations($value)
+ * @method static Builder|Media whereMimeType($value)
+ * @method static Builder|Media whereModelId($value)
+ * @method static Builder|Media whereModelType($value)
+ * @method static Builder|Media whereName($value)
+ * @method static Builder|Media whereOrderColumn($value)
+ * @method static Builder|Media wherePath($value)
+ * @method static Builder|Media whereResponsiveImages($value)
+ * @method static Builder|Media whereSize($value)
+ * @method static Builder|Media whereTitle($value)
+ * @method static Builder|Media whereType($value)
+ * @method static Builder|Media whereUpdatedAt($value)
+ * @method static Builder|Media whereUpdatedBy($value)
+ * @method static Builder|Media whereUserId($value)
+ * @method static Builder|Media whereUuid($value)
+ * @method static Builder|Media whereWidth($value)
+ * @method static MediaFactory factory($count = null, $state = [])
+>>>>>>> ec2b884b (.)
  */
 class Media extends SpatieMedia
 {
@@ -130,11 +195,13 @@ class Media extends SpatieMedia
     /**
      * Relazione con il creatore del media.
      *
-     * @return BelongsTo<User, $this>
+     * @return BelongsTo<Model, self>
+     *
+     * @phpstan-return BelongsTo<Model, $this>
      */
     public function creator(): BelongsTo
     {
-        /** @var class-string<User> $userClass */
+        /** @var class-string<Model> $userClass */
         $userClass = XotData::make()->getUserClass();
 
         return $this->belongsTo($userClass, 'created_by');
@@ -192,21 +259,12 @@ class Media extends SpatieMedia
         return $conversions;
     }
 
-    public function getPathAttribute(): string
-    {
-        $relativePath = $this->getPathRelativeToRoot();
-        $directory = dirname($relativePath);
-
-        return $directory === '.' ? '' : $directory;
-    }
-
     /** @return array<string, string> */
     protected function casts(): array
     {
         return [
-            'id' => 'integer',
+            'id' => 'string',
             'uuid' => 'string',
-            'user_id' => 'integer',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
             'deleted_at' => 'datetime',

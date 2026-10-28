@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: corrections.md
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Riepilogo Correzioni S3Test.php - Modulo Media
 
 ## 🎯 **Obiettivo Completato**

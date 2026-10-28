@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/filament-resource-conflict-resolution-risoluzione-conflitto-git-mediaconvertresource.md
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: filament-resource-conflict-resolution.md
 ---
+=======
+>>>>>>> ec2b884b (.):docs/filament-resource-conflict-resolution-1.md
 # Risoluzione conflitto git su Filament MediaConvertResource
 
 ## Problema

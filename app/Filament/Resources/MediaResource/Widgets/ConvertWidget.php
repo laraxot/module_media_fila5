@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
+<<<<<<< HEAD
 use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
+=======
+>>>>>>> ec2b884b (.)
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 
@@ -28,8 +31,13 @@ class ConvertWidget extends XotBaseWidget
 
     public float $rate = 0.0;
 
+    /** @var view-string */
+    /** @phpstan-ignore property.defaultValue */
+    protected string $view = 'media::filament.widgets.convert';
+
     protected static string $resource = MediaResource::class;
 
+<<<<<<< HEAD
     public function __construct()
     {
         $this->view = 'media::filament.widgets.convert';
@@ -37,6 +45,8 @@ class ConvertWidget extends XotBaseWidget
         parent::__construct();
     }
 
+=======
+>>>>>>> ec2b884b (.)
     public function getFormSchema(): array
     {
         return [];
@@ -54,9 +64,6 @@ class ConvertWidget extends XotBaseWidget
         $extension = mb_strtolower(class_basename($format));
         $file_new = Str::of($file_mp4)->replaceLast('.mp4', '.'.$extension)->toString();
 
-        /*
-         * -preset ultrafast.
-         */
         $exportedMedia = FFMpeg::fromDisk($disk_mp4)
             ->open($file_mp4)
             ->export();
@@ -73,6 +80,7 @@ class ConvertWidget extends XotBaseWidget
                 ->send();
         });
 
+<<<<<<< HEAD
         $formattedMedia = app(ResolveMediaExporterAction::class)->execute(
             $exportedMedia->toDisk($disk_mp4)
         )->inFormat($format);
@@ -89,5 +97,10 @@ class ConvertWidget extends XotBaseWidget
             $this->start =
                 "{$this->percentage}% transcoded".PHP_EOL."{$this->remaining} seconds left at rate: {$this->rate}";
         }
+=======
+        $exportedMedia->toDisk($disk_mp4);
+        $exportedMedia->inFormat($format);
+        $exportedMedia->save($file_new);
+>>>>>>> ec2b884b (.)
     }
 }

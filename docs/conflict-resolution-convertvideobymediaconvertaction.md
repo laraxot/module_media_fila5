@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Risoluzione Conflitti ConvertVideoByMediaConvertAction.php
 
 ## Contesto del Conflitto
@@ -86,8 +89,11 @@ FFMpeg::fromDisk($data->disk)
 - [Media Module Documentation](module-media.md)
 - [FFMpeg Integration Guide](ffmpeg_integration.md)
 - [PHPStan Fixes Documentation](phpstan_fixes.md)
-- [Root Conflict Resolution Guidelines](../../../docs/conflict-resolution-guidelines.md)
+- [Root Conflict Resolution Guidelines](../../../../docs/conflict-resolution-guidelines.md)
 
+<<<<<<< HEAD
 *Ultimo aggiornamento: giugno 2025*
 ---
 *Ultimo aggiornamento: giugno 2025*
+=======
+>>>>>>> ec2b884b (.)

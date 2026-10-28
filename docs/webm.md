@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./migrazione-filament.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 https://pixelpoint.io/blog/web-optimized-video-ffmpeg/
 
 ffmpeg -i in.mp4 -c:v libvpx-vp9 -threads 4 out.mp4
@@ -55,4 +58,4 @@ ffmpeg -h encoder=hevc_nvenc
     output.webm
 
 ----------------------------------
-ffmpeg -h encoder=hevc_nvenc
+ffmpeg -h encoder=hevc_nvenc  

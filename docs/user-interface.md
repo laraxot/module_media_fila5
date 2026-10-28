@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,3 +14,6 @@ related:
 status: draft
 ---
 # User Interface
+=======
+# User Interface
+>>>>>>> ec2b884b (.)

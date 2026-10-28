@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Indice regole — Modulo Media"
 module: "Media"
@@ -10,6 +11,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Indice regole — Modulo Media
 
 ## Scopo
@@ -26,6 +29,7 @@ qmd search "Media rules" --limit 5
 
 - [commit e push dopo modifiche al modulo](module-commit-push-after-change.md)
 
+<<<<<<< HEAD
 ---
 
 <!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
@@ -49,3 +53,5 @@ qmd search "Media rules" --limit 5
 *Updated: 2026-05-11*
 
 - [context-overflow-prevention](../../../../../../docs/wiki/rules/context-overflow-prevention.md) — prevenzione 262K token overflow; file vietati; tool output compression
+=======
+>>>>>>> ec2b884b (.)

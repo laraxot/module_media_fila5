@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -13,6 +14,8 @@ related:
 status: superseded
 superseded_by: duplicate-methods.md
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Metodi duplicati — Media
 
 Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambito.

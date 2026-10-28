@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.)
 # Laravel-FFMpeg – Pattern Laraxot nel Modulo Media
 
 Questa guida descrive come usare `protonemedia/laravel-ffmpeg` seguendo i pattern architetturali

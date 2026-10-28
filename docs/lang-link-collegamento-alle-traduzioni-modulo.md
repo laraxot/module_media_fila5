@@ -1,3 +1,4 @@
+<<<<<<< HEAD:docs/lang-link-collegamento-alle-traduzioni-modulo.md
 ---
 issues: []
 discussions: []
@@ -12,6 +13,8 @@ related:
   - "./webm.md"
 status: draft
 ---
+=======
+>>>>>>> ec2b884b (.):docs/lang-link-1.md
 # Collegamento alle Traduzioni del Modulo Media
 
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).

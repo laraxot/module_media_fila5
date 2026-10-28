@@ -10,4 +10,15 @@ use Modules\Xot\Filament\Resources\Pages\XotBaseViewRecord;
 class ConvertMedia extends XotBaseViewRecord
 {
     protected static string $resource = MediaResource::class;
+<<<<<<< HEAD
+=======
+
+    #[Override]
+    public function getInfolistSchema(): array
+    {
+        return [
+            // Definire qui i componenti dell'infolist
+        ];
+    }
+>>>>>>> ec2b884b (.)
 }
