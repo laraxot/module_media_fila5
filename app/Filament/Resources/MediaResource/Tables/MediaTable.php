@@ -14,6 +14,7 @@ use Filament\Tables\Filters\BaseFilter;
 use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Webmozart\Assert\Assert;
@@ -28,7 +29,7 @@ class MediaTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->sortable(),
+            'id' => IDColumn::make('id')->sortable(),
             'name' => TextColumn::make('name')->searchable()->sortable(),
             'file_name' => TextColumn::make('file_name')->searchable()->sortable(),
             'mime_type' => TextColumn::make('mime_type')->searchable()->sortable(),
