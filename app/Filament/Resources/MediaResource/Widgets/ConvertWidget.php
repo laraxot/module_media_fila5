@@ -8,9 +8,9 @@ use FFMpeg\Format\Video\WebM;
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
 use Modules\Media\Filament\Resources\MediaResource;
 use Modules\Media\Models\Media;
-use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
 use Modules\Xot\Filament\Widgets\XotBaseWidget;
 use ProtoneMedia\LaravelFFMpeg\Support\FFMpeg;
 
@@ -29,7 +29,6 @@ class ConvertWidget extends XotBaseWidget
     public float $rate = 0.0;
 
     /** @var view-string */
-    /** @phpstan-ignore property.defaultValue */
     protected string $view = 'media::filament.widgets.convert';
 
     protected static string $resource = MediaResource::class;
