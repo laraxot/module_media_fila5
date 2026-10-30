@@ -100,3 +100,4 @@ Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al
 
 - [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-zero-errors-media.story.md) · [dev](./stories/phpstan-zero-errors-media.dev.md)
 - [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)
+- [2026-10-30 Niente testi fissi nelle Blade (it, en, de, es)](./stories/blade-i18n-no-hardcoded-text.story.md)
