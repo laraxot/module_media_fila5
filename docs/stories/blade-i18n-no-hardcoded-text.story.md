@@ -48,3 +48,11 @@ Metodo e regola completa: [story del tema Two](../../../../Themes/Two/docs/stori
 ## Seguito: forma delle chiavi
 
 Le chiavi a 2-3 segmenti create da questa campagna sono state in parte portate a `ns::file.collezione.chiave.tipo`: **3 chiavi spostate** in questo proprietario (stesso testo, tutte le lingue, usi riscritti, nessun uso della vecchia chiave rimasto). La frase sui «tre o quattro elementi» qui sopra descrive lo stato precedente: le chiavi rimaste a 3-4 elementi non sono state verificate una per una; la misura assoluta, lo strumento e i residui sono in [la story di Lang](../../../Lang/docs/stories/translation-key-shape-rekey.story.md).
+
+### Passata 2026-10-30 (sessione 97f16a39, i18n-small-modules: Media)
+
+Scanner `Modules/Media`: prima 3 occorrenze in 2 file (3 text), dopo 3 in 2 file (invariato: stub).
+
+- Nessuna modifica. `check-blade-keys` su `Modules/Media`: 11 usi, 0 mancanti; compilazione 9 file OK.
+- Residui (3): stub `index` e `layouts/master` («Media Module -» nel `<title>`). `convert.blade.php` estende `media::layouts.master` ma `ConvertController` non ha rotte (`routes/web.php` vuoto).
+- Non verificato: nessuna pagina guardata.
