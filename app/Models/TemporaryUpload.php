@@ -95,12 +95,8 @@ class TemporaryUpload extends BaseModel implements HasMedia
     public static function findByMediaUuid(?string $mediaUuid): ?self
     {
         Assert::string($mediaModelClass = config('media-library.media_model'));
+        Assert::isAOf($mediaModelClass, Media::class);
 
-        /**
-         * @var Media|null $media
-         *
-         * @phpstan-ignore-next-line
-         */
         $media = $mediaModelClass::query()->where('uuid', $mediaUuid)->first();
 
         if (! $media instanceof Media) {
