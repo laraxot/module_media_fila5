@@ -20,6 +20,8 @@ class MediaConfigData extends Data
 {
     use MakesFromTenantConfig;
 
+    public bool $enabled = true;
+
     public string $name = 'Media';
 
     /** Dimensione massima degli allegati delle Resource, in KB (prima 10240 in GetAttachmentsSchemaAction). */
