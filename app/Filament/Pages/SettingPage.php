@@ -6,7 +6,6 @@ namespace Modules\Media\Filament\Pages;
 
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
 use Modules\Media\Actions\Upload\GetEffectiveUploadLimitAction;
 use Modules\Media\Datas\MediaConfigData;
 use Modules\Xot\Filament\Pages\BaseSettingPage;
@@ -19,12 +18,11 @@ use Modules\Xot\Filament\Pages\BaseSettingPage;
 class SettingPage extends BaseSettingPage
 {
     /**
-     * @return array<string, TagsInput|TextInput|Toggle>
+     * @return array<string, TagsInput|TextInput>
      */
     protected function getFormSchema(): array
     {
         return [
-            'enabled' => Toggle::make('enabled')->default(true)->required(),
             'attachment_max_size_kb' => TextInput::make('attachment_max_size_kb')
                 ->numeric()
                 ->integer()
