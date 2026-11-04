@@ -14,12 +14,22 @@ status: draft
 ---
 # Collegamento alle Traduzioni del Modulo Media
 
+Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/project_docs/).
+
+Consulta la documentazione delle traduzioni:
+- [Introduzione alle Traduzioni](../../lang/project_docs/introduction.md)
+- [Struttura delle Traduzioni](../../lang/project_docs/structure.md)
+- [Gestione dei File di Lingua](../../lang/project_docs/module_lang.md)
+
+## Collegamento Bidirezionale
+
+Per ogni risorsa o campo localizzato, vedi anche il file corrispondente in questo modulo e la relativa sezione in [Lang](../../Lang/project_docs/).
 Questo modulo utilizza le traduzioni centralizzate nella cartella [Lang](../../Lang/docs/).
 
 Consulta la documentazione delle traduzioni:
-- [Introduzione alle Traduzioni](../../Lang/docs/introduction.md)
-- [Struttura delle Traduzioni](../../Lang/docs/structure.md)
-- [Gestione dei File di Lingua](../../Lang/docs/module_lang.md)
+- [Introduzione alle Traduzioni](../../lang/docs/introduction.md)
+- [Struttura delle Traduzioni](../../lang/docs/structure.md)
+- [Gestione dei File di Lingua](../../lang/docs/module_lang.md)
 
 ## Collegamento Bidirezionale
 
