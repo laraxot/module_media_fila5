@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Merge conflict markers: file list"
+title: "Merge conflict markers — file list"
 module: "Media"
 type: concept
 tags: [merge, conflicts, list]
@@ -12,7 +12,7 @@ related:
   - "./webm.md"
 status: draft
 ---
-# Merge conflict markers: file list
+# Merge conflict markers — file list
 
 Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_file). Seguire la lista per assegnare task agli agenti.
 
@@ -58,11 +58,7 @@ Elenco dei file trovati contenenti marker di merge (<<<<<<<, >>>>>>>, .merge_fil
 
 ## Stato
 
-<<<<<<< .merge_file_A0S2Ys
 - [x] laravel/Modules/Fixcity/resources/views/filament/widgets/ticket-create-wizard.blade.php — risolto (merge markers rimossi e unione logica applicata)
-=======
-- [x] laravel/Modules/Fixcity/resources/views/filament/widgets/ticket-create-wizard.blade.php: risolto (merge markers rimossi e unione logica applicata)
->>>>>>> .merge_file_xkugvB
 - [ ] gli altri file: da verificare e risolvere
 
 ## Note

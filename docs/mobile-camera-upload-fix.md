@@ -1,8 +1,4 @@
-<<<<<<< .merge_file_sfb9iK
 # Mobile Camera Upload Fix — Second Brain + BMAD
-=======
-# Mobile Camera Upload Fix: Second Brain + BMAD
->>>>>>> .merge_file_fIuGcf
 
 ## Root Cause Analysis (deep audit)
 - PHPUnit / Laravel validation `uploaded`: file exceeds `upload_max_filesize` (2M PHP default) → "The image failed to upload"
@@ -10,11 +6,7 @@
 - `media-library.php`: `max_file_size=10MB`, `image_driver=gd`
 - `enable_temporary_uploads_session_affinity=true`: stateless mobile can lose session between upload and commit
 
-<<<<<<< .merge_file_sfb9iK
 ## Fix Executed (Ponytail — reuse existing, no new provider)
-=======
-## Fix Executed (Ponytail: reuse existing, no new provider)
->>>>>>> .merge_file_fIuGcf
 - System: `php8.4-imagick` installed + `phpenmod` activated (`conf.d/20-imagick.ini` cli + fpm)
 - PHP `php.ini`: `upload_max_filesize=20M`, `post_max_size=20M`; FPM restarted
 - Config: `media-library.image_driver=imagick`, `max_file_size=50MB`

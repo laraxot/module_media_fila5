@@ -1,11 +1,7 @@
 ---
 issues: []
 discussions: []
-<<<<<<< .merge_file_NLojHR
 title: "Media — mai Filament*, sempre XotBase*"
-=======
-title: "Media: mai Filament*, sempre XotBase*"
->>>>>>> .merge_file_gVmLcE
 type: concept
 module: Media
 tags: [media, filament, xotbase, architecture]
@@ -19,7 +15,7 @@ related:
 status: draft
 ---
 
-# Mai `Filament\*`: sempre `Modules\Xot\Filament\...\XotBase*`
+# Mai `Filament\*` — sempre `Modules\Xot\Filament\...\XotBase*`
 
 Bridge on-demand. Contenuto canonico: [docs/wiki/rules/xotbase-critical-rules.md](../../../../../docs/wiki/rules/xotbase-critical-rules.md).
 

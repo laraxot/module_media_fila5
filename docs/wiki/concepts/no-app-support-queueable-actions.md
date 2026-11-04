@@ -1,9 +1,5 @@
 ---
-<<<<<<< .merge_file_kbVXg0
 title: "no app/Support — business logic in QueueableAction"
-=======
-title: "no app/Support: business logic in QueueableAction"
->>>>>>> .merge_file_jfGLO3
 type: concept
 tags: [media, actions, queueable-action, support, refactor]
 created: 2026-07-12
@@ -19,11 +15,7 @@ related:
 status: draft
 ---
 
-<<<<<<< .merge_file_kbVXg0
 # no `app/Support/` — business logic in QueueableAction
-=======
-# no `app/Support/`: business logic in QueueableAction
->>>>>>> .merge_file_jfGLO3
 
 ## Scopo
 

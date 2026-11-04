@@ -25,13 +25,9 @@ Spesso durante `composer run go` o `php artisan optimize`.
 
 ## Causa
 
-<<<<<<< .merge_file_a62oSV
 1. **Due progetti Laraxot nella stessa sessione PHP** — autoload di `base_ptvx_fila5` e `base_fixcity_fila5` insieme (terminali/IDE multi-root, script che includono entrambi i `vendor/autoload.php`).
-=======
-1. **Due progetti Laraxot nella stessa sessione PHP**: autoload di `base_ptvx_fila5` e `base_fixcity_fila5` insieme (terminali/IDE multi-root, script che includono entrambi i `vendor/autoload.php`).
->>>>>>> .merge_file_WFobOW
 2. **Namespace errato** (storico): `namespace Modules\Media\app\Filament\...` nel file PHP. Il namespace corretto è `Modules\Media\Filament\...` (la cartella fisica è `app/`, il segmento `app` non va nel namespace).
-3. **Filament discover sbagliato**: `discoverResources(in: base_path('Modules/Media'), for: 'Modules\\Media')` costruisce FQCN con `app` nel mezzo: usare sempre `XotBasePanelProvider` (`.../app/Filament/Resources` + `Modules\\{Module}\\Filament\\Resources`).
+3. **Filament discover sbagliato**: `discoverResources(in: base_path('Modules/Media'), for: 'Modules\\Media')` costruisce FQCN con `app` nel mezzo — usare sempre `XotBasePanelProvider` (`.../app/Filament/Resources` + `Modules\\{Module}\\Filament\\Resources`).
 
 ## Fix immediato (solo FixCity)
 
