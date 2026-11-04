@@ -17,8 +17,12 @@ use Filament\Tables\Filters\SelectFilter;
 use Modules\Media\Actions\Video\ConvertVideoByMediaConvertAction;
 use Modules\Media\Datas\ConvertData;
 use Modules\Media\Models\MediaConvert;
+use Modules\UI\Filament\Tables\Columns\IDColumn;
 use Modules\Xot\Filament\Resources\Tables\XotBaseResourceTable;
 use Spatie\QueueableAction\ActionJob;
+
+use function app;
+use function dispatch;
 
 class MediaConvertsTable extends XotBaseResourceTable
 {
@@ -28,7 +32,7 @@ class MediaConvertsTable extends XotBaseResourceTable
     public function getTableColumns(): array
     {
         return [
-            'id' => TextColumn::make('id')->searchable()->sortable(),
+            'id' => IDColumn::make('id')->searchable()->sortable(),
             'created_at' => TextColumn::make('created_at')->dateTime(),
             'updated_at' => TextColumn::make('updated_at')->dateTime(),
         ];

@@ -21,6 +21,7 @@ class CloudFrontIconMediaColumn extends XotBaseIconColumn
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
             }
+
         })
             ->icon('heroicon-o-document-text')
             ->color(static function (?Model $record) use ($attachment): string {
