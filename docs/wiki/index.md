@@ -31,7 +31,7 @@ qmd search "Media <topic>" --limit 5
 
 ## Composer / nwidart
 
-- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md): root skeleton nwidart (modello ptv)
+- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello ptv)
 
 ---
 
@@ -57,8 +57,4 @@ qmd search "Media <topic>" --limit 5
 
 ## Composer / nwidart
 
-<<<<<<< .merge_file_FD3P9q
 - [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md) — root skeleton nwidart (modello fixcity)
-=======
-- [composer-root-minimal-nwidart](concepts/composer-root-minimal-nwidart.md): root skeleton nwidart (modello fixcity)
->>>>>>> .merge_file_R2KPR1

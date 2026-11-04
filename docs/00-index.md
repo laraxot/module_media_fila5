@@ -100,10 +100,3 @@ superseded_by: README.md
 
 `/media/admin/setting`, solo super-admin, file `config/{tenant}/media.php`: dimensione massima e tipi MIME degli allegati delle Resource (prima 10 MB, pdf/doc/docx in `GetAttachmentsSchemaAction`).
 Decisione e modulo per modulo: [../../Xot/docs/stories/module-setting-pages.epic.md](../../Xot/docs/stories/module-setting-pages.epic.md).
-<<<<<<< .merge_file_EVN1kT
-=======
-
-## Cosa manca per completare
-
-[completion-status.md](./completion-status.md): indicatori misurati, problemi noti e story aperte (2026-10-28).
->>>>>>> .merge_file_YR5wFL
