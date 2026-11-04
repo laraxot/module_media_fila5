@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Ponytail audit — Media (over-engineering)"
+title: "Ponytail audit: Media (over-engineering)"
 module: "Media"
 type: concept
 tags: [ponytail, audit, over, engineering]
@@ -12,7 +12,7 @@ related:
   - "./webm.md"
 status: draft
 ---
-# Ponytail audit — Media (over-engineering)
+# Ponytail audit: Media (over-engineering)
 
 **Ultimo run:** 2026-06-30  
 **Modulo:** upload, library, media Filament.  

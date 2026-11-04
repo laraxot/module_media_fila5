@@ -1,5 +1,5 @@
 ---
-title: "claude-audit static — modulo Media"
+title: "claude-audit static: modulo Media"
 type: concept
 module: Media
 tags: [media, quality, claude-audit, testing]
@@ -29,7 +29,7 @@ cd laravel && npx claude-audit --static Modules/Media/ --output json --output-di
 
 | Area | Intervento |
 |------|------------|
-| AwsTest / S3Test | Logica diagnostica estratta in `Actions/Diagnostic/Aws/*` e `Actions/Diagnostic/S3/*` — pagine Filament sotto 500 righe |
+| AwsTest / S3Test | Logica diagnostica estratta in `Actions/Diagnostic/Aws/*` e `Actions/Diagnostic/S3/*`: pagine Filament sotto 500 righe |
 | Deep nesting | `FormatDebugOutputAction` per output debug S3 |
 | Boost | `audit-coverage/tests/*BridgeTest.php` + `.gitignore` `!tests/**` |
 

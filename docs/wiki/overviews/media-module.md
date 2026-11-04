@@ -17,9 +17,9 @@ updated: 2026-04-15
 status: draft
 ---
 
-# Media Module — Overview
+# Media Module: Overview
 
-> **Ruolo**: Gestione centralizzata di tutti i digital asset — immagini, video, documenti, upload, storage, processing, CDN.
+> **Ruolo**: Gestione centralizzata di tutti i digital asset: immagini, video, documenti, upload, storage, processing, CDN.
 
 ## Responsabilità del Modulo
 
@@ -104,10 +104,10 @@ ConvertVideoByMediaConvertAction::execute($media, [
 
 ## Filament Integration
 
-- `MediaRelationManager` — gestione media da pannello admin di qualsiasi resource
+- `MediaRelationManager`: gestione media da pannello admin di qualsiasi resource
 - `FileUpload` + custom path generator (`TemporaryUploadPathGenerator`)
-- `IconMediaColumn` — colonna icona in tabelle Filament
-- `VideoEntry` — infolist entry per video con player integrato
+- `IconMediaColumn`: colonna icona in tabelle Filament
+- `VideoEntry`: infolist entry per video con player integrato
 
 ## Utilizzo Cross-Module
 
@@ -145,19 +145,19 @@ class Ticket extends XotBaseModel implements HasMedia {
 
 - Estende `XotBaseServiceProvider` (lean service provider, domain logic nei models/actions)
 - PHPStan Level 10 obbligatorio
-- **DRY**: un solo modulo per tutti i media dell'app — no duplicazioni in altri moduli
+- **DRY**: un solo modulo per tutti i media dell'app: no duplicazioni in altri moduli
 - Cleanup automatico upload scaduti via `scopeExpired()`
 
 ## Cross-References
 
-- [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]] — XotBaseServiceProvider, XotBaseModel
-- [[../../../../../../laravel/Modules/Fixcity/docs/wiki/overviews/fixcity-module|Fixcity Module]] — FileUpload in wizard Step 2 (immagini segnalazione)
+- [[../../../../../../laravel/Modules/Xot/docs/wiki/overviews/xot-module|Xot Module]]: XotBaseServiceProvider, XotBaseModel
+- [[../../../../../../laravel/Modules/Fixcity/docs/wiki/overviews/fixcity-module|Fixcity Module]]: FileUpload in wizard Step 2 (immagini segnalazione)
 
 ## Raw Sources Prioritari
 
-- `philosophy.md` — design principles, zen, domain-driven approach
-- `file-management-architecture.md` — multi-layer stack, TemporaryUpload, S3
-- `business-logic-overview.md` — logica upload, processing, access control
-- `configuration.md` — disk, S3, conversioni
-- `ffmpeg.md` — video encoding, pattern FFmpeg
-- `packages.md` — dipendenze esterne
+- `philosophy.md`: design principles, zen, domain-driven approach
+- `file-management-architecture.md`: multi-layer stack, TemporaryUpload, S3
+- `business-logic-overview.md`: logica upload, processing, access control
+- `configuration.md`: disk, S3, conversioni
+- `ffmpeg.md`: video encoding, pattern FFmpeg
+- `packages.md`: dipendenze esterne

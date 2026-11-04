@@ -1,5 +1,5 @@
 ---
-title: "Lacune di completamento — Media"
+title: "Lacune di completamento: Media"
 type: audit
 status: open
 created: 2026-10-28
@@ -10,7 +10,7 @@ related:
   - "../../Xot/docs/project-completion-readiness.md"
 ---
 
-# Lacune di completamento — Media
+# Lacune di completamento: Media
 
 ## Esito
 
@@ -65,13 +65,13 @@ Lettura read-only delle 36 story locali (`*.story.md`): 17 hanno uno stato diver
 
 ### Esempi prioritari da riconciliare
 
-- `in_progress` — [`1.3-phpstan-media-fixes.story.md`](bmad/stories/1.3-phpstan-media-fixes.story.md)
-- `ready-for-dev` — [`media-module-bmad-setup.story.md`](stories/media-module-bmad-setup.story.md)
-- `ready-for-dev` — [`media-phpstan-swarm-verifica-fonti.story.md`](stories/media-phpstan-swarm-verifica-fonti.story.md)
-- `ready-for-dev` — [`media-test-mai-eseguiti-e-doppioni-maiuscole.story.md`](stories/media-test-mai-eseguiti-e-doppioni-maiuscole.story.md)
-- `ready-for-dev` — [`media-webm-non-registrato-e-clip-livewire.story.md`](stories/media-webm-non-registrato-e-clip-livewire.story.md)
-- `ready-for-dev` — [`module-bmad-audit.story.md`](bmad/stories/module-bmad-audit.story.md)
-- `review` — [`readme-changelog-conflict-markers.story.md`](bmad/stories/readme-changelog-conflict-markers.story.md)
-- `draft` — [`cleanup-media.story.md`](bmad/stories/cleanup-media.story.md)
+- `in_progress`: [`1.3-phpstan-media-fixes.story.md`](bmad/stories/1.3-phpstan-media-fixes.story.md)
+- `ready-for-dev`: [`media-module-bmad-setup.story.md`](stories/media-module-bmad-setup.story.md)
+- `ready-for-dev`: [`media-phpstan-swarm-verifica-fonti.story.md`](stories/media-phpstan-swarm-verifica-fonti.story.md)
+- `ready-for-dev`: [`media-test-mai-eseguiti-e-doppioni-maiuscole.story.md`](stories/media-test-mai-eseguiti-e-doppioni-maiuscole.story.md)
+- `ready-for-dev`: [`media-webm-non-registrato-e-clip-livewire.story.md`](stories/media-webm-non-registrato-e-clip-livewire.story.md)
+- `ready-for-dev`: [`module-bmad-audit.story.md`](bmad/stories/module-bmad-audit.story.md)
+- `review`: [`readme-changelog-conflict-markers.story.md`](bmad/stories/readme-changelog-conflict-markers.story.md)
+- `draft`: [`cleanup-media.story.md`](bmad/stories/cleanup-media.story.md)
 
 Prima di lavorare su questi elementi, verificare lo stato canonico nello sprint status, claim/lock e dipendenze. Una story senza `status` non va considerata automaticamente completata.

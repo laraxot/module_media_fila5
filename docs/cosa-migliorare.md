@@ -11,7 +11,7 @@ qmd: "cosa migliorare media phpstan phpmd phpinsights coverage debito priorita"
 status: draft
 ---
 
-# Cosa migliorare — modulo Media
+# Cosa migliorare: modulo Media
 
 Ogni affermazione qui sotto viene da un comando eseguito il 1 settembre 2026, dopo il
 ripristino di `vendor/` a 330 pacchetti. Le misure precedenti a quella data giravano su
@@ -23,9 +23,9 @@ un autoloader dimezzato e non valgono.
 |---|---:|
 | Errori PHPStan (modulo isolato) | 0 |
 | Rilievi PHPMD su `app/` | 171 |
-| PHPInsights — Code | 91.8 % |
-| PHPInsights — Architecture | 100 % |
-| PHPInsights — Style | 90.1 % |
+| PHPInsights: Code | 91.8 % |
+| PHPInsights: Architecture | 100 % |
+| PHPInsights: Style | 90.1 % |
 | File PHP | 243 |
 | Casi di test | 314 |
 | Casi di test per file | 1.29 |

@@ -4,7 +4,7 @@ created: 2026-09-26
 qmd: "second brain local discipline"
 issues: []
 discussions: []
-title: "second-brain-local-discipline — puntatore"
+title: "second-brain-local-discipline: puntatore"
 type: reference
 updated: 2026-05-21
 related:

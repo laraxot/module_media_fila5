@@ -1,5 +1,5 @@
 ---
-title: "PHPStan zero-error — modulo Media"
+title: "PHPStan zero-error: modulo Media"
 type: concept
 tags: [phpstan, testing, pest]
 created: 2026-06-10
@@ -15,7 +15,7 @@ related:
 status: draft
 ---
 
-# PHPStan zero-error — modulo Media
+# PHPStan zero-error: modulo Media
 
 ## Verifica
 

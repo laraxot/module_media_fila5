@@ -18,7 +18,7 @@ related:
   - ./media-mixed-type-reduction.story.md
 ---
 
-# Media PHPStan swarm — verifica fonti, nessun edit necessario
+# Media PHPStan swarm: verifica fonti, nessun edit necessario
 
 ## Fase BMAD: Analysis (Quick Flow, fix/probe)
 
@@ -83,7 +83,7 @@ diff.
 
 ## Decisioni
 
-- D1: nessun edit su codice sano — rifare tipizzazioni esistenti sarebbe churn.
+- D1: nessun edit su codice sano: rifare tipizzazioni esistenti sarebbe churn.
 - D2: internal error ambiente si segnalano, mai si workaroundano (coerente con
   divieto baseline/ignore).
 - D3: report `media_report*.json` su `tests/` esclusi dal gate: nessuna azione.

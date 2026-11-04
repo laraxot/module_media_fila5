@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "No Services / No Support — QueueableAction only"
+title: "No Services / No Support: QueueableAction only"
 type: concept
 module: Media
 tags: [media, services, support, actions, queueable-action, migration]
@@ -14,7 +14,7 @@ related:
 status: draft
 ---
 
-# Media — Services/Support vietati: solo Actions
+# Media: Services/Support vietati: solo Actions
 
 ## Regola
 

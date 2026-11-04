@@ -1,5 +1,5 @@
 ---
-title: "no app/Support — business logic in QueueableAction"
+title: "no app/Support: business logic in QueueableAction"
 type: concept
 tags: [media, actions, queueable-action, support, refactor]
 created: 2026-07-12
@@ -15,7 +15,7 @@ related:
 status: draft
 ---
 
-# no `app/Support/` — business logic in QueueableAction
+# no `app/Support/`: business logic in QueueableAction
 
 ## Scopo
 

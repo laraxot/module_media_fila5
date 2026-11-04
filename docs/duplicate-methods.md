@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Metodi duplicati — Media"
+title: "Metodi duplicati: Media"
 module: "Media"
 type: concept
 tags: [duplicate, methods]
@@ -12,7 +12,7 @@ related:
   - "./webm.md"
 status: draft
 ---
-# Metodi duplicati — Media
+# Metodi duplicati: Media
 
 Analisi sintetica dei metodi PHP con lo stesso nome all’interno di questo ambito.
 

@@ -7,7 +7,7 @@ status: draft
 updated: 2026-10-09
 ---
 
-# Story — riorganizzazione docs core: Media
+# Story: riorganizzazione docs core: Media
 
 - **ID:** `2026-10-09-docs-reorg-core-media`
 - **Status:** done
