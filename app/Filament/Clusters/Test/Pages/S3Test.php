@@ -251,6 +251,7 @@ class S3Test extends XotBasePage
 
         // Generate CloudFront signed URL for attachment
         $signedUrl = app(GetCloudFrontSignedUrlAction::class)->execute($filePath, 60);
+<<<<<<< .merge_file_VfHLCH
         $this->debugResults['signed_url'] = [
             'title' => 'CloudFront signed URL',
             'status' => 'info',
@@ -263,6 +264,14 @@ class S3Test extends XotBasePage
         ];
         $this->updateDebugOutput();
 
+=======
+        dddx([
+            'signedurl' => $signedUrl,
+            'filePath' => $filePath,
+            'url2' => Storage::disk('s3')->url($filePath),
+            'url3' => Storage::disk('s3')->temporaryUrl($filePath, now()->addMinutes(5)),
+        ]);
+>>>>>>> .merge_file_4aAPK6
         Notification::make()
             ->title(Lang::string('media::s3test.notifications.s3_test_successful'))
             ->success()

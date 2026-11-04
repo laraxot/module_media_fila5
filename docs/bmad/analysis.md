@@ -8,6 +8,8 @@ updated: 2026-07-14
 qmd: "analysis"
 related:
   - "./webm.md"
+status: superseded
+superseded_by: ../wiki/analysis.md
 ---
 # Media Module Analysis
 

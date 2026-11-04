@@ -8,6 +8,8 @@ updated: 2026-07-14
 qmd: "ai methodologies"
 related:
   - "./webm.md"
+status: superseded
+superseded_by: ../wiki/ai-methodologies.md
 ---
 # AI Methodologies Handbook
 

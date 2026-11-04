@@ -1,5 +1,9 @@
 ---
+<<<<<<< .merge_file_Tkbcpv
 title: "Media Module — BMAD Stories & Remaining Work"
+=======
+title: "Media Module: BMAD Stories & Remaining Work"
+>>>>>>> .merge_file_9IYsL0
 type: concept
 sources: ["../../AGENTS.md", "laravel/Modules/Media/docs/"]
 confidence: medium
@@ -12,7 +16,11 @@ status: draft
 qmd: "media module   bmad stories & remaining work media"
 ---
 
+<<<<<<< .merge_file_Tkbcpv
 # Media Module — BMAD Stories & Remaining Work
+=======
+# Media Module: BMAD Stories & Remaining Work
+>>>>>>> .merge_file_9IYsL0
 
 ## Module Overview
 The Media module handles file uploads, storage management, FFmpeg integration, and media asset processing.
@@ -20,6 +28,7 @@ The Media module handles file uploads, storage management, FFmpeg integration, a
 ## Remaining Work (BMAD Brainstorming)
 
 ### Critical / High Priority
+<<<<<<< .merge_file_Tkbcpv
 1. **PHPStan Zero Verification** — Confirm all media contracts pass level 10
 2. **FFmpeg Integration** — Verify FFmpeg processing works correctly
 3. **PHPStan Fixes** — Address documented errors in `phpstan-level10-fixes.md`
@@ -32,6 +41,20 @@ The Media module handles file uploads, storage management, FFmpeg integration, a
 ### Low Priority / Polish
 7. **Documentation Cleanup** — Archive obsolete media docs
 8. **Performance Optimization** — Review upload and processing performance
+=======
+1. **PHPStan Zero Verification**: Confirm all media contracts pass level 10
+2. **FFmpeg Integration**: Verify FFmpeg processing works correctly
+3. **PHPStan Fixes**: Address documented errors in `phpstan-level10-fixes.md`
+
+### Medium Priority
+4. **Module Documentation**: Document media models, actions, and storage patterns
+5. **Test Coverage**: Add unit and integration tests for media processing
+6. **Storage Management**: Verify S3 and local storage configurations
+
+### Low Priority / Polish
+7. **Documentation Cleanup**: Archive obsolete media docs
+8. **Performance Optimization**: Review upload and processing performance
+>>>>>>> .merge_file_9IYsL0
 
 ## Next Actions
 - Create module-specific story files in `laravel/Modules/Media/docs/stories/`

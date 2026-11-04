@@ -1,5 +1,5 @@
 ---
-title: "Composer root minimale — modulo Media"
+title: "Composer root minimale: modulo Media"
 type: concept
 tags: [composer, media, nwidart, merge-plugin]
 created: 2026-06-29
@@ -20,12 +20,16 @@ status: draft
 
 ## Regola
 
+<<<<<<< .merge_file_aRyZwF
 Dipendenze del dominio **Media** in `Modules/Media/composer.json`. Il root `laravel/composer.json` resta skeleton; riferimento FixCity con debito noto — canonico Predict in [composer-root-minimal-nwidart](../../../../../../docs/wiki/concepts/composer-root-minimal-nwidart.md).
+=======
+Dipendenze del dominio **Media** in `Modules/Media/composer.json`. Il root `laravel/composer.json` resta skeleton; riferimento FixCity con debito noto: canonico Predict in [composer-root-minimal-nwidart](../../../../../../docs/wiki/concepts/composer-root-minimal-nwidart.md).
+>>>>>>> .merge_file_VBA7Sc
 
 
 
 
-## Merge root — solo moduli
+## Merge root: solo moduli
 
 `laravel/composer.json` → merge **solo** `Modules/*/composer.json`. **Vietato** `Themes/*/composer.json` (nwidart owner = modulo; tema = vestito Blade/assets).
 

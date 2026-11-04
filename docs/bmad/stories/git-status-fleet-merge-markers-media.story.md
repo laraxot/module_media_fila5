@@ -1,5 +1,5 @@
 ---
-title: "Bonifica marker merge committati — Media"
+title: "Bonifica marker merge committati: Media"
 type: story
 module: Media
 epic: quality
@@ -8,6 +8,9 @@ status: done
 track: quality/fleet
 related:
   - ../../../../Xot/docs/bmad/stories/merge-marker-fleet-residue.story.md
+updated: 2026-10-15
+tags: [docs, media, bmad]
+qmd: "git-status-fleet-merge-markers-media media"
 ---
 
 # git-status-fleet-merge-markers-media

@@ -30,10 +30,14 @@ class ConvertAction extends Action
                     ->inline()
                     ->inlineLabel(false),
             ])
+<<<<<<< .merge_file_6KBqhM
             // Segnaposto senza caller (solo MediaHighestMissCoverageTest ne legge il nome): la conversione vera
             // e' ConvertVideoByMediaConvertAction, accodata da MediaConvertsTable. Prima qui c'era dddx(...),
             // che al submit scaricava il form e uccideva la richiesta.
             ->action(static fn (): never => throw new \LogicException('Media ConvertAction not implemented: use MediaConvertsTable'));
+=======
+            ->action(dddx(...));
+>>>>>>> .merge_file_dXeEly
 
         // ->requiresConfirmation()
     }

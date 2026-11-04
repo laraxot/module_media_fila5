@@ -1,13 +1,13 @@
 ---
-title: Media — indice BMAD
+title: Media: indice BMAD
 type: index
 tags: [docs, bmad, media]
 qmd: "Media indice BMAD documentazione"
 status: draft
-updated: 2026-10-09
+updated: 2026-10-21
 ---
 
-# Media — indice BMAD
+# Media: indice BMAD
 
 ## Canonico
 
@@ -16,6 +16,7 @@ updated: 2026-10-09
 - [Brainstorming](./brainstorming/)
 - [Epiche](./epics/)
 - [Stories](./stories/)
+  - [PHPStan cluster A 2026-10-21](./stories/phpstan-clusterA.story.md)
 - [Wiki del modulo](../wiki/)
 
 ## Legacy da consultare, non da estendere

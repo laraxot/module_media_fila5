@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Filament Version Declaration — Media"
+title: "Filament Version Declaration: Media"
 module: "Media"
 type: concept
 tags: [filament, version]
@@ -12,7 +12,7 @@ related:
   - "./webm.md"
 status: draft
 ---
-# Filament Version Declaration — Media
+# Filament Version Declaration: Media
 
 **Current Version**: Filament v5 (Livewire v4 + Schemas)
 
@@ -28,4 +28,8 @@ All resources, forms, tables, infolists, widgets and actions must follow the v5 
 
 **Last verified**: 2026-05-21
 
+<<<<<<< .merge_file_sTzsys
 **Firmato:** Cursor Agent (Composer) — template propagato ai package `docs/`
+=======
+**Firmato:** Cursor Agent (Composer): template propagato ai package `docs/`
+>>>>>>> .merge_file_qClyML

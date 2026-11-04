@@ -8,7 +8,8 @@ updated: 2026-07-14
 qmd: "bad practices"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: ../bad_practices.md
 ---
 # Bad Practices – Media Module
 
