@@ -10,7 +10,8 @@ updated: 2026-07-14
 qmd: "risoluzione conflitti ffmpeg"
 related:
   - "./webm.md"
-status: draft
+status: superseded
+superseded_by: conflict-resolution-ffmpeg.md
 ---
 # Risoluzione Conflitti per l'Integrazione FFmpeg nel Modulo Media
 

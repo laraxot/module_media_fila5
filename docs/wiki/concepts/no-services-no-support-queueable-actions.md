@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "No Services — QueueableAction for use-cases"
+title: "No Services / No Support — QueueableAction only"
 type: concept
 module: Media
 tags: [media, services, support, actions, queueable-action, migration]
@@ -14,27 +14,19 @@ related:
 status: draft
 ---
 
-# Media — Services vietati: use-case in QueueableAction
+# Media — Services/Support vietati: solo Actions
 
 ## Regola
 
-- **Mai** creare file in `app/Services/` per business logic
+- **Mai** creare file in `app/Services/` o `app/Support/`
 - **Sempre** `app/Actions/{Contexto}/FooAction.php`
 - **Trait**: `use Spatie\QueueableAction\QueueableAction;`
 - **Entrypoint**: unico metodo `execute(...)`
 - **Chiamata**: `app(FooAction::class)->execute(...)`
 - **Gruppi**: sottocartelle per attore/contesto
 
-## Eccezioni infrastrutturali
-
-`app/Support/` resta ammesso solo per oggetti senza use-case di dominio:
-
-- `Ffmpeg/MediaExporterResolver`: adapter/runtime type guard della fluent API FFmpeg;
-- `TemporaryUploadPathGenerator`: path generator richiesto dall’infrastruttura MediaLibrary.
-
-Lo streaming HTTP resta in `Actions/Stream/StreamVideoAction` perché è un use-case
-invocabile, ma conserva l’infrastruttura necessaria per range response, headers e
-stream resource lifecycle. Non trasformare questi adapter/primitive in servizi.
+Lo streaming HTTP resta in `Actions/Stream/StreamVideoAction`: range response, headers e ciclo di vita
+dello stream sono parte dell'use-case invocabile, non un servizio.
 
 ## Conversione
 

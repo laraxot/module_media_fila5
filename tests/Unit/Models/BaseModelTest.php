@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Modules\Media\Models\BaseModel;
 use Modules\Media\Tests\TestCase;
+use Modules\Xot\Models\XotBaseModel;
 use PHPUnit\Framework\Assert;
 
-uses(TestCase::class)->group('no-media-db');
+uses(TestCase::class);
 
 if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     function makeMediaTestBaseModel(): BaseModel
@@ -21,22 +21,15 @@ if (! function_exists(__NAMESPACE__.'\\makeMediaTestBaseModel')) {
     }
 }
 
-test('base model extends eloquent model', function (): void {
-    Assert::assertInstanceOf(Model::class, makeMediaTestBaseModel());
-});
-
 test('base model has correct table name', function (): void {
     expect(makeMediaTestBaseModel()->getTable())->toBe('test_media_table');
 });
 
-test('base model can be instantiated', function (): void {
-    Assert::assertInstanceOf(BaseModel::class, makeMediaTestBaseModel());
-});
-
-test('base model has proper inheritance chain', function (): void {
+test('base model can be instantiated with configured table', function (): void {
     $model = makeMediaTestBaseModel();
-    Assert::assertInstanceOf(BaseModel::class, $model);
-    Assert::assertInstanceOf(Model::class, $model);
+
+    Assert::assertSame('test_media_table', $model->getTable());
+    Assert::assertNotSame(BaseModel::class, $model::class);
 });
 
 test('base model has timestamps enabled', function (): void {

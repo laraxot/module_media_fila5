@@ -388,7 +388,7 @@ jobs:
 - [Correzioni S3Test.php](s3test_corrections.md)
 - [PHPStan Fixes](phpstan-level10-fixes.md)
 - [Translation Standards](translations.md)
-- [Architecture Guidelines](../docs/architecture.md)
+- [Architecture Guidelines](ARCHITECTURE.md)
 
 ---
 

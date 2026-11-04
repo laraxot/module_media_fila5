@@ -9,7 +9,7 @@ status: active
 audience: [developer, maintainer]
 tags: [media, docs, index, bmad, documentation]
 created: 2026-09-26
-updated: 2026-10-14
+updated: 2026-10-23
 qmd: "README"
 issues: []
 discussions: []
@@ -20,13 +20,13 @@ related: [bmad/00-INDEX.md, bmad/readme.md, INDEX.md]
 
 Path: `laravel/Modules/Media/docs/`
 Module: @Modules/Media
-Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). `docs-archive-2026/` non esiste ne' nel modulo ne' nella radice del repo (verificato 2026-10-14): lo storico vive nelle sottocartelle di `docs/`, classificate in [00-INDEX.md](./00-INDEX.md#mappa-delle-directory).
+Scope: punto di ingresso della documentazione del modulo Media (gestione multimediale in Laraxot). `docs-archive-2026/` non esiste ne' nel modulo ne' nella radice del repo (verificato 2026-10-14): lo storico vive nelle sottocartelle di `docs/`. La mappa delle directory era in `00-INDEX.md`, rimosso il 2026-10-22 (commit e2282c1b) e non riportato altrove.
 
 ## File canonici
 
 1. **[README.md](README.md)** - questo file, punto di ingresso
-2. **[architecture.md](architecture.md)** - architettura, namespace, dipendenze, struttura, funzionalita'
-3. **[INDEX.md](INDEX.md)** - indice completo per categoria, con le story BMAD
+2. **[architecture.md](ARCHITECTURE.md)** - architettura, namespace, dipendenze, struttura, funzionalita'
+3. **[INDEX.md](index.md)** - indice completo per categoria, con le story BMAD
 4. **[index.md](index.md)** - bridge per discovery (legacy)
 
 Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" e "Linkage"; la coppia case-variant e' un duplicato da consolidare (vedi [16-4](./stories/16-4-media-case-variant-consolidation.md) per lo stesso problema nei test).
@@ -34,7 +34,6 @@ Nota: `readme.md` (minuscolo) e' un bridge legacy con la stessa sezione "Scopo" 
 ## Scopo del modulo
 
 Verificato sul codice il 2026-10-14 (`app/`, `config/`, `database/migrations`, `routes/`):
-
 - Modelli sopra Spatie MediaLibrary: `Media` estende `Spatie\MediaLibrary\MediaCollections\Models\Media`, `TemporaryUpload` implementa `HasMedia`, `MediaConvert` traccia le conversioni video. Connessione database `media` (`Models/BaseModel`).
 - Conversione video con `pbmedia/laravel-ffmpeg`: `Actions/Video/*`, comando `media:convert-video {disk} {file}`, generatori `Conversions/VideoGenerators/Webm` e `Conversions/ImageGenerators/PowerPoint`.
 - Allegati ai record: `AttachMediaAction`, `SaveAttachmentsAction`, `GetAttachmentsSchemaAction`, azione Filament `AddAttachmentAction`.
@@ -44,8 +43,24 @@ Verificato sul codice il 2026-10-14 (`app/`, `config/`, `database/migrations`, `
 
 Citato in vecchi documenti ma non trovato nel codice: HLS/DASH, watermark automatico, isolamento per tenant (nessun riferimento a `Tenant` in `app/`), CDN generico (esiste solo CloudFront).
 
-## Linkage
+- Modelli sopra Spatie MediaLibrary: `Media` estende `Spatie\MediaLibrary\MediaCollections\Models\Media`, `TemporaryUpload` implementa `HasMedia`, `MediaConvert` traccia le conversioni video. Connessione database `media` (`Models/BaseModel`).
+- Conversione video con `pbmedia/laravel-ffmpeg`: `Actions/Video/*`, comando `media:convert-video {disk} {file}`, generatori `Conversions/VideoGenerators/Webm` e `Conversions/ImageGenerators/PowerPoint`.
+- Allegati ai record: `AttachMediaAction`, `SaveAttachmentsAction`, `GetAttachmentsSchemaAction`, azione Filament `AddAttachmentAction`.
+- Sottotitoli e streaming: `Actions/Subtitle/*` (SRT in VTT, lettura XML) e `Actions/Stream/StreamVideoAction`.
+- Storage AWS S3 e CloudFront: `Actions/S3/*`, `Actions/CloudFront/GetCloudFrontSignedUrlAction`, diagnostica in `Actions/Diagnostic/Aws/*` e `Actions/Diagnostic/S3/*`, pagine Filament di prova nel cluster `Test` (`AwsTest`, `S3Test`).
+- Pannello Filament `media::admin` con tre Resource (`MediaResource`, `MediaConvertResource`, `TemporaryUploadResource`) piu' `HasMediaResource`, che porta relation manager e schemi riusabili dagli altri moduli.
 
+## Dove iniziare
+
+- [Wiki locale](./wiki/index.md)
+- [Audit ridondanza](./code-redundancy-audit.md)
+- [Regole architettura](./architecture-rules.md)
+- [Disciplina agenti](./agent-edit-discipline.md)
+
+## Dipendenze e collegamenti
+
+- [README root (vetrina)](../README.md) · [Xot (framework base)](../../Xot/docs/)
+- Standard [README doppio](../../../../docs/wiki/standards/module-theme-readme-dual.md) e [disciplina issue GitHub](../../../../docs/wiki/how-to/github-issue-agent-discipline.md) da seguire prima di modifiche sostanziali.
 - Dipende, nel codice, da: Xot (85 righe `use Modules\Xot` in `app/` e `tests/`), User (3), UI (2, `SvgExistsAction`), Job (1, `ClockWidget` in `ListMediaConverts`). `Tenant` compare solo tra i `repositories` di tipo path in `composer.json`.
 - Usato da (file in `Modules/*/app` e `Themes/*/app` che citano `Modules\Media` o `media::`): Blog 9, Notify 8, User 4, Rating 2, Fixcity 2, Cms 2, Xot 1.
 - Standard di documentazione: [contratto docs di moduli e temi](../../../../bmad-output/docs-architecture/module-theme-docs-contract.md).
@@ -76,12 +91,13 @@ Il pannello e' raggiungibile su `media/admin` (Resource `media`, `media-converts
 
 - **architecture.md**: architettura del modulo e pattern di design
 - **README.md**: questo file
-- **stories/**: story BMAD del modulo (elenco in [INDEX.md](INDEX.md#story-bmad))
-- **bmad/**: artefatti BMAD (indice in [bmad/00-INDEX.md](./bmad/00-INDEX.md))
+- **stories/**: story BMAD del modulo (elenco in [INDEX.md](index.md#story-bmad))
+- **bmad/**: artefatti BMAD (indice in [bmad/00-INDEX.md](./bmad/00-index.md))
 
 Linee guida: documenti chiari e concisi, ricchi di esempi, aggiornati insieme al codice, in formato Markdown (`.md`).
 
 ## Story recenti
 
-- [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-cleanup-media.story.md) · [dev](./stories/phpstan-cleanup-media.dev.md)
+- [2026-10-06 PHPStan cleanup - Media](./stories/phpstan-zero-errors-media.story.md) · [dev](./stories/phpstan-zero-errors-media.dev.md)
 - [02 Risoluzione dei marker di merge del commit e7e667b11](./stories/02.Media-merge-conflict-resolution.story.md)
+- [2026-10-30 Niente testi fissi nelle Blade (it, en, de, es)](./stories/blade-i18n-no-hardcoded-text.story.md)

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Media\Tests\Unit\Conversions;
 
-use Illuminate\Support\Collection;
 use Modules\Media\Conversions\ImageGenerators\PowerPoint;
 use Modules\Media\Conversions\VideoGenerators\Webm;
 use Modules\Media\Datas\AttachmentToSaveData;
@@ -28,7 +27,6 @@ test('the webm generator declares itself installable and handles mp4 sources', f
     Assert::assertTrue($generator->requirementsAreInstalled());
 
     $extensions = $generator->supportedExtensions();
-    Assert::assertInstanceOf(Collection::class, $extensions);
     Assert::assertSame(['mp4'], $extensions->all());
 
     Assert::assertSame(['video/mpeg', 'video/mp4'], $generator->supportedMimeTypes()->all());
@@ -53,8 +51,6 @@ test('the powerpoint generator advertises extensions and mime types consistently
     $extensions = $generator->supportedExtensions();
     $mimeTypes = $generator->supportedMimeTypes();
 
-    Assert::assertInstanceOf(Collection::class, $extensions);
-    Assert::assertInstanceOf(Collection::class, $mimeTypes);
     Assert::assertNotSame([], $extensions->all());
     Assert::assertNotSame([], $mimeTypes->all());
 

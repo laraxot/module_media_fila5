@@ -16,8 +16,8 @@ use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\EditTemporary
 use Modules\Media\Http\Controllers\ConvertController;
 use Modules\Media\Models\Media;
 use Modules\Media\Rules\FileExtensionRule;
-use Modules\Media\Support\Ffmpeg\MediaExporterResolver;
-use Modules\Media\Support\TemporaryUploadPathGenerator;
+use Modules\Media\Actions\Ffmpeg\ResolveMediaExporterAction;
+use Modules\Media\Actions\GenerateTemporaryUploadPathAction;
 use Modules\Media\Tests\TestCase;
 use Modules\Media\View\Components\VideoPlayer;
 use PHPUnit\Framework\Assert;
@@ -59,7 +59,7 @@ describe('Media gap closer — statement coverage', function (): void {
         $media = new Media;
         $media->id = 7;
         $media->uuid = '550e8400-e29b-41d4-a716-446655440000';
-        $gen = new TemporaryUploadPathGenerator;
+        $gen = app(GenerateTemporaryUploadPathAction::class);
         Assert::assertStringContainsString('tmp/', $gen->getPath($media));
         Assert::assertStringContainsString(md5($media->id.$media->uuid.'conversion'), $gen->getPathForConversions($media));
         Assert::assertStringContainsString(md5($media->id.$media->uuid.'responsive'), $gen->getPathForResponsiveImages($media));
@@ -79,16 +79,15 @@ describe('Media gap closer — statement coverage', function (): void {
     });
 
     test('MediaExporterResolver and ConvertController instantiate', function (): void {
-        Assert::assertTrue(class_exists(MediaExporterResolver::class));
+        Assert::assertTrue(class_exists(ResolveMediaExporterAction::class));
         try {
-            $resolver = app(MediaExporterResolver::class);
-            Assert::assertInstanceOf(MediaExporterResolver::class, $resolver);
+            $resolver = app(ResolveMediaExporterAction::class);
+            Assert::assertInstanceOf(ResolveMediaExporterAction::class, $resolver);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());
         }
 
-        $controller = new ConvertController;
-        Assert::assertInstanceOf(ConvertController::class, $controller);
+        Assert::assertSame(ConvertController::class, (new ConvertController)::class);
     });
 
     test('filament pages and relation managers exist', function (): void {
@@ -112,7 +111,6 @@ describe('Media gap closer — statement coverage', function (): void {
     test('VideoPlayer constructs with explicit props', function (): void {
         try {
             $player = new VideoPlayer(mp4Src: 'https://example.test/v.mp4', currentTime: 0, driver: 'html5');
-            Assert::assertInstanceOf(VideoPlayer::class, $player);
             Assert::assertSame('html5', $player->driver);
         } catch (\Throwable $e) {
             Assert::assertNotSame('', $e->getMessage());

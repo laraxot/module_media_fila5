@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Diagnostic\S3;
 
 use Aws\Exception\AwsException;
-use Modules\Media\Actions\Diagnostic\Support\CreateFilesystemStsClientAction;
+use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemStsClientAction;
 use Spatie\QueueableAction\QueueableAction;
 
 class TestCredentialsAction
 {
     use QueueableAction;
+
 
     /**
      * @return array<string, mixed>

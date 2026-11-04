@@ -6,22 +6,22 @@ module: "Media"
 type: concept
 tags: [00, index]
 created: 2026-07-14
-updated: 2026-10-14
+updated: 2026-10-23
 qmd: "00 index"
 related:
   - "./webm.md"
 status: superseded
-superseded_by: 00-INDEX.md
+superseded_by: README.md
 ---
 
-> Superseded il 2026-10-14: copia per sola differenza di maiuscole di [00-INDEX.md](./00-INDEX.md); l'indice canonico e' quello. Contenuto conservato per storia. Le voci "non presente" puntavano a file che non esistono (verificato 2026-10-14).
+> Superseded il 2026-10-14 come copia per sola differenza di maiuscole di `00-INDEX.md`. Quel file e' stato rimosso il 2026-10-22 (commit e2282c1b) e il suo contenuto (tra cui la mappa delle directory) non e' stato riportato qui: l'ingresso verificato sul codice e' [README.md](./README.md). Contenuto conservato per storia. Le voci "non presente" puntavano a file che non esistono (verificato 2026-10-14).
 # 📚 **Indice Documentazione Modulo Media**
 
 **Status**: ✅ PHPStan Level 10 Compliant
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](README.md) - Panoramica completa, Upload e Processing.
+1. [README.md](./readme.md) - Panoramica completa, Upload e Processing.
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 
@@ -89,9 +89,14 @@ superseded_by: 00-INDEX.md
 
 ## 🔗 Riferimenti
 
-- [Xot Module](../../Xot/docs/00-INDEX.md) - Base classes
+- [Xot Module](../../Xot/docs/00-index.md) - Base classes
 - [AGENTS.md](../../../../AGENTS.md) - Project guidelines
 
 ---
 
 **Ultimo Aggiornamento**: 2026-03-24
+
+## Impostazioni del modulo (SettingPage)
+
+`/media/admin/setting`, solo super-admin, file `config/{tenant}/media.php`: dimensione massima e tipi MIME degli allegati delle Resource (prima 10 MB, pdf/doc/docx in `GetAttachmentsSchemaAction`).
+Decisione e modulo per modulo: [../../Xot/docs/stories/module-setting-pages.epic.md](../../Xot/docs/stories/module-setting-pages.epic.md).
