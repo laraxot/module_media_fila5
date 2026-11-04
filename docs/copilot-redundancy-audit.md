@@ -12,7 +12,7 @@ related:
   - "./webm.md"
 status: draft
 ---
-Copilot Redundancy Audit — 2026-05-25
+Copilot Redundancy Audit: 2026-05-25
 
 Sintesi
 - Presenza di file e documenti simili in molti moduli; suggerisce opportunità di consolidamento (es.: upload.txt, image.txt, README.md).

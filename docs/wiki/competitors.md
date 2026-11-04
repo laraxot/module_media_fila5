@@ -1,12 +1,12 @@
 ---
-title: "Competitors — risorse esterne"
+title: "Competitors: risorse esterne"
 type: alias
 status: superseded
 canonical: "bmad/competitors.md"
 qmd: "competitors alias superseded"
 ---
 
-# Competitors — risorse esterne
+# Competitors: risorse esterne
 
 Documento identico al canonico: [competitors.md](../bmad/competitors.md).
 

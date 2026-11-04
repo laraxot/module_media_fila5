@@ -4,7 +4,7 @@ updated: 2026-09-26
 qmd: "PATTERNS"
 issues: []
 discussions: []
-title: "Architectural Patterns — Media Module"
+title: "Architectural Patterns: Media Module"
 module: "Media"
 type: architecture
 tags: [patterns, best-practices]
@@ -12,7 +12,7 @@ last_updated: 2026-07-28
 status: draft
 ---
 
-# Architectural Patterns — Media Module
+# Architectural Patterns: Media Module
 
 **Last updated:** 2026-07-28
 

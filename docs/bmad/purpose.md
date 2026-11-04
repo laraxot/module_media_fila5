@@ -1,22 +1,22 @@
 ---
-title: "Media — scopo del modulo e come raggiungerlo meglio"
+title: "Media: scopo del modulo e come raggiungerlo meglio"
 type: concept
 created: 2026-09-02
 tags: [media, purpose, allegati, conversioni, storage, public-path]
 qmd: "media scopo modulo allegati conversioni temporary upload storage public html path prova documentale"
 updated: 2026-09-02
 issues:
-  # DA CREARE — `gh` non autenticato: mai numeri inventati.
+  # DA CREARE: `gh` non autenticato: mai numeri inventati.
   # gh issue create --repo provtv/module_media_fila5 --title "<argomento del file>"
   - "https://github.com/provtv/module_media_fila5/issues/"
 discussions:
-  # DA CREARE — vedi sopra.
+  # DA CREARE: vedi sopra.
   - "https://github.com/provtv/module_media_fila5/discussions/"
 status: superseded
 superseded_by: ../purpose.md
 ---
 
-# Media — perche' esiste
+# Media: perche' esiste
 
 ## Lo scopo in una frase
 
@@ -31,7 +31,7 @@ nei formati che servono senza che il dominio sappia nulla di dischi e conversion
 - Zero Widget: lavora sotto le altre schermate.
 
 `TemporaryUpload` merita attenzione: un file caricato in un form non ancora salvato
-esiste **prima** dell'entita' a cui apparterra'. Gestire quel limbo — e ripulirlo — e'
+esiste **prima** dell'entita' a cui apparterra'. Gestire quel limbo: e ripulirlo: e'
 un problema reale che il modello rende esplicito.
 
 ## Il vincolo che decide tutto: dove finiscono i file
@@ -59,7 +59,7 @@ dei dati sacri.
 
 I file caricati e mai confermati si accumulano. Senza una politica, crescono per anni.
 
-**Azione:** scadenza esplicita (es. 24 ore) e un lavoro pianificato che la applichi —
+**Azione:** scadenza esplicita (es. 24 ore) e un lavoro pianificato che la applichi -
 registrando quanti file ha rimosso. Una pulizia silenziosa e una pulizia non eseguita
 si assomigliano troppo.
 
@@ -85,7 +85,7 @@ si da' per scontato finche' non viene disatteso.
 Come per Xot: senza un elenco con una riga di scopo, la 50esima Action sara' un
 duplicato della 12esima.
 
-## Confini — cosa **non** appartiene a Media
+## Confini: cosa **non** appartiene a Media
 
 - Il **significato** del file: dominio. Media sa che e' un PDF di 2 MB, non che e' una
   certificazione.
@@ -94,5 +94,5 @@ duplicato della 12esima.
 
 ## Collegamenti
 
-- `docs/wiki/memories/public-path-is-public-html.md` — il vincolo dei percorsi
-- `laravel/Modules/Job/docs/purpose.md` — conversioni accodate
+- `docs/wiki/memories/public-path-is-public-html.md`: il vincolo dei percorsi
+- `laravel/Modules/Job/docs/purpose.md`: conversioni accodate

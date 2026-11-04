@@ -25,7 +25,7 @@ tags: [troubleshooting, errors, debugging]
 last_updated: 2026-07-28
 ---
 
-# Troubleshooting Guide — Media Module
+# Troubleshooting Guide: Media Module
 
 **Last updated:** 2026-07-28
 

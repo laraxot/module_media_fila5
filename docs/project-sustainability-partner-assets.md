@@ -1,5 +1,5 @@
 ---
-title: "Sostenibilità — asset loghi partner"
+title: "Sostenibilità: asset loghi partner"
 type: concept
 module: Media
 status: decision-input
@@ -26,7 +26,7 @@ governato a livello contenuto (Cms), revoca = rimozione pubblicazione.
 2. Nessun SVG con script / foreignObject pericolosi (policy da definire)
 3. Dimensioni massime e ratio coerenti col footer (Sixteen)
 4. Metadati: partner, licenza, `starts_at`/`ends_at`, reviewed_by
-5. Fallback: se logo manca, mostrare nome testuale — non placeholder inventato
+5. Fallback: se logo manca, mostrare nome testuale: non placeholder inventato
 
 ## Confini
 

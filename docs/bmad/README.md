@@ -6,20 +6,20 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
-title: "Modulo Media — Documentazione Bridge"
+title: "Modulo Media: Documentazione Bridge"
 type: index
 qmd: "modulo media   documentazione bridge media"
 ---
 
-# Modulo Media — Documentazione Bridge
+# Modulo Media: Documentazione Bridge
 
 Documentazione canonica per il modulo Media: gestione multimediale (immagini, video, documenti, audio) in Laraxot.
 
 ## File Canonici
 
-1. **[README.md](README.md)** — questo file, punto di ingresso
-2. **[architecture.md](architecture.md)** — architettura, namespace, dipendenze, struttura, funzionalità
-3. **[index.md](index.md)** — bridge per discovery (legacy)
+1. **[README.md](README.md)**: questo file, punto di ingresso
+2. **[architecture.md](architecture.md)**: architettura, namespace, dipendenze, struttura, funzionalità
+3. **[index.md](index.md)**: bridge per discovery (legacy)
 
 ## Scopo Modulo
 
