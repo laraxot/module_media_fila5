@@ -262,10 +262,7 @@ class S3Test extends XotBasePage
             ],
         ];
         $this->updateDebugOutput();
-<<<<<<< HEAD
-=======
 
->>>>>>> f75ac2f819e974b258caacf2f2627553246f20d5
         Notification::make()
             ->title(Lang::string('media::s3test.notifications.s3_test_successful'))
             ->success()
