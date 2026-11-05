@@ -200,6 +200,14 @@ class Media extends SpatieMedia
      */
     public function getEntryConversionsAttribute(): array
     {
+        return $this->getEntryConversions();
+    }
+
+    /**
+     * @return array<int, array{name: string, generated: bool, src: string}>
+     */
+    public function getEntryConversions(): array
+    {
         $conversions = [];
         foreach ($this->getGeneratedConversions() as $conv => $state) {
             $item = [

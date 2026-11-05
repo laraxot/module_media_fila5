@@ -10,7 +10,6 @@ namespace Modules\Media\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
-use Modules\Media\Database\Factories\MediaConvertFactory;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -99,6 +98,11 @@ class MediaConvert extends BaseModel
 
     public function getDiskAttribute(?string $value): ?string
     {
+        return $this->getDisk();
+    }
+
+    public function getDisk(): ?string
+    {
         if ($this->media === null) {
             return null;
         }
@@ -108,6 +112,11 @@ class MediaConvert extends BaseModel
 
     public function getFileAttribute(?string $value): ?string
     {
+        return $this->getFile();
+    }
+
+    public function getFile(): ?string
+    {
         if ($this->media === null) {
             return null;
         }
@@ -116,6 +125,11 @@ class MediaConvert extends BaseModel
     }
 
     public function getConvertedFileAttribute(?string $value): ?string
+    {
+        return $this->getConvertedFile();
+    }
+
+    public function getConvertedFile(): ?string
     {
         if ($this->media === null) {
             return null;
