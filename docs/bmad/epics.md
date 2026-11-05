@@ -13,7 +13,11 @@ qmd: "epics e user stories - modulo media media"
 
 # Epics e User Stories - Modulo Media
 
+<<<<<<< .merge_file_b7v1sH
 ## Epic attivo — Mobile camera upload
+=======
+## Epic attivo: Mobile camera upload
+>>>>>>> .merge_file_Qv4YbG
 
 Il dettaglio cross-module è in [Fixcity mobile-camera-upload epic](../../Fixcity/docs/bmad/epics/mobile-camera-upload.epic.md).
 Media possiede la story [CAM-1.3 fallback Imagick](stories/CAM-1.3-server-media-contract-imagick.story.md);

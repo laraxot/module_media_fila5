@@ -1,5 +1,5 @@
 ---
-title: "Project context — Media"
+title: "Project context: Media"
 type: constitution
 module: Media
 track: quick-flow
@@ -14,7 +14,7 @@ related:
   - ./filament-blueprint.md
 ---
 
-# Costituzione — Media
+# Costituzione: Media
 
 Conservare evidenze e conversioni validate senza trasformare i media personali in dati incontrollati.
 

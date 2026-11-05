@@ -1,5 +1,5 @@
 ---
-title: "Tech spec — Media"
+title: "Tech spec: Media"
 type: tech-spec
 module: Media
 related:

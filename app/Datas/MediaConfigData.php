@@ -20,8 +20,11 @@ class MediaConfigData extends Data
 {
     use MakesFromTenantConfig;
 
+<<<<<<< .merge_file_XTQhyq
     public string $name = 'Media';
 
+=======
+>>>>>>> .merge_file_TUyGiQ
     /** Dimensione massima degli allegati delle Resource, in KB (prima 10240 in GetAttachmentsSchemaAction). */
     public int $attachment_max_size_kb = 10240;
 
