@@ -4,16 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Media\Models;
 
-use Exception;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
-use Modules\Media\Database\Factories\MediaFactory;
+use Modules\Media\Models\Traits\MediaMutator;
+use Modules\Media\Models\Traits\MediaRelationship;
 use Modules\Xot\Contracts\ProfileContract;
-use Modules\Xot\Datas\XotData;
 use Modules\Xot\Models\Traits\HasXotFactory;
 use Modules\Xot\Traits\Updater;
 use Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection;
@@ -112,7 +109,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media as SpatieMedia;
 class Media extends SpatieMedia
 {
     use HasXotFactory;
-    use Updater;
+    use MediaMutator;
+    use MediaRelationship;
+    use Updater {
+        MediaRelationship::creator insteadof Updater;
+    }
 
     /** @var string */
     protected $connection = 'media';
@@ -134,91 +135,6 @@ class Media extends SpatieMedia
         $media = array_values($query->get()->all());
 
         return new MediaCollection($media);
-    }
-
-    /**
-     * return BelongsTo<TemporaryUpload,self|$this>.
-     *
-     * @return BelongsTo<TemporaryUpload,covariant Media>
-     */
-    public function temporaryUpload(): BelongsTo
-    {
-        return $this->belongsTo(TemporaryUpload::class);
-    }
-
-    /**
-     * Relazione con il creatore del media.
-     *
-     * @return BelongsTo<Model, self>
-     *
-     * @phpstan-return BelongsTo<Model, $this>
-     */
-    public function creator(): BelongsTo
-    {
-        /** @var class-string<Model> $userClass */
-        $userClass = XotData::make()->getUserClass();
-
-        return $this->belongsTo($userClass, 'created_by');
-    }
-
-    /**
-     * @return HasMany<MediaConvert, $this>
-     */
-    public function mediaConverts(): HasMany
-    {
-        return $this->hasMany(MediaConvert::class);
-    }
-
-    public function getUrlConv(string $conv): string
-    {
-        $url = $this->getUrl();
-        $info = pathinfo($url);
-        if (! isset($info['dirname'])) {
-            throw new Exception('['.__LINE__.']['.class_basename($this).']');
-        }
-        $url = '#';
-        switch ($conv) {
-            case 'thumb':
-                $url = $info['dirname'].'/conversions/'.$info['filename'].'-thumb.jpg';
-
-                break;
-            case '800':
-                $url = $info['dirname'].'/conversions/'.$info['filename'].'-800.jpg';
-
-                break;
-            case '400':
-                $url = $info['dirname'].'/conversions/'.$info['filename'].'-400.jpg';
-
-                break;
-        }
-
-        return url($url);
-    }
-
-    /**
-     * @return array<int, array{name: string, generated: bool, src: string}>
-     */
-    public function getEntryConversionsAttribute(): array
-    {
-        return $this->getEntryConversions();
-    }
-
-    /**
-     * @return array<int, array{name: string, generated: bool, src: string}>
-     */
-    public function getEntryConversions(): array
-    {
-        $conversions = [];
-        foreach ($this->getGeneratedConversions() as $conv => $state) {
-            $item = [
-                'name' => is_string($conv) ? $conv : ((string) $conv),
-                'generated' => (bool) $state,
-                'src' => $this->getUrlConv(is_string($conv) ? $conv : ((string) $conv)),
-            ];
-            $conversions[] = $item;
-        }
-
-        return $conversions;
     }
 
     /** @return array<string, string> */
