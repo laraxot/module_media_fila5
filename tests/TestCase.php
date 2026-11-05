@@ -35,7 +35,7 @@ abstract class TestCase extends XotBaseTestCase
 
     public static function mockExpectation(MockInterface $mock, string $method): Expectation
     {
-        return $mock->shouldReceive($method);
+        return self::singleExpectation($mock, $method);
     }
 
     /**
