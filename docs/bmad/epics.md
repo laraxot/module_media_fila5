@@ -13,8 +13,6 @@ qmd: "epics e user stories - modulo media media"
 
 # Epics e User Stories - Modulo Media
 
-## Epic attivo — Mobile camera upload
-## Epic attivo: Mobile camera upload
 ## Epic attivo: Mobile camera upload
 
 Il dettaglio cross-module è in [Fixcity mobile-camera-upload epic](../../Fixcity/docs/bmad/epics/mobile-camera-upload.epic.md).
