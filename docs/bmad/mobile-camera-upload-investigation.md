@@ -1,5 +1,3 @@
-# BMAD Investigation — mobile camera uploads
-# BMAD Investigation: mobile camera uploads
 # BMAD Investigation: mobile camera uploads
 
 Status: ready for implementation review
@@ -57,6 +55,7 @@ is persisted only when the ticket is submitted.
    from Livewire state if cancellation, navigation or replacement is not
    serialized.
 4. **Low: permanent Media Library storage.** This is downstream of the
+
    temporary upload and is not the first failure reported by the browser.
 
 ## Non-goals
