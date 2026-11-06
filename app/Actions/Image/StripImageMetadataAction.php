@@ -28,7 +28,7 @@ final class StripImageMetadataAction
     {
         $encoder = match ($media->mime_type) {
             'image/jpeg' => new JpegEncoder(quality: self::JPEG_QUALITY, strip: true),
-            'image/png' => new PngEncoder(strip: true),
+            'image/png' => new PngEncoder(),
             default => null,
         };
         if ($encoder === null) {
@@ -42,7 +42,7 @@ final class StripImageMetadataAction
             return;
         }
 
-        $clean = (string) (new ImageManager(new GdDriver))->decodeBinary($original)->encode($encoder);
+        $clean = (new ImageManager(new GdDriver))->decodeBinary($original)->encode($encoder)->toString();
         $disk->put($path, $clean);
         $media->size = strlen($clean);
         $media->save();
