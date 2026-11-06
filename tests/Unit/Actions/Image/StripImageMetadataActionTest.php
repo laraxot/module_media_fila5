@@ -10,11 +10,10 @@ use Modules\Media\Actions\Image\StripImageMetadataAction;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
-
 use function Safe\file_put_contents;
 use function Safe\imagecolorat;
-use function Safe\imagecreatefromstring;
 use function Safe\imagecreatetruecolor;
+use function Safe\imagecreatefromstring;
 use function Safe\imagefill;
 use function Safe\imagefilledrectangle;
 use function Safe\imagejpeg;
@@ -58,24 +57,15 @@ function stripActionPlainJpeg(): string
     return (string) ob_get_clean();
 }
 
-/**
- * Razionali TIFF little-endian (numeratore, denominatore 1) uno dopo l'altro.
- *
- * @param  list<int>  $parts
- */
-function stripActionRationals(array $parts): string
-{
-    return implode('', array_map(static fn (int $part): string => pack('VV', $part, 1), $parts));
-}
-
 /** Stesso JPEG con APP1 Exif reale subito dopo SOI: Orientation=6 (ruota di 90 gradi in senso orario), GPS 45 27'51" N, 9 11'24" E. */
 function stripActionGpsJpeg(): string
 {
+    $rationals = static fn (array $parts): string => implode('', array_map(static fn (int $part): string => pack('VV', $part, 1), $parts));
     $tiff = 'II'.pack('vV', 42, 8)
         .pack('v', 2).pack('vvVv', 0x0112, 3, 1, 6).pack('v', 0).pack('vvVV', 0x8825, 4, 1, 38).pack('V', 0)
         .pack('v', 4).pack('vvV', 1, 2, 2)."N\0\0\0".pack('vvVV', 2, 5, 3, 92)
         .pack('vvV', 3, 2, 2)."E\0\0\0".pack('vvVV', 4, 5, 3, 116).pack('V', 0)
-        .stripActionRationals([45, 27, 51]).stripActionRationals([9, 11, 24]);
+        .$rationals([45, 27, 51]).$rationals([9, 11, 24]);
     $app1 = "\xFF\xE1".pack('n', 2 + 6 + strlen($tiff))."Exif\0\0".$tiff;
     $jpeg = stripActionPlainJpeg();
 
@@ -140,7 +130,7 @@ function stripActionMedia(string $bytes, string $fileName, ?string $mimeType): M
 {
     Storage::fake('public');
 
-    $media = new Media();
+    $media = new Media;
     $media->forceFill([
         'model_type' => 'strip-action-test',
         'model_id' => '1',
@@ -176,7 +166,7 @@ it('removes GPS and Exif from a JPEG, applies its orientation and updates the st
     $media = stripActionMedia($original, 'foto.jpg', 'image/jpeg');
     $path = $media->getPathRelativeToRoot();
 
-    (new StripImageMetadataAction())->execute($media);
+    (new StripImageMetadataAction)->execute($media);
 
     $clean = (string) Storage::disk('public')->get($path);
     $after = stripActionExif($clean);
@@ -206,7 +196,7 @@ it('removes text and XMP chunks from a PNG and keeps the picture', function (): 
 
     $media = stripActionMedia($original, 'foto.png', 'image/png');
 
-    (new StripImageMetadataAction())->execute($media);
+    (new StripImageMetadataAction)->execute($media);
 
     $clean = (string) Storage::disk('public')->get($media->getPathRelativeToRoot());
     Assert::assertStringStartsWith("\x89PNG\r\n\x1a\n", $clean);
@@ -224,7 +214,7 @@ it('leaves a PDF byte for byte identical and does not touch the record', functio
     $media = stripActionMedia($pdf, 'modulo.pdf', 'application/pdf');
     $size = (int) $media->size;
 
-    (new StripImageMetadataAction())->execute($media);
+    (new StripImageMetadataAction)->execute($media);
 
     Assert::assertSame($pdf, Storage::disk('public')->get($media->getPathRelativeToRoot()));
     $media->refresh();
@@ -235,7 +225,7 @@ it('control: the same GPS JPEG recorded with another mime type keeps its GPS (th
     $original = stripActionGpsJpeg();
     $media = stripActionMedia($original, 'foto.bin', 'application/octet-stream');
 
-    (new StripImageMetadataAction())->execute($media);
+    (new StripImageMetadataAction)->execute($media);
 
     $kept = (string) Storage::disk('public')->get($media->getPathRelativeToRoot());
     Assert::assertSame($original, $kept);
