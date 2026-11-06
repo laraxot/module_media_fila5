@@ -28,7 +28,7 @@ use Webmozart\Assert\Assert;
 /**
  * Modules\Media\Models\TemporaryUpload.
  *
- * @property string $id
+ * @property int $id
  * @property string $session_id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at

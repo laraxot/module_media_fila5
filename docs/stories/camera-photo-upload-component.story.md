@@ -106,4 +106,3 @@ Proposta di fusione accolta e applicata; punto 9 (stato `preparing`, `error_prep
 `Modules\Xot\Filament\Forms\Components\XotBaseSpatieMediaLibraryFileUpload` non esiste piu' nel working tree di Xot (ne' nella sua storia git).
 Per tenere PHPStan a zero `CameraPhotoUpload` estende direttamente `Filament\Forms\Components\SpatieMediaLibraryFileUpload`;
 se Xot ripristina la base, e' una riga da cambiare.
-
