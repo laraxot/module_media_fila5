@@ -13,7 +13,7 @@ canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.m
 status: stub
 ---
 
-# Metodi Duplicati — Analisi Media
+# Metodi Duplicati: Analisi Media
 
 Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modulo **Media**, estratti dal report globale generato da `/tmp/metodi_duplicati_domain_report.md`.
 
@@ -25,7 +25,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -37,7 +37,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Models/Policies/MediaBasePolicy.php`
 
-[Riflessione: Presente in 13 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 13 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -49,7 +49,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Http/Controllers/ConvertController.php`
 
-[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -61,7 +61,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Services/SubtitleService.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -74,7 +74,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Filament/Resources/MediaConvertResource/Pages/ListMediaConverts.php`
 - `./laravel/Modules/Media/app/Filament/Resources/MediaResource/Pages/ViewMedia.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -86,7 +86,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Services/SubtitleService.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -99,7 +99,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Filament/Actions/AddAttachmentAction.php`
 - `./laravel/Modules/Media/app/Filament/Resources/HasMediaResource/Actions/AddAttachmentAction.php`
 
-[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -111,7 +111,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
 
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -123,7 +123,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php`
 
-[Riflessione: Presente in 5 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 5 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -135,7 +135,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Services/SubtitleService.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -147,7 +147,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php`
 
-[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -159,7 +159,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Rules/FileExtensionRule.php`
 
-[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 4 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -172,7 +172,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Contracts/PathGenerator.php`
 - `./laravel/Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -184,7 +184,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Filament/Resources/MediaResource/Widgets/ConvertWidget.php`
 
-[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -196,7 +196,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Rules/FileExtensionRule.php`
 
-[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
+[Riflessione: Presente in 3 moduli diversi: forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -208,7 +208,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Services/SubtitleService.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -220,7 +220,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Models/Media.php`
 
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -233,7 +233,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/AwsTest.php`
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
 
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo Media: valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -246,7 +246,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/AwsTest.php`
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
 
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo Media: valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -259,7 +259,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Conversions/ImageGenerators/PowerPoint.php`
 - `./laravel/Modules/Media/app/Conversions/VideoGenerators/Webm.php`
 
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo Media: valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -272,7 +272,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Conversions/ImageGenerators/PowerPoint.php`
 - `./laravel/Modules/Media/app/Conversions/VideoGenerators/Webm.php`
 
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo Media: valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -285,7 +285,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Conversions/ImageGenerators/PowerPoint.php`
 - `./laravel/Modules/Media/app/Conversions/VideoGenerators/Webm.php`
 
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo Media: valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -297,7 +297,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Models/TemporaryUpload.php`
 
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -309,7 +309,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/database/factories/MediaFactory.php`
 
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -322,7 +322,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Contracts/PathGenerator.php`
 - `./laravel/Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -335,7 +335,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Contracts/PathGenerator.php`
 - `./laravel/Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -347,7 +347,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Filament/Infolists/VideoEntry.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -360,7 +360,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Filament/Infolists/VideoEntry.php`
 - `./laravel/Modules/Media/app/Models/TemporaryUpload.php`
 
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
+[Riflessione: Metodo getter/setter: possibile trait o interfaccia condivisa]
 
 ---
 
@@ -372,7 +372,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Support/Ffmpeg/MediaExporterResolver.php`
 
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -385,7 +385,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Filament/Actions/AddAttachmentAction.php`
 - `./laravel/Modules/Media/app/Filament/Resources/HasMediaResource/Actions/AddAttachmentAction.php`
 
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo Media: valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -398,7 +398,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - `./laravel/Modules/Media/app/Conversions/ImageGenerators/PowerPoint.php`
 - `./laravel/Modules/Media/app/Conversions/VideoGenerators/Webm.php`
 
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
+[Riflessione: Duplicato interno al modulo Media: valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -410,7 +410,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
 
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
+[Riflessione: Presente in 2 moduli: valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
@@ -439,4 +439,4 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 - **Progressioni:** 3 metodi in comune
 
 ---
-_Report generato automaticamente — fonte: `/tmp/metodi_duplicati_domain_report.md`_
+_Report generato automaticamente: fonte: `/tmp/metodi_duplicati_domain_report.md`_

@@ -6,11 +6,11 @@ namespace Modules\Media\Filament\Tables\Columns;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn as IconColumn;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Modules\Xot\Filament\Tables\Columns\XotBaseIconColumn;
 
 // phpmd: CyclomaticComplexity, NPathComplexity — setUp Filament con branching mime/icon
-class IconMediaColumn extends IconColumn
+class IconMediaColumn extends XotBaseIconColumn
 {
     protected function setUp(): void
     {
@@ -21,6 +21,7 @@ class IconMediaColumn extends IconColumn
             if (is_object($record) && method_exists($record, 'getFirstMedia')) {
                 return $record->getFirstMedia($attachment);
             }
+
         })
             ->icon('heroicon-o-document-text')
             ->color(static function (?Model $record) use ($attachment): string {

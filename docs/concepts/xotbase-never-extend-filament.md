@@ -1,7 +1,7 @@
 ---
 issues: []
 discussions: []
-title: "Media — mai Filament\*, sempre XotBase*"
+title: "Media — mai Filament*, sempre XotBase*"
 type: concept
 module: Media
 tags: [media, filament, xotbase, architecture]

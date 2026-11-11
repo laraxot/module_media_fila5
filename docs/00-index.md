@@ -21,7 +21,7 @@ superseded_by: README.md
 **Module Version**: 2.3.0
 
 ## 🎯 **Lettura Essenziale**
-1. [README.md](README.md) - Panoramica completa, Upload e Processing.
+1. [README.md](./readme.md) - Panoramica completa, Upload e Processing.
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 
@@ -95,3 +95,8 @@ superseded_by: README.md
 ---
 
 **Ultimo Aggiornamento**: 2026-03-24
+
+## Impostazioni del modulo (SettingPage)
+
+`/media/admin/setting`, solo super-admin, file `config/{tenant}/media.php`: dimensione massima e tipi MIME degli allegati delle Resource (prima 10 MB, pdf/doc/docx in `GetAttachmentsSchemaAction`).
+Decisione e modulo per modulo: [../../Xot/docs/stories/module-setting-pages.epic.md](../../Xot/docs/stories/module-setting-pages.epic.md).

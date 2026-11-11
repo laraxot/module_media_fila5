@@ -372,5 +372,3 @@ final class Media extends Model
 ```
 
 ---
-
-```

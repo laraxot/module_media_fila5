@@ -1,5 +1,5 @@
 ---
-title: "Brainstorming — Media"
+title: "Brainstorming: Media"
 type: brainstorming
 module: Media
 related:
@@ -12,4 +12,4 @@ qmd: "brainstorming media"
 
 # Brainstorming
 
-Scartato: widget dashboard clip. Motivo: `Clip` era **orfano puro** — nessun blade, hook, rotta o vista di supporto lo raggiungeva ([livewire-inventory.md](./livewire-inventory.md)). Esito: file rimosso il 21/09/2026 come dead code, nessuna conversione.
+Scartato: widget dashboard clip. Motivo: `Clip` era **orfano puro**: nessun blade, hook, rotta o vista di supporto lo raggiungeva ([livewire-inventory.md](./livewire-inventory.md)). Esito: file rimosso il 21/09/2026 come dead code, nessuna conversione.

@@ -12,6 +12,7 @@ use Modules\Media\Filament\Resources\TemporaryUploadResource\Pages\ListTemporary
 // use Filament\Forms;
 use Modules\Media\Models\TemporaryUpload;
 use Modules\Xot\Filament\Resources\XotBaseResource;
+use Override;
 
 // use Illuminate\Database\Eloquent\Builder;
 // use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -23,6 +24,7 @@ class TemporaryUploadResource extends XotBaseResource
     /**
      * @psalm-return array<never, never>
      */
+    #[Override]
     public static function getRelations(): array
     {
         return [];
@@ -33,6 +35,7 @@ class TemporaryUploadResource extends XotBaseResource
      *
      * @psalm-return array{index: PageRegistration, create: PageRegistration, edit: PageRegistration}
      */
+    #[Override]
     public static function getPages(): array
     {
         return [

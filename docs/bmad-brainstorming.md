@@ -1,5 +1,5 @@
 ---
-title: "BMAD Brainstorming — Media"
+title: "BMAD Brainstorming: Media"
 type: bmad-brainstorming
 status: synthesized
 module: Media
@@ -47,7 +47,7 @@ Come far si che ogni upload Ticket diventi un evento auditabile senza duplicare 
 | Eliminate | Duplicazioni di verita (second store, Livewire legacy, Controllers) | H | H |
 | Reverse | Progettare dai failure mode privacy/authz prima delle feature | H | H |
 
-## Reverse brainstorming — come romperlo
+## Reverse brainstorming: come romperlo
 
 - Copiare planning Ticket in questo owner (gia successo: stub da correggere).
 - Mettere business rules nel tema o Controllers.
@@ -64,4 +64,4 @@ Come far si che ogni upload Ticket diventi un evento auditabile senza duplicare 
 
 ## Prossimo step BMAD
 
-Vedi [bmad-planning.md](./bmad-planning.md) — eseguire la Wave 1 e aggiornare il decision-log owner.
+Vedi [bmad-planning.md](./bmad-planning.md): eseguire la Wave 1 e aggiornare il decision-log owner.

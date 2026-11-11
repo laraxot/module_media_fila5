@@ -1,5 +1,5 @@
 ---
-title: "Media — architettura BMAD"
+title: "Media: architettura BMAD"
 type: architecture
 status: active
 module: Media
@@ -8,7 +8,7 @@ updated: 2026-09-28
 qmd: "Media architettura confini componenti PHP Laravel Filament"
 tags: [docs, media, bmad]
 ---
-# Media — architettura
+# Media: architettura
 
 ## Scopo osservato
 

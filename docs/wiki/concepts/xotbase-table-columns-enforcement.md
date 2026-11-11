@@ -2,7 +2,7 @@
 qmd: "xotbase table columns enforcement"
 issues: []
 discussions: []
-title: "XotBaseResourceTable Columns Enforcement — Media Module"
+title: "XotBaseResourceTable Columns Enforcement: Media Module"
 type: concept
 sources: []
 confidence: high

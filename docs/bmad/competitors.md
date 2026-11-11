@@ -1,5 +1,5 @@
 ---
-title: 'Competitors — risorse esterne'
+title: 'Competitors: risorse esterne'
 module: Media
 type: reference
 slug: competitors
@@ -12,7 +12,7 @@ status: draft
 qmd: "competitors   risorse esterne media"
 ---
 
-# Competitors — risorse esterne
+# Competitors: risorse esterne
 
 > Fonti raccolte durante lo studio dell'argomento. Una fonte vale quando la si
 > collega a un punto del codice: leggila, poi trova dove è già applicata.

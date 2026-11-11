@@ -1,5 +1,5 @@
 ---
-title: "Architecture — Media"
+title: "Architecture: Media"
 type: architecture
 module: Media
 related:

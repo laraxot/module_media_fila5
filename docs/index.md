@@ -17,7 +17,10 @@ status: draft
 **Last Update**: Feb 2026
 **Status**: Active Development
 
-## Quick Start
+## Principi Chiave
+1. **Modularità**: Il modulo Media è progettato per essere riutilizzabile in diversi progetti, mantenendo funzionalità generiche
+2. **Estensibilità**: Consente personalizzazione e aggiunta di nuovi tipi di media senza alterare il codice principale
+3. **Affidabilità**: Garantisce la gestione sicura e efficiente dei file multimediali attraverso gestione robusta degli errori e logging
 
 - [README.md](./README.md) - Panoramica modulo
 

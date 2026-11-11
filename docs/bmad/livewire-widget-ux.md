@@ -1,5 +1,5 @@
 ---
-title: "UX — Media"
+title: "UX: Media"
 type: ux-design
 module: Media
 related:
