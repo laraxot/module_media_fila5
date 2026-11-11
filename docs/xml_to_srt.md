@@ -2,7 +2,7 @@
 qmd: "xml to srt"
 issues: []
 discussions: []
-title: 'Xml to srt — risorse esterne'
+title: 'Xml to srt: risorse esterne'
 module: Media
 type: reference
 slug: xml-to-srt
@@ -14,7 +14,7 @@ updated: 2026-08-24
 status: draft
 ---
 
-# Xml to srt — risorse esterne
+# Xml to srt: risorse esterne
 
 > Fonti raccolte durante lo studio dell'argomento. Una fonte vale quando la si
 > collega a un punto del codice: leggila, poi trova dove è già applicata.

@@ -1,5 +1,5 @@
 ---
-title: "Indice regole — Modulo Media"
+title: "Indice regole: Modulo Media"
 module: "Media"
 type: concept
 tags: [index]
@@ -10,7 +10,7 @@ related:
   - "./webm.md"
 status: draft
 ---
-# Indice regole — Modulo Media
+# Indice regole: Modulo Media
 
 ## Scopo
 
@@ -48,4 +48,4 @@ qmd search "Media rules" --limit 5
 ---
 *Updated: 2026-05-11*
 
-- [context-overflow-prevention](../../../../../../docs/wiki/rules/context-overflow-prevention.md) — prevenzione 262K token overflow; file vietati; tool output compression
+- [context-overflow-prevention](../../../../../../docs/wiki/rules/context-overflow-prevention.md): prevenzione 262K token overflow; file vietati; tool output compression

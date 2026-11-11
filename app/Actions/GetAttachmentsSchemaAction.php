@@ -8,13 +8,16 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Schemas\Components\Utilities\Set;
 use Illuminate\Support\Arr;
 use Modules\Media\Datas\MediaConfigData;
+use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
 class GetAttachmentsSchemaAction
 {
+    use QueueableAction;
+
     /**
-     * @param  array<string|int, string>  $attachments
-     * @return array<int, FileUpload>
+     * @param  array<array-key, string>  $attachments
+     * @return list<FileUpload>
      */
     public function execute(array $attachments, string $disk = 'attachments'): array
     {
@@ -23,8 +26,7 @@ class GetAttachmentsSchemaAction
         $config = MediaConfigData::make();
 
         foreach ($attachments as $attachment) {
-            $attachmentStr = (string) $attachment;
-            $fileUpload = FileUpload::make($attachmentStr)
+            $form[] = FileUpload::make($attachment)
                 ->directory('temp')
                 ->disk($disk)
                 ->acceptedFileTypes($config->attachment_mime_types)
@@ -32,8 +34,8 @@ class GetAttachmentsSchemaAction
                 ->visibility('public')
                 ->preserveFilenames()
                 ->required()
-                ->previewable(true)
-                ->downloadable(true)
+                ->previewable()
+                ->downloadable()
                 ->reorderable(false)
                 ->multiple(false)
                 /**
@@ -56,7 +58,6 @@ class GetAttachmentsSchemaAction
                     $set($attachment, $sessionFiles);
                 });
 
-            $form[] = $fileUpload;
         }
 
         return $form;

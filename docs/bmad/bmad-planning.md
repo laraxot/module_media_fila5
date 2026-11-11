@@ -1,5 +1,5 @@
 ---
-title: "BMAD Planning — Media"
+title: "BMAD Planning: Media"
 type: bmad-planning
 status: active
 module: Media

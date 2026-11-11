@@ -1,4 +1,4 @@
-# BMAD Plan — reliable mobile camera uploads
+# BMAD Plan: reliable mobile camera uploads
 
 Status: implementation gate
 Owner: `Modules/Media`
@@ -16,7 +16,7 @@ current JPEG/PNG/PDF security allowlist.
 
 ## Plan order
 
-### Step 1 — establish the contract
+### Step 1: establish the contract
 
 - Confirm the real Fixcity field state path, temporary-upload rules, collection
   MIME rules, and current infrastructure limits.
@@ -27,7 +27,7 @@ current JPEG/PNG/PDF security allowlist.
 Exit criterion: each failure is attributable to browser normalization,
 Livewire/PHP transport, or permanent persistence.
 
-### Step 2 — implement the smallest shared fix
+### Step 2: implement the smallest shared fix
 
 - Keep camera acquisition in the front-office field/theme, because camera and
   permission APIs are browser concerns.
@@ -39,7 +39,7 @@ Livewire/PHP transport, or permanent persistence.
 - Keep the server collection allowlist unchanged and reject unsafe formats at
   the trust boundary.
 
-### Step 3 — verify deployment constraints
+### Step 3: verify deployment constraints
 
 - Configure PHP and the web server with multipart headroom above the 10 MB field
   limit.
@@ -47,7 +47,7 @@ Livewire/PHP transport, or permanent persistence.
 - Do not claim that `.user.ini` changes an already-running built-in server;
   restart/reconfigure the actual FPM/Apache/Nginx process.
 
-### Step 4 — evaluate chunking only if required
+### Step 4: evaluate chunking only if required
 
 Uppy-style chunked upload is a fallback for infrastructure that cannot accept a
 single bounded request. It is out of the first patch because it changes routes,

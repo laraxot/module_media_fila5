@@ -1,5 +1,5 @@
 ---
-title: architecture rules — puntatore
+title: architecture rules: puntatore
 type: reference
 updated: 2026-05-21
 status: superseded

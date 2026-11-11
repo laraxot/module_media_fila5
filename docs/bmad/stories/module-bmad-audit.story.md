@@ -1,6 +1,6 @@
 ---
 id: Media/module-bmad-audit-20260928
-title: "Media — baseline BMAD e analisi completa"
+title: "Media: baseline BMAD e analisi completa"
 status: ready-for-dev
 module: Media
 epic: module-governance
@@ -15,7 +15,7 @@ updated: 2026-10-06
 tags: [docs, media, bmad]
 qmd: "story   media: baseline bmad media"
 ---
-# Story — Media: baseline BMAD
+# Story: Media: baseline BMAD
 
 Come manutentore del modulo Media, voglio una baseline BMAD verificabile, così da poter pianificare lavoro senza confondere ipotesi, WIP e comportamento osservato.
 

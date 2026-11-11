@@ -80,7 +80,7 @@ Nessuna modifica al codice o ai file del modulo in questo intervento.
 Nulla nello scope PHPStan. Fuori scope (non toccato, per policy del
 coordinatore): eventuali file `docs/**` con marker di conflitto residui
 segnalati da story precedenti (`readme-changelog-conflict-markers.story.md`,
-`media-docs-conflict-marker-cleanup.story.md`) — non riguardano
+`media-docs-conflict-marker-cleanup.story.md`): non riguardano
 PHPStan e non sono stati riverificati in questo task.
 
 ## Verifica reale finale

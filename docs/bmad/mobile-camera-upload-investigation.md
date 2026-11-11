@@ -1,4 +1,4 @@
-# BMAD Investigation — mobile camera uploads
+# BMAD Investigation: mobile camera uploads
 
 Status: ready for implementation review
 Owner: `Modules/Media`
@@ -47,6 +47,15 @@ is persisted only when the ticket is submitted.
    from Livewire state if cancellation, navigation or replacement is not
    serialized.
 4. **Low — permanent Media Library storage.** This is downstream of the
+1. **High: transport ceiling.** PHP/web-server request limits can reject a
+   high-resolution camera image before Livewire sees it.
+2. **High: format/normalization boundary.** HEIC/HEIF and missing MIME values
+   need deterministic client normalization before the server allowlist.
+3. **Medium: lifecycle/UI race.** A custom `wire:ignore` upload list can drift
+   from Livewire state if cancellation, navigation or replacement is not
+   serialized.
+4. **Low: permanent Media Library storage.** This is downstream of the
+
    temporary upload and is not the first failure reported by the browser.
 
 ## Non-goals

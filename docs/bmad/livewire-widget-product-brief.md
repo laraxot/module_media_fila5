@@ -1,5 +1,5 @@
 ---
-title: "Product brief — Media"
+title: "Product brief: Media"
 type: product-brief
 module: Media
 related:

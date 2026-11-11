@@ -8,8 +8,9 @@ declare(strict_types=1);
 namespace Modules\Media\Models;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
+use Modules\Media\Models\Traits\MediaConvertMutator;
+use Modules\Media\Models\Traits\MediaConvertRelationship;
 use Modules\Xot\Contracts\ProfileContract;
 
 /**
@@ -17,6 +18,7 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property-read string|null $converted_file
  * @property-read string|null $disk
  * @property-read string|null $file
+ * @property string|null $format
  * @property-read Media|null $media
  * @property-read ProfileContract|null $updater
  *
@@ -26,7 +28,6 @@ use Modules\Xot\Contracts\ProfileContract;
  *
  * @property string $id
  * @property int $media_id
- * @property string|null $format
  * @property string|null $codec_video
  * @property string|null $codec_audio
  * @property string|null $preset
@@ -35,10 +36,10 @@ use Modules\Xot\Contracts\ProfileContract;
  * @property int|null $height
  * @property int|null $threads
  * @property int|null $speed
- * @property numeric|null $percentage
- * @property numeric|null $remaining
- * @property numeric|null $rate
- * @property numeric|null $execution_time
+ * @property string|null $percentage
+ * @property string|null $remaining
+ * @property string|null $rate
+ * @property string|null $execution_time
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $updated_by
@@ -70,6 +71,9 @@ use Modules\Xot\Contracts\ProfileContract;
  */
 class MediaConvert extends BaseModel
 {
+    use MediaConvertMutator;
+    use MediaConvertRelationship;
+
     /** @var list<string> */
     protected $fillable = [
         'media_id',
@@ -87,44 +91,4 @@ class MediaConvert extends BaseModel
         'rate',
         'execution_time',
     ];
-
-    /**
-     * @return BelongsTo<Media, $this>
-     */
-    public function media(): BelongsTo
-    {
-        return $this->belongsTo(Media::class);
-    }
-
-    public function getDiskAttribute(?string $value): ?string
-    {
-        if ($this->media === null) {
-            return null;
-        }
-
-        return $this->media->disk;
-    }
-
-    public function getFileAttribute(?string $value): ?string
-    {
-        if ($this->media === null) {
-            return null;
-        }
-
-        return $this->media->path.'/'.$this->media->file_name;
-    }
-
-    public function getConvertedFileAttribute(?string $value): ?string
-    {
-        if ($this->media === null) {
-            return null;
-        }
-        $info = pathinfo($this->media->file_name);
-        // "dirname" => "."
-        // "basename" => "20600550-uhd_3840_2160_30fps.mp4"
-        // "extension" => "mp4"
-        // "filename" => "20600550-uhd_3840_2160_30fps"
-
-        return $this->media->path.'/conversions/'.$info['filename'].'_'.$this->id.'.'.$this->format;
-    }
 }

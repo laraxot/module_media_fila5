@@ -1,5 +1,5 @@
 ---
-title: "Bonifica marker merge committati — Media"
+title: "Bonifica marker merge committati: Media"
 type: story
 module: Media
 epic: quality
