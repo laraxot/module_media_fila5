@@ -7,8 +7,6 @@ updated: 2026-09-26
 qmd: "BOOST SKILL FIX SUMMARY"
 issues: []
 discussions: []
-status: superseded
-superseded_by: wiki/boost-skill-fix-summary.md
 ---
 
 # Boost Skill Fix Summary - Media Module

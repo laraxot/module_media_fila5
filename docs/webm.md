@@ -9,8 +9,7 @@ created: 2026-07-14
 updated: 2026-08-24
 qmd: "webm"
 related:
-  - "./migrazione-filament.md"
-status: draft
+  - "./migrazione-filament-4.md"
 ---
 https://pixelpoint.io/blog/web-optimized-video-ffmpeg/
 
@@ -55,4 +54,4 @@ ffmpeg -h encoder=hevc_nvenc
     output.webm
 
 ----------------------------------
-ffmpeg -h encoder=hevc_nvenc  
+ffmpeg -h encoder=hevc_nvenc

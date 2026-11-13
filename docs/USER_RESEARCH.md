@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "user research"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: user_research.md
 ---
 # Media Module - User Research
 

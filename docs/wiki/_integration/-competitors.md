@@ -2,13 +2,6 @@
 module: theme
 topic: _competitors
 canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
-title: "_competitors"
-type: note
-updated: 2026-10-08
-tags: [docs, media, wiki]
-qmd: "_competitors media"
-status: superseded
-superseded_by: ../../_integration/-competitors.md
 ---
 # _competitors
 
