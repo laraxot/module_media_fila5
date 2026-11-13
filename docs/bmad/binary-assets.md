@@ -2,10 +2,14 @@
 bmad_id: MEDIA-binary-assets
 domain: media-module
 version: 1.0.0
-status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+title: "Asset binari"
+type: note
+qmd: "asset binari media"
+status: superseded
+superseded_by: ../binary-assets.md
 ---
 
 # Asset binari

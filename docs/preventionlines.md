@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "preventionlines"
 related:
   - "./webm.md"
+status: draft
 ---
 # Linee Guida Prevenzione Problemi - Modulo Media
 
@@ -385,9 +386,9 @@ jobs:
 ## 🔗 **Collegamenti**
 
 - [Correzioni S3Test.php](s3test_corrections.md)
-- [PHPStan Fixes](phpstan_level10_fixes.md)
+- [PHPStan Fixes](phpstan-level10-fixes.md)
 - [Translation Standards](translations.md)
-- [Architecture Guidelines](../../docs/architecture.md)
+- [Architecture Guidelines](architecture.md)
 
 ---
 

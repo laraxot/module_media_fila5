@@ -7,7 +7,6 @@ return [
     'label' => 'Carica allegato',
     'fields' => [
         'file' => [
-            'label' => 'file',
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
@@ -41,7 +40,7 @@ return [
         ],
         'label' => 'Carica allegato',
         'sort' => 1,
-        'icon' => 'heroicon-o-rectangle-stack',
+        'icon' => 'heroicon-o-collection',
     ],
     'actions' => [
         'create' => [

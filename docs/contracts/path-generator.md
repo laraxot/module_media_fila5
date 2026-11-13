@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "path generator"
 related:
   - "./webm.md"
+status: draft
 ---
 # PathGenerator Interface
 
@@ -37,7 +38,7 @@ Questa interfaccia definisce il contratto per la generazione dei percorsi dei fi
 - Ritorna: Il percorso come stringa
 
 ## Implementazioni
-- [TemporaryUploadPathGenerator](../support/temporary_upload_path_generator.md)
+- [TemporaryUploadPathGenerator](../support/temporary-upload-path-generator.md)
 
 ## Best Practices
 - Utilizzare tipizzazione stretta
@@ -51,8 +52,8 @@ Questa interfaccia definisce il contratto per la generazione dei percorsi dei fi
 - Gestire correttamente i caratteri speciali
 
 ## Collegamenti
-- [Documentazione Media Module](../module_media.md)
-- [Gestione File](../file_management.md)
+- [Documentazione Media Module](../module-media.md)
+- [Gestione File](../file-management.md)
 
 ## Note di Manutenzione
 - Aggiornare la documentazione quando si modificano i metodi

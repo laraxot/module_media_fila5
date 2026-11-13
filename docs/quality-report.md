@@ -1,16 +1,17 @@
 ---
 issues: []
 discussions: []
-title: "Quality Report — Media"
+title: "Quality Report: Media"
 type: report
 tags: [quality, phpstan, pest, coverage]
 module: Media
 created: 2026-08-24
 updated: 2026-08-24
 qmd: "Media quality report phpstan pest coverage test ratio"
+status: draft
 ---
 
-# Quality Report — Media
+# Quality Report: Media
 
 Aggiornato: 2026-08-24. Rigenera con: `bashscripts/tools/quality-report.sh Media`
 

@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "quality"
 related:
   - "./webm.md"
+status: draft
 ---
 # Checklist qualità - Media Module
 

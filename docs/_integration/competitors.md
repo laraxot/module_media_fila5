@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "competitors"
 related:
   - "./webm.md"
+status: draft
 ---
 
 # _competitors

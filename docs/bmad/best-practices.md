@@ -8,5 +8,7 @@ updated: 2026-07-14
 qmd: "best practices"
 related:
   - "./webm.md"
+status: superseded
+superseded_by: ../best-practices.md
 ---
 # Best Practices

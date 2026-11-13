@@ -2,10 +2,14 @@
 bmad_id: MEDIA-boost_skill_fix_summary
 domain: media-module
 version: 1.0.0
-status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+title: "Boost Skill Fix Summary - Media Module"
+type: note
+qmd: "boost skill fix summary - media module media"
+status: superseded
+superseded_by: ../wiki/boost-skill-fix-summary.md
 ---
 
 # Boost Skill Fix Summary - Media Module

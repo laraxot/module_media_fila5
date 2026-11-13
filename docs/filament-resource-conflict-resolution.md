@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "filament resource conflict resolution"
 related:
   - "./webm.md"
+status: draft
 ---
 # Risoluzione conflitto git su Filament MediaConvertResource
 

@@ -10,6 +10,8 @@ updated: 2026-07-14
 qmd: "guida migrazione step by step"
 related:
   - "./webm.md"
+status: superseded
+superseded_by: migration-filament.md
 ---
 ---
 ---

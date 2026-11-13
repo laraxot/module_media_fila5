@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace Modules\Media\Actions\Diagnostic\Aws;
 
 use Aws\Exception\AwsException;
-use Modules\Media\Actions\Diagnostic\Support\CreateFilesystemS3ClientAction;
 use Spatie\QueueableAction\QueueableAction;
 
 class TestIamPoliciesAction
 {
     use QueueableAction;
+
 
     /**
      * @return array<string, mixed>

@@ -12,6 +12,7 @@ related:
   - ./brainstorming/module-opportunities.md
   - ./epics/module-roadmap.md
   - ./coverage.md
+status: draft
 ---
 
 # Media - brainstorming

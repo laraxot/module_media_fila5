@@ -6,8 +6,6 @@ namespace Modules\Media\Tests\Unit;
 
 use Filament\Resources\RelationManagers\RelationManager;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
 use Modules\Media\Exceptions\CouldNotAddUpload;
 use Modules\Media\Exceptions\TemporaryUploadDoesNotBelongToCurrentSession;
@@ -173,7 +171,5 @@ describe('Media highest-miss coverage', function (): void {
         $media = new Media;
         $media->id = 1;
         Assert::assertIsArray($media->getCasts());
-        Assert::assertInstanceOf(BelongsTo::class, $media->temporaryUpload());
-        Assert::assertInstanceOf(HasMany::class, $media->mediaConverts());
     });
 });

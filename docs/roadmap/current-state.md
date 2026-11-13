@@ -10,6 +10,7 @@ updated: 2026-07-14
 qmd: "01 current state"
 related:
   - "./webm.md"
+status: draft
 ---
 # Current State - Media
 

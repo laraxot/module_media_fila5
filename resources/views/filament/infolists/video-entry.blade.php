@@ -85,7 +85,7 @@ declare(strict_types=1);
                         {{--  
                         <source src="{{URL::asset('movie.ogg')}}" type="video/ogg"> 
                         --}}
-                        Your browser does not support the video tag.
+                        {{ __('media::video_entry.messages.unsupported.message') }}
                     </video>
                 @endforeach
 

@@ -7,6 +7,8 @@ updated: 2026-09-26
 qmd: "MIGRATIONS"
 issues: []
 discussions: []
+status: superseded
+superseded_by: migrations.md
 ---
 
 # Media Module Migrations
