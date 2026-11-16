@@ -10,7 +10,6 @@ updated: 2026-07-14
 qmd: "philosophy"
 related:
   - "./webm.md"
-status: draft
 ---
 # Media Module: Philosophy, Purpose, and Design Principles
 

@@ -10,8 +10,6 @@ updated: 2026-07-14
 qmd: "product launch plan"
 related:
   - "./webm.md"
-status: superseded
-superseded_by: product_launch_plan.md
 ---
 # Media Module - Product Launch Plan
 

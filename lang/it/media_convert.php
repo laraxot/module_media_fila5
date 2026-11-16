@@ -11,50 +11,18 @@ return [
     ],
     'fields' => [
         'applyFilters' => [
-<<<<<<< .merge_file_pbeIL0
-=======
             'label' => 'Applica filtri',
->>>>>>> .merge_file_TSKQ1c
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'toggleColumns' => [
-<<<<<<< .merge_file_pbeIL0
-=======
             'label' => 'Colonne',
->>>>>>> .merge_file_TSKQ1c
             'tooltip' => '',
             'helper_text' => '',
             'description' => '',
         ],
         'format' => [
-<<<<<<< .merge_file_pbeIL0
-            'tooltip' => '',
-        ],
-        'codec_video' => [
-            'tooltip' => '',
-        ],
-        'codec_audio' => [
-            'tooltip' => '',
-        ],
-        'preset' => [
-            'tooltip' => '',
-        ],
-        'bitrate' => [
-            'tooltip' => '',
-        ],
-        'width' => [
-            'tooltip' => '',
-        ],
-        'height' => [
-            'tooltip' => '',
-        ],
-        'threads' => [
-            'tooltip' => '',
-        ],
-        'speed' => [
-=======
             'label' => 'Formato',
             'placeholder' => 'format',
             'helper_text' => '',
@@ -115,7 +83,6 @@ return [
             'placeholder' => 'speed',
             'helper_text' => '',
             'description' => '',
->>>>>>> .merge_file_TSKQ1c
             'tooltip' => '',
         ],
     ],
@@ -124,14 +91,6 @@ return [
     'actions' => [
         'create' => [
             'label' => 'Crea Media Convert',
-<<<<<<< .merge_file_pbeIL0
-        ],
-        'edit' => [
-            'label' => 'Modifica Media Convert',
-        ],
-        'delete' => [
-            'label' => 'Elimina Media Convert',
-=======
             'icon' => 'create',
             'tooltip' => '',
         ],
@@ -149,7 +108,6 @@ return [
             'label' => 'Converti',
             'icon' => 'convert',
             'tooltip' => '',
->>>>>>> .merge_file_TSKQ1c
         ],
     ],
 ];
