@@ -26,4 +26,5 @@ related:
 
 // ✅ CORRECT: SVG in standard location
 @svg('map-marker.svg')
+---
 ```
