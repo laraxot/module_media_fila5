@@ -30,6 +30,24 @@ PHPStan/Pest proporzionati.
 | Marker di conflitto | 0 |
 | Label/tooltip letterali Filament | 5 |
 
+
+## Analisi Funzionale e Scopo di Dominio
+
+### Perché Esiste (Scopo Fondamentale)
+Gestione uniforme di file, allegati, documenti PDF, immagini e conversioni multimediali.
+
+### Valore di Business e Utilità
+Archiviazione sicura, gestione delle cartelle cliniche/amministrative, allegati ai provvedimenti e ottimizzazione visuale.
+
+### Architettura e Pattern Laraxot
+Integrazione con spatie/laravel-medialibrary; XotBaseMedia; conversioni responsive; upload Filament con validazione MIME rigorosa.
+
+### Standard di Qualità e Conformità
+- **PHPStan**: Confermato a Level Max con 0 errori.
+- **Filament**: Conformità Filament 5 con estensione delle classi XotBase*.
+- **Naming**: Convenzione kebab-case rigorosa per tutti i documenti e classi PSR-4.
+- **Trans**: Traduzioni dinamiche via Lang, nessun testo hardcoded.
+
 ## Audit per dimensione
 
 ### Architettura e confini
