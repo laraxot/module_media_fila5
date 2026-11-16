@@ -12,6 +12,12 @@ module: "Media"
 
 # Media - Wiki Activity Log
 
+## [2026-11-16] phpstan | intervention image v4
+
+- Gate Media: 27 errori (soprattutto `class.notFound` su `Intervention\Image\*`) → 0.
+- Causa: mismatch layout vendor v2 vs autoload v4.4.1; azioni Image allineate ad API v4.
+- Story: [intervention-image-phpstan.md](../stories/intervention-image-phpstan.md).
+
 ## [2026-05-27] lint | phpstan zero
 
 - `./vendor/bin/phpstan analyse Modules/Media` → 0 errori (135 file).

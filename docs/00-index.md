@@ -37,13 +37,14 @@ related:
 
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Level 10](./phpstan-level10-fixes.md)** - Report di conformità totale.
+- ✅ **[PHPStan Intervention Image v4](./stories/intervention-image-phpstan.md)** - `class.notFound` su Merge/Strip EXIF.
 - 🔬 **[Testing Guidelines](./testing.md)** - Strategie per testare upload e stream.
 - 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
 
 ## 📦 **Pacchetti Composer**
 - [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
 - `pbmedia/laravel-ffmpeg` - Elaborazione video
-- `intervention/image` - Elaborazione immagini
+- `intervention/image` ^4.4 - Elaborazione immagini (API v4 tipizzata; vedi [story](./stories/intervention-image-phpstan.md))
 
 ## 🔗 **Moduli Correlati**
 - [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
