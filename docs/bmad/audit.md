@@ -4,23 +4,48 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< .merge_file_0s8WJn
+qmd: "audit BMAD Media source-first qualità"
+=======
 qmd: "audit BMAD Media sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
 related:
   - ./audits/media-audit.md
   - ./piano-miglioramento.md
   - ../ecc/media-ecc-audit.md
+>>>>>>> .merge_file_CIBdCV
 ---
 
 # Audit BMAD — Media
 
+<<<<<<< .merge_file_0s8WJn
+SSoT dettagliata: [audits/media-audit.md](./audits/media-audit.md)
+=======
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-audit.md](./audits/media-audit.md).
 
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono ([purpose.md](./purpose.md)).
+>>>>>>> .merge_file_CIBdCV
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
+<<<<<<< .merge_file_0s8WJn
+| PHP `app/` | 127 |
+| Test | 47 |
+| Resources | 3 |
+| Actions | 51 |
+| Services | 0 |
+| Policy `return true` | 2 |
+| Marker | 0 |
+
+## Lo scopo in una frase **Media custodisce i file che fanno da prova a una decisione, e li rende utilizzabili nei formati che servono senza che il dominio sappia nulla di dischi e conversioni.**
+
+## Gate
+
+- PHPStan modulo / `Modules`: 0 errori (verifica 2026-11-16).
+- Pest: da eseguire in ambiente testing non produttivo.
+- Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
+=======
 | PHP `app/` / test PHP / `*Test.php` | 127 / 47 / 41 |
 | Models / Policy / Resource / Widget | 4 / 4 / 3 / 1 |
 | Actions / Services / Migration / Lang IT | 51 / 0 / 5 / 24 |
@@ -49,3 +74,4 @@ Nessun P0 dimostrato. Policy corrette (`MediaBasePolicy::before()` con bypass `s
 ## Riferimenti
 
 [Piano](./piano-miglioramento.md) · [Epics](./epics.md) · [Decision log](./decision-log.md) · [ECC](../ecc/media-ecc-audit.md) · [Story](./stories/module-bmad-audit.story.md)
+>>>>>>> .merge_file_CIBdCV

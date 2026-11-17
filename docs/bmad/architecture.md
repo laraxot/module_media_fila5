@@ -1,6 +1,11 @@
 ---
 title: "Architettura — Media"
 type: architecture
+<<<<<<< .merge_file_Rv58PQ
+tags: [architecture, structure]
+created: 2026-07-14
+updated: 2026-08-04
+=======
 status: review
 updated: 2026-11-16
 module: Media
@@ -10,6 +15,7 @@ related:
   - ./audits/media-audit.md
   - ./decision-log.md
   - ../purpose.md
+>>>>>>> .merge_file_DbcVV2
 ---
 
 # Architettura — Media
@@ -52,4 +58,125 @@ Logica in Spatie Queueable Action, nessun Service, estensione di `XotBaseResourc
 
 ## Decisioni collegate
 
+<<<<<<< .merge_file_Rv58PQ
+- **`tests/`** - Test suite (Pest)
+  - `Feature/` - Test funzionali
+  - `Unit/` - Test unitari
+
+- **`config/`** - File di configurazione
+
+- **`docs/`** - Documentazione (canonical bridge)
+
+## Dipendenze dai Moduli Xot
+
+Gerarchicamente il modulo Media dipende da:
+- **Xot** (6+ utilizzi di `XotBaseMigration`, base Filament resources)
+- **Tenant** (multi-tenancy)
+- **User** (autenticazione)
+- **UI** (componenti UI comuni)
+
+## Funzionalità Principali
+
+### Gestione File
+- Upload di file multipli (drag-and-drop)
+- Supporto multi-format (immagini, video, documenti, audio)
+- Memorizzazione con isolamento tenant
+
+### Elaborazione Media
+- Ottimizzazione e compressione immagini
+- Conversione video (FFmpeg)
+- Generazione automatica di versioni (thumbnail, preview)
+- Watermark automatico
+
+### Streaming Video
+- Streaming ottimizzato con supporto HLS/DASH
+- Gestione sottotitoli
+
+### Integrazione CDN
+- Supporto per Content Delivery Network
+- URL pubblico e privato
+
+## Convenzioni
+
+### Naming
+- Modelli: singolare (Media, MediaConvert, TemporaryUpload)
+- Actions: `{Verb}{Noun}Action` (es. `ConvertVideoAction`)
+- Namespaces: Modules\Media\{Domain}\{Component}
+
+### Testing
+- Pest framework (no PHPUnit diretto)
+- No `RefreshDatabase` - usare database dedicated `.env.testing`
+- Coverage target: 80%+
+
+## Dependency Injection
+
+Il modulo utilizza l'inversion of control tramite:
+- Constructor injection nelle Actions
+- Service Provider per binding
+- Interfacce nei Contracts per loose coupling
+
+## Stato Corrente
+
+- **Total file PHP**: 97
+- **Classi/Interfacce**: 64
+- **PHPStan Level**: 10 (strict typing)
+- **Test Coverage**: In progress
+
+## Vedere Anche
+
+- README.md - Documentazione di base
+- index.md - Bridge indice
+- /docs/ root - Standard di documentazione globali
+
+---
+
+<!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
+
+---
+title: "Architecture: Media Module"
+type: architecture
+tags: [module, architecture, media, storage]
+created: 2026-08-04
+updated: 2026-08-04
+---
+# Media Module — Architecture
+
+## Purpose
+Media module provides file handling, storage, and processing infrastructure for the Laraxot ecosystem. Manages uploads, transformations, and media metadata.
+
+## Core Components
+
+**Models:**
+- `Media` — Primary media model (spatie/laravel-medialibrary)
+- `MediaCollections` — Collection definitions
+- `MediaItem` — Extended media metadata
+
+**Actions:**
+- `UploadMediaAction` — Primary entrypoint for file uploads
+- `ProcessMediaAction` — Image/video processing pipeline
+- `DeleteMediaAction` — Cleanup associated files
+
+**Filament Resources:**
+- `MediaResource` — Browse and manage media library
+- `CollectionResource` — Manage media collections
+
+## Database Schema
+- `media` table: id, model_type, model_id, collection_name, name, file_name, mime_type, size, url, custom_properties
+
+## Design Decisions
+| Decision | Rationale |
+|----------|-----------|
+| Spatie MediaLibrary | Battle-tested, handles transformations |
+| Custom collections | Separate by media type/use case |
+| Lazy loading | Optimize performance for large libraries |
+
+## Integration Points
+**Depends On:** Xot module (BaseModel), Laravel Storage
+**Depended On By:** Activity, Lang, PDF generation
+
+## Quality Gates
+- **PHPStan L10**: Pending verification
+- **Storage**: Tested with local/S3 drivers
+=======
 [decision-log.md](./decision-log.md): D-1 (prune), D-2 (cast `id`), D-3 (allegati-prova), D-4 (guard diagnostica), D-5 (codice morto).
+>>>>>>> .merge_file_DbcVV2
