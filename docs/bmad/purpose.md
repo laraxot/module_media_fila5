@@ -91,6 +91,20 @@ duplicato della 12esima.
 - I **permessi** su chi lo vede: User + Policy del dominio.
 - L'**esecuzione asincrona**: Job.
 
+## Stato del codice rispetto allo scopo (verificato 2026-11-16)
+
+I numeri sopra («49 Action», «124 file PHP», «zero Widget») sono datati: oggi 51 Action, 127 file PHP e un `ConvertWidget`.
+
+| Promessa | Stato | Evidenza |
+|---|---|---|
+| Gli allegati-prova non si cancellano | **violata** | `DeleteAction` fisico, nessun `SoftDeletes` ([P1-4](./audits/media-audit.md#p1-4--cancellazione-fisica-degli-allegati-contraddice-lo-scopo-prova)) |
+| I temporanei si ripuliscono con una regola | **non mantenuta** | `TemporaryUpload.php:241-244`, `model:prune` → `LogicException` ([P1-2](./audits/media-audit.md#p1-2--temporaryupload-non-viene-mai-ripulito-prunable-commentato)) |
+| Conversioni accodate, fallimento visibile | **da verificare** | `MediaConvert` esiste; accodamento via Job non verificato |
+| Tipo di file dal contenuto | **non verificato** | solo `Rules/FileExtensionRule` (estensione) |
+| Azioni sul bucket solo a chi è autorizzato | **violata** | pagine `AwsTest`/`S3Test` senza guard ([P1-1](./audits/media-audit.md#p1-1--le-pagine-di-diagnostica-awss3-operano-sul-bucket-senza-autorizzazione-esplicita)) |
+
+Riferimenti: [Audit](./audit.md) · [Architettura](./architecture.md) · [Decision log](./decision-log.md) · [Epics](./epics.md)
+
 ## Collegamenti
 
 - `docs/wiki/memories/public-path-is-public-html.md` — il vincolo dei percorsi
