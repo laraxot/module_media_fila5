@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad agent confidence discipline md"
 title: "Disciplina agenti per massimizzare la confidenza"
 type: rule
 status: approved

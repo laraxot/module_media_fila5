@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad competitors md"
 title: 'Competitors — risorse esterne'
 module: Media
 type: reference

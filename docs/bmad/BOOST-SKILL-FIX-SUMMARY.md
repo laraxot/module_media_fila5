@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad boost skill fix summary md"
 bmad_id: MEDIA-boost_skill_fix_summary
 domain: media-module
 version: 1.0.0

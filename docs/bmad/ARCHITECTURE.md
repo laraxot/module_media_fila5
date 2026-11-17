@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad architecture md"
 title: "Architecture: Media Module"
 type: architecture
 tags: [module, architecture, media, storage]
