@@ -1,0 +1,2 @@
+providers:
+  - Modules\Media\Providers\MediaServiceProvider

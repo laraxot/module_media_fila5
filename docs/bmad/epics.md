@@ -1,63 +1,36 @@
 ---
-bmad_id: MEDIA-epics
-domain: media-module
-version: 1.0.0
+title: "Epics — Media"
+type: epics
 status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
-title: "Epics e User Stories - Modulo Media"
-type: note
-qmd: "epics e user stories - modulo media media"
 ---
 
-# Epics e User Stories - Modulo Media
-
-## Epic attivo: Mobile camera upload
-
-Il dettaglio cross-module è in [Fixcity mobile-camera-upload epic](../../Fixcity/docs/bmad/epics/mobile-camera-upload.epic.md).
-Media possiede la story [CAM-1.3 fallback Imagick](stories/CAM-1.3-server-media-contract-imagick.story.md);
-il trasporto runtime è coordinato da [CAM-1.1](../../Fixcity/docs/bmad/stories/CAM-1.1-runtime-transport-contract.story.md).
+# Epics — Media
 
 ## Epics
 
-### Epic 1: [Nome Epic]
-**Descrizione:** [Descrizione epic]
-**Storia utente associate:**
-- US-1: [Descrizione storia]
-- US-2: [Descrizione storia]
+## E2 — Pulizia dei caricamenti temporanei (P1-2, D-1)
 
-### Epic 2: [Nome Epic]
-**Descrizione:** [Descrizione epic]
-**Storia utente associate:**
-- US-3: [Descrizione storia]
-- US-4: [Descrizione storia]
+- AC1: `TemporaryUpload::prunable()` implementato (scadenza dichiarata, scope `old()` corretto).
+- AC2: `php artisan model:prune --pretend --model='Modules\Media\Models\TemporaryUpload'` non solleva eccezioni; Pest sul prune.
+- AC3: conteggio dei record rimossi registrato (log).
 
-## User Stories dettagliate
+## E3 — `Media::id` coerente con lo schema (P1-3, D-2)
 
-### US-1: [Titolo storia]
-**Come** [tipo di utente]
-**Voglio** [azione da eseguire]
-**Per** [beneficio ottenuto]
+- AC1: decisione D-2 presa; cast e test allineati.
+- AC2: `Modules/Media/tests/Unit/Models` → 0 fail.
 
-**Criteri di accettazione:**
-- [ ] Criterio 1
-- [ ] Criterio 2
-- [ ] Criterio 3
+## E4 — Allegati-prova non cancellabili (P1-4, D-3)
 
-**Task:**
-- [ ] Task 1
-- [ ] Task 2
+- AC1: D-3 decisa dal committente.
+- AC2: Pest: la cancellazione fisica di un media «documentale» è negata; ammessa su un rigenerabile.
 
-### US-2: [Titolo storia]
-**Come** [tipo di utente]
-**Voglio** [azione da eseguire]
-**Per** [beneficio ottenuto]
+## E5 — Codice senza caller (P1-5, D-5)
 
-**Criteri di accettazione:**
-- [ ] Criterio 1
-- [ ] Criterio 2
-- [ ] Criterio 3
+- AC1: `StreamVideoAction`, `ConvertController`, Request S3 cancellati o cablati con policy.
+- AC2: se cablato, Pest: utente non autenticato → 401/403 sullo streaming.
 
 **Task:**
 - [ ] Task 1
