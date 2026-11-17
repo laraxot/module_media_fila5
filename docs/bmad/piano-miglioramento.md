@@ -4,11 +4,27 @@ type: plan
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< .merge_file_12g71m
 qmd: "piano miglioramento Media P0 P1 P2 BMAD"
+=======
+<<<<<<< .merge_file_8J10bW
+qmd: "piano miglioramento Media P0 P1 P2 BMAD"
+=======
+qmd: "piano miglioramento Media P1 P2 guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
+related:
+  - ./audits/media-audit.md
+  - ./epics.md
+  - ./decision-log.md
+>>>>>>> .merge_file_9x8L9Q
+>>>>>>> .merge_file_5oQlFF
 ---
 
 # Piano di miglioramento — Media
 
+<<<<<<< .merge_file_12g71m
+=======
+<<<<<<< .merge_file_8J10bW
+>>>>>>> .merge_file_5oQlFF
 Derivato dall'[audit](./audits/media-audit.md).
 
 ## P0
@@ -43,3 +59,42 @@ Derivato dall'[audit](./audits/media-audit.md).
 - [ ] PHPStan `Modules/Media` = 0
 - [ ] Pest osservabile o skip motivato
 - [ ] ECC `00-index` aggiornato con esiti
+<<<<<<< .merge_file_12g71m
+=======
+=======
+Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0 dimostrato.
+
+## P1 (ordine consigliato)
+
+1. **E1** — `SuperAdminOnlyTrait` su `AwsTest`/`S3Test` (D-4): chiude la superficie più esposta con una riga per pagina.
+2. **E2** — `TemporaryUpload::prunable()` (D-1): oggi `model:prune` solleva eccezione.
+3. **E3** — `Media::id` coerente con lo schema (D-2): sblocca i 14 test pending.
+4. **E4** — allegati-prova non cancellabili (D-3): serve decisione del committente.
+5. **E5** — `StreamVideoAction`/`ConvertController`/Request S3: cancellare o cablare con policy (D-5).
+6. Docs: gap-fill fatto (architecture, decision-log, epics, purpose); restano 31 `.md` con nome non conforme.
+
+## P2
+
+1. Stringhe letterali in `AwsTest` e `ConvertAction` → `lang/it`.
+2. 2 `@phpstan-ignore` → correggere il tipo.
+3. Junk: `BaseModel.php.backup-…`, `SvgExistsAction.to_xot`, `Commands/_components.json`; `print_r` in `ConvertVideoCommand`.
+4. `TemporaryUpload::$guarded = []` → `$fillable` esplicito.
+5. Action senza caller: `ConvertVideoAction`, `ConvertVideoByConvertDataAction`, `AttachMediaAction`.
+6. 5 file «coverage» e 2 `->todo()` → test di comportamento.
+
+## Sequenza e gate
+
+1. Story disgiunte + lock (`bashscripts/lock/`).
+2. PHPStan `Modules/Media` = 0.
+3. Pest mirato su scratch DB: nessun `migrate:fresh`/`RefreshDatabase`/`--force`.
+4. Aggiornare [ECC](../ecc/00-index.md) e `qmd update`.
+
+## Criteri di completamento
+
+- [ ] Utente senza ruolo → 403 su `AwsTest`/`S3Test` (Pest)
+- [ ] `model:prune --pretend --model=TemporaryUpload` senza eccezioni
+- [ ] `Modules/Media/tests/Unit/Models` → 0 fail
+- [ ] D-3 decisa e attuata
+- [ ] PHPStan `Modules/Media` = 0
+>>>>>>> .merge_file_9x8L9Q
+>>>>>>> .merge_file_5oQlFF
