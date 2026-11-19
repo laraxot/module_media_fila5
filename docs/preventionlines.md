@@ -385,11 +385,7 @@ jobs:
 ## 🔗 **Collegamenti**
 
 - [Correzioni S3Test.php](s3test_corrections.md)
-<<<<<<< HEAD
 - [PHPStan Fixes](phpstan_level10_fixes.md)
-=======
-- [PHPStan Fixes](archive/phpstan_level10_fixes.md)
->>>>>>> laraxot/dev
 - [Translation Standards](translations.md)
 - [Architecture Guidelines](../../docs/architecture.md)
 

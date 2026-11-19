@@ -364,8 +364,4 @@ public function store(Request $request)
 
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
 ---
-<<<<<<< HEAD
 **Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](./TROUBLESHOOTING.md) | [Contributing](./CONTRIBUTING.md)
-=======
-**Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
->>>>>>> laraxot/dev

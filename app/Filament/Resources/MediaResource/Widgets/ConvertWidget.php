@@ -28,24 +28,13 @@ class ConvertWidget extends XotBaseWidget
 
     public float $rate = 0.0;
 
-<<<<<<< HEAD
     protected string $view = 'media::filament.widgets.convert';
-=======
-    /** @var view-string */
-    protected string $view;
->>>>>>> laraxot/dev
 
     protected static string $resource = MediaResource::class;
 
     public function __construct()
     {
-<<<<<<< HEAD
         $this->view = 'media::filament.widgets.convert';
-=======
-        /** @var view-string $view */
-        $view = 'media::filament.widgets.convert';
-        $this->view = $view;
->>>>>>> laraxot/dev
 
         parent::__construct();
     }

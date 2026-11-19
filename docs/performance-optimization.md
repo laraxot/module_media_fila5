@@ -120,13 +120,8 @@ context-mode ctx-stats
 - [On-Demand Pattern](./on-demand-pattern.md)
 - [QMD Setup](./qmd-setup.md)
 ---
-<<<<<<< HEAD
 - [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
 - [QMD Setup](./QMD-SETUP.md)
-=======
-- [On-Demand Pattern](on-demand-pattern.md)
-- [QMD Setup](qmd-setup.md)
->>>>>>> laraxot/dev
 
 ---
 *Status: Ottimizzato | Token risparmiati: ~48K per session*

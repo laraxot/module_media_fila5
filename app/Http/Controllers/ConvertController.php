@@ -14,13 +14,6 @@ class ConvertController extends BaseController
      */
     public function __invoke(string|int $mediaId): View
     {
-<<<<<<< HEAD
         return app(Factory::class)->make('media::convert');
-=======
-        /** @var view-string $convertView */
-        $convertView = 'media::convert';
-
-        return app(Factory::class)->make($convertView);
->>>>>>> laraxot/dev
     }
 }

@@ -150,11 +150,7 @@ Ho analizzato e corretto completamente il file `S3Test.php` nel modulo Media, ri
 
 - [Correzioni Dettagliate](s3test_corrections.md)
 - [Linee Guida Prevenzione](prevention_guidelines.md)
-<<<<<<< HEAD
 - [PHPStan Fixes](phpstan_level10_fixes.md)
-=======
-- [PHPStan Fixes](archive/phpstan_level10_fixes.md)
->>>>>>> laraxot/dev
 - [Translation Standards](translations.md)
 
 ---

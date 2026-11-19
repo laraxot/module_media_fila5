@@ -223,11 +223,3 @@ docs/chat
 # Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
 app/Application
 /.docs-archive/
-<<<<<<< HEAD
-=======
-
-# Tooling/configurazione locale (module-theme-root-hygiene)
-.qwen/
-.php-cs-fixer.php
-.php-cs-fixer.dist.php
->>>>>>> laraxot/dev
