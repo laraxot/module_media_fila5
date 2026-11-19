@@ -9,7 +9,7 @@ discussions: []
 module: Media
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
-canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
+canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
 ---
 
 # Metodi Duplicati — Analisi Media

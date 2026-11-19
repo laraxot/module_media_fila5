@@ -32,18 +32,18 @@ discussions: []
 Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
-- [Modulo Xot](../../xot/docs/readme.md)
-- [Modulo Lang](../../lang/docs/readme.md)
-- [Modulo UI](../../ui/docs/readme.md)
+- [Modulo Xot](../../Xot/docs/README.md)
+- [Modulo Lang](../../Lang/docs/readme.md)
+- [Modulo UI](../../UI/docs/README.md)
 
 ## Categorie Principali
 
 ### Architettura e Struttura
-- [README](./readme.md) - Panoramica generale del modulo
-- [Architettura](./architecture/readme.md) - Architettura generale del modulo
+- [README](./README.md) - Panoramica generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -164,7 +164,7 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione
 - Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
+- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 ---
@@ -197,18 +197,18 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Watermark Automatico**: Applicazione automatica di watermark sui media
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
-- [Modulo Xot](../../xot/docs/readme.md)
-- [Modulo Lang](../../lang/docs/readme.md)
-- [Modulo UI](../../ui/docs/readme.md)
+- [Modulo Xot](../../Xot/docs/README.md)
+- [Modulo Lang](../../Lang/docs/readme.md)
+- [Modulo UI](../../UI/docs/README.md)
 
 ## Categorie Principali
 
 ### Architettura e Struttura
 - [README](README.md) - Panoramica generale del modulo
-- [Architettura](./architecture/readme.md) - Architettura generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -256,7 +256,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ### 1. Struttura del Modulo
 Il modulo Media segue una struttura standard con directory per modelli, servizi, provider e componenti Filament per garantire chiarezza e manutenibilità.
 
-<!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from index.md, which collided with this file on case-insensitive filesystems. -->
 
 # Documentation Index
 

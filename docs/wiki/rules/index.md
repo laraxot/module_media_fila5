@@ -27,7 +27,7 @@ qmd search "Media rules" --limit 5
 
 ---
 
-<!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from index.md, which collided with this file on case-insensitive filesystems. -->
 
 # Media Module - rules Index
 
