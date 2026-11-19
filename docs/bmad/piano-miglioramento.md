@@ -4,6 +4,12 @@ type: plan
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_12g71m
+qmd: "piano miglioramento Media P0 P1 P2 BMAD"
+=======
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_8J10bW
 qmd: "piano miglioramento Media P0 P1 P2 BMAD"
 =======
@@ -13,11 +19,22 @@ related:
   - ./epics.md
   - ./decision-log.md
 >>>>>>> .merge_file_9x8L9Q
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_5oQlFF
+>>>>>>> laraxot/dev
 ---
 
 # Piano di miglioramento — Media
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_8J10bW
+=======
+<<<<<<< .merge_file_12g71m
+=======
+<<<<<<< .merge_file_8J10bW
+>>>>>>> .merge_file_5oQlFF
+>>>>>>> laraxot/dev
 Derivato dall'[audit](./audits/media-audit.md).
 
 ## P0
@@ -52,6 +69,11 @@ Derivato dall'[audit](./audits/media-audit.md).
 - [ ] PHPStan `Modules/Media` = 0
 - [ ] Pest osservabile o skip motivato
 - [ ] ECC `00-index` aggiornato con esiti
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_12g71m
+=======
+>>>>>>> laraxot/dev
 =======
 Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0 dimostrato.
 
@@ -88,3 +110,7 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 - [ ] D-3 decisa e attuata
 - [ ] PHPStan `Modules/Media` = 0
 >>>>>>> .merge_file_9x8L9Q
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_5oQlFF
+>>>>>>> laraxot/dev

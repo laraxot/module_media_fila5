@@ -6,6 +6,14 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_HOnCpb
+---
+
+# Epics — Media
+=======
+>>>>>>> laraxot/dev
 =======
 updated: 2026-11-16
 bmad: true
@@ -26,6 +34,10 @@ related:
 Sostituisce il template. Ogni epic nasce da un finding dell'[audit](./audits/media-audit.md); formato: obiettivo, Acceptance (AC), task.
 
 ## E1 — Guard sulle pagine di diagnostica (P1-1, D-4)
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_THcQoz
+>>>>>>> laraxot/dev
 
 - AC1: `AwsTest` e `S3Test` usano `SuperAdminOnlyTrait` (o il cluster).
 - AC2: Pest `actingAs` utente senza ruolo → 403/non accessibile; `super-admin` → accessibile.
@@ -56,6 +68,11 @@ Sostituisce il template. Ogni epic nasce da un finding dell'[audit](./audits/med
 **Task:**
 - [ ] Task 1
 - [ ] Task 2
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_HOnCpb
+=======
+>>>>>>> laraxot/dev
 =======
 ## E6 — Docs e debito (P1-6, P2)
 
@@ -64,3 +81,7 @@ Sostituisce il template. Ogni epic nasce da un finding dell'[audit](./audits/med
 - AC3: junk rimosso (`BaseModel.php.backup-…`, `.to_xot`, `Commands/_components.json`); `print_r` tolto.
 - AC4: 5 file «coverage» sostituiti da test di comportamento; 2 `->todo()` chiusi.
 >>>>>>> .merge_file_epNhMu
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_THcQoz
+>>>>>>> laraxot/dev

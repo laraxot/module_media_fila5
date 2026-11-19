@@ -6,6 +6,11 @@ status: active
 tags: [media, docs]
 created: 2026-10-06
 updated: 2026-10-06
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_yFkEdy
+=======
+>>>>>>> laraxot/dev
 =======
 updated: 2026-11-16
 bmad: true
@@ -16,6 +21,10 @@ related:
   - ./architecture.md
   - ./epics.md
 >>>>>>> .merge_file_nQphyl
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_x3TLG7
+>>>>>>> laraxot/dev
 ---
 
 # Decision log — Media
@@ -54,6 +63,11 @@ related:
 **Conseguenze:** 
 - Migliore leggibilità e gestione dei conflitti in git
 - Necessità di refactor esistente
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_yFkEdy
+=======
+>>>>>>> laraxot/dev
 =======
 Le voci di esempio del template precedente sono state rimosse: non descrivevano il modulo.
 
@@ -75,3 +89,7 @@ Le voci di esempio del template precedente sono state rimosse: non descrivevano 
 
 Raccomandazione: B (più piccola, aderente allo scopo). Decide il committente.
 >>>>>>> .merge_file_nQphyl
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_x3TLG7
+>>>>>>> laraxot/dev

@@ -558,6 +558,10 @@ Systematic error resolution for file upload, storage, processing, and permission
 
 ---
 
+<<<<<<< HEAD
 **Related:** [Patterns](./PATTERNS.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)
+=======
+**Related:** [Patterns](patterns.md) | [Architecture](./architecture.md) | [Performance](./performance-optimization.md)
+>>>>>>> laraxot/dev
 ---
 # Troubleshooting

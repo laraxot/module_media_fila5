@@ -17,6 +17,7 @@ related:
 ## 🎯 **Lettura Essenziale**
 1. [README.md](README.md) - Panoramica completa, Upload e Processing.
 2. [roadmap.md](./roadmap.md) - Obiettivi di trasformazione e AI 2026.
+<<<<<<< HEAD
 3. [philosophy.md](./philosophy.md) - "Il file come entità": la nostra visione del media.
 
 ## 🎞️ **Video & Image Processing**
@@ -27,16 +28,36 @@ related:
 ## ☁️ **Cloud & Storage**
 - ☁️ **[S3 Integration](./s3test-corrections.md)** - Guida alla configurazione AWS S3/Minio.
 - 📁 **[File Management](./file-management.md)** - Organizzazione directory e disk strategy.
+=======
+3. [philosophy.md](../philosophy.md) - "Il file come entità": la nostra visione del media.
+
+## 🎞️ **Video & Image Processing**
+- 🎥 **[FFmpeg Integration](./ffmpeg-integration.md)** - Guida alla gestione video e codec.
+- 🖼️ **[Image Optimization](../file-management-architecture.md)** - Architettura di trasformazione immagini.
+- 🔄 **[Auto Conversions](../conversione-media.md)** - Logic per preview e watermark.
+
+## ☁️ **Cloud & Storage**
+- ☁️ **[S3 Integration](./s3test-corrections.md)** - Guida alla configurazione AWS S3/Minio.
+- 📁 **[File Management](../file-management.md)** - Organizzazione directory e disk strategy.
+>>>>>>> laraxot/dev
 - 📄 **[Responsive Images](./webm.md)** - Gestione formati moderni (WebP, AVIF).
 
 ## 🎨 **Filament & UI**
 - 🖼️ **[Media Library](./filament.md)** - La libreria media in Filament.
+<<<<<<< HEAD
 - 🛠️ **[Table Actions](./filament-table-actions.md)** - Azioni di massa su file e directory.
+=======
+- 🛠️ **[Table Actions](../filament-table-actions.md)** - Azioni di massa su file e directory.
+>>>>>>> laraxot/dev
 
 ## 🧪 **Qualità e Sviluppo**
 - ✅ **[PHPStan Level 10](./phpstan-level10-fixes.md)** - Report di conformità totale.
 - 🔬 **[Testing Guidelines](./testing.md)** - Strategie per testare upload e stream.
+<<<<<<< HEAD
 - 🧹 **[PHPMD Analysis](./cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
+=======
+- 🧹 **[PHPMD Analysis](../cyclomatic-complexity-report.md)** - Pulizia degli algoritmi di conversione.
+>>>>>>> laraxot/dev
 
 ## 📦 **Pacchetti Composer**
 - [Riferimento completo](../../../../docs/composer-packages-reference.md) | [Inventario 312 pacchetti](../../../../docs/architecture/composer-packages-full-inventory.md)
@@ -53,7 +74,11 @@ related:
 
 ## Dependency Intelligence
 
+<<<<<<< HEAD
 - [Dependency intelligence](dependency-intelligence.md)
+=======
+- [Dependency intelligence](../dependency-intelligence.md)
+>>>>>>> laraxot/dev
 
 ---
 

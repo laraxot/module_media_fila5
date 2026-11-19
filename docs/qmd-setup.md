@@ -69,7 +69,11 @@ qmd search "form" -c media  # Solo questo modulo
 - [Operational Discipline](../../docs/wiki/concepts/llm-wiki-operational-discipline.md)
 - [On-Demand Pattern](./on-demand-pattern.md)
 ---
+<<<<<<< HEAD
 - [On-Demand Pattern](./ON-DEMAND-PATTERN.md)
+=======
+- [On-Demand Pattern](on-demand-pattern.md)
+>>>>>>> laraxot/dev
 
 ---
 *Cache: ~/.cache/qmd-cache/ | Index: ~/.cache/qmd-cache/index*

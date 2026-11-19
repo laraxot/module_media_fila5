@@ -4,6 +4,12 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_Uhdy05
+qmd: "audit approfondito Media inventario PHPStan Pest policy Filament Actions"
+=======
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_sY5JxF
 qmd: "audit approfondito Media inventario PHPStan Pest policy Filament Actions"
 =======
@@ -17,13 +23,24 @@ related:
   - ../../ecc/media-ecc-audit.md
   - ../stories/module-bmad-audit.story.md
 >>>>>>> .merge_file_7CQkzX
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_feJ3Ml
+>>>>>>> laraxot/dev
 ---
 
 # Audit approfondito — Media
 
 ## Metodo
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_sY5JxF
+=======
+<<<<<<< .merge_file_Uhdy05
+=======
+<<<<<<< .merge_file_sY5JxF
+>>>>>>> .merge_file_feJ3Ml
+>>>>>>> laraxot/dev
 Source-first (2026-11-16): inventario filesystem, `rg` su policy/marker/label,
 lettura purpose esistente, PHPStan globale Modules già a 0 errori. Nessuna UI
 inventata. Pest dichiarato solo se eseguito.
@@ -79,6 +96,11 @@ Vedi [piano-miglioramento.md](../piano-miglioramento.md).
 - [audit.md](../audit.md)
 - [ECC](../../ecc/media-ecc-audit.md)
 - [Story](../stories/module-bmad-audit.story.md)
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_Uhdy05
+=======
+>>>>>>> laraxot/dev
 =======
 Source-first, 2026-11-16: inventario filesystem, `rg -n` con `path:line`, lettura di policy, pagine del cluster `Test`, `TemporaryUpload`, `StreamVideoAction`, `ConvertController`, migration; `php artisan model:prune --pretend --model=…` (sola lettura); PHPStan sul modulo; Pest sullo scratch DB del repo. La documentazione è stata trattata come ipotesi: **dove codice e docs divergono vince il codice.** Nessuna UI o screenshot inventati; nessun comportamento a runtime del pannello è stato provato in un browser.
 
@@ -203,3 +225,7 @@ Nessun `migrate:fresh`, nessun `--force`, nessun `RefreshDatabase` lanciati dall
 
 [Sintesi](../audit.md) · [ECC](../../ecc/media-ecc-audit.md) · [Story](../stories/module-bmad-audit.story.md) · [Brainstorming](../brainstorming.md)
 >>>>>>> .merge_file_7CQkzX
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_feJ3Ml
+>>>>>>> laraxot/dev

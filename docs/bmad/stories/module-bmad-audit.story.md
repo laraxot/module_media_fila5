@@ -1,13 +1,49 @@
 ---
 title: "Module BMAD audit — Media"
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_WBsgy9
+=======
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_wDDAGb
 =======
 type: story
 >>>>>>> .merge_file_UGFQog
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_hTgDet
+>>>>>>> laraxot/dev
 status: review
 updated: 2026-11-16
 module: Media
 bmad: true
+<<<<<<< HEAD
+=======
+<<<<<<< .merge_file_WBsgy9
+qmd: "story BMAD audit modulo Media inventario gate"
+---
+
+# Story: audit BMAD del modulo Media
+
+## Acceptance
+
+- [x] Inventario source-first (2026-11-16).
+- [x] Audit + piano in `docs/bmad/`.
+- [x] Pack ECC in `docs/ecc/`.
+- [ ] Pest modulo eseguito in ambiente testing stabile.
+- [ ] Finding P0/P1 chiusi con regressione.
+
+## Riferimenti
+
+- [audit](../audit.md)
+- [piano](../piano-miglioramento.md)
+- [ECC](../../ecc/media-ecc-audit.md)
+
+## Esito
+
+Baseline audit aggiornata. PHPStan tree `Modules` a 0. Pest e chiusura P0/P1 aperti.
+=======
+>>>>>>> laraxot/dev
 <<<<<<< .merge_file_wDDAGb
 qmd: "story BMAD audit modulo Media inventario gate"
 ---
@@ -64,3 +100,7 @@ Baseline audit aggiornata. PHPStan tree `Modules` a 0. Pest e chiusura P0/P1 ape
 
 Baseline consegnata: 0 P0 dimostrati, 6 P1, P2 elencati. Il primo da chiudere è E1 (guard sulle pagine di diagnostica S3), poi E2 (prune).
 >>>>>>> .merge_file_UGFQog
+<<<<<<< HEAD
+=======
+>>>>>>> .merge_file_hTgDet
+>>>>>>> laraxot/dev
