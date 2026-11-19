@@ -4,84 +4,28 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_nJm2UL
-qmd: "audit BMAD Media source-first qualità"
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0s8WJn
-qmd: "audit BMAD Media source-first qualità"
-=======
-qmd: "audit BMAD Media sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
+qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
 related:
   - ./audits/media-audit.md
   - ./piano-miglioramento.md
   - ../ecc/media-ecc-audit.md
->>>>>>> .merge_file_CIBdCV
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_92avb7
->>>>>>> laraxot/dev
 ---
 
 # Audit BMAD — Media
 
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_nJm2UL
-SSoT dettagliata: [audits/media-audit.md](./audits/media-audit.md)
-=======
->>>>>>> laraxot/dev
-<<<<<<< .merge_file_0s8WJn
-SSoT dettagliata: [audits/media-audit.md](./audits/media-audit.md)
-=======
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-audit.md](./audits/media-audit.md).
 
-**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono ([purpose.md](./purpose.md)).
->>>>>>> .merge_file_CIBdCV
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_92avb7
->>>>>>> laraxot/dev
+**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
-<<<<<<< HEAD
-<<<<<<< .merge_file_0s8WJn
-=======
-<<<<<<< .merge_file_nJm2UL
-=======
-<<<<<<< .merge_file_0s8WJn
->>>>>>> .merge_file_92avb7
->>>>>>> laraxot/dev
-| PHP `app/` | 127 |
-| Test | 47 |
-| Resources | 3 |
-| Actions | 51 |
-| Services | 0 |
-| Policy `return true` | 2 |
-| Marker | 0 |
-
-## Lo scopo in una frase **Media custodisce i file che fanno da prova a una decisione, e li rende utilizzabili nei formati che servono senza che il dominio sappia nulla di dischi e conversioni.**
-
-## Gate
-
-- PHPStan modulo / `Modules`: 0 errori (verifica 2026-11-16).
-- Pest: da eseguire in ambiente testing non produttivo.
-- Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
-<<<<<<< HEAD
-=======
-<<<<<<< .merge_file_nJm2UL
-=======
->>>>>>> laraxot/dev
-=======
 | PHP `app/` / test PHP / `*Test.php` | 127 / 47 / 41 |
 | Models / Policy / Resource / Widget | 4 / 4 / 3 / 1 |
 | Actions / Services / Migration / Lang IT | 51 / 0 / 5 / 24 |
 | Marker conflitto / `RefreshDatabase` / `@phpstan-ignore` | 0 / 0 / 2 |
+| Policy `return true` | 2 (`before()`) |
 | `.md` in `docs/` | 512 (16 senza frontmatter, 31 nome non conforme) |
 
 ## Finding principali
@@ -100,14 +44,10 @@ Nessun P0 dimostrato. Policy corrette (`MediaBasePolicy::before()` con bypass `s
 ## Gate
 
 - PHPStan `Modules/Media`: **0 errori**.
-- Pest: **parziale** — `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, P1-3), 14 pending dopo lo stop; resto non eseguito (macchina con load ≈ 50).
+- Pest: **parziale** — `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, P1-3), 14 pending dopo lo stop; resto non eseguito (macchina con load ≈ 50); da completare in ambiente testing non produttivo.
+- Security/runtime: story figlie sui finding P1 ([epics](./epics.md)).
 - Gap-fill BMAD: [architecture](./architecture.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md), [purpose](./purpose.md).
 
 ## Riferimenti
 
 [Piano](./piano-miglioramento.md) · [Epics](./epics.md) · [Decision log](./decision-log.md) · [ECC](../ecc/media-ecc-audit.md) · [Story](./stories/module-bmad-audit.story.md)
->>>>>>> .merge_file_CIBdCV
-<<<<<<< HEAD
-=======
->>>>>>> .merge_file_92avb7
->>>>>>> laraxot/dev
