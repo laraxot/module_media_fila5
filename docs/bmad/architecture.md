@@ -1,0 +1,182 @@
+---
+title: "Architettura — Media"
+type: architecture
+<<<<<<< .merge_file_Rv58PQ
+tags: [architecture, structure]
+created: 2026-07-14
+updated: 2026-08-04
+=======
+status: review
+updated: 2026-11-16
+module: Media
+qmd: "architettura Media spatie medialibrary Media MediaConvert TemporaryUpload Filament Resource Actions S3 CloudFront MediaConvert FFmpeg MediaBasePolicy verificata sul codice"
+related:
+  - ./purpose.md
+  - ./audits/media-audit.md
+  - ./decision-log.md
+  - ../purpose.md
+>>>>>>> .merge_file_DbcVV2
+---
+
+# Architettura — Media
+
+Verificata sul codice il 2026-11-16 (127 PHP in `app/`, 51 Action, 0 Services). Sostituisce due documenti fusi che citavano `UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaCollections`, `MediaItem`, `CollectionResource`: **nessuno esiste** ([audit P1-6](./audits/media-audit.md#p1-6--documentazione-che-contraddice-il-codice)). Scopo: [purpose.md](./purpose.md).
+
+## Componenti reali
+
+| Strato | Elementi |
+|---|---|
+| Modelli | `Media` (estende `Spatie\MediaLibrary\MediaCollections\Models\Media`), `MediaConvert`, `TemporaryUpload` (connessione `media`, `MassPrunable` senza `prunable()`), `BaseModel` |
+| Provider | `MediaServiceProvider`, `EventServiceProvider`, `RouteServiceProvider` (route `web`/`api` vuote) |
+| Filament | `MediaResource` (+ `ConvertWidget`), `MediaConvertResource`, `TemporaryUploadResource`; cluster `Test` con `AwsTest`, `S3Test`; `ConvertAction` |
+| Storage / CDN | `Actions/Storage/GetFilesystemAdapterAction`, `Actions/S3/*` (Upload, Delete, CheckFileExists, GetFileInfo), `Actions/CloudFront/GetCloudFrontSignedUrlAction`, `Datas/CloudFrontData` |
+| Video / immagini | `Actions/Video/*` (Convert via FFmpeg o AWS MediaConvert, durata, screenshot), `Actions/Ffmpeg/ResolveMediaExporterAction`, `Actions/Image/*`, `Conversions/{ImageGenerators,VideoGenerators}`, `Console/Commands/ConvertVideoCommand` |
+| Sottotitoli | `Actions/Subtitle/*` (SRT→VTT, estrazione testo, aggiornamento campo modello) |
+| Upload | `Actions/TemporaryUpload/*`, `Actions/Upload/GetEffectiveUploadLimitAction`, `GenerateTemporaryUploadPathAction`, `AttachMediaAction`, `SaveAttachmentsAction`, `GetAttachmentsSchemaAction`, `Rules/FileExtensionRule`, `Enums/AttachmentTypeEnum` |
+| Diagnostica | `Actions/Diagnostic/{Aws,S3}/*` (usate dalle pagine del cluster `Test`) |
+| Senza caller | `Actions/Stream/StreamVideoAction`, `Http/Controllers/ConvertController`, `Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest` ([P1-5](./audits/media-audit.md#p1-5--codice-senza-caller-che-se-cablato-è-insicuro)) |
+
+## Flussi
+
+1. **Allegato.** `GetAttachmentsSchemaAction` (chiamata da `XotBaseResource` e `Datas/MediaConfigData`) costruisce il campo; `SaveAttachmentsAction` (via `Datas/SaveAttachmentsData`) salva su libreria media-library → disco (S3 o locale). Il file nasce in `TemporaryUpload` prima dell'entità proprietaria; la pulizia dei non confermati **non funziona** (P1-2). `AttachMediaAction` non ha caller in produzione.
+2. **Conversione video.** Oggi l'unico percorso raggiunto è `ConvertAction` (azione di tabella) e `MediaConvertsTable` → `ConvertVideoByMediaConvertAction` (AWS MediaConvert); stato in `MediaConvert`. `ConvertVideoAction` e `ConvertVideoByConvertDataAction` (FFmpeg) non hanno caller fuori dai test; `ConvertVideoCommand` non è referenziato. Esecuzione asincrona: perimetro del modulo Job.
+3. **URL privati.** `GetCloudFrontSignedUrlAction` genera URL firmati CloudFront.
+4. **Diagnostica.** Pagine `AwsTest`/`S3Test` → Action `Diagnostic/*` e chiamate dirette al client S3 (`putObject`/`deleteObject`, `AwsTest.php:345,360`).
+
+## Autorizzazione
+
+`MediaBasePolicy::before()` → `true` per `super-admin` e `media::admin` (bypass voluto, ADR Xot module-admin-role-policy-bypass); `MediaPolicy`, `MediaConvertPolicy`, `TemporaryUploadPolicy` decidono per permesso (`media.viewAny`, `media.delete`, `media.forceDelete`, …). **Nessun guard** sulle pagine del cluster `Test` (P1-1).
+
+## Confini e dipendenze
+
+- Dipende da Xot (64 `use` nel modulo, probe) e UI (7). Usato (file con `use Modules\Media\`, no test) da Notify 8, User 4, Rating 2, IndennitaResponsabilita 1, Progressioni 1, Ptv 1, Xot 1. **Non da Activity né Lang.**
+- Vincolo trasversale: `public_path()` = `public_html/` ([purpose](./purpose.md)).
+
+## Pattern
+
+Logica in Spatie Queueable Action, nessun Service, estensione di `XotBaseResource`/`XotBasePage`, `strict_types` ovunque.
+
+## Decisioni collegate
+
+<<<<<<< .merge_file_Rv58PQ
+- **`tests/`** - Test suite (Pest)
+  - `Feature/` - Test funzionali
+  - `Unit/` - Test unitari
+
+- **`config/`** - File di configurazione
+
+- **`docs/`** - Documentazione (canonical bridge)
+
+## Dipendenze dai Moduli Xot
+
+Gerarchicamente il modulo Media dipende da:
+- **Xot** (6+ utilizzi di `XotBaseMigration`, base Filament resources)
+- **Tenant** (multi-tenancy)
+- **User** (autenticazione)
+- **UI** (componenti UI comuni)
+
+## Funzionalità Principali
+
+### Gestione File
+- Upload di file multipli (drag-and-drop)
+- Supporto multi-format (immagini, video, documenti, audio)
+- Memorizzazione con isolamento tenant
+
+### Elaborazione Media
+- Ottimizzazione e compressione immagini
+- Conversione video (FFmpeg)
+- Generazione automatica di versioni (thumbnail, preview)
+- Watermark automatico
+
+### Streaming Video
+- Streaming ottimizzato con supporto HLS/DASH
+- Gestione sottotitoli
+
+### Integrazione CDN
+- Supporto per Content Delivery Network
+- URL pubblico e privato
+
+## Convenzioni
+
+### Naming
+- Modelli: singolare (Media, MediaConvert, TemporaryUpload)
+- Actions: `{Verb}{Noun}Action` (es. `ConvertVideoAction`)
+- Namespaces: Modules\Media\{Domain}\{Component}
+
+### Testing
+- Pest framework (no PHPUnit diretto)
+- No `RefreshDatabase` - usare database dedicated `.env.testing`
+- Coverage target: 80%+
+
+## Dependency Injection
+
+Il modulo utilizza l'inversion of control tramite:
+- Constructor injection nelle Actions
+- Service Provider per binding
+- Interfacce nei Contracts per loose coupling
+
+## Stato Corrente
+
+- **Total file PHP**: 97
+- **Classi/Interfacce**: 64
+- **PHPStan Level**: 10 (strict typing)
+- **Test Coverage**: In progress
+
+## Vedere Anche
+
+- README.md - Documentazione di base
+- index.md - Bridge indice
+- /docs/ root - Standard di documentazione globali
+
+---
+
+<!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
+
+---
+title: "Architecture: Media Module"
+type: architecture
+tags: [module, architecture, media, storage]
+created: 2026-08-04
+updated: 2026-08-04
+---
+# Media Module — Architecture
+
+## Purpose
+Media module provides file handling, storage, and processing infrastructure for the Laraxot ecosystem. Manages uploads, transformations, and media metadata.
+
+## Core Components
+
+**Models:**
+- `Media` — Primary media model (spatie/laravel-medialibrary)
+- `MediaCollections` — Collection definitions
+- `MediaItem` — Extended media metadata
+
+**Actions:**
+- `UploadMediaAction` — Primary entrypoint for file uploads
+- `ProcessMediaAction` — Image/video processing pipeline
+- `DeleteMediaAction` — Cleanup associated files
+
+**Filament Resources:**
+- `MediaResource` — Browse and manage media library
+- `CollectionResource` — Manage media collections
+
+## Database Schema
+- `media` table: id, model_type, model_id, collection_name, name, file_name, mime_type, size, url, custom_properties
+
+## Design Decisions
+| Decision | Rationale |
+|----------|-----------|
+| Spatie MediaLibrary | Battle-tested, handles transformations |
+| Custom collections | Separate by media type/use case |
+| Lazy loading | Optimize performance for large libraries |
+
+## Integration Points
+**Depends On:** Xot module (BaseModel), Laravel Storage
+**Depended On By:** Activity, Lang, PDF generation
+
+## Quality Gates
+- **PHPStan L10**: Pending verification
+- **Storage**: Tested with local/S3 drivers
+=======
+[decision-log.md](./decision-log.md): D-1 (prune), D-2 (cast `id`), D-3 (allegati-prova), D-4 (guard diagnostica), D-5 (codice morto).
+>>>>>>> .merge_file_DbcVV2
