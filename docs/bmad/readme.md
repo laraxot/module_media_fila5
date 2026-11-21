@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad readme md"
 bmad_id: MEDIA-readme
 domain: media-module
 version: 1.0.0

@@ -1,4 +1,5 @@
 ---
+qmd: "media wiki stream md"
 title: 'Stream'
 module: Media
 type: reference

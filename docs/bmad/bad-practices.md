@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad bad practices md"
 bmad_id: MEDIA-bad-practices
 domain: media-module
 version: 1.0.0

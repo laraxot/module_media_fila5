@@ -1,75 +1,64 @@
 ---
-title: "Architettura - Modulo Media"
-module: "Media"
+title: "Architettura — Media"
 type: architecture
+<<<<<<< .merge_file_Rv58PQ
 tags: [architecture, structure]
 created: 2026-07-14
 updated: 2026-08-04
+=======
+status: review
+updated: 2026-11-16
+module: Media
+qmd: "architettura Media spatie medialibrary Media MediaConvert TemporaryUpload Filament Resource Actions S3 CloudFront MediaConvert FFmpeg MediaBasePolicy verificata sul codice"
+related:
+  - ./purpose.md
+  - ./audits/media-audit.md
+  - ./decision-log.md
+  - ../purpose.md
+>>>>>>> .merge_file_DbcVV2
 ---
 
-# Architettura Modulo Media
+# Architettura — Media
 
-## Panoramica
+Verificata sul codice il 2026-11-16 (127 PHP in `app/`, 51 Action, 0 Services). Sostituisce due documenti fusi che citavano `UploadMediaAction`, `ProcessMediaAction`, `DeleteMediaAction`, `MediaCollections`, `MediaItem`, `CollectionResource`: **nessuno esiste** ([audit P1-6](./audits/media-audit.md#p1-6--documentazione-che-contraddice-il-codice)). Scopo: [purpose.md](./purpose.md).
 
-Il modulo Media gestisce la memorizzazione, elaborazione e distribuzione di file multimediali (immagini, video, documenti, audio) all'interno dell'applicazione Laravel Laraxot.
+## Componenti reali
 
-## Informazioni Generali
+| Strato | Elementi |
+|---|---|
+| Modelli | `Media` (estende `Spatie\MediaLibrary\MediaCollections\Models\Media`), `MediaConvert`, `TemporaryUpload` (connessione `media`, `MassPrunable` senza `prunable()`), `BaseModel` |
+| Provider | `MediaServiceProvider`, `EventServiceProvider`, `RouteServiceProvider` (route `web`/`api` vuote) |
+| Filament | `MediaResource` (+ `ConvertWidget`), `MediaConvertResource`, `TemporaryUploadResource`; cluster `Test` con `AwsTest`, `S3Test`; `ConvertAction` |
+| Storage / CDN | `Actions/Storage/GetFilesystemAdapterAction`, `Actions/S3/*` (Upload, Delete, CheckFileExists, GetFileInfo), `Actions/CloudFront/GetCloudFrontSignedUrlAction`, `Datas/CloudFrontData` |
+| Video / immagini | `Actions/Video/*` (Convert via FFmpeg o AWS MediaConvert, durata, screenshot), `Actions/Ffmpeg/ResolveMediaExporterAction`, `Actions/Image/*`, `Conversions/{ImageGenerators,VideoGenerators}`, `Console/Commands/ConvertVideoCommand` |
+| Sottotitoli | `Actions/Subtitle/*` (SRT→VTT, estrazione testo, aggiornamento campo modello) |
+| Upload | `Actions/TemporaryUpload/*`, `Actions/Upload/GetEffectiveUploadLimitAction`, `GenerateTemporaryUploadPathAction`, `AttachMediaAction`, `SaveAttachmentsAction`, `GetAttachmentsSchemaAction`, `Rules/FileExtensionRule`, `Enums/AttachmentTypeEnum` |
+| Diagnostica | `Actions/Diagnostic/{Aws,S3}/*` (usate dalle pagine del cluster `Test`) |
+| Senza caller | `Actions/Stream/StreamVideoAction`, `Http/Controllers/ConvertController`, `Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest` ([P1-5](./audits/media-audit.md#p1-5--codice-senza-caller-che-se-cablato-è-insicuro)) |
 
-- **Namespace principale**: `Modules\Media`
-- **Pacchetto Composer**: `laraxot/module_media_fila5`
-- **Dipendenze principali**:
-  - `php ^8.2`
-  - `pbmedia/laravel-ffmpeg ^8.5` (conversione video)
-  - `intervention/image *` (manipolazione immagini)
-  - `Modules\Xot` (base framework)
-  - `Modules\Tenant` (multi-tenancy)
-  - `Modules\User` (autenticazione)
+## Flussi
 
-## Struttura PSR-4
+1. **Allegato.** `GetAttachmentsSchemaAction` (chiamata da `XotBaseResource` e `Datas/MediaConfigData`) costruisce il campo; `SaveAttachmentsAction` (via `Datas/SaveAttachmentsData`) salva su libreria media-library → disco (S3 o locale). Il file nasce in `TemporaryUpload` prima dell'entità proprietaria; la pulizia dei non confermati **non funziona** (P1-2). `AttachMediaAction` non ha caller in produzione.
+2. **Conversione video.** Oggi l'unico percorso raggiunto è `ConvertAction` (azione di tabella) e `MediaConvertsTable` → `ConvertVideoByMediaConvertAction` (AWS MediaConvert); stato in `MediaConvert`. `ConvertVideoAction` e `ConvertVideoByConvertDataAction` (FFmpeg) non hanno caller fuori dai test; `ConvertVideoCommand` non è referenziato. Esecuzione asincrona: perimetro del modulo Job.
+3. **URL privati.** `GetCloudFrontSignedUrlAction` genera URL firmati CloudFront.
+4. **Diagnostica.** Pagine `AwsTest`/`S3Test` → Action `Diagnostic/*` e chiamate dirette al client S3 (`putObject`/`deleteObject`, `AwsTest.php:345,360`).
 
-```json
-{
-  "autoload": {
-    "psr-4": {
-      "Modules\\Media\\": "app/",
-      "Modules\\Media\\Database\\Factories\\": "database/factories/",
-      "Modules\\Media\\Database\\Seeders\\": "database/seeders/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Modules\\Media\\Tests\\": "tests/"
-    }
-  }
-}
-```
+## Autorizzazione
 
-## Architettura Logica
+`MediaBasePolicy::before()` → `true` per `super-admin` e `media::admin` (bypass voluto, ADR Xot module-admin-role-policy-bypass); `MediaPolicy`, `MediaConvertPolicy`, `TemporaryUploadPolicy` decidono per permesso (`media.viewAny`, `media.delete`, `media.forceDelete`, …). **Nessun guard** sulle pagine del cluster `Test` (P1-1).
 
-### Directory Principali
+## Confini e dipendenze
 
-- **`app/`** - Codice applicativo
-  - `Actions/` - QueueableActions per operazioni media (immagini, video)
-  - `Models/` - Modelli Eloquent (Media, MediaConvert, TemporaryUpload, etc.)
-  - `Contracts/` - Interfacce e contratti
-  - `Conversions/` - Generatori di conversioni (immagini, video)
-  - `Datas/` - Spatie Laravel Data DTOs
-  - `Enums/` - Enumerazioni (tipi media, stati conversione)
-  - `Filament/` - Componenti Filament (Resources, Pages, Actions)
-  - `Http/` - Controllers, middleware, requests, Livewire components
-  - `Services/` - Servizi (legacy, preferire Actions)
-  - `Providers/` - Service Providers
+- Dipende da Xot (64 `use` nel modulo, probe) e UI (7). Usato (file con `use Modules\Media\`, no test) da Notify 8, User 4, Rating 2, IndennitaResponsabilita 1, Progressioni 1, Ptv 1, Xot 1. **Non da Activity né Lang.**
+- Vincolo trasversale: `public_path()` = `public_html/` ([purpose](./purpose.md)).
 
-- **`database/`** - Migrazioni e factories
-  - `migrations/` - Migrazioni database (XotBaseMigration)
-  - `factories/` - Factories per testing
+## Pattern
 
-- **`resources/`** - Assets frontend
-  - `views/` - Blade templates
-  - `assets/` - JS/SASS
+Logica in Spatie Queueable Action, nessun Service, estensione di `XotBaseResource`/`XotBasePage`, `strict_types` ovunque.
 
-- **`lang/`** - Traduzioni (es. `lang/it/`)
+## Decisioni collegate
 
+<<<<<<< .merge_file_Rv58PQ
 - **`tests/`** - Test suite (Pest)
   - `Feature/` - Test funzionali
   - `Unit/` - Test unitari
@@ -188,3 +177,6 @@ Media module provides file handling, storage, and processing infrastructure for 
 ## Quality Gates
 - **PHPStan L10**: Pending verification
 - **Storage**: Tested with local/S3 drivers
+=======
+[decision-log.md](./decision-log.md): D-1 (prune), D-2 (cast `id`), D-3 (allegati-prova), D-4 (guard diagnostica), D-5 (codice morto).
+>>>>>>> .merge_file_DbcVV2

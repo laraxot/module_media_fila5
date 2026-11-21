@@ -1,4 +1,5 @@
 ---
+qmd: "media wiki competitors md"
 title: 'Competitors — risorse esterne'
 module: Media
 type: reference

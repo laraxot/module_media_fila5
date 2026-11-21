@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad binary assets md"
 bmad_id: MEDIA-binary-assets
 domain: media-module
 version: 1.0.0

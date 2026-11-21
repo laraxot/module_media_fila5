@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad status md"
 bmad_id: MEDIA-status
 domain: media-module
 version: 1.0.0
