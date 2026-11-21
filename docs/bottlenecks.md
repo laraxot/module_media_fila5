@@ -841,9 +841,15 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
+<<<<<<< .merge_file_1QtSET
 * [bottlenecks.md](../../chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../gdpr/docs/bottlenecks.md)
 * [bottlenecks.md](../../gdpr/docs/performance/bottlenecks.md)
+=======
+* [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
+* [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
+* [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
+>>>>>>> .merge_file_R3jMCH
 * [bottlenecks.md](../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)

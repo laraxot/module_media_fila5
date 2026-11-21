@@ -141,7 +141,11 @@ Il modulo utilizza l'inversion of control tramite:
 
 ---
 
+<<<<<<< .merge_file_Cxijme
 <!-- Merged from ARCHITECTURE.md, which collided with this file on case-insensitive filesystems. -->
+=======
+<!-- Merged from architecture.md, which collided with this file on case-insensitive filesystems. -->
+>>>>>>> .merge_file_70aATF
 
 ---
 title: "Architecture: Media Module"
