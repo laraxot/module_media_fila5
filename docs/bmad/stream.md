@@ -1,4 +1,5 @@
 ---
+qmd: "media bmad stream md"
 title: 'Stream'
 module: Media
 type: reference

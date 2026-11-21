@@ -27,7 +27,7 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 - [ ] Pest `Modules/Media`: `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, E3); resto non eseguito.
 - [ ] E1–E6 chiuse con test di regressione.
 
-## Task
+## Riferimenti
 
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
 2. Audit codice → docs; nessun PHP toccato.

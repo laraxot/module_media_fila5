@@ -1,3 +1,10 @@
+---
+title: "Decision Log — Media"
+qmd: "media decision log md"
+type: note
+tags: [documentation]
+---
+
 # Decision Log — Media
 
 A threaded, append-only record of decisions made across BMAD planning workflows.

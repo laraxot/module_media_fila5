@@ -1,4 +1,5 @@
 ---
+qmd: "media wiki integration competitors md"
 module: theme
 topic: _competitors
 canonical: ../../../../Themes/docs/shared-components/.gitkeep-Modules
