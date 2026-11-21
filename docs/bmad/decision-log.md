@@ -2,6 +2,8 @@
 title: "Decision log — Media"
 type: decision-log
 status: active
+tags: [media, docs]
+created: 2026-10-06
 updated: 2026-11-16
 bmad: true
 module: Media
@@ -15,6 +17,7 @@ related:
 # Decision log — Media
 
 Le voci di esempio del template precedente sono state rimosse: non descrivevano il modulo.
+Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichiara il perché e l'evidenza nel codice.
 
 | ID | Data | Stato | Decisione | Perché | Evidenza |
 |---|---|---|---|---|---|

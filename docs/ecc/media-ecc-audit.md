@@ -4,7 +4,7 @@ type: ecc-audit
 status: review
 updated: 2026-11-16
 module: Media
-qmd: "ECC audit Media checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
+qmd: "ECC audit Media verification security testing laravel checklist security-review clean-code verification-loop inventario misurato finding guard prunable cast id"
 related:
   - ./00-index.md
   - ../bmad/audits/media-audit.md
@@ -26,6 +26,7 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 | `laravel-verification` | **aperto** | `TemporaryUpload::prunable()` commentato → `model:prune` fallisce; cast `id` ≠ schema |
 | `verification-loop` | PHPStan: 0 errori — Pest: parziale (49 pass / 1 fail su `tests/Unit/Models`) | |
 | `tdd-workflow` | **aperto** | 5 file «coverage» (719 r.), 2 `->todo()` vuoti |
+| `context-engineering` | in uso | QMD/graphify prima; registrare il perché dopo |
 | `documentation-sync` | **fatto in questo giro** | architecture riscritta, decision-log/epics gap-fill, purpose con stato; 31/512 `.md` con nome non conforme |
 
 ## Inventario misurato
@@ -52,6 +53,10 @@ ECC non sostituisce `AGENTS.md`/BMAD. Ogni finding: story BMAD, lock, fix alla c
 ## Anti-pattern vietati (stato)
 
 `migrate:fresh`: 0; `RefreshDatabase`: 0; `@phpstan-ignore`: 2; `dd()`: 0; `->label()`/titoli letterali: ≥ 12 in `AwsTest`, 1 in `ConvertAction`; `$guarded = []`: 1 (`TemporaryUpload.php:99`).
+
+Regole sempre valide: niente baseline/`@phpstan-ignore` senza motivazione, niente test svuotati per silenziare errori,
+mai `migrate:fresh` / `RefreshDatabase` / `--force`, niente date nel nome dei file docs, niente comportamento o
+screenshot inventati.
 
 ## Riferimenti
 

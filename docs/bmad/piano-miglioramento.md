@@ -4,7 +4,7 @@ type: plan
 status: review
 updated: 2026-11-16
 module: Media
-qmd: "piano miglioramento Media P1 P2 guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
+qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
 related:
   - ./audits/media-audit.md
   - ./epics.md
@@ -32,6 +32,8 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 4. `TemporaryUpload::$guarded = []` → `$fillable` esplicito.
 5. Action senza caller: `ConvertVideoAction`, `ConvertVideoByConvertDataAction`, `AttachMediaAction`.
 6. 5 file «coverage» e 2 `->todo()` → test di comportamento.
+7. Docs BMAD/ECC storici: deduplicare; frontmatter YAML + `qmd` su ogni `.md` attivo.
+8. Profiling N+1 sulle tabelle Filament; i18n con zero label hardcoded.
 
 ## Sequenza e gate
 
@@ -47,3 +49,5 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 - [ ] `Modules/Media/tests/Unit/Models` → 0 fail
 - [ ] D-3 decisa e attuata
 - [ ] PHPStan `Modules/Media` = 0
+- [ ] Pest osservabile o skip motivato
+- [ ] ECC `00-index` aggiornato con gli esiti

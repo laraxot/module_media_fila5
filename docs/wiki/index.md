@@ -27,7 +27,7 @@ qmd search "Media <topic>" --limit 5
 
 ---
 
-<!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from index.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Media Wiki Index"
@@ -38,10 +38,10 @@ module: "Media"
 
 ## Indices
 - [Rules](rules/index.md)
-- [Skills](skills/INDEX.md)
-- [Commands](commands/INDEX.md)
-- [Memories](memories/INDEX.md)
-- [Concepts](concepts/INDEX.md)
+- [Skills](skills/index.md)
+- [Commands](commands/index.md)
+- [Memories](memories/index.md)
+- [Concepts](concepts/index.md)
 
 ## On-Demand Workflow
 

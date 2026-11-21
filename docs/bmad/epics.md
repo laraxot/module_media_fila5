@@ -2,6 +2,8 @@
 title: "Epics — Media"
 type: epics
 status: active
+tags: [media, docs]
+created: 2026-10-06
 updated: 2026-11-16
 bmad: true
 module: Media

@@ -4,7 +4,7 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
-qmd: "audit BMAD Media sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
+qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
 related:
   - ./audits/media-audit.md
   - ./piano-miglioramento.md
@@ -15,7 +15,7 @@ related:
 
 SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-audit.md](./audits/media-audit.md).
 
-**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono ([purpose.md](./purpose.md)).
+**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
 
 ## Sintesi (2026-11-16)
 
@@ -25,6 +25,7 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 | Models / Policy / Resource / Widget | 4 / 4 / 3 / 1 |
 | Actions / Services / Migration / Lang IT | 51 / 0 / 5 / 24 |
 | Marker conflitto / `RefreshDatabase` / `@phpstan-ignore` | 0 / 0 / 2 |
+| Policy `return true` | 2 (`before()`) |
 | `.md` in `docs/` | 512 (16 senza frontmatter, 31 nome non conforme) |
 
 ## Finding principali
@@ -43,7 +44,8 @@ Nessun P0 dimostrato. Policy corrette (`MediaBasePolicy::before()` con bypass `s
 ## Gate
 
 - PHPStan `Modules/Media`: **0 errori**.
-- Pest: **parziale** — `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, P1-3), 14 pending dopo lo stop; resto non eseguito (macchina con load ≈ 50).
+- Pest: **parziale** — `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, P1-3), 14 pending dopo lo stop; resto non eseguito (macchina con load ≈ 50); da completare in ambiente testing non produttivo.
+- Security/runtime: story figlie sui finding P1 ([epics](./epics.md)).
 - Gap-fill BMAD: [architecture](./architecture.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md), [purpose](./purpose.md).
 
 ## Riferimenti
