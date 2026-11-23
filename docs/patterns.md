@@ -364,8 +364,16 @@ public function store(Request $request)
 
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
 ---
+<<<<<<< .merge_file_5FzRVY
 <<<<<<< .merge_file_V1PIzM
 **Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](./TROUBLESHOOTING.md) | [Contributing](./CONTRIBUTING.md)
 =======
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
 >>>>>>> .merge_file_LBQmjl
+=======
+<<<<<<< .merge_file_qAD3K4
+**Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](./TROUBLESHOOTING.md) | [Contributing](./CONTRIBUTING.md)
+=======
+**Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
+>>>>>>> .merge_file_MOeaBX
+>>>>>>> .merge_file_Ot7i3k

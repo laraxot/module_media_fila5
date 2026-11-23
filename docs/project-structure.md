@@ -35,7 +35,11 @@ tags: [structure, architecture, module]
 │   │   └── *.md
 │   ├── decisions/                # Architecture decision records
 │   └── troubleshooting/          # Bug fixes, error resolutions
+<<<<<<< .merge_file_hJilOt
 <<<<<<< .merge_file_iRoU5B
+=======
+<<<<<<< .merge_file_sYttaT
+>>>>>>> .merge_file_Xs6XLt
 ├── ON-DEMAND-PATTERN.md          # 🌟 QUESTO FILE — Pattern on-demand
 ├── QMD-SETUP.md                  # Configurazione QMD
 ├── PERFORMANCE-OPTIMIZATION.md    # Metriche e best practice
@@ -45,7 +49,11 @@ tags: [structure, architecture, module]
 ├── qmd-setup.md                  # Configurazione QMD
 ├── performance-optimization.md    # Metriche e best practice
 ├── architecture.md               # (opzionale) Architettura modulo
+<<<<<<< .merge_file_hJilOt
 >>>>>>> .merge_file_EURABe
+=======
+>>>>>>> .merge_file_YZiqgY
+>>>>>>> .merge_file_Xs6XLt
 └── README.md                     # (opzionale) Overview modulo
 \`\`\`
 
@@ -57,11 +65,19 @@ tags: [structure, architecture, module]
 | `wiki/log.md` | Storico attività (ingest/query/lint) |
 | `wiki/rules/` | Regole + trigger map locale |
 | `wiki/concepts/` | Concetti specifici del modulo |
+<<<<<<< .merge_file_hJilOt
 <<<<<<< .merge_file_iRoU5B
 | `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
 =======
 | `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
 >>>>>>> .merge_file_EURABe
+=======
+<<<<<<< .merge_file_sYttaT
+| `ON-DEMAND-PATTERN.md` | **Leggi prima** — pattern da seguire |
+=======
+| `on-demand-pattern.md` | **Leggi prima** — pattern da seguire |
+>>>>>>> .merge_file_YZiqgY
+>>>>>>> .merge_file_Xs6XLt
 
 ## Convenzioni
 

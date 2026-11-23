@@ -33,11 +33,23 @@ risoluzione automatica; contenuto divergente → giudizio manuale):
 - 34 blocchi risolti automaticamente (un lato vuoto o sottoinsieme dell'altro).
 - 13 blocchi divergenti risolti a mano, criteri principali: tenuto il lato
   con informazione reale quando l'altro era stub/generico; unite le sezioni
+<<<<<<< .merge_file_N1AnH3
 <<<<<<< .merge_file_qYWolj
   quando entrambe portavano contenuto nuovo (es. `00-INDEX.md`: sia "Ultimo
 =======
   quando entrambe portavano contenuto nuovo (es. `00-index.md`: sia "Ultimo
 >>>>>>> .merge_file_1yTsuG
+=======
+<<<<<<< .merge_file_7yTUZJ
+  quando entrambe portavano contenuto nuovo (es. `00-INDEX.md`: sia "Ultimo
+=======
+<<<<<<< .merge_file_FsWtnL
+  quando entrambe portavano contenuto nuovo (es. `00-INDEX.md`: sia "Ultimo
+=======
+  quando entrambe portavano contenuto nuovo (es. `00-index.md`: sia "Ultimo
+>>>>>>> .merge_file_1NqUDc
+>>>>>>> .merge_file_mg82v9
+>>>>>>> .merge_file_zdtr7h
   Aggiornamento" sia "Dependency Intelligence"); preferita la denominazione
   generica "laraxot" ai nomi di progetti ospiti (FixCity, SaluteOra)
   hardcoded — Media e' un modulo condiviso fra piu' progetti (`git remote

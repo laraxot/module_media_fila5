@@ -93,7 +93,11 @@ Overall Module Completion: 60%
 ## Collegamenti tra versioni di roadmap.md
 * [roadmap.md](bashscripts/docs/roadmap.md)
 * [roadmap.md](docs/roadmap.md)
+<<<<<<< .merge_file_pokVat
 <<<<<<< .merge_file_SJZlFe
+=======
+<<<<<<< .merge_file_wr1qmk
+>>>>>>> .merge_file_7UpBVe
 * [roadmap.md](../../../gdpr/docs/roadmap.md)
 * [roadmap.md](../../../notify/docs/roadmap.md)
 * [roadmap.md](../../../xot/docs/roadmap.md)
@@ -117,7 +121,11 @@ Overall Module Completion: 60%
 * [roadmap.md](../roadmap.md)
 * [roadmap.md](../../../Tenant/docs/roadmap.md)
 * [roadmap.md](../../../Activity/docs/roadmap.md)
+<<<<<<< .merge_file_pokVat
 >>>>>>> .merge_file_EDgNiT
+=======
+>>>>>>> .merge_file_8RFdGC
+>>>>>>> .merge_file_7UpBVe
 * [roadmap.md](../../../patient/docs/roadmap.md)
 * [roadmap.md](../../../cms/docs/roadmap.md)
 * [roadmap.md](../../../../themes/one/docs/roadmap.md)
