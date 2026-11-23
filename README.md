@@ -91,11 +91,15 @@ Per i pattern di integrazione vedi la documentazione locale.
 
 ## Documentazione
 
-La mappa tecnica e' in [docs/README.md](./docs/README.md); l'indice completo in [docs/INDEX.md](./docs/INDEX.md).
+La mappa tecnica e' in [docs/README.md](./docs/README.md); l'indice completo in [docs/index.md](./docs/index.md).
 
 - [Story BMAD del modulo](./docs/stories/)
 - [Architettura](./docs/architecture.md) · [Pattern](./docs/patterns.md) · [Troubleshooting](./docs/troubleshooting.md)
+<<<<<<< .merge_file_FYAeZn
 - [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/PERFORMANCE-OPTIMIZATION.md) · [Migrazioni](./docs/MIGRATIONS.md) · [Testing](./docs/testing-guidelines.md)
+=======
+- [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/performance-optimization.md) · [Migrazioni](./docs/migrations.md) · [Testing](./docs/testing-guidelines.md)
+>>>>>>> .merge_file_B48sdY
 - [Regole del progetto](../../../docs/wiki/)
 - [README del progetto](../../README.md)
 

@@ -23,8 +23,13 @@ related:
 
 ## COMPLETE (12 DOCS)
 - [x] `Modules/Sixteen/docs/html-parity-body-policy.md` - Added lint rule
+<<<<<<< .merge_file_6saeBR
 - [x] `Modules/Notify/Modules/Xot/docs/INDEX.md` - Added missing index references
 - [x] `Modules/LegacyDomain/docs/docs/INDEX.md` - Added DRY/KISS requirements
+=======
+- [x] `Modules/Notify/Modules/Xot/docs/index.md` - Added missing index references
+- [x] `Modules/LegacyDomain/docs/docs/index.md` - Added DRY/KISS requirements
+>>>>>>> .merge_file_PChoN0
 
 ## BOUNDARY CASES (0)
 ---

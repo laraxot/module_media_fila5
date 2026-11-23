@@ -8,6 +8,13 @@ use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
 use Modules\Media\Tests\TestCase;
 
+<<<<<<< .merge_file_byOFpz
+=======
+// `uses()` deve stare DOPO gli `use`: gli import valgono dalla loro riga in
+// avanti, quindi scritto sopra `TestCase::class` si risolveva come
+// Modules\Media\Tests\Unit\Actions\TestCase e Pest moriva in fase di
+// raccolta, portandosi via tutta la suite (base_quaeris_fila5#213).
+>>>>>>> .merge_file_ACcWhO
 uses(TestCase::class);
 
 /**
