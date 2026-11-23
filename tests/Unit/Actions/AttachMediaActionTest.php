@@ -8,13 +8,10 @@ use Modules\Media\Actions\AttachMediaAction;
 use Modules\Media\Tests\TestCase;
 use Spatie\QueueableAction\QueueableAction;
 
-<<<<<<< .merge_file_a9sFKn
-=======
 // `uses()` deve stare DOPO gli `use`: gli import valgono dalla loro riga in
 // avanti, quindi scritto sopra `TestCase::class` si risolveva come
 // Modules\Media\Tests\Unit\Actions\TestCase e Pest moriva in fase di
 // raccolta, portandosi via tutta la suite (base_quaeris_fila5#213).
->>>>>>> .merge_file_U4d0LA
 uses(TestCase::class);
 
 describe('AttachMediaAction', function () {
