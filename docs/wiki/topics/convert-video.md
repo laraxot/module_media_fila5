@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 convert-video"
 
 # Topic convert-video
 
-Sintesi automatica di 5 documenti (chiave `convert-video`).
+Sintesi automatica di 4 documenti (chiave `convert-video`).
 
 ## ConvertVideoAction
 
@@ -40,7 +40,7 @@ Converte un video su un disco in X264 a 1000 kbps e restituisce l'URL del file p
 
 ## Errori
 
-- Le eccezioni di FFmpeg si propagano. `GetMediaExporterAction` lancia `RuntimeException` se la catena non restituisce un exporter.
+- Le eccezioni di FFmpeg si propagano. `ResolveMediaExporterAction` lancia `RuntimeException` se la catena non restituisce un exporter.
 
 ## ConvertVideoByConvertDataAction
 
@@ -108,72 +108,35 @@ Converte un video secondo `ConvertData` e aggiorna il record `MediaConvert` con 
 
 ## Errori
 
-## ConvertVideoByMediaConvertAction
+## Topic convert-video
 
-_Fonte: `wiki/actions/convert-video-by-media-convert.md`_
+_Fonte: `wiki/topics/convert-video.md`_
 
-# ConvertVideoByMediaConvertAction
+# Topic convert-video
 
-## Panoramica
-Azione per la conversione di video utilizzando FFMpeg con tracciamento del progresso tramite il modello MediaConvert.
+Sintesi automatica di 5 documenti (chiave `convert-video`).
 
-## Caratteristiche
-- Conversione video con FFMpeg
-- Tracciamento del progresso in tempo reale
-- Notifiche Filament integrate
-- Logging dettagliato
-- Gestione delle code con QueueableAction
-- Validazione dei dati di input
+## ConvertVideoAction
 
-## Miglioramenti PHPStan Livello 9
-Le seguenti modifiche sono state apportate per soddisfare PHPStan livello 9:
+_Fonte: `contracts/convert-video-action.md`_
 
-1. Tipizzazione stretta dei parametri
-2. Gestione type-safe dei formati video
-3. Validazione dei dati di input in metodo dedicato
-4. Gestione del progresso in metodo dedicato
-5. Documentazione PHPDoc completa
+# ConvertVideoAction
 
-## Metodo Execute
-```php
-public function execute(ConvertData $data, MediaConvert $record): string
-```
+Converte un video su un disco in X264 a 1000 kbps e restituisce l'URL del file prodotto. Codice: `app/Actions/Video/ConvertVideoAction.php:17-42`.
 
-### Parametri
-- `$data`: Oggetto ConvertData contenente:
-  - `disk`: Il disco di storage
+## Input
 
-## ConvertVideoByConvertDataAction
+- `string $disk_mp4`: disco di lettura e scrittura.
+- `string $file_mp4`: video sorgente.
+- `string $file_new`: percorso di destinazione sul disco.
 
-_Fonte: `wiki/actions/convert-video.md`_
+## Output
 
-# ConvertVideoByConvertDataAction
+- `string`: URL del file (`FilesystemAdapter::url()`).
 
-## Panoramica
-Azione per la conversione di video utilizzando FFMpeg e dati di conversione specificati.
+## Invarianti
 
-## Caratteristiche
-- Conversione video con FFMpeg
-- Supporto per formati video personalizzati
-- Monitoraggio del progresso della conversione
-- Gestione delle code con QueueableAction
-- Validazione dei dati di input
-
-## Miglioramenti PHPStan Livello 9
-Le seguenti modifiche sono state apportate per soddisfare PHPStan livello 9:
-
-1. Tipizzazione stretta dei parametri
-2. Gestione type-safe dei formati video
-3. Validazione dei dati di input
-4. Gestione corretta delle eccezioni
-5. Implementazione delle interfacce FFMpeg
-
-## Metodo Execute
-```php
-public function execute(ConvertData $data): string
-```
-
-### Parametri
-- `$data`: Oggetto ConvertData contenente:
-  - `disk`: Il disco di storage
-  - `file`: Il file video da convertire
+- **CONVERT-VIDEO-INV-1** — Il formato è `X264` con bitrate fisso di 1000 kbps.
+  Test: `tests/Unit/Actions/MediaActionsCoverageTest.php:66-74` (solo classe e metodo).
+- **CONVERT-VIDEO-INV-2** — L'URL restituito appartiene allo stesso disco di scrittura.
+  Test: nessuno.

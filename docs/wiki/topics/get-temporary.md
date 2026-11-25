@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 get-temporary"
 
 # Topic get-temporary
 
-Sintesi automatica di 3 documenti (chiave `get-temporary`).
+Sintesi automatica di 4 documenti (chiave `get-temporary`).
 
 ## GetTemporaryUploadConversionPathAction
 
@@ -107,3 +107,36 @@ Calcola il percorso `tmp/` delle immagini responsive di un upload temporaneo. Co
 - `Webmozart\Assert` per chiave non stringa.
 
 ## Non fa
+
+## Topic get-temporary
+
+_Fonte: `wiki/topics/get-temporary.md`_
+
+# Topic get-temporary
+
+Sintesi automatica di 3 documenti (chiave `get-temporary`).
+
+## GetTemporaryUploadConversionPathAction
+
+_Fonte: `contracts/get-temporary-upload-conversion-path-action.md`_
+
+# GetTemporaryUploadConversionPathAction
+
+Calcola il percorso `tmp/` delle conversioni di un upload temporaneo. Codice: `app/Actions/TemporaryUpload/GetTemporaryUploadConversionPathAction.php:14-25`.
+
+## Input
+
+- `Media $media`: servono `uuid` e chiave.
+
+## Output
+
+- `string`: `tmp/<md5(uuid+id)>/<md5(id+uuid+'conversion')>`, senza slash finale.
+
+## Invarianti
+
+- **GET-TEMPORARY-UPLOAD-CONVERSION-PATH-INV-1** — Con chiave stringa il risultato è identico a `GenerateTemporaryUploadPathAction::execute($media, 'conversion')`.
+  Test: nessuno esplicito.
+- **GET-TEMPORARY-UPLOAD-CONVERSION-PATH-INV-2** — Con chiave intera fa fallire `Assert::string`: diverso dal fratello `GenerateTemporaryUploadPathAction`, che usa `Assert::scalar`.
+  Test: nessuno.
+
+## Effetti collaterali

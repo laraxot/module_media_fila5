@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 get-video"
 
 # Topic get-video
 
-Sintesi automatica di 3 documenti (chiave `get-video`).
+Sintesi automatica di 4 documenti (chiave `get-video`).
 
 ## GetVideoDurationAction
 
@@ -107,3 +107,36 @@ Classe senza logica: dichiara solo la proprietà `$backoff = 3` e usa il trait `
 ## Non fa
 
 - Non genera screenshot. Nessun chiamante in `app/`, `Modules/` o `config/` (verificato con grep): è uno stub.
+
+## Topic get-video
+
+_Fonte: `wiki/topics/get-video.md`_
+
+# Topic get-video
+
+Sintesi automatica di 3 documenti (chiave `get-video`).
+
+## GetVideoDurationAction
+
+_Fonte: `contracts/get-video-duration-action.md`_
+
+# GetVideoDurationAction
+
+Restituisce la durata in secondi di un video sul disco. Codice: `app/Actions/Video/GetVideoDurationAction.php:14-25`.
+
+## Input
+
+- `string $disk`, `string $file`.
+
+## Output
+
+- `?int`: `null` se il file non esiste; altrimenti la durata restituita da `getDurationInSeconds()`.
+
+## Invarianti
+
+- **GET-VIDEO-DURATION-INV-1** — File assente → `null`, senza avviare FFmpeg.
+  Test: nessuno sul comportamento; `tests/Unit/Actions/MediaActionsCoverageTest.php:158-164` verifica solo classe e metodo.
+
+## Effetti collaterali
+
+- Lettura del file tramite FFprobe. Nessuna scrittura.

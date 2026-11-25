@@ -7,7 +7,7 @@ qmd: "digest ceiling 100 test-cloud"
 
 # Topic test-cloud
 
-Sintesi automatica di 3 documenti (chiave `test-cloud`).
+Sintesi automatica di 4 documenti (chiave `test-cloud`).
 
 ## TestCloudFrontConfigAction
 
@@ -107,3 +107,36 @@ Controlla che siano presenti URL base, key pair e chiave privata CloudFront. Non
 - Eccezioni catturate e restituite come `status=error`.
 
 ## Non fa
+
+## Topic test-cloud
+
+_Fonte: `wiki/topics/test-cloud.md`_
+
+# Topic test-cloud
+
+Sintesi automatica di 3 documenti (chiave `test-cloud`).
+
+## TestCloudFrontConfigAction
+
+_Fonte: `contracts/test-cloud-front-config-action.md`_
+
+# TestCloudFrontConfigAction
+
+Mostra i valori CloudFront letti dalla config, senza verificarli. Codice: `app/Actions/Diagnostic/Aws/TestCloudFrontConfigAction.php:17-38`.
+
+## Input
+
+- Nessuno. Legge `filesystems.cloudfront.url` e `filesystems.cloudfront.key_pair_id`.
+
+## Output
+
+- `array`: `status` (`success` o `error`), `message`, `details` con `Base URL` e `Key Pair ID`.
+
+## Invarianti
+
+- **TEST-CLOUD-FRONT-CONFIG-INV-1** — Il percorso `success` è l'unico eseguito: nessun controllo sui valori, quindi risponde `success` anche con valori `null`.
+  Test: nessuno.
+- **TEST-CLOUD-FRONT-CONFIG-INV-2** — Il ramo `error` (`catch Exception`) è irraggiungibile: `config()` non lancia eccezioni.
+  Test: nessuno.
+
+## Effetti collaterali
