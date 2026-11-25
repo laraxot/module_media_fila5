@@ -114,7 +114,7 @@ _Fonte: `wiki/topics/test-cloud.md`_
 
 # Topic test-cloud
 
-Sintesi automatica di 3 documenti (chiave `test-cloud`).
+Sintesi automatica di 4 documenti (chiave `test-cloud`).
 
 ## TestCloudFrontConfigAction
 

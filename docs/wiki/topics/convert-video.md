@@ -114,7 +114,7 @@ _Fonte: `wiki/topics/convert-video.md`_
 
 # Topic convert-video
 
-Sintesi automatica di 5 documenti (chiave `convert-video`).
+Sintesi automatica di 4 documenti (chiave `convert-video`).
 
 ## ConvertVideoAction
 

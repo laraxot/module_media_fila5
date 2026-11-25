@@ -114,7 +114,7 @@ _Fonte: `wiki/topics/get-video.md`_
 
 # Topic get-video
 
-Sintesi automatica di 3 documenti (chiave `get-video`).
+Sintesi automatica di 4 documenti (chiave `get-video`).
 
 ## GetVideoDurationAction
 

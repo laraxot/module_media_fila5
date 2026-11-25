@@ -117,7 +117,7 @@ _Fonte: `wiki/topics/test-s3.md`_
 
 # Topic test-s3
 
-Sintesi automatica di 3 documenti (chiave `test-s3`).
+Sintesi automatica di 4 documenti (chiave `test-s3`).
 
 ## TestS3ConnectionAction
 
@@ -134,7 +134,7 @@ Verifica la raggiungibilità del bucket con `headBucket`. Codice: `app/Actions/D
 ## Output
 
 - Successo: `status=success`, `message` fisso, `details` con `Bucket` e `Region` (dalla config).
-- `AwsException`: `status=error`, `message` = solo il codice AWS (non il prefisso usato dalle altre diagnostiche), `details` con `Error` e `Solution` (da `GetAwsS3ErrorSolutionAction`).
+- `AwsException`: `status=error`, `message` = solo il codice AWS (non il prefisso usato dalle altre diagnostiche), `details` con `Error` e `Solution` (da `ResolveAwsS3ErrorSolutionAction`).
 
 ## Invarianti
 

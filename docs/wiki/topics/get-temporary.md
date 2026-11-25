@@ -114,7 +114,7 @@ _Fonte: `wiki/topics/get-temporary.md`_
 
 # Topic get-temporary
 
-Sintesi automatica di 3 documenti (chiave `get-temporary`).
+Sintesi automatica di 4 documenti (chiave `get-temporary`).
 
 ## GetTemporaryUploadConversionPathAction
 
