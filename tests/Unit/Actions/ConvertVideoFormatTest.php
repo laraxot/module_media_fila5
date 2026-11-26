@@ -92,7 +92,7 @@ describe('ConvertVideoByConvertDataAction applica il formato di ConvertData', fu
         expect($capturedFormat->getAudioCodec())->toBe('libvorbis');
         expect($capturedFormat->getKiloBitrate())->toBe(1000);
         expect($capturedFormat->getAdditionalParameters())->toBe(['-preset', 'veryfast']);
-    });
+    })->group('CONVERT-VIDEO-BY-CONVERT-DATA-INV-3');
 });
 
 describe('ConvertVideoByMediaConvertAction applica il formato di ConvertData', function (): void {
@@ -117,5 +117,5 @@ describe('ConvertVideoByMediaConvertAction applica il formato di ConvertData', f
         }
         expect($capturedFormat->getKiloBitrate())->toBe(1000);
         expect($capturedFormat->getAdditionalParameters())->toBe(['-preset', 'veryfast']);
-    });
+    })->group('CONVERT-VIDEO-BY-MEDIA-CONVERT-INV-2', 'CONVERT-VIDEO-BY-MEDIA-CONVERT-INV-4');
 });

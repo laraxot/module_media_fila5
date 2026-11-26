@@ -1,41 +1,54 @@
 ---
-title: "ConvertVideoByConvertDataAction — contratto"
+title: "Contratto — ConvertVideoByConvertDataAction"
 type: contract
-owner: Media
+action: "Modules\Media\Actions\Video\ConvertVideoByConvertDataAction"
+module: Media
 status: accepted
-updated: 2026-11-24
-action: "Modules\\Media\\Actions\\Video\\ConvertVideoByConvertDataAction"
-qmd: "ConvertVideoByConvertDataAction conversione video ConvertData formato preset ultrafast percorso"
+created: 2026-11-25
+updated: 2026-11-26
+qmd: "ConvertVideoByConvertDataAction conversione video ConvertData formato preset webm percorso"
 ---
 
 # ConvertVideoByConvertDataAction
 
-Converte un video secondo un `ConvertData` (formato e nome di uscita) e restituisce il percorso del file prodotto. Codice: `app/Actions/Video/ConvertVideoByConvertDataAction.php:19-52`.
+Converte un video secondo un `ConvertData` e restituisce il nome del file prodotto. Codice: `app/Actions/Video/ConvertVideoByConvertDataAction.php:16-56`;
+il formato nasce in `app/Datas/ConvertData.php:53-80`. Nessun chiamante in `app/` (`rg ConvertVideoByConvertDataAction`: solo test).
 
 ## Input
 
-- `ConvertData $data`: fornisce `exists()`, `getFFMpegFormat()`, `getConvertedFilename()`, `disk`, `file`.
+- `ConvertData $data`: usa `disk`, `file`, `codec_video`, `codec_audio`, `bitrate`, `preset` e i metodi `exists()`, `getFFMpegFormat()`, `getConvertedFilename()`.
 
 ## Output
 
-- `string`: il nome del file convertito (percorso, non URL).
+- `string`: `ConvertData::getConvertedFilename()`, cioe' `file` con l'ultimo `.mp4` sostituito da `.webm` (percorso sul disco, non URL).
 
 ## Invarianti
 
-- **CONVERT-VIDEO-BY-CONVERT-DATA-INV-1** — Sorgente inesistente → `Exception('Il file non esiste')` prima di ogni elaborazione.
-  Test: `tests/Unit/Actions/MediaActionsCoverageTest.php:86-92` (solo struttura).
-- **CONVERT-VIDEO-BY-CONVERT-DATA-INV-2** — Nome di uscita vuoto → `Exception`.
-  Test: nessuno.
+| ID | Regola | Group Pest |
+|---|---|---|
+| CONVERT-VIDEO-BY-CONVERT-DATA-INV-1 | Sorgente inesistente (`Storage::disk($data->disk)->exists($data->file)` falso) → `Exception('Il file non esiste')` prima di ogni elaborazione. | — (non dimostrato) |
+| CONVERT-VIDEO-BY-CONVERT-DATA-INV-2 | Nome di uscita vuoto → `Exception('Il nome del file convertito non è stato specificato')`. | — (non dimostrato) |
+| CONVERT-VIDEO-BY-CONVERT-DATA-INV-3 | Il formato applicato e' quello descritto da `ConvertData::getFFMpegFormat()`: WebM con codec audio, codec video e bitrate (kbps) del DTO e `-preset <ConvertData::$preset>` (non piu' un `ultrafast` fisso), passato a `inFormat()`; `save()` riceve solo il nome di uscita. | `CONVERT-VIDEO-BY-CONVERT-DATA-INV-3` |
 
 ## Effetti collaterali
 
-- Esegue FFmpeg in modo sincrono con preset `ultrafast` e scrive l'output sul disco. Nessun aggiornamento del database.
+1. `Storage::disk($data->disk)->exists($data->file)`.
+2. FFmpeg in modo sincrono: `FFMpeg::fromDisk($data->disk)->open($data->file)->export()->inFormat($format)->save($file_new)`; scrive l'output sul disco `$data->disk`.
+
+Nessun aggiornamento del database; la sorgente non viene cancellata.
 
 ## Errori
 
-- `Exception` generiche per sorgente mancante o nome di uscita vuoto. Le eccezioni di FFmpeg si propagano.
+- `Exception` — sorgente mancante (INV-1) o nome di uscita vuoto (INV-2; dopo il controllo di esistenza e' raggiungibile solo con `file` vuoto).
+- Le eccezioni di FFmpeg si propagano.
 
 ## Non fa
 
-- Non registra il progresso né lo stato.
-- Il preset `ultrafast` è fisso.
+- Non registra progresso ne' stato (lo fa [ConvertVideoByMediaConvertAction](convert-video-by-media-convert-action.md) sul record `MediaConvert`).
+- Limite noto: l'estensione di uscita e' sempre `webm` (`class_basename` del formato); se `file` non finisce in `.mp4`, `replaceLast` non cambia nulla e il nome di uscita coincide con quello della sorgente (`ConvertData.php:74-80`), senza alcun controllo.
+
+## Prove
+
+- `CONVERT-VIDEO-BY-CONVERT-DATA-INV-1`: nessun test; `tests/Unit/Actions/MediaActionsCoverageTest.php` verifica solo struttura.
+- `CONVERT-VIDEO-BY-CONVERT-DATA-INV-2`: nessun test (stesso motivo).
+- `CONVERT-VIDEO-BY-CONVERT-DATA-INV-3`: `tests/Unit/Actions/ConvertVideoFormatTest.php` («passa a inFormat() il formato con codec, bitrate e preset scelti»: FFMpeg simulato, controlla codec `libvpx-vp9`/`libvorbis`, 1000 kbps e `['-preset', 'veryfast']`).

@@ -46,7 +46,7 @@ it('executes save attachments successfully', function (): void {
 
     expect(Storage::disk('attachments')->exists('temp/invoice.pdf'))->toBeTrue();
     expect(Storage::disk('attachments')->exists('temp/contract.pdf'))->toBeTrue();
-});
+})->group('MEDIA-ATTACH-INV-4');
 
 it('handles empty attachments', function (): void {
     $action = new SaveAttachmentsAction;
@@ -86,7 +86,7 @@ it('handles storage errors gracefully', function (): void {
 
     expect(fn () => $action->execute($record, $attachments, $data, 'attachments'))
         ->toThrow(Exception::class, 'Storage error');
-});
+})->group('MEDIA-ATTACH-INV-5');
 
 it('uses correct disk', function (): void {
     $action = new SaveAttachmentsAction;
@@ -174,4 +174,4 @@ it('handles multiple attachments', function (): void {
     expect(Storage::disk('attachments')->exists('temp/invoice.pdf'))->toBeTrue();
     expect(Storage::disk('attachments')->exists('temp/contract.pdf'))->toBeTrue();
     expect(Storage::disk('attachments')->exists('temp/receipt.pdf'))->toBeTrue();
-});
+})->group('MEDIA-ATTACH-INV-4');

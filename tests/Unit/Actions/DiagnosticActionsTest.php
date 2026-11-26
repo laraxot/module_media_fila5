@@ -35,4 +35,4 @@ it('keeps AWS S3 error solution behavior', function (): void {
     expect($action->execute(null))->toBe('Unknown error - check AWS credentials and configuration');
     expect($action->execute('AccessDenied'))->toBe('Check IAM permissions for S3 access');
     expect($action->execute('UnknownCode'))->toBe('Consult AWS documentation for error: UnknownCode');
-});
+})->group('RESOLVE-AWS-S3-ERROR-SOLUTION-INV-1', 'RESOLVE-AWS-S3-ERROR-SOLUTION-INV-2');

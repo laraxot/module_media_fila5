@@ -1,10 +1,11 @@
 ---
-title: "ADR — Upload temporanei con percorso scoping e policy"
+title: "ADR — Upload temporanei con percorso scopato e policy"
 type: decision
 status: accepted
 created: 2026-11-23
-updated: 2026-11-23
+updated: 2026-11-26
 module: Media
+decision-makers: [Media]
 qmd: "0001 upload temporanei percorso scopato policy"
 ---
 
@@ -17,7 +18,9 @@ un modello e possono avere originale, conversione e versione responsive. Il
 percorso non deve collidere tra media e non deve confondere il file originale
 con i derivati; l'accesso ai record deve restare governato da policy.
 
-## Driver
+Domanda: come si costruisce il percorso di un upload temporaneo e chi puo' agire sul record?
+
+## Driver della decisione
 
 - Separare i tre scopi di storage senza duplicare la logica del percorso.
 - Rendere il percorso deterministico rispetto all'identità del media, non al
@@ -51,15 +54,26 @@ UUID, chiave, bucket, nome, tipo MIME e dimensione.
   temporanei richiedono una pulizia esplicita.
 - Cattivo: il client deve fornire tutti i metadati richiesti per l'upload
   diretto.
+- Cattivo: il percorso usa `md5`, elencato come debito `security` in `tests/Arch/debt.php`.
 
 ## Conferma
 
-- `app/Actions/GenerateTemporaryUploadPathAction.php:11-49` deve mantenere
-  base `tmp/` e separazione per scopo.
-- `app/Models/Policies/MediaPolicy.php:13-67` e
-  `app/Models/Policies/TemporaryUploadPolicy.php:15-65` devono mantenere i
-  permessi espliciti.
-- `app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php:12-29`
-  deve mantenere la validazione dei metadati.
-- Verificare `tests/Unit/Support/TemporaryUploadPathGeneratorTest.php` e
-  `tests/Unit/MediaPolicyBehaviorTest.php`.
+- Percorsi: `tests/Unit/Support/TemporaryUploadPathGeneratorTest.php`, con le invarianti `MEDIA-PATH-INV-2`..`4` del
+  contratto [GenerateTemporaryUploadPathAction](../contracts/generate-temporary-upload-path-action.md);
+  da `laravel/`: `vendor/bin/pest Modules/Media/tests --group=MEDIA-PATH-INV-2`.
+- Policy: `tests/Unit/MediaPolicyBehaviorTest.php` (bypass `super-admin` della policy base, permessi `media.*` e
+  `temporary_upload.*`); `app/Models/Policies/MediaPolicy.php`, `app/Models/Policies/TemporaryUploadPolicy.php` e
+  `app/Models/Policies/MediaBasePolicy.php:14-21` devono mantenere i permessi espliciti.
+- Validazione dei metadati: `app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php:14-29`; nessun test la
+  prova davvero: `tests/Unit/MediaHighestMissCoverageTest.php:127-133` ne chiama `rules()` ma intercetta ogni `Throwable`,
+  quindi passa anche se la chiamata fallisce.
+
+## Stato attuale
+
+Il codice di oggi non usa le parti della decisione che riguardano il flusso di upload (`rg` su `Modules/*/app`):
+
+- `app/Actions/GenerateTemporaryUploadPathAction.php:11-55` non ha chiamanti in `app/`: la usano solo i test.
+- `app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php:12` non e' referenziata da nessuna rotta o classe di `app/`, `routes/` e `config/` (solo da quel test).
+
+La decisione vale dunque per la classe e per le policy (queste ultime sono provate dai test), non per un flusso di
+produzione che le attraversi. Se il flusso diretto su S3 viene attivato, i percorsi devono passare dall'Action.

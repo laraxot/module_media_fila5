@@ -4,8 +4,9 @@ type: decision
 module: Media
 tags: [adr, media, upload, fotocamera, filepond, resize, mobile]
 created: 2026-11-24
-updated: 2026-11-24
+updated: 2026-11-26
 status: accepted
+decision-makers: [Media]
 related:
   - ../../app/Filament/Forms/Components/CameraPhotoUpload.php
   - ../../resources/js/camera-image.js
@@ -26,14 +27,11 @@ qmd: "camera photo browser resize opt foto"
 
 Domanda: come far passare le foto grandi senza toccare gli altri upload e senza dipendere dai limiti del server?
 
-## Decisione
+## Driver della decisione
 
-- Pannello: campo `CameraPhotoUpload` (`app/Filament/Forms/Components/CameraPhotoUpload.php`, estende
-  `XotBaseSpatieMediaLibraryFileUpload`) con resize FilePond `contain`, lato massimo `MAX_SIDE` = 2048 px, senza upscale.
-  E' **opt-in**: lo usa solo il campo che riceve foto.
-- Front office: `resources/js/camera-image.js` (`window.MediaCameraImage.normalize(file)`) riduce e converte HEIC prima
-  dell'upload; due pulsanti, "Scatta una foto" (`capture="environment"`) e "Scegli file" (galleria e PDF).
-- `maxSize` del campo resta sul file originale (FilePond lo controlla prima del resize); la validazione server non cambia.
+- Le foto da fotocamera superano il limite di richiesta del server (HTTP 413 prima di PHP): il file va ridotto prima dell'invio.
+- Gli altri upload (SVG, GIF animate, PNG piccoli, PDF) non devono cambiare: il resize globale e' stato misurato dannoso.
+- Il limite di nginx non e' leggibile da PHP ([ADR 0003](0003-effective-upload-limit-in-web-request.md)): la soluzione non puo' basarsi su una configurazione del server.
 
 ## Alternative scartate
 
@@ -44,17 +42,29 @@ Domanda: come far passare le foto grandi senza toccare gli altri upload e senza 
 - Alzare il limite del server: utile e fuori dal codice (proprietario dell'hosting), ma non basta per foto da 10 MB su reti lente.
 - `capture` sull'unico input: su Android e iOS apre solo la fotocamera, niente galleria ne' PDF.
 
+## Decisione
+
+- Pannello: campo `CameraPhotoUpload` (`app/Filament/Forms/Components/CameraPhotoUpload.php`, estende
+  `XotBaseSpatieMediaLibraryFileUpload`) con resize FilePond `contain`, lato massimo `MAX_SIDE` = 2048 px
+  (`CameraPhotoUpload.php:20`), senza upscale. E' **opt-in**: lo usa solo il campo che riceve foto.
+- Front office: `resources/js/camera-image.js` (`window.MediaCameraImage.normalize(file)`) riduce e converte HEIC prima
+  dell'upload; due pulsanti, "Scatta una foto" (`capture="environment"`) e "Scegli file" (galleria e PDF).
+- `maxSize` del campo resta sul file originale (FilePond lo controlla prima del resize); la validazione server non cambia.
+
 ## Conseguenze
 
 - Pro: foto sotto 2 MB senza cambiare il server; gli altri upload restano intatti.
 - Contro: la riduzione dipende dal browser; un PNG grande a 2048 px puo' ancora superare 2 MB (FilePond di Filament 5.10 non
   permette di forzare l'output JPEG).
-- Debito: il commento della classe e il test citano `docs/camera-photo-upload-research.md`, che non esiste piu' nel modulo;
-  le misure sono nella story. Due numeri divergenti: `CameraPhotoUpload::MAX_SIDE` = 2048, default di `normalize()` in `camera-image.js` = 1920 (il
-  chiamante puo' passare `maxSide`); la story voleva un solo numero.
+- Debito: il commento della classe (`CameraPhotoUpload.php:14`) e il test (`tests/Unit/Filament/CameraPhotoUploadTest.php:14`)
+  citano `docs/camera-photo-upload-research.md`, che non esiste piu' nel modulo; le misure sono nella story. Due numeri
+  divergenti: `CameraPhotoUpload::MAX_SIDE` = 2048, default di `normalize()` in `camera-image.js:71` = 1920 (il chiamante
+  puo' passare `maxSide`); la story voleva un solo numero.
 
-## Verifica
+## Conferma
 
-- `Modules/Media/tests/Unit/Filament/CameraPhotoUploadTest.php`: resize `MAX_SIDE` x `MAX_SIDE`, modo `contain`, niente
-  upscale; un campo puo' scegliere una misura propria.
-- Solo revisione: nessun `FileUpload::configureUsing(...)` con resize nei service provider.
+- `tests/Unit/Filament/CameraPhotoUploadTest.php`: resize `MAX_SIDE` x `MAX_SIDE`, modo `contain`, niente upscale
+  (`shouldAutomaticallyUpscaleImagesWhenResizing()` falso), un campo puo' scegliere una misura propria; da `laravel/`: `vendor/bin/pest Modules/Media/tests/Unit/Filament/CameraPhotoUploadTest.php`
+  (runner con DB isolato: `bashscripts/tools/pest-scratch-db.sh`).
+- Nessun resize globale: `rg -n "configureUsing" Modules/*/app --glob '*.php' | rg -i "FileUpload"` dal dir `laravel/` non
+  deve dare risultati (oggi vuoto); la regola resta anche una voce di review.

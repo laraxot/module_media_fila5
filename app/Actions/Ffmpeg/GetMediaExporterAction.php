@@ -9,9 +9,9 @@ use RuntimeException;
 use Spatie\QueueableAction\QueueableAction;
 
 /**
- * @see docs/contracts/resolve-media-exporter-action.md
+ * @see docs/contracts/get-media-exporter-action.md
  *
- * @contract docs/contracts/resolve-media-exporter-action.md
+ * @contract docs/contracts/get-media-exporter-action.md
  */
 final class GetMediaExporterAction
 {

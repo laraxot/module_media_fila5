@@ -20,13 +20,13 @@ test('a non xml extension yields no rows', function (): void {
     $rows = (new ParseSubtitleXmlAction)->execute(__DIR__.'/sottotitoli.srt');
 
     Assert::assertSame([], $rows);
-});
+})->group('PARSE-SUBTITLE-XML-INV-1');
 
 test('a path without extension yields no rows', function (): void {
     $rows = (new ParseSubtitleXmlAction)->execute('/tmp/senza-estensione');
 
     Assert::assertSame([], $rows);
-});
+})->group('PARSE-SUBTITLE-XML-INV-1');
 
 test('every item becomes a row with normalised timings', function (): void {
     $rows = (new ParseSubtitleXmlAction)->execute(
@@ -49,7 +49,7 @@ test('every item becomes a row with normalised timings', function (): void {
     // sentence successiva: sentence_i avanza, item_i riparte da zero
     Assert::assertSame(1, $rows[2]['sentence_i']);
     Assert::assertSame(0, $rows[2]['item_i']);
-});
+})->group('PARSE-SUBTITLE-XML-INV-2', 'PARSE-SUBTITLE-XML-INV-3');
 
 test('timecodes carry hours, minutes and milliseconds', function (): void {
     $rows = (new ParseSubtitleXmlAction)->execute(
@@ -58,4 +58,4 @@ test('timecodes carry hours, minutes and milliseconds', function (): void {
 
     // 3_723_456 ms = 1h 02m 03s 456ms
     Assert::assertSame('01:02:03,456,01:02:04,000', $rows[2]['time']);
-});
+})->group('PARSE-SUBTITLE-XML-INV-3');

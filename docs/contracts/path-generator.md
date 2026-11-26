@@ -1,60 +1,48 @@
 ---
-issues: []
-discussions: []
-title: "PathGenerator Interface"
-module: "Media"
-type: concept
-tags: [path, generator]
+title: "Contratto — PathGenerator e PathGeneratorContract (interfacce)"
+type: contract
+action: "Modules\Media\Contracts\PathGenerator"
+module: Media
+status: accepted
 created: 2026-07-14
-updated: 2026-07-14
-qmd: "path generator"
-related:
-  - "./webm.md"
+updated: 2026-11-26
+qmd: "path generator interfaccia PathGeneratorContract Spatie DefaultPathGenerator"
 ---
-# PathGenerator Interface
 
-## Descrizione
-Questa interfaccia definisce il contratto per la generazione dei percorsi dei file media nel sistema, seguendo le best practices di Laraxot.
+# PathGenerator e PathGeneratorContract
 
-## Metodi Richiesti
+Interfacce in `app/Contracts/PathGenerator.php` e `app/Contracts/PathGeneratorContract.php`: tre metodi che restituiscono la cartella di un
+`Modules\Media\Models\Media`. Non sono un'Action: il contratto descrive cosa promettono le interfacce e dice che oggi nessuno le usa.
 
-### getPath(Media $media): string
-- Genera il percorso per il file originale
-- Parametri:
-  - `$media`: L'istanza del modello Media
-- Ritorna: Il percorso come stringa
+## Input
 
-### getPathForConversions(Media $media): string
-- Genera il percorso per le conversioni del file
-- Parametri:
-  - `$media`: L'istanza del modello Media
-- Ritorna: Il percorso come stringa
+- `Media $media`: l'istanza del modello Media, per `getPath()`, `getPathForConversions()`, `getPathForResponsiveImages()`.
 
-### getPathForResponsiveImages(Media $media): string
-- Genera il percorso per le immagini responsive
-- Parametri:
-  - `$media`: L'istanza del modello Media
-- Ritorna: Il percorso come stringa
+## Output
 
-## Implementazioni
-- [TemporaryUploadPathGenerator](../support/temporary_upload_path_generator.md)
+- `string`: cartella del file originale, delle conversioni, delle immagini responsive.
 
-## Best Practices
-- Utilizzare tipizzazione stretta
-- Documentare tutti i metodi con PHPDoc
-- Mantenere i percorsi coerenti tra le implementazioni
-- Garantire l'unicità dei percorsi generati
+## Invarianti
 
-## Note di Sicurezza
-- Validare sempre gli input
-- Evitare path traversal
-- Gestire correttamente i caratteri speciali
+| ID | Regola | Group Pest |
+|---|---|---|
+| PATH-GENERATOR-INV-1 | `PathGenerator` e `PathGeneratorContract` dichiarano gli stessi tre metodi con la stessa firma `(Media): string`. | — (non dimostrato) |
+| PATH-GENERATOR-INV-2 | Nessuna classe del repo implementa o usa le due interfacce (da `laravel/`: `rg -n 'Media\\Contracts\\' Modules Themes --glob '*.php'` senza risultati; le sole altre occorrenze del nome sono commenti di config e titoli di test): il generatore effettivo e' `Spatie\MediaLibrary\Support\PathGenerator\DefaultPathGenerator` (`config/media-library.php:106`, `config/local/fixcity/media-library.php:99`, percorsi da `laravel/`). | — (non dimostrato) |
 
-## Collegamenti
-- [Documentazione Media Module](../module_media.md)
-- [Gestione File](../file_management.md)
+## Effetti collaterali
 
-## Note di Manutenzione
-- Aggiornare la documentazione quando si modificano i metodi
-- Verificare che tutte le implementazioni rispettino il contratto
-- Testare la generazione dei percorsi in diverse condizioni
+- Nessuno: sono interfacce.
+
+## Errori
+
+- Nessuno.
+
+## Non fa
+
+- Non e' implementata da `GenerateTemporaryUploadPathAction`, che espone gli stessi tre metodi senza `implements` (vedi [generate-temporary-upload-path-action](generate-temporary-upload-path-action.md)).
+- Le due interfacce sono doppioni da eliminare, non un modello per codice nuovo: chi scrive un generatore implementa quello di Spatie. Un percorso generato non deve dipendere da input dell'utente (niente path traversal).
+- Una versione precedente della pagina citava `TemporaryUploadPathGenerator` e una pagina `support/temporary_upload_path_generator.md`: ne' la classe ne' la pagina esistono.
+
+## Prove
+
+- `PATH-GENERATOR-INV-1`, `-2`: nessun test; verifica per lettura di `app/Contracts/*.php` e con il comando `rg` indicato.

@@ -1,38 +1,50 @@
 ---
-status: proposed            # proposed | accepted | rejected | deprecated | superseded by NNNN
-date: YYYY-MM-DD
-decision-makers:
-qmd: "0000 template adr MADR harness NNNN-slug"
+title: "ADR — <decisione in una riga>"
+type: decision
+status: proposed            # proposed | accepted | rejected | deprecated | superseded
+superseded_by:              # solo se status: superseded, nome file dell'ADR che lo sostituisce
+created: AAAA-MM-GG
+updated: AAAA-MM-GG
+module: Media
+decision-makers: [<chi decide>]
+qmd: "0000 template adr MADR NNNN-slug"
 ---
 
-<!-- File: docs/adr/NNNN-titolo-con-trattini.md · formato MADR breve (harness).
-     Il basename DEVE iniziare con NNNN- (es. 0001-...). Eccezioni: README.md, INDEX.md, 0000-template.md.
-     Scrivi un ADR solo se la decisione è difficile da invertire, sorprendente e frutto di un trade-off reale. -->
+<!-- File: docs/adr/NNNN-titolo-con-trattini.md · formato MADR breve in italiano.
+     Il basename inizia con NNNN- (es. 0006-...). Eccezioni: README.md, INDEX.md, index.md, 0000-template.md.
+     Scrivi un ADR solo se la decisione e' difficile da invertire, sorprendente e frutto di un trade-off reale.
+     Le intestazioni qui sotto sono quelle controllate da Modules/Xot/tests/Unit/Docs/PackagesHaveContractsAndAdrTest.php. -->
 
 # <!-- Titolo: il problema risolto e la soluzione scelta -->
 
-## Context and Problem Statement
+## Contesto
 
-<!-- 2-3 frasi. Chiudi con la domanda a cui la decisione risponde. -->
+<!-- 2-3 frasi con i fatti e i vincoli. Chiudi con la domanda a cui la decisione risponde. -->
 
-## Decision Drivers
+## Driver della decisione
 
 - <!-- forza o vincolo che pesa sulla scelta -->
 
-## Considered Options
+## Alternative scartate
 
-- <!-- opzione 1 -->
-- <!-- opzione 2 -->
+- <!-- opzione scartata e motivo -->
 
-## Decision Outcome
+## Decisione
 
-Scelta: **<!-- opzione -->**, perché <!-- driver che la giustifica -->.
+<!-- Cosa si fa, in concreto, e dove sta nel codice (file e riga). -->
 
-### Consequences
+## Conseguenze
 
-- Buono, perché <!-- … -->
-- Cattivo, perché <!-- … -->
+- Buono: <!-- ... -->
+- Cattivo: <!-- ... -->
 
-### Confirmation
+## Conferma
 
-<!-- Come si controlla che il codice rispetti la decisione: un test, un controllo automatico, una voce di revisione. -->
+<!-- Come si controlla che il codice rispetti la decisione. Una sola delle tre, ma vera:
+     - un test esistente (percorso verificato) e il comando da `laravel/`: `vendor/bin/pest Modules/Media/tests/<percorso>`;
+     - un comando eseguibile da `laravel/` con l'esito atteso;
+     - una regola di review.
+     Se oggi non esiste nessuna conferma: «Nessuna conferma automatica oggi; proposta: ...». Mai inventare un test. -->
+
+<!-- ## Stato attuale
+     Aggiungi questa sezione solo se il codice di oggi contraddice la decisione: cosa fa davvero (file e riga). -->

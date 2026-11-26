@@ -4,8 +4,9 @@ type: decision
 module: Media
 tags: [adr, media, privacy, exif, gps, gd, imagick]
 created: 2026-11-24
-updated: 2026-11-24
+updated: 2026-11-26
 status: accepted
+decision-makers: [Media]
 related:
   - ../../app/Actions/Image/StripImageMetadataAction.php
   - ../contracts/strip-image-metadata-action.md
@@ -26,12 +27,12 @@ qmd: "strip image metadata server side metadati"
 
 Domanda: dove e con quale libreria garantire che nessun metadato resti nel file salvato?
 
-## Decisione
+## Driver della decisione
 
-- `StripImageMetadataAction` (`app/Actions/Image/`) riscrive l'originale sul suo disco: Intervention Image con driver GD
-  decodifica (applicando l'orientamento Exif ai pixel) e ri-codifica con `strip: true` (JPEG qualita' 90, PNG).
-- Solo `image/jpeg` e `image/png`, scelti dal `mime_type` del record; ogni altro tipo resta intatto.
-- Aggiorna `size` sul record. La chiama il modulo del progetto ospite dopo il salvataggio della foto.
+- Il server riceve cio' che il client manda: la garanzia di privacy non puo' dipendere dal browser.
+- Nessuna dipendenza di sistema in piu': Intervention Image con GD e' gia' installata.
+- L'orientamento della foto deve restare corretto dopo la rimozione dell'Exif.
+- Tempi e memoria entro `memory_limit` su foto da 48 MP.
 
 ## Alternative scartate
 
@@ -42,13 +43,28 @@ Domanda: dove e con quale libreria garantire che nessun metadato resti nel file 
   il rischio di lasciare blocchi che non si conoscono (XMP, chunk PNG); la ri-codifica porta via tutto cio' che non e' pixel.
 - Tenere l'originale con i metadati in un disco privato: e' proprio il dato da non conservare.
 
+## Decisione
+
+- `StripImageMetadataAction` (`app/Actions/Image/`) riscrive l'originale sul suo disco: Intervention Image con driver GD
+  decodifica (applicando l'orientamento Exif ai pixel) e ri-codifica con `strip: true` (JPEG qualita' 90, PNG).
+- Solo `image/jpeg` e `image/png`, scelti dal `mime_type` del record; ogni altro tipo resta intatto.
+- Aggiorna `size` sul record. La chiama il modulo del progetto ospite dopo il salvataggio della foto: in FixCity il listener
+  `Modules\Fixcity\Listeners\StripTicketPhotoMetadataListener`, registrato su `MediaHasBeenAddedEvent`
+  (`Modules/Fixcity/app/Providers/EventServiceProvider.php:29`) e attivo solo per i media di un `Ticket`.
+
 ## Conseguenze
 
 - Pro: il file salvato porta solo pixel; l'orientamento resta corretto anche per viewer che ignorano l'Exif.
 - Contro: ri-codifica JPEG con perdita (qualita' 90); GD non legge HEIC, che quindi non e' gestito.
 - Le conversioni gia' generate prima della chiamata non vengono riscritte: chiamarla prima di generarle.
+- Un'immagine che GD non sa decodificare fa lanciare l'Action: in FixCity la blocca a monte `TicketForm::decodableImageRule()`
+  (`Modules/Fixcity/app/Filament/Resources/TicketResource/Schemas/TicketForm.php:243`).
 
-## Verifica
+## Conferma
 
-- `Modules/Media/tests/Unit/Actions/Image/StripImageMetadataActionTest.php` (group `MEDIA-STRIP-INV-1` ... `MEDIA-STRIP-INV-5`):
-  fixture con GPS e Orientation=6 costruite byte per byte, controllo che il GPS ci fosse prima, PNG con `tEXt`/`iTXt`, PDF intatto.
+- `tests/Unit/Actions/Image/StripImageMetadataActionTest.php`, invarianti `MEDIA-STRIP-INV-1`..`5` del contratto
+  [StripImageMetadataAction](../contracts/strip-image-metadata-action.md): fixture con GPS e Orientation=6 costruite byte per
+  byte, controllo che il GPS ci fosse prima, PNG con `tEXt`/`iTXt`, PDF intatto, caso di controllo sul mime. Da `laravel/`:
+  `vendor/bin/pest Modules/Media/tests --group=MEDIA-STRIP-INV-1` (runner con DB isolato: `bashscripts/tools/pest-scratch-db.sh`).
+- La registrazione del listener in FixCity non ha una conferma automatica citata qui: voce di review su ogni nuovo percorso
+  di upload di foto verso un record che non passa da `MediaHasBeenAddedEvent`.

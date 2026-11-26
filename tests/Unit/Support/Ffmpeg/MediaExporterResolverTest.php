@@ -17,7 +17,7 @@ describe('MediaExporterResolver', function (): void {
         $exporter = \Mockery::mock(MediaExporter::class);
 
         Assert::assertSame($exporter, app(GetMediaExporterAction::class)->execute($exporter));
-    });
+    })->group('RESOLVE-MEDIA-EXPORTER-INV-1');
 
     it('rejects a value that is not a MediaExporter', function (): void {
         try {
@@ -26,7 +26,7 @@ describe('MediaExporterResolver', function (): void {
         } catch (RuntimeException $exception) {
             Assert::assertStringContainsString('MediaExporter', $exception->getMessage());
         }
-    });
+    })->group('RESOLVE-MEDIA-EXPORTER-INV-2');
 
     it('names the received type in the error message for an object', function (): void {
         try {
@@ -35,7 +35,7 @@ describe('MediaExporterResolver', function (): void {
         } catch (RuntimeException $exception) {
             Assert::assertStringContainsString('stdClass', $exception->getMessage());
         }
-    });
+    })->group('RESOLVE-MEDIA-EXPORTER-INV-2');
 
     it('names the received type in the error message for a scalar', function (): void {
         try {
@@ -44,7 +44,7 @@ describe('MediaExporterResolver', function (): void {
         } catch (RuntimeException $exception) {
             Assert::assertStringContainsString('int', $exception->getMessage());
         }
-    });
+    })->group('RESOLVE-MEDIA-EXPORTER-INV-2');
 
     it('rejects null', function (): void {
         try {
@@ -53,5 +53,5 @@ describe('MediaExporterResolver', function (): void {
         } catch (RuntimeException $exception) {
             Assert::assertStringContainsString('null', $exception->getMessage());
         }
-    });
+    })->group('RESOLVE-MEDIA-EXPORTER-INV-2');
 });
