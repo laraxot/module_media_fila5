@@ -83,7 +83,7 @@ it('has correct validation', function (): void {
     ];
 
     expect(collect($acceptedTypes)->contains(static fn (mixed $type): bool => is_string($type) && in_array($type, $allowed, true)))->toBeTrue();
-});
+})->group('GET-ATTACHMENTS-SCHEMA-INV-1');
 
 /**
  * Test that the schema has correct storage.
@@ -99,7 +99,7 @@ it('has correct storage', function (): void {
     // Assert
     $component = $form[0];
     expect($component->getDiskName())->toBe('attachments');
-});
+})->group('GET-ATTACHMENTS-SCHEMA-INV-2');
 
 /**
  * Test that the schema has correct directory.
@@ -115,7 +115,7 @@ it('has correct directory', function (): void {
     // Assert
     $component = $form[0];
     expect($component->getDirectory())->toBe('temp');
-});
+})->group('GET-ATTACHMENTS-SCHEMA-INV-2');
 
 /**
  * Test that the schema has correct visibility.
@@ -131,7 +131,7 @@ it('has correct visibility', function (): void {
     // Assert
     $component = $form[0];
     expect($component->getVisibility())->toBe('public');
-});
+})->group('GET-ATTACHMENTS-SCHEMA-INV-2');
 
 /**
  * Test that the schema has correct max size.
@@ -163,7 +163,7 @@ it('has correct multiple setting', function (): void {
     // Assert
     $component = $form[0];
     expect($component->isMultiple())->toBeFalse();
-});
+})->group('GET-ATTACHMENTS-SCHEMA-INV-1');
 
 /**
  * Test that the schema has correct preview setting.
@@ -179,7 +179,7 @@ it('has correct preview setting', function (): void {
     // Assert
     $component = $form[0];
     expect($component->isPreviewable())->toBeTrue();
-});
+})->group('GET-ATTACHMENTS-SCHEMA-INV-1');
 
 /**
  * Test that the schema has correct download setting.
@@ -195,7 +195,7 @@ it('has correct download setting', function (): void {
     // Assert
     $component = $form[0];
     expect($component->isDownloadable())->toBeTrue();
-});
+})->group('GET-ATTACHMENTS-SCHEMA-INV-1');
 
 /**
  * Test that the schema has correct remove setting.
@@ -230,7 +230,7 @@ it('has correct reorder setting', function (): void {
     // Assert
     $component = $form[0];
     expect($component->isReorderable())->toBeFalse();
-});
+})->group('GET-ATTACHMENTS-SCHEMA-INV-1');
 
 /**
  * Test that the schema has correct labels.

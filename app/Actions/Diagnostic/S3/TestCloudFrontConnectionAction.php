@@ -8,6 +8,11 @@ use Exception;
 use Modules\Media\Actions\CloudFront\GetCloudFrontSignedUrlAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-cloud-front-connection-action.md
+ *
+ * @contract docs/contracts/test-cloud-front-connection-action.md
+ */
 class TestCloudFrontConnectionAction
 {
     use QueueableAction;
@@ -24,8 +29,14 @@ class TestCloudFrontConnectionAction
             $keyPairId = config('services.cloudfront.key_pair_id');
             $privateKey = config('services.cloudfront.private_key');
 
-            if (! $baseUrl || ! $keyPairId || ! $privateKey) {
-                return $this->incompleteConfiguration($baseUrl, $keyPairId, $privateKey);
+            $missing = array_keys(array_filter([
+                'Base URL' => ! $baseUrl,
+                'Key Pair ID' => ! $keyPairId,
+                'Private Key' => ! $privateKey,
+            ]));
+
+            if ($missing !== []) {
+                return $this->incompleteConfiguration($missing);
             }
 
             $testUrl = app(GetCloudFrontSignedUrlAction::class)->execute($testFile, 5);
@@ -53,23 +64,19 @@ class TestCloudFrontConnectionAction
     }
 
     /**
-     * @return array<string, mixed>
+     * Risultato di errore quando mancano chiavi di configurazione CloudFront.
+     *
+     * @param  list<string>  $missing  etichette delle chiavi mancanti
+     * @return array{title: string, status: string, data: array<string, string>}
      */
-    private function incompleteConfiguration(mixed $baseUrl, mixed $keyPairId, mixed $privateKey): array
+    private function incompleteConfiguration(array $missing): array
     {
         return [
             'title' => '☁️ CloudFront',
             'status' => 'error',
             'data' => [
                 'Configuration' => '❌ Incomplete',
-                'Missing' => collect([
-                    'Base URL' => ! $baseUrl,
-                    'Key Pair ID' => ! $keyPairId,
-                    'Private Key' => ! $privateKey,
-                ])
-                    ->filter()
-                    ->keys()
-                    ->implode(', '),
+                'Missing' => implode(', ', $missing),
             ],
         ];
     }

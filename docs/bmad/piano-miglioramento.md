@@ -4,32 +4,18 @@ type: plan
 status: review
 updated: 2026-11-16
 module: Media
-<<<<<<< .merge_file_XpSOCT
-<<<<<<< .merge_file_8J10bW
-qmd: "piano miglioramento Media P0 P1 P2 BMAD"
-=======
-qmd: "piano miglioramento Media P1 P2 guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
-=======
 qmd: "piano miglioramento Media P0 P1 P2 BMAD guard diagnostica prunable cast id cancellazione logica codice morto sequenza criteri"
->>>>>>> .merge_file_RnIodP
 related:
   - ./audits/media-audit.md
   - ./epics.md
   - ./decision-log.md
-<<<<<<< .merge_file_XpSOCT
->>>>>>> .merge_file_9x8L9Q
-=======
->>>>>>> .merge_file_RnIodP
 ---
 
 # Piano di miglioramento — Media
 
-<<<<<<< .merge_file_XpSOCT
-<<<<<<< .merge_file_8J10bW
 Derivato dall'[audit](./audits/media-audit.md).
-=======
+
 Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0 dimostrato.
->>>>>>> .merge_file_RnIodP
 
 ## P1 (ordine consigliato)
 
@@ -66,9 +52,8 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 - [ ] D-3 decisa e attuata
 - [ ] PHPStan `Modules/Media` = 0
 - [ ] Pest osservabile o skip motivato
-<<<<<<< .merge_file_XpSOCT
 - [ ] ECC `00-index` aggiornato con esiti
-=======
+
 Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](./epics.md). Nessun P0 dimostrato.
 
 ## P1 (ordine consigliato)
@@ -103,7 +88,5 @@ Derivato dall'[audit profondo](./audits/media-audit.md). Epic e AC: [epics.md](.
 - [ ] `Modules/Media/tests/Unit/Models` → 0 fail
 - [ ] D-3 decisa e attuata
 - [ ] PHPStan `Modules/Media` = 0
->>>>>>> .merge_file_9x8L9Q
-=======
+
 - [ ] ECC `00-index` aggiornato con gli esiti
->>>>>>> .merge_file_RnIodP

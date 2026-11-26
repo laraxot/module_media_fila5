@@ -10,10 +10,11 @@ use Modules\Media\Actions\Image\StripImageMetadataAction;
 use Modules\Media\Models\Media;
 use Modules\Media\Tests\TestCase;
 use PHPUnit\Framework\Assert;
+
 use function Safe\file_put_contents;
 use function Safe\imagecolorat;
-use function Safe\imagecreatetruecolor;
 use function Safe\imagecreatefromstring;
+use function Safe\imagecreatetruecolor;
 use function Safe\imagefill;
 use function Safe\imagefilledrectangle;
 use function Safe\imagejpeg;
@@ -185,7 +186,7 @@ it('removes GPS and Exif from a JPEG, applies its orientation and updates the st
     $media->refresh();
     Assert::assertSame(strlen($clean), (int) $media->size, 'La colonna size non e\' stata aggiornata.');
     Assert::assertSame('image/jpeg', $media->mime_type);
-});
+})->group('MEDIA-STRIP-INV-1', 'MEDIA-STRIP-INV-4');
 
 it('removes text and XMP chunks from a PNG and keeps the picture', function (): void {
     $original = stripActionPngWithText();
@@ -207,7 +208,7 @@ it('removes text and XMP chunks from a PNG and keeps the picture', function (): 
     Assert::assertSame([32, 32], array_slice((array) getimagesizefromstring($clean), 0, 2));
     $media->refresh();
     Assert::assertSame(strlen($clean), (int) $media->size);
-});
+})->group('MEDIA-STRIP-INV-2', 'MEDIA-STRIP-INV-4');
 
 it('leaves a PDF byte for byte identical and does not touch the record', function (): void {
     $pdf = "%PDF-1.4\n1 0 obj<</Type/Catalog>>endobj\n%\xE2\xE3\xCF\xD3\ntrailer<</Root 1 0 R>>\n%%EOF\n";
@@ -219,7 +220,7 @@ it('leaves a PDF byte for byte identical and does not touch the record', functio
     Assert::assertSame($pdf, Storage::disk('public')->get($media->getPathRelativeToRoot()));
     $media->refresh();
     Assert::assertSame($size, (int) $media->size);
-});
+})->group('MEDIA-STRIP-INV-3');
 
 it('control: the same GPS JPEG recorded with another mime type keeps its GPS (the action goes by the record, and the GPS check can fail)', function (): void {
     $original = stripActionGpsJpeg();
@@ -232,4 +233,4 @@ it('control: the same GPS JPEG recorded with another mime type keeps its GPS (th
     $exif = stripActionExif($kept);
     Assert::assertIsArray($exif);
     Assert::assertArrayHasKey('GPS', $exif, 'Il controllo "GPS assente" non puo\' mai fallire: exif_read_data non vede il GPS nemmeno dove c\'e\'.');
-});
+})->group('MEDIA-STRIP-INV-5');

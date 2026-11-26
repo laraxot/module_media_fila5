@@ -23,7 +23,7 @@ test('plain text joins every item of the subtitle file', function (): void {
     );
 
     Assert::assertSame('Buongiorno a tutti Arrivederci ', $plain);
-});
+})->group('EXTRACT-SUBTITLE-PLAIN-TEXT-INV-2');
 
 test('the plain text is stored on the requested model field', function (): void {
     $model = new class extends Model
@@ -51,4 +51,4 @@ test('the plain text is stored on the requested model field', function (): void 
 
     Assert::assertSame($model, $returned);
     Assert::assertSame(['transcript' => 'Buongiorno a tutti Arrivederci '], $model->updated);
-});
+})->group('UPDATE-MODEL-SUBTITLE-FIELD-INV-1');

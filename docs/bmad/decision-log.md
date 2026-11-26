@@ -2,14 +2,8 @@
 title: "Decision log — Media"
 type: decision-log
 status: active
-<<<<<<< .merge_file_3kxOiy
 tags: [media, docs]
 created: 2026-10-06
-<<<<<<< .merge_file_fY97Nc
-updated: 2026-10-06
-=======
-=======
->>>>>>> .merge_file_tLJoCZ
 updated: 2026-11-16
 bmad: true
 module: Media
@@ -18,21 +12,14 @@ related:
   - ./audits/media-audit.md
   - ./architecture.md
   - ./epics.md
-<<<<<<< .merge_file_fY97Nc
->>>>>>> .merge_file_nQphyl
-=======
->>>>>>> .merge_file_tLJoCZ
 ---
 
 # Decision log — Media
 
-<<<<<<< .merge_file_fY97Nc
-<<<<<<< .merge_file_3kxOiy
 ## Formato
-=======
+
 Le voci di esempio del template precedente sono state rimosse: non descrivevano il modulo.
 Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichiara il perché e l'evidenza nel codice.
->>>>>>> .merge_file_tLJoCZ
 
 | ID | Data | Stato | Decisione | Perché | Evidenza |
 |---|---|---|---|---|---|
@@ -50,7 +37,6 @@ Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichi
 | A. `SoftDeletes` su `Media` | cancellazione reversibile ovunque | il file su disco resta; serve politica di pulizia |
 | B. Collection «documentale» protetta | protegge solo ciò che è prova | serve classificare le collection esistenti |
 
-<<<<<<< .merge_file_fY97Nc
 ### 2026-09-30
 **Decisione:** [Esempio: Adottare la convenzione "una chiave per riga" per gli array PHP]
 **Stato:** APPROVATA
@@ -61,7 +47,7 @@ Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichi
 **Conseguenze:** 
 - Migliore leggibilità e gestione dei conflitti in git
 - Necessità di refactor esistente
-=======
+
 Le voci di esempio del template precedente sono state rimosse: non descrivevano il modulo.
 
 | ID | Data | Stato | Decisione | Perché | Evidenza |
@@ -81,7 +67,3 @@ Le voci di esempio del template precedente sono state rimosse: non descrivevano 
 | B. Collection «documentale» protetta | protegge solo ciò che è prova | serve classificare le collection esistenti |
 
 Raccomandazione: B (più piccola, aderente allo scopo). Decide il committente.
->>>>>>> .merge_file_nQphyl
-=======
-Raccomandazione: B (più piccola, aderente allo scopo). Decide il committente.
->>>>>>> .merge_file_tLJoCZ

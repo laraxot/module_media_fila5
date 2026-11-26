@@ -7,6 +7,11 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Aws\Exception\AwsException;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-iam-credentials-action.md
+ *
+ * @contract docs/contracts/test-iam-credentials-action.md
+ */
 class TestIamCredentialsAction
 {
     use QueueableAction;

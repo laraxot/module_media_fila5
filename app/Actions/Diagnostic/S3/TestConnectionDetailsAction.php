@@ -6,9 +6,14 @@ namespace Modules\Media\Actions\Diagnostic\S3;
 
 use Aws\Exception\AwsException;
 use Modules\Media\Actions\Diagnostic\Aws\CreateFilesystemS3ClientAction;
-use Modules\Media\Actions\Diagnostic\Aws\ResolveAwsS3ErrorSolutionAction;
+use Modules\Media\Actions\Diagnostic\Aws\GetAwsS3ErrorSolutionAction;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-connection-details-action.md
+ *
+ * @contract docs/contracts/test-connection-details-action.md
+ */
 class TestConnectionDetailsAction
 {
     use QueueableAction;
@@ -46,7 +51,7 @@ class TestConnectionDetailsAction
                     'Bucket Accessible' => '❌ No',
                     'Error Code' => $exception->getAwsErrorCode() ?? 'UnknownError',
                     'Message' => $exception->getMessage(),
-                    'Solution' => app(ResolveAwsS3ErrorSolutionAction::class)->execute($exception->getAwsErrorCode()),
+                    'Solution' => app(GetAwsS3ErrorSolutionAction::class)->execute($exception->getAwsErrorCode()),
                 ],
             ];
         }

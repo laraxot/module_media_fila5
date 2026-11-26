@@ -19,7 +19,7 @@ test('empty results fall back to the given message', function (): void {
     $output = (new FormatDebugOutputAction)->execute([], 'nessun risultato');
 
     Assert::assertSame('nessun risultato', $output);
-});
+})->group('FORMAT-DEBUG-OUTPUT-INV-1');
 
 test('a well formed result renders title, status and data lines', function (): void {
     $output = (new FormatDebugOutputAction)->execute([
@@ -64,7 +64,7 @@ test('entries that are not arrays or lack the required keys are skipped', functi
     ], 'nessun risultato');
 
     Assert::assertSame('', $output);
-});
+})->group('FORMAT-DEBUG-OUTPUT-INV-2');
 
 test('several results are separated by their own rule line', function (): void {
     $result = static fn (string $title): array => [

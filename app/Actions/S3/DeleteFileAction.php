@@ -7,6 +7,11 @@ namespace Modules\Media\Actions\S3;
 use Aws\S3\Exception\S3Exception;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/delete-file-action.md
+ *
+ * @contract docs/contracts/delete-file-action.md
+ */
 class DeleteFileAction extends BaseS3Action
 {
     use QueueableAction;

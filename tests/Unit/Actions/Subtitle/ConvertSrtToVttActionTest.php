@@ -35,4 +35,4 @@ test('timing lines get a dot, cue text keeps its commas', function (): void {
     } finally {
         File::deleteDirectory(public_path($dir));
     }
-});
+})->group('CONVERT-SRT-TO-VTT-INV-1', 'CONVERT-SRT-TO-VTT-INV-2');

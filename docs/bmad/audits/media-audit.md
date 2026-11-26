@@ -4,14 +4,7 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
-<<<<<<< .merge_file_JlUBTO
-<<<<<<< .merge_file_sY5JxF
-qmd: "audit approfondito Media inventario PHPStan Pest policy Filament Actions"
-=======
-qmd: "audit approfondito Media AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
-=======
-qmd: "audit approfondito Media inventario policy Filament Actions AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
->>>>>>> .merge_file_g4RBop
+qmd: "audit approfondito Media inventario PHPStan Pest policy Filament Actions AwsTest S3Test senza guard TemporaryUpload prunable commentato id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto"
 related:
   - ../audit.md
   - ../piano-miglioramento.md
@@ -20,28 +13,21 @@ related:
   - ../epics.md
   - ../../ecc/media-ecc-audit.md
   - ../stories/module-bmad-audit.story.md
-<<<<<<< .merge_file_JlUBTO
->>>>>>> .merge_file_7CQkzX
-=======
->>>>>>> .merge_file_g4RBop
 ---
 
 # Audit approfondito — Media
 
 ## Metodo
 
-<<<<<<< .merge_file_JlUBTO
-<<<<<<< .merge_file_sY5JxF
 Source-first (2026-11-16): inventario filesystem, `rg` su policy/marker/label,
 lettura purpose esistente, PHPStan globale Modules già a 0 errori. Nessuna UI
 inventata. Pest dichiarato solo se eseguito.
-=======
+
 Source-first, 2026-11-16: inventario filesystem, `rg -n` con `path:line`, lettura di policy, pagine del cluster `Test`, `TemporaryUpload`, `StreamVideoAction`, `ConvertController`, migration; `php artisan model:prune --pretend --model=…` (sola lettura); PHPStan sul modulo; Pest sullo scratch DB del repo. La documentazione è stata trattata come ipotesi: **dove codice e docs divergono vince il codice.** Nessuna UI o screenshot inventati; nessun comportamento a runtime del pannello è stato provato in un browser.
 
 ## Scopo (perché esiste)
 
 Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia di dischi e conversioni ([purpose.md](../purpose.md)). Criteri usati: (1) un file-prova non si perde; (2) i caricamenti mai confermati si ripuliscono con una regola; (3) un'operazione sul bucket la fa solo chi è autorizzato; (4) il modello rispecchia lo schema.
->>>>>>> .merge_file_g4RBop
 
 ## Inventario misurato
 
@@ -164,11 +150,10 @@ cd laravel
 
 ## Riferimenti
 
-<<<<<<< .merge_file_JlUBTO
 - [audit.md](../audit.md)
 - [ECC](../../ecc/media-ecc-audit.md)
 - [Story](../stories/module-bmad-audit.story.md)
-=======
+
 Source-first, 2026-11-16: inventario filesystem, `rg -n` con `path:line`, lettura di policy, pagine del cluster `Test`, `TemporaryUpload`, `StreamVideoAction`, `ConvertController`, migration; `php artisan model:prune --pretend --model=…` (sola lettura); PHPStan sul modulo; Pest sullo scratch DB del repo. La documentazione è stata trattata come ipotesi: **dove codice e docs divergono vince il codice.** Nessuna UI o screenshot inventati; nessun comportamento a runtime del pannello è stato provato in un browser.
 
 ## Scopo (perché esiste)
@@ -291,7 +276,3 @@ Nessun `migrate:fresh`, nessun `--force`, nessun `RefreshDatabase` lanciati dall
 ## Riferimenti
 
 [Sintesi](../audit.md) · [ECC](../../ecc/media-ecc-audit.md) · [Story](../stories/module-bmad-audit.story.md) · [Brainstorming](../brainstorming.md)
->>>>>>> .merge_file_7CQkzX
-=======
-[Sintesi](../audit.md) · [ECC](../../ecc/media-ecc-audit.md) · [Story](../stories/module-bmad-audit.story.md) · [Brainstorming](../brainstorming.md)
->>>>>>> .merge_file_g4RBop

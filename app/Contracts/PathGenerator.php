@@ -10,6 +10,10 @@ use Modules\Media\Models\Media;
  * Interface PathGenerator
  *
  * Definisce i metodi necessari per la generazione dei percorsi dei file media.
+ *
+ * @see docs/contracts/path-generator.md
+ *
+ * @contract docs/contracts/path-generator.md
  */
 interface PathGenerator
 {
