@@ -30,21 +30,12 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 - [ ] E1–E6 (finding P1) chiuse con test di regressione.
 
 ## Riferimenti
-<<<<<<< .merge_file_kAYj0n
-=======
-<<<<<<< .merge_file_VkCGN5
-=======
->>>>>>> .merge_file_JsrKJQ
 
 - [audit](../audit.md)
 - [piano](../piano-miglioramento.md)
 - [ECC](../../ecc/media-ecc-audit.md)
 
 ## Procedura seguita
-<<<<<<< .merge_file_kAYj0n
-=======
->>>>>>> .merge_file_xvWSpM
->>>>>>> .merge_file_JsrKJQ
 
 1. Lock dei file di `docs/` del modulo (`bashscripts/lock/`), unlock a fine lavoro.
 2. Audit codice → docs; nessun PHP toccato.

@@ -6,27 +6,16 @@ module: "Media"
 # Media Module Wiki
 
 ## Indices
-<<<<<<< .merge_file_TOLVWc
-<<<<<<< .merge_file_NW6C02
-=======
-<<<<<<< .merge_file_GyJzLl
->>>>>>> .merge_file_6K8fAq
 - [Rules](rules/INDEX.md)
 - [Skills](skills/INDEX.md)
 - [Commands](commands/INDEX.md)
 - [Memories](memories/INDEX.md)
 - [Concepts](concepts/INDEX.md)
-=======
 - [Rules](rules/index.md)
 - [Skills](skills/index.md)
 - [Commands](commands/index.md)
 - [Memories](memories/index.md)
 - [Concepts](concepts/index.md)
-<<<<<<< .merge_file_TOLVWc
->>>>>>> .merge_file_EMcs6K
-=======
->>>>>>> .merge_file_4vfKSI
->>>>>>> .merge_file_6K8fAq
 
 ## On-Demand Workflow
 

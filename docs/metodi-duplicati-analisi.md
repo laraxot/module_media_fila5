@@ -9,19 +9,7 @@ discussions: []
 module: Media
 topic: METODI_DUPLICATI_ANALISI
 tags: [metodi-duplicati, refactoring]
-<<<<<<< .merge_file_NiCtnG
-<<<<<<< .merge_file_T4BCEH
 canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
-=======
-canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
->>>>>>> .merge_file_RnAJay
-=======
-<<<<<<< .merge_file_jV3CBo
-canonical: ../../../Themes/One/docs/shared-components/METODI_DUPLICATI_ANALISI.md
-=======
-canonical: ../../../Themes/One/docs/shared-components/metodi_duplicati_analisi.md
->>>>>>> .merge_file_ZOg29r
->>>>>>> .merge_file_EuHQT1
 ---
 # 🐄⚡ ANALISI METODI DUPLICATI - SUPER MUCCA EDITION
 
@@ -45,8 +33,6 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Activity, Gdpr, Job, Lang, Media, Performance, Progressioni, Setting, Sigma, Tenant, UI, User, Xot
 
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Models/Policies/MediaBasePolicy.php`
 
 [Riflessione: Presente in 13 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
@@ -56,8 +42,6 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 ## Metodo: `__invoke` (14 occorrenze)
 
 **Moduli coinvolti:** Media, User
-
-**File in Media:**
 
 - `./laravel/Modules/Media/app/Http/Controllers/ConvertController.php`
 
@@ -69,11 +53,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** IndennitaResponsabilita, Media, Notify, Ptv, User, Xot
 
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Services/SubtitleService.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -81,12 +61,8 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Job, Media, Notify, Ptv, UI, User, Xot
 
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Filament/Resources/MediaConvertResource/Pages/ListMediaConverts.php`
 - `./laravel/Modules/Media/app/Filament/Resources/MediaResource/Pages/ViewMedia.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -94,19 +70,11 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Lang, Media, Notify, Seo, Xot
 
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Services/SubtitleService.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
-
 ---
 
 ## Metodo: `trans` (8 occorrenze)
 
 **Moduli coinvolti:** Lang, Media, Tenant, Xot
-
-**File in Media:**
 
 - `./laravel/Modules/Media/app/Filament/Actions/AddAttachmentAction.php`
 - `./laravel/Modules/Media/app/Filament/Resources/HasMediaResource/Actions/AddAttachmentAction.php`
@@ -119,10 +87,6 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Media, Notify
 
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
-
 [Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
@@ -130,8 +94,6 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 ## Metodo: `rules` (6 occorrenze)
 
 **Moduli coinvolti:** Job, Media, Performance, Progressioni, Sigma
-
-**File in Media:**
 
 - `./laravel/Modules/Media/app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php`
 
@@ -143,23 +105,11 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Media, Notify, Xot
 
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Services/SubtitleService.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
-
 ---
 
 ## Metodo: `messages` (5 occorrenze)
 
 **Moduli coinvolti:** IndennitaResponsabilita, Job, Media, Progressioni
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php`
-
-[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -167,24 +117,14 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Media, Performance, User, Xot
 
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Rules/FileExtensionRule.php`
-
-[Riflessione: Presente in 4 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
 ## Metodo: `getPath` (4 occorrenze)
 
-**Moduli coinvolti:** Media, Notify, Xot
-
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Contracts/PathGenerator.php`
 - `./laravel/Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -192,11 +132,7 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Job, Media, Xot
 
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Filament/Resources/MediaResource/Widgets/ConvertWidget.php`
-
-[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
 
 ---
 
@@ -204,23 +140,9 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Media, Performance, Xot
 
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Rules/FileExtensionRule.php`
-
-[Riflessione: Presente in 3 moduli diversi — forte candidato per refactoring in trait/modulo Xot o helper condiviso]
-
 ---
 
 ## Metodo: `getContent` (3 occorrenze)
-
-**Moduli coinvolti:** Media, Notify, Xot
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Services/SubtitleService.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
@@ -228,19 +150,13 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Media, Xot
 
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Models/Media.php`
-
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
 ## Metodo: `test_s3_permissions` (2 occorrenze)
 
 **Moduli coinvolti:** Media
-
-**File in Media:**
 
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/AwsTest.php`
 - `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
@@ -251,53 +167,20 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 ## Metodo: `test_s3_connection` (2 occorrenze)
 
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/AwsTest.php`
-- `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
-
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
-
 ---
 
 ## Metodo: `supportedMimeTypes` (2 occorrenze)
 
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Conversions/ImageGenerators/PowerPoint.php`
 - `./laravel/Modules/Media/app/Conversions/VideoGenerators/Webm.php`
-
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
 
 ---
 
 ## Metodo: `supportedExtensions` (2 occorrenze)
 
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Conversions/ImageGenerators/PowerPoint.php`
-- `./laravel/Modules/Media/app/Conversions/VideoGenerators/Webm.php`
-
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
-
 ---
 
 ## Metodo: `requirementsAreInstalled` (2 occorrenze)
-
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Conversions/ImageGenerators/PowerPoint.php`
-- `./laravel/Modules/Media/app/Conversions/VideoGenerators/Webm.php`
-
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
 
 ---
 
@@ -305,124 +188,54 @@ Elenco dei metodi duplicati (cross-file e cross-modulo) che coinvolgono il modul
 
 **Moduli coinvolti:** Media, Rating
 
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Models/TemporaryUpload.php`
-
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
 ## Metodo: `image` (2 occorrenze)
 
-**Moduli coinvolti:** Media, Xot
-
-**File in Media:**
-
 - `./laravel/Modules/Media/database/factories/MediaFactory.php`
-
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
 ## Metodo: `getPathForResponsiveImages` (2 occorrenze)
 
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Contracts/PathGenerator.php`
-- `./laravel/Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
-
 ---
 
 ## Metodo: `getPathForConversions` (2 occorrenze)
-
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Contracts/PathGenerator.php`
-- `./laravel/Modules/Media/app/Support/TemporaryUploadPathGenerator.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
 ## Metodo: `getHeight` (2 occorrenze)
 
-**Moduli coinvolti:** Media, Xot
-
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Filament/Infolists/VideoEntry.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
 ## Metodo: `getDiskName` (2 occorrenze)
 
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Filament/Infolists/VideoEntry.php`
 - `./laravel/Modules/Media/app/Models/TemporaryUpload.php`
-
-[Riflessione: Metodo getter/setter — possibile trait o interfaccia condivisa]
 
 ---
 
 ## Metodo: `from` (2 occorrenze)
 
-**Moduli coinvolti:** Media, Notify
-
-**File in Media:**
-
 - `./laravel/Modules/Media/app/Support/Ffmpeg/MediaExporterResolver.php`
-
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 
 ## Metodo: `formHandlerCallback` (2 occorrenze)
 
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Filament/Actions/AddAttachmentAction.php`
-- `./laravel/Modules/Media/app/Filament/Resources/HasMediaResource/Actions/AddAttachmentAction.php`
-
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
-
 ---
 
 ## Metodo: `convert` (2 occorrenze)
-
-**Moduli coinvolti:** Media
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Conversions/ImageGenerators/PowerPoint.php`
-- `./laravel/Modules/Media/app/Conversions/VideoGenerators/Webm.php`
-
-[Riflessione: Duplicato interno al modulo Media — valutare estrazione in trait di modulo o classe base]
 
 ---
 
 ## Metodo: `clearResults` (2 occorrenze)
 
 **Moduli coinvolti:** Media, Pdnd
-
-**File in Media:**
-
-- `./laravel/Modules/Media/app/Filament/Clusters/Test/Pages/S3Test.php`
-
-[Riflessione: Presente in 2 moduli — valutare se la logica è identica (refactoring) o volutamente diversa (override)]
 
 ---
 

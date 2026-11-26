@@ -95,19 +95,8 @@ La mappa tecnica e' in [docs/README.md](./docs/README.md); l'indice completo in 
 
 - [Story BMAD del modulo](./docs/stories/)
 - [Architettura](./docs/architecture.md) · [Pattern](./docs/patterns.md) · [Troubleshooting](./docs/troubleshooting.md)
-<<<<<<< .merge_file_NYQpNJ
-<<<<<<< .merge_file_FYAeZn
 - [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/PERFORMANCE-OPTIMIZATION.md) · [Migrazioni](./docs/MIGRATIONS.md) · [Testing](./docs/testing-guidelines.md)
-=======
 - [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/performance-optimization.md) · [Migrazioni](./docs/migrations.md) · [Testing](./docs/testing-guidelines.md)
->>>>>>> .merge_file_B48sdY
-=======
-<<<<<<< .merge_file_lkCRHN
-- [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/PERFORMANCE-OPTIMIZATION.md) · [Migrazioni](./docs/MIGRATIONS.md) · [Testing](./docs/testing-guidelines.md)
-=======
-- [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/performance-optimization.md) · [Migrazioni](./docs/migrations.md) · [Testing](./docs/testing-guidelines.md)
->>>>>>> .merge_file_nDJh6B
->>>>>>> .merge_file_4F85AP
 - [Regole del progetto](../../../docs/wiki/)
 - [README del progetto](../../README.md)
 

@@ -354,8 +354,6 @@ Il modulo Media memorizza tutti i file in un'unica directory, causando problemi 
 - Difficoltà nella gestione e backup dei file
 - Problemi di scalabilità con l'aumentare dei media
 
-### Soluzione Passo-Passo
-
 1. **Implementare una Struttura di Directory Gerarchica**
 
 ```php
@@ -392,8 +390,6 @@ class MediaStorageService
     }
 }
 ```
-
-2. **Modificare il Controller di Upload**
 
 ```php
 // In Modules\Media\Http\Controllers\MediaController.php
@@ -472,8 +468,6 @@ class AddMetadataToMediaTable extends Migration
     }
 }
 ```
-
-4. **Aggiornare il Modello Media**
 
 ```php
 // In Modules\Media\Models\Media.php
@@ -601,8 +595,6 @@ Il modulo Media carica tutte le immagini di una galleria contemporaneamente, cau
 - Tempi di caricamento pagina elevati per gallerie con molte immagini
 - Utilizzo eccessivo di banda
 - Esperienze utente degradate su dispositivi mobili
-
-### Soluzione Passo-Passo
 
 1. **Implementare Caricamento Lazy per Gallerie**
 
@@ -841,23 +833,10 @@ Implementando queste soluzioni, il modulo Media potrà superare i principali col
 ## Collegamenti tra versioni di bottlenecks.md
 * [bottlenecks.md](../../../../bashscripts/docs/bottlenecks.md)
 * [bottlenecks.md](../../chart/docs/bottlenecks.md)
-<<<<<<< .merge_file_YecXDY
-<<<<<<< .merge_file_CWTQU0
-=======
-<<<<<<< .merge_file_1QtSET
->>>>>>> .merge_file_LwwVjw
 * [bottlenecks.md](../../chart/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../gdpr/docs/bottlenecks.md)
 * [bottlenecks.md](../../gdpr/docs/performance/bottlenecks.md)
-=======
 * [bottlenecks.md](../../Chart/docs/performance/bottlenecks.md)
-* [bottlenecks.md](../../Gdpr/docs/bottlenecks.md)
-* [bottlenecks.md](../../Gdpr/docs/performance/bottlenecks.md)
-<<<<<<< .merge_file_YecXDY
->>>>>>> .merge_file_djy1Rv
-=======
->>>>>>> .merge_file_R3jMCH
->>>>>>> .merge_file_LwwVjw
 * [bottlenecks.md](../../xot/docs/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/performance/bottlenecks.md)
 * [bottlenecks.md](../../xot/docs/roadmap/bottlenecks.md)

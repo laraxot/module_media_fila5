@@ -47,23 +47,10 @@ related:
 - `intervention/image` ^4.4 - Elaborazione immagini (API v4 tipizzata; vedi [story](./stories/intervention-image-phpstan.md))
 
 ## 🔗 **Moduli Correlati**
-<<<<<<< .merge_file_LKr2SO
-<<<<<<< .merge_file_lsEsD3
-=======
-<<<<<<< .merge_file_wCIJWb
->>>>>>> .merge_file_u6cycj
 - [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
 - [Cms](../../cms/docs/readme.md) - Integrazione media nei blocchi di contenuto.
-=======
-- [Xot](../../Xot/docs/README.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../CloudStorage/docs/README.md) - Astrazione per provider cloud.
-- [Cms](../../Cms/docs/README.md) - Integrazione media nei blocchi di contenuto.
-<<<<<<< .merge_file_LKr2SO
->>>>>>> .merge_file_bmF2os
-=======
->>>>>>> .merge_file_fgiFZk
->>>>>>> .merge_file_u6cycj
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

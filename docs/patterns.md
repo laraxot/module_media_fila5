@@ -77,8 +77,6 @@ public function handle(UploadRequest $request): void
 Input Video → FFmpeg Pipeline → Multiple Formats → Storage → Link to Model
 ```
 
-**Implementation:**
-
 ```php
 // Pattern: FFmpeg conversion with format chaining
 public function execute(string $disk, string $inputPath, string $outputDir): void
@@ -122,8 +120,6 @@ public function execute(string $disk, string $inputPath, string $outputDir): voi
 ```
 Uploaded Image → Intervention Image → Multiple Sizes + Formats → Disk → Attach
 ```
-
-**Implementation:**
 
 ```php
 // Pattern: Generate variants (original, webp, thumbnail)
@@ -174,8 +170,6 @@ public function execute(string $sourcePath): array
 Local Upload → Validate → Sync to Cloud (S3/CloudFront) → Serve via CDN
 ```
 
-**Implementation:**
-
 ```php
 // Pattern: Disk-agnostic storage with fallback
 $disk = config('media.default_disk', 'local');
@@ -219,8 +213,6 @@ if ($disk === 's3') {
 ```
 Image Request → Cache Hit → Serve → Or → Transform → Cache → Serve
 ```
-
-**Implementation:**
 
 ```php
 // Pattern: Cache-aware transformation
@@ -364,16 +356,7 @@ public function store(Request $request)
 
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
 ---
-<<<<<<< .merge_file_5FzRVY
-<<<<<<< .merge_file_V1PIzM
 **Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](./TROUBLESHOOTING.md) | [Contributing](./CONTRIBUTING.md)
-=======
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
->>>>>>> .merge_file_LBQmjl
-=======
-<<<<<<< .merge_file_qAD3K4
 **Related:** [Architecture](./ARCHITECTURE.md) | [Troubleshooting](./TROUBLESHOOTING.md) | [Contributing](./CONTRIBUTING.md)
-=======
 **Related:** [Architecture](./architecture.md) | [Troubleshooting](./troubleshooting.md) | [Contributing](./CONTRIBUTING.md)
->>>>>>> .merge_file_MOeaBX
->>>>>>> .merge_file_Ot7i3k

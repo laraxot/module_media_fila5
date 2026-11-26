@@ -6,15 +6,18 @@ namespace Modules\Media\Tests\Unit\Actions;
 
 use Filament\Forms\Components\FileUpload;
 use Modules\Media\Actions\GetAttachmentsSchemaAction;
+use Modules\Media\Datas\MediaConfigData;
 use Modules\Media\Tests\TestCase;
+use ReflectionProperty;
 
-<<<<<<< .merge_file_byOFpz
-=======
 // `uses()` deve stare DOPO gli `use`: gli import valgono dalla loro riga in
 // avanti, quindi scritto sopra `TestCase::class` si risolveva come
 // Modules\Media\Tests\Unit\Actions\TestCase e Pest moriva in fase di
 // raccolta, portandosi via tutta la suite (base_quaeris_fila5#213).
->>>>>>> .merge_file_ACcWhO
+<<<<<<< .merge_file_zbuCnS
+/** @see Modules/Media/docs/adr/0001-upload-temporanei-con-percorso-scopato-e-policy.md */
+=======
+>>>>>>> .merge_file_sYbAzj
 uses(TestCase::class);
 
 /**
@@ -149,7 +152,12 @@ it('has correct max size', function (): void {
 
     // Assert
     $component = $form[0];
-    expect($component->getMaxSize())->toBe(10 * 1024 * 1024); // 10MB
+<<<<<<< .merge_file_zbuCnS
+    expect($component->getMaxSize())->toBe(MediaConfigData::from([])->attachment_max_size_kb);
+=======
+    // Filament: maxSize() e' in kilobyte. Default di MediaConfigData::$attachment_max_size_kb = 10240 KB (10 MB).
+    expect($component->getMaxSize())->toBe(10 * 1024);
+>>>>>>> .merge_file_sYbAzj
 });
 
 /**
@@ -314,7 +322,13 @@ it('has correct placeholder', function (): void {
 
     // Assert
     $component = $form[0];
-    // Check for placeholder - in our implementation, we don't set specific placeholder
-    $placeholder = $component->getPlaceholder();
+<<<<<<< .merge_file_zbuCnS
+    // The unbound component cannot evaluate FileUpload's vendor fallback yet.
+    $placeholder = (new ReflectionProperty(FileUpload::class, 'placeholder'))->getValue($component);
     expect($placeholder)->toBeNull();
+=======
+    // Nessun placeholder impostato dall'Action. getPlaceholder() di Filament 5 valuta la closure nel container dello
+    // schema, che fuori da un form non esiste: si legge il valore configurato.
+    expect(invade($component)->placeholder)->toBeNull();
+>>>>>>> .merge_file_sYbAzj
 });

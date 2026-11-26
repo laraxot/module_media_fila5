@@ -44,23 +44,12 @@ related:
 - `intervention/image` - Elaborazione immagini
 
 ## 🔗 **Moduli Correlati**
-<<<<<<< .merge_file_7h39us
-<<<<<<< .merge_file_7yRt1q
-=======
-<<<<<<< .merge_file_lgu7Rq
->>>>>>> .merge_file_EzYC3U
 - [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
 - [Cms](../../cms/docs/readme.md) - Integrazione media nei blocchi di contenuto.
-=======
 - [Xot](../../xot/docs/README.md) - Base framework e Trait `HasMedia`.
 - [CloudStorage](../../cloudstorage/docs/README.md) - Astrazione per provider cloud.
 - [Cms](../../cms/docs/README.md) - Integrazione media nei blocchi di contenuto.
-<<<<<<< .merge_file_7h39us
->>>>>>> .merge_file_xEltwV
-=======
->>>>>>> .merge_file_W28Tgm
->>>>>>> .merge_file_EzYC3U
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*

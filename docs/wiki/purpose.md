@@ -76,19 +76,10 @@ Un modulo che accetta caricamenti da utenti e' una superficie d'attacco. L'esten
 la sceglie chi carica.
 
 **Azione:** validazione MIME reale, dimensione massima, e nessuna esecuzione dal
-<<<<<<< .merge_file_U6h9Xy
-<<<<<<< .merge_file_Lgq8mI
 percorso di caricamento. Va scritto in `docs/security.md`: e' il tipo di requisito che
-=======
 percorso di caricamento. Va scritto in `docs/SECURITY.md`: e' il tipo di requisito che
->>>>>>> .merge_file_35dc9y
-=======
-<<<<<<< .merge_file_yvjRAO
 percorso di caricamento. Va scritto in `docs/security.md`: e' il tipo di requisito che
-=======
 percorso di caricamento. Va scritto in `docs/SECURITY.md`: e' il tipo di requisito che
->>>>>>> .merge_file_ccq5G2
->>>>>>> .merge_file_otdP1W
 si da' per scontato finche' non viene disatteso.
 
 ### 5. 49 Action vogliono un catalogo
