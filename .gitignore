@@ -223,3 +223,7 @@ docs/chat
 # Laraxot — app/Application forbidden (belongs to laravel/app/, not module app/)
 app/Application
 /.docs-archive/
+
+# screenshot di comparazione visiva (artefatti locali)
+docs/project/visual-comparison/
+docs/visual-comparison/

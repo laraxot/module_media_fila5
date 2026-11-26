@@ -40,7 +40,7 @@ related:
 
 ---
 
-<!-- Merged from 00-INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from 00-index.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Media Module - Roadmap"

@@ -4,19 +4,27 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< .merge_file_5SEzeG
 <<<<<<< .merge_file_0s8WJn
 qmd: "audit BMAD Media source-first qualità"
 =======
 qmd: "audit BMAD Media sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
+=======
+qmd: "audit BMAD Media source-first qualità sintesi gate AwsTest S3Test guard TemporaryUpload prunable Media id cast cancellazione fisica codice morto"
+>>>>>>> .merge_file_XiEeBh
 related:
   - ./audits/media-audit.md
   - ./piano-miglioramento.md
   - ../ecc/media-ecc-audit.md
+<<<<<<< .merge_file_5SEzeG
 >>>>>>> .merge_file_CIBdCV
+=======
+>>>>>>> .merge_file_XiEeBh
 ---
 
 # Audit BMAD — Media
 
+<<<<<<< .merge_file_5SEzeG
 <<<<<<< .merge_file_0s8WJn
 SSoT dettagliata: [audits/media-audit.md](./audits/media-audit.md)
 =======
@@ -24,11 +32,17 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 
 **Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono ([purpose.md](./purpose.md)).
 >>>>>>> .merge_file_CIBdCV
+=======
+SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-audit.md](./audits/media-audit.md).
+
+**Scopo in una frase:** Media custodisce i file che fanno da prova a una decisione e li rende utilizzabili nei formati che servono, senza che il dominio sappia nulla di dischi e conversioni ([purpose.md](./purpose.md)).
+>>>>>>> .merge_file_XiEeBh
 
 ## Sintesi (2026-11-16)
 
 | Metrica | Valore |
 |---|---:|
+<<<<<<< .merge_file_5SEzeG
 <<<<<<< .merge_file_0s8WJn
 | PHP `app/` | 127 |
 | Test | 47 |
@@ -37,11 +51,31 @@ SSoT dettagliata (inventario, evidenze `path:line`, non-finding): [audits/media-
 | Services | 0 |
 | Policy `return true` | 2 |
 | Marker | 0 |
+=======
+| PHP `app/` / test PHP / `*Test.php` | 127 / 47 / 41 |
+| Models / Policy / Resource / Widget | 4 / 4 / 3 / 1 |
+| Actions / Services / Migration / Lang IT | 51 / 0 / 5 / 24 |
+| Marker conflitto / `RefreshDatabase` / `@phpstan-ignore` | 0 / 0 / 2 |
+| Policy `return true` | 2 (`before()`) |
+| `.md` in `docs/` | 512 (16 senza frontmatter, 31 nome non conforme) |
 
-## Lo scopo in una frase **Media custodisce i file che fanno da prova a una decisione, e li rende utilizzabili nei formati che servono senza che il dominio sappia nulla di dischi e conversioni.**
+## Finding principali
+
+| # | Sev | Finding |
+|---|---|---|
+| 1 | P1 | `AwsTest`/`S3Test`: `putObject`/`deleteObject` sul bucket e dettagli di config, senza `canAccess` (`AwsTest.php:345,360`) — non provato a runtime |
+| 2 | P1 | `TemporaryUpload` usa `MassPrunable` ma `prunable()` è commentato (`:241-244`): `model:prune --model=…` → `LogicException` (verificato) |
+| 3 | P1 | `Media::id` cast `string` su PK bigint (`Media.php:144`); `MediaTest.php:369` fallisce (49 pass / 1 fail) |
+| 4 | P1 | Cancellazione fisica degli allegati (`MediaTable.php:90`, nessun `SoftDeletes`) contro lo scopo «prova» |
+| 5 | P1 | Senza caller e insicuri se cablati: `StreamVideoAction` (controllo aggirabile, `:71`), `ConvertController` (variabile `$id` mai passata, route vuote), Request S3 |
+| 6 | P1 | Docs: architecture con 6 classi inesistenti (gap-fill fatto) |
+>>>>>>> .merge_file_XiEeBh
+
+Nessun P0 dimostrato. Policy corrette (`MediaBasePolicy::before()` con bypass `super-admin`/`media::admin`, deny-by-default sul resto).
 
 ## Gate
 
+<<<<<<< .merge_file_5SEzeG
 - PHPStan modulo / `Modules`: 0 errori (verifica 2026-11-16).
 - Pest: da eseguire in ambiente testing non produttivo.
 - Security/runtime: story figlie su finding P0/P1 dell'audit dettagliato.
@@ -69,9 +103,17 @@ Nessun P0 dimostrato. Policy corrette (`MediaBasePolicy::before()` con bypass `s
 
 - PHPStan `Modules/Media`: **0 errori**.
 - Pest: **parziale** — `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, P1-3), 14 pending dopo lo stop; resto non eseguito (macchina con load ≈ 50).
+=======
+- PHPStan `Modules/Media`: **0 errori**.
+- Pest: **parziale** — `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, P1-3), 14 pending dopo lo stop; resto non eseguito (macchina con load ≈ 50); da completare in ambiente testing non produttivo.
+- Security/runtime: story figlie sui finding P1 ([epics](./epics.md)).
+>>>>>>> .merge_file_XiEeBh
 - Gap-fill BMAD: [architecture](./architecture.md), [decision-log](./decision-log.md), [epics](./epics.md), [brainstorming](./brainstorming.md), [purpose](./purpose.md).
 
 ## Riferimenti
 
 [Piano](./piano-miglioramento.md) · [Epics](./epics.md) · [Decision log](./decision-log.md) · [ECC](../ecc/media-ecc-audit.md) · [Story](./stories/module-bmad-audit.story.md)
+<<<<<<< .merge_file_5SEzeG
 >>>>>>> .merge_file_CIBdCV
+=======
+>>>>>>> .merge_file_XiEeBh
