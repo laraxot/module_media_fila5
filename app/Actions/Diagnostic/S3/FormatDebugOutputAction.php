@@ -8,6 +8,11 @@ use Spatie\QueueableAction\QueueableAction;
 
 use function Safe\json_encode;
 
+/**
+ * @see docs/contracts/format-debug-output-action.md
+ *
+ * @contract docs/contracts/format-debug-output-action.md
+ */
 class FormatDebugOutputAction
 {
     use QueueableAction;

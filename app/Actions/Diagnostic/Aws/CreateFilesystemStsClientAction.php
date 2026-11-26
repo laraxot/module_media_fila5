@@ -7,6 +7,11 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Aws\Sts\StsClient;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/create-filesystem-sts-client-action.md
+ *
+ * @contract docs/contracts/create-filesystem-sts-client-action.md
+ */
 class CreateFilesystemStsClientAction
 {
     use QueueableAction;

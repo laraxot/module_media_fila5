@@ -69,7 +69,6 @@ Modules/Media/
 - Integration tests with dependent modules
 - Security testing
 - Performance testing
-### Versione HEAD
 
 ## Collegamenti tra versioni di analysis.md
 * [analysis.md](../../../notify/docs/analysis.md)
@@ -83,9 +82,11 @@ Modules/Media/
 * [analysis.md](../../../job/docs/analysis.md)
 * [analysis.md](../../../job/docs/phpstan/analysis.md)
 * [analysis.md](../../../media/docs/analysis.md)
+* [analysis.md](../../../Notify/docs/analysis.md)
+* [analysis.md](../../../User/docs/analysis.md)
+* [analysis.md](../../../Job/docs/analysis.md)
+* [analysis.md](../analysis.md)
 * [analysis.md](../../../media/docs/phpstan/analysis.md)
 * [analysis.md](../../../../themes/one/docs/analysis.md)
-
-### Versione Incoming
 
 ---

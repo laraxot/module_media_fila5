@@ -7,6 +7,11 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Aws\Exception\AwsException;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-s3-file-operations-action.md
+ *
+ * @contract docs/contracts/test-s3-file-operations-action.md
+ */
 class TestS3FileOperationsAction
 {
     use QueueableAction;
@@ -50,7 +55,7 @@ class TestS3FileOperationsAction
                 'message' => 'S3 file operations error: '.$errorCode,
                 'details' => [
                     'Error' => $exception->getMessage(),
-                    'Solution' => app(ResolveAwsS3ErrorSolutionAction::class)->execute($errorCode),
+                    'Solution' => app(GetAwsS3ErrorSolutionAction::class)->execute($errorCode),
                 ],
             ];
         }

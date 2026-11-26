@@ -4,15 +4,10 @@ type: index
 tags: [adr, decisioni]
 created: 2026-11-18
 updated: 2026-11-18
+qmd: "media architecture decision records formato adr decisione contesto alternative scartate conseguenze decisioni readme"
 ---
 
 # Architecture Decision Records
-
-## Metodo Harness
-
-Scrivere un ADR solo per una scelta difficile da invertire, sorprendente o fondata su un trade-off reale. Un ADR deve rendere leggibili contesto, driver, alternative, decisione, conseguenze e una conferma ripetibile; non è un diario né una spiegazione retroattiva inventata.
-
-Le decisioni vanno verificate contro codice e test correnti. Una modifica sostanziale crea un nuovo ADR e collega il precedente come superseded/deprecated.
 
 Il **perche'** delle scelte di questo pacchetto: una decisione per file, con le alternative scartate.
 Il nome del file e' l'argomento, senza date ne' numeri (la data sta nella frontmatter).

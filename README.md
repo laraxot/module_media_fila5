@@ -95,7 +95,6 @@ La mappa tecnica e' in [docs/README.md](./docs/README.md); l'indice completo in 
 
 - [Story BMAD del modulo](./docs/stories/)
 - [Architettura](./docs/architecture.md) · [Pattern](./docs/patterns.md) · [Troubleshooting](./docs/troubleshooting.md)
-- [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/PERFORMANCE-OPTIMIZATION.md) · [Migrazioni](./docs/MIGRATIONS.md) · [Testing](./docs/testing-guidelines.md)
 - [FFmpeg](./docs/ffmpeg-usage.md) · [Performance](./docs/performance-optimization.md) · [Migrazioni](./docs/migrations.md) · [Testing](./docs/testing-guidelines.md)
 - [Regole del progetto](../../../docs/wiki/)
 - [README del progetto](../../README.md)
