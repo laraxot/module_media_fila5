@@ -6,6 +6,11 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/run-full-aws-diagnostic-action.md
+ *
+ * @contract docs/contracts/run-full-aws-diagnostic-action.md
+ */
 class RunFullAwsDiagnosticAction
 {
     use QueueableAction;

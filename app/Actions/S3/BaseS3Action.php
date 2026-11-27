@@ -8,6 +8,11 @@ use Aws\S3\S3Client;
 use Psr\Log\LoggerInterface;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/base-s3-action.md
+ *
+ * @contract docs/contracts/base-s3-action.md
+ */
 abstract class BaseS3Action
 {
     use QueueableAction;

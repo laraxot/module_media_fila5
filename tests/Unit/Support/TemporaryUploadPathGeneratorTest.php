@@ -31,14 +31,14 @@ describe('TemporaryUploadPathGenerator', function (): void {
         $path = app(GenerateTemporaryUploadPathAction::class)->getPath(temporaryUploadPathGeneratorMedia());
 
         Assert::assertStringStartsWith('tmp/'.md5('e2b1f0a4'.'7').'/', $path);
-    });
+    })->group('MEDIA-PATH-INV-4');
 
     it('closes the original path with a slash', function (): void {
         $path = app(GenerateTemporaryUploadPathAction::class)->getPath(temporaryUploadPathGeneratorMedia());
 
         Assert::assertStringEndsWith('/', $path);
         Assert::assertStringContainsString(md5('7'.'e2b1f0a4'.'original'), $path);
-    });
+    })->group('MEDIA-PATH-INV-3');
 
     it('uses a distinct segment for conversions', function (): void {
         $path = app(GenerateTemporaryUploadPathAction::class)->getPathForConversions(temporaryUploadPathGeneratorMedia());
@@ -63,7 +63,7 @@ describe('TemporaryUploadPathGenerator', function (): void {
         ];
 
         Assert::assertCount(3, array_unique($paths));
-    });
+    })->group('MEDIA-PATH-INV-2');
 
     it('separates two media that share the uuid but not the key', function (): void {
         $generator = app(GenerateTemporaryUploadPathAction::class);
@@ -82,5 +82,5 @@ describe('TemporaryUploadPathGenerator', function (): void {
         Assert::assertStringStartsWith($base, $generator->getPath($media));
         Assert::assertStringStartsWith($base, $generator->getPathForConversions($media));
         Assert::assertStringStartsWith($base, $generator->getPathForResponsiveImages($media));
-    });
+    })->group('MEDIA-PATH-INV-2');
 });

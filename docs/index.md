@@ -1,44 +1,40 @@
 ---
-title: "index"
-type: note
-tags: [documentation]
-created: 2026-09-26
-updated: 2026-09-26
-qmd: "index"
-issues: []
-discussions: []
+title: "Media Module Documentation"
+type: index
+status: active
+updated: 2026-11-16
+module: Media
 ---
 
 # Media Module Documentation
 
-**Last Update**: Feb 2026
-**Status**: Active Development
+Modulo Media: upload, storage (locale/S3), conversione video FFmpeg, streaming,
+sottotitoli e integrazione Filament.
 
-## Quick Start
+## Indice
 
-- [README.md](./README.md) - Panoramica modulo
+- [Scopo](./purpose.md)
+- [Modulo](./module-media.md)
+- [Architettura](./architecture.md) · [regole architetturali](./architecture-rules.md)
+- [Struttura progetto](./project-structure.md)
+- [Modelli dati](./data-models.md) · [dipendenze](./dependencies.md) · [configurazione](./configuration.md)
+- [Best practices](./best-practices.md) · [bad practices](./bad-practices.md)
+- [FFmpeg](./ffmpeg.md) · [gestione file](./file-management.md) · [performance](./performance-optimization.md)
+- [Queueable Actions](./queueable-actions.md) · [traduzioni](./translations.md)
+- [Testing](./testing-guidelines.md) · [troubleshooting](./troubleshooting.md) · [roadmap](./roadmap.md)
 
-## Core Features
+## Contratti e decisioni
 
-- **Multi-format Files**: Immagini, video, documenti, audio
-- **Upload**: Drag-and-drop, multi-upload
-- **Media Library**: Gestione file (spatie/laravel-medialibrary)
-- **Image Processing**: Ottimizzazione immagini (intervention/image)
-- **Video Conversion**: Conversione video (FFmpeg)
-- **CDN Integration**: Integrazione CDN
+- [Contratti delle Action](./contracts/index.md) · [indice contratti](./contracts/INDEX.md)
+- [ADR](./adr/INDEX.md)
 
-## Standards
+## Story attive
 
-Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
+- [Story attive](./stories/) — solo story in corso; le story chiuse sono in `archive/docs-legacy/stories/`
 
-## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
-- [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
-- [Standard di Documentazione](../../../../../docs/documentation_standards.md)
-- [Modulo Xot](../../Xot/docs/README.md)
-- [Modulo Lang](../../Lang/docs/readme.md)
-- [Modulo UI](../../UI/docs/README.md)
+## Archivio
 
+<<<<<<< .merge_file_ZoHyPh
 ## Categorie Principali
 
 ### Architettura e Struttura
@@ -307,3 +303,8 @@ Le cartelle di import grezzo (`raw/`, `root-*-files/`), immagini e log sono escl
 | [`stories/`](stories/) | 28 |
 | [`support/`](support/) | 2 |
 | [`wiki/`](wiki/index.md) | 87 |
+=======
+La documentazione storica, generata e di sessione e' archiviata fuori da `docs/`:
+`archive/docs-legacy/` (wiki, bmad, roadmap, integrazione, report e appunti).
+Vedi `archive/docs-legacy/README.md`.
+>>>>>>> .merge_file_B441lM

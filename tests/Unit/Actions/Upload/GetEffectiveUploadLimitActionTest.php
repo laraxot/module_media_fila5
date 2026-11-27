@@ -20,27 +20,27 @@ describe('GetEffectiveUploadLimitAction', function (): void {
         $phpBytes = (int) floor(UploadedFile::getMaxFilesize() * 0.9);
 
         expect(app(GetEffectiveUploadLimitAction::class)->execute())->toBeLessThanOrEqual($phpBytes);
-    });
+    })->group('GET-EFFECTIVE-UPLOAD-LIMIT-INV-1');
 
     it('keeps headroom for the multipart envelope', function (): void {
         expect(app(GetEffectiveUploadLimitAction::class)->execute())->toBeLessThan((int) UploadedFile::getMaxFilesize());
-    });
+    })->group('GET-EFFECTIVE-UPLOAD-LIMIT-INV-1');
 
     it('honours a field limit smaller than the runtime', function (): void {
         expect(app(GetEffectiveUploadLimitAction::class)->execute(1))->toBe(1024);
-    });
+    })->group('GET-EFFECTIVE-UPLOAD-LIMIT-INV-3');
 
     it('ignores a field limit larger than the runtime', function (): void {
         $action = app(GetEffectiveUploadLimitAction::class);
 
         expect($action->execute(10_000_000))->toBe($action->execute());
-    });
+    })->group('GET-EFFECTIVE-UPLOAD-LIMIT-INV-3');
 
     it('honours the Livewire temporary upload rule', function (mixed $rules, int $expectedBytes): void {
         config(['livewire.temporary_file_upload.rules' => $rules]);
 
         expect(app(GetEffectiveUploadLimitAction::class)->execute())->toBe($expectedBytes);
-    })->with([
+    })->group('GET-EFFECTIVE-UPLOAD-LIMIT-INV-4')->with([
         'array of rules' => [['required', 'file', 'max:50'], 50 * 1024],
         'pipe string' => ['required|file|max:50', 50 * 1024],
     ]);

@@ -71,9 +71,48 @@ Logica in Spatie Queueable Action, nessun Service, estensione di `XotBaseResourc
 
 ## Affermazioni della versione precedente non riscontrate nel codice (2026-11-16)
 
+<<<<<<< .merge_file_Wuz16D
 La vecchia architettura (fusa con `ARCHITECTURE.md`) dichiarava anche: streaming HLS/DASH, watermark automatico,
 storage con isolamento per tenant, dipendenza da Tenant e User, uso da Activity, Lang e generazione PDF, «97 file PHP».
 Nel codice: nessuna occorrenza di HLS/DASH; `Actions/Image/Merge.php` fa solo una sovrapposizione «tipo watermark»,
 non automatica; 0 `use Modules\Tenant` e 0 `use Modules\User` in `app/`; i consumatori reali sono quelli elencati in
 «Confini e dipendenze»; i file PHP in `app/` sono 127. Non vanno ripristinate senza una verifica sul codice.
 >>>>>>> .merge_file_YVd6a5
+=======
+### Integrazione CDN
+- Supporto per Content Delivery Network
+- URL pubblico e privato
+
+## Convenzioni
+
+### Naming
+- Modelli: singolare (Media, MediaConvert, TemporaryUpload)
+- Actions: `{Verb}{Noun}Action` (es. `ConvertVideoAction`)
+- Namespaces: Modules\Media\{Domain}\{Component}
+
+### Testing
+- Pest framework (no PHPUnit diretto)
+- No `RefreshDatabase` - usare database dedicated `.env.testing`
+- Coverage target: 80%+
+
+## Dependency Injection
+
+Il modulo utilizza l'inversion of control tramite:
+- Constructor injection nelle Actions
+- Service Provider per binding
+- Interfacce nei Contracts per loose coupling
+
+## Stato Corrente
+
+- **Total file PHP**: 97
+- **Classi/Interfacce**: 64
+- **PHPStan Level**: 10 (strict typing)
+- **Test Coverage**: In progress
+
+## Vedere Anche
+
+- README.md - Documentazione di base
+- index.md - Bridge indice
+- /docs/ root - Standard di documentazione globali
+
+>>>>>>> .merge_file_WuXLiP

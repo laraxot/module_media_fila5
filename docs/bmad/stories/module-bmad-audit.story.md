@@ -21,10 +21,10 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 ## Acceptance
 
 - [x] Inventario misurato e finding con `path:line` ([audit profondo](../audits/media-audit.md)).
-- [x] Sintesi + gate ([audit](../audit.md)), checklist ([ECC](../../ecc/media-ecc-audit.md)).
+- [x] Sintesi + gate ([audit](../audit.md)), checklist ([ECC](../../ecc/media-ecc-audit.md)); audit + piano in `docs/bmad/`, pack ECC in `docs/ecc/`.
 - [x] Gap-fill: [architecture](../architecture.md) (riscritta), [decision-log](../decision-log.md), [epics](../epics.md), [brainstorming](../brainstorming.md), [purpose](../purpose.md) (stato del codice).
-- [x] Audit + piano in `docs/bmad/`; pack ECC in `docs/ecc/`.
 - [x] PHPStan `Modules/Media`: 0 errori.
+<<<<<<< .merge_file_ugnHaM
 - [ ] Pest `Modules/Media`: `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, E3); resto non eseguito.
 <<<<<<< .merge_file_9jC8TF
 - [ ] E1–E6 chiuse con test di regressione.
@@ -33,6 +33,9 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 
 =======
 - [ ] Pest modulo eseguito per intero in ambiente testing stabile.
+=======
+- [ ] Pest `Modules/Media`: `tests/Unit/Models` 49 pass / 1 fail (`MediaTest.php:369`, E3); suite completa non eseguita in ambiente testing stabile.
+>>>>>>> .merge_file_IPcip3
 - [ ] E1–E6 (finding P1) chiuse con test di regressione.
 
 ## Riferimenti
@@ -50,8 +53,12 @@ Audit source-first del modulo che custodisce i file-prova e le loro conversioni 
 
 ## Esito
 
+<<<<<<< .merge_file_ugnHaM
 <<<<<<< .merge_file_9jC8TF
 Baseline consegnata: 0 P0 dimostrati, 6 P1, P2 elencati. Il primo da chiudere è E1 (guard sulle pagine di diagnostica S3), poi E2 (prune).
 =======
 Baseline audit aggiornata: PHPStan `Modules/Media` a 0; Pest parziale. 0 P0 dimostrati, 6 P1, P2 elencati. Il primo da chiudere è E1 (guard sulle pagine di diagnostica S3), poi E2 (prune).
 >>>>>>> .merge_file_jDKFjW
+=======
+Baseline consegnata: 0 P0 dimostrati, 6 P1, P2 elencati. PHPStan `Modules/Media` a 0; Pest parziale. Il primo da chiudere è E1 (guard sulle pagine di diagnostica S3), poi E2 (prune).
+>>>>>>> .merge_file_IPcip3

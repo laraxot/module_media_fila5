@@ -7,6 +7,11 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Aws\Exception\AwsException;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-s3-permissions-action.md
+ *
+ * @contract docs/contracts/test-s3-permissions-action.md
+ */
 class TestS3PermissionsAction
 {
     use QueueableAction;
@@ -38,7 +43,7 @@ class TestS3PermissionsAction
                 'message' => 'S3 permissions error: '.$errorCode,
                 'details' => [
                     'Error' => $exception->getMessage(),
-                    'Solution' => app(ResolveAwsS3ErrorSolutionAction::class)->execute($errorCode),
+                    'Solution' => app(GetAwsS3ErrorSolutionAction::class)->execute($errorCode),
                 ],
             ];
         }

@@ -2,13 +2,22 @@
 title: "Contratto — StripImageMetadataAction"
 type: contract
 action: "Modules\Media\Actions\Image\StripImageMetadataAction"
+<<<<<<< .merge_file_cKm2eo
 tags: [contract, action, media, privacy, exif, gps]
 created: 2026-11-24
 updated: 2026-11-24
+=======
+module: Media
+status: accepted
+created: 2026-11-24
+updated: 2026-11-26
+qmd: "contract StripImageMetadataAction media exif gps privacy immagine MEDIA-STRIP-INV"
+>>>>>>> .merge_file_F6fUSB
 ---
 
 # StripImageMetadataAction
 
+<<<<<<< .merge_file_cKm2eo
 Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
 Sorgente: `app/Actions/Image/StripImageMetadataAction.php`. Perche': [ADR](../adr/strip-image-metadata-server-side.md).
 Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il salvataggio di una foto allegata (vedi `../stories/media-mobile-camera-upload.story.md`).
@@ -16,6 +25,18 @@ Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il sa
 ## Input
 
 - Un `Spatie\MediaLibrary\MediaCollections\Models\Media` gia' salvato, con il file sul suo `disk`.
+=======
+Riscrive l'originale JPEG o PNG di un media senza metadati (EXIF, posizione GPS, fotocamera, XMP, chunk di testo).
+Codice: `app/Actions/Image/StripImageMetadataAction.php:15-57`. Perche': [ADR 0005](../adr/0005-strip-image-metadata-server-side.md);
+misure e storia: [story 0024](../stories/0024-media-mobile-camera-upload.story.md).
+
+Chiamante: `Modules\Fixcity\Listeners\StripTicketPhotoMetadataListener` (registrato in
+`Modules/Fixcity/app/Providers/EventServiceProvider.php:29` su `MediaHasBeenAddedEvent`; agisce solo se `model_type` e' il morph di `Ticket`).
+
+## Input
+
+- `Spatie\MediaLibrary\MediaCollections\Models\Media $media` gia' salvato, con il file sul suo `disk`: usa `mime_type`, `disk`, `getPathRelativeToRoot()`.
+>>>>>>> .merge_file_F6fUSB
 
 ## Output
 
@@ -33,6 +54,7 @@ Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il sa
 
 ## Effetti collaterali
 
+<<<<<<< .merge_file_cKm2eo
 - Sovrascrive il file originale sul disco del media (`getPathRelativeToRoot()`), stesso percorso.
 - `UPDATE media SET size = ...`.
 
@@ -40,6 +62,18 @@ Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il sa
 
 - File mancante sul disco: ritorna senza fare nulla.
 - Immagine non decodificabile da GD: l'eccezione di Intervention Image risale al chiamante.
+=======
+1. Legge l'originale dal disco del media.
+2. Decodifica con Intervention Image (driver GD) e ri-codifica con `strip: true` (JPEG qualita' 90, PNG).
+3. Sovrascrive il file sullo stesso percorso (`$disk->put`).
+4. `UPDATE media SET size = ...` (`$media->save()`).
+
+## Errori
+
+- File mancante sul disco (`get()` restituisce `null`): ritorna senza fare nulla.
+- Immagine non decodificabile da GD: l'eccezione di Intervention Image risale al chiamante; `StripTicketPhotoMetadataListener` non la cattura.
+  In Fixcity la previene a monte `TicketForm::decodableImageRule()` (`Modules/Fixcity/app/Filament/Resources/TicketResource/Schemas/TicketForm.php:243`).
+>>>>>>> .merge_file_F6fUSB
 
 ## Non fa
 
@@ -47,3 +81,11 @@ Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il sa
 - Non converte formati (HEIC, WEBP restano come sono: il mime non e' gestito).
 - Non conserva una copia dell'originale con i metadati: la posizione e' persa per sempre, ed e' voluto.
 - JPEG ri-codificato a qualita' 90: non e' una copia lossless.
+<<<<<<< .merge_file_cKm2eo
+=======
+
+## Prove
+
+- `MEDIA-STRIP-INV-1`..`5`: `tests/Unit/Actions/Image/StripImageMetadataActionTest.php`; `vendor/bin/pest Modules/Media/tests --group=MEDIA-STRIP-INV-1`.
+  Fixture con GPS e Orientation=6 costruite byte per byte, precondizione che il GPS ci fosse prima, PNG con `tEXt`/`iTXt`, PDF intatto, caso di controllo per INV-5.
+>>>>>>> .merge_file_F6fUSB

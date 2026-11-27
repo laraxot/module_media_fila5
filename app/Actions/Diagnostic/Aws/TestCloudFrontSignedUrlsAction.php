@@ -7,6 +7,11 @@ namespace Modules\Media\Actions\Diagnostic\Aws;
 use Exception;
 use Spatie\QueueableAction\QueueableAction;
 
+/**
+ * @see docs/contracts/test-cloud-front-signed-urls-action.md
+ *
+ * @contract docs/contracts/test-cloud-front-signed-urls-action.md
+ */
 class TestCloudFrontSignedUrlsAction
 {
     use QueueableAction;
