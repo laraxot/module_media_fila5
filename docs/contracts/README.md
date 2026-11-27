@@ -1,11 +1,4 @@
 ---
-<<<<<<< .merge_file_7HGAdi
-title: "Contratti — Media"
-type: index
-tags: [contracts, actions, media]
-created: 2026-11-18
-updated: 2026-11-24
-=======
 title: "Contratti del modulo Media"
 type: index
 tags: [contracts, actions, interfaces, media]
@@ -14,26 +7,10 @@ status: active
 created: 2026-11-18
 updated: 2026-11-26
 qmd: "media contracts readme azioni invarianti pest group upload percorsi s3 diagnostica"
->>>>>>> .merge_file_Ati87q
 ---
 
 # Contratti del modulo Media
 
-<<<<<<< .merge_file_7HGAdi
-Cosa promettono le Action di Media che riscrivono file o salvano allegati, e le interfacce di `app/Contracts`. Le Action
-`Diagnostic/*` (prove di connessione AWS) e i resolver di percorso non hanno contratto.
-
-Leggili prima di chiamare o imitare il salvataggio degli allegati o il trattamento delle foto: «Non fa» dice cosa
-l'Action lascia ad altri (validazione, conversioni, transazioni).
-
-Formato (6 sezioni, invarianti con ID e group Pest): [regola canonica](../../../Xot/docs/rules/action-behavioral-contract.md).
-Lanciare le invarianti coperte: `vendor/bin/pest Modules/Media/tests --group=<ID>`.
-
-## Contratti delle Action
-
-- [StripImageMetadataAction](strip-image-metadata-action.md) — riscrive JPEG/PNG senza metadati, aggiorna `size`; 5 invarianti coperte.
-- [SaveAttachmentsAction](save-attachments-action.md) — copia gli allegati del form nelle collezioni del record e ne salva i percorsi.
-=======
 Cosa promettono le Action di `app/Actions` e le interfacce di `app/Contracts`. Ogni Action ha il suo contratto e porta nel
 docblock il marker `@contract docs/contracts/<file>.md`: il controllo e' in
 `Modules/Xot/tests/Unit/Docs/ActionContractsAreCompleteTest.php`. Tabella operativa con la copertura Pest: [index.md](index.md).
@@ -60,13 +37,9 @@ sezione finale `Prove` che dice quale test dimostra quale invariante (o perche' 
 
 Lanciare le invarianti provate, da `laravel/`: `vendor/bin/pest Modules/Media/tests --group=<ID>` (per le altre darebbe zero test).
 Pest scrive sul DB: usare il runner `bashscripts/tools/pest-scratch-db.sh`.
->>>>>>> .merge_file_Ati87q
 
 ## Interfacce
 
-<<<<<<< .merge_file_7HGAdi
-- [PathGenerator e PathGeneratorContract](path-generator.md) — due interfacce identiche in `app/Contracts`, oggi non usate.
-=======
 ### Allegati, upload e percorsi
 
 - [attach-media-action](attach-media-action.md) — Classe vuota che usa solo il trait `QueueableAction`. Invarianti provate: 0/1.
@@ -213,4 +186,11 @@ Difetti di test visti: `tests/Unit/Actions/GetAttachmentsSchemaActionTest.php` (
 
 - `INDEX.md`, `index.md` e questo README descrivono lo stesso elenco: proposta, tenere solo il README.
 - `path-generator-1.md.old`: copia con suffisso numerico di `path-generator.md`; proposta, eliminarla.
->>>>>>> .merge_file_Ati87q
+
+## Harness minimo: ownership, evidenza e recupero (2026-11-27)
+
+I contratti di **module_media_fila5** restano accanto alle Action, interfacce o superfici di questo package; root e Xot definiscono lo standard, non copiano le promesse. Un contratto comportamentale esplicita **Input, Output, Invarianti, Effetti collaterali, Errori, Non fa**; ogni ID di invariante punta a un group Pest effettivo oppure segnala `non dimostrata`. Se esiste la classe, il docblock deve rimandare al file con `@contract` e `@see`; per temi senza classi PHP non inventare Action/contratti.
+
+- [Standard Xot](https://github.com/laraxot/module_xot_fila5/blob/dev/docs/contracts/contract-authoring-standard.md) · [ownership root](https://github.com/laraxot/base_ptvx_fila5/blob/dev/docs/adr/0001-harness-minimo-e-ownership.md) · [runbook ECC/Second Brain](https://github.com/laraxot/base_ptvx_fila5/blob/dev/docs/harness/README.md).
+- **BMAD**: prima di cambiare una promessa, fissa nella story owner scope, esclusioni, evidenza e approvazioni richieste.
+- **ECC**: i marker di merge rendono invalido l'indice; citare una suite non significa averla eseguita. Distingui `pass`, `fail`, `non eseguito` e registra il debito in [rollout #15](https://github.com/laraxot/base_ptvx_fila5/issues/15).
