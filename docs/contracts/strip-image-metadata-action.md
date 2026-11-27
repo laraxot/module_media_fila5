@@ -2,30 +2,15 @@
 title: "Contratto — StripImageMetadataAction"
 type: contract
 action: "Modules\Media\Actions\Image\StripImageMetadataAction"
-<<<<<<< .merge_file_cKm2eo
-tags: [contract, action, media, privacy, exif, gps]
-created: 2026-11-24
-updated: 2026-11-24
-=======
 module: Media
 status: accepted
 created: 2026-11-24
 updated: 2026-11-26
 qmd: "contract StripImageMetadataAction media exif gps privacy immagine MEDIA-STRIP-INV"
->>>>>>> .merge_file_F6fUSB
 ---
 
 # StripImageMetadataAction
 
-<<<<<<< .merge_file_cKm2eo
-Contratto di comportamento (regola: `Modules/Xot/docs/rules/action-behavioral-contract.md`).
-Sorgente: `app/Actions/Image/StripImageMetadataAction.php`. Perche': [ADR](../adr/strip-image-metadata-server-side.md).
-Nessun chiamante in questo repo: la usa il modulo del progetto ospite dopo il salvataggio di una foto allegata (vedi `../stories/media-mobile-camera-upload.story.md`).
-
-## Input
-
-- Un `Spatie\MediaLibrary\MediaCollections\Models\Media` gia' salvato, con il file sul suo `disk`.
-=======
 Riscrive l'originale JPEG o PNG di un media senza metadati (EXIF, posizione GPS, fotocamera, XMP, chunk di testo).
 Codice: `app/Actions/Image/StripImageMetadataAction.php:15-57`. Perche': [ADR 0005](../adr/0005-strip-image-metadata-server-side.md);
 misure e storia: [story 0024](../stories/0024-media-mobile-camera-upload.story.md).
@@ -36,7 +21,6 @@ Chiamante: `Modules\Fixcity\Listeners\StripTicketPhotoMetadataListener` (registr
 ## Input
 
 - `Spatie\MediaLibrary\MediaCollections\Models\Media $media` gia' salvato, con il file sul suo `disk`: usa `mime_type`, `disk`, `getPathRelativeToRoot()`.
->>>>>>> .merge_file_F6fUSB
 
 ## Output
 
@@ -54,15 +38,6 @@ Chiamante: `Modules\Fixcity\Listeners\StripTicketPhotoMetadataListener` (registr
 
 ## Effetti collaterali
 
-<<<<<<< .merge_file_cKm2eo
-- Sovrascrive il file originale sul disco del media (`getPathRelativeToRoot()`), stesso percorso.
-- `UPDATE media SET size = ...`.
-
-## Errori
-
-- File mancante sul disco: ritorna senza fare nulla.
-- Immagine non decodificabile da GD: l'eccezione di Intervention Image risale al chiamante.
-=======
 1. Legge l'originale dal disco del media.
 2. Decodifica con Intervention Image (driver GD) e ri-codifica con `strip: true` (JPEG qualita' 90, PNG).
 3. Sovrascrive il file sullo stesso percorso (`$disk->put`).
@@ -73,7 +48,6 @@ Chiamante: `Modules\Fixcity\Listeners\StripTicketPhotoMetadataListener` (registr
 - File mancante sul disco (`get()` restituisce `null`): ritorna senza fare nulla.
 - Immagine non decodificabile da GD: l'eccezione di Intervention Image risale al chiamante; `StripTicketPhotoMetadataListener` non la cattura.
   In Fixcity la previene a monte `TicketForm::decodableImageRule()` (`Modules/Fixcity/app/Filament/Resources/TicketResource/Schemas/TicketForm.php:243`).
->>>>>>> .merge_file_F6fUSB
 
 ## Non fa
 
@@ -81,11 +55,12 @@ Chiamante: `Modules\Fixcity\Listeners\StripTicketPhotoMetadataListener` (registr
 - Non converte formati (HEIC, WEBP restano come sono: il mime non e' gestito).
 - Non conserva una copia dell'originale con i metadati: la posizione e' persa per sempre, ed e' voluto.
 - JPEG ri-codificato a qualita' 90: non e' una copia lossless.
-<<<<<<< .merge_file_cKm2eo
-=======
 
 ## Prove
 
 - `MEDIA-STRIP-INV-1`..`5`: `tests/Unit/Actions/Image/StripImageMetadataActionTest.php`; `vendor/bin/pest Modules/Media/tests --group=MEDIA-STRIP-INV-1`.
   Fixture con GPS e Orientation=6 costruite byte per byte, precondizione che il GPS ci fosse prima, PNG con `tEXt`/`iTXt`, PDF intatto, caso di controllo per INV-5.
->>>>>>> .merge_file_F6fUSB
+
+## Riconciliazione documentale (2026-11-27)
+
+Questo file aveva un conflitto Git irrisolto. La base è la variante più recente del contratto, con il riferimento a `app/Actions/Image/StripImageMetadataAction.php` **esistente su `dev`**; la sua semantica, i group Pest citati e gli eventuali effetti non sono stati rieseguiti in questa sessione. Il confronto con il codice e i test resta il gate ECC della story owner. [Tracciamento root #15](https://github.com/laraxot/base_ptvx_fila5/issues/15).
