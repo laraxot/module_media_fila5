@@ -1,7 +1,7 @@
 ---
 title: "Contratto — PathGenerator e PathGeneratorContract (interfacce)"
 type: contract
-action: "Modules\Media\Contracts\PathGenerator"
+interface: "Modules\\Media\\Contracts\\PathGenerator"
 module: Media
 status: accepted
 created: 2026-07-14
