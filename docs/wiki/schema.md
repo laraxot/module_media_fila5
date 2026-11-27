@@ -24,7 +24,7 @@ docs/
 ├── wiki/
 │   ├── index.md           # Catalogo
 │   ├── log.md             # Registro
-│   ├── SCHEMA.md          # Questo file
+│   ├── schema.md          # Questo file
 │   ├── concepts/          # Pattern, architettura
 │   ├── entities/          # Modelli, azioni
 │   ├── sources/           # Doc esterna
@@ -41,7 +41,7 @@ docs/
 
 ---
 
-<!-- Merged from SCHEMA.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from schema.md, which collided with this file on case-insensitive filesystems. -->
 
 ---
 title: "Rimando a schema.md"

@@ -1,7 +1,11 @@
 ---
 title: "Architettura — Media"
 type: architecture
+<<<<<<< .merge_file_fG7tBd
 tags: [architecture, structure]
+=======
+tags: [architecture, structure, module, media, storage]
+>>>>>>> .merge_file_YVd6a5
 created: 2026-07-14
 status: review
 updated: 2026-11-16
@@ -55,3 +59,21 @@ Logica in Spatie Queueable Action, nessun Service, estensione di `XotBaseResourc
 ## Decisioni collegate
 
 [decision-log.md](./decision-log.md): D-1 (prune), D-2 (cast `id`), D-3 (allegati-prova), D-4 (guard diagnostica), D-5 (codice morto).
+<<<<<<< .merge_file_fG7tBd
+=======
+
+## Convenzioni (dalla versione precedente, ancora valide)
+
+- Modelli al singolare (`Media`, `MediaConvert`, `TemporaryUpload`); Action `{Verb}{Noun}Action` (es. `ConvertVideoAction`).
+- Test in `tests/` (Pest, mai PHPUnit diretto), suddivisi in `Feature/` e `Unit/`; niente `RefreshDatabase`, database dedicato da `.env.testing`.
+- Dipendenze iniettate nel costruttore delle Action; binding nei Service Provider.
+- Scelta di fondo: Spatie MediaLibrary (collaudata, gestisce le trasformazioni); tabella `media` con `model_type`, `model_id`, `collection_name`, `file_name`, `mime_type`, `size`, `custom_properties`.
+
+## Affermazioni della versione precedente non riscontrate nel codice (2026-11-16)
+
+La vecchia architettura (fusa con `ARCHITECTURE.md`) dichiarava anche: streaming HLS/DASH, watermark automatico,
+storage con isolamento per tenant, dipendenza da Tenant e User, uso da Activity, Lang e generazione PDF, «97 file PHP».
+Nel codice: nessuna occorrenza di HLS/DASH; `Actions/Image/Merge.php` fa solo una sovrapposizione «tipo watermark»,
+non automatica; 0 `use Modules\Tenant` e 0 `use Modules\User` in `app/`; i consumatori reali sono quelli elencati in
+«Confini e dipendenze»; i file PHP in `app/` sono 127. Non vanno ripristinate senza una verifica sul codice.
+>>>>>>> .merge_file_YVd6a5

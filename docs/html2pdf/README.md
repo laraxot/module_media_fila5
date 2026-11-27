@@ -22,7 +22,7 @@ Negli altri moduli `docs/html2pdf/*.md` sono **stub** che puntano qui.
 - [styling.md](styling.md)
 - [advanced.md](advanced.md)
 - [laravel.md](laravel.md)
-- [security.md](security.md)
+- [SECURITY.md](security.md)
 
 ## Manutenzione
 

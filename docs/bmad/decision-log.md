@@ -16,6 +16,7 @@ related:
 
 # Decision log — Media
 
+<<<<<<< .merge_file_Nvx0tX
 ## Formato
 
 - **Data:** YYYY-MM-DD
@@ -49,7 +50,10 @@ related:
 **Conseguenze:** 
 - Migliore leggibilità e gestione dei conflitti in git
 - Necessità di refactor esistente
+=======
+>>>>>>> .merge_file_qzJqb1
 Le voci di esempio del template precedente sono state rimosse: non descrivevano il modulo.
+Stati ammessi: PROPOSTA, APERTA, APPROVATA, RIFIUTATA, OBSOLETA; ogni voce dichiara il perché e l'evidenza nel codice.
 
 | ID | Data | Stato | Decisione | Perché | Evidenza |
 |---|---|---|---|---|---|

@@ -32,7 +32,7 @@ discussions: []
 Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rules.md)
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 - [Modulo Xot](../../Xot/docs/README.md)
@@ -42,8 +42,13 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 ## Categorie Principali
 
 ### Architettura e Struttura
+<<<<<<< .merge_file_m7XdVg
 - [README](README.md) - Panoramica generale del modulo
 - [Architettura](./architecture/readme.md) - Architettura generale del modulo
+=======
+- [README](./README.md) - Panoramica generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
+>>>>>>> .merge_file_hap6zq
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -83,7 +88,7 @@ Vedi anche: [.agents/docs/critical-rules.md](../../../.agents/docs/critical-rule
 - [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
-- [PHPStan Level 10](archive/phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -164,7 +169,7 @@ Questa documentazione viene aggiornata regolarmente. Prima di apportare modifich
 - **Gennaio 2025**: Risoluzione sistematica di tutti i conflitti Git nei file di documentazione
 - Il file `lang/it/media_theme.php` è stato risolto manualmente mantenendo PSR-12, strict_types, array short syntax e solo chiavi effettive, come richiesto dagli standard PHPStan livello 10
 - **Filosofia di risoluzione**: Approccio olistico con analisi manuale approfondita, mantenimento integrità architetturale, documentazione bidirezionale aggiornata
-- Vedi anche: [../../../../../docs/README.md](../../../../../docs/readme.md)
+- Vedi anche: [../../../../../docs/README.md](../../../../../docs/README.md)
 - Per dettagli sulle scelte architetturali e funzionali, consultare la doc globale e la sezione "Standard e Traduzioni".
 
 ---
@@ -197,7 +202,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - **Watermark Automatico**: Applicazione automatica di watermark sui media
 
 ## Collegamenti Correlati
-- [Documentazione Generale <nome progetto>](../../../../../docs/readme.md)
+- [Documentazione Generale <nome progetto>](../../../../../docs/README.md)
 - [Collegamenti Documentazione](../../../../../docs/collegamenti-documentazione.md)
 - [Standard di Documentazione](../../../../../docs/documentation_standards.md)
 - [Modulo Xot](../../Xot/docs/README.md)
@@ -208,7 +213,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 
 ### Architettura e Struttura
 - [README](README.md) - Panoramica generale del modulo
-- [Architettura](./architecture/readme.md) - Architettura generale del modulo
+- [Architettura](./architecture/README.md) - Architettura generale del modulo
 - [Struttura](./structure.md) - Struttura delle directory e dei componenti
 - [Modelli](./data-models.md) - Documentazione dei modelli Eloquent
 - [Eventi](./events.md) - Eventi e listeners
@@ -248,7 +253,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 - [Standard Traduzioni](./translation_standards.md) - Standard per le chiavi di traduzione
 
 ### Testing e Qualità
-- [PHPStan Level 10](archive/phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
+- [PHPStan Level 10](./phpstan_level10_fixes.md) - Correzioni per PHPStan Level 10
 - [Testing](./testing.md) - Strategie e approcci per il testing
 
 ## Linee Guida per l'Implementazione
@@ -256,7 +261,7 @@ Questo documento serve come indice centrale per il modulo Media, fornendo una gu
 ### 1. Struttura del Modulo
 Il modulo Media segue una struttura standard con directory per modelli, servizi, provider e componenti Filament per garantire chiarezza e manutenibilità.
 
-<!-- Merged from INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from index.md, which collided with this file on case-insensitive filesystems. -->
 
 # Documentation Index
 
@@ -271,7 +276,7 @@ Doc verificati e presenti in `docs/` utili per approfondimenti puntuali (non un 
 - [data-models.md](./data-models.md)
 - [core-functionality.md](./core-functionality.md)
 - [file-management-architecture.md](./file-management-architecture.md)
-- [phpstan_level10_fixes.md](archive/phpstan_level10_fixes.md) / [phpstan-report.md](./phpstan-report.md)
+- [phpstan_level10_fixes.md](./phpstan_level10_fixes.md) / [phpstan-report.md](./phpstan-report.md)
 - [testing.md](./testing.md)
 - [troubleshooting.md](./troubleshooting.md)
 - [wiki/index.md](./wiki/index.md)

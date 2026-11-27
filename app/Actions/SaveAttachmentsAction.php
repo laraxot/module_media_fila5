@@ -13,6 +13,11 @@ use function Safe\file_put_contents;
 use function Safe\tempnam;
 use function Safe\unlink;
 
+/**
+ * Copia gli allegati caricati nelle collezioni Media Library del record e ne salva i percorsi sul record.
+ *
+ * @contract docs/contracts/save-attachments-action.md
+ */
 class SaveAttachmentsAction
 {
     use QueueableAction;

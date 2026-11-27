@@ -385,7 +385,7 @@ jobs:
 ## 🔗 **Collegamenti**
 
 - [Correzioni S3Test.php](s3test_corrections.md)
-- [PHPStan Fixes](archive/phpstan_level10_fixes.md)
+- [PHPStan Fixes](phpstan_level10_fixes.md)
 - [Translation Standards](translations.md)
 - [Architecture Guidelines](../docs/architecture.md)
 

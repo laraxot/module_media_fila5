@@ -4,7 +4,11 @@ type: audit
 status: review
 updated: 2026-11-16
 module: Media
+<<<<<<< .merge_file_cMA4DX
 qmd: "audit approfondito Media AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
+=======
+qmd: "audit approfondito Media inventario policy Filament Actions AwsTest S3Test senza guard TemporaryUpload prunable commentato Media id cast string bigint cancellazione fisica StreamVideoAction ConvertController codice morto PHPStan Pest"
+>>>>>>> .merge_file_qFxrh1
 related:
   - ../audit.md
   - ../piano-miglioramento.md
@@ -19,6 +23,7 @@ related:
 
 ## Metodo
 
+<<<<<<< .merge_file_cMA4DX
 Source-first (2026-11-16): inventario filesystem, `rg` su policy/marker/label,
 lettura purpose esistente, PHPStan globale Modules già a 0 errori. Nessuna UI
 inventata. Pest dichiarato solo se eseguito.
@@ -74,6 +79,8 @@ Vedi [piano-miglioramento.md](../piano-miglioramento.md).
 - [audit.md](../audit.md)
 - [ECC](../../ecc/media-ecc-audit.md)
 - [Story](../stories/module-bmad-audit.story.md)
+=======
+>>>>>>> .merge_file_qFxrh1
 Source-first, 2026-11-16: inventario filesystem, `rg -n` con `path:line`, lettura di policy, pagine del cluster `Test`, `TemporaryUpload`, `StreamVideoAction`, `ConvertController`, migration; `php artisan model:prune --pretend --model=…` (sola lettura); PHPStan sul modulo; Pest sullo scratch DB del repo. La documentazione è stata trattata come ipotesi: **dove codice e docs divergono vince il codice.** Nessuna UI o screenshot inventati; nessun comportamento a runtime del pannello è stato provato in un browser.
 
 ## Scopo (perché esiste)
@@ -94,7 +101,7 @@ Media custodisce i file che fanno da prova a una decisione e li rende utilizzabi
 | Actions | 51 | `find app/Actions -name '*.php'` |
 | Services | **0** | nessuna directory `app/Services` |
 | Migration | 5 | 2 `create_medias_table` (`2022_01_01_000011`, `2026_07_23_150000`) |
-| Lang IT | 24 file | |
+| Lang IT | 24 file | (un conteggio precedente indicava 48: errato) |
 | Marker conflitto / `RefreshDatabase` / `migrate:fresh` | 0 / 0 / 0 | |
 | `strict_types` mancante | 0 | |
 | `@phpstan-ignore` in `app/` | 2 | `Actions/Video/ConvertVideoByMediaConvertAction.php:55`, `ConvertVideoByConvertDataAction.php:47` |
@@ -151,7 +158,7 @@ Consumatori fuori modulo (file con `use Modules\Media\`, esclusi i test): Notify
 
 ### P1-5 — Codice senza caller che, se cablato, è insicuro
 
-- `app/Actions/Stream/StreamVideoAction.php:71` — l'autorizzazione è applicata solo se `$media !== null && Auth::check()`: con `$media = null` o utente non autenticato **nessun controllo**, e `$disk`/`$path` sono arbitrari (`:79` `exists($path)`); anche quando c'è, vale solo `created_by == utente` o `super-admin`, non la policy (`media::admin` escluso). Callers: nessuno in `app/` di alcun modulo (`rg` → solo `tests/…Coverage…Test.php`).
+- `app/Actions/Stream/StreamVideoAction.php:71` — l'autorizzazione è applicata solo se `$media !== null && Auth::check()`: con `$media = null` o utente non autenticato **nessun controllo**, e `$disk`/`$path` sono arbitrari (`:79` `exists($path)`); anche quando c'è, vale solo `created_by == utente` o `super-admin`, non la policy (`media::admin` escluso). Lo stream scrive con `echo` e termina con `exit` (`:123,133,161,176`), fuori dal ciclo di risposta di Laravel. La prima analisi lo classificava P0; qui è P1 latente perché non ha caller. Callers: nessuno in `app/` di alcun modulo (`rg` → solo `tests/…Coverage…Test.php`).
 - `app/Http/Controllers/ConvertController.php:17` — `view('media::convert')` senza dati, mentre `resources/views/convert.blade.php:12` usa `{{ $id }}`: variabile non definita. `routes/web.php` e `routes/api.php` sono vuoti: il controller non è raggiungibile.
 - `app/Http/Requests/CreateTemporaryUploadFromDirectS3UploadRequest.php` — nessun caller in `app/`, nessun `authorize()` (default dei `FormRequest`: `true`).
 
@@ -176,6 +183,7 @@ Consumatori fuori modulo (file con `use Modules\Media\`, esclusi i test): Notify
 
 ## Verificato e non è un finding
 
+- Resource su base Xot (`XotBaseResource`/`XotBasePage`).
 - Policy: `MediaBasePolicy::before()` con bypass `super-admin`/`media::admin`; le tre figlie decidono per permesso (`media.viewAny`, `media.delete`, `media.forceDelete`, …), nessun `return true`.
 - 0 SQL grezzo, 0 `property_exists`, 100% `strict_types`, 0 marker, 0 `RefreshDatabase`.
 - `env()` solo in commenti (`Datas/CloudFrontData.php:19-27`).
@@ -187,7 +195,12 @@ Consumatori fuori modulo (file con `use Modules\Media\`, esclusi i test): Notify
 | PHPStan `Modules/Media` (`php -d memory_limit=2G ./vendor/bin/phpstan analyse Modules/Media --no-progress`) | **0 errori** (exit 0) |
 | Pest `Modules/Media/tests/Unit/Models` (scratch DB, host 127.0.0.1) | **parziale: 49 pass, 1 fail** (`MediaTest.php:369`, P1-3), 14 pending dopo lo stop; resto della suite non eseguito per carico macchina (load ≈ 50) |
 
-Nessun `migrate:fresh`, nessun `--force`, nessun `RefreshDatabase` lanciati dall'audit.
+Nessun `migrate:fresh`, nessun `--force`, nessun `RefreshDatabase` lanciati dall'audit. Suite completa, solo fuori dalla produzione e con DB testing raggiungibile:
+
+```bash
+cd laravel
+./vendor/bin/pest Modules/Media/tests --no-coverage
+```
 
 ## Piano
 

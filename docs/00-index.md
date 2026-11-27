@@ -47,9 +47,9 @@ related:
 - `intervention/image` ^4.4 - Elaborazione immagini (API v4 tipizzata; vedi [story](./stories/intervention-image-phpstan.md))
 
 ## 🔗 **Moduli Correlati**
-- [Xot](../../xot/docs/readme.md) - Base framework e Trait `HasMedia`.
-- [CloudStorage](../../cloudstorage/docs/readme.md) - Astrazione per provider cloud.
-- [Cms](../../cms/docs/readme.md) - Integrazione media nei blocchi di contenuto.
+- [Xot](../../Xot/docs/README.md) - Base framework e Trait `HasMedia`.
+- [CloudStorage](../../CloudStorage/docs/README.md) - Astrazione per provider cloud.
+- [Cms](../../Cms/docs/README.md) - Integrazione media nei blocchi di contenuto.
 
 ---
 *Documentazione conforme agli standard Laraxot - DRY + KISS + SOLID*
@@ -60,7 +60,7 @@ related:
 
 ---
 
-<!-- Merged from 00-INDEX.md, which collided with this file on case-insensitive filesystems. -->
+<!-- Merged from 00-index.md, which collided with this file on case-insensitive filesystems. -->
 
 # 📚 MEDIA Module - Documentation Index
 
@@ -73,16 +73,16 @@ related:
 | File | Scopo |
 |------|-------|
 | PRD.md | Product Requirements |
-| PRODUCT_ROADMAP.md | Roadmap |
-| PRODUCT_STRATEGY.md | Strategy |
-| PRODUCT_LAUNCH_PLAN.md | Launch Plan |
+| product_roadmap.md | Roadmap |
+| product_strategy.md | Strategy |
+| product_launch_plan.md | Launch Plan |
 
 ### Development
 | File | Scopo |
 |------|-------|
-| GSD_WORKFLOW.md | GSD Workflow |
-| SPRINT_PLANNING.md | Sprint Planning |
-| USER_RESEARCH.md | User Research |
+| gsd_workflow.md | GSD Workflow |
+| sprint_planning.md | Sprint Planning |
+| user_research.md | User Research |
 
 ## 🔗 Riferimenti
 
