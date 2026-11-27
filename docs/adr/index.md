@@ -19,4 +19,3 @@ Stato letto dalla frontmatter di ciascun file. Formato, scopo e copertura di ogn
 | [0003-effective-upload-limit-in-web-request](0003-effective-upload-limit-in-web-request.md) | accepted | Limite di upload effettivo letto nella richiesta web |
 | [0004-media-visibility-follows-owner](0004-media-visibility-follows-owner.md) | accepted | La visibilita' dei media segue il record owner |
 | [0005-strip-image-metadata-server-side](0005-strip-image-metadata-server-side.md) | accepted | Metadati delle foto tolti sul server con GD |
-| [media-visibility-follows-owner](media-visibility-follows-owner.md) | superseded | Copia senza numero di 0004 |
