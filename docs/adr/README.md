@@ -1,17 +1,4 @@
 ---
-<<<<<<< .merge_file_oCHhCu
-title: "ADR — Media"
-type: index
-tags: [adr, decisioni, media]
-created: 2026-11-18
-updated: 2026-11-24
----
-
-# ADR del modulo Media
-
-Il **perche'** delle scelte di Media sugli upload: quanto puo' pesare un file e chi lo decide, come passano le foto da
-telefono, cosa resta nel file salvato (privacy).
-=======
 title: "Architecture Decision Records — Media"
 type: index
 module: Media
@@ -28,14 +15,10 @@ ripetibile. Un ADR si scrive solo per una scelta difficile da invertire, sorpren
 Il nome del file e' `NNNN-argomento.md`, senza date (la data sta nella frontmatter). Modello: [0000-template](0000-template.md);
 regole condivise: [Xot ADR](../../../Xot/docs/adr/README.md). Le intestazioni sono controllate da
 `Modules/Xot/tests/Unit/Docs/PackagesHaveContractsAndAdrTest.php`.
->>>>>>> .merge_file_fRQHVi
 
 Leggili prima di: cambiare un limite di upload, aggiungere un campo che riceve foto, toccare il trattamento delle immagini
 salvate o "semplificare" la ri-codifica con un'altra libreria.
 
-<<<<<<< .merge_file_oCHhCu
-Formato (5 sezioni, frontmatter `type: decision`): [regola canonica](../../../Xot/docs/rules/action-behavioral-contract.md).
-=======
 Frontmatter: `title`, `type: decision`, `status` (`proposed`, `accepted`, `rejected`, `deprecated`, `superseded` con
 `superseded_by`), `created`, `updated`, `module`, `decision-makers`. Sezioni `##` in quest'ordine: `Contesto`,
 `Driver della decisione`, `Alternative scartate`, `Decisione`, `Conseguenze`, `Conferma`. Se il codice di oggi contraddice
@@ -59,16 +42,26 @@ ADR e segna il vecchio `superseded`.
 - 5 ADR numerati, tutti con le sei sezioni; 4 con una conferma automatica (0001, 0002, 0003, 0005), 1 senza (0004).
 - Decisioni che il codice contraddice o non usa: 0001 (flusso di upload non collegato) e 0004 (visibilita' decisa nei singoli punti).
   Vanno riviste dal proprietario del modulo.
->>>>>>> .merge_file_fRQHVi
 
 ## Da ripulire (richiede una decisione umana)
 
-<<<<<<< .merge_file_oCHhCu
-- [Metadati delle foto tolti sul server con GD](strip-image-metadata-server-side.md) — ri-codifica JPEG/PNG senza Exif, GPS e testo; Imagick misurato e scartato.
-- [Limite di upload effettivo letto nella richiesta web](effective-upload-limit-in-web-request.md) — minimo tra PHP (con margine), regola Livewire e campo.
-- [Foto da fotocamera ridotte nel browser, campo opt-in](camera-photo-browser-resize-opt-in.md) — `CameraPhotoUpload` e `camera-image.js`, mai resize globale.
-=======
 - `media-visibility-follows-owner.md` duplica 0004: proposta, eliminarlo dopo aver aggiornato i link in `INDEX.md`.
 - `index.md` e `INDEX.md` sono due indici dello stesso elenco (su file system che non distinguono maiuscole collidono): proposta,
   tenere questo README e togliere gli altri due; fino ad allora sono allineati a questa tabella.
->>>>>>> .merge_file_fRQHVi
+
+## Harness minimo: ownership, evidenza e recupero (2026-11-27)
+
+Questo indice appartiene a **module_media_fila5**: ogni decisione su codice, dominio o tema va nell'ADR del package owner; il root registra soltanto i vincoli di composizione. Un ADR richiede una scelta reale con alternative e conseguenze, più una **Conferma** ripetibile (oppure la dichiarazione esplicita che manca). Non creare ADR fittizi per riempire un indice.
+
+- [Confine LaravelDay/harness Xot](https://github.com/laraxot/module_xot_fila5/blob/dev/docs/adr/0042-laravel-day-harness-adoption-boundary.md); [ownership root](https://github.com/laraxot/base_ptvx_fila5/blob/dev/docs/adr/0001-harness-minimo-e-ownership.md).
+- **BMAD**: la story owner-local conserva `scope`, `must_not_change`, `evidence`, `approval_required` nei cambi rischiosi.
+- **ECC**: nessun marker di merge; distinguere la prova eseguita dal semplice riferimento a un test; se la conferma non è disponibile segnare `non eseguita`.
+- **Second Brain**: QMD/Graphify e `.harness/memory/{facts,lessons}.md` sono puntatori a evidenza datata, non copie degli ADR. [Runbook](https://github.com/laraxot/base_ptvx_fila5/blob/dev/docs/harness/README.md) · [Rollout #15](https://github.com/laraxot/base_ptvx_fila5/issues/15).
+
+## Documenti del package da riconciliare nell'indice
+
+I seguenti file **esistono nel repository su `dev`** e non erano tutti collegati nel ramo d'indice più recente. Sono preservati come puntatori documentali; il loro stato di approvazione, la copertura e l'eventuale sostituzione con ADR numerati devono essere verificati nell'owner. Nessuna prova di esecuzione è implicita.
+
+- [Foto da fotocamera ridotte nel browser, campo opt-in](./camera-photo-browser-resize-opt-in.md)
+- [Limite di upload effettivo letto nella richiesta web](./effective-upload-limit-in-web-request.md)
+- [Metadati delle foto tolti sul server con GD](./strip-image-metadata-server-side.md)
