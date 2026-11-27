@@ -1,15 +1,4 @@
 ---
-<<<<<<< .merge_file_IejSEG
-issues: []
-discussions: []
-title: "PathGenerator e PathGeneratorContract (interfacce)"
-module: "Media"
-type: concept
-tags: [path, generator, contracts, interface]
-created: 2026-07-14
-updated: 2026-11-24
-qmd: "path generator"
-=======
 title: "Contratto — PathGenerator e PathGeneratorContract (interfacce)"
 type: contract
 action: "Modules\Media\Contracts\PathGenerator"
@@ -18,28 +7,10 @@ status: accepted
 created: 2026-07-14
 updated: 2026-11-26
 qmd: "path generator interfaccia PathGeneratorContract Spatie DefaultPathGenerator"
->>>>>>> .merge_file_4Xlolr
 ---
 
 # PathGenerator e PathGeneratorContract
 
-<<<<<<< .merge_file_IejSEG
-Interfacce in `app/Contracts/PathGenerator.php` e `app/Contracts/PathGeneratorContract.php`: firme identiche, tre metodi
-che restituiscono la cartella di un `Modules\Media\Models\Media`.
-
-| Metodo | Restituisce |
-|---|---|
-| `getPath(Media $media): string` | cartella del file originale |
-| `getPathForConversions(Media $media): string` | cartella delle conversioni |
-| `getPathForResponsiveImages(Media $media): string` | cartella delle immagini responsive |
-
-Stato verificato (2026-11-24): nessuna classe del repo implementa o usa nessuna delle due interfacce. Il generatore di percorso
-effettivo e' quello di Spatie configurato in `config/media-library.php` (`path_generator` =
-`Spatie\MediaLibrary\Support\PathGenerator\DefaultPathGenerator`).
-
-Per chi scrive codice nuovo: implementare l'interfaccia di Spatie; le due interfacce del modulo sono doppioni da eliminare,
-non un modello da seguire. Un percorso generato non deve dipendere da input dell'utente (niente path traversal).
-=======
 Interfacce in `app/Contracts/PathGenerator.php` e `app/Contracts/PathGeneratorContract.php`: tre metodi che restituiscono la cartella di un
 `Modules\Media\Models\Media`. Non sono un'Action: il contratto descrive cosa promettono le interfacce e dice che oggi nessuno le usa.
 
@@ -75,4 +46,7 @@ Interfacce in `app/Contracts/PathGenerator.php` e `app/Contracts/PathGeneratorCo
 ## Prove
 
 - `PATH-GENERATOR-INV-1`, `-2`: nessun test; verifica per lettura di `app/Contracts/*.php` e con il comando `rg` indicato.
->>>>>>> .merge_file_4Xlolr
+
+## Riconciliazione documentale (2026-11-27)
+
+Questo file aveva un conflitto Git irrisolto. La base è la variante più recente del contratto, con il riferimento a `app/Contracts/PathGenerator.php` **esistente su `dev`**; la sua semantica, i group Pest citati e gli eventuali effetti non sono stati rieseguiti in questa sessione. Il confronto con il codice e i test resta il gate ECC della story owner. [Tracciamento root #15](https://github.com/laraxot/base_ptvx_fila5/issues/15).
